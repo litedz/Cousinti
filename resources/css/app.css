@@ -1,0 +1,39 @@
+.primary-color {
+    color: #0e8573;
+}
+
+.bg-primary-color {
+    background-color: #0e8573;
+}
+
+.btn-primary-perso {
+    background: #0e8573;
+    padding: 15px 80px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.text-first {
+    color: #0e8572;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+$utilities: (
+    "width": (
+        property: width,
+        class: w-test,
+        values: (
+            100: 100%,
+        ),
+    ),
+);
+
+@media only screen and (max-width: 790px) {
+    .w-100-sc {
+        width: 100% !important;
+    }
+}

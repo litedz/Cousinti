@@ -1,0 +1,263 @@
+@media only screen and (max-width: 768px) {
+    .header .topbar {
+        height: 100px;
+        background-image: var(--bs-first);
+    }
+
+    .header .topbar .sub-menu {
+        width: 95%;
+        right: 0%;
+        position: relative;
+        margin-top: 10px;
+        border: none;
+        border-radius: 0;
+        display: none;
+        transition: all 0s;
+    }
+    
+
+    .header .topbar .logo {
+        width: 40px;
+        height: 40px;
+        margin-top: 0.5rem;
+
+    }
+
+    .header .topbar .logo img {
+        display: none;
+    }
+
+    .header .topbar .logo .display-2 {
+        color: white;
+        font-weight: bold;
+
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link.active {
+        background: none;
+    }
+
+    .header .cover img {
+        display: none;
+    }
+
+
+    .header .content .display-1 {
+        color: white;
+        text-align: center;
+    }
+
+    .header .content .sub-text {
+        color: white;
+        /* display: none; */
+    }
+
+    .header .navbar-nav {
+        background: rgb(0, 139, 139, 0.75);
+        position: fixed;
+        width: 100%;
+        right: 0;
+        height: 100%;
+        z-index: 9999;
+        border-top: 1px solid gray;
+        text-align: center;
+        color: white;
+    }
+
+    .header .navbar {
+        position: fixed;
+        background: #168272;
+        z-index: 8888;
+        box-shadow: 1px 1px 20px #00f3ff;
+
+    }
+
+    .header .navbar-toggler {
+        margin: 6%;
+    }
+
+    /* Show Cover in XS ,SM ,MD screens */
+    .cover_media {
+        background: url('../images/1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 10;
+        top: 0;
+        position: absolute;
+        display: block;
+    }
+
+    .header .content .display-1 {
+        color: white;
+        text-align: center;
+    }
+
+    .header .content .right_area {
+        justify-content: start;
+        align-items: center;
+    }
+
+
+    .sweets {
+        height: 1000px;
+    }
+
+    .sweets .intoduction {
+        padding: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .sweets .vector_3 {
+        display: none;
+
+    }
+
+    .sweets .btn-primary-perso {
+        padding: 5px 70px;
+        margin-top: 3rem;
+    }
+
+    .sing_up .row {
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .sing_up .display-1 {
+        margin-bottom: 4rem;
+    }
+
+    .sing_up .row .form {
+        text-align: center;
+    }
+
+    .sing_up .btn-primary-perso {
+        padding: 5px 40px;
+    }
+
+    .best_comment .comments .comment {
+        bottom: 0;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer .container {
+        padding-bottom: 50px;
+    }
+
+    .footer .h2,
+    .footer .h1 {
+        font-size: 1rem;
+    }
+
+    .footer .social_media #mediaLink {
+        font-size: 12px;
+
+    }
+
+    .footer .content .social_media img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer .fa {
+        font-size: 10px;
+    }
+
+    .footer .site-map .text-decoration-none {
+        font-size: 14px;
+    }
+
+    .footer .subscribe .btn-primary {
+        margin: 0 auto;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width:992px) {
+    .header .topbar .logo {
+        width: 40px;
+        height: 40px;
+        margin-top: 0.5rem;
+
+    }
+
+    .header .cover {
+        width: 100%;
+        opacity: 0.5;
+    }
+
+    .header .navbar-nav {
+        background: darkcyan;
+        position: fixed;
+        width: 100%;
+        right: 0;
+        height: 100%;
+        z-index: 9999;
+        opacity: 0.75;
+        border-top: 1px solid gray;
+        text-align: center;
+    }
+
+    .header .navbar {
+        position: fixed;
+        background: #168272;
+        z-index: 8888;
+        box-shadow: 1px 1px 20px #00f3ff;
+
+    }
+
+    .header .navbar-toggler {
+        margin: 6%;
+    }
+
+    .sing_up .btn-primary-perso {
+        padding: 5px 40px;
+    }
+
+
+    .best_comment .comments {
+        padding-bottom: 3rem;
+    }
+
+    .best_comment .comments .comment {
+
+        bottom: 0;
+        margin: 3rem;
+
+    }
+
+
+    .footer .h2,
+    .footer .h1 {
+        font-size: 1.1rem;
+    }
+
+    .footer .social_media #mediaLink {
+        font-size: 12px;
+
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1200px) {
+
+
+
+    .best_comment .comments {
+        padding-bottom: 3rem;
+    }
+
+    .best_comment .comments .comment {
+
+        bottom: 0;
+        margin: 0;
+
+    }
+
+    .sing_up .btn-primary-perso {
+        padding: 5px 40px;
+    }
+
+}

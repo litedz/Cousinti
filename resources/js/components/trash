@@ -1,0 +1,166 @@
+<!-- 
+    <section class="best_comment w-100">
+        <div class="container">
+            <div class="comments"
+                 dir="rtl">
+                <div class="row d-flex justify-content-around row">
+                    <div class="col-12 col-lg-12 col-md-12  m-5 p-4"
+                         style="color: #db1e5b;">
+                        <h1 class="display-1 font-weight-bolder">افضل التعليقات</h1>
+                    </div>
+                    <div class="bg-light col-10 col-lg-3 col-md-6 col-xl-2 comment  p-4 roundedtext-right position-relative shadow">
+                        <div class="overflow-hidden text "
+                             style="height: 26%;">
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث التى يولدها التطبيق.
+                        </div>
+                        <div class="avatar">
+                            <img class="mt-4 rounded-circle"
+                                 src="{{asset('images/avatar.jpg')}}"
+                                 alt="">
+                        </div>
+                        <div class="font-weight-bold h5 mt-3 name_user">azezaeaezaezazea</div>
+                        <div class="font-14 mt-3 rank text-black-50">Rank</div>
+                    </div>
+                    <div class="bg-light col-10 col-lg-3 col-md-6  col-xl-2 comment  p-4 rounded  text-right position-relative shadow">
+                        <div class="overflow-hidden text "
+                             style="height: 26%;">
+                            إذا كنت تحتاج إلىتريد، النص لن يبدو مى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
+                        </div>
+                        <div class="avatar">
+                            <img class="mt-4 rounded-circle"
+                                 src="{{asset('images/avatar.jpg')}}"
+                                 alt="">
+                        </div>
+                        <div class="font-weight-bold h5 mt-3 name_user">azezaeaezaezazea</div>
+                        <div class="font-14 mt-3 rank text-black-50">Rank</div>
+                    </div>
+                    <div class="bg-light col-10 col-lg-3 col-md-6  col-xl-2 comment  p-4 rounded text-right position-relative shadow">
+                        <div class="overflow-hidden text "
+                             style="height: 26%;">
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنكلى زيادة عدد الحروف التى يولدها التطبيق.
+
+                        </div>
+                        <div class="avatar">
+                            <img class="mt-4 rounded-circle"
+                                 src="{{asset('images/avatar.jpg')}}"
+                                 alt="">
+                        </div>
+                        <div class="font-weight-bold h5 mt-3 name_user">azezaeaezaezazea</div>
+                        <div class="font-14 mt-3 rank text-black-50">Rank</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+  
+    <section class="footer"
+             dir="rtl">
+        <div class="bg-dark d-flex top-border w-100 justify-content-around p-1">
+            <img class="rounded-circle"
+                 src="{{asset('images/logo2.png')}}"
+                 alt="">
+
+        </div>
+        <div class="content h-100 w-100 position-relative">
+            <div class="bg-dark h-100 opacity-50 opt position-absolute w-100"
+                 style="z-index: 1;"></div>
+            <div class="container position-relative text-white"
+                 style="z-index: 10;">
+
+                <div class="row">
+                    <div class="col-6 col-md-4 pt-5">
+                        <div class="site-map">
+                            <div class="h1">خريطة الموقع</div>
+                            <nav class="list-unstyled d-flex flex-column">
+
+                                <a class="font-16 font-weight-bolder text-decoration-none text-white mt-3"
+                                   href="#">
+                                    <span style="background: #069A8E;"
+                                          class="fa fa-home font-14 ms-3  p-2 rounded-circle"></span>
+                                    رئسية</a>
+
+                                <a class="font-16 font-weight-bolder text-decoration-none text-white mt-3"
+                                   href="#">
+                                    <span style="background: #069A8E;"
+                                          class="fa fa-home font-14 ms-3  p-2 rounded-circle"></span>
+                                    رئسية</a>
+
+                                <a class="font-16 font-weight-bolder text-decoration-none text-white mt-3"
+                                   href="#">
+                                    <span style="background: #069A8E;"
+                                          class="fa fa-home font-14 ms-3  p-2 rounded-circle"></span>
+                                    رئسية</a>
+
+                                <a class="font-16 font-weight-bolder text-decoration-none text-white mt-3"
+                                   href="#">
+                                    <span style="background: #069A8E;"
+                                          class="fa fa-home font-14 ms-3  p-2 rounded-circle"></span>
+                                    رئسية</a>
+
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 pt-5 position-relative">
+                        <div class="separator position-absolute">
+                            <img src="{{asset('images/l33.png')}}"
+                                 alt=""
+                                 srcset="">
+                        </div>
+                        <div class="social_media  d-flex flex-column justify-content-between">
+                            <div class="font-weight-bolder h2 mb-4">منصات التواصل الاجتماعي</div>
+                            <div class="d-flex align-items-center mt-3">
+                                <img class="ms-3 rounded-circle"
+                                     src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-3-1.png"
+                                     alt="">
+                                <div class="font-22"><a id="mediaLink"
+                                       href="#"
+                                       class="font-weight-bolder text-decoration-none">متابعتنا علي صفحة الفيس بوك</a></div>
+                            </div>
+                            <div class="d-flex align-items-center mt-3">
+                                <img class="ms-3 rounded-circle"
+                                     src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-3-1.png"
+                                     alt="">
+                                <div class="font-22"><a id="mediaLink"
+                                       href="#"
+                                       class="font-weight-bolder text-decoration-none">متابعتنا علي صفحة الفيس بوك</a></div>
+                            </div>
+                            <div class="d-flex align-items-center mt-3">
+                                <img class="ms-3 rounded-circle"
+                                     src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-3-1.png"
+                                     alt="">
+                                <div class="font-22"><a id="mediaLink"
+                 href="#"
+                                       class=" font-weight-bolder text-decoration-none">متابعتنا علي صفحة الفيس بوك</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+position-relative">
+parator position-absolute">
+
+"
+t="">
+                  </div>
+.</div>
+                        <input class="form-control"
+                               type="text"
+                               name="">
+                        <button type="submit"
+                                class="btn btn-primary btn-info">اشتراك</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-center text-white w-100">
+            Copyright
+        </div>
+    </section>
+
+    <a href="#"
+       class="btn btn-danger btn-floating btn-lg"
+       id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a> -->
