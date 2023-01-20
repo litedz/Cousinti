@@ -26794,9 +26794,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     wheneScroll: function wheneScroll() {
       if ($(window).scrollTop() > 300) {
-        $('.home-navbar').fadeIn('slow');
+        $('#navigation-bar').fadeIn('slow');
       } else {
-        $('.home-navbar').fadeOut('slow');
+        $('#navigation-bar').fadeOut();
       }
     }
   }
@@ -28449,6 +28449,7 @@ var _hoisted_1 = {
   dir: "rtl"
 };
 var _hoisted_2 = {
+  id: "home-navbar",
   "class": "home-navbar",
   style: {
     "display": "none"

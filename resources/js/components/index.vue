@@ -2,7 +2,7 @@
     <!-- https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg -->
     <div class="header position-relative overflow-hidden"
          dir="rtl">
-        <div class="home-navbar"
+        <div id="home-navbar" class="home-navbar"
              style="display: none;"
              dir="ltr">
             <nav-bar></nav-bar>
@@ -1022,9 +1022,9 @@ export default {
         },
         wheneScroll() {
             if ($(window).scrollTop() > 300) {
-                $('.home-navbar').fadeIn('slow');
+                $('#navigation-bar').fadeIn('slow');
             } else {
-                $('.home-navbar').fadeOut('slow');
+                $('#navigation-bar').fadeOut();
             }
         },
     },
