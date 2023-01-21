@@ -181,12 +181,12 @@ export default {
       data.append("password", this.password);
       data.append("phone", this.phone);
       data.append("age", this.age);
-      
+
       data.append("avatar", document.getElementById('avatar').files[0]);
 
       axios({
         method: "post",
-        url: "/user",
+        url: "/register",
         data: data,
       })
         .then((response) => {

@@ -11,6 +11,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 
 class RecipeFactory extends Factory
 {
+
+    protected $model = recipe::class;
+
     /**
      * Define the model's default state.
      *
@@ -26,4 +29,6 @@ class RecipeFactory extends Factory
             'how_todo' => $this->faker->realText(),
         ];
     }
+
+
 }

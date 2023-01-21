@@ -49,7 +49,7 @@ Route::get('/user/profile/edit/{id}', function () {
 });
 
 
-// -------------------------> User actions 
+// -------------------------> User actions
 
 
 // ***********************************************************************************************
@@ -124,7 +124,7 @@ Route::prefix('guest')->group(function () {
 
 Route::middleware(['auth'])->group(function () {
 
-    Route::resource('user', UserController::class);
+    Route::resource('user', UserController::class)->except(['store']);
     Route::prefix('user')->group(function () {
         Route::POST('avatar', [UserController::class, 'updateAvatar']);
         Route::POST('password', [UserController::class, 'changePassword']);
@@ -138,12 +138,11 @@ Route::resource('comments', CommentsController::class)->middleware('auth');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('check.login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.user');
-
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 Route::get('register', function () {
     return view('user.register');
 })->name('user.register')->middleware('check.login');
-
+Route::POST('/register', [UserController::class, 'store']);
 // ***********************************************************************************************

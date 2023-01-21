@@ -1,5 +1,5 @@
 <template>
-    <div class="status bottom-0 m-5 position-fixed w-50">
+    <div class="status m-5 position-fixed w-50" style="bottom: 10%;">
         <div :class="'border alert alert-' + this.class">
             <div :class="'fa fa-' + icon"></div>
             <div class="h5">{{ this.status_response }}</div>

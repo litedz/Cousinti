@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use SebastianBergmann\CodeCoverage\Node\Builder;
-
+use Database\Factories\RecipeFactory;
 class recipe extends Model
 {
     use HasFactory;
@@ -33,5 +33,10 @@ class recipe extends Model
     public function recipes_liked()
     {
         return $this->hasMany(Rating::class);
+    }
+
+    protected static function newFactory()
+    {
+        return RecipeFactory::new();
     }
 }

@@ -1,6 +1,6 @@
 <template>
   <div id="navigation-bar"
-       class="navigation-bar">
+       class="navigation-bar position-relative z-9999">
     <loading-page></loading-page>
     <!-- v-if="this.$attrs.show_navbar == true" -->
     <div class="top-bar w-100 d-flex"

@@ -54,7 +54,7 @@
                      #default="{ state: { valid } }"
                      @submit="login()"
                      :actions="false"
-                     form-class="p-5 bg-white position-relative z-9999">
+                     form-class="p-5 bg-white position-relative z-8888">
               <div class="logo text-center">
                 <img class="w-25"
                      :src="this.w_path + '/images/logo.png'"

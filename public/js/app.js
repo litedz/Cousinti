@@ -27132,12 +27132,13 @@ __webpack_require__.r(__webpack_exports__);
             _this2.erros_recipe = [];
             var rs = response.data;
             _this2.$refs.status.Display(rs["class"], rs.message, rs.status);
-            if (rs["class"]) {
+            if (rs.message) {
               _this2.clearForm();
             }
             _this2.erros_recipe = "";
           }
         })["catch"](function (error) {
+          console.log(error.response);
           _this2.erros_recipe = error.response.data.errors;
         });
       }
@@ -27504,7 +27505,7 @@ __webpack_require__.r(__webpack_exports__);
       data.append("avatar", document.getElementById('avatar').files[0]);
       axios({
         method: "post",
-        url: "/user",
+        url: "/register",
         data: data
       }).then(function (response) {
         if (response.data = "created") {
@@ -28837,7 +28838,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $options.login();
     }),
     actions: false,
-    "form-class": "p-5 bg-white position-relative z-9999"
+    "form-class": "p-5 bg-white position-relative z-8888"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function (_ref) {
       var valid = _ref.state.valid;
@@ -28912,7 +28913,7 @@ var _withScopeId = function _withScopeId(n) {
 };
 var _hoisted_1 = {
   id: "navigation-bar",
-  "class": "navigation-bar"
+  "class": "navigation-bar position-relative z-9999"
 };
 var _hoisted_2 = {
   "class": "top-bar w-100 d-flex",
@@ -30639,7 +30640,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "status bottom-0 m-5 position-fixed w-50"
+  "class": "status m-5 position-fixed w-50",
+  style: {
+    "bottom": "10%"
+  }
 };
 var _hoisted_2 = {
   "class": "h5"
@@ -36968,7 +36972,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.formkit-messages {}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.formkit-messages {}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -37064,7 +37068,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.register-page .content[data-v-aacc3324] {\r\n  width: 100%;\r\n  height: auto;\r\n  top: 28%;\r\n  position: absolute;\n}\n.register-page .content .register-area[data-v-aacc3324] {\r\n  width: 100%;\r\n  height: auto;\r\n  position: relative;\r\n  top: 15%;\r\n  background: white;\r\n  margin-bottom: 10%;\n}\n.register-page .content .register-area .row .col-12[data-v-aacc3324]:last-of-type {\r\n  background: #d9d9d9;\n}\n.register-page .content .register-area .cover[data-v-aacc3324] {\r\n  height: 500px;\r\n  background: #168272;\n}\n.register-page .content .register-area .cover .opt[data-v-aacc3324] {\r\n  background: #168272;\n}\n.register-page .content .register-area .form[data-v-aacc3324] {\r\n  background: hsl(0deg 0% 98%);\n}\n.register-page .content .register-area .shape[data-v-aacc3324] {\r\n  position: absolute;\r\n  bottom: -4%;\r\n  left: -7%;\n}\n@media only screen and (max-width: 790px) {\n.register-page .content[data-v-aacc3324] {\r\n    height: auto;\n}\n.register-page .content .register-area[data-v-aacc3324] {\r\n    height: auto;\r\n    margin-bottom: 4rem;\n}\n.register-page .content .register-area .shape[data-v-aacc3324] {\r\n    display: none;\n}\n.register-page .content .register-area .col-12[data-v-aacc3324] {\r\n    padding: 0;\n}\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.register-page .content[data-v-aacc3324] {\n  width: 100%;\n  height: auto;\n  top: 28%;\n  position: absolute;\n}\n.register-page .content .register-area[data-v-aacc3324] {\n  width: 100%;\n  height: auto;\n  position: relative;\n  top: 15%;\n  background: white;\n  margin-bottom: 10%;\n}\n.register-page .content .register-area .row .col-12[data-v-aacc3324]:last-of-type {\n  background: #d9d9d9;\n}\n.register-page .content .register-area .cover[data-v-aacc3324] {\n  height: 500px;\n  background: #168272;\n}\n.register-page .content .register-area .cover .opt[data-v-aacc3324] {\n  background: #168272;\n}\n.register-page .content .register-area .form[data-v-aacc3324] {\n  background: hsl(0deg 0% 98%);\n}\n.register-page .content .register-area .shape[data-v-aacc3324] {\n  position: absolute;\n  bottom: -4%;\n  left: -7%;\n}\n@media only screen and (max-width: 790px) {\n.register-page .content[data-v-aacc3324] {\n    height: auto;\n}\n.register-page .content .register-area[data-v-aacc3324] {\n    height: auto;\n    margin-bottom: 4rem;\n}\n.register-page .content .register-area .shape[data-v-aacc3324] {\n    display: none;\n}\n.register-page .content .register-area .col-12[data-v-aacc3324] {\n    padding: 0;\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -37136,7 +37140,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.status {\r\n    display: none;\r\n    z-index: 9999;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.status {\n    display: none;\n    z-index: 9999;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

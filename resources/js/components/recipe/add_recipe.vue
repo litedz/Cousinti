@@ -296,13 +296,14 @@ export default {
               this.erros_recipe = [];
               const rs = response.data;
               this.$refs.status.Display(rs.class, rs.message, rs.status);
-              if (rs.class) {
+              if (rs.message) {
                 this.clearForm();
               }
               this.erros_recipe = "";
             }
           })
           .catch((error) => {
+            console.log(error.response);
             this.erros_recipe = error.response.data.errors;
           });
       }

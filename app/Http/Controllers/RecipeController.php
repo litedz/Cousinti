@@ -20,11 +20,9 @@ use Mockery\Undefined;
 
 class RecipeController extends Controller
 {
-    private  $ingredients = [];
+    private $ingredients = [];
     private $head_image;
-
     private $video_url = "https://www.youtube.com/";
-
     private $other_images;
     /**
      * Display a listing of the resource.
@@ -186,7 +184,7 @@ class RecipeController extends Controller
                 );
             }
         }
-        // if request for update recipe 
+        // if request for update recipe
         if ($request->update_recipe_id) {
             $validate_head_image = $request->validate(['head_image' => 'image']); // in update must be image
         } else {
@@ -253,7 +251,7 @@ class RecipeController extends Controller
         }
         if ($this->other_images !== null) {
             $CheckOtherImages = image::where('recipe_id', $recipe_id)->whereNull('cover')->get();
-            if (count($CheckOtherImages) + count($this->other_images) > 3) { // Check if Recipe had +3 files 
+            if (count($CheckOtherImages) + count($this->other_images) > 3) { // Check if Recipe had +3 files
                 throw new Exception("لا يمكنك رفع اكثر من 3 صورة ", 1);
             } else {
                 $this->storeOtherImage($recipe_id);
