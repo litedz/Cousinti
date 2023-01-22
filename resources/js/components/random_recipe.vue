@@ -25,7 +25,6 @@
                 </div>
                 <div class="col-12 p-0">
                     <div class="bg-light  info m-auto mt-2 rounded p-3">
-
                         <div class="random ">
                             <div class="row align-items-end">
                                 <div class="rating col-12 col-sm-12 col-md-6 m"
@@ -86,8 +85,7 @@ export default {
     },
     methods: {
         getRandomRecipe() {
-            // const data = new FormData();
-            // data.append("_token", document.querySelector('meta[name="csrf-token"]').content);
+
             axios({ method: "post", url: "/recipes/random" })
                 .then((response) => {
                     if (response.data.random_recipe) {
@@ -103,7 +101,7 @@ export default {
 
 <style scoped>
 .random_recipe {
-    display: none;
+    /* display: none; */
     position: fixed;
     width: 50%;
     height: auto;

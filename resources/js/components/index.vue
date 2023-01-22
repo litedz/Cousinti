@@ -2,6 +2,11 @@
     <!-- https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg -->
     <div class="header position-relative overflow-hidden"
          dir="rtl">
+         <KeepAlive>
+                    <component
+                        :is="activeComponent"
+                    />
+                </KeepAlive>
         <div id="home-navbar" class="home-navbar"
              style="display: none;"
              dir="ltr">
@@ -61,50 +66,13 @@
                                     asperiores.</span>
                             </div>
                             <div class="font-amiri random text-center"><button class="btn fs-4 fw-bolder mt-5 w-50"
+                                @click="activeComponent ='random-recipe'"
                                         style="background:#344040;">اختيار وصفة</button></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div class="row">
-                <div class="col-12 col-md-6 d-flex flex-column align-items-center h-75 position-relative">
-                    <div class="title display-4 font-amiri text-center text-white fw-bolder"
-                         id="title"></div>
-                    <div class="description fs-6 fw-normal lh-lg mt-5 mx-auto text-center text-white w-50">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quibusdam corporis porro aspernatur sapiente aliquid
-                        eum. Repudiandae doloribus illum voluptatem quaerat
-                        mollitia eos quisquam aliquam a obcaecati, maxime iste
-                        commodi eaque.
-                    </div>
-                    <button type="button"
-                            class="bg-perso border bottom-0 fw-bolder p-2 position-absolute rounded-pill w-25"
-                            style="border: 1px solid #229191 thin">
-                        click Me
-                    </button>
-                </div>
-                <div class="bg-body h-auto shape col-10 col-md-3 mx-sm-auto mt-sm-5"
-                     style="border-radius: 22% 0%; height: 174px;">
-                    <div class="d-flex flex-column h-75 items justify-content-around p-5"
-                         dir="rtl">
-                        <div class="item align-items-center d-flex align-items-center justify-content-around">
-                            <li class="border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info"></li>
-                            <span class="m-1">Lorem ipsum dolor st, atqeriam,
-                                asperiores.</span>
-                        </div>
-                        <div class="item align-items-center d-flex align-items-center justify-content-around">
-                            <li class="border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info"></li>
-                            <span class="m-1">Lorem ipsum dolor st, atqeriam,
-                                asperiores.</span>
-                        </div>
-                        <div class="item align-items-center d-flex align-items-center justify-content-around">
-                            <li class="border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info"></li>
-                            <span class="m-1">Lorem ipsum dolor st, atqeriam,
-                                asperiores.</span>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+
         </div>
 
 
@@ -375,7 +343,7 @@
                         <div class="title h4 ">
                             انواع الحلويات الجزائرية
                         </div>
-                        <div class="text lh-lg mt-5 ps-5 mb-5 w-100 h-50">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى 
+                        <div class="text lh-lg mt-5 ps-5 mb-5 w-100 h-50">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى
                         </div>
                         <div class="d-flex justify-content-end readMore ">
                             <div class="btn-primary-perso rounded-5 ">
@@ -950,6 +918,7 @@ export default {
             effectImg: false,
             imgBestRecipe: false,
             show: "",
+            activeComponent:'',
         };
     },
     methods: {

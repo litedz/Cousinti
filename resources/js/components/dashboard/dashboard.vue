@@ -73,25 +73,7 @@
                         </li>
                     </div>
                 </div>
-                <!-- <div class="head-link border-bottom text-center"
-             @click="toggleMenu()"
-             id="profile">
-          <li class="p-2">
-            <a href="#"
-               class="
-              text-capitalize text-decoration-none
-              font-weight-bold
-              text-white
-              "
-               data-link="profile"><span class="fa fa-magnifying-glass m-1 fa-2xs
-                text-first m-2"></span>profile</a>
-          </li>
-          <div class="sub-menu">
-            <li class="border-bottom p-2 text-black-50 link-item pointer">
-              <span class="fa fa-home m-1 fa-2xs text-first"></span>Add Recipe
-            </li>
-          </div>
-        </div> -->
+
             </div>
             <div class="profile p-3 d-flex position-relative">
                 <div class="avatar">
@@ -103,7 +85,7 @@
                     />
                 </div>
                 <div
-                    class="d-flex flex-column info m-1 p-2 w-75 justify-content-around"
+                    class="d-flex flex-column info m-1 p-2 w-75 justify-content-around h-100"
                 >
                     <div class="actions">
                         <i

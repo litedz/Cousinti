@@ -303,8 +303,10 @@ export default {
             }
           })
           .catch((error) => {
-            console.log(error.response);
-            this.erros_recipe = error.response.data.errors;
+            if (error.response.data.message.length !== 0 ) {
+                this.$refs.status.Display('danger', error.response.data.message, "تحذير");
+            }
+
           });
       }
     },
