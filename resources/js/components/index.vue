@@ -12,6 +12,9 @@
              dir="ltr">
             <nav-bar></nav-bar>
         </div>
+        <div class="inde-navbar">
+            <nav-bar></nav-bar>
+        </div>
         <!-- <div class="navbar w-100 bg-perso">
             <div class="container">
                 <nav class="d-flex">
@@ -972,10 +975,6 @@ export default {
             var show = document.getElementById(name_slider);
             let right = parseInt(show.style.right);
             let widthSlider = show.offsetWidth;
-            console.log(right - widthSlider);
-            console.log('right => ' + right);
-            console.log('left => ' + show.offsetLeft);
-            console.log(' width => ' + widthSlider);
             if (action === 'right') {
                 if (right < widthSlider - 300) {
                     show.style.right = right + 300 + 'px';
@@ -991,9 +990,9 @@ export default {
         },
         wheneScroll() {
             if ($(window).scrollTop() > 300) {
-                $('#navigation-bar').fadeIn('slow');
+                $('#home-navbar').fadeIn('slow');
             } else {
-                $('#navigation-bar').fadeOut();
+                $('#home-navbar').fadeOut();
             }
         },
     },
