@@ -1,55 +1,36 @@
 <template>
     <!-- https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg -->
-    <div class="header position-relative overflow-hidden"
-         dir="rtl">
-         <KeepAlive>
-                    <component
-                        :is="activeComponent"
-                    />
-                </KeepAlive>
-        <div id="home-navbar" class="home-navbar"
-             style="display: none;"
-             dir="ltr">
+    <div class="header position-relative overflow-hidden" dir="rtl">
+        <KeepAlive>
+            <component :is="activeComponent" />
+        </KeepAlive>
+        <div id="home-navbar" class="home-navbar" style="display: none;" dir="ltr">
             <nav-bar></nav-bar>
         </div>
-        <div class="inde-navbar">
-            <nav-bar></nav-bar>
-        </div>
-        <!-- <div class="navbar w-100 bg-perso">
-            <div class="container">
-                <nav class="d-flex">
-                    <li><a href="#"
-                           class="font-amiri fs-3 px-4 rounded text-white text-decoration-none">حلويات</a></li>
-                    <li><a href="#"
-                           class="font-amiri fs-3 px-4 rounded text-white text-decoration-none">حلويات</a></li>
-                    <li><a href="#"
-                           class="font-amiri fs-3 px-4 rounded text-white text-decoration-none">حلويات</a></li>
-                    <li><a href="#"
-                           class="font-amiri fs-3 px-4 rounded text-white text-decoration-none">حلويات</a></li>
-                </nav>
+
+        <div class="h-auto index-nav position-fixed top-0 w-100 z-9999" style="">
+            <div class="d-flex flex-row font-amiri justify-content-center nav p-3" style="">
+                <li class="fs-3"><a href="#" class="p-2 rounded text-decoration-none" style="
+    color: darkcyan;
+">حلويات</a></li>
             </div>
-        </div> -->
+        </div>
 
-
-        <div class="position-absolute text-center w-50 z-9999"
-             style="left:25%;top:10%;mix-blend-mode: screen;">
-            <div class="bg-white display-1 fw-bolder text text-black"
-                 style="letter-spacing:15px;">COUSINTI</div>
+        <div class="position-absolute text-center w-50 z-9999" style="left:25%;top:10%;mix-blend-mode: screen;">
+            <div class="bg-white display-1 fw-bolder text text-black" style="letter-spacing:15px;">COUSINTI</div>
 
 
         </div>
         <div class="center-text h-50 position-absolute w-100 z-5555 d-flex justify-content-center flex-column"
-             style="top: 25%">
+            style="top: 25%">
             <div class="mt-5 mb-5">
-                <div class="title display-4 font-amiri text-center text-white fw-bolder"
-                     id="title"></div>
+                <div class="title display-4 font-amiri text-center text-white fw-bolder" id="title"></div>
             </div>
             <div class="steps">
                 <div class="container">
                     <div class="bg-body h-auto mt-sm-5 mx-sm-auto shape col-12 col-md-5"
-                         style="border-radius: 22% 0%; height: 174px;">
-                        <div class="d-flex flex-column h-75 items justify-content-around p-5"
-                             dir="rtl">
+                        style="border-radius: 22% 0%; height: 174px;">
+                        <div class="d-flex flex-column h-75 items justify-content-around p-5" dir="rtl">
                             <div class=" title font-amiri fs-3 fw-bold text-black-title text-center">
                                 اجعل يومك احلي في 3 خطوات
                             </div>
@@ -69,8 +50,8 @@
                                     asperiores.</span>
                             </div>
                             <div class="font-amiri random text-center"><button class="btn fs-4 fw-bolder mt-5 w-50"
-                                @click="activeComponent ='random-recipe'"
-                                        style="background:#344040;">اختيار وصفة</button></div>
+                                    @click="activeComponent = 'random-recipe'" style="background:#344040;">اختيار
+                                    وصفة</button></div>
                         </div>
                     </div>
                 </div>
@@ -81,48 +62,36 @@
 
         <div class="cover position-relative">
             <div class="w-100 h-100 opacity-75 bg-perso position-absolute"
-                 style="background: linear-gradient(177deg,rgb(83, 196, 180),#ffffffb8);"></div>
+                style="background: linear-gradient(177deg,rgb(83, 196, 180),#ffffffb8);"></div>
         </div>
     </div>
 
-    <section class="choose_food h-auto mb-5 mt-5"
-             style="width: 100; height: 900px">
+    <section class="choose_food h-auto mb-5 mt-5" style="width: 100; height: 900px">
         <div class="container">
             <div class="row">
-                <div class="align-items-center col-12 text-dark d-flex flex-row-reverse justify-content-center mb-5 text-center">
-                    <img class="ms-2"
-                         :src="w_path + '/images/V2.png'"
-                         alt="" />
+                <div
+                    class="align-items-center col-12 text-dark d-flex flex-row-reverse justify-content-center mb-5 text-center">
+                    <img class="ms-2" :src="w_path + '/images/V2.png'" alt="" />
                     <h1 class="text-black-title h2">انواع الوصفات</h1>
-                    <img class="ms-2"
-                         :src="w_path + '/images/V2.png'"
-                         alt="" />
+                    <img class="ms-2" :src="w_path + '/images/V2.png'" alt="" />
                 </div>
-                <div class="col-xs-12  col-md-6 col-lg-4 item overflow-hidden p-0 position-relative"
-                     :id="type.type"
-                     @mouseenter="EffectCategorie()"
-                     @mouseleave="EffectCategorie()"
-                     v-for="type in types_recipe"
-                     :key="type.recipe">
+                <div class="col-xs-12  col-md-6 col-lg-4 item overflow-hidden p-0 position-relative" :id="type.type"
+                    @mouseenter="EffectCategorie()" @mouseleave="EffectCategorie()" v-for="type in types_recipe"
+                    :key="type.recipe">
 
                     <div class="d-flex flex-column h-100 justify-content-around position-absolute w-100 z-8888">
                         <div class="d-flex flex-column justify-content-around text-center text-white squar"
-                             style="background: #17a2b8b8;height:10%">
-                            <a :href="'/similar/' + type.type"
-                               class="text-decoration-none">
+                            style="background: #17a2b8b8;height:10%">
+                            <a :href="'/similar/' + type.type" class="text-decoration-none">
                                 <div class="font-amiri h4 text-white">{{ type.type }}</div>
                             </a>
                         </div>
 
                     </div>
 
-                    <div class="bg-dark w-100"
-                         style="height: 350px">
+                    <div class="bg-dark w-100" style="height: 350px">
                         <div class="h-100 w-100">
-                            <img src="http://127.0.0.1:8000/images/1.jpg"
-                                 alt=""
-                                 class="h-100 w-100"
-                                 style="" />
+                            <img src="http://127.0.0.1:8000/images/1.jpg" alt="" class="h-100 w-100" style="" />
 
                         </div>
 
@@ -157,7 +126,7 @@
 
     <section class="best-of-recipe mb-5 p-3 px-0">
         <div class="font-amiri mb-5 pb-3 text-center w-100"
-             style="border-bottom: 1px solid lightgrey;border-right: 799px solid transparent;border-left: 800px solid transparent;">
+            style="border-bottom: 1px solid lightgrey;border-right: 799px solid transparent;border-left: 800px solid transparent;">
             <div class="title d-flex align-items-center justify-content-center">
                 <div class=" h2 fw-bolder m-1">افضل الوصفات</div>
                 <i class="fa fa-star-half-alt text-warning"></i>
@@ -168,53 +137,58 @@
             <div class="container">
                 <div class=""></div>
                 <div class="row">
-                    <div class="col-12 col-md-6"
-                         @mouseenter="EffectBestRecipe()"
-                         @mouseleave="EffectBestRecipe()">
+                    <div class="col-12 col-md-6" @mouseenter="EffectBestRecipe()" @mouseleave="EffectBestRecipe()">
                         <div class="position-relative">
                             <div class="icon align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute w-100 z-5555"
-                                 style="top: 45%;transition: all 1s;opacity: 0;">
+                                style="top: 45%;transition: all 1s;opacity: 0;">
                                 <div class="name h3 text-white"><a href="#"
-                                       class="text-decoration-none text-white">Lorem zmloxxx</a></div>
+                                        class="text-decoration-none text-white">Lorem zmloxxx</a></div>
                                 <div class="icons"><a href="#">
-                                        <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1"></li>
+                                        <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1">
+                                        </li>
                                     </a><a href="#">
-                                        <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1"></li>
+                                        <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1">
+                                        </li>
                                     </a><a href="#">
-                                        <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1"></li>
+                                        <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1">
+                                        </li>
                                     </a></div>
                             </div>
                             <div class="bg-dark end-0 h-100 opc position-absolute top-0 w-100"
-                                 style="transition: all 1s;opacity: 0;">
+                                style="transition: all 1s;opacity: 0;">
 
                             </div>
                             <div class="img w-100">
-                                <img src="https://picsum.photos/200"
-                                     class="w-100"
-                                     alt="">
+                                <img src="https://picsum.photos/200" class="w-100" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="row h-100">
-                            <div class="col-6 mb-1 rounded img-fluid"
-                                 @mouseenter="EffectBestRecipe()"
-                                 @mouseleave="EffectBestRecipe()">
+                            <div class="col-6 mb-1 rounded img-fluid" @mouseenter="EffectBestRecipe()"
+                                @mouseleave="EffectBestRecipe()">
                                 <div class="position-relative">
                                     <div class="bg-dark end-0 h-100 opc position-absolute top-0 w-100"
-                                         style="transition: all 1s;opacity: 0;">
-                                        <div class="align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555">
+                                        style="transition: all 1s;opacity: 0;">
+                                        <div
+                                            class="align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555">
                                             <div class="name h3 text-white"><a href="#"
-                                                   class="text-decoration-none text-white">Lorem zmloxxx</a></div>
+                                                    class="text-decoration-none text-white">Lorem zmloxxx</a></div>
                                             <div class="icons">
                                                 <a href="#">
-                                                    <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1"></li>
+                                                    <li
+                                                        class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1">
+                                                    </li>
                                                 </a>
                                                 <a href="#">
-                                                    <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1"></li>
+                                                    <li
+                                                        class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1">
+                                                    </li>
                                                 </a>
                                                 <a href="#">
-                                                    <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1"></li>
+                                                    <li
+                                                        class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1">
+                                                    </li>
                                                 </a>
 
                                             </div>
@@ -222,30 +196,34 @@
                                     </div>
 
                                     <div class="img w-100">
-                                        <img src="https://picsum.photos/200"
-                                             class="w-100"
-                                             alt="">
+                                        <img src="https://picsum.photos/200" class="w-100" alt="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6 mb-1 rounded img-fluid"
-                                 @mouseenter="EffectBestRecipe()"
-                                 @mouseleave="EffectBestRecipe()">
+                            <div class="col-6 mb-1 rounded img-fluid" @mouseenter="EffectBestRecipe()"
+                                @mouseleave="EffectBestRecipe()">
                                 <div class="position-relative">
                                     <div class="bg-dark end-0 h-100 opc position-absolute top-0 w-100"
-                                         style="transition: all 1s;opacity: 0;">
-                                        <div class="align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555">
+                                        style="transition: all 1s;opacity: 0;">
+                                        <div
+                                            class="align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555">
                                             <div class="name h3 text-white"><a href="#"
-                                                   class="text-decoration-none text-white">Lorem zmloxxx</a></div>
+                                                    class="text-decoration-none text-white">Lorem zmloxxx</a></div>
                                             <div class="icons">
                                                 <a href="#">
-                                                    <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1"></li>
+                                                    <li
+                                                        class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1">
+                                                    </li>
                                                 </a>
                                                 <a href="#">
-                                                    <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1"></li>
+                                                    <li
+                                                        class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1">
+                                                    </li>
                                                 </a>
                                                 <a href="#">
-                                                    <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1"></li>
+                                                    <li
+                                                        class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1">
+                                                    </li>
                                                 </a>
 
                                             </div>
@@ -253,30 +231,34 @@
                                     </div>
 
                                     <div class="img w-100">
-                                        <img src="https://picsum.photos/200"
-                                             class="w-100"
-                                             alt="">
+                                        <img src="https://picsum.photos/200" class="w-100" alt="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6 mb-1 rounded img-fluid"
-                                 @mouseenter="EffectBestRecipe()"
-                                 @mouseleave="EffectBestRecipe()">
+                            <div class="col-6 mb-1 rounded img-fluid" @mouseenter="EffectBestRecipe()"
+                                @mouseleave="EffectBestRecipe()">
                                 <div class="position-relative">
                                     <div class="bg-dark end-0 h-100 opc position-absolute top-0 w-100"
-                                         style="transition: all 1s;opacity: 0;">
-                                        <div class="align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555">
+                                        style="transition: all 1s;opacity: 0;">
+                                        <div
+                                            class="align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555">
                                             <div class="name h3 text-white"><a href="#"
-                                                   class="text-decoration-none text-white">Lorem zmloxxx</a></div>
+                                                    class="text-decoration-none text-white">Lorem zmloxxx</a></div>
                                             <div class="icons">
                                                 <a href="#">
-                                                    <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1"></li>
+                                                    <li
+                                                        class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1">
+                                                    </li>
                                                 </a>
                                                 <a href="#">
-                                                    <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1"></li>
+                                                    <li
+                                                        class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1">
+                                                    </li>
                                                 </a>
                                                 <a href="#">
-                                                    <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1"></li>
+                                                    <li
+                                                        class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1">
+                                                    </li>
                                                 </a>
 
                                             </div>
@@ -284,30 +266,34 @@
                                     </div>
 
                                     <div class="img w-100">
-                                        <img src="https://picsum.photos/200"
-                                             class="w-100"
-                                             alt="">
+                                        <img src="https://picsum.photos/200" class="w-100" alt="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6 mb-1 rounded img-fluid"
-                                 @mouseenter="EffectBestRecipe()"
-                                 @mouseleave="EffectBestRecipe()">
+                            <div class="col-6 mb-1 rounded img-fluid" @mouseenter="EffectBestRecipe()"
+                                @mouseleave="EffectBestRecipe()">
                                 <div class="position-relative">
                                     <div class="bg-dark end-0 h-100 opc position-absolute top-0 w-100"
-                                         style="transition: all 1s;opacity: 0;">
-                                        <div class="align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555">
+                                        style="transition: all 1s;opacity: 0;">
+                                        <div
+                                            class="align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555">
                                             <div class="name h3 text-white"><a href="#"
-                                                   class="text-decoration-none text-white">Lorem zmloxxx</a></div>
+                                                    class="text-decoration-none text-white">Lorem zmloxxx</a></div>
                                             <div class="icons">
                                                 <a href="#">
-                                                    <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1"></li>
+                                                    <li
+                                                        class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1">
+                                                    </li>
                                                 </a>
                                                 <a href="#">
-                                                    <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1"></li>
+                                                    <li
+                                                        class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1">
+                                                    </li>
                                                 </a>
                                                 <a href="#">
-                                                    <li class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1"></li>
+                                                    <li
+                                                        class="bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1">
+                                                    </li>
                                                 </a>
 
                                             </div>
@@ -315,9 +301,7 @@
                                     </div>
 
                                     <div class="img w-100">
-                                        <img src="https://picsum.photos/200"
-                                             class="w-100"
-                                             alt="">
+                                        <img src="https://picsum.photos/200" class="w-100" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -370,21 +354,22 @@
 
     <section class="sing_up bg-dark position-relative d-flex align-items-center mb-5 font-amiri">
         <div class="bg-black h-100 opacity-75 opt w-100 position-absolute"></div>
-        <div class="container position-relative text-white"
-             style="z-index: 22;">
+        <div class="container position-relative text-white" style="z-index: 22;">
 
 
             <div class="align-items-center align-items-end d-flex flex-column justify-content-center">
-                <div class="display-1 font-weight-bolder"
-                     dir="rtl">جربة وصفة ونجحتلك ? </div>
-                <div class="fs-5 lh-lg text-right">أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أوالعديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا
+                <div class="display-1 font-weight-bolder" dir="rtl">جربة وصفة ونجحتلك ? </div>
+                <div class="fs-5 lh-lg text-right">أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا النص أو
+                    العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أوالعديد من النصوص أنمن النصوص أن تولد مثل هذا
+                    النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد
+                    مثل هذا النص أو العديد من النصوص أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا
                 </div>
                 <div class="form mt-4 mt-lg-5">
                     <a href="/register"
-                       class="font-weight-bolder fs-3 m-1 p-2 px-5 rounded rounded-pill text-decoration-none text-first"
-                       style="color:white;background:#229191">الحساب </a>
+                        class="font-weight-bolder fs-3 m-1 p-2 px-5 rounded rounded-pill text-decoration-none text-first"
+                        style="color:white;background:#229191">الحساب </a>
                     <a href="/rules"
-                       class="bg-gradient bg-light font-weight-bolder fs-3 m-1 p-2 px-5 rounded rounded-pill text-decoration-none text-first text-info">القوانين</a>
+                        class="bg-gradient bg-light font-weight-bolder fs-3 m-1 p-2 px-5 rounded rounded-pill text-decoration-none text-first text-info">القوانين</a>
                 </div>
             </div>
         </div>
@@ -395,33 +380,21 @@
     <section class="sweats font-amiri position-relative">
         <div class="d-flex flex-column align-items-center justify-content-center w-100 mb-5">
             <div class="h2 fw-bolder m-1 text-center mb-1">اخر الحلويات</div>
-            <div class="sep mt-1"
-                 style="width:8%;"></div>
-            <div class="sep mt-1"
-                 style="width:6%;"></div>
-            <div class="sep mt-1"
-                 style="width:4%;"></div>
+            <div class="sep mt-1" style="width:8%;"></div>
+            <div class="sep mt-1" style="width:6%;"></div>
+            <div class="sep mt-1" style="width:4%;"></div>
         </div>
-        <div class="align-items-center d-flex flex-column sliderSweats w-100"
-             style="transition: all 1s;">
-            <div class="d-inline-flex position-relative w-75 overflow-hidden"
-                 style="height: 400px;">
-                <div class="d-flex items position-relative"
-                     style="right: 0px;"
-                     id="slideSweats"
-                     dir="rtl">
-                    <div id='item-slider'
-                         data-show='1'
-                         class="bg-light h-100 item mx-1 p-3 rounded"
-                         style="width:350px;transition:all 1s">
+        <div class="align-items-center d-flex flex-column sliderSweats w-100" style="transition: all 1s;">
+            <div class="d-inline-flex position-relative w-75 overflow-hidden" style="height: 400px;">
+                <div class="d-flex items position-relative" style="right: 0px;" id="slideSweats" dir="rtl">
+                    <div id='item-slider' data-show='1' class="bg-light h-100 item mx-1 p-3 rounded"
+                        style="width:350px;transition:all 1s">
                         <div class="d-flex flex-column justify-content-center">
-                            <div class="img"><img src="https://picsum.photos/id/111/150"
-                                     alt=""
-                                     class="w-100">
+                            <div class="img"><img src="https://picsum.photos/id/111/150" alt="" class="w-100">
                                 <div class="align-items-baseline d-flex justify-content-between p-1">
                                     <div class="info">
-                                        <div class="fs-4 fw-bolder text-black-500"><a class="text-decoration-none text-first pointer"
-                                               href="#">Name</a></div>
+                                        <div class="fs-4 fw-bolder text-black-500"><a
+                                                class="text-decoration-none text-first pointer" href="#">Name</a></div>
                                         <div class="fs-6 text-black-50">حلويات</div>
                                     </div>
                                     <div>
@@ -431,18 +404,14 @@
                             </div>
                         </div>
                     </div>
-                    <div id='item-slider'
-                         data-show='2'
-                         class="bg-light h-100 item mx-1 p-3 rounded"
-                         style="width:350px;transition:all 1s">
+                    <div id='item-slider' data-show='2' class="bg-light h-100 item mx-1 p-3 rounded"
+                        style="width:350px;transition:all 1s">
                         <div class="d-flex flex-column justify-content-center">
-                            <div class="img"><img src="https://picsum.photos/id/107/150"
-                                     alt=""
-                                     class="w-100">
+                            <div class="img"><img src="https://picsum.photos/id/107/150" alt="" class="w-100">
                                 <div class="align-items-baseline d-flex justify-content-between p-1">
                                     <div class="info">
-                                        <div class="fs-4 fw-bolder text-black-500"><a class="text-decoration-none text-first pointer"
-                                               href="#">Name</a></div>
+                                        <div class="fs-4 fw-bolder text-black-500"><a
+                                                class="text-decoration-none text-first pointer" href="#">Name</a></div>
                                         <div class="fs-6 text-black-50">حلويات</div>
                                     </div>
                                     <div>
@@ -452,18 +421,14 @@
                             </div>
                         </div>
                     </div>
-                    <div id='item-slider'
-                         data-show='3'
-                         class="bg-light h-100 item mx-1 p-3 rounded"
-                         style="width:350px;transition:all 1s">
+                    <div id='item-slider' data-show='3' class="bg-light h-100 item mx-1 p-3 rounded"
+                        style="width:350px;transition:all 1s">
                         <div class="d-flex flex-column justify-content-center">
-                            <div class="img"><img src="https://picsum.photos/id/122/150"
-                                     alt=""
-                                     class="w-100">
+                            <div class="img"><img src="https://picsum.photos/id/122/150" alt="" class="w-100">
                                 <div class="align-items-baseline d-flex justify-content-between p-1">
                                     <div class="info">
-                                        <div class="fs-4 fw-bolder text-black-500"><a class="text-decoration-none text-first pointer"
-                                               href="#">Name</a></div>
+                                        <div class="fs-4 fw-bolder text-black-500"><a
+                                                class="text-decoration-none text-first pointer" href="#">Name</a></div>
                                         <div class="fs-6 text-black-50">حلويات</div>
                                     </div>
                                     <div>
@@ -473,18 +438,14 @@
                             </div>
                         </div>
                     </div>
-                    <div id='item-slider'
-                         data-show='3'
-                         class="bg-light h-100 item mx-1 p-3 rounded"
-                         style="width:350px;transition:all 1s">
+                    <div id='item-slider' data-show='3' class="bg-light h-100 item mx-1 p-3 rounded"
+                        style="width:350px;transition:all 1s">
                         <div class="d-flex flex-column justify-content-center">
-                            <div class="img"><img src="https://picsum.photos/id/108/150"
-                                     alt=""
-                                     class="w-100">
+                            <div class="img"><img src="https://picsum.photos/id/108/150" alt="" class="w-100">
                                 <div class="align-items-baseline d-flex justify-content-between p-1">
                                     <div class="info">
-                                        <div class="fs-4 fw-bolder text-black-500"><a class="text-decoration-none text-first pointer"
-                                               href="#">Name</a></div>
+                                        <div class="fs-4 fw-bolder text-black-500"><a
+                                                class="text-decoration-none text-first pointer" href="#">Name</a></div>
                                         <div class="fs-6 text-black-50">حلويات</div>
                                     </div>
                                     <div>
@@ -494,18 +455,14 @@
                             </div>
                         </div>
                     </div>
-                    <div id='item-slider'
-                         data-show='3'
-                         class="bg-light h-100 item mx-1 p-3 rounded"
-                         style="width:350px;transition:all 1s">
+                    <div id='item-slider' data-show='3' class="bg-light h-100 item mx-1 p-3 rounded"
+                        style="width:350px;transition:all 1s">
                         <div class="d-flex flex-column justify-content-center">
-                            <div class="img"><img src="https://picsum.photos/id/99/150"
-                                     alt=""
-                                     class="w-100">
+                            <div class="img"><img src="https://picsum.photos/id/99/150" alt="" class="w-100">
                                 <div class="align-items-baseline d-flex justify-content-between p-1">
                                     <div class="info">
-                                        <div class="fs-4 fw-bolder text-black-500"><a class="text-decoration-none text-first pointer"
-                                               href="#">Name</a></div>
+                                        <div class="fs-4 fw-bolder text-black-500"><a
+                                                class="text-decoration-none text-first pointer" href="#">Name</a></div>
                                         <div class="fs-6 text-black-50">حلويات</div>
                                     </div>
                                     <div>
@@ -521,11 +478,11 @@
 
             <div class="action">
                 <div class="next align-items-center bg-light d-flex end-0 h-100 h-50 justify-content-center position-absolute text-first top-0 px-4 shadow pointer"
-                     @click="scrollSlider('right', 'slideSweats')">
+                    @click="scrollSlider('right', 'slideSweats')">
                     <li class="fa fa-chevron-right"></li>
                 </div>
                 <div class="prev  align-items-center bg-light d-flex start-0 h-100 h-50 justify-content-center position-absolute text-first top-0 px-4 shadow pointer"
-                     @click="scrollSlider('left', 'slideSweats')">
+                    @click="scrollSlider('left', 'slideSweats')">
                     <li class="fa fa-chevron-left"></li>
                 </div>
 
@@ -538,31 +495,20 @@
     <section class="salts font-amiri mt-5">
         <div class="d-flex flex-column align-items-center justify-content-center w-100 mb-5">
             <div class="h2 fw-bolder m-1 text-center mb-1">اخر المملحات</div>
-            <div class="sep mt-1"
-                 style="width:8%;"></div>
-            <div class="sep mt-1"
-                 style="width:6%;"></div>
-            <div class="sep mt-1"
-                 style="width:4%;"></div>
+            <div class="sep mt-1" style="width:8%;"></div>
+            <div class="sep mt-1" style="width:6%;"></div>
+            <div class="sep mt-1" style="width:4%;"></div>
         </div>
-        <div class="align-items-center d-flex flex-column slideSalts w-100"
-             style="transition: all 1s;">
-            <div class="d-inline-flex position-relative w-75 overflow-hidden"
-                 style="height: 400px;">
-                <div class="d-flex items position-relative"
-                     style="right: 0px;"
-                     id="slideSalts"
-                     dir="rtl">
-                    <div class="bg-light h-100 item mx-1 p-3 rounded"
-                         style="width:350px;">
+        <div class="align-items-center d-flex flex-column slideSalts w-100" style="transition: all 1s;">
+            <div class="d-inline-flex position-relative w-75 overflow-hidden" style="height: 400px;">
+                <div class="d-flex items position-relative" style="right: 0px;" id="slideSalts" dir="rtl">
+                    <div class="bg-light h-100 item mx-1 p-3 rounded" style="width:350px;">
                         <div class="d-flex flex-column justify-content-center">
-                            <div class="img"><img src="https://picsum.photos/id/105/150"
-                                     alt=""
-                                     class="w-100">
+                            <div class="img"><img src="https://picsum.photos/id/105/150" alt="" class="w-100">
                                 <div class="align-items-baseline d-flex justify-content-between p-1">
                                     <div class="info">
-                                        <div class="fs-4 fw-bolder text-black-500"><a class="text-decoration-none text-first pointer"
-                                               href="#">Name</a></div>
+                                        <div class="fs-4 fw-bolder text-black-500"><a
+                                                class="text-decoration-none text-first pointer" href="#">Name</a></div>
                                         <div class="fs-6 text-black-50">حلويات</div>
                                     </div>
                                     <div>
@@ -572,16 +518,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-light h-100 item mx-1 p-3 rounded"
-                         style="width:350px;">
+                    <div class="bg-light h-100 item mx-1 p-3 rounded" style="width:350px;">
                         <div class="d-flex flex-column justify-content-center">
-                            <div class="img"><img src="https://picsum.photos/id/102/150"
-                                     alt=""
-                                     class="w-100">
+                            <div class="img"><img src="https://picsum.photos/id/102/150" alt="" class="w-100">
                                 <div class="align-items-baseline d-flex justify-content-between p-1">
                                     <div class="info">
-                                        <div class="fs-4 fw-bolder text-black-500"><a class="text-decoration-none text-first pointer"
-                                               href="#">Name</a></div>
+                                        <div class="fs-4 fw-bolder text-black-500"><a
+                                                class="text-decoration-none text-first pointer" href="#">Name</a></div>
                                         <div class="fs-6 text-black-50">حلويات</div>
                                     </div>
                                     <div>
@@ -591,16 +534,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-light h-100 item mx-1 p-3 rounded"
-                         style="width:350px;">
+                    <div class="bg-light h-100 item mx-1 p-3 rounded" style="width:350px;">
                         <div class="d-flex flex-column justify-content-center">
-                            <div class="img"><img src="https://picsum.photos/id/102/150"
-                                     alt=""
-                                     class="w-100">
+                            <div class="img"><img src="https://picsum.photos/id/102/150" alt="" class="w-100">
                                 <div class="align-items-baseline d-flex justify-content-between p-1">
                                     <div class="info">
-                                        <div class="fs-4 fw-bolder text-black-500"><a class="text-decoration-none text-first pointer"
-                                               href="#">Name</a></div>
+                                        <div class="fs-4 fw-bolder text-black-500"><a
+                                                class="text-decoration-none text-first pointer" href="#">Name</a></div>
                                         <div class="fs-6 text-black-50">حلويات</div>
                                     </div>
                                     <div>
@@ -610,16 +550,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-light h-100 item mx-1 p-3 rounded"
-                         style="width:350px;">
+                    <div class="bg-light h-100 item mx-1 p-3 rounded" style="width:350px;">
                         <div class="d-flex flex-column justify-content-center">
-                            <div class="img"><img src="https://picsum.photos/150"
-                                     alt=""
-                                     class="w-100">
+                            <div class="img"><img src="https://picsum.photos/150" alt="" class="w-100">
                                 <div class="align-items-baseline d-flex justify-content-between p-1">
                                     <div class="info">
-                                        <div class="fs-4 fw-bolder text-black-500"><a class="text-decoration-none text-first pointer"
-                                               href="#">Name</a></div>
+                                        <div class="fs-4 fw-bolder text-black-500"><a
+                                                class="text-decoration-none text-first pointer" href="#">Name</a></div>
                                         <div class="fs-6 text-black-50">حلويات</div>
                                     </div>
                                     <div>
@@ -629,16 +566,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-light h-100 item mx-1 p-3 rounded"
-                         style="width:350px;">
+                    <div class="bg-light h-100 item mx-1 p-3 rounded" style="width:350px;">
                         <div class="d-flex flex-column justify-content-center">
-                            <div class="img"><img src="https://picsum.photos/150"
-                                     alt=""
-                                     class="w-100">
+                            <div class="img"><img src="https://picsum.photos/150" alt="" class="w-100">
                                 <div class="align-items-baseline d-flex justify-content-between p-1">
                                     <div class="info">
-                                        <div class="fs-4 fw-bolder text-black-500"><a class="text-decoration-none text-first pointer"
-                                               href="#">Name</a></div>
+                                        <div class="fs-4 fw-bolder text-black-500"><a
+                                                class="text-decoration-none text-first pointer" href="#">Name</a></div>
                                         <div class="fs-6 text-black-50">حلويات</div>
                                     </div>
                                     <div>
@@ -648,16 +582,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-light h-100 item mx-1 p-3 rounded"
-                         style="width:350px;">
+                    <div class="bg-light h-100 item mx-1 p-3 rounded" style="width:350px;">
                         <div class="d-flex flex-column justify-content-center">
-                            <div class="img"><img src="https://picsum.photos/150"
-                                     alt=""
-                                     class="w-100">
+                            <div class="img"><img src="https://picsum.photos/150" alt="" class="w-100">
                                 <div class="align-items-baseline d-flex justify-content-between p-1">
                                     <div class="info">
-                                        <div class="fs-4 fw-bolder text-black-500"><a class="text-decoration-none text-first pointer"
-                                               href="#">Name</a></div>
+                                        <div class="fs-4 fw-bolder text-black-500"><a
+                                                class="text-decoration-none text-first pointer" href="#">Name</a></div>
                                         <div class="fs-6 text-black-50">حلويات</div>
                                     </div>
                                     <div>
@@ -667,16 +598,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-light h-100 item mx-1 p-3 rounded"
-                         style="width:350px;">
+                    <div class="bg-light h-100 item mx-1 p-3 rounded" style="width:350px;">
                         <div class="d-flex flex-column justify-content-center">
-                            <div class="img"><img src="https://picsum.photos/150"
-                                     alt=""
-                                     class="w-100">
+                            <div class="img"><img src="https://picsum.photos/150" alt="" class="w-100">
                                 <div class="align-items-baseline d-flex justify-content-between p-1">
                                     <div class="info">
-                                        <div class="fs-4 fw-bolder text-black-500"><a class="text-decoration-none text-first pointer"
-                                               href="#">Name</a></div>
+                                        <div class="fs-4 fw-bolder text-black-500"><a
+                                                class="text-decoration-none text-first pointer" href="#">Name</a></div>
                                         <div class="fs-6 text-black-50">حلويات</div>
                                     </div>
                                     <div>
@@ -686,16 +614,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-light h-100 item mx-1 p-3 rounded"
-                         style="width:350px;">
+                    <div class="bg-light h-100 item mx-1 p-3 rounded" style="width:350px;">
                         <div class="d-flex flex-column justify-content-center">
-                            <div class="img"><img src="https://picsum.photos/id/100/150"
-                                     alt=""
-                                     class="w-100">
+                            <div class="img"><img src="https://picsum.photos/id/100/150" alt="" class="w-100">
                                 <div class="align-items-baseline d-flex justify-content-between p-1">
                                     <div class="info">
-                                        <div class="fs-4 fw-bolder text-black-500"><a class="text-decoration-none text-first pointer"
-                                               href="#">Name</a></div>
+                                        <div class="fs-4 fw-bolder text-black-500"><a
+                                                class="text-decoration-none text-first pointer" href="#">Name</a></div>
                                         <div class="fs-6 text-black-50">حلويات</div>
                                     </div>
                                     <div>
@@ -705,16 +630,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-light h-100 item mx-1 p-3 rounded"
-                         style="width:350px;">
+                    <div class="bg-light h-100 item mx-1 p-3 rounded" style="width:350px;">
                         <div class="d-flex flex-column justify-content-center">
-                            <div class="img"><img src="https://picsum.photos/id/100/150"
-                                     alt=""
-                                     class="w-100">
+                            <div class="img"><img src="https://picsum.photos/id/100/150" alt="" class="w-100">
                                 <div class="align-items-baseline d-flex justify-content-between p-1">
                                     <div class="info">
-                                        <div class="fs-4 fw-bolder text-black-500"><a class="text-decoration-none text-first pointer"
-                                               href="#">Name</a></div>
+                                        <div class="fs-4 fw-bolder text-black-500"><a
+                                                class="text-decoration-none text-first pointer" href="#">Name</a></div>
                                         <div class="fs-6 text-black-50">حلويات</div>
                                     </div>
                                     <div>
@@ -724,16 +646,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-light h-100 item mx-1 p-3 rounded"
-                         style="width:350px;">
+                    <div class="bg-light h-100 item mx-1 p-3 rounded" style="width:350px;">
                         <div class="d-flex flex-column justify-content-center">
-                            <div class="img"><img src="https://picsum.photos/id/100/150"
-                                     alt=""
-                                     class="w-100">
+                            <div class="img"><img src="https://picsum.photos/id/100/150" alt="" class="w-100">
                                 <div class="align-items-baseline d-flex justify-content-between p-1">
                                     <div class="info">
-                                        <div class="fs-4 fw-bolder text-black-500"><a class="text-decoration-none text-first pointer"
-                                               href="#">xxxxxxxxxx</a></div>
+                                        <div class="fs-4 fw-bolder text-black-500"><a
+                                                class="text-decoration-none text-first pointer" href="#">xxxxxxxxxx</a>
+                                        </div>
                                         <div class="fs-6 text-black-50">حلويات</div>
                                     </div>
                                     <div>
@@ -757,90 +677,74 @@
 
         </div>
     </section>
-    <section class="bestChefs h-auto "
-             dir="rtl">
+    <section class="bestChefs h-auto " dir="rtl">
         <div class="w-100">
             <div class="d-flex flex-column justify-content-center mb-5 w-100 mt-5">
                 <h1 class="text-center">افضل الطهاة</h1>
-                <div class="sep mt-1"
-                     style="width: 8%;"></div>
-                <div class="sep mt-1"
-                     style="width: 6%;"></div>
-                <div class="sep mt-1"
-                     style="width: 4%;"></div>
+                <div class="sep mt-1" style="width: 8%;"></div>
+                <div class="sep mt-1" style="width: 6%;"></div>
+                <div class="sep mt-1" style="width: 4%;"></div>
             </div>
             <div class="chefs">
                 <div class="container">
                     <div class="row">
                         <div class="col-3">
-                            <div class="chef p-2 rounded"
-                                 style="height: auto;background: #b1b1b133;">
+                            <div class="chef p-2 rounded" style="height: auto;background: #b1b1b133;">
                                 <div class="d-flex flex-column">
-                                    <div class="w-100"><img class="w-100"
-                                             src="https://i.pravatar.cc/300?img=3"
-                                             alt=""></div>
+                                    <div class="w-100"><img class="w-100" src="https://i.pravatar.cc/300?img=3" alt="">
+                                    </div>
                                     <div class="font-italic fs-5 fw-normal mt-1 mx-0 name text-center"><a href="#"
-                                           class="text-decoration-none text-info">Mohamed el habib</a></div>
+                                            class="text-decoration-none text-info">Mohamed el habib</a></div>
                                     <div class="font-italic fs-6 fw-normal m-1 mx-0 specialité text-center"
-                                         style="color: #e35516;"><a href="#"
-                                           class="text-decoration-none "
-                                           style="color: #e35516;">Specialité</a></div>
+                                        style="color: #e35516;"><a href="#" class="text-decoration-none "
+                                            style="color: #e35516;">Specialité</a></div>
                                     <div><a href="#"
-                                           class="bg-info btn text-white w-100 text-decoration-none">Profile</a></div>
+                                            class="bg-info btn text-white w-100 text-decoration-none">Profile</a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="chef p-2 rounded"
-                                 style="height: auto;background: #b1b1b133;">
+                            <div class="chef p-2 rounded" style="height: auto;background: #b1b1b133;">
                                 <div class="d-flex flex-column">
-                                    <div class="w-100"><img class="w-100"
-                                             src="https://i.pravatar.cc/300?img=4"
-                                             alt=""></div>
+                                    <div class="w-100"><img class="w-100" src="https://i.pravatar.cc/300?img=4" alt="">
+                                    </div>
                                     <div class="font-italic fs-5 fw-normal mt-1 mx-0 name text-center"><a href="#"
-                                           class="text-decoration-none text-info">Mohamed el habib</a></div>
+                                            class="text-decoration-none text-info">Mohamed el habib</a></div>
                                     <div class="font-italic fs-6 fw-normal m-1 mx-0 specialité text-center"
-                                         style="color: #e35516;"><a href="#"
-                                           class="text-decoration-none "
-                                           style="color: #e35516;">Specialité</a></div>
+                                        style="color: #e35516;"><a href="#" class="text-decoration-none "
+                                            style="color: #e35516;">Specialité</a></div>
                                     <div><a href="#"
-                                           class="bg-info btn text-white w-100 text-decoration-none">Profile</a></div>
+                                            class="bg-info btn text-white w-100 text-decoration-none">Profile</a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="chef p-2 rounded"
-                                 style="height: auto;background: #b1b1b133;">
+                            <div class="chef p-2 rounded" style="height: auto;background: #b1b1b133;">
                                 <div class="d-flex flex-column">
-                                    <div class="w-100"><img class="w-100"
-                                             src="https://i.pravatar.cc/300?img=5"
-                                             alt=""></div>
+                                    <div class="w-100"><img class="w-100" src="https://i.pravatar.cc/300?img=5" alt="">
+                                    </div>
                                     <div class="font-italic fs-5 fw-normal mt-1 mx-0 name text-center"><a href="#"
-                                           class="text-decoration-none text-info">Mohamed el habib</a></div>
+                                            class="text-decoration-none text-info">Mohamed el habib</a></div>
                                     <div class="font-italic fs-6 fw-normal m-1 mx-0 specialité text-center"
-                                         style="color: #e35516;"><a href="#"
-                                           class="text-decoration-none "
-                                           style="color: #e35516;">Specialité</a></div>
+                                        style="color: #e35516;"><a href="#" class="text-decoration-none "
+                                            style="color: #e35516;">Specialité</a></div>
                                     <div><a href="#"
-                                           class="bg-info btn text-white w-100 text-decoration-none">Profile</a></div>
+                                            class="bg-info btn text-white w-100 text-decoration-none">Profile</a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="chef p-2 rounded"
-                                 style="height: auto;background: #b1b1b133;">
+                            <div class="chef p-2 rounded" style="height: auto;background: #b1b1b133;">
                                 <div class="d-flex flex-column">
-                                    <div class="w-100"><img class="w-100"
-                                             src="https://i.pravatar.cc/300?img=6"
-                                             alt=""></div>
+                                    <div class="w-100"><img class="w-100" src="https://i.pravatar.cc/300?img=6" alt="">
+                                    </div>
                                     <div class="font-italic fs-5 fw-normal mt-1 mx-0 name text-center"><a href="#"
-                                           class="text-decoration-none text-info">Mohamed el habib</a></div>
+                                            class="text-decoration-none text-info">Mohamed el habib</a></div>
                                     <div class="font-italic fs-6 fw-normal m-1 mx-0 specialité text-center"
-                                         style="color: #e35516;"><a href="#"
-                                           class="text-decoration-none "
-                                           style="color: #e35516;">Specialité</a></div>
+                                        style="color: #e35516;"><a href="#" class="text-decoration-none "
+                                            style="color: #e35516;">Specialité</a></div>
                                     <div><a href="#"
-                                           class="bg-info btn text-white w-100 text-decoration-none">Profile</a></div>
+                                            class="bg-info btn text-white w-100 text-decoration-none">Profile</a></div>
                                 </div>
                             </div>
                         </div>
@@ -851,45 +755,35 @@
     </section>
 
 
-    <section class="sponsore w-100 mw-100 mb-5"
-             style="font-family:'dance';">
+    <section class="sponsore w-100 mw-100 mb-5" style="font-family:'dance';">
         <div class="align-items-center d-flex justify-content-center w-100">
             <div class="position-relative mb-4">
                 <div class="fs-2 fw-bold text-center">Sponsored</div>
             </div>
         </div>
 
-        <div class="align-items-center d-flex justify-content-center w-100 text-center"
-             style="height: 100px;">
+        <div class="align-items-center d-flex justify-content-center w-100 text-center" style="height: 100px;">
             <div class="item mx-2">
                 <a href="#">
-                    <img src="https://picsum.photos/70"
-                         alt=""
-                         class="rounded-circle">
+                    <img src="https://picsum.photos/70" alt="" class="rounded-circle">
                 </a>
                 <div class="name_comapny fw-bold">Lorem azxpp</div>
             </div>
             <div class="item mx-2">
                 <a href="#">
-                    <img src="https://picsum.photos/70"
-                         alt=""
-                         class="rounded-circle">
+                    <img src="https://picsum.photos/70" alt="" class="rounded-circle">
                 </a>
                 <div class="name_comapny fw-bold">Lorem azxpp</div>
             </div>
             <div class="item mx-2">
                 <a href="#">
-                    <img src="https://picsum.photos/70"
-                         alt=""
-                         class="rounded-circle">
+                    <img src="https://picsum.photos/70" alt="" class="rounded-circle">
                 </a>
                 <div class="name_comapny fw-bold">Lorem azxpp</div>
             </div>
             <div class="item mx-2">
                 <a href="#">
-                    <img src="https://picsum.photos/70"
-                         alt=""
-                         class="rounded-circle">
+                    <img src="https://picsum.photos/70" alt="" class="rounded-circle">
                 </a>
                 <div class="name_comapny fw-bold">Lorem azxpp</div>
             </div>
@@ -921,7 +815,7 @@ export default {
             effectImg: false,
             imgBestRecipe: false,
             show: "",
-            activeComponent:'',
+            activeComponent: '',
         };
     },
     methods: {

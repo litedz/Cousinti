@@ -26777,10 +26777,6 @@ __webpack_require__.r(__webpack_exports__);
       var show = document.getElementById(name_slider);
       var right = parseInt(show.style.right);
       var widthSlider = show.offsetWidth;
-      console.log(right - widthSlider);
-      console.log('right => ' + right);
-      console.log('left => ' + show.offsetLeft);
-      console.log(' width => ' + widthSlider);
       if (action === 'right') {
         if (right < widthSlider - 300) {
           show.style.right = right + 300 + 'px';
@@ -26795,9 +26791,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     wheneScroll: function wheneScroll() {
       if ($(window).scrollTop() > 300) {
-        $('#navigation-bar').fadeIn('slow');
+        $('#home-navbar').fadeIn('slow');
       } else {
-        $('#navigation-bar').fadeOut();
+        $('#home-navbar').fadeOut();
       }
     }
   }
@@ -28457,53 +28453,41 @@ var _hoisted_2 = {
   },
   dir: "ltr"
 };
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "position-absolute text-center w-50 z-9999",
-  style: {
-    "left": "25%",
-    "top": "10%",
-    "mix-blend-mode": "screen"
-  }
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "bg-white display-1 fw-bolder text text-black",
-  style: {
-    "letter-spacing": "15px"
-  }
-}, "COUSINTI")], -1 /* HOISTED */);
-var _hoisted_4 = {
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"h-auto index-nav position-fixed top-0 w-100 z-9999\" style=\"\"><div class=\"d-flex flex-row font-amiri justify-content-center nav p-3\" style=\"\"><li class=\"fs-3\"><a href=\"#\" class=\"p-2 rounded text-decoration-none\" style=\"color:darkcyan;\">حلويات</a></li></div></div><div class=\"position-absolute text-center w-50 z-9999\" style=\"left:25%;top:10%;mix-blend-mode:screen;\"><div class=\"bg-white display-1 fw-bolder text text-black\" style=\"letter-spacing:15px;\">COUSINTI</div></div>", 2);
+var _hoisted_5 = {
   "class": "center-text h-50 position-absolute w-100 z-5555 d-flex justify-content-center flex-column",
   style: {
     "top": "25%"
   }
 };
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "mt-5 mb-5"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "title display-4 font-amiri text-center text-white fw-bolder",
   id: "title"
 })], -1 /* HOISTED */);
-var _hoisted_6 = {
+var _hoisted_7 = {
   "class": "steps"
 };
-var _hoisted_7 = {
+var _hoisted_8 = {
   "class": "container"
 };
-var _hoisted_8 = {
+var _hoisted_9 = {
   "class": "bg-body h-auto mt-sm-5 mx-sm-auto shape col-12 col-md-5",
   style: {
     "border-radius": "22% 0%",
     "height": "174px"
   }
 };
-var _hoisted_9 = {
+var _hoisted_10 = {
   "class": "d-flex flex-column h-75 items justify-content-around p-5",
   dir: "rtl"
 };
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"title font-amiri fs-3 fw-bold text-black-title text-center\"> اجعل يومك احلي في 3 خطوات </div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div>", 4);
-var _hoisted_14 = {
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"title font-amiri fs-3 fw-bold text-black-title text-center\"> اجعل يومك احلي في 3 خطوات </div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div>", 4);
+var _hoisted_15 = {
   "class": "font-amiri random text-center"
 };
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "cover position-relative"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "w-100 h-100 opacity-75 bg-perso position-absolute",
@@ -28511,43 +28495,43 @@ var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
     "background": "linear-gradient(177deg,rgb(83, 196, 180),#ffffffb8)"
   }
 })], -1 /* HOISTED */);
-var _hoisted_16 = {
+var _hoisted_17 = {
   "class": "choose_food h-auto mb-5 mt-5",
   style: {
     "width": "100",
     "height": "900px"
   }
 };
-var _hoisted_17 = {
+var _hoisted_18 = {
   "class": "container"
 };
-var _hoisted_18 = {
+var _hoisted_19 = {
   "class": "row"
 };
-var _hoisted_19 = {
+var _hoisted_20 = {
   "class": "align-items-center col-12 text-dark d-flex flex-row-reverse justify-content-center mb-5 text-center"
 };
-var _hoisted_20 = ["src"];
-var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
+var _hoisted_21 = ["src"];
+var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
   "class": "text-black-title h2"
 }, "انواع الوصفات", -1 /* HOISTED */);
-var _hoisted_22 = ["src"];
-var _hoisted_23 = ["id"];
-var _hoisted_24 = {
+var _hoisted_23 = ["src"];
+var _hoisted_24 = ["id"];
+var _hoisted_25 = {
   "class": "d-flex flex-column h-100 justify-content-around position-absolute w-100 z-8888"
 };
-var _hoisted_25 = {
+var _hoisted_26 = {
   "class": "d-flex flex-column justify-content-around text-center text-white squar",
   style: {
     "background": "#17a2b8b8",
     "height": "10%"
   }
 };
-var _hoisted_26 = ["href"];
-var _hoisted_27 = {
+var _hoisted_27 = ["href"];
+var _hoisted_28 = {
   "class": "font-amiri h4 text-white"
 };
-var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "bg-dark w-100",
   style: {
     "height": "350px"
@@ -28559,84 +28543,84 @@ var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   alt: "",
   "class": "h-100 w-100",
   style: {}
-})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"triange\"\n                             id=\"triangle-bottomright\">\n                        </div> ")], -1 /* HOISTED */);
-var _hoisted_29 = {
+})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"triange\"\r\n                             id=\"triangle-bottomright\">\r\n                        </div> ")], -1 /* HOISTED */);
+var _hoisted_30 = {
   "class": "best-of-recipe mb-5 p-3 px-0"
 };
-var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"font-amiri mb-5 pb-3 text-center w-100\" style=\"border-bottom:1px solid lightgrey;border-right:799px solid transparent;border-left:800px solid transparent;\"><div class=\"title d-flex align-items-center justify-content-center\"><div class=\"h2 fw-bolder m-1\">افضل الوصفات</div><i class=\"fa fa-star-half-alt text-warning\"></i></div><div class=\"fst-italic text-muted\"> اكثر الوصفات اعجابا</div></div>", 1);
-var _hoisted_31 = {
+var _hoisted_31 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"font-amiri mb-5 pb-3 text-center w-100\" style=\"border-bottom:1px solid lightgrey;border-right:799px solid transparent;border-left:800px solid transparent;\"><div class=\"title d-flex align-items-center justify-content-center\"><div class=\"h2 fw-bolder m-1\">افضل الوصفات</div><i class=\"fa fa-star-half-alt text-warning\"></i></div><div class=\"fst-italic text-muted\"> اكثر الوصفات اعجابا</div></div>", 1);
+var _hoisted_32 = {
   "class": "cover"
 };
-var _hoisted_32 = {
+var _hoisted_33 = {
   "class": "container"
 };
-var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": ""
 }, null, -1 /* HOISTED */);
-var _hoisted_34 = {
+var _hoisted_35 = {
   "class": "row"
 };
-var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"icon align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute w-100 z-5555\" style=\"top:45%;transition:all 1s;opacity:0;\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
-var _hoisted_36 = [_hoisted_35];
-var _hoisted_37 = {
+var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"icon align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute w-100 z-5555\" style=\"top:45%;transition:all 1s;opacity:0;\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
+var _hoisted_37 = [_hoisted_36];
+var _hoisted_38 = {
   "class": "col-12 col-md-6"
 };
-var _hoisted_38 = {
+var _hoisted_39 = {
   "class": "row h-100"
 };
-var _hoisted_39 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
-var _hoisted_40 = [_hoisted_39];
-var _hoisted_41 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
-var _hoisted_42 = [_hoisted_41];
-var _hoisted_43 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
-var _hoisted_44 = [_hoisted_43];
-var _hoisted_45 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
-var _hoisted_46 = [_hoisted_45];
-var _hoisted_47 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<section class=\"sing_up bg-dark position-relative d-flex align-items-center mb-5 font-amiri\"><div class=\"bg-black h-100 opacity-75 opt w-100 position-absolute\"></div><div class=\"container position-relative text-white\" style=\"z-index:22;\"><div class=\"align-items-center align-items-end d-flex flex-column justify-content-center\"><div class=\"display-1 font-weight-bolder\" dir=\"rtl\">جربة وصفة ونجحتلك ? </div><div class=\"fs-5 lh-lg text-right\">أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أوالعديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا </div><div class=\"form mt-4 mt-lg-5\"><a href=\"/register\" class=\"font-weight-bolder fs-3 m-1 p-2 px-5 rounded rounded-pill text-decoration-none text-first\" style=\"color:white;background:#229191;\">الحساب </a><a href=\"/rules\" class=\"bg-gradient bg-light font-weight-bolder fs-3 m-1 p-2 px-5 rounded rounded-pill text-decoration-none text-first text-info\">القوانين</a></div></div></div></section>", 1);
-var _hoisted_48 = {
+var _hoisted_40 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
+var _hoisted_41 = [_hoisted_40];
+var _hoisted_42 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
+var _hoisted_43 = [_hoisted_42];
+var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
+var _hoisted_45 = [_hoisted_44];
+var _hoisted_46 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
+var _hoisted_47 = [_hoisted_46];
+var _hoisted_48 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<section class=\"sing_up bg-dark position-relative d-flex align-items-center mb-5 font-amiri\"><div class=\"bg-black h-100 opacity-75 opt w-100 position-absolute\"></div><div class=\"container position-relative text-white\" style=\"z-index:22;\"><div class=\"align-items-center align-items-end d-flex flex-column justify-content-center\"><div class=\"display-1 font-weight-bolder\" dir=\"rtl\">جربة وصفة ونجحتلك ? </div><div class=\"fs-5 lh-lg text-right\">أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أوالعديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا </div><div class=\"form mt-4 mt-lg-5\"><a href=\"/register\" class=\"font-weight-bolder fs-3 m-1 p-2 px-5 rounded rounded-pill text-decoration-none text-first\" style=\"color:white;background:#229191;\">الحساب </a><a href=\"/rules\" class=\"bg-gradient bg-light font-weight-bolder fs-3 m-1 p-2 px-5 rounded rounded-pill text-decoration-none text-first text-info\">القوانين</a></div></div></div></section>", 1);
+var _hoisted_49 = {
   "class": "sweats font-amiri position-relative"
 };
-var _hoisted_49 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-flex flex-column align-items-center justify-content-center w-100 mb-5\"><div class=\"h2 fw-bolder m-1 text-center mb-1\">اخر الحلويات</div><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div>", 1);
-var _hoisted_50 = {
+var _hoisted_50 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-flex flex-column align-items-center justify-content-center w-100 mb-5\"><div class=\"h2 fw-bolder m-1 text-center mb-1\">اخر الحلويات</div><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div>", 1);
+var _hoisted_51 = {
   "class": "align-items-center d-flex flex-column sliderSweats w-100",
   style: {
     "transition": "all 1s"
   }
 };
-var _hoisted_51 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-inline-flex position-relative w-75 overflow-hidden\" style=\"height:400px;\"><div class=\"d-flex items position-relative\" style=\"right:0px;\" id=\"slideSweats\" dir=\"rtl\"><div id=\"item-slider\" data-show=\"1\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/111/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"2\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/107/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/122/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/108/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/99/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div></div></div>", 1);
-var _hoisted_52 = {
+var _hoisted_52 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-inline-flex position-relative w-75 overflow-hidden\" style=\"height:400px;\"><div class=\"d-flex items position-relative\" style=\"right:0px;\" id=\"slideSweats\" dir=\"rtl\"><div id=\"item-slider\" data-show=\"1\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/111/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"2\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/107/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/122/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/108/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/99/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div></div></div>", 1);
+var _hoisted_53 = {
   "class": "action"
 };
-var _hoisted_53 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+var _hoisted_54 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
   "class": "fa fa-chevron-right"
 }, null, -1 /* HOISTED */);
-var _hoisted_54 = [_hoisted_53];
-var _hoisted_55 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+var _hoisted_55 = [_hoisted_54];
+var _hoisted_56 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
   "class": "fa fa-chevron-left"
 }, null, -1 /* HOISTED */);
-var _hoisted_56 = [_hoisted_55];
-var _hoisted_57 = {
+var _hoisted_57 = [_hoisted_56];
+var _hoisted_58 = {
   "class": "salts font-amiri mt-5"
 };
-var _hoisted_58 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-flex flex-column align-items-center justify-content-center w-100 mb-5\"><div class=\"h2 fw-bolder m-1 text-center mb-1\">اخر المملحات</div><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div>", 1);
-var _hoisted_59 = {
+var _hoisted_59 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-flex flex-column align-items-center justify-content-center w-100 mb-5\"><div class=\"h2 fw-bolder m-1 text-center mb-1\">اخر المملحات</div><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div>", 1);
+var _hoisted_60 = {
   "class": "align-items-center d-flex flex-column slideSalts w-100",
   style: {
     "transition": "all 1s"
   }
 };
-var _hoisted_60 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-inline-flex position-relative w-75 overflow-hidden\" style=\"height:400px;\"><div class=\"d-flex items position-relative\" style=\"right:0px;\" id=\"slideSalts\" dir=\"rtl\"><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/105/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/102/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/102/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">xxxxxxxxxx</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div></div></div>", 1);
-var _hoisted_61 = {
+var _hoisted_61 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-inline-flex position-relative w-75 overflow-hidden\" style=\"height:400px;\"><div class=\"d-flex items position-relative\" style=\"right:0px;\" id=\"slideSalts\" dir=\"rtl\"><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/105/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/102/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/102/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">xxxxxxxxxx</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div></div></div>", 1);
+var _hoisted_62 = {
   "class": "action mt-3"
 };
-var _hoisted_62 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<section class=\"bestChefs h-auto\" dir=\"rtl\"><div class=\"w-100\"><div class=\"d-flex flex-column justify-content-center mb-5 w-100 mt-5\"><h1 class=\"text-center\">افضل الطهاة</h1><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div><div class=\"chefs\"><div class=\"container\"><div class=\"row\"><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=3\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=4\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=5\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=6\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div></div></div></div></div></section><section class=\"sponsore w-100 mw-100 mb-5\" style=\"font-family:&#39;dance&#39;;\"><div class=\"align-items-center d-flex justify-content-center w-100\"><div class=\"position-relative mb-4\"><div class=\"fs-2 fw-bold text-center\">Sponsored</div></div></div><div class=\"align-items-center d-flex justify-content-center w-100 text-center\" style=\"height:100px;\"><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div></div></section>", 2);
-var _hoisted_64 = {
+var _hoisted_63 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<section class=\"bestChefs h-auto\" dir=\"rtl\"><div class=\"w-100\"><div class=\"d-flex flex-column justify-content-center mb-5 w-100 mt-5\"><h1 class=\"text-center\">افضل الطهاة</h1><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div><div class=\"chefs\"><div class=\"container\"><div class=\"row\"><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=3\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=4\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=5\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=6\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div></div></div></div></div></section><section class=\"sponsore w-100 mw-100 mb-5\" style=\"font-family:&#39;dance&#39;;\"><div class=\"align-items-center d-flex justify-content-center w-100\"><div class=\"position-relative mb-4\"><div class=\"fs-2 fw-bold text-center\">Sponsored</div></div></div><div class=\"align-items-center d-flex justify-content-center w-100 text-center\" style=\"height:100px;\"><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div></div></section>", 2);
+var _hoisted_65 = {
   "class": "footer"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_nav_bar = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("nav-bar");
   var _component_footer_page = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("footer-page");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.KeepAlive, null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)($data.activeComponent)))], 1024 /* DYNAMIC_SLOTS */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_nav_bar)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"navbar w-100 bg-perso\">\n            <div class=\"container\">\n                <nav class=\"d-flex\">\n                    <li><a href=\"#\"\n                           class=\"font-amiri fs-3 px-4 rounded text-white text-decoration-none\">حلويات</a></li>\n                    <li><a href=\"#\"\n                           class=\"font-amiri fs-3 px-4 rounded text-white text-decoration-none\">حلويات</a></li>\n                    <li><a href=\"#\"\n                           class=\"font-amiri fs-3 px-4 rounded text-white text-decoration-none\">حلويات</a></li>\n                    <li><a href=\"#\"\n                           class=\"font-amiri fs-3 px-4 rounded text-white text-decoration-none\">حلويات</a></li>\n                </nav>\n            </div>\n        </div> "), _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.KeepAlive, null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)($data.activeComponent)))], 1024 /* DYNAMIC_SLOTS */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_nav_bar)]), _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "btn fs-4 fw-bolder mt-5 w-50",
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return $data.activeComponent = 'random-recipe';
@@ -28644,15 +28628,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     style: {
       "background": "#344040"
     }
-  }, "اختيار وصفة")])])])])])]), _hoisted_15]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  }, "اختيار وصفة")])])])])])]), _hoisted_16]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     "class": "ms-2",
     src: $options.w_path + '/images/V2.png',
     alt: ""
-  }, null, 8 /* PROPS */, _hoisted_20), _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  }, null, 8 /* PROPS */, _hoisted_21), _hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     "class": "ms-2",
     src: $options.w_path + '/images/V2.png',
     alt: ""
-  }, null, 8 /* PROPS */, _hoisted_22)]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.types_recipe, function (type) {
+  }, null, 8 /* PROPS */, _hoisted_23)]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.types_recipe, function (type) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       "class": "col-xs-12 col-md-6 col-lg-4 item overflow-hidden p-0 position-relative",
       id: type.type,
@@ -28663,11 +28647,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         return $options.EffectCategorie();
       }),
       key: type.recipe
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
       href: '/similar/' + type.type,
       "class": "text-decoration-none"
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(type.type), 1 /* TEXT */)], 8 /* PROPS */, _hoisted_26)])]), _hoisted_28], 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_23);
-  }), 128 /* KEYED_FRAGMENT */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"col-xs-12 col-md-6 col-lg-4 position-relative p-0 item overflow-hidden\"\n                     v-for=\"type in types_recipe\"\n                     :key=\"type.recipe\">\n                    <div class=\"name position-absolute text-center\"\n                         style=\"margin: 0 2%;width: 96%;z-index: 1;top: 40%;\">\n\n                        <div class=\"display-6 font-weight-bolder text-white\">\n                            <a href=\"#\"\n                               class=\"position-relative  text-decoration-none text-white\"\n                               style=\"z-index: 100;\">{{ type.type }}</a>\n                        </div>\n                    </div>\n                    <div class=\"h-100 opt position-absolute w-100 overflow-hidden\"></div>\n                    <img class=\"w-100 item\"\n                         :src=\"w_path + '/images/1.jpg'\"\n                         alt=\"\"\n                         srcset=\"\"\n                         style=\"height: 500px;\">\n                </div> ")])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_29, [_hoisted_30, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [_hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(type.type), 1 /* TEXT */)], 8 /* PROPS */, _hoisted_27)])]), _hoisted_29], 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_24);
+  }), 128 /* KEYED_FRAGMENT */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"col-xs-12 col-md-6 col-lg-4 position-relative p-0 item overflow-hidden\"\r\n                     v-for=\"type in types_recipe\"\r\n                     :key=\"type.recipe\">\r\n                    <div class=\"name position-absolute text-center\"\r\n                         style=\"margin: 0 2%;width: 96%;z-index: 1;top: 40%;\">\r\n\r\n                        <div class=\"display-6 font-weight-bolder text-white\">\r\n                            <a href=\"#\"\r\n                               class=\"position-relative  text-decoration-none text-white\"\r\n                               style=\"z-index: 100;\">{{ type.type }}</a>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"h-100 opt position-absolute w-100 overflow-hidden\"></div>\r\n                    <img class=\"w-100 item\"\r\n                         :src=\"w_path + '/images/1.jpg'\"\r\n                         alt=\"\"\r\n                         srcset=\"\"\r\n                         style=\"height: 500px;\">\r\n                </div> ")])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_30, [_hoisted_31, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [_hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "col-12 col-md-6",
     onMouseenter: _cache[3] || (_cache[3] = function ($event) {
       return $options.EffectBestRecipe();
@@ -28675,7 +28659,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onMouseleave: _cache[4] || (_cache[4] = function ($event) {
       return $options.EffectBestRecipe();
     })
-  }, _hoisted_36, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_37, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "col-6 mb-1 rounded img-fluid",
     onMouseenter: _cache[5] || (_cache[5] = function ($event) {
       return $options.EffectBestRecipe();
@@ -28683,7 +28667,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onMouseleave: _cache[6] || (_cache[6] = function ($event) {
       return $options.EffectBestRecipe();
     })
-  }, _hoisted_40, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_41, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "col-6 mb-1 rounded img-fluid",
     onMouseenter: _cache[7] || (_cache[7] = function ($event) {
       return $options.EffectBestRecipe();
@@ -28691,7 +28675,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onMouseleave: _cache[8] || (_cache[8] = function ($event) {
       return $options.EffectBestRecipe();
     })
-  }, _hoisted_42, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_43, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "col-6 mb-1 rounded img-fluid",
     onMouseenter: _cache[9] || (_cache[9] = function ($event) {
       return $options.EffectBestRecipe();
@@ -28699,7 +28683,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onMouseleave: _cache[10] || (_cache[10] = function ($event) {
       return $options.EffectBestRecipe();
     })
-  }, _hoisted_44, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_45, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "col-6 mb-1 rounded img-fluid",
     onMouseenter: _cache[11] || (_cache[11] = function ($event) {
       return $options.EffectBestRecipe();
@@ -28707,17 +28691,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onMouseleave: _cache[12] || (_cache[12] = function ($event) {
       return $options.EffectBestRecipe();
     })
-  }, _hoisted_46, 32 /* HYDRATE_EVENTS */)])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <section class=\"sweets mb-5\">\n        <div class=\"container p-1\">\n            <div class=\"row\">\n                <div class=\"col-xs-12 col-md-6\">\n                    <div class=\"images\">\n                        <img class=\"img-fluid\"\n                             :src=\"w_path + '/images/chef_sweet.jpg'\"\n                             alt=\"\">\n                        <img class=\"img-fluid vector_3 position-relative\"\n                             :src=\"w_path + '/images/V3.png'\"\n                             alt=\"\">\n                    </div>\n\n                </div>\n                <div class=\"col-md-6 col-xs-12 text-right text-dark\">\n                    <div class=\"intoduction w-100 h-100\">\n                        <div class=\"title h4 \">\n                            انواع الحلويات الجزائرية\n                        </div>\n                        <div class=\"text lh-lg mt-5 ps-5 mb-5 w-100 h-50\">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى\n                        </div>\n                        <div class=\"d-flex justify-content-end readMore \">\n                            <div class=\"btn-primary-perso rounded-5 \">\n                                <a href=\"#\"\n                                   class=\"position-relative text-decoration-none h5 font-weight-bolder\">\n                                    متابعة </a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"col-12 d-flex justify-content-around mt-5\">\n                    <div class=\"shapes w-25\">\n                        <div class=\"shape mt-2 m-auto w-100\"></div>\n                        <div class=\"shape mt-2 m-auto w-75\"></div>\n                        <div class=\"shape mt-2 m-auto w-50\"></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </section> "), _hoisted_47, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_48, [_hoisted_49, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_50, [_hoisted_51, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_52, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_47, 32 /* HYDRATE_EVENTS */)])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <section class=\"sweets mb-5\">\r\n        <div class=\"container p-1\">\r\n            <div class=\"row\">\r\n                <div class=\"col-xs-12 col-md-6\">\r\n                    <div class=\"images\">\r\n                        <img class=\"img-fluid\"\r\n                             :src=\"w_path + '/images/chef_sweet.jpg'\"\r\n                             alt=\"\">\r\n                        <img class=\"img-fluid vector_3 position-relative\"\r\n                             :src=\"w_path + '/images/V3.png'\"\r\n                             alt=\"\">\r\n                    </div>\r\n\r\n                </div>\r\n                <div class=\"col-md-6 col-xs-12 text-right text-dark\">\r\n                    <div class=\"intoduction w-100 h-100\">\r\n                        <div class=\"title h4 \">\r\n                            انواع الحلويات الجزائرية\r\n                        </div>\r\n                        <div class=\"text lh-lg mt-5 ps-5 mb-5 w-100 h-50\">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى\r\n                        </div>\r\n                        <div class=\"d-flex justify-content-end readMore \">\r\n                            <div class=\"btn-primary-perso rounded-5 \">\r\n                                <a href=\"#\"\r\n                                   class=\"position-relative text-decoration-none h5 font-weight-bolder\">\r\n                                    متابعة </a>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-12 d-flex justify-content-around mt-5\">\r\n                    <div class=\"shapes w-25\">\r\n                        <div class=\"shape mt-2 m-auto w-100\"></div>\r\n                        <div class=\"shape mt-2 m-auto w-75\"></div>\r\n                        <div class=\"shape mt-2 m-auto w-50\"></div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section> "), _hoisted_48, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_49, [_hoisted_50, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_51, [_hoisted_52, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_53, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "next align-items-center bg-light d-flex end-0 h-100 h-50 justify-content-center position-absolute text-first top-0 px-4 shadow pointer",
     onClick: _cache[13] || (_cache[13] = function ($event) {
       return $options.scrollSlider('right', 'slideSweats');
     })
-  }, _hoisted_54), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_55), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "prev align-items-center bg-light d-flex start-0 h-100 h-50 justify-content-center position-absolute text-first top-0 px-4 shadow pointer",
     onClick: _cache[14] || (_cache[14] = function ($event) {
       return $options.scrollSlider('left', 'slideSweats');
     })
-  }, _hoisted_56)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_57, [_hoisted_58, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_59, [_hoisted_60, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_61, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+  }, _hoisted_57)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_58, [_hoisted_59, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_60, [_hoisted_61, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_62, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
     "class": "fa fa-chevron-left mt-1 text-white bg-perso mx-3 p-2 px-5 rounded-pill pointer",
     onClick: _cache[15] || (_cache[15] = function ($event) {
       return $options.scrollSlider('left', 'slideSalts');
@@ -28727,7 +28711,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[16] || (_cache[16] = function ($event) {
       return $options.scrollSlider('right', 'slideSalts');
     })
-  })])])]), _hoisted_62, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_64, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_footer_page)])], 64 /* STABLE_FRAGMENT */);
+  })])])]), _hoisted_63, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_65, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_footer_page)])], 64 /* STABLE_FRAGMENT */);
 }
 
 /***/ }),
@@ -36812,7 +36796,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\na {\n    text-decoration: none;\n}\nul,\nli {\n    list-style: none;\n}\n.left-bar {\n    background: linear-gradient(176deg, rgb(67 173 143), #168272);\n    width: 20%;\n}\n.left-bar .sidebar {\n    margin-bottom: auto;\n    z-index: 5;\n}\n.left-bar div.sub-menu {\n    display: none;\n}\n.left-bar .profile {\n    height: 10%;\n    background: linear-gradient(179deg, #20a994, #ffffff00);\n    z-index: 10;\n}\n.left-bar .profile .DropDowmenu div.menu-profile {\n    /* display: none; */\n    background: #eeeeee;\n    left: -100%;\n    transition: all 0.5s;\n}\n.link-item {\n    background: #eeeeee;\n    color: hsl(0deg 0% 0% / 50%);\n    border-top: 1px solid #dee2e6;\n    font-weight: 500;\n}\n.link-item:hover {\n    color: white;\n    background: hsl(171deg 72% 38%);\n    border-top: 0;\n    transition: all 0.5s;\n}\n.right-bar {\n    width: 100%;\n    /* height: 5000px; */\n}\n.right-bar .content {\n    width: 100%;\n    height: auto;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\na {\r\n    text-decoration: none;\n}\nul,\r\nli {\r\n    list-style: none;\n}\n.left-bar {\r\n    background: linear-gradient(176deg, rgb(67 173 143), #168272);\r\n    width: 20%;\n}\n.left-bar .sidebar {\r\n    margin-bottom: auto;\r\n    z-index: 5;\n}\n.left-bar div.sub-menu {\r\n    display: none;\n}\n.left-bar .profile {\r\n    height: 10%;\r\n    background: linear-gradient(179deg, #20a994, #ffffff00);\r\n    z-index: 10;\n}\n.left-bar .profile .DropDowmenu div.menu-profile {\r\n    /* display: none; */\r\n    background: #eeeeee;\r\n    left: -100%;\r\n    transition: all 0.5s;\n}\n.link-item {\r\n    background: #eeeeee;\r\n    color: hsl(0deg 0% 0% / 50%);\r\n    border-top: 1px solid #dee2e6;\r\n    font-weight: 500;\n}\n.link-item:hover {\r\n    color: white;\r\n    background: hsl(171deg 72% 38%);\r\n    border-top: 0;\r\n    transition: all 0.5s;\n}\n.right-bar {\r\n    width: 100%;\r\n    /* height: 5000px; */\n}\n.right-bar .content {\r\n    width: 100%;\r\n    height: auto;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -36890,7 +36874,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_images_header_shape_1_png__WEBPACK_IMPORTED_MODULE_2__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.header {\n    width: 100%;\n    max-width: 100%;\n    height: 1050px;\n    background-color: rgb(199, 199, 199);\n}\n#slideSweats,\n#slideSalts {\n    transition: all 1s;\n}\n.header .cover {\n    background: url(\"https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg\");\n    background-size: cover;\n    max-width: 100%;\n    height: 100%;\n}\n.header .steps .separator {\n    width: 30%;\n    height: 1px;\n    background: #164;\n}\n.header .shape {\n    /* background: white; */\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-size: cover;\n}\n.header button {\n    color: white;\n}\n.header button:hover {\n    background: white;\n    color: #229191;\n    box-shadow: 0px 0px 20px #229191;\n    transition: all 1s ease;\n}\n\n/* TYPES RECIPES */\n#triangle-bottomright {\n    width: 0;\n    height: 0;\n    border-bottom: 400px solid #00c4ff6b;\n    border-left: 330px solid transparent;\n    position: absolute;\n    top: 0;\n    right: 0;\n}\nimg,\ndiv.squar {\n    transition: 1s;\n}\n.best-of-recipe {}\n.best-of-recipe .cover {\n    height: auto;\n    width: 100%;\n    background: url(\"https://i.pinimg.com/564x/bb/0d/c5/bb0dc5b2d6c9566fa965809367ff29d2.jpg\");\n    background-size: inherit;\n    background-repeat: no-repeat;\n}\n.sing_up {\n    height: 500px;\n    background: url(\"https://i.pinimg.com/564x/38/61/10/386110194c0b59f92a1124fe85120836.jpg\");\n    background-size: cover;\n    background-attachment: fixed;\n    background-position: center;\n}\n.bestChefs .separator {\n    /* background-attachment: fixed; */\n}\n.bestChefs div.chefs {\n    height: 500px;\n    /* background: url('https://i.pinimg.com/564x/f6/4c/97/f64c97785241fefe3ea312f1bd225703.jpg');\n    background-size: cover;\n    background-position: right; */\n    background: linear-gradient(transparent, #54545445, transparent);\n}\n.bestChefs .sep,\n.salts .sep,\n.sweats .sep {\n    height: 1px;\n    background: #ff8d00;\n    margin: auto;\n}\n\n/* width */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar {\n    width: 5px;\n    height: 5px;\n}\n\n/* Track */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar-track {\n    box-shadow: inset 0 0 5px #367a7a;\n    border-radius: 10px;\n}\n\n/* Handle */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar-thumb {\n    background: #229191;\n    border-radius: 10px;\n}\n#slide {\n    transition: all 1s;\n}\na.rounded-pill:hover {\n    opacity: 0.7;\n    transition: opacity 1s;\n}\n@media only screen and (max-width: 760px) {\n.description {\n        font-size: 0.9rem !important;\n}\n.header .shape div div:last-of-type div {\n        background: white;\n        border: none;\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.header {\r\n    width: 100%;\r\n    max-width: 100%;\r\n    height: 1050px;\r\n    background-color: rgb(199, 199, 199);\n}\n#slideSweats,\r\n#slideSalts {\r\n    transition: all 1s;\n}\n.header .cover {\r\n    background: url(\"https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg\");\r\n    background-size: cover;\r\n    max-width: 100%;\r\n    height: 100%;\n}\n.header .steps .separator {\r\n    width: 30%;\r\n    height: 1px;\r\n    background: #164;\n}\n.header .shape {\r\n    /* background: white; */\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: cover;\n}\n.header button {\r\n    color: white;\n}\n.header button:hover {\r\n    background: white;\r\n    color: #229191;\r\n    box-shadow: 0px 0px 20px #229191;\r\n    transition: all 1s ease;\n}\r\n\r\n/* TYPES RECIPES */\n#triangle-bottomright {\r\n    width: 0;\r\n    height: 0;\r\n    border-bottom: 400px solid #00c4ff6b;\r\n    border-left: 330px solid transparent;\r\n    position: absolute;\r\n    top: 0;\r\n    right: 0;\n}\nimg,\r\ndiv.squar {\r\n    transition: 1s;\n}\n.best-of-recipe {}\n.best-of-recipe .cover {\r\n    height: auto;\r\n    width: 100%;\r\n    background: url(\"https://i.pinimg.com/564x/bb/0d/c5/bb0dc5b2d6c9566fa965809367ff29d2.jpg\");\r\n    background-size: inherit;\r\n    background-repeat: no-repeat;\n}\n.sing_up {\r\n    height: 500px;\r\n    background: url(\"https://i.pinimg.com/564x/38/61/10/386110194c0b59f92a1124fe85120836.jpg\");\r\n    background-size: cover;\r\n    background-attachment: fixed;\r\n    background-position: center;\n}\n.bestChefs .separator {\r\n    /* background-attachment: fixed; */\n}\n.bestChefs div.chefs {\r\n    height: 500px;\r\n    /* background: url('https://i.pinimg.com/564x/f6/4c/97/f64c97785241fefe3ea312f1bd225703.jpg');\r\n    background-size: cover;\r\n    background-position: right; */\r\n    background: linear-gradient(transparent, #54545445, transparent);\n}\n.bestChefs .sep,\r\n.salts .sep,\r\n.sweats .sep {\r\n    height: 1px;\r\n    background: #ff8d00;\r\n    margin: auto;\n}\r\n\r\n/* width */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar {\r\n    width: 5px;\r\n    height: 5px;\n}\r\n\r\n/* Track */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar-track {\r\n    box-shadow: inset 0 0 5px #367a7a;\r\n    border-radius: 10px;\n}\r\n\r\n/* Handle */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar-thumb {\r\n    background: #229191;\r\n    border-radius: 10px;\n}\n#slide {\r\n    transition: all 1s;\n}\na.rounded-pill:hover {\r\n    opacity: 0.7;\r\n    transition: opacity 1s;\n}\n@media only screen and (max-width: 760px) {\n.description {\r\n        font-size: 0.9rem !important;\n}\n.header .shape div div:last-of-type div {\r\n        background: white;\r\n        border: none;\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -37010,7 +36994,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.random_recipe[data-v-1e18a34f] {\n    /* display: none; */\n    position: fixed;\n    width: 50%;\n    height: auto;\n    background-image: url(\"https://i.pinimg.com/564x/51/1a/20/511a203da88f8738b47a66222f33352b.jpg\");\n    background-size: cover;\n    background-repeat: no-repeat;\n\n    top: 2%;\n    left: 25%;\n    z-index: 9999;\n}\n@media only screen and (max-width: 768px) {\n.random_recipe[data-v-1e18a34f] {\n        width: 100%;\n        background-image: url(\"https://wc.wallpaperuse.com/wallp/93-937789_s.jpg\");\n        left: 0;\n        top: 0;\n        z-index: 9999;\n}\n.random_recipe div.block[data-v-1e18a34f]:last-of-type {\n        border-right: none;\n}\n.random_recipe .random .actions button[data-v-1e18a34f] {\n        width: 100%;\n        margin-bottom: 10px;\n}\n.random_recipe .rating[data-v-1e18a34f] {\n        margin-bottom: 10px;\n}\n.btn-primary-perso[data-v-1e18a34f] {\n        background: #0e8573;\n}\n}\n@media only screen and (max-width: 1200px) {\n.random_recipe[data-v-1e18a34f] {\n        width: 100%;\n        background-image: url(\"https://wc.wallpaperuse.com/wallp/93-937789_s.jpg\");\n        left: 0;\n        top: 0;\n        z-index: 9999;\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.random_recipe[data-v-1e18a34f] {\r\n    /* display: none; */\r\n    position: fixed;\r\n    width: 50%;\r\n    height: auto;\r\n    background-image: url(\"https://i.pinimg.com/564x/51/1a/20/511a203da88f8738b47a66222f33352b.jpg\");\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n\r\n    top: 2%;\r\n    left: 25%;\r\n    z-index: 9999;\n}\n@media only screen and (max-width: 768px) {\n.random_recipe[data-v-1e18a34f] {\r\n        width: 100%;\r\n        background-image: url(\"https://wc.wallpaperuse.com/wallp/93-937789_s.jpg\");\r\n        left: 0;\r\n        top: 0;\r\n        z-index: 9999;\n}\n.random_recipe div.block[data-v-1e18a34f]:last-of-type {\r\n        border-right: none;\n}\n.random_recipe .random .actions button[data-v-1e18a34f] {\r\n        width: 100%;\r\n        margin-bottom: 10px;\n}\n.random_recipe .rating[data-v-1e18a34f] {\r\n        margin-bottom: 10px;\n}\n.btn-primary-perso[data-v-1e18a34f] {\r\n        background: #0e8573;\n}\n}\n@media only screen and (max-width: 1200px) {\n.random_recipe[data-v-1e18a34f] {\r\n        width: 100%;\r\n        background-image: url(\"https://wc.wallpaperuse.com/wallp/93-937789_s.jpg\");\r\n        left: 0;\r\n        top: 0;\r\n        z-index: 9999;\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -37034,7 +37018,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.formkit-messages {}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.formkit-messages {}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -37130,7 +37114,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.register-page .content[data-v-aacc3324] {\n  width: 100%;\n  height: auto;\n  top: 28%;\n  position: absolute;\n}\n.register-page .content .register-area[data-v-aacc3324] {\n  width: 100%;\n  height: auto;\n  position: relative;\n  top: 15%;\n  background: white;\n  margin-bottom: 10%;\n}\n.register-page .content .register-area .row .col-12[data-v-aacc3324]:last-of-type {\n  background: #d9d9d9;\n}\n.register-page .content .register-area .cover[data-v-aacc3324] {\n  height: 500px;\n  background: #168272;\n}\n.register-page .content .register-area .cover .opt[data-v-aacc3324] {\n  background: #168272;\n}\n.register-page .content .register-area .form[data-v-aacc3324] {\n  background: hsl(0deg 0% 98%);\n}\n.register-page .content .register-area .shape[data-v-aacc3324] {\n  position: absolute;\n  bottom: -4%;\n  left: -7%;\n}\n@media only screen and (max-width: 790px) {\n.register-page .content[data-v-aacc3324] {\n    height: auto;\n}\n.register-page .content .register-area[data-v-aacc3324] {\n    height: auto;\n    margin-bottom: 4rem;\n}\n.register-page .content .register-area .shape[data-v-aacc3324] {\n    display: none;\n}\n.register-page .content .register-area .col-12[data-v-aacc3324] {\n    padding: 0;\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.register-page .content[data-v-aacc3324] {\r\n  width: 100%;\r\n  height: auto;\r\n  top: 28%;\r\n  position: absolute;\n}\n.register-page .content .register-area[data-v-aacc3324] {\r\n  width: 100%;\r\n  height: auto;\r\n  position: relative;\r\n  top: 15%;\r\n  background: white;\r\n  margin-bottom: 10%;\n}\n.register-page .content .register-area .row .col-12[data-v-aacc3324]:last-of-type {\r\n  background: #d9d9d9;\n}\n.register-page .content .register-area .cover[data-v-aacc3324] {\r\n  height: 500px;\r\n  background: #168272;\n}\n.register-page .content .register-area .cover .opt[data-v-aacc3324] {\r\n  background: #168272;\n}\n.register-page .content .register-area .form[data-v-aacc3324] {\r\n  background: hsl(0deg 0% 98%);\n}\n.register-page .content .register-area .shape[data-v-aacc3324] {\r\n  position: absolute;\r\n  bottom: -4%;\r\n  left: -7%;\n}\n@media only screen and (max-width: 790px) {\n.register-page .content[data-v-aacc3324] {\r\n    height: auto;\n}\n.register-page .content .register-area[data-v-aacc3324] {\r\n    height: auto;\r\n    margin-bottom: 4rem;\n}\n.register-page .content .register-area .shape[data-v-aacc3324] {\r\n    display: none;\n}\n.register-page .content .register-area .col-12[data-v-aacc3324] {\r\n    padding: 0;\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -37202,7 +37186,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.status {\n    display: none;\n    z-index: 9999;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.status {\r\n    display: none;\r\n    z-index: 9999;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -80151,7 +80135,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _comments_vue_vue_type_template_id_40db853f__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./comments.vue?vue&type=template&id=40db853f */ "./resources/js/components/comments.vue?vue&type=template&id=40db853f");
 /* harmony import */ var _comments_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./comments.vue?vue&type=script&lang=js */ "./resources/js/components/comments.vue?vue&type=script&lang=js");
 /* harmony import */ var _comments_vue_vue_type_style_index_0_id_40db853f_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./comments.vue?vue&type=style&index=0&id=40db853f&lang=css */ "./resources/js/components/comments.vue?vue&type=style&index=0&id=40db853f&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80159,7 +80143,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_comments_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_comments_vue_vue_type_template_id_40db853f__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/comments.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_comments_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_comments_vue_vue_type_template_id_40db853f__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/comments.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80182,7 +80166,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dashboard_vue_vue_type_template_id_96ac3b44__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dashboard.vue?vue&type=template&id=96ac3b44 */ "./resources/js/components/dashboard/dashboard.vue?vue&type=template&id=96ac3b44");
 /* harmony import */ var _dashboard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dashboard.vue?vue&type=script&lang=js */ "./resources/js/components/dashboard/dashboard.vue?vue&type=script&lang=js");
 /* harmony import */ var _dashboard_vue_vue_type_style_index_0_id_96ac3b44_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dashboard.vue?vue&type=style&index=0&id=96ac3b44&lang=css */ "./resources/js/components/dashboard/dashboard.vue?vue&type=style&index=0&id=96ac3b44&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80190,7 +80174,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_dashboard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_dashboard_vue_vue_type_template_id_96ac3b44__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/dashboard/dashboard.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_dashboard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_dashboard_vue_vue_type_template_id_96ac3b44__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/dashboard/dashboard.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80212,13 +80196,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _types_recipes_vue_vue_type_template_id_070cc429__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./types_recipes.vue?vue&type=template&id=070cc429 */ "./resources/js/components/dashboard/types_recipes.vue?vue&type=template&id=070cc429");
 /* harmony import */ var _types_recipes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types_recipes.vue?vue&type=script&lang=js */ "./resources/js/components/dashboard/types_recipes.vue?vue&type=script&lang=js");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_types_recipes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_types_recipes_vue_vue_type_template_id_070cc429__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/dashboard/types_recipes.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_types_recipes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_types_recipes_vue_vue_type_template_id_070cc429__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/dashboard/types_recipes.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80241,7 +80225,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _footer_vue_vue_type_template_id_585a4226_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./footer.vue?vue&type=template&id=585a4226&scoped=true */ "./resources/js/components/footer.vue?vue&type=template&id=585a4226&scoped=true");
 /* harmony import */ var _footer_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./footer.vue?vue&type=script&lang=js */ "./resources/js/components/footer.vue?vue&type=script&lang=js");
 /* harmony import */ var _footer_vue_vue_type_style_index_0_id_585a4226_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./footer.vue?vue&type=style&index=0&id=585a4226&scoped=true&lang=css */ "./resources/js/components/footer.vue?vue&type=style&index=0&id=585a4226&scoped=true&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80249,7 +80233,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_footer_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_footer_vue_vue_type_template_id_585a4226_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-585a4226"],['__file',"resources/js/components/footer.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_footer_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_footer_vue_vue_type_template_id_585a4226_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-585a4226"],['__file',"resources/js/components/footer.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80272,7 +80256,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _guest_topbar_vue_vue_type_template_id_98c7d304_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./guest-topbar.vue?vue&type=template&id=98c7d304&scoped=true */ "./resources/js/components/guest-topbar.vue?vue&type=template&id=98c7d304&scoped=true");
 /* harmony import */ var _guest_topbar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./guest-topbar.vue?vue&type=script&lang=js */ "./resources/js/components/guest-topbar.vue?vue&type=script&lang=js");
 /* harmony import */ var _guest_topbar_vue_vue_type_style_index_0_id_98c7d304_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./guest-topbar.vue?vue&type=style&index=0&id=98c7d304&scoped=true&lang=css */ "./resources/js/components/guest-topbar.vue?vue&type=style&index=0&id=98c7d304&scoped=true&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80280,7 +80264,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_guest_topbar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_guest_topbar_vue_vue_type_template_id_98c7d304_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-98c7d304"],['__file',"resources/js/components/guest-topbar.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_guest_topbar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_guest_topbar_vue_vue_type_template_id_98c7d304_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-98c7d304"],['__file',"resources/js/components/guest-topbar.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80303,7 +80287,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_vue_vue_type_template_id_2ac2c897__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=2ac2c897 */ "./resources/js/components/index.vue?vue&type=template&id=2ac2c897");
 /* harmony import */ var _index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js */ "./resources/js/components/index.vue?vue&type=script&lang=js");
 /* harmony import */ var _index_vue_vue_type_style_index_0_id_2ac2c897_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.vue?vue&type=style&index=0&id=2ac2c897&lang=css */ "./resources/js/components/index.vue?vue&type=style&index=0&id=2ac2c897&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80311,7 +80295,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_index_vue_vue_type_template_id_2ac2c897__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/index.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_index_vue_vue_type_template_id_2ac2c897__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/index.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80334,7 +80318,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _loading_page_vue_vue_type_template_id_2bdbf84b__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./loading-page.vue?vue&type=template&id=2bdbf84b */ "./resources/js/components/loading-page.vue?vue&type=template&id=2bdbf84b");
 /* harmony import */ var _loading_page_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./loading-page.vue?vue&type=script&lang=js */ "./resources/js/components/loading-page.vue?vue&type=script&lang=js");
 /* harmony import */ var _loading_page_vue_vue_type_style_index_0_id_2bdbf84b_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./loading-page.vue?vue&type=style&index=0&id=2bdbf84b&lang=css */ "./resources/js/components/loading-page.vue?vue&type=style&index=0&id=2bdbf84b&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80342,7 +80326,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_loading_page_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_loading_page_vue_vue_type_template_id_2bdbf84b__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/loading-page.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_loading_page_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_loading_page_vue_vue_type_template_id_2bdbf84b__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/loading-page.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80365,7 +80349,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _login_vue_vue_type_template_id_172b28a4_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./login.vue?vue&type=template&id=172b28a4&scoped=true */ "./resources/js/components/login.vue?vue&type=template&id=172b28a4&scoped=true");
 /* harmony import */ var _login_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login.vue?vue&type=script&lang=js */ "./resources/js/components/login.vue?vue&type=script&lang=js");
 /* harmony import */ var _login_vue_vue_type_style_index_0_id_172b28a4_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./login.vue?vue&type=style&index=0&id=172b28a4&scoped=true&lang=css */ "./resources/js/components/login.vue?vue&type=style&index=0&id=172b28a4&scoped=true&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80373,7 +80357,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_login_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_login_vue_vue_type_template_id_172b28a4_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-172b28a4"],['__file',"resources/js/components/login.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_login_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_login_vue_vue_type_template_id_172b28a4_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-172b28a4"],['__file',"resources/js/components/login.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80396,7 +80380,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _nav_bar_vue_vue_type_template_id_f7391524_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav-bar.vue?vue&type=template&id=f7391524&scoped=true */ "./resources/js/components/nav-bar.vue?vue&type=template&id=f7391524&scoped=true");
 /* harmony import */ var _nav_bar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nav-bar.vue?vue&type=script&lang=js */ "./resources/js/components/nav-bar.vue?vue&type=script&lang=js");
 /* harmony import */ var _nav_bar_vue_vue_type_style_index_0_id_f7391524_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nav-bar.vue?vue&type=style&index=0&id=f7391524&scoped=true&lang=css */ "./resources/js/components/nav-bar.vue?vue&type=style&index=0&id=f7391524&scoped=true&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80404,7 +80388,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_nav_bar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_nav_bar_vue_vue_type_template_id_f7391524_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-f7391524"],['__file',"resources/js/components/nav-bar.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_nav_bar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_nav_bar_vue_vue_type_template_id_f7391524_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-f7391524"],['__file',"resources/js/components/nav-bar.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80427,7 +80411,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _profile_user_vue_vue_type_template_id_d27c9828_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./profile_user.vue?vue&type=template&id=d27c9828&scoped=true */ "./resources/js/components/profile_user.vue?vue&type=template&id=d27c9828&scoped=true");
 /* harmony import */ var _profile_user_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./profile_user.vue?vue&type=script&lang=js */ "./resources/js/components/profile_user.vue?vue&type=script&lang=js");
 /* harmony import */ var _profile_user_vue_vue_type_style_index_0_id_d27c9828_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./profile_user.vue?vue&type=style&index=0&id=d27c9828&scoped=true&lang=css */ "./resources/js/components/profile_user.vue?vue&type=style&index=0&id=d27c9828&scoped=true&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80435,7 +80419,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_profile_user_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_profile_user_vue_vue_type_template_id_d27c9828_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-d27c9828"],['__file',"resources/js/components/profile_user.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_profile_user_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_profile_user_vue_vue_type_template_id_d27c9828_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-d27c9828"],['__file',"resources/js/components/profile_user.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80458,7 +80442,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _random_recipe_vue_vue_type_template_id_1e18a34f_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./random_recipe.vue?vue&type=template&id=1e18a34f&scoped=true */ "./resources/js/components/random_recipe.vue?vue&type=template&id=1e18a34f&scoped=true");
 /* harmony import */ var _random_recipe_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./random_recipe.vue?vue&type=script&lang=js */ "./resources/js/components/random_recipe.vue?vue&type=script&lang=js");
 /* harmony import */ var _random_recipe_vue_vue_type_style_index_0_id_1e18a34f_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./random_recipe.vue?vue&type=style&index=0&id=1e18a34f&scoped=true&lang=css */ "./resources/js/components/random_recipe.vue?vue&type=style&index=0&id=1e18a34f&scoped=true&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80466,7 +80450,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_random_recipe_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_random_recipe_vue_vue_type_template_id_1e18a34f_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-1e18a34f"],['__file',"resources/js/components/random_recipe.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_random_recipe_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_random_recipe_vue_vue_type_template_id_1e18a34f_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-1e18a34f"],['__file',"resources/js/components/random_recipe.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80489,7 +80473,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _add_recipe_vue_vue_type_template_id_5401d8d2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./add_recipe.vue?vue&type=template&id=5401d8d2 */ "./resources/js/components/recipe/add_recipe.vue?vue&type=template&id=5401d8d2");
 /* harmony import */ var _add_recipe_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./add_recipe.vue?vue&type=script&lang=js */ "./resources/js/components/recipe/add_recipe.vue?vue&type=script&lang=js");
 /* harmony import */ var _add_recipe_vue_vue_type_style_index_0_id_5401d8d2_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./add_recipe.vue?vue&type=style&index=0&id=5401d8d2&lang=css */ "./resources/js/components/recipe/add_recipe.vue?vue&type=style&index=0&id=5401d8d2&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80497,7 +80481,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_add_recipe_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_add_recipe_vue_vue_type_template_id_5401d8d2__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/recipe/add_recipe.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_add_recipe_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_add_recipe_vue_vue_type_template_id_5401d8d2__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/recipe/add_recipe.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80520,7 +80504,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _table_recipes_vue_vue_type_template_id_5b00f5be__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./table_recipes.vue?vue&type=template&id=5b00f5be */ "./resources/js/components/recipe/table_recipes.vue?vue&type=template&id=5b00f5be");
 /* harmony import */ var _table_recipes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./table_recipes.vue?vue&type=script&lang=js */ "./resources/js/components/recipe/table_recipes.vue?vue&type=script&lang=js");
 /* harmony import */ var _table_recipes_vue_vue_type_style_index_0_id_5b00f5be_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./table_recipes.vue?vue&type=style&index=0&id=5b00f5be&lang=css */ "./resources/js/components/recipe/table_recipes.vue?vue&type=style&index=0&id=5b00f5be&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80528,7 +80512,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_table_recipes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_table_recipes_vue_vue_type_template_id_5b00f5be__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/recipe/table_recipes.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_table_recipes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_table_recipes_vue_vue_type_template_id_5b00f5be__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/recipe/table_recipes.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80551,7 +80535,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _update_recipe_vue_vue_type_template_id_ad6beec8__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./update-recipe.vue?vue&type=template&id=ad6beec8 */ "./resources/js/components/recipe/update-recipe.vue?vue&type=template&id=ad6beec8");
 /* harmony import */ var _update_recipe_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./update-recipe.vue?vue&type=script&lang=js */ "./resources/js/components/recipe/update-recipe.vue?vue&type=script&lang=js");
 /* harmony import */ var _update_recipe_vue_vue_type_style_index_0_id_ad6beec8_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./update-recipe.vue?vue&type=style&index=0&id=ad6beec8&lang=css */ "./resources/js/components/recipe/update-recipe.vue?vue&type=style&index=0&id=ad6beec8&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80559,7 +80543,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_update_recipe_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_update_recipe_vue_vue_type_template_id_ad6beec8__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/recipe/update-recipe.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_update_recipe_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_update_recipe_vue_vue_type_template_id_ad6beec8__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/recipe/update-recipe.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80582,7 +80566,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _recipes_vue_vue_type_template_id_2771f8ac_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./recipes.vue?vue&type=template&id=2771f8ac&scoped=true */ "./resources/js/components/recipes.vue?vue&type=template&id=2771f8ac&scoped=true");
 /* harmony import */ var _recipes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./recipes.vue?vue&type=script&lang=js */ "./resources/js/components/recipes.vue?vue&type=script&lang=js");
 /* harmony import */ var _recipes_vue_vue_type_style_index_0_id_2771f8ac_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./recipes.vue?vue&type=style&index=0&id=2771f8ac&scoped=true&lang=css */ "./resources/js/components/recipes.vue?vue&type=style&index=0&id=2771f8ac&scoped=true&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80590,7 +80574,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_recipes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_recipes_vue_vue_type_template_id_2771f8ac_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-2771f8ac"],['__file',"resources/js/components/recipes.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_recipes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_recipes_vue_vue_type_template_id_2771f8ac_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-2771f8ac"],['__file',"resources/js/components/recipes.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80613,7 +80597,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _register_vue_vue_type_template_id_aacc3324_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./register.vue?vue&type=template&id=aacc3324&scoped=true */ "./resources/js/components/register.vue?vue&type=template&id=aacc3324&scoped=true");
 /* harmony import */ var _register_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./register.vue?vue&type=script&lang=js */ "./resources/js/components/register.vue?vue&type=script&lang=js");
 /* harmony import */ var _register_vue_vue_type_style_index_0_id_aacc3324_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./register.vue?vue&type=style&index=0&id=aacc3324&scoped=true&lang=css */ "./resources/js/components/register.vue?vue&type=style&index=0&id=aacc3324&scoped=true&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80621,7 +80605,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_register_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_register_vue_vue_type_template_id_aacc3324_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-aacc3324"],['__file',"resources/js/components/register.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_register_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_register_vue_vue_type_template_id_aacc3324_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-aacc3324"],['__file',"resources/js/components/register.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80644,7 +80628,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _similar_recipes_vue_vue_type_template_id_68afb470_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./similar-recipes.vue?vue&type=template&id=68afb470&scoped=true */ "./resources/js/components/similar-recipes.vue?vue&type=template&id=68afb470&scoped=true");
 /* harmony import */ var _similar_recipes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./similar-recipes.vue?vue&type=script&lang=js */ "./resources/js/components/similar-recipes.vue?vue&type=script&lang=js");
 /* harmony import */ var _similar_recipes_vue_vue_type_style_index_0_id_68afb470_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./similar-recipes.vue?vue&type=style&index=0&id=68afb470&scoped=true&lang=css */ "./resources/js/components/similar-recipes.vue?vue&type=style&index=0&id=68afb470&scoped=true&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80652,7 +80636,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_similar_recipes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_similar_recipes_vue_vue_type_template_id_68afb470_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-68afb470"],['__file',"resources/js/components/similar-recipes.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_similar_recipes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_similar_recipes_vue_vue_type_template_id_68afb470_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-68afb470"],['__file',"resources/js/components/similar-recipes.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80675,7 +80659,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _single_recipe_vue_vue_type_template_id_17d48eaa_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./single_recipe.vue?vue&type=template&id=17d48eaa&scoped=true */ "./resources/js/components/single_recipe.vue?vue&type=template&id=17d48eaa&scoped=true");
 /* harmony import */ var _single_recipe_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./single_recipe.vue?vue&type=script&lang=js */ "./resources/js/components/single_recipe.vue?vue&type=script&lang=js");
 /* harmony import */ var _single_recipe_vue_vue_type_style_index_0_id_17d48eaa_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./single_recipe.vue?vue&type=style&index=0&id=17d48eaa&scoped=true&lang=css */ "./resources/js/components/single_recipe.vue?vue&type=style&index=0&id=17d48eaa&scoped=true&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80683,7 +80667,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_single_recipe_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_single_recipe_vue_vue_type_template_id_17d48eaa_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-17d48eaa"],['__file',"resources/js/components/single_recipe.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_single_recipe_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_single_recipe_vue_vue_type_template_id_17d48eaa_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-17d48eaa"],['__file',"resources/js/components/single_recipe.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80706,7 +80690,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _status_vue_vue_type_template_id_127658fd__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./status.vue?vue&type=template&id=127658fd */ "./resources/js/components/status.vue?vue&type=template&id=127658fd");
 /* harmony import */ var _status_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./status.vue?vue&type=script&lang=js */ "./resources/js/components/status.vue?vue&type=script&lang=js");
 /* harmony import */ var _status_vue_vue_type_style_index_0_id_127658fd_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./status.vue?vue&type=style&index=0&id=127658fd&lang=css */ "./resources/js/components/status.vue?vue&type=style&index=0&id=127658fd&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80714,7 +80698,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_status_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_status_vue_vue_type_template_id_127658fd__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/status.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_status_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_status_vue_vue_type_template_id_127658fd__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/status.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80737,7 +80721,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _top_nav_bar_vue_vue_type_template_id_df089b14_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./top-nav-bar.vue?vue&type=template&id=df089b14&scoped=true */ "./resources/js/components/top-nav-bar.vue?vue&type=template&id=df089b14&scoped=true");
 /* harmony import */ var _top_nav_bar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./top-nav-bar.vue?vue&type=script&lang=js */ "./resources/js/components/top-nav-bar.vue?vue&type=script&lang=js");
 /* harmony import */ var _top_nav_bar_vue_vue_type_style_index_0_id_df089b14_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./top-nav-bar.vue?vue&type=style&index=0&id=df089b14&scoped=true&lang=css */ "./resources/js/components/top-nav-bar.vue?vue&type=style&index=0&id=df089b14&scoped=true&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80745,7 +80729,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_top_nav_bar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_top_nav_bar_vue_vue_type_template_id_df089b14_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-df089b14"],['__file',"resources/js/components/top-nav-bar.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_top_nav_bar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_top_nav_bar_vue_vue_type_template_id_df089b14_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-df089b14"],['__file',"resources/js/components/top-nav-bar.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80768,7 +80752,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _edit_profile_vue_vue_type_template_id_11ef5e22__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./edit-profile.vue?vue&type=template&id=11ef5e22 */ "./resources/js/components/user/edit-profile.vue?vue&type=template&id=11ef5e22");
 /* harmony import */ var _edit_profile_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./edit-profile.vue?vue&type=script&lang=js */ "./resources/js/components/user/edit-profile.vue?vue&type=script&lang=js");
 /* harmony import */ var _edit_profile_vue_vue_type_style_index_0_id_11ef5e22_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit-profile.vue?vue&type=style&index=0&id=11ef5e22&lang=css */ "./resources/js/components/user/edit-profile.vue?vue&type=style&index=0&id=11ef5e22&lang=css");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -80776,7 +80760,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_edit_profile_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_edit_profile_vue_vue_type_template_id_11ef5e22__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/user/edit-profile.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_edit_profile_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_edit_profile_vue_vue_type_template_id_11ef5e22__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/user/edit-profile.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -80798,13 +80782,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _search_vue_vue_type_template_id_6062bd71__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./search.vue?vue&type=template&id=6062bd71 */ "./resources/js/components/user/search.vue?vue&type=template&id=6062bd71");
 /* harmony import */ var _search_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./search.vue?vue&type=script&lang=js */ "./resources/js/components/user/search.vue?vue&type=script&lang=js");
-/* harmony import */ var _var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_var_www_html_cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_search_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_search_vue_vue_type_template_id_6062bd71__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/user/search.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_AppServ_www_cousinti_Cousinti_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_search_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_search_vue_vue_type_template_id_6062bd71__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/user/search.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -82063,7 +82047,10 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Creates a new dispatcher that allows the addition/removal of middleware
  * functions, and the ability to dispatch a payload to all middleware.
+ *
  * @returns FormKitDispatcher
+ *
+ * @internal
  */
 function createDispatcher() {
     const middleware = [];
@@ -82093,7 +82080,10 @@ function createDispatcher() {
 /**
  * Creates a new event emitter, each node uses one of these to allow it to emit
  * events to local listeners and tree listeners.
+ *
  * @returns FormKitEventEmitter
+ *
+ * @internal
  */
 function createEmitter() {
     const listeners = new Map();
@@ -82118,9 +82108,13 @@ function createEmitter() {
     };
     /**
      * Add an event listener
+     *
      * @param eventName - The name of the event to listen to
      * @param listener - The callback
+     *
      * @returns string
+     *
+     * @internal
      */
     emitter.on = (eventName, listener) => {
         const [event, ...modifiers] = eventName.split('.');
@@ -82143,7 +82137,10 @@ function createEmitter() {
     };
     /**
      * Remove an event listener
+     *
      * @param listenerOrReceipt - Either a receipt or the callback function.
+     *
+     * @internal
      */
     emitter.off = (receipt) => {
         var _a;
@@ -82171,7 +82168,10 @@ function createEmitter() {
      * emit('foo', 2)
      * emit('bar', 4)
      * Optionally pauses all children as well.
+     *
      * @param node - A node to pause all children on.
+     *
+     * @internal
      */
     emitter.pause = (node) => {
         if (!buffer)
@@ -82182,7 +82182,10 @@ function createEmitter() {
     };
     /**
      * Release the current event buffer.
+     *
      * @param node - A node to unpause all children on.
+     *
+     * @internal
      */
     emitter.play = (node) => {
         if (!buffer)
@@ -82198,11 +82201,15 @@ function createEmitter() {
 }
 /**
  * Emit an event from this node.
+ *
  * @param node - The node that is emitting
  * @param context - The context of that node
  * @param name - The name of the event
  * @param payload - The payload to emit
+ *
  * @returns FormKitNode
+ *
+ * @internal
  */
 function emit$1(node, context, name, payload, // eslint-disable-line @typescript-eslint/explicit-module-boundary-types,
 bubble = true) {
@@ -82216,9 +82223,12 @@ bubble = true) {
 }
 /**
  * Send an event from the given node up it's ancestor tree.
+ *
  * @param node -
  * @param _context -
  * @param event -
+ *
+ * @internal
  */
 function bubble(node, _context, event) {
     if (isNode(node.parent)) {
@@ -82230,21 +82240,29 @@ function bubble(node, _context, event) {
  * Adds an event listener to the node for a specific event. The event name is a
  * simple string matching the name of the event to listen to. It can optionally
  * include modifiers like eventName.deep
+ *
  * @param node -
  * @param context -
  * @param name -
  * @param listener -
+ *
  * @returns FormKitNode
+ *
+ * @internal
  */
 function on(_node, context, name, listener) {
     return context._e.on(name, listener);
 }
 /**
  * Removes an event listener from a node by the returned receipt from .on().
+ *
  * @param node - The node to remote the listener from
  * @param context - The context to remove
  * @param receipt - The receipt returned by .on()
+ *
  * @returns FormKitNode
+ *
+ * @internal
  */
 function off(node, context, receipt) {
     context._e.off(receipt);
@@ -82253,12 +82271,10 @@ function off(node, context, receipt) {
 
 /**
  * FormKit's global error handler.
+ *
  * @public
  */
 const errorHandler = createDispatcher();
-/**
- * The default error handler just sets the error as the message.
- */
 errorHandler((error, next) => {
     if (!error.message)
         error.message = String(`E${error.code}`);
@@ -82266,6 +82282,7 @@ errorHandler((error, next) => {
 });
 /**
  * FormKit's global warning handler.
+ *
  * @public
  */
 const warningHandler = createDispatcher();
@@ -82279,17 +82296,21 @@ warningHandler((warning, next) => {
 });
 /**
  * Globally emits a warning.
- * @param code - The integer error code.
+ *
+ * @param code - The integer warning code.
  * @param data - Usually an object of information to include.
+ *
  * @public
  */
 function warn(code, data = {}) {
     warningHandler.dispatch({ code, data });
 }
 /**
- * Emits an error, generally should result in an exception.
+ * Emits an error. Generally should result in an exception.
+ *
  * @param code - The integer error code.
  * @param data - Usually an object of information to include.
+ *
  * @public
  */
 function error(code, data = {}) {
@@ -82298,8 +82319,12 @@ function error(code, data = {}) {
 
 /**
  * Creates a new FormKitMessage object.
- * @param conf - The message configuration
- * @returns FormKitMessage
+ *
+ * @param conf - An object of optional properties of {@link FormKitMessage | FormKitMessage}.
+ * @param node - A {@link @formkit/node#FormKitNode | FormKitNode}.
+ *
+ * @returns A {@link FormKitMessageProps | FormKitMessageProps}.
+ *
  * @public
  */
 function createMessage(conf, node) {
@@ -82319,6 +82344,8 @@ function createMessage(conf, node) {
 }
 /**
  * The available traps on the node's store.
+ *
+ * @internal
  */
 const storeTraps = {
     apply: applyMessages,
@@ -82331,7 +82358,8 @@ const storeTraps = {
 };
 /**
  * Creates a new FormKit message store.
- * @returns FormKitStore
+ *
+ * @internal
  */
 function createStore(_buffer = false) {
     const messages = {};
@@ -82383,11 +82411,13 @@ function createStore(_buffer = false) {
 }
 /**
  * Adds a new value to a FormKit message bag.
- * @param store - The store itself
+ *
+ * @param messageStore - The message store itself
  * @param store - The store interface
  * @param node - The node this store belongs to
  * @param message - The message object
- * @returns FormKitStore
+ *
+ * @internal
  */
 function setMessage(messageStore, store, node, message) {
     if (store.buffer) {
@@ -82412,6 +82442,8 @@ function setMessage(messageStore, store, node, message) {
 /**
  * Run through each message in the store, and ensure it has been translated
  * to the proper language. This most frequently happens after a locale change.
+ *
+ * @internal
  */
 function touchMessages(messageStore, store) {
     for (const key in messageStore) {
@@ -82421,11 +82453,15 @@ function touchMessages(messageStore, store) {
 }
 /**
  * Remove a message from the store.
- * @param store - The store itself
+ *
+ * @param messageStore - The message store
  * @param store - The store interface
  * @param node - The node this store belongs to
  * @param key - The message key
+ *
  * @returns FormKitStore
+ *
+ * @internal
  */
 function removeMessage(messageStore, store, node, key) {
     if ((0,_formkit_utils__WEBPACK_IMPORTED_MODULE_0__.has)(messageStore, key)) {
@@ -82443,11 +82479,14 @@ function removeMessage(messageStore, store, node, key) {
 }
 /**
  * Iterates over all messages removing those that are no longer wanted.
+ *
  * @param messageStore - The store itself
  * @param store - The store interface
  * @param node - The node to filter for
  * @param callback - A callback accepting a message and returning a boolean
  * @param type - Pre filtered by a given message type
+ *
+ * @internal
  */
 function filterMessages(messageStore, store, node, callback, type) {
     for (const key in messageStore) {
@@ -82459,12 +82498,16 @@ function filterMessages(messageStore, store, node, callback, type) {
 }
 /**
  * Reduce the message store to some other generic value.
+ *
  * @param messageStore - The store itself
  * @param _store - Unused but curried — the store interface itself
  * @param _node - The node owner of this store
  * @param reducer - The callback that performs the reduction
  * @param accumulator - The initial value
+ *
  * @returns
+ *
+ * @internal
  */
 function reduceMessages(messageStore, _store, _node, reducer, accumulator) {
     for (const key in messageStore) {
@@ -82474,11 +82517,12 @@ function reduceMessages(messageStore, _store, _node, reducer, accumulator) {
     return accumulator;
 }
 /**
- *
  * @param messageStore - The store itself
  * @param _store - Unused but curried — the store interface itself
  * @param node - The node owner of this store
  * @param messages - An array of FormKitMessages to apply to this input, or an object of messages to apply to children.
+ *
+ * @internal
  */
 function applyMessages(_messageStore, store, node, messages, clear) {
     if (Array.isArray(messages)) {
@@ -82513,8 +82557,10 @@ function applyMessages(_messageStore, store, node, messages, clear) {
 }
 /**
  * Creates an array of message arrays from strings.
+ *
+ * @param node - FormKitNode
  * @param errors - Arrays or objects of form errors or input errors
- * @returns
+ *
  * @internal
  */
 function createMessages(node, ...errors) {
@@ -82548,11 +82594,12 @@ function createMessages(node, ...errors) {
     });
 }
 /**
- *
  * @param store - The store to apply this missed applications.
  * @param address - The address that was missed (a node path that didn't yet exist)
  * @param messages - The messages that should have been applied.
  * @param clear - The clearing function (if any)
+ *
+ * @internal
  */
 function missed(node, store, address, messages, clear) {
     var _a;
@@ -82568,8 +82615,10 @@ function missed(node, store, address, messages, clear) {
  * Releases messages that were applied to a child via parent, but the child did
  * not exist. Once the child does exist, the created event for that child will
  * bubble to this point, and any stored applications will be applied serially.
+ *
  * @param store - The store object.
- * @returns
+ *
+ * @internal
  */
 function releaseMissed(node, store) {
     return node.on('child.deep', ({ payload: child }) => {
@@ -82590,9 +82639,12 @@ function releaseMissed(node, store) {
 }
 /**
  * Iterates over all buffered messages and applies them in sequence.
+ *
  * @param messageStore - The store itself
  * @param store - The store interface
  * @param node - The node to filter for
+ *
+ * @internal
  */
 function releaseBuffer(_messageStore, store) {
     store.buffer = false;
@@ -82602,7 +82654,8 @@ function releaseBuffer(_messageStore, store) {
 
 /**
  * Creates a new ledger for use on a single node's context.
- * @returns
+ *
+ * @internal
  */
 function createLedger() {
     const ledger = {};
@@ -82628,11 +82681,14 @@ function createLedger() {
 }
 /**
  * Creates a new counter object in the counting ledger.
+ *
+ * @param node - FormKitNode
  * @param ledger - The actual ledger storage object
  * @param counterName - The name of the counter, can be arbitrary
  * @param condition - The condition function (or string) that filters messages
- * @param initialValue - The initial counter value
- * @returns
+ * @param increment - The increment value
+ *
+ * @internal
  */
 function createCounter(node, ledger, counterName, condition, increment = 0) {
     condition = parseCondition(condition || counterName);
@@ -82656,8 +82712,10 @@ function createCounter(node, ledger, counterName, condition, increment = 0) {
 }
 /**
  * We parse the condition to allow flexibility in how counters are specified.
+ *
  * @param condition - The condition that, if true, allows a message to change a counter's value
- * @returns
+ *
+ * @internal
  */
 function parseCondition(condition) {
     if (typeof condition === 'function') {
@@ -82667,9 +82725,11 @@ function parseCondition(condition) {
 }
 /**
  * Perform a counting action on the a given counter object of the ledger.
+ *
  * @param counter - A counter object
  * @param increment - The amount by which we are changing the count value
- * @returns
+ *
+ * @internal
  */
 function count(counter, increment) {
     const initial = counter.count;
@@ -82688,9 +82748,11 @@ function count(counter, increment) {
 }
 /**
  * Returns a function to be used as an event listener for message events.
+ *
  * @param ledger - A ledger to operate on
  * @param delta - The amount to add or subtract
- * @returns
+ *
+ * @internal
  */
 function add(ledger, delta) {
     return (e) => {
@@ -82706,10 +82768,13 @@ function add(ledger, delta) {
  * Given a child node, add the parent node's counters to the child and then
  * rectify the upstream ledger counts. Generally used when attaching a child
  * to an already counted tree.
+ *
  * @param parent - The parent that is "receiving" the child
  * @param ledger - The ledger object
  * @param child - The child (can be a subtree) that is being attached
  * @param remove - If the merge is removing instead of adding
+ *
+ * @internal
  */
 function merge(parent, ledger, child, remove = false) {
     for (const key in ledger) {
@@ -82741,10 +82806,11 @@ const emit = createEmitter();
 const receipts = [];
 /**
  * Registers a node to the registry _if_ the node is a root node, _or_ if the
- * node has an explicit node.props.alias. If these two things are not true
+ * node has an explicit node.props.alias. If these two things are not true,
  * then no node is registered (idempotent).
  *
- * @param node - A node to register
+ * @param node - A {@link FormKitNode | FormKitNode}.
+ *
  * @public
  */
 function register(node) {
@@ -82761,7 +82827,9 @@ function register(node) {
 }
 /**
  * Deregister a node from the registry.
- * @param node - A node to remove
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}.
+ *
  * @public
  */
 function deregister(node) {
@@ -82779,14 +82847,19 @@ function deregister(node) {
 }
 /**
  * Get a node by a particular id.
- * @param node - Get a node by a given id
+ *
+ * @param id - Get a node by a given id.
+ *
+ * @returns A {@link FormKitNode | FormKitNode} or `undefined`.
+ *
  * @public
  */
 function getNode$1(id) {
     return registry.get(id);
 }
 /**
- * Reset the entire registry.
+ * Resets the entire registry. Deregisters all nodes and removes all listeners.
+ *
  * @public
  */
 function resetRegistry() {
@@ -82796,9 +82869,11 @@ function resetRegistry() {
     receipts.forEach((receipt) => emit.off(receipt));
 }
 /**
+ * A way of watching changes in the global registry.
  *
- * @param id - An id to watch
- * @param callback - A callback to notify when the node is set or removed.
+ * @param id - A dot-syntax id where the node is located.
+ * @param callback - A callback in the format of {@link FormKitEventListener | FormKitEventListener} to notify when the node is set or removed.
+ *
  * @public
  */
 function watchRegistry(id, callback) {
@@ -82808,9 +82883,11 @@ function watchRegistry(id, callback) {
 
 /**
  * Applies a given config change to the node.
+ *
  * @param node - The node to check for config change
  * @param prop - Checks if this property exists in the local config or props
  * @param value - The value to set
+ *
  * @internal
  */
 function configChange(node, prop, value) {
@@ -82830,7 +82907,10 @@ function configChange(node, prop, value) {
  * essentially just a FormKitOption object, but it can be used as the root for
  * FormKitConfig's proxy and retain event "emitting".
  *
- * @param options - FormKit node options to be used globally.
+ * @param options - An object of optional properties of {@link FormKitConfig | FormKitConfig}.
+ *
+ * @returns A {@link FormKitRootConfig | FormKitRootConfig}.
+ *
  * @public
  */
 function createConfig$1(options = {}) {
@@ -82855,7 +82935,9 @@ function createConfig$1(options = {}) {
 
 /**
  * Submits a FormKit form programmatically.
- * @param id - The id of the form
+ *
+ * @param id - The id of the form.
+ *
  * @public
  */
 function submitForm(id) {
@@ -82870,6 +82952,8 @@ function submitForm(id) {
 
 /**
  * Clear all state and error messages.
+ *
+ * @internal
  */
 function clearState(node) {
     const clear = (n) => {
@@ -82888,10 +82972,14 @@ function clearState(node) {
     node.walk(clear);
 }
 /**
- * Resets an input to it’s "initial" value — if the input is a group or list it
+ * Resets an input to its "initial" value. If the input is a group or list it
  * resets all the children as well.
- * @param id - The id of an input to reset
- * @returns
+ *
+ * @param id - The id of an input to reset.
+ * @param resetTo - A value to reset the node to.
+ *
+ * @returns A {@link FormKitNode | FormKitNode} or `undefined`.
+ *
  * @public
  */
 function reset(id, resetTo) {
@@ -82933,39 +83021,70 @@ const defaultConfig = {
 /**
  * If a node’s name is set to useIndex, it replaces the node’s name with the
  * index of the node relative to its parent’s children.
- * @public
+ *
+ * @internal
  */
 const useIndex = Symbol('index');
 /**
  * When propagating values up a tree, this value indicates the child should be
  * removed.
- * @public
+ *
+ * @internal
  */
 const valueRemoved = Symbol('removed');
 /**
  * When propagating values up a tree, this value indicates the child should be
  * moved.
- * @public
+ *
+ * @internal
  */
 const valueMoved = Symbol('moved');
 /**
  * When creating a new node and having its value injected directly at a specific
  * location.
- * @public
+ *
+ * @internal
  */
 const valueInserted = Symbol('inserted');
 /**
  * A simple type guard to determine if the context being evaluated is a list
  * type.
- * @param arg -
- * @returns arg is FormKitListContext
+ *
+ * @param arg - A {@link FormKitContextShape | FormKitContextShape}.
+ *
+ * @returns Returns a `boolean`.
+ *
  * @public
  */
 function isList(arg) {
     return arg.type === 'list' && Array.isArray(arg._value);
 }
 /**
- * Determine if a given object is a node
+ * Determine if a given object is a node.
+ *
+ * @example
+ *
+ * ```javascript
+ * import { isNode, createNode } from '@formkit/core'
+ *
+ * const input = createNode({
+ *   type: 'input', // defaults to 'input' if not specified
+ *   value: 'hello node world',
+ * })
+ *
+ * const obj = {};
+ *
+ * isNode(obj)
+ * // false
+ *
+ * isNode(input)
+ * // true
+ * ```
+ *
+ * @param node - Any value.
+ *
+ * @returns Returns a `boolean`.
+ *
  * @public
  */
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
@@ -83021,10 +83140,12 @@ function createTraps() {
 }
 /**
  * Creates a getter/setter trap and curries the context/node pair
+ *
  * @param getter - The getter function
  * @param setter - The setter function
  * @param curryGetter - Indicates if the getter should be curried or not
- * @returns
+ *
+ * @returns A {@link FormKitTrap | FormKitTrap}
  */
 function trap(getter, setter, curryGetter = true) {
     return {
@@ -83060,8 +83181,9 @@ let nameCount = 0;
  */
 let idCount = 0;
 /**
- * Reports the global number of node registrations, useful for deterministic
+ * Resets the global number of node registrations, useful for deterministic
  * node naming.
+ *
  * @public
  */
 function resetCount() {
@@ -83069,8 +83191,12 @@ function resetCount() {
     idCount = 0;
 }
 /**
- * Create a name based dictionary of all children in an array.
- * @param children -
+ * Create a name-based dictionary of all children in an array.
+ *
+ * @param children - An array of {@link FormKitNode | FormKitNode}.
+ *
+ * @returns A dictionary of named {@link FormKitNode | FormKitNode}.
+ *
  * @public
  */
 function names(children) {
@@ -83081,8 +83207,11 @@ function names(children) {
  * node. This cannot just be a random id, it _must_ be deterministic to ensure
  * re-hydration of the form (like post-SSR) produces the same names/ids.
  *
- * @param options -
- * @returns string
+ * @param options - A {@link FormKitOptions | FormKitOptions}
+ *
+ * @returns `string | symbol`
+ *
+ * @internal
  */
 function createName(options) {
     var _a, _b;
@@ -83093,10 +83222,12 @@ function createName(options) {
 /**
  * Creates the initial value for a node based on the options passed in and the
  * type of the input.
- * @param options -
- * @param type -
- * @returns
- * @internal
+ *
+ * @param options - A {@link FormKitOptions | FormKitOptions}.
+ *
+ * @returns `unknown`
+ *
+ * @public
  */
 function createValue(options) {
     if (options.type === 'group') {
@@ -83113,10 +83244,15 @@ function createValue(options) {
 }
 /**
  * Sets the internal value of the node.
- * @param node -
- * @param context -
- * @param value -
- * @returns T
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param context - A {@link FormKitContext | FormKitContext}
+ * @param value - A input value to the node
+ * @param async - If its an async call
+ *
+ * @returns `Promise<unknown>`
+ *
+ * @internal
  */
 function input(node, context, value, async = true) {
     context._value = validateInput(node, node.hook.input.dispatch(value));
@@ -83135,8 +83271,13 @@ function input(node, context, value, async = true) {
 }
 /**
  * Validate that the current input is allowed.
- * @param type - The type of node (input, list, group)
- * @param value - The value that is being set
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param value - The value that is being validated
+ *
+ * @returns `T`
+ *
+ * @internal
  */
 function validateInput(node, value) {
     switch (node.type) {
@@ -83156,10 +83297,13 @@ function validateInput(node, value) {
 }
 /**
  * Commits the working value to the node graph as the value of this node.
- * @param node -
- * @param context -
- * @param calm -
- * @param hydrate -
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param context - A {@link FormKitContext | FormKitContext}
+ * @param calm - If it calms the node
+ * @param hydrate - If it hydrates the node
+ *
+ * @internal
  */
 function commit(node, context, calm = true, hydrate = true) {
     context._value = context.value = node.hook.commit.dispatch(context._value);
@@ -83173,9 +83317,10 @@ function commit(node, context, calm = true, hydrate = true) {
  * Perform a modification to a single element of a parent aggregate value. This
  * is only performed on the pre-committed value (_value), although typically
  * the value and _value are both linked in memory.
- * @param context -
- * @param name -
- * @param value -
+ *
+ * @param context - A {@link FormKitContext | FormKitContext}
+ *
+ * @internal
  */
 function partial(context, { name, value, from }) {
     if (Object.isFrozen(context._value))
@@ -83199,9 +83344,14 @@ function partial(context, { name, value, from }) {
     }
 }
 /**
- * Pass values down to children by calling hydrate on them.
- * @param parent -
- * @param child -
+ * Hydrate node and its children
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param context - A {@link FormKitContext | FormKitContext}
+ *
+ * @returns A {@link FormKitNode | FormKitNode}
+ *
+ * @internal
  */
 function hydrate(node, context) {
     const _value = context._value;
@@ -83244,8 +83394,13 @@ function hydrate(node, context) {
 /**
  * Disturbs the state of a node from settled to unsettled — creating appropriate
  * promises and resolutions.
- * @param node -
- * @param context -
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param context - A {@link FormKitContext | FormKitContext}
+ *
+ * @returns A {@link FormKitNode | FormKitNode}
+ *
+ * @internal
  */
 function disturb(node, context) {
     var _a;
@@ -83263,8 +83418,12 @@ function disturb(node, context) {
 }
 /**
  * Calms the given node's disturbed state by one.
- * @param node -
- * @param context -
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param context - A {@link FormKitContext | FormKitContext}
+ * @param value - A {@link FormKitChildValue | FormKitChildValue}
+ *
+ * @internal
  */
 function calm(node, context, value) {
     var _a;
@@ -83286,8 +83445,11 @@ function calm(node, context, value) {
 }
 /**
  * This node is being removed and needs to be cleaned up.
- * @param node - The node to shut down
- * @param context - The context to clean up
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param context - A {@link FormKitContext | FormKitContext}
+ *
+ * @internal
  */
 function destroy(node, context) {
     node.emit('destroying', node);
@@ -83302,7 +83464,12 @@ function destroy(node, context) {
 }
 /**
  * Defines the current input type concretely.
- * @param definition - The definition of the current input type.
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param context - A {@link FormKitContext | FormKitContext}
+ * @param definition - A {@link FormKitTypeDefinition | FormKitTypeDefinition}
+ *
+ * @internal
  */
 function define(node, context, definition) {
     // Assign the type
@@ -83343,9 +83510,13 @@ function define(node, context, definition) {
  * Adds props to a given node by stripping them out of the node.props.attrs and
  * then adding them to the nodes.
  *
- * @param node - The node to add props to
- * @param context - The internal context object
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param context - A {@link FormKitContext | FormKitContext}
  * @param props - An array of prop strings (in camelCase!)
+ *
+ * @returns A {@link FormKitNode | FormKitNode}
+ *
+ * @internal
  */
 function addProps(node, context, props) {
     var _a;
@@ -83377,10 +83548,14 @@ function addProps(node, context, props) {
     return node;
 }
 /**
- * (node.add) Adds a child to the node.
- * @param context -
- * @param node -
- * @param child -
+ * Adds a child to the node.
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param context - A parent {@link FormKitContext | FormKitContext}
+ * @param child - A {@link FormKitNode | FormKitNode}
+ * @param listIndex - A index number to be added at
+ *
+ * @internal
  */
 function addChild(parent, parentContext, child, listIndex) {
     if (parent.type === 'input')
@@ -83441,11 +83616,14 @@ function addChild(parent, parentContext, child, listIndex) {
 }
 /**
  * The setter for node.parent = FormKitNode
- * @param _context -
- * @param node -
- * @param _property -
- * @param parent -
- * @returns boolean
+ * @param child - A child {@link FormKitNode | FormKitNode}
+ * @param context - A {@link FormKitContext | FormKitContext}
+ * @param _property - A property to be setted
+ * @param parent - A parent {@link FormKitNode | FormKitNode}
+ *
+ * @returns `boolean`
+ *
+ * @internal
  */
 function setParent(child, context, _property, parent) {
     if (isNode(parent)) {
@@ -83466,10 +83644,13 @@ function setParent(child, context, _property, parent) {
     return false;
 }
 /**
- * (node.remove) Removes a child from the node.
- * @param context -
- * @param node -
- * @param child -
+ * Removes a child from the node.
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param context - A {@link FormKitContext | FormKitContext}
+ * @param child - A child {@link FormKitNode | FormKitNode}
+ *
+ * @internal
  */
 function removeChild(node, context, child) {
     const childIndex = context.children.indexOf(child);
@@ -83503,18 +83684,25 @@ function removeChild(node, context, child) {
 }
 /**
  * Iterate over each immediate child and perform a callback.
- * @param context -
- * @param _node -
- * @param callback -
+ *
+ * @param _node - A {@link FormKitNode | FormKitNode}
+ * @param context - A {@link FormKitContext | FormKitContext}
+ * @param callback - A {@link FormKitChildCallback | FormKitChildCallback}
+ *
+ * @internal
  */
 function eachChild(_node, context, callback) {
     context.children.forEach((child) => callback(child));
 }
 /**
  * Walk all nodes below this one and execute a callback.
- * @param _node -
- * @param context -
- * @param callback -
+ *
+ * @param _node - A {@link FormKitNode | FormKitNode}
+ * @param context - A {@link FormKitContext | FormKitContext}
+ * @param callback - A {@link FormKitChildCallback | FormKitChildCallback}
+ * @param stopIfFalse - Boolean to stop running on children
+ *
+ * @internal
  */
 function walkTree(_node, context, callback, stopIfFalse = false) {
     context.children.forEach((child) => {
@@ -83525,10 +83713,11 @@ function walkTree(_node, context, callback, stopIfFalse = false) {
 }
 /**
  * Set the configuration options of the node and it's subtree.
- * @param node -
- * @param context -
- * @param _property -
- * @param config -
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param context - A {@link FormKitContext | FormKitContext}
+ *
+ * @internal
  */
 function resetConfig(node, context) {
     const parent = node.parent || undefined;
@@ -83536,11 +83725,20 @@ function resetConfig(node, context) {
     node.walk((n) => n.resetConfig());
 }
 /**
- * Adds a plugin to the node, it’s children, and executes it.
- * @param context -
- * @param node -
+ * Adds a plugin to the node, its children, and executes it.
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param context - A {@link FormKitContext | FormKitContext}
  * @param plugin -
- * @public
+ * {@link FormKitPlugin | FormKitPlugin}
+ * {@link FormKitPlugin | FormKitPlugin[]}
+ * {@link FormKitPlugin | Set<FormKitPlugin>}
+ * @param run - If it will run on creation
+ * @param library - If it will run on library creation
+ *
+ * @returns A {@link FormKitNode | FormKitNode}
+ *
+ * @internal
  */
 function use(node, context, plugin, run = true, library = true) {
     if (Array.isArray(plugin) || plugin instanceof Set) {
@@ -83561,10 +83759,13 @@ function use(node, context, plugin, run = true, library = true) {
 }
 /**
  * Moves a node in the parent’s children to the given index.
- * @param node -
- * @param _context -
- * @param _property -
- * @param setIndex -
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param _context - A {@link FormKitContext | FormKitContext}
+ * @param _property - A property to add
+ * @param setIndex - The index to move the node
+ *
+ * @internal
  */
 function setIndex(node, _context, _property, setIndex) {
     if (isNode(node.parent)) {
@@ -83590,7 +83791,10 @@ function setIndex(node, _context, _property, setIndex) {
 }
 /**
  * Retrieves the index of a node from the parent’s children.
- * @param node -
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ *
+ * @internal
  */
 function getIndex(node) {
     if (node.parent) {
@@ -83604,16 +83808,22 @@ function getIndex(node) {
 /**
  * Retrieves the context object of a given node. This is intended to be a
  * private trap and should absolutely not be used in plugins or user-land code.
- * @param _node -
- * @param context -
+ *
+ * @param _node - A {@link FormKitNode | FormKitNode}
+ * @param context - A {@link FormKitContext | FormKitContext}
+ *
+ * @internal
  */
 function getContext(_node, context) {
     return context;
 }
 /**
  * Get the name of the current node, allowing for slight mutations.
- * @param node -
- * @param context -
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param context - A {@link FormKitContext | FormKitContext}
+ *
+ * @internal
  */
 function getName(node, context) {
     var _a;
@@ -83623,8 +83833,11 @@ function getName(node, context) {
 }
 /**
  * Returns the address of the current node.
- * @param node -
- * @param context -
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param context - A {@link FormKitContext | FormKitContext}
+ *
+ * @internal
  */
 function getAddress(node, context) {
     return context.parent
@@ -83633,10 +83846,14 @@ function getAddress(node, context) {
 }
 /**
  * Fetches a node from the tree by its address.
- * @param context -
- * @param node -
- * @param location -
- * @returns FormKitNode
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param _context - A {@link FormKitContext | FormKitContext}
+ * @param locator - A string or {@link FormKitAddress | FormKitAddress} to find in the tree.
+ *
+ * @returns A {@link FormKitNode | FormKitNode}
+ *
+ * @internal
  */
 function getNode(node, _context, locator) {
     const address = typeof locator === 'string' ? locator.split(node.config.delimiter) : locator;
@@ -83676,9 +83893,13 @@ function getNode(node, _context, locator) {
 }
 /**
  * Perform selections on a subtree using the address "selector" methods.
- * @param node -
- * @param selector -
- * @returns FormKitNode | undefined
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param selector - A `string | number` to find in the node
+ *
+ * @returns A {@link FormKitNode | FormKitNode} or `undefined`
+ *
+ * @internal
  */
 function select(node, selector) {
     const matches = String(selector).match(/^(find)\((.*)\)$/);
@@ -83697,21 +83918,29 @@ function select(node, selector) {
 /**
  * Perform a breadth first search and return the first instance of a node that
  * is found in the subtree or undefined.
- * @param node - The node to start the search on/under
- * @param _context - The context object
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param _context - A {@link FormKitContext | FormKitContext}
  * @param searchTerm - The term we are searching for
- * @param searcher - Either a key to search on, or a function
- * @returns
+ * @param searcher - Either a key of {@link FormKitNode | FormKitNode}, or a {@link FormKitSearchFunction | FormKitSearchFunction}
+ *
+ * @returns A {@link FormKitNode | FormKitNode} or `undefined`
+ *
+ * @internal
  */
 function find(node, _context, searchTerm, searcher) {
     return bfs(node, searchTerm, searcher);
 }
 /**
- * Perform a breadth-first-search on a node subtree and locate the first
+ * Perform a breadth-first search on a node subtree and locate the first
  * instance of a match.
- * @param node -
- * @param name -
- * @returns FormKitNode
+ *
+ * @param tree - A {@link FormKitNode | FormKitNode} to start from.
+ * @param searchValue - A value to be searched.
+ * @param searchGoal - A goal value.
+ *
+ * @returns A {@link FormKitNode | FormKitNode } or `undefined`.
+ *
  * @public
  */
 function bfs(tree, searchValue, searchGoal = 'name') {
@@ -83729,6 +83958,10 @@ function bfs(tree, searchValue, searchGoal = 'name') {
 }
 /**
  * Get the root node of the tree.
+ *
+ * @param n - A {@link FormKitNode | FormKitNode}
+ *
+ * @internal
  */
 function getRoot(n) {
     let node = n;
@@ -83739,9 +83972,13 @@ function getRoot(n) {
 }
 /**
  * Creates a new configuration option.
- * @param parent -
- * @param configOptions -
- * @returns FormKitConfig
+ *
+ * @param target - An object of optional properties of {@link FormKitConfig | FormKitConfig}
+ * @param parent - A parent {@link FormKitNode | FormKitNode}
+ *
+ * @returns {@link FormKitNode | FormKitNode}
+ *
+ * @internal
  */
 function createConfig(target = {}, parent) {
     let node = undefined;
@@ -83803,8 +84040,15 @@ function createConfig(target = {}, parent) {
 /**
  * Given a string of text, expose it for modification, translation, or full
  * replacement.
- * @param key - A message key, or generic string of text
- * @returns
+
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param _context - A {@link FormKitContext | FormKitContext}
+ * @param key - A {@link FormKitTextFragment | FormKitTextFragment}, or generic string of text
+ * @param type - A string to represent the text type
+ *
+ * @returns `string`
+ *
+ * @internal
  */
 function text(node, _context, key, type = 'ui') {
     const fragment = typeof key === 'string' ? { key, value: key, type } : key;
@@ -83815,7 +84059,10 @@ function text(node, _context, key, type = 'ui') {
 /**
  * Submits the nearest ancestor that is a FormKit "form". It determines which
  * node is a form by locating an ancestor where node.props.isForm = true.
- * @param node - The node to initiate the submit
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ *
+ * @internal
  */
 function submit(node) {
     const name = node.name;
@@ -83832,19 +84079,25 @@ function submit(node) {
 }
 /**
  * Reset to the original value.
- * @param node - The node to reset
- * @param _context - The context
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param _context - A {@link FormKitContext | FormKitContext}
  * @param value - The value to reset to
+ *
+ * @internal
  */
 function resetValue(node, _context, value) {
     return reset(node, value);
 }
 /**
  * Sets errors on the node and optionally its children.
- * @param node - The node to set errors on
- * @param _context - Not used
- * @param localErrors - An array of errors to set on this node
- * @param childErrors - An object of name to errors to set on children.
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param _context - A {@link FormKitContext | FormKitContext}
+ * @param localErrors - An array of {@link ErrorMessages | ErrorMessages} to set on this node
+ * @param childErrors - An object of name of {@link ErrorMessages | ErrorMessages} to set on children.
+ *
+ * @internal
  */
 function setErrors$1(node, _context, localErrors, childErrors) {
     const sourceKey = `${node.name}-set`;
@@ -83856,10 +84109,13 @@ function setErrors$1(node, _context, localErrors, childErrors) {
 }
 /**
  * Clears errors on the node and optionally its children.
- * @param node - The node to set errors on
- * @param _context - Not used
- * @param localErrors - An array of errors to set on this node
- * @param childErrors - An object of name to errors to set on children.
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param _context - A {@link FormKitContext | FormKitContext}
+ * @param clearChildErrors - A boolean to clear children error or not.
+ * @param sourceKey - The source key string to reset.
+ *
+ * @internal
  */
 function clearErrors$1(node, context, clearChildErrors = true, sourceKey) {
     setErrors$1(node, context, []);
@@ -83877,9 +84133,12 @@ function clearErrors$1(node, context, clearChildErrors = true, sourceKey) {
 }
 /**
  * Middleware to assign default prop values as issued by core.
- * @param node - The node being registered
- * @param next - Calls the next middleware.
- * @returns
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ *
+ * @returns A {@link FormKitNode | FormKitNode}
+ *
+ * @internal
  */
 function defaultProps(node) {
     if (!(0,_formkit_utils__WEBPACK_IMPORTED_MODULE_0__.has)(node.props, 'id'))
@@ -83887,8 +84146,11 @@ function defaultProps(node) {
     return node;
 }
 /**
- * @param options -
- * @param config -
+ * Create props based on initial values
+ *
+ * @param initial - An initial value to be transformed
+ *
+ * @internal
  */
 function createProps(initial) {
     const props = {
@@ -83936,9 +84198,11 @@ function createProps(initial) {
 /**
  * A cheap function that iterates over all plugins and stops once node.define
  * is called.
- * @param node - A formkit node
- * @param plugins - An array of plugins
- * @returns
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param plugins - An array of {@link FormKitPlugin | FormKitPlugin}
+ *
+ * @internal
  */
 function findDefinition(node, plugins) {
     // If the definition is already there, force call to define.
@@ -83954,8 +84218,12 @@ function findDefinition(node, plugins) {
 }
 /**
  * Create a new context object for our a FormKit node, given default information
- * @param options - An options object to override the defaults.
- * @returns FormKitContext
+ *
+ * @param options - An options object of {@link FormKitOptions | FormKitOptions} to override the defaults.
+ *
+ * @returns A {@link FormKitContext | FormKitContext}
+ *
+ * @internal
  */
 function createContext(options) {
     const value = createValue(options);
@@ -83985,8 +84253,13 @@ function createContext(options) {
 }
 /**
  * Initialize a node object's internal properties.
- * @param node - The node to initialize
- * @returns FormKitNode
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}
+ * @param options - An options object of {@link FormKitOptions | FormKitOptions} to override the defaults.
+ *
+ * @returns A {@link FormKitNode | FormKitNode}
+ *
+ * @internal
  */
 function nodeInit(node, options) {
     var _a;
@@ -84032,11 +84305,26 @@ function nodeInit(node, options) {
     return node;
 }
 /**
- * Creates a new instance of a FormKit Node. Nodes are the atomic unit of
- * a FormKit graph.
+ * Creates a new instance of a FormKit Node. Nodes are the atomic unit of a FormKit graph.
  *
- * @param options - An object of options to define the node.
- * @returns FormKitNode
+ * @example
+ *
+ * ```javascript
+ * import { createNode } from '@formkit/core'
+ *
+ * const input = createNode({
+ *   type: 'input', // defaults to 'input' if not specified
+ *   value: 'hello node world',
+ * })
+ *
+ * console.log(input.value)
+ * // 'hello node world'
+ * ```
+ *
+ * @param options - An options object of {@link FormKitOptions | FormKitOptions} to override the defaults.
+ *
+ * @returns A {@link @formkit/core#FormKitNode | FormKitNode}.
+ *
  * @public
  */
 function createNode(options) {
@@ -84068,8 +84356,11 @@ function createNode(options) {
 
 /**
  * Type narrow that a node is a DOM node.
+ *
  * @param node - A schema node to check
- * @returns
+ *
+ * @returns `boolean`
+ *
  * @public
  */
 function isDOM(node) {
@@ -84077,8 +84368,11 @@ function isDOM(node) {
 }
 /**
  * Type narrow that a node is a DOM node.
- * @param node - A schema node to check
- * @returns
+ *
+ * @param node - A schema node to check.
+ *
+ * @returns `boolean`
+ *
  * @public
  */
 function isComponent(node) {
@@ -84086,9 +84380,8 @@ function isComponent(node) {
 }
 /**
  * Root declaration.
- * @param node - An object to check
- * @returns
- * @public
+ *
+ * @param node - An object to check.
  */
 function isConditional(node) {
     if (!node || typeof node === 'string')
@@ -84097,8 +84390,11 @@ function isConditional(node) {
 }
 /**
  * Determines if the node is syntactic sugar or not.
- * @param node - Node
- * @returns
+ *
+ * @param node - A schema node to check.
+ *
+ * @returns `boolean`
+ *
  * @public
  */
 function isSugar(node) {
@@ -84106,8 +84402,11 @@ function isSugar(node) {
 }
 /**
  * Converts syntactic sugar nodes to standard nodes.
- * @param node - A node to covert
- * @returns
+ *
+ * @param node - A node to covert.
+ *
+ * @returns A {@link FormKitSchemaNode | FormKitSchemaNode} without the properties of {@link FormKitSchemaFormKit | FormKitSchemaFormKit}.
+ *
  * @public
  */
 function sugar(node) {
@@ -84128,9 +84427,12 @@ function sugar(node) {
 }
 
 /**
- * Compiles a logical string like "a != z || b == c" into a single function.
+ * Compiles a logical string like `"a != z || b == c"` into a single function.
  * The return value is an object with a "provide" method that iterates over all
  * requirement tokens to use as replacements.
+ *
+ * @example
+ *
  * ```typescript
  * let name = {
  *   value: 'jon'
@@ -84141,8 +84443,11 @@ function sugar(node) {
  *
  * condition() // false
  * ```
- * @param expr - A string to compile
- * @returns
+ *
+ * @param expr - A string to compile.
+ *
+ * @returns A {@link FormKitCompilerOutput | FormKitCompilerOutput}.
+ *
  * @public
  */
 function compile(expr) {
@@ -84572,11 +84877,14 @@ function compile(expr) {
 }
 
 /**
- * Function that produces a standardized object representation of CSS classes
- * @param propertyKey - section key
- * @param node - FormKit node
- * @param sectionClassList - Things to turn into classes
- * @returns
+ * Function that produces a standardized object representation of CSS classes.
+ *
+ * @param propertyKey - the section key.
+ * @param node - A {@link FormKitNode | FormKitNode}.
+ * @param sectionClassList - A `string | Record<string, boolean>` or a {@link FormKitClasses | FormKitClasses}.
+ *
+ * @returns `Record<string, boolean>`
+ *
  * @public
  */
 function createClasses(propertyKey, node, sectionClassList) {
@@ -84592,34 +84900,60 @@ function createClasses(propertyKey, node, sectionClassList) {
     return sectionClassList;
 }
 /**
- * Combines multiple class lists into a single list
- * @param node - the FormKit node being operated on
- * @param property - The property key to which the class list will be applied
- * @param args - CSS class list(s)
- * @returns
+ * Combines multiple class lists into a single list.
+ *
+ * @param node - A {@link FormKitNode | FormKitNode}.
+ * @param property - The property key to which the class list will be applied.
+ * @param args - And array of `Record<string, boolean>` of CSS class list(s).
+ *
+ * @returns `string | null`
+ *
  * @public
  */
 function generateClassList(node, property, ...args) {
     const combinedClassList = args.reduce((finalClassList, currentClassList) => {
         if (!currentClassList)
-            return finalClassList;
+            return handleNegativeClasses(finalClassList);
         const { $reset, ...classList } = currentClassList;
         if ($reset) {
-            return classList;
+            return handleNegativeClasses(classList);
         }
-        return Object.assign(finalClassList, classList);
+        return handleNegativeClasses(Object.assign(finalClassList, classList));
     }, {});
-    return (Object.keys(node.hook.classes.dispatch({ property, classes: combinedClassList })
+    return Object.keys(node.hook.classes.dispatch({ property, classes: combinedClassList })
         .classes)
         .filter((key) => combinedClassList[key])
-        .join(' ') || null);
+        .join(' ') || null;
+}
+function handleNegativeClasses(classList) {
+    const removalToken = '$remove:';
+    let hasNegativeClassValue = false;
+    const applicableClasses = Object.keys(classList).filter((className) => {
+        if (classList[className] && className.startsWith(removalToken)) {
+            hasNegativeClassValue = true;
+        }
+        return classList[className];
+    });
+    if (applicableClasses.length > 1 && hasNegativeClassValue) {
+        const negativeClasses = applicableClasses.filter(className => className.startsWith(removalToken));
+        negativeClasses.map((negativeClass) => {
+            const targetClass = negativeClass.substring(removalToken.length);
+            classList[targetClass] = false;
+            classList[negativeClass] = false;
+        });
+    }
+    return classList;
 }
 
 /**
  * Sets errors on a form, group, or input.
- * @param formId - The id of a form
- * @param localErrors - The errors to set on the form or the form’s inputs
- * @param childErrors - (optional) The errors to set on the form or the form’s inputs
+ *
+ * @param id - The id of a form.
+ * @param localErrors - The errors to set on the form or the form’s inputs in
+ * the format of {@link ErrorMessages | ErrorMessages}.
+ * @param childErrors - (optional) The errors to set on the form or the form’s
+ * inputs in the format of {@link ErrorMessages | ErrorMessages}.
+ *
  * @public
  */
 function setErrors(id, localErrors, childErrors) {
@@ -84632,9 +84966,12 @@ function setErrors(id, localErrors, childErrors) {
     }
 }
 /**
- * Clears child errors.
- * @param id - The id of the node you want to clear errors for
- * @param clearChildren - Determines if the the children of this node should have their errors cleared.
+ * Clears errors on the node and optionally its children.
+ *
+ * @param id - The id of the node you want to clear errors for.
+ * @param clearChildren - Determines if the children of this node should have
+ * their errors cleared.
+ *
  * @public
  */
 function clearErrors(id, clearChildren = true) {
@@ -84648,16 +84985,20 @@ function clearErrors(id, clearChildren = true) {
 }
 
 /**
- * index.ts
+ * The official FormKit core library. This package is responsible for most of FormKit’s internal functionality.
+ * You can read documentation specifically on how it works at formkit.com.
  *
- * In this file we explicitly declare what should end up in the public API.
+ * You can add this package by using `npm install @formkit/core` or `yarn add @formkit/core`.
+ *
+ * @packageDocumentation
  */
 /**
  * The current version of FormKit at the time the package is published. Is replaced
  * as part of the publishing script.
- * @public
+ *
+ * @internal
  */
-const FORMKIT_VERSION = '1.0.0-beta.12';
+const FORMKIT_VERSION = '1.0.0-beta.14';
 
 
 
@@ -84782,6 +85123,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ar": () => (/* binding */ ar),
 /* harmony export */   "az": () => (/* binding */ az),
 /* harmony export */   "bg": () => (/* binding */ bg),
+/* harmony export */   "ca": () => (/* binding */ ca),
 /* harmony export */   "createI18nPlugin": () => (/* binding */ createI18nPlugin),
 /* harmony export */   "cs": () => (/* binding */ cs),
 /* harmony export */   "da": () => (/* binding */ da),
@@ -84829,8 +85171,11 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * Given a string, convert it to sentence case.
- * @param item - The string to sentence case
- * @returns
+ *
+ * @param str - The string to sentence case.
+ *
+ * @returns `string`
+ *
  * @public
  */
 function sentence(str) {
@@ -84838,9 +85183,13 @@ function sentence(str) {
 }
 /**
  * Creates an oxford-comma separated list of items.
- * @param args - items to list out
- * @param conjunction - in: x, y, and z "and" is the conjunction to use
- * @returns
+ *
+ * @param items - the items to list out.
+ * @param conjunction - in the list "x, y, and z", "and" is the conjunction.
+ * Defaults to "or".
+ *
+ * @returns `string`
+ *
  * @public
  */
 function list(items, conjunction = 'or') {
@@ -84856,8 +85205,12 @@ function list(items, conjunction = 'or') {
     }, '');
 }
 /**
- * Given a string or a date return a nice human-readable version.
+ * Given a string or a date, return a nice human-readable version.
+ *
  * @param date - A string or a date.
+ *
+ * @returns `string`
+ *
  * @public
  */
 function date(date) {
@@ -84867,13 +85220,17 @@ function date(date) {
     }
     return new Intl.DateTimeFormat(undefined, {
         dateStyle: 'medium',
+        timeZone: 'UTC'
     }).format(dateTime);
 }
 /**
- * Orders two variables smallest to largest.
- * @param first - first argument
- * @param second - Second argument
- * @returns
+ * Orders two variables from smallest to largest.
+ *
+ * @param first - The first number or string.
+ * @param second - The second number or string.
+ *
+ * @returns `[smaller: number | string, larger: number | string]`
+ *
  * @public
  */
 function order(first, second) {
@@ -84889,7 +85246,7 @@ function order(first, second) {
  * Standard language for interface features.
  * @public
  */
-const ui$B = {
+const ui$C = {
     /**
      * Shown on buttons for adding new items.
      */
@@ -84935,10 +85292,10 @@ const ui$B = {
  * These are all the possible strings that pertain to validation messages.
  * @public
  */
-const validation$B = {
+const validation$C = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -84947,7 +85304,7 @@ const validation$B = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -84961,7 +85318,7 @@ const validation$B = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -84970,7 +85327,7 @@ const validation$B = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -84979,7 +85336,7 @@ const validation$B = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -84988,7 +85345,7 @@ const validation$B = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -85002,7 +85359,7 @@ const validation$B = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -85017,7 +85374,7 @@ const validation$B = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -85026,7 +85383,7 @@ const validation$B = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -85040,7 +85397,7 @@ const validation$B = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -85049,12 +85406,12 @@ const validation$B = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'الرجاء أدخال بريد إليكتروني صالح.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -85063,7 +85420,7 @@ const validation$B = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -85072,7 +85429,7 @@ const validation$B = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -85103,7 +85460,7 @@ const validation$B = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -85112,7 +85469,7 @@ const validation$B = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -85126,7 +85483,7 @@ const validation$B = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -85140,7 +85497,7 @@ const validation$B = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -85154,7 +85511,7 @@ const validation$B = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -85163,7 +85520,7 @@ const validation$B = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -85172,7 +85529,7 @@ const validation$B = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -85181,7 +85538,7 @@ const validation$B = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -85190,19 +85547,19 @@ const validation$B = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `الرجاء تضمين عنوان رابط صحيح.`;
+        return `يرجى إدخال عنوان URL صالح.`;
         /* </i18n> */
     },
 };
 
 var ar = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    ui: ui$B,
-    validation: validation$B
+    ui: ui$C,
+    validation: validation$C
 });
 
 /**
@@ -85214,7 +85571,7 @@ var ar = /*#__PURE__*/Object.freeze({
  * Standard language for interface features.
  * @public
  */
-const ui$A = {
+const ui$B = {
     /**
      * Shown on a button for adding additional items.
      */
@@ -85260,10 +85617,10 @@ const ui$A = {
  * These are all the possible strings that pertain to validation messages.
  * @public
  */
-const validation$A = {
+const validation$B = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -85272,7 +85629,7 @@ const validation$A = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -85286,7 +85643,7 @@ const validation$A = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -85295,7 +85652,7 @@ const validation$A = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -85304,7 +85661,7 @@ const validation$A = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -85313,7 +85670,7 @@ const validation$A = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -85327,7 +85684,7 @@ const validation$A = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -85342,7 +85699,7 @@ const validation$A = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -85351,7 +85708,7 @@ const validation$A = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -85365,7 +85722,7 @@ const validation$A = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -85374,12 +85731,12 @@ const validation$A = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Etibarlı e-poçt ünvanı daxil edin.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -85388,7 +85745,7 @@ const validation$A = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -85397,7 +85754,7 @@ const validation$A = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -85428,7 +85785,7 @@ const validation$A = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -85437,7 +85794,7 @@ const validation$A = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -85451,7 +85808,7 @@ const validation$A = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -85465,7 +85822,7 @@ const validation$A = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -85479,7 +85836,7 @@ const validation$A = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -85488,7 +85845,7 @@ const validation$A = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -85497,7 +85854,7 @@ const validation$A = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -85506,7 +85863,7 @@ const validation$A = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -85515,19 +85872,19 @@ const validation$A = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Zəhmət olmasa etibarlı url daxil edin`;
+        return `Xahiş edirik, düzgün URL daxil edin.`;
         /* </i18n> */
     },
 };
 
 var az = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    ui: ui$A,
-    validation: validation$A
+    ui: ui$B,
+    validation: validation$B
 });
 
 /**
@@ -85539,7 +85896,7 @@ var az = /*#__PURE__*/Object.freeze({
  * Standard language for interface features.
  * @public
  */
-const ui$z = {
+const ui$A = {
     /**
      * Shown on a button for adding additional items.
      */
@@ -85585,10 +85942,10 @@ const ui$z = {
  * These are all the possible strings that pertain to validation messages.
  * @public
  */
-const validation$z = {
+const validation$A = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -85597,7 +85954,7 @@ const validation$z = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -85611,7 +85968,7 @@ const validation$z = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -85620,7 +85977,7 @@ const validation$z = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -85629,7 +85986,7 @@ const validation$z = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -85638,7 +85995,7 @@ const validation$z = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -85652,7 +86009,7 @@ const validation$z = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -85667,7 +86024,7 @@ const validation$z = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -85676,7 +86033,7 @@ const validation$z = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -85690,7 +86047,7 @@ const validation$z = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -85699,12 +86056,12 @@ const validation$z = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Моля, въведете валиден имейл адрес.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -85713,7 +86070,7 @@ const validation$z = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -85722,7 +86079,7 @@ const validation$z = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -85753,7 +86110,7 @@ const validation$z = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -85762,7 +86119,7 @@ const validation$z = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -85776,7 +86133,7 @@ const validation$z = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -85790,7 +86147,7 @@ const validation$z = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -85804,7 +86161,7 @@ const validation$z = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -85813,7 +86170,7 @@ const validation$z = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -85822,7 +86179,7 @@ const validation$z = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -85831,7 +86188,7 @@ const validation$z = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -85840,7 +86197,7 @@ const validation$z = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
@@ -85850,6 +86207,331 @@ const validation$z = {
 };
 
 var bg = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    ui: ui$A,
+    validation: validation$A
+});
+
+/**
+ * Here we can import additional helper functions to assist in formatting our
+ * language. Feel free to add additional helper methods to libs/formats if it
+ * assists in creating good validation messages for your locale.
+ */
+/**
+ * Standard language for interface features.
+ * @public
+ */
+const ui$z = {
+    /**
+     * Shown on a button for adding additional items.
+     */
+    add: 'Afegir',
+    /**
+     * Shown when a button to remove items is visible.
+     */
+    remove: 'Eliminar',
+    /**
+     * Shown when there are multiple items to remove at the same time.
+     */
+    removeAll: 'Eliminar tot',
+    /**
+     * Shown when all fields are not filled out correctly.
+     */
+    incomplete: 'Disculpi, no tots els camps estan omplerts correctament.',
+    /**
+     * Shown in a button inside a form to submit the form.
+     */
+    submit: 'Enviar',
+    /**
+     * Shown when no files are selected.
+     */
+    noFiles: 'Cap fitxer triat',
+    /**
+     * Shown on buttons that move fields up in a list.
+     */
+    moveUp: 'Moure amunt',
+    /**
+     * Shown on buttons that move fields down in a list.
+     */
+    moveDown: 'Moure avall',
+    /**
+     * Shown when something is actively loading.
+     */
+    isLoading: 'Carregant...',
+    /**
+     * Shown when there is more to load.
+     */
+    loadMore: 'Carregar més',
+};
+/**
+ * These are all the possible strings that pertain to validation messages.
+ * @public
+ */
+const validation$z = {
+    /**
+     * The value is not an accepted value.
+     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     */
+    accepted({ name }) {
+        /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
+        return `Si us plau accepti ${name}.`;
+        /* </i18n> */
+    },
+    /**
+     * The date is not after
+     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     */
+    date_after({ name, args }) {
+        if (Array.isArray(args) && args.length) {
+            /* <i18n case="Shown when the user-provided date is not after the date supplied to the rule."> */
+            return `${sentence(name)} ha de ser posterior a ${date(args[0])}.`;
+            /* </i18n> */
+        }
+        /* <i18n case="Shown when the user-provided date is not after today's date, since no date was supplied to the rule."> */
+        return `${sentence(name)} ha de succeïr al futur.`;
+        /* </i18n> */
+    },
+    /**
+     * The value is not a letter.
+     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     */
+    alpha({ name }) {
+        /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
+        return `${sentence(name)} només pot contenir caràcters alfabètics.`;
+        /* </i18n> */
+    },
+    /**
+     * The value is not alphanumeric
+     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     */
+    alphanumeric({ name }) {
+        /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
+        return `${sentence(name)} només pot contenir lletres i números.`;
+        /* </i18n> */
+    },
+    /**
+     * The value is not letter and/or spaces
+     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     */
+    alpha_spaces({ name }) {
+        /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
+        return `${sentence(name)} només pot contenir lletres i espais.`;
+        /* </i18n> */
+    },
+    /**
+     * The date is not before
+     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     */
+    date_before({ name, args }) {
+        if (Array.isArray(args) && args.length) {
+            /* <i18n case="Shown when the user-provided date is not before the date supplied to the rule."> */
+            return `${sentence(name)} ha de ser anterior a ${date(args[0])}.`;
+            /* </i18n> */
+        }
+        /* <i18n case="Shown when the user-provided date is not before today's date, since no date was supplied to the rule."> */
+        return `${sentence(name)} ha d'estar al passat.`;
+        /* </i18n> */
+    },
+    /**
+     * The value is not between two numbers
+     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     */
+    between({ name, args }) {
+        if (isNaN(args[0]) || isNaN(args[1])) {
+            /* <i18n case="Shown when any of the arguments supplied to the rule were not a number."> */
+            return `Aquest camp està configurat incorrectament i no pot ésser enviat.`;
+            /* </i18n> */
+        }
+        const [a, b] = order(args[0], args[1]);
+        /* <i18n case="Shown when the user-provided value is not between two numbers."> */
+        return `${sentence(name)} ha d'estar entre ${a} i ${b}.`;
+        /* </i18n> */
+    },
+    /**
+     * The confirmation field does not match
+     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     */
+    confirm({ name }) {
+        /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
+        return `${sentence(name)} no concorda.`;
+        /* </i18n> */
+    },
+    /**
+     * The value is not a valid date
+     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     */
+    date_format({ name, args }) {
+        if (Array.isArray(args) && args.length) {
+            /* <i18n case="Shown when the user-provided date does not satisfy the date format supplied to the rule."> */
+            return `${sentence(name)} no és una data vàlida, si us plau empri el format ${args[0]}`;
+            /* </i18n> */
+        }
+        /* <i18n case="Shown when no date argument was supplied to the rule."> */
+        return 'Aquest camp està configurat incorrectament i no pot ésser enviat';
+        /* </i18n> */
+    },
+    /**
+     * Is not within expected date range
+     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     */
+    date_between({ name, args }) {
+        /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
+        return `${sentence(name)} ha d'estar entre ${date(args[0])} i ${date(args[1])}`;
+        /* </i18n> */
+    },
+    /**
+     * Shown when the user-provided value is not a valid email address.
+     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     */
+    email: `Si us plau, entri una adreça d'e-mail vàlida.`,
+    /**
+     * Does not end with the specified value
+     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     */
+    ends_with({ name, args }) {
+        /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
+        return `${sentence(name)} no acaba amb ${list(args)}.`;
+        /* </i18n> */
+    },
+    /**
+     * Is not an allowed value
+     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     */
+    is({ name }) {
+        /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
+        return `${sentence(name)} no és un valor acceptat.`;
+        /* </i18n> */
+    },
+    /**
+     * Does not match specified length
+     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     */
+    length({ name, args: [first = 0, second = Infinity] }) {
+        const min = Number(first) <= Number(second) ? first : second;
+        const max = Number(second) >= Number(first) ? second : first;
+        if (min == 1 && max === Infinity) {
+            /* <i18n case="Shown when the length of the user-provided value is not at least one character."> */
+            return `${sentence(name)} ha de tenir com a mínim un caràcter.`;
+            /* </i18n> */
+        }
+        if (min == 0 && max) {
+            /* <i18n case="Shown when first argument supplied to the rule is 0, and the user-provided value is longer than the max (the 2nd argument) supplied to the rule."> */
+            return `${sentence(name)} ha de ser inferior o igual a ${max} caràcters.`;
+            /* </i18n> */
+        }
+        if (min === max) {
+            /* <i18n case="Shown when first and second argument supplied to the rule are the same, and the user-provided value is not any of the arguments supplied to the rule."> */
+            return `${sentence(name)} ha de tenir una longitud de ${max} caràcters.`;
+            /* </i18n> */
+        }
+        if (min && max === Infinity) {
+            /* <i18n case="Shown when the length of the user-provided value is less than the minimum supplied to the rule and there is no maximum supplied to the rule."> */
+            return `${sentence(name)} ha de ser major que o igual a ${min} caràcters.`;
+            /* </i18n> */
+        }
+        /* <i18n case="Shown when the length of the user-provided value is between the two lengths supplied to the rule."> */
+        return `${sentence(name)} ha d'estar entre ${min} i ${max} caràcters.`;
+        /* </i18n> */
+    },
+    /**
+     * Value is not a match
+     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     */
+    matches({ name }) {
+        /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
+        return `${sentence(name)} no és un valor permès.`;
+        /* </i18n> */
+    },
+    /**
+     * Exceeds maximum allowed value
+     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     */
+    max({ name, node: { value }, args }) {
+        if (Array.isArray(value)) {
+            /* <i18n case="Shown when the length of the array of user-provided values is longer than the max supplied to the rule."> */
+            return `No pot tenir més de ${args[0]} ${name}.`;
+            /* </i18n> */
+        }
+        /* <i18n case="Shown when the user-provided value is greater than the maximum number supplied to the rule."> */
+        return `${sentence(name)} ha de ser menys que o igual a ${args[0]}.`;
+        /* </i18n> */
+    },
+    /**
+     * The (field-level) value does not match specified mime type
+     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     */
+    mime({ name, args }) {
+        if (!args[0]) {
+            /* <i18n case="Shown when no file formats were supplied to the rule."> */
+            return 'No hi ha cap format de fitxer acceptat.';
+            /* </i18n> */
+        }
+        /* <i18n case="Shown when the mime type of user-provided file does not match any mime types supplied to the rule."> */
+        return `${sentence(name)} ha de ser del tipus: ${args[0]}`;
+        /* </i18n> */
+    },
+    /**
+     * Does not fulfill minimum allowed value
+     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     */
+    min({ name, node: { value }, args }) {
+        if (Array.isArray(value)) {
+            /* <i18n case="Shown when the length of the array of user-provided values is shorter than the min supplied to the rule."> */
+            return `No pot tenir menys de ${args[0]} ${name}.`;
+            /* </i18n> */
+        }
+        /* <i18n case="Shown when the user-provided value is less than the minimum number supplied to the rule."> */
+        return `${sentence(name)} ha de ser com a mínim ${args[0]}.`;
+        /* </i18n> */
+    },
+    /**
+     * Is not an allowed value
+     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     */
+    not({ name, node: { value } }) {
+        /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
+        return `“${value}” no s'accepta com a ${name}.`;
+        /* </i18n> */
+    },
+    /**
+     *  Is not a number
+     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     */
+    number({ name }) {
+        /* <i18n case="Shown when the user-provided value is not a number."> */
+        return `${sentence(name)} ha de ser un número.`;
+        /* </i18n> */
+    },
+    /**
+     * Required field.
+     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     */
+    required({ name }) {
+        /* <i18n case="Shown when a user does not provide a value to a required input."> */
+        return `${sentence(name)} és obligatori.`;
+        /* </i18n> */
+    },
+    /**
+     * Does not start with specified value
+     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     */
+    starts_with({ name, args }) {
+        /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
+        return `${sentence(name)} no comença amb ${list(args)}.`;
+        /* </i18n> */
+    },
+    /**
+     * Is not a url
+     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     */
+    url() {
+        /* <i18n case="Shown when the user-provided value is not a valid url."> */
+        return `Si us plau inclogui una url vàlida.`;
+        /* </i18n> */
+    },
+};
+
+var ca = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ui: ui$z,
     validation: validation$z
@@ -85913,7 +86595,7 @@ const ui$y = {
 const validation$y = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -85922,7 +86604,7 @@ const validation$y = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -85936,7 +86618,7 @@ const validation$y = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -85945,7 +86627,7 @@ const validation$y = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -85954,7 +86636,7 @@ const validation$y = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -85968,7 +86650,7 @@ const validation$y = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -85983,7 +86665,7 @@ const validation$y = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -85992,7 +86674,7 @@ const validation$y = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -86006,7 +86688,7 @@ const validation$y = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -86015,12 +86697,12 @@ const validation$y = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Prosím, zadejte platnou e-mailovou adresu.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -86029,7 +86711,7 @@ const validation$y = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -86038,7 +86720,7 @@ const validation$y = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -86069,7 +86751,7 @@ const validation$y = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -86078,7 +86760,7 @@ const validation$y = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -86092,7 +86774,7 @@ const validation$y = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -86106,7 +86788,7 @@ const validation$y = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -86120,7 +86802,7 @@ const validation$y = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -86129,7 +86811,7 @@ const validation$y = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -86138,7 +86820,7 @@ const validation$y = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -86147,7 +86829,7 @@ const validation$y = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -86156,11 +86838,11 @@ const validation$y = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Zadejte, prosím, platnou URL adresu.`;
+        return `Zadejte prosím platnou adresu URL.`;
         /* </i18n> */
     },
 };
@@ -86229,7 +86911,7 @@ const ui$x = {
 const validation$x = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -86238,7 +86920,7 @@ const validation$x = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -86252,7 +86934,7 @@ const validation$x = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -86261,7 +86943,7 @@ const validation$x = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -86270,7 +86952,7 @@ const validation$x = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -86279,7 +86961,7 @@ const validation$x = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -86293,7 +86975,7 @@ const validation$x = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -86308,7 +86990,7 @@ const validation$x = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -86317,7 +86999,7 @@ const validation$x = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -86331,7 +87013,7 @@ const validation$x = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -86340,12 +87022,12 @@ const validation$x = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Indtast venligst en gyldig email-adresse.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -86354,7 +87036,7 @@ const validation$x = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -86363,7 +87045,7 @@ const validation$x = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -86394,7 +87076,7 @@ const validation$x = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -86403,7 +87085,7 @@ const validation$x = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -86417,7 +87099,7 @@ const validation$x = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -86431,7 +87113,7 @@ const validation$x = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -86445,7 +87127,7 @@ const validation$x = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -86454,7 +87136,7 @@ const validation$x = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -86463,7 +87145,7 @@ const validation$x = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -86472,7 +87154,7 @@ const validation$x = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -86481,11 +87163,11 @@ const validation$x = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Indtast venligst en gyldig URL.`;
+        return `Indtast en gyldig URL.`;
         /* </i18n> */
     },
 };
@@ -86554,7 +87236,7 @@ const ui$w = {
 const validation$w = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -86563,7 +87245,7 @@ const validation$w = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -86577,7 +87259,7 @@ const validation$w = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -86586,7 +87268,7 @@ const validation$w = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -86595,7 +87277,7 @@ const validation$w = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -86604,7 +87286,7 @@ const validation$w = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -86618,7 +87300,7 @@ const validation$w = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -86632,7 +87314,7 @@ const validation$w = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -86641,7 +87323,7 @@ const validation$w = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -86655,7 +87337,7 @@ const validation$w = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -86664,12 +87346,12 @@ const validation$w = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'E-Mail Adresse ist ungültig.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -86678,7 +87360,7 @@ const validation$w = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -86687,7 +87369,7 @@ const validation$w = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = first <= second ? first : second;
@@ -86718,7 +87400,7 @@ const validation$w = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -86727,7 +87409,7 @@ const validation$w = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -86741,7 +87423,7 @@ const validation$w = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -86755,7 +87437,7 @@ const validation$w = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -86769,7 +87451,7 @@ const validation$w = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -86778,7 +87460,7 @@ const validation$w = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -86787,7 +87469,7 @@ const validation$w = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -86796,7 +87478,7 @@ const validation$w = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -86805,11 +87487,11 @@ const validation$w = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `URL ist ungültig.`;
+        return `Bitte geben Sie eine gültige URL ein.`;
         /* </i18n> */
     },
 };
@@ -86878,7 +87560,7 @@ const ui$v = {
 const validation$v = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -86887,7 +87569,7 @@ const validation$v = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -86901,7 +87583,7 @@ const validation$v = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -86910,7 +87592,7 @@ const validation$v = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -86919,7 +87601,7 @@ const validation$v = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -86928,7 +87610,7 @@ const validation$v = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -86942,7 +87624,7 @@ const validation$v = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -86957,7 +87639,7 @@ const validation$v = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -86966,7 +87648,7 @@ const validation$v = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -86980,7 +87662,7 @@ const validation$v = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -86989,12 +87671,12 @@ const validation$v = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Παρακαλώ πληκτρολογήστε μια έγκυρη email διεύθυνση. ',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -87003,7 +87685,7 @@ const validation$v = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -87012,7 +87694,7 @@ const validation$v = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -87043,7 +87725,7 @@ const validation$v = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -87052,7 +87734,7 @@ const validation$v = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -87066,7 +87748,7 @@ const validation$v = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -87080,7 +87762,7 @@ const validation$v = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -87094,7 +87776,7 @@ const validation$v = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -87103,7 +87785,7 @@ const validation$v = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -87112,7 +87794,7 @@ const validation$v = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -87121,7 +87803,7 @@ const validation$v = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -87130,11 +87812,11 @@ const validation$v = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Παρακαλώ συμπεριλάβετε μια έγκυρη διεύθυνση ιστοσελίδας.`;
+        return `Παρακαλώ εισάγετε ένα έγκυρο URL.`;
         /* </i18n> */
     },
 };
@@ -87203,7 +87885,7 @@ const ui$u = {
 const validation$u = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -87212,7 +87894,7 @@ const validation$u = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -87226,7 +87908,7 @@ const validation$u = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -87235,7 +87917,7 @@ const validation$u = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -87244,7 +87926,7 @@ const validation$u = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -87253,7 +87935,7 @@ const validation$u = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -87267,7 +87949,7 @@ const validation$u = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -87282,7 +87964,7 @@ const validation$u = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -87291,7 +87973,7 @@ const validation$u = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -87305,7 +87987,7 @@ const validation$u = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -87314,12 +87996,12 @@ const validation$u = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Please enter a valid email address.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -87328,7 +88010,7 @@ const validation$u = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -87337,7 +88019,7 @@ const validation$u = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -87368,7 +88050,7 @@ const validation$u = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -87377,7 +88059,7 @@ const validation$u = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -87391,7 +88073,7 @@ const validation$u = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -87405,21 +88087,21 @@ const validation$u = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
             /* <i18n case="Shown when the length of the array of user-provided values is shorter than the min supplied to the rule."> */
-            return `Cannot have less than ${args[0]} ${name}.`;
+            return `Cannot have fewer than ${args[0]} ${name}.`;
             /* </i18n> */
         }
         /* <i18n case="Shown when the user-provided value is less than the minimum number supplied to the rule."> */
-        return `${sentence(name)} must be at least ${args[0]}.`;
+        return `Must be at least ${args[0]} ${name} .`;
         /* </i18n> */
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -87428,7 +88110,7 @@ const validation$u = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -87437,7 +88119,7 @@ const validation$u = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -87446,7 +88128,7 @@ const validation$u = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -87455,11 +88137,11 @@ const validation$u = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Please include a valid url.`;
+        return `Please enter a valid URL.`;
         /* </i18n> */
     },
 };
@@ -87528,7 +88210,7 @@ const ui$t = {
 const validation$t = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -87537,7 +88219,7 @@ const validation$t = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -87551,7 +88233,7 @@ const validation$t = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -87560,7 +88242,7 @@ const validation$t = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -87569,7 +88251,7 @@ const validation$t = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -87578,7 +88260,7 @@ const validation$t = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -87592,7 +88274,7 @@ const validation$t = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -87607,7 +88289,7 @@ const validation$t = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -87616,7 +88298,7 @@ const validation$t = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -87630,7 +88312,7 @@ const validation$t = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -87639,12 +88321,12 @@ const validation$t = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Ingrese una dirección de correo electrónico válida por favor.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -87653,7 +88335,7 @@ const validation$t = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -87662,7 +88344,7 @@ const validation$t = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -87693,7 +88375,7 @@ const validation$t = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -87702,7 +88384,7 @@ const validation$t = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -87716,7 +88398,7 @@ const validation$t = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -87730,7 +88412,7 @@ const validation$t = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -87744,7 +88426,7 @@ const validation$t = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -87753,7 +88435,7 @@ const validation$t = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -87762,7 +88444,7 @@ const validation$t = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -87771,7 +88453,7 @@ const validation$t = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -87780,11 +88462,11 @@ const validation$t = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Proporcione una URL válida por favor.`;
+        return `Introduce una URL válida.`;
         /* </i18n> */
     },
 };
@@ -87853,7 +88535,7 @@ const ui$s = {
 const validation$s = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -87862,7 +88544,7 @@ const validation$s = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -87876,7 +88558,7 @@ const validation$s = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -87885,7 +88567,7 @@ const validation$s = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -87894,7 +88576,7 @@ const validation$s = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -87903,7 +88585,7 @@ const validation$s = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -87917,7 +88599,7 @@ const validation$s = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -87931,7 +88613,7 @@ const validation$s = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -87940,7 +88622,7 @@ const validation$s = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -87955,7 +88637,7 @@ const validation$s = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -87964,12 +88646,12 @@ const validation$s = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'لطفا آدرس ایمیل معتبر وارد کنید.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -87978,7 +88660,7 @@ const validation$s = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -87987,7 +88669,7 @@ const validation$s = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = first <= second ? first : second;
@@ -88018,7 +88700,7 @@ const validation$s = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -88027,7 +88709,7 @@ const validation$s = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -88041,7 +88723,7 @@ const validation$s = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -88055,7 +88737,7 @@ const validation$s = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -88070,7 +88752,7 @@ const validation$s = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -88079,7 +88761,7 @@ const validation$s = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -88088,7 +88770,7 @@ const validation$s = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -88097,7 +88779,7 @@ const validation$s = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -88106,11 +88788,11 @@ const validation$s = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `لطفاً آدرس اینترنتی معتبر وارد کنید.`;
+        return `لطفا یک URL معتبر وارد کنید.`;
         /* </i18n> */
     },
 };
@@ -88179,7 +88861,7 @@ const ui$r = {
 const validation$r = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -88188,7 +88870,7 @@ const validation$r = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -88202,7 +88884,7 @@ const validation$r = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -88211,7 +88893,7 @@ const validation$r = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -88220,7 +88902,7 @@ const validation$r = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -88229,7 +88911,7 @@ const validation$r = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -88243,7 +88925,7 @@ const validation$r = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -88258,7 +88940,7 @@ const validation$r = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -88267,7 +88949,7 @@ const validation$r = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -88281,7 +88963,7 @@ const validation$r = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -88290,12 +88972,12 @@ const validation$r = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Syötä validi sähköpostiosoite.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -88304,7 +88986,7 @@ const validation$r = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -88313,7 +88995,7 @@ const validation$r = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -88344,7 +89026,7 @@ const validation$r = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -88353,7 +89035,7 @@ const validation$r = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -88367,7 +89049,7 @@ const validation$r = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -88381,7 +89063,7 @@ const validation$r = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -88395,7 +89077,7 @@ const validation$r = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -88404,7 +89086,7 @@ const validation$r = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -88413,7 +89095,7 @@ const validation$r = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -88422,7 +89104,7 @@ const validation$r = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -88431,11 +89113,11 @@ const validation$r = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Syötä validi url-osoite.`;
+        return `Anna kelvollinen URL-osoite.`;
         /* </i18n> */
     },
 };
@@ -88504,7 +89186,7 @@ const ui$q = {
 const validation$q = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -88513,7 +89195,7 @@ const validation$q = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -88527,7 +89209,7 @@ const validation$q = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -88536,7 +89218,7 @@ const validation$q = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -88545,7 +89227,7 @@ const validation$q = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -88554,7 +89236,7 @@ const validation$q = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -88568,7 +89250,7 @@ const validation$q = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -88583,7 +89265,7 @@ const validation$q = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -88592,7 +89274,7 @@ const validation$q = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -88606,7 +89288,7 @@ const validation$q = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -88615,12 +89297,12 @@ const validation$q = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Veuillez saisir une adresse email valide.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -88629,7 +89311,7 @@ const validation$q = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -88638,7 +89320,7 @@ const validation$q = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -88669,7 +89351,7 @@ const validation$q = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -88678,7 +89360,7 @@ const validation$q = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -88692,7 +89374,7 @@ const validation$q = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -88706,7 +89388,7 @@ const validation$q = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -88720,7 +89402,7 @@ const validation$q = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -88729,7 +89411,7 @@ const validation$q = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -88738,7 +89420,7 @@ const validation$q = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -88747,7 +89429,7 @@ const validation$q = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -88756,11 +89438,11 @@ const validation$q = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Veuillez saisir une url valide.`;
+        return `Entrez une URL valide.`;
         /* </i18n> */
     },
 };
@@ -88813,7 +89495,7 @@ const ui$p = {
 const validation$p = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -88822,7 +89504,7 @@ const validation$p = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -88836,7 +89518,7 @@ const validation$p = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -88845,7 +89527,7 @@ const validation$p = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -88854,7 +89536,7 @@ const validation$p = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -88863,7 +89545,7 @@ const validation$p = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -88877,7 +89559,7 @@ const validation$p = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -88892,7 +89574,7 @@ const validation$p = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -88901,7 +89583,7 @@ const validation$p = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -88915,7 +89597,7 @@ const validation$p = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -88924,12 +89606,12 @@ const validation$p = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Folje in jildich e-mailadres yn.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -88938,7 +89620,7 @@ const validation$p = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -88947,7 +89629,7 @@ const validation$p = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -88978,7 +89660,7 @@ const validation$p = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -88987,7 +89669,7 @@ const validation$p = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -89001,7 +89683,7 @@ const validation$p = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -89015,7 +89697,7 @@ const validation$p = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -89029,7 +89711,7 @@ const validation$p = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -89038,7 +89720,7 @@ const validation$p = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -89047,7 +89729,7 @@ const validation$p = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -89056,7 +89738,7 @@ const validation$p = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -89065,7 +89747,7 @@ const validation$p = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
@@ -89138,7 +89820,7 @@ const ui$o = {
 const validation$o = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -89147,7 +89829,7 @@ const validation$o = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -89161,7 +89843,7 @@ const validation$o = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -89170,7 +89852,7 @@ const validation$o = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -89179,7 +89861,7 @@ const validation$o = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -89188,7 +89870,7 @@ const validation$o = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -89202,7 +89884,7 @@ const validation$o = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -89217,7 +89899,7 @@ const validation$o = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -89226,7 +89908,7 @@ const validation$o = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -89240,7 +89922,7 @@ const validation$o = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -89249,12 +89931,12 @@ const validation$o = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'אנא הקלד אימייל תקין.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -89263,7 +89945,7 @@ const validation$o = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -89272,7 +89954,7 @@ const validation$o = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -89303,7 +89985,7 @@ const validation$o = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -89312,7 +89994,7 @@ const validation$o = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -89326,7 +90008,7 @@ const validation$o = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -89340,7 +90022,7 @@ const validation$o = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -89354,7 +90036,7 @@ const validation$o = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -89363,7 +90045,7 @@ const validation$o = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -89372,7 +90054,7 @@ const validation$o = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -89381,7 +90063,7 @@ const validation$o = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -89390,11 +90072,11 @@ const validation$o = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `אנא הקלד קישור תקין.`;
+        return `הזן כתובת URL חוקית.`;
         /* </i18n> */
     },
 };
@@ -89455,7 +90137,7 @@ const ui$n = {
 const validation$n = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -89464,7 +90146,7 @@ const validation$n = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -89478,7 +90160,7 @@ const validation$n = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -89487,7 +90169,7 @@ const validation$n = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -89496,7 +90178,7 @@ const validation$n = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -89505,7 +90187,7 @@ const validation$n = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -89519,7 +90201,7 @@ const validation$n = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -89533,7 +90215,7 @@ const validation$n = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -89542,7 +90224,7 @@ const validation$n = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -89556,7 +90238,7 @@ const validation$n = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -89565,12 +90247,12 @@ const validation$n = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Molimo upišite ispravnu email adresu.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -89579,7 +90261,7 @@ const validation$n = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -89588,7 +90270,7 @@ const validation$n = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = first <= second ? first : second;
@@ -89619,7 +90301,7 @@ const validation$n = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -89628,7 +90310,7 @@ const validation$n = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -89642,7 +90324,7 @@ const validation$n = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -89656,7 +90338,7 @@ const validation$n = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -89670,7 +90352,7 @@ const validation$n = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -89679,7 +90361,7 @@ const validation$n = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -89688,7 +90370,7 @@ const validation$n = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -89697,7 +90379,7 @@ const validation$n = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -89706,11 +90388,11 @@ const validation$n = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Molimo unesite ispravnu poveznicu.`;
+        return `Unesite valjanu URL adresu.`;
         /* </i18n> */
     },
 };
@@ -89779,7 +90461,7 @@ const ui$m = {
 const validation$m = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -89788,7 +90470,7 @@ const validation$m = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -89802,7 +90484,7 @@ const validation$m = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -89811,7 +90493,7 @@ const validation$m = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -89820,7 +90502,7 @@ const validation$m = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -89829,7 +90511,7 @@ const validation$m = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -89843,7 +90525,7 @@ const validation$m = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -89858,7 +90540,7 @@ const validation$m = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -89867,7 +90549,7 @@ const validation$m = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -89881,7 +90563,7 @@ const validation$m = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -89890,12 +90572,12 @@ const validation$m = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Kérjük, érvényes email címet adjon meg.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -89904,7 +90586,7 @@ const validation$m = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -89913,7 +90595,7 @@ const validation$m = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -89944,7 +90626,7 @@ const validation$m = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -89953,7 +90635,7 @@ const validation$m = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -89967,7 +90649,7 @@ const validation$m = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -89981,7 +90663,7 @@ const validation$m = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -89995,7 +90677,7 @@ const validation$m = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -90004,7 +90686,7 @@ const validation$m = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -90013,7 +90695,7 @@ const validation$m = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -90022,7 +90704,7 @@ const validation$m = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -90031,11 +90713,11 @@ const validation$m = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Kérjük, érvényes URL-t adjon meg.`;
+        return `Kérjük, adjon meg egy érvényes URL-t.`;
         /* </i18n> */
     },
 };
@@ -90104,7 +90786,7 @@ const ui$l = {
 const validation$l = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -90113,7 +90795,7 @@ const validation$l = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -90127,7 +90809,7 @@ const validation$l = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -90136,7 +90818,7 @@ const validation$l = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -90145,7 +90827,7 @@ const validation$l = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -90154,7 +90836,7 @@ const validation$l = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -90168,7 +90850,7 @@ const validation$l = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -90183,7 +90865,7 @@ const validation$l = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -90192,7 +90874,7 @@ const validation$l = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -90206,7 +90888,7 @@ const validation$l = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -90215,12 +90897,12 @@ const validation$l = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Tolong tulis alamat email yang benar.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -90229,7 +90911,7 @@ const validation$l = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -90238,7 +90920,7 @@ const validation$l = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -90269,7 +90951,7 @@ const validation$l = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -90278,7 +90960,7 @@ const validation$l = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -90292,7 +90974,7 @@ const validation$l = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -90306,7 +90988,7 @@ const validation$l = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -90320,7 +91002,7 @@ const validation$l = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -90329,7 +91011,7 @@ const validation$l = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -90338,7 +91020,7 @@ const validation$l = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -90347,7 +91029,7 @@ const validation$l = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -90356,11 +91038,11 @@ const validation$l = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Mohon tuliskan url yang benar.`;
+        return `Harap masukkan URL yang valid.`;
         /* </i18n> */
     },
 };
@@ -90429,7 +91111,7 @@ const ui$k = {
 const validation$k = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -90438,7 +91120,7 @@ const validation$k = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -90452,7 +91134,7 @@ const validation$k = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -90461,7 +91143,7 @@ const validation$k = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -90470,7 +91152,7 @@ const validation$k = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -90479,7 +91161,7 @@ const validation$k = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -90493,7 +91175,7 @@ const validation$k = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -90508,7 +91190,7 @@ const validation$k = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -90517,7 +91199,7 @@ const validation$k = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -90531,7 +91213,7 @@ const validation$k = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -90540,12 +91222,12 @@ const validation$k = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Per favore inserire un indirizzo email valido.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -90554,7 +91236,7 @@ const validation$k = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -90563,7 +91245,7 @@ const validation$k = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -90594,7 +91276,7 @@ const validation$k = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -90603,7 +91285,7 @@ const validation$k = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -90617,7 +91299,7 @@ const validation$k = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -90631,7 +91313,7 @@ const validation$k = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -90645,7 +91327,7 @@ const validation$k = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -90654,7 +91336,7 @@ const validation$k = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -90663,7 +91345,7 @@ const validation$k = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -90672,7 +91354,7 @@ const validation$k = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -90681,11 +91363,11 @@ const validation$k = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Per favore utilizare un url valido.`;
+        return `Inserisci un URL valido.`;
         /* </i18n> */
     },
 };
@@ -90754,7 +91436,7 @@ const ui$j = {
 const validation$j = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -90763,7 +91445,7 @@ const validation$j = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -90777,7 +91459,7 @@ const validation$j = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -90786,7 +91468,7 @@ const validation$j = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -90795,7 +91477,7 @@ const validation$j = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -90804,7 +91486,7 @@ const validation$j = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -90818,7 +91500,7 @@ const validation$j = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -90833,7 +91515,7 @@ const validation$j = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -90842,7 +91524,7 @@ const validation$j = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -90856,7 +91538,7 @@ const validation$j = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -90865,12 +91547,12 @@ const validation$j = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: '有効なメールアドレスを入力してください。',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -90879,7 +91561,7 @@ const validation$j = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -90888,7 +91570,7 @@ const validation$j = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -90919,7 +91601,7 @@ const validation$j = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -90928,7 +91610,7 @@ const validation$j = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -90942,7 +91624,7 @@ const validation$j = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -90956,7 +91638,7 @@ const validation$j = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -90970,7 +91652,7 @@ const validation$j = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -90979,7 +91661,7 @@ const validation$j = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -90988,7 +91670,7 @@ const validation$j = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -90997,7 +91679,7 @@ const validation$j = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -91006,11 +91688,11 @@ const validation$j = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `有効なURLを含めてください。`;
+        return `有効な URL を入力してください。`;
         /* </i18n> */
     },
 };
@@ -91079,7 +91761,7 @@ const ui$i = {
 const validation$i = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -91088,7 +91770,7 @@ const validation$i = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -91102,7 +91784,7 @@ const validation$i = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -91111,7 +91793,7 @@ const validation$i = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -91120,7 +91802,7 @@ const validation$i = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -91129,7 +91811,7 @@ const validation$i = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -91143,7 +91825,7 @@ const validation$i = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -91158,7 +91840,7 @@ const validation$i = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -91167,7 +91849,7 @@ const validation$i = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -91181,7 +91863,7 @@ const validation$i = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -91190,12 +91872,12 @@ const validation$i = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Өтінеміз қолданыстағы электронды пошта адресін енгізіңіз.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -91204,7 +91886,7 @@ const validation$i = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -91213,7 +91895,7 @@ const validation$i = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -91244,7 +91926,7 @@ const validation$i = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -91253,7 +91935,7 @@ const validation$i = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -91267,7 +91949,7 @@ const validation$i = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -91281,7 +91963,7 @@ const validation$i = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -91295,7 +91977,7 @@ const validation$i = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -91304,7 +91986,7 @@ const validation$i = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -91313,7 +91995,7 @@ const validation$i = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -91322,7 +92004,7 @@ const validation$i = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -91331,11 +92013,11 @@ const validation$i = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Жарамды URL мекенжайын қосыңыз.`;
+        return `Жарамды URL мекенжайын енгізіңіз.`;
         /* </i18n> */
     },
 };
@@ -91404,7 +92086,7 @@ const ui$h = {
 const validation$h = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -91413,7 +92095,7 @@ const validation$h = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -91427,7 +92109,7 @@ const validation$h = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -91436,7 +92118,7 @@ const validation$h = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -91445,7 +92127,7 @@ const validation$h = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -91454,7 +92136,7 @@ const validation$h = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -91468,7 +92150,7 @@ const validation$h = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -91483,7 +92165,7 @@ const validation$h = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -91492,7 +92174,7 @@ const validation$h = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -91506,7 +92188,7 @@ const validation$h = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -91515,12 +92197,12 @@ const validation$h = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: '올바른 이메일 주소를 입력해주세요',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -91529,7 +92211,7 @@ const validation$h = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -91538,7 +92220,7 @@ const validation$h = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -91569,7 +92251,7 @@ const validation$h = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -91578,7 +92260,7 @@ const validation$h = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -91592,7 +92274,7 @@ const validation$h = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -91606,7 +92288,7 @@ const validation$h = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -91620,7 +92302,7 @@ const validation$h = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -91629,7 +92311,7 @@ const validation$h = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -91638,7 +92320,7 @@ const validation$h = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -91647,7 +92329,7 @@ const validation$h = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -91656,11 +92338,11 @@ const validation$h = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `올바른 URL을 입력해주세요`;
+        return `유효한 URL을 입력하십시오.`;
         /* </i18n> */
     },
 };
@@ -91729,7 +92411,7 @@ const ui$g = {
 const validation$g = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -91738,7 +92420,7 @@ const validation$g = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -91752,7 +92434,7 @@ const validation$g = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -91761,7 +92443,7 @@ const validation$g = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -91770,7 +92452,7 @@ const validation$g = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -91779,7 +92461,7 @@ const validation$g = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -91793,7 +92475,7 @@ const validation$g = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -91808,7 +92490,7 @@ const validation$g = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -91817,7 +92499,7 @@ const validation$g = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -91831,7 +92513,7 @@ const validation$g = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -91840,12 +92522,12 @@ const validation$g = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Vennligst oppgi en gyldig epostadresse.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -91854,7 +92536,7 @@ const validation$g = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -91863,7 +92545,7 @@ const validation$g = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -91894,7 +92576,7 @@ const validation$g = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -91903,7 +92585,7 @@ const validation$g = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -91917,7 +92599,7 @@ const validation$g = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -91931,7 +92613,7 @@ const validation$g = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -91945,7 +92627,7 @@ const validation$g = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -91954,7 +92636,7 @@ const validation$g = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -91963,7 +92645,7 @@ const validation$g = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -91972,7 +92654,7 @@ const validation$g = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -91981,7 +92663,7 @@ const validation$g = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
@@ -92054,7 +92736,7 @@ const ui$f = {
 const validation$f = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -92063,7 +92745,7 @@ const validation$f = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -92077,7 +92759,7 @@ const validation$f = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -92086,7 +92768,7 @@ const validation$f = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -92095,7 +92777,7 @@ const validation$f = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -92104,7 +92786,7 @@ const validation$f = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -92118,7 +92800,7 @@ const validation$f = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -92133,7 +92815,7 @@ const validation$f = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -92142,7 +92824,7 @@ const validation$f = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -92156,7 +92838,7 @@ const validation$f = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -92165,12 +92847,12 @@ const validation$f = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Vul een geldig e-mailadres in.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -92179,7 +92861,7 @@ const validation$f = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -92188,7 +92870,7 @@ const validation$f = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -92219,7 +92901,7 @@ const validation$f = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -92228,7 +92910,7 @@ const validation$f = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -92242,7 +92924,7 @@ const validation$f = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -92256,7 +92938,7 @@ const validation$f = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -92270,7 +92952,7 @@ const validation$f = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -92279,7 +92961,7 @@ const validation$f = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -92288,7 +92970,7 @@ const validation$f = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -92297,7 +92979,7 @@ const validation$f = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -92306,11 +92988,11 @@ const validation$f = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Vul een geldige url in.`;
+        return `Voer een geldige URL in.`;
         /* </i18n> */
     },
 };
@@ -92379,7 +93061,7 @@ const ui$e = {
 const validation$e = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -92388,7 +93070,7 @@ const validation$e = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -92402,7 +93084,7 @@ const validation$e = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -92411,7 +93093,7 @@ const validation$e = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -92420,7 +93102,7 @@ const validation$e = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -92429,7 +93111,7 @@ const validation$e = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -92443,7 +93125,7 @@ const validation$e = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -92458,7 +93140,7 @@ const validation$e = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -92467,7 +93149,7 @@ const validation$e = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -92481,7 +93163,7 @@ const validation$e = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -92490,12 +93172,12 @@ const validation$e = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Proszę wpisać poprawny adres email.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -92504,7 +93186,7 @@ const validation$e = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -92513,7 +93195,7 @@ const validation$e = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -92544,7 +93226,7 @@ const validation$e = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -92553,7 +93235,7 @@ const validation$e = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -92567,7 +93249,7 @@ const validation$e = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -92581,7 +93263,7 @@ const validation$e = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -92595,7 +93277,7 @@ const validation$e = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -92604,7 +93286,7 @@ const validation$e = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -92613,7 +93295,7 @@ const validation$e = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -92622,7 +93304,7 @@ const validation$e = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -92631,11 +93313,11 @@ const validation$e = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Proszę podać prawidłowy adres url.`;
+        return `Wprowadź prawidłowy adres URL.`;
         /* </i18n> */
     },
 };
@@ -92659,7 +93341,7 @@ const ui$d = {
     /**
      * Shown on buttons for adding new items.
      */
-    add: 'Adicionar',
+    add: 'Incluir',
     /**
      * Shown when a button to remove items is visible.
      */
@@ -92667,11 +93349,11 @@ const ui$d = {
     /**
      * Shown when there are multiple items to remove at the same time.
      */
-    removeAll: 'Deletar tudo',
+    removeAll: 'Remover todos',
     /**
      * Shown when all fields are not filled out correctly.
      */
-    incomplete: 'Desculpe, nem todos os campos foram preenchidos corretamente.',
+    incomplete: 'Desculpe, alguns campos não foram preenchidos corretamente.',
     /**
      * Shown in a button inside a form to submit the form.
      */
@@ -92679,15 +93361,15 @@ const ui$d = {
     /**
      * Shown when no files are selected.
      */
-    noFiles: 'Nenhum arquivo',
+    noFiles: 'Nenhum arquivo selecionado.',
     /**
      * Shown on buttons that move fields up in a list.
      */
-    moveUp: 'Mova-se para cima',
+    moveUp: 'Mover para cima',
     /**
      * Shown on buttons that move fields down in a list.
      */
-    moveDown: 'Mova-se para baixo',
+    moveDown: 'Mover para baixo',
     /**
      * Shown when something is actively loading.
      */
@@ -92695,7 +93377,7 @@ const ui$d = {
     /**
      * Shown when there is more to load.
      */
-    loadMore: 'Carregue mais',
+    loadMore: 'Carregar mais',
 };
 /**
  * These are all the possible strings that pertain to validation messages.
@@ -92704,7 +93386,7 @@ const ui$d = {
 const validation$d = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -92713,113 +93395,114 @@ const validation$d = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
             /* <i18n case="Shown when the user-provided date is not after the date supplied to the rule."> */
-            return `${sentence(name)} deve ser posterior a ${date(args[0])}.`;
+            return `${sentence(name)} precisa ser depois de ${date(args[0])}.`;
             /* </i18n> */
         }
         /* <i18n case="Shown when the user-provided date is not after today's date, since no date was supplied to the rule."> */
-        return `${sentence(name)} deve ser no futuro.`;
+        return `${sentence(name)} precisa ser no futuro.`;
         /* </i18n> */
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
-        return `${sentence(name)} só pode conter caracteres do alfabeto.`;
+        return `${sentence(name)} precisa conter apenas letras.`;
         /* </i18n> */
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
-        return `${sentence(name)} só pode ter letras e números.`;
+        return `${sentence(name)} pode conter apenas letras e números.`;
         /* </i18n> */
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
-        return `${sentence(name)} só podem conter letras e espaços.`;
+        return `${sentence(name)} pode conter apenas números e espaços.`;
         /* </i18n> */
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
             /* <i18n case="Shown when the user-provided date is not before the date supplied to the rule."> */
-            return `${sentence(name)} deve ser anterior a ${date(args[0])}.`;
+            return `${sentence(name)} precisa ser antes de ${date(args[0])}.`;
             /* </i18n> */
         }
         /* <i18n case="Shown when the user-provided date is not before today's date, since no date was supplied to the rule."> */
-        return `${sentence(name)} deve ser anterior a data atual.`;
+        return `${sentence(name)} precisa ser no passado.`;
         /* </i18n> */
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
             /* <i18n case="Shown when any of the arguments supplied to the rule were not a number."> */
-            return `O campo foi configurado incorretamente e não pode ser enviado.`;
+            return `Este campo não foi configurado corretamente e não pode ser submetido.`;
             /* </i18n> */
         }
+        const [a, b] = order(args[0], args[1]);
         /* <i18n case="Shown when the user-provided value is not between two numbers."> */
-        return `${sentence(name)} deve estar entre ${args[0]} e ${args[1]}.`;
+        return `${sentence(name)} precisa ser entre ${a} e ${b}.`;
         /* </i18n> */
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
-        return `${sentence(name)} não confere.`;
+        return `${sentence(name)} não é igual.`;
         /* </i18n> */
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
             /* <i18n case="Shown when the user-provided date does not satisfy the date format supplied to the rule."> */
-            return `${sentence(name)} não é uma data válida, por favor use o formato ${args[0]}`;
+            return `${sentence(name)} não é uma data válida, por favor use este formato ${args[0]}`;
             /* </i18n> */
         }
         /* <i18n case="Shown when no date argument was supplied to the rule."> */
-        return 'O campo foi configurado incorretamente e não pode ser enviado.';
+        return 'Este campo não foi configurado corretamente e não pode ser submetido.';
         /* </i18n> */
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
-        return `${sentence(name)} deve ser entre ${date(args[0])} e ${date(args[1])}`;
+        return `${sentence(name)} precisa ser entre ${date(args[0])} e ${date(args[1])}`;
         /* </i18n> */
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
-    email: 'Por favor informe um e-mail válido.',
+    email: 'Por favor, insira um endereço de email válido.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -92828,7 +93511,7 @@ const validation$d = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -92837,38 +93520,38 @@ const validation$d = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = first <= second ? first : second;
         const max = second >= first ? second : first;
         if (min == 1 && max === Infinity) {
             /* <i18n case="Shown when the length of the user-provided value is not at least one character."> */
-            return `${sentence(name)} deve ter ao menos um caractere.`;
+            return `${sentence(name)} precisa conter ao menos um caractere.`;
             /* </i18n> */
         }
         if (min == 0 && max) {
             /* <i18n case="Shown when first argument supplied to the rule is 0, and the user-provided value is longer than the max (the 2nd argument) supplied to the rule."> */
-            return `${sentence(name)} não pode ter mais que ${max} caracteres.`;
+            return `${sentence(name)} precisa ser menor ou igual a ${max} caracteres.`;
             /* </i18n> */
         }
         if (min === max) {
             /* <i18n case="Shown when first and second argument supplied to the rule are the same, and the user-provided value is not any of the arguments supplied to the rule."> */
-            return `${sentence(name)} deve ter ${max} caracteres.`;
+            return `${sentence(name)} precisa conter ${max} caracteres.`;
             /* </i18n> */
         }
         if (min && max === Infinity) {
             /* <i18n case="Shown when the length of the user-provided value is less than the minimum supplied to the rule and there is no maximum supplied to the rule."> */
-            return `${sentence(name)} deve ter no mínimo ${min} caracteres.`;
+            return `${sentence(name)} precisa ser maior ou igual a ${min} caracteres.`;
             /* </i18n> */
         }
         /* <i18n case="Shown when the length of the user-provided value is between the two lengths supplied to the rule."> */
-        return `${sentence(name)} deve ter entre ${min} e ${max} caracteres.`;
+        return `${sentence(name)} precisa ter entre ${min} e ${max} caracteres.`;
         /* </i18n> */
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -92877,67 +93560,67 @@ const validation$d = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
             /* <i18n case="Shown when the length of the array of user-provided values is longer than the max supplied to the rule."> */
-            return `Não pode ter mais que ${args[0]} ${name}.`;
+            return `Não pode ter mais de ${args[0]} ${name}.`;
             /* </i18n> */
         }
         /* <i18n case="Shown when the user-provided value is greater than the maximum number supplied to the rule."> */
-        return `${sentence(name)} deve ser igual ou menor que ${args[0]}.`;
+        return `${sentence(name)} precisa ser menor ou igual a ${args[0]}.`;
         /* </i18n> */
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
             /* <i18n case="Shown when no file formats were supplied to the rule."> */
-            return 'Nenhum formato de arquivo permitido.';
+            return 'Não há formatos de arquivos permitidos.';
             /* </i18n> */
         }
         /* <i18n case="Shown when the mime type of user-provided file does not match any mime types supplied to the rule."> */
-        return `${sentence(name)} deve ser do tipo: ${args[0]}`;
+        return `${sentence(name)} precisa ser do tipo: ${args[0]}`;
         /* </i18n> */
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
             /* <i18n case="Shown when the length of the array of user-provided values is shorter than the min supplied to the rule."> */
-            return `Não pode ter menos que ${args[0]} ${name}.`;
+            return `Não pode ter menos de ${args[0]} ${name}.`;
             /* </i18n> */
         }
         /* <i18n case="Shown when the user-provided value is less than the minimum number supplied to the rule."> */
-        return `${sentence(name)} deve ter pelo menos ${args[0]}.`;
+        return `${sentence(name)} precisa ser pelo menos ${args[0]}.`;
         /* </i18n> */
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
-        return `“${value}” não permite ${name}.`;
+        return `“${value}” não é um(a) ${name} permitido(a).`;
         /* </i18n> */
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
-        return `${sentence(name)} deve ser um número.`;
+        return `${sentence(name)} precisa ser um número.`;
         /* </i18n> */
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -92946,7 +93629,7 @@ const validation$d = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -92955,11 +93638,11 @@ const validation$d = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Por favor informe um url válido.`;
+        return `Por favor, insira uma url válida.`;
         /* </i18n> */
     },
 };
@@ -93028,7 +93711,7 @@ const ui$c = {
 const validation$c = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -93037,7 +93720,7 @@ const validation$c = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -93051,7 +93734,7 @@ const validation$c = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -93060,7 +93743,7 @@ const validation$c = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -93069,7 +93752,7 @@ const validation$c = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -93078,7 +93761,7 @@ const validation$c = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -93092,7 +93775,7 @@ const validation$c = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -93107,7 +93790,7 @@ const validation$c = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -93116,7 +93799,7 @@ const validation$c = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -93130,7 +93813,7 @@ const validation$c = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -93139,12 +93822,12 @@ const validation$c = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Te rog folosește o adresă de email validă.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -93153,7 +93836,7 @@ const validation$c = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -93162,7 +93845,7 @@ const validation$c = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -93193,7 +93876,7 @@ const validation$c = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -93202,7 +93885,7 @@ const validation$c = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -93216,7 +93899,7 @@ const validation$c = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -93230,7 +93913,7 @@ const validation$c = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -93244,7 +93927,7 @@ const validation$c = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -93253,7 +93936,7 @@ const validation$c = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -93262,7 +93945,7 @@ const validation$c = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -93271,7 +93954,7 @@ const validation$c = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -93280,11 +93963,11 @@ const validation$c = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Te rog include o adresă web validă`;
+        return `Introduceți o adresă URL validă.`;
         /* </i18n> */
     },
 };
@@ -93353,7 +94036,7 @@ const ui$b = {
 const validation$b = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -93362,7 +94045,7 @@ const validation$b = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -93376,7 +94059,7 @@ const validation$b = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -93385,7 +94068,7 @@ const validation$b = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -93394,7 +94077,7 @@ const validation$b = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -93403,7 +94086,7 @@ const validation$b = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -93417,7 +94100,7 @@ const validation$b = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -93432,7 +94115,7 @@ const validation$b = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -93441,7 +94124,7 @@ const validation$b = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -93455,7 +94138,7 @@ const validation$b = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -93464,12 +94147,12 @@ const validation$b = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Пожалуйста, введите действительный электронный адрес.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -93478,7 +94161,7 @@ const validation$b = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -93487,7 +94170,7 @@ const validation$b = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -93518,7 +94201,7 @@ const validation$b = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -93527,7 +94210,7 @@ const validation$b = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -93541,7 +94224,7 @@ const validation$b = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -93555,7 +94238,7 @@ const validation$b = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -93569,7 +94252,7 @@ const validation$b = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -93578,7 +94261,7 @@ const validation$b = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -93587,7 +94270,7 @@ const validation$b = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -93596,7 +94279,7 @@ const validation$b = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -93605,11 +94288,11 @@ const validation$b = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Пожалуйста, введите действительный URL адрес.`;
+        return `Пожалуйста, введите действительный URL-адрес.`;
         /* </i18n> */
     },
 };
@@ -93678,7 +94361,7 @@ const ui$a = {
 const validation$a = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -93687,7 +94370,7 @@ const validation$a = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -93701,7 +94384,7 @@ const validation$a = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -93710,7 +94393,7 @@ const validation$a = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -93719,7 +94402,7 @@ const validation$a = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -93728,7 +94411,7 @@ const validation$a = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -93742,7 +94425,7 @@ const validation$a = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -93757,7 +94440,7 @@ const validation$a = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -93766,7 +94449,7 @@ const validation$a = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -93780,7 +94463,7 @@ const validation$a = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -93789,12 +94472,12 @@ const validation$a = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Prosím, zadajte platnú emailovú adresu.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -93803,7 +94486,7 @@ const validation$a = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -93812,7 +94495,7 @@ const validation$a = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -93843,7 +94526,7 @@ const validation$a = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -93852,7 +94535,7 @@ const validation$a = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -93866,7 +94549,7 @@ const validation$a = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -93880,7 +94563,7 @@ const validation$a = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -93894,7 +94577,7 @@ const validation$a = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -93903,7 +94586,7 @@ const validation$a = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -93912,7 +94595,7 @@ const validation$a = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -93921,7 +94604,7 @@ const validation$a = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -93930,11 +94613,11 @@ const validation$a = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Zadajte, prosím, platnú URL adresu.`;
+        return `Zadajte platnú adresu URL.`;
         /* </i18n> */
     },
 };
@@ -94003,7 +94686,7 @@ const ui$9 = {
 const validation$9 = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -94012,7 +94695,7 @@ const validation$9 = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -94026,7 +94709,7 @@ const validation$9 = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -94035,7 +94718,7 @@ const validation$9 = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -94044,7 +94727,7 @@ const validation$9 = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -94053,7 +94736,7 @@ const validation$9 = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -94067,7 +94750,7 @@ const validation$9 = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -94082,7 +94765,7 @@ const validation$9 = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -94091,7 +94774,7 @@ const validation$9 = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -94105,7 +94788,7 @@ const validation$9 = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -94114,12 +94797,12 @@ const validation$9 = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Vnesite veljaven e-poštni naslov.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -94128,7 +94811,7 @@ const validation$9 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -94137,7 +94820,7 @@ const validation$9 = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -94168,7 +94851,7 @@ const validation$9 = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -94177,7 +94860,7 @@ const validation$9 = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -94191,7 +94874,7 @@ const validation$9 = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -94205,7 +94888,7 @@ const validation$9 = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -94219,7 +94902,7 @@ const validation$9 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -94228,7 +94911,7 @@ const validation$9 = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -94237,7 +94920,7 @@ const validation$9 = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -94246,7 +94929,7 @@ const validation$9 = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -94255,11 +94938,11 @@ const validation$9 = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Vnesite veljavno povezavo.`;
+        return `Vnesite veljaven URL.`;
         /* </i18n> */
     },
 };
@@ -94328,7 +95011,7 @@ const ui$8 = {
 const validation$8 = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -94337,7 +95020,7 @@ const validation$8 = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -94351,7 +95034,7 @@ const validation$8 = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -94360,7 +95043,7 @@ const validation$8 = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -94369,7 +95052,7 @@ const validation$8 = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -94378,7 +95061,7 @@ const validation$8 = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -94392,7 +95075,7 @@ const validation$8 = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -94407,7 +95090,7 @@ const validation$8 = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -94416,7 +95099,7 @@ const validation$8 = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -94430,7 +95113,7 @@ const validation$8 = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -94439,12 +95122,12 @@ const validation$8 = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Unesite ispravnu e-mail adresu.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -94453,7 +95136,7 @@ const validation$8 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -94462,7 +95145,7 @@ const validation$8 = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -94493,7 +95176,7 @@ const validation$8 = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -94502,7 +95185,7 @@ const validation$8 = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -94516,7 +95199,7 @@ const validation$8 = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -94530,7 +95213,7 @@ const validation$8 = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -94544,7 +95227,7 @@ const validation$8 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -94553,7 +95236,7 @@ const validation$8 = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -94562,7 +95245,7 @@ const validation$8 = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -94571,7 +95254,7 @@ const validation$8 = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -94580,11 +95263,11 @@ const validation$8 = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Molimo unesite važeći URL.`;
+        return `Unesite važeću URL adresu.`;
         /* </i18n> */
     },
 };
@@ -94649,7 +95332,7 @@ const ui$7 = {
 const validation$7 = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -94658,7 +95341,7 @@ const validation$7 = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -94672,7 +95355,7 @@ const validation$7 = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -94681,7 +95364,7 @@ const validation$7 = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -94690,7 +95373,7 @@ const validation$7 = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -94699,7 +95382,7 @@ const validation$7 = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -94713,7 +95396,7 @@ const validation$7 = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -94728,7 +95411,7 @@ const validation$7 = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -94737,7 +95420,7 @@ const validation$7 = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -94751,7 +95434,7 @@ const validation$7 = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -94760,12 +95443,12 @@ const validation$7 = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Var god fyll i en giltig e-postadress.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -94774,7 +95457,7 @@ const validation$7 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -94783,7 +95466,7 @@ const validation$7 = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -94814,7 +95497,7 @@ const validation$7 = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -94823,7 +95506,7 @@ const validation$7 = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -94837,7 +95520,7 @@ const validation$7 = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -94851,7 +95534,7 @@ const validation$7 = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -94865,7 +95548,7 @@ const validation$7 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -94874,7 +95557,7 @@ const validation$7 = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -94883,7 +95566,7 @@ const validation$7 = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -94892,7 +95575,7 @@ const validation$7 = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -94901,11 +95584,11 @@ const validation$7 = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Var god fyll i en giltig länk.`;
+        return `Ange en giltig URL.`;
         /* </i18n> */
     },
 };
@@ -94958,7 +95641,7 @@ const ui$6 = {
 const validation$6 = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -94967,7 +95650,7 @@ const validation$6 = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -94981,7 +95664,7 @@ const validation$6 = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -94990,7 +95673,7 @@ const validation$6 = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -94999,7 +95682,7 @@ const validation$6 = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -95008,7 +95691,7 @@ const validation$6 = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -95022,7 +95705,7 @@ const validation$6 = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -95037,7 +95720,7 @@ const validation$6 = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -95046,7 +95729,7 @@ const validation$6 = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -95060,7 +95743,7 @@ const validation$6 = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -95069,12 +95752,12 @@ const validation$6 = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Лутфан нишонаи имейли амалкунандаро ворид намоед.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -95083,7 +95766,7 @@ const validation$6 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -95092,7 +95775,7 @@ const validation$6 = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -95123,7 +95806,7 @@ const validation$6 = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -95132,7 +95815,7 @@ const validation$6 = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -95146,7 +95829,7 @@ const validation$6 = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -95160,7 +95843,7 @@ const validation$6 = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -95174,7 +95857,7 @@ const validation$6 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -95183,7 +95866,7 @@ const validation$6 = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -95192,7 +95875,7 @@ const validation$6 = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -95201,7 +95884,7 @@ const validation$6 = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -95210,7 +95893,7 @@ const validation$6 = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
@@ -95283,7 +95966,7 @@ const ui$5 = {
 const validation$5 = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -95292,7 +95975,7 @@ const validation$5 = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -95306,7 +95989,7 @@ const validation$5 = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -95315,7 +95998,7 @@ const validation$5 = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -95324,7 +96007,7 @@ const validation$5 = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -95333,7 +96016,7 @@ const validation$5 = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -95347,7 +96030,7 @@ const validation$5 = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -95362,7 +96045,7 @@ const validation$5 = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -95371,7 +96054,7 @@ const validation$5 = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -95385,7 +96068,7 @@ const validation$5 = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -95394,12 +96077,12 @@ const validation$5 = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'กรุณากรอกที่อยู่อีเมลทีถูกต้อง',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -95408,7 +96091,7 @@ const validation$5 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -95417,7 +96100,7 @@ const validation$5 = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -95448,7 +96131,7 @@ const validation$5 = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -95457,7 +96140,7 @@ const validation$5 = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -95471,7 +96154,7 @@ const validation$5 = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -95485,7 +96168,7 @@ const validation$5 = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -95499,7 +96182,7 @@ const validation$5 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -95508,7 +96191,7 @@ const validation$5 = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -95517,7 +96200,7 @@ const validation$5 = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -95526,7 +96209,7 @@ const validation$5 = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -95535,7 +96218,7 @@ const validation$5 = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
@@ -95608,7 +96291,7 @@ const ui$4 = {
 const validation$4 = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -95617,7 +96300,7 @@ const validation$4 = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -95631,7 +96314,7 @@ const validation$4 = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -95640,7 +96323,7 @@ const validation$4 = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -95649,7 +96332,7 @@ const validation$4 = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -95658,7 +96341,7 @@ const validation$4 = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -95672,7 +96355,7 @@ const validation$4 = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -95687,7 +96370,7 @@ const validation$4 = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -95696,7 +96379,7 @@ const validation$4 = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -95710,7 +96393,7 @@ const validation$4 = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -95719,12 +96402,12 @@ const validation$4 = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Lütfen geçerli bir e-mail adresi girin.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -95733,7 +96416,7 @@ const validation$4 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -95742,7 +96425,7 @@ const validation$4 = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -95773,7 +96456,7 @@ const validation$4 = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -95782,7 +96465,7 @@ const validation$4 = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -95796,7 +96479,7 @@ const validation$4 = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -95810,7 +96493,7 @@ const validation$4 = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -95824,7 +96507,7 @@ const validation$4 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -95833,7 +96516,7 @@ const validation$4 = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -95842,7 +96525,7 @@ const validation$4 = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -95851,7 +96534,7 @@ const validation$4 = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -95860,11 +96543,11 @@ const validation$4 = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Lütfen geçerli bir url dahil edin.`;
+        return `Lütfen geçerli bir URL girin.`;
         /* </i18n> */
     },
 };
@@ -95933,7 +96616,7 @@ const ui$3 = {
 const validation$3 = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -95942,7 +96625,7 @@ const validation$3 = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -95956,7 +96639,7 @@ const validation$3 = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -95965,7 +96648,7 @@ const validation$3 = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -95974,7 +96657,7 @@ const validation$3 = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -95983,7 +96666,7 @@ const validation$3 = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -95997,7 +96680,7 @@ const validation$3 = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -96012,7 +96695,7 @@ const validation$3 = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -96021,7 +96704,7 @@ const validation$3 = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -96035,7 +96718,7 @@ const validation$3 = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -96044,12 +96727,12 @@ const validation$3 = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Будь ласка, введіть дійсну електронну адресу.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -96058,7 +96741,7 @@ const validation$3 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -96067,7 +96750,7 @@ const validation$3 = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -96098,7 +96781,7 @@ const validation$3 = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -96107,7 +96790,7 @@ const validation$3 = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -96121,7 +96804,7 @@ const validation$3 = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -96135,7 +96818,7 @@ const validation$3 = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -96149,7 +96832,7 @@ const validation$3 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -96158,7 +96841,7 @@ const validation$3 = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -96167,7 +96850,7 @@ const validation$3 = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -96176,7 +96859,7 @@ const validation$3 = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -96185,11 +96868,11 @@ const validation$3 = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Будь ласка, введіть дійсну URL-адресу.`;
+        return `Будь ласка, введіть коректну URL-адресу.`;
         /* </i18n> */
     },
 };
@@ -96258,7 +96941,7 @@ const ui$2 = {
 const validation$2 = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -96267,7 +96950,7 @@ const validation$2 = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -96281,7 +96964,7 @@ const validation$2 = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -96290,7 +96973,7 @@ const validation$2 = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -96299,7 +96982,7 @@ const validation$2 = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -96308,7 +96991,7 @@ const validation$2 = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -96322,7 +97005,7 @@ const validation$2 = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -96337,7 +97020,7 @@ const validation$2 = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -96346,7 +97029,7 @@ const validation$2 = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -96360,7 +97043,7 @@ const validation$2 = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -96369,12 +97052,12 @@ const validation$2 = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Iltimos amaldagi e-mail manzilingizni kiriting.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -96383,7 +97066,7 @@ const validation$2 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -96392,7 +97075,7 @@ const validation$2 = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -96423,7 +97106,7 @@ const validation$2 = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -96432,7 +97115,7 @@ const validation$2 = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -96446,7 +97129,7 @@ const validation$2 = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -96460,7 +97143,7 @@ const validation$2 = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -96474,7 +97157,7 @@ const validation$2 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -96483,7 +97166,7 @@ const validation$2 = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -96492,7 +97175,7 @@ const validation$2 = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -96501,7 +97184,7 @@ const validation$2 = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -96510,11 +97193,11 @@ const validation$2 = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `URL emas`;
+        return `Iltimos, tegishli URL manzilini kiriting.`;
         /* </i18n> */
     },
 };
@@ -96583,7 +97266,7 @@ const ui$1 = {
 const validation$1 = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
@@ -96592,7 +97275,7 @@ const validation$1 = {
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -96606,7 +97289,7 @@ const validation$1 = {
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
@@ -96615,7 +97298,7 @@ const validation$1 = {
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
@@ -96624,7 +97307,7 @@ const validation$1 = {
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
@@ -96633,7 +97316,7 @@ const validation$1 = {
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -96647,7 +97330,7 @@ const validation$1 = {
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
@@ -96662,7 +97345,7 @@ const validation$1 = {
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
@@ -96671,7 +97354,7 @@ const validation$1 = {
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
@@ -96685,7 +97368,7 @@ const validation$1 = {
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -96694,12 +97377,12 @@ const validation$1 = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
     email: 'Hãy nhập một địa chỉ email hợp lệ.',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
@@ -96708,7 +97391,7 @@ const validation$1 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
@@ -96717,7 +97400,7 @@ const validation$1 = {
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
         const min = Number(first) <= Number(second) ? first : second;
@@ -96748,7 +97431,7 @@ const validation$1 = {
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
@@ -96757,7 +97440,7 @@ const validation$1 = {
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -96771,7 +97454,7 @@ const validation$1 = {
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
@@ -96785,7 +97468,7 @@ const validation$1 = {
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
@@ -96799,7 +97482,7 @@ const validation$1 = {
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
@@ -96808,7 +97491,7 @@ const validation$1 = {
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
@@ -96817,7 +97500,7 @@ const validation$1 = {
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
@@ -96826,7 +97509,7 @@ const validation$1 = {
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
@@ -96835,11 +97518,11 @@ const validation$1 = {
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `Hãy nhập một URL hợp lệ.`;
+        return `Vui lòng nhập một URL hợp lệ.`;
         /* </i18n> */
     },
 };
@@ -96861,7 +97544,7 @@ var vi = /*#__PURE__*/Object.freeze({
  */
 const ui = {
     /**
-     * Shown on buttons for adding new items.
+     * Shown on a button for adding additional items.
      */
     add: '添加',
     /**
@@ -96869,25 +97552,33 @@ const ui = {
      */
     remove: '移除',
     /**
+     * Shown when there are multiple items to remove at the same time.
+     */
+    removeAll: '移除全部',
+    /**
      * Shown when all fields are not filled out correctly.
      */
-    incomplete: '抱歉，有些字段未被正确填写',
+    incomplete: '抱歉，部分字段未被正确填写。',
     /**
      * Shown in a button inside a form to submit the form.
      */
     submit: '提交',
     /**
+     * Shown when no files are selected.
+     */
+    noFiles: '未选择文件',
+    /**
      * Shown on buttons that move fields up in a list.
      */
-    moveUp: '向上移动',
+    moveUp: '上移',
     /**
      * Shown on buttons that move fields down in a list.
      */
-    moveDown: '向下移动',
+    moveDown: '下移',
     /**
      * Shown when something is actively loading.
      */
-    isLoading: '正在加载...',
+    isLoading: '加载中...',
     /**
      * Shown when there is more to load.
      */
@@ -96900,108 +97591,109 @@ const ui = {
 const validation = {
     /**
      * The value is not an accepted value.
-     * @see {@link https://docs.formkit.com/essentials/validation#accepted}
+     * @see {@link https://formkit.com/essentials/validation#accepted}
      */
     accepted({ name }) {
         /* <i18n case="Shown when the user-provided value is not a valid 'accepted' value."> */
-        return `请接受${name}`;
+        return `请接受${name}。`;
         /* </i18n> */
     },
     /**
      * The date is not after
-     * @see {@link https://docs.formkit.com/essentials/validation#date-after}
+     * @see {@link https://formkit.com/essentials/validation#date-after}
      */
     date_after({ name, args }) {
         if (Array.isArray(args) && args.length) {
             /* <i18n case="Shown when the user-provided date is not after the date supplied to the rule."> */
-            return `${sentence(name)}必须晚于${date(args[0])}`;
+            return `${sentence(name)}必须晚于${date(args[0])}。`;
             /* </i18n> */
         }
         /* <i18n case="Shown when the user-provided date is not after today's date, since no date was supplied to the rule."> */
-        return `${sentence(name)}必须是未来的日期`;
+        return `${sentence(name)}必须是未来的日期。`;
         /* </i18n> */
     },
     /**
      * The value is not a letter.
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha}
+     * @see {@link https://formkit.com/essentials/validation#alpha}
      */
     alpha({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical characters."> */
-        return `${sentence(name)}仅能包含字母字符`;
+        return `${sentence(name)}只能包含英文字母。`;
         /* </i18n> */
     },
     /**
      * The value is not alphanumeric
-     * @see {@link https://docs.formkit.com/essentials/validation#alphanumeric}
+     * @see {@link https://formkit.com/essentials/validation#alphanumeric}
      */
     alphanumeric({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphanumeric characters."> */
-        return `${sentence(name)}仅能包含字母和数字`;
+        return `${sentence(name)}只能包含字母和数字。`;
         /* </i18n> */
     },
     /**
      * The value is not letter and/or spaces
-     * @see {@link https://docs.formkit.com/essentials/validation#alpha-spaces}
+     * @see {@link https://formkit.com/essentials/validation#alpha-spaces}
      */
     alpha_spaces({ name }) {
         /* <i18n case="Shown when the user-provided value contains non-alphabetical and non-space characters."> */
-        return `${sentence(name)}只能包含字母和空格`;
+        return `${sentence(name)}只能包含字母和空格。`;
         /* </i18n> */
     },
     /**
      * The date is not before
-     * @see {@link https://docs.formkit.com/essentials/validation#date-before}
+     * @see {@link https://formkit.com/essentials/validation#date-before}
      */
     date_before({ name, args }) {
         if (Array.isArray(args) && args.length) {
             /* <i18n case="Shown when the user-provided date is not before the date supplied to the rule."> */
-            return `${sentence(name)}必须早于${date(args[0])}`;
+            return `${sentence(name)}必须早于${date(args[0])}。`;
             /* </i18n> */
         }
         /* <i18n case="Shown when the user-provided date is not before today's date, since no date was supplied to the rule."> */
-        return `${sentence(name)}必须是过去的日期`;
+        return `${sentence(name)}必须是过去的日期。`;
         /* </i18n> */
     },
     /**
      * The value is not between two numbers
-     * @see {@link https://docs.formkit.com/essentials/validation#between}
+     * @see {@link https://formkit.com/essentials/validation#between}
      */
     between({ name, args }) {
         if (isNaN(args[0]) || isNaN(args[1])) {
             /* <i18n case="Shown when any of the arguments supplied to the rule were not a number."> */
-            return `该字段未被正确设置而无法被提交`;
+            return `该字段未被正确设置而无法提交。`;
             /* </i18n> */
         }
+        const [a, b] = order(args[0], args[1]);
         /* <i18n case="Shown when the user-provided value is not between two numbers."> */
-        return `${sentence(name)}必须在${args[0]}和${args[1]}之间`;
+        return `${sentence(name)}必须在${a}和${b}之间。`;
         /* </i18n> */
     },
     /**
      * The confirmation field does not match
-     * @see {@link https://docs.formkit.com/essentials/validation#confirm}
+     * @see {@link https://formkit.com/essentials/validation#confirm}
      */
     confirm({ name }) {
         /* <i18n case="Shown when the user-provided value does not equal the value of the matched input."> */
-        return `${sentence(name)}不匹配`;
+        return `${sentence(name)}不匹配。`;
         /* </i18n> */
     },
     /**
      * The value is not a valid date
-     * @see {@link https://docs.formkit.com/essentials/validation#date-format}
+     * @see {@link https://formkit.com/essentials/validation#date-format}
      */
     date_format({ name, args }) {
         if (Array.isArray(args) && args.length) {
             /* <i18n case="Shown when the user-provided date does not satisfy the date format supplied to the rule."> */
-            return `${sentence(name)}不是一个合法日期，请使用此格式${args[0]}`;
+            return `${sentence(name)}不是合法日期，请使用 ${args[0]} 格式`;
             /* </i18n> */
         }
         /* <i18n case="Shown when no date argument was supplied to the rule."> */
-        return '该字段未被正确设置而无法被提交';
+        return '该字段未被正确设置而无法提交';
         /* </i18n> */
     },
     /**
      * Is not within expected date range
-     * @see {@link https://docs.formkit.com/essentials/validation#date-between}
+     * @see {@link https://formkit.com/essentials/validation#date-between}
      */
     date_between({ name, args }) {
         /* <i18n case="Shown when the user-provided date is not between the start and end dates supplied to the rule. "> */
@@ -97010,152 +97702,152 @@ const validation = {
     },
     /**
      * Shown when the user-provided value is not a valid email address.
-     * @see {@link https://docs.formkit.com/essentials/validation#email}
+     * @see {@link https://formkit.com/essentials/validation#email}
      */
-    email: '请输入一个合法的电子邮件地址',
+    email: '请输入合法的电子邮件地址。',
     /**
      * Does not end with the specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#ends-with}
+     * @see {@link https://formkit.com/essentials/validation#ends-with}
      */
     ends_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not end with the substring supplied to the rule."> */
-        return `${sentence(name)}并未以${list(args)}结尾`;
+        return `${sentence(name)}必须以${list(args)}结尾。`;
         /* </i18n> */
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#is}
+     * @see {@link https://formkit.com/essentials/validation#is}
      */
     is({ name }) {
         /* <i18n case="Shown when the user-provided value is not one of the values supplied to the rule."> */
-        return `${sentence(name)}不是一个允许值`;
+        return `${sentence(name)}是不允许的。`;
         /* </i18n> */
     },
     /**
      * Does not match specified length
-     * @see {@link https://docs.formkit.com/essentials/validation#length}
+     * @see {@link https://formkit.com/essentials/validation#length}
      */
     length({ name, args: [first = 0, second = Infinity] }) {
-        const min = first <= second ? first : second;
-        const max = second >= first ? second : first;
+        const min = Number(first) <= Number(second) ? first : second;
+        const max = Number(second) >= Number(first) ? second : first;
         if (min == 1 && max === Infinity) {
             /* <i18n case="Shown when the length of the user-provided value is not at least one character."> */
-            return `${sentence(name)}至少要有一个字符`;
+            return `${sentence(name)}至少要有一个字符。`;
             /* </i18n> */
         }
         if (min == 0 && max) {
             /* <i18n case="Shown when first argument supplied to the rule is 0, and the user-provided value is longer than the max (the 2nd argument) supplied to the rule."> */
-            return `${sentence(name)}必须少于或等于${max}个字符`;
+            return `${sentence(name)}必须少于或等于${max}个字符。`;
             /* </i18n> */
         }
         if (min === max) {
             /* <i18n case="Shown when first and second argument supplied to the rule are the same, and the user-provided value is not any of the arguments supplied to the rule."> */
-            return `${sentence(name)} 的长度应为 ${max} 个字符。`;
+            return `${sentence(name)}必须包含${max}个字符。`;
             /* </i18n> */
         }
         if (min && max === Infinity) {
             /* <i18n case="Shown when the length of the user-provided value is less than the minimum supplied to the rule and there is no maximum supplied to the rule."> */
-            return `${sentence(name)}必须多于或等于${min}个字符`;
+            return `${sentence(name)}必须多于或等于${min}个字符。`;
             /* </i18n> */
         }
         /* <i18n case="Shown when the length of the user-provided value is between the two lengths supplied to the rule."> */
-        return `${sentence(name)}必须有${min}至${max}个字符`;
+        return `${sentence(name)}必须介于${min}和${max}个字符之间。`;
         /* </i18n> */
     },
     /**
      * Value is not a match
-     * @see {@link https://docs.formkit.com/essentials/validation#matches}
+     * @see {@link https://formkit.com/essentials/validation#matches}
      */
     matches({ name }) {
         /* <i18n case="Shown when the user-provided value does not match any of the values or RegExp patterns supplied to the rule. "> */
-        return `${sentence(name)}不是一个允许值`;
+        return `${sentence(name)}是不允许的。`;
         /* </i18n> */
     },
     /**
      * Exceeds maximum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#max}
+     * @see {@link https://formkit.com/essentials/validation#max}
      */
     max({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
             /* <i18n case="Shown when the length of the array of user-provided values is longer than the max supplied to the rule."> */
-            return `${name}不能超过${args[0]}`;
+            return `${name}不得多于${args[0]}个值。`;
             /* </i18n> */
         }
         /* <i18n case="Shown when the user-provided value is greater than the maximum number supplied to the rule."> */
-        return `${sentence(name)}必须小于或等于${args[0]}`;
+        return `${name}不得大于${args[0]}。`;
         /* </i18n> */
     },
     /**
      * The (field-level) value does not match specified mime type
-     * @see {@link https://docs.formkit.com/essentials/validation#mime}
+     * @see {@link https://formkit.com/essentials/validation#mime}
      */
     mime({ name, args }) {
         if (!args[0]) {
             /* <i18n case="Shown when no file formats were supplied to the rule."> */
-            return '无允许的文件格式';
+            return '没有允许的文件格式。';
             /* </i18n> */
         }
         /* <i18n case="Shown when the mime type of user-provided file does not match any mime types supplied to the rule."> */
-        return `${sentence(name)}必须为此类型：${args[0]}`;
+        return `${sentence(name)}的类型必须为：${args[0]}`;
         /* </i18n> */
     },
     /**
      * Does not fulfill minimum allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#min}
+     * @see {@link https://formkit.com/essentials/validation#min}
      */
     min({ name, node: { value }, args }) {
         if (Array.isArray(value)) {
             /* <i18n case="Shown when the length of the array of user-provided values is shorter than the min supplied to the rule."> */
-            return `${name}不能少于${args[0]}`;
+            return `${name}不得少于${args[0]}个值。`;
             /* </i18n> */
         }
         /* <i18n case="Shown when the user-provided value is less than the minimum number supplied to the rule."> */
-        return `${sentence(name)}不能小于${args[0]}`;
+        return `${sentence(name)}不得小于${args[0]}。`;
         /* </i18n> */
     },
     /**
      * Is not an allowed value
-     * @see {@link https://docs.formkit.com/essentials/validation#not}
+     * @see {@link https://formkit.com/essentials/validation#not}
      */
     not({ name, node: { value } }) {
         /* <i18n case="Shown when the user-provided value matches one of the values supplied to (and thus disallowed by) the rule."> */
-        return `“${value}”不是一个被允许的${name}`;
+        return `"${value}"不是一个合法的${name}。`;
         /* </i18n> */
     },
     /**
      *  Is not a number
-     * @see {@link https://docs.formkit.com/essentials/validation#number}
+     * @see {@link https://formkit.com/essentials/validation#number}
      */
     number({ name }) {
         /* <i18n case="Shown when the user-provided value is not a number."> */
-        return `${sentence(name)}必须是一个数字`;
+        return `${sentence(name)}必须为数字。`;
         /* </i18n> */
     },
     /**
      * Required field.
-     * @see {@link https://docs.formkit.com/essentials/validation#required}
+     * @see {@link https://formkit.com/essentials/validation#required}
      */
     required({ name }) {
         /* <i18n case="Shown when a user does not provide a value to a required input."> */
-        return `${sentence(name)}必须填写`;
+        return `${sentence(name)}不得留空。`;
         /* </i18n> */
     },
     /**
      * Does not start with specified value
-     * @see {@link https://docs.formkit.com/essentials/validation#starts-with}
+     * @see {@link https://formkit.com/essentials/validation#starts-with}
      */
     starts_with({ name, args }) {
         /* <i18n case="Shown when the user-provided value does not start with the substring supplied to the rule."> */
-        return `${sentence(name)}没有以${list(args)}开头`;
+        return `${sentence(name)}必须以${list(args)}开头。`;
         /* </i18n> */
     },
     /**
      * Is not a url
-     * @see {@link https://docs.formkit.com/essentials/validation#url}
+     * @see {@link https://formkit.com/essentials/validation#url}
      */
     url() {
         /* <i18n case="Shown when the user-provided value is not a valid url."> */
-        return `请包含一个合法的url`;
+        return `请输入有效的 URL。`;
         /* </i18n> */
     },
 };
@@ -97168,7 +97860,11 @@ var zh = /*#__PURE__*/Object.freeze({
 
 /**
  * Create a new internationalization plugin for FormKit.
- * @param locales - Creates the i18n plugin.
+ *
+ * @param registry - The registry of {@link @formkit/i18n#FormKitLocaleRegistry | FormKitLocales}.
+ *
+ * @returns {@link @formkit/core#FormKitPlugin | FormKitPlugin}
+ *
  * @public
  */
 function createI18nPlugin(registry) {
@@ -97207,14 +97903,18 @@ function createI18nPlugin(registry) {
     };
 }
 /**
- * @param locale - An ISO 639-1 and (optionally) ISO 639-2 language tag. For
- * example these are valid locale keys:
+ * Parse ISO 639-1 and 639-2 to a valid locale key.
+ *
+ * @param locale - An ISO 639-1 and (optionally) ISO 639-2 language tag. For these are valid locale keys:
  * zh
  * zh-CN
  * zh-HK
  * en
  * en-GB
+ *
  * @param availableLocales - An array of locales that may be valid.
+ *
+ * @public
  */
 function parseLocale(locale, availableLocales) {
     if ((0,_formkit_utils__WEBPACK_IMPORTED_MODULE_0__.has)(availableLocales, locale)) {
@@ -97231,13 +97931,23 @@ function parseLocale(locale, availableLocales) {
 }
 
 /**
+ * The official FormKit internationalization (i18n) plugin. This package
+ * contains the locales and the plugin that integrates FormKit with these
+ * locales. Read the {@link https://formkit.com/essentials/internationalization
+ * | internationalization documentation} for usage instructions.
+ *
+ * @packageDocumentation
+ */
+/**
  * Export all the available locales at once.
+ *
  * @public
  */
 const locales = {
     ar,
     az,
     bg,
+    ca,
     cs,
     da,
     de,
@@ -97383,9 +98093,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
+ * Creates a plugin based on a list of {@link @formkit/core#FormKitLibrary | FormKitLibrary}.
  *
- * @param libraries - One or many formkit urls.
- * @returns
+ * @param libraries - One or many {@link @formkit/core#FormKitLibrary | FormKitLibrary}.
+ *
+ * @returns {@link @formkit/core#FormKitPlugin | FormKitPlugin}
+ *
  * @public
  */
 function createLibraryPlugin(...libraries) {
@@ -97409,9 +98122,13 @@ function createLibraryPlugin(...libraries) {
 }
 
 /**
- * Accepts an array of objects, array of strings, or object of key-value pairs.
- * and returns an array of objects with value and label properties.
- * @param options - Options to normalize
+ * A function to normalize an array of objects, array of strings, or object of
+ * key-values to use an array of objects with value and label properties.
+ *
+ * @param options - An un-normalized {@link FormKitOptionsProp | FormKitOptionsProp}.
+ *
+ * @returns A list of {@link FormKitOptionsList | FormKitOptionsList}.
+ *
  * @public
  */
 function normalizeOptions(options) {
@@ -97443,10 +98160,14 @@ function normalizeOptions(options) {
     });
 }
 /**
- * Given an option list, find the "true" value in the options.
- * @param options - The options to check for a given value
+ * Given an {@link FormKitOptionsList | FormKitOptionsList}, find the real value in the options.
+ *
+ * @param options - The {@link FormKitOptionsList | FormKitOptionsList} to check for a given value
  * @param value - The value to return
- * @returns
+ *
+ * @returns `unknown`
+ *
+ * @public
  */
 function optionValue(options, value) {
     if (Array.isArray(options)) {
@@ -97460,8 +98181,13 @@ function optionValue(options, value) {
 }
 /**
  * Determines if the value should be selected.
+ *
  * @param valueA - Any type of value
  * @param valueB - Any type of value
+ *
+ * @returns `boolean`
+ *
+ * @public
  */
 function shouldSelect(valueA, valueB) {
     if (valueA == valueB)
@@ -97471,8 +98197,11 @@ function shouldSelect(valueA, valueB) {
     return false;
 }
 /**
- * Converts the options prop to usable values.
- * @param node - A formkit node.
+ * A feature that converts the options prop to usable values, to be used by a
+ * feature or a plugin.
+ *
+ * @param node - A {@link @formkit/core#FormKitNode | FormKitNode}.
+ *
  * @public
  */
 function options(node) {
@@ -97491,6 +98220,8 @@ function options(node) {
 }
 
 /**
+ * Outer section where most data attributes are assigned.
+ *
  * @public
  */
 const outer = createSection('outer', () => ({
@@ -97513,16 +98244,22 @@ const outer = createSection('outer', () => ({
 }), true);
 
 /**
+ * Inner section
+ *
  * @public
  */
 const inner = createSection('inner', 'div');
 
 /**
+ * Wrapper input section
+ *
  * @public
  */
 const wrapper = createSection('wrapper', 'div');
 
 /**
+ * Label section with label element
+ *
  * @public
  */
 const label = createSection('label', () => ({
@@ -97534,14 +98271,18 @@ const label = createSection('label', () => ({
 }));
 
 /**
+ * Messages section where all messages will be displayed.
+ *
  * @public
  */
 const messages = createSection('messages', () => ({
     $el: 'ul',
-    if: '$fns.length($messages)',
+    if: '$defaultMessagePlacement && $fns.length($messages)',
 }));
 
 /**
+ * Message section, shows a group of messages.
+ *
  * @public
  */
 const message = createSection('message', () => ({
@@ -97555,16 +98296,22 @@ const message = createSection('message', () => ({
 }));
 
 /**
+ * Prefix section
+ *
  * @public
  */
 const prefix = createSection('prefix', null);
 
 /**
+ * Suffix section
+ *
  * @public
  */
 const suffix = createSection('suffix', null);
 
 /**
+ * Help section that shows help text
+ *
  * @public
  */
 const help = createSection('help', () => ({
@@ -97576,6 +98323,8 @@ const help = createSection('help', () => ({
 }));
 
 /**
+ * Fieldset section, used to describe help
+ *
  * @public
  */
 const fieldset = createSection('fieldset', () => ({
@@ -97591,6 +98340,8 @@ const fieldset = createSection('fieldset', () => ({
 }));
 
 /**
+ * Decorator section
+ *
  * @public
  */
 const decorator = createSection('decorator', () => ({
@@ -97601,6 +98352,8 @@ const decorator = createSection('decorator', () => ({
 }));
 
 /**
+ * Box section used for grouping options
+ *
  * @public
  */
 const box = createSection('input', () => ({
@@ -97632,6 +98385,8 @@ const box = createSection('input', () => ({
 }));
 
 /**
+ * Legend section, used instead of label when its grouping fields.
+ *
  * @public
  */
 const legend = createSection('legend', () => ({
@@ -97640,6 +98395,8 @@ const legend = createSection('legend', () => ({
 }));
 
 /**
+ * Option section used to show an option
+ *
  * @public
  */
 const boxOption = createSection('option', () => ({
@@ -97651,11 +98408,15 @@ const boxOption = createSection('option', () => ({
 }));
 
 /**
+ * Options section used to wrap all option sections in a list
+ *
  * @public
  */
 const boxOptions = createSection('options', 'ul');
 
 /**
+ * Wrapper section for options
+ *
  * @public
  */
 const boxWrapper = createSection('wrapper', () => ({
@@ -97666,10 +98427,17 @@ const boxWrapper = createSection('wrapper', () => ({
             then: undefined,
             else: '$disabled || undefined',
         },
+        'data-checked': {
+            if: '$options == undefined',
+            then: '$fns.eq($_value, $onValue) || undefined',
+            else: '$fns.isChecked($option.value) || undefined',
+        },
     },
 }));
 
 /**
+ * Option help section
+ *
  * @public
  */
 const boxHelp = createSection('optionHelp', () => ({
@@ -97681,11 +98449,15 @@ const boxHelp = createSection('optionHelp', () => ({
 }));
 
 /**
+ * Label section for options
+ *
  * @public
  */
 const boxLabel = createSection('label', 'span');
 
 /**
+ * Input section for a button
+ *
  * @public
  */
 const buttonInput = createSection('input', () => ({
@@ -97700,11 +98472,15 @@ const buttonInput = createSection('input', () => ({
 }));
 
 /**
+ * Default section for a button
+ *
  * @public
  */
 const buttonLabel = createSection('default', null);
 
 /**
+ * Input section for a file input
+ *
  * @public
  */
 const fileInput = createSection('input', () => ({
@@ -97722,6 +98498,8 @@ const fileInput = createSection('input', () => ({
 }));
 
 /**
+ * File item section for showing a file name
+ *
  * @public
  */
 const fileItem = createSection('fileItem', () => ({
@@ -97730,6 +98508,8 @@ const fileItem = createSection('fileItem', () => ({
 }));
 
 /**
+ * File list section to show all file names
+ *
  * @public
  */
 const fileList = createSection('fileList', () => ({
@@ -97744,6 +98524,8 @@ const fileList = createSection('fileList', () => ({
 }));
 
 /**
+ * File name section to show the file name
+ *
  * @public
  */
 const fileName = createSection('fileName', () => ({
@@ -97754,6 +98536,8 @@ const fileName = createSection('fileName', () => ({
 }));
 
 /**
+ * File remove section to show a remove button for files
+ *
  * @public
  */
 const fileRemove = createSection('fileRemove', () => ({
@@ -97764,6 +98548,8 @@ const fileRemove = createSection('fileRemove', () => ({
 }));
 
 /**
+ * No file section that shows when there is no files
+ *
  * @public
  */
 const noFiles = createSection('noFiles', () => ({
@@ -97772,6 +98558,8 @@ const noFiles = createSection('noFiles', () => ({
 }));
 
 /**
+ * Form section
+ *
  * @public
  */
 const formInput = createSection('form', () => ({
@@ -97786,6 +98574,8 @@ const formInput = createSection('form', () => ({
 }), true);
 
 /**
+ * Actions section that shows the action buttons
+ *
  * @public
  */
 const actions = createSection('actions', () => ({
@@ -97794,13 +98584,14 @@ const actions = createSection('actions', () => ({
 }));
 
 /**
+ * Submit section that displays a submit button from a form
+ *
  * @public
  */
 const submitInput = createSection('submit', () => ({
     $cmp: 'FormKit',
     bind: '$submitAttrs',
     props: {
-        ignore: true,
         type: 'submit',
         disabled: '$disabled',
         label: '$submitLabel',
@@ -97808,6 +98599,8 @@ const submitInput = createSection('submit', () => ({
 }));
 
 /**
+ * Input section
+ *
  * @public
  */
 const textInput = createSection('input', () => ({
@@ -97826,11 +98619,15 @@ const textInput = createSection('input', () => ({
 }));
 
 /**
+ * A simple fragment section
+ *
  * @public
  */
 const fragment = createSection('wrapper', null, true);
 
 /**
+ * Input section used by selects
+ *
  * @public
  */
 const selectInput$1 = createSection('input', () => ({
@@ -97850,6 +98647,8 @@ const selectInput$1 = createSection('input', () => ({
 }));
 
 /**
+ * Option section used to show options
+ *
  * @public
  */
 const option = createSection('option', () => ({
@@ -97864,6 +98663,8 @@ const option = createSection('option', () => ({
 }));
 
 /**
+ * Options slot section that displays options when used with slots
+ *
  * @public
  */
 const optionSlot = () => ({
@@ -97874,6 +98675,8 @@ const optionSlot = () => ({
 });
 
 /**
+ * Input section used by textarea inputs
+ *
  * @public
  */
 const textareaInput = createSection('input', () => ({
@@ -97892,6 +98695,8 @@ const textareaInput = createSection('input', () => ({
 }));
 
 /**
+ * Icon section used by all icons
+ *
  * @public
  */
 const icon = (sectionKey, el) => {
@@ -97916,9 +98721,12 @@ const icon = (sectionKey, el) => {
 };
 
 /**
- * Normalize the boxes.
- * @param node - The node
- * @returns
+ * A feature that normalizes box types (checkboxes, radios).
+ *
+ * @param node - A {@link @formkit/core#FormKitNode | FormKitNode}.
+ *
+ * @returns A {@link @formkit/node#FormKitMiddleware | FormKitMiddleware}.
+ *
  * @public
  */
 function normalizeBoxes(node) {
@@ -97928,7 +98736,7 @@ function normalizeBoxes(node) {
                 var _a;
                 if (!((_a = option.attrs) === null || _a === void 0 ? void 0 : _a.id)) {
                     return (0,_formkit_utils__WEBPACK_IMPORTED_MODULE_0__.extend)(option, {
-                        attrs: { id: `${node.name}-option-${(0,_formkit_utils__WEBPACK_IMPORTED_MODULE_0__.kebab)(String(option.value))}` },
+                        attrs: { id: `${node.name}-option-${(0,_formkit_utils__WEBPACK_IMPORTED_MODULE_0__.slugify)(String(option.value))}` },
                     });
                 }
                 return option;
@@ -97952,8 +98760,10 @@ function normalizeBoxes(node) {
 
 /**
  * Event handler when an input is toggled.
- * @param node - The node being toggled
- * @param e - The input even related to the toggling
+ *
+ * @param node - The {@link @formkit/node#FormKitNode | FormKitNode} being toggled.
+ * @param e - The input event related to the toggling.
+ *
  * @public
  */
 function toggleChecked$1(node, e) {
@@ -97988,9 +98798,13 @@ function toggleChecked$1(node, e) {
 }
 /**
  * Checks if a given option is present in the node value.
- * @param node - The node being checked
- * @param value - The value of any option
- * @returns
+ *
+ * @param node - The The {@link @formkit/node#FormKitNode | FormKitNode} being checked.
+ * @param value - The value of any option.
+ *
+ * @returns `boolean`
+ *
+ * @public
  */
 function isChecked$1(node, value) {
     var _a, _b;
@@ -98003,8 +98817,10 @@ function isChecked$1(node, value) {
     return false;
 }
 /**
- * Adds checkbox selection support
- * @param node - Node the feature is added to
+ * A feature that adds checkbox selection support.
+ *
+ * @param node - A {@link @formkit/core#FormKitNode | FormKitNode}.
+ *
  * @public
  */
 function checkboxes(node) {
@@ -98026,8 +98842,10 @@ function checkboxes(node) {
 }
 
 /**
- * Allows disabling children of this.
- * @param node - The FormKitNode of the form/group/list
+ * A feature that allows disabling children of this node.
+ *
+ * @param node - A {@link @formkit/core#FormKitNode | FormKitNode}.
+ *
  * @public
  */
 function disables(node) {
@@ -98050,9 +98868,11 @@ function disables(node) {
  * Creates a new feature that generates a localization message of type ui
  * for use on a given component.
  *
- * @param key - The key of the message
- * @param value - The value of the message
- * @returns
+ * @param key - The key of the message.
+ * @param value - The value of the message.
+ *
+ * @returns A {@link @formkit/core#FormKitPlugin | FormKitPlugin}.
+ *
  * @public
  */
 function localize(key, value) {
@@ -98072,7 +98892,10 @@ function localize(key, value) {
 const isBrowser = typeof window !== 'undefined';
 /**
  * Remove the data-file-hover attribute from the target.
+ *
  * @param e - Event
+ *
+ * @internal
  */
 function removeHover(e) {
     if (e.target instanceof HTMLElement &&
@@ -98082,8 +98905,10 @@ function removeHover(e) {
 }
 /**
  * Prevent stray drag/drop events from navigating the window.
+ *
  * @param e - Event
- * @public
+ *
+ * @internal
  */
 function preventStrayDrop(type, e) {
     if (!(e.target instanceof HTMLInputElement)) {
@@ -98097,8 +98922,10 @@ function preventStrayDrop(type, e) {
     }
 }
 /**
- * Feature to add file handling support to an input.
- * @param node - The node being checked
+ * A feature to add file handling support to an input.
+ *
+ * @param node - A {@link @formkit/core#FormKitNode | FormKitNode}.
+ *
  * @public
  */
 function files(node) {
@@ -98153,8 +98980,10 @@ function files(node) {
 
 /**
  * Handle the submit event.
+ *
  * @param e - The event
- * @public
+ *
+ * @internal
  */
 async function handleSubmit(node, submitEvent) {
     submitEvent.preventDefault();
@@ -98218,8 +99047,10 @@ async function handleSubmit(node, submitEvent) {
     }
 }
 /**
- * Converts the options prop to usable values.
- * @param node - A formkit node.
+ * A feature to add a submit handler and actions section.
+ *
+ * @param node - A {@link @formkit/core#FormKitNode | FormKitNode}.
+ *
  * @public
  */
 function form$1(node) {
@@ -98237,8 +99068,10 @@ function form$1(node) {
 }
 
 /**
- * Applies ignore="true" by default.
- * @param node - The node
+ * A feature that applies `ignore="true"` by default.
+ *
+ * @param node - A {@link @formkit/core#FormKitNode | FormKitNode}.
+ *
  * @public
  */
 function ignore(node) {
@@ -98249,8 +99082,10 @@ function ignore(node) {
 }
 
 /**
- * Ensures the input has an `initialValue` prop.
- * @param node - The node being given an initial value
+ * A feature that ensures the input has an `initialValue` prop.
+ *
+ * @param node - A {@link @formkit/core#FormKitNode | FormKitNode}.
+ *
  * @public
  */
 function initialValue(node) {
@@ -98263,8 +99098,10 @@ function initialValue(node) {
 
 /**
  * Sets the value of a radio button when checked.
- * @param node - FormKitNode
- * @param value - Value
+ *
+ * @param node - A {@link @formkit/core#FormKitNode | FormKitNode}.
+ * @param event - Event
+ *
  * @public
  */
 function toggleChecked(node, event) {
@@ -98274,9 +99111,13 @@ function toggleChecked(node, event) {
 }
 /**
  * Checks if the value being checked is the current value.
- * @param node - The node to check against.
+ *
+ * @param node - A {@link @formkit/core#FormKitNode | FormKitNode}.
  * @param value - The value to check
- * @returns
+ *
+ * @returns `boolean`
+ *
+ * @public
  */
 function isChecked(node, value) {
     var _a, _b;
@@ -98286,8 +99127,10 @@ function isChecked(node, value) {
     return shouldSelect(optionValue(node.props.options, value), node._value);
 }
 /**
- * Determines if a given radio input is being evaluated.
- * @param node - The radio input group.
+ * A feature to check if the value being checked is the current value.
+ *
+ * @param node - A {@link @formkit/core#FormKitNode | FormKitNode}.
+ *
  * @public
  */
 function radios(node) {
@@ -98450,8 +99293,13 @@ function select$1(node) {
 }
 
 /**
- * @param sectionKey - the location the icon should be loaded
- * @param defaultIcon - the icon that should be loaded if a match is found in the user's CSS
+ * Adds icon props definition.
+ *
+ * @param sectionKey - the location the icon should be loaded.
+ * @param defaultIcon - the icon that should be loaded if a match is found in the user's CSS.
+ *
+ * @returns A {@link @formkit/core#FormKitPlugin | FormKitPlugin}.
+ *
  * @public
  */
 function defaultIcon(sectionKey, defaultIcon) {
@@ -98464,7 +99312,12 @@ function defaultIcon(sectionKey, defaultIcon) {
 
 /**
  * Type guard for schema objects.
- * @param schema - returns true if the node is a schema node but not a string or conditional.
+ *
+ * @param schema - returns `true` if the node is a schema node but not a string
+ * or conditional.
+ *
+ * @returns `boolean`
+ *
  * @public
  */
 function isSchemaObject(schema) {
@@ -98472,16 +99325,22 @@ function isSchemaObject(schema) {
         ('$el' in schema || '$cmp' in schema || '$formkit' in schema));
 }
 /**
- * Checks if the current schema node is a slot condition like:
+ * Checks if the current schema node is a slot condition.
+ *
+ * @example
+ *
  * ```js
  * {
  *  if: '$slot.name',
  *  then: '$slot.name',
  *  else: []
- * }
+ * } // this schema node would return true.
  * ```
- * @param node - a schema node
- * @returns
+ *
+ * @param node - A {@link @formkit/core#FormKitSchemaNode | FormKitSchemaNode}.
+ *
+ * @returns `boolean`
+ *
  * @public
  */
 function isSlotCondition(node) {
@@ -98496,10 +99355,14 @@ function isSlotCondition(node) {
     return false;
 }
 /**
- * Extends a single schema node with an extension. The extension can be any partial node including strings.
- * @param schema - Extend a base schema node.
+ * Extends a single schema node with an extension. The extension can be any
+ * partial node including strings.
+ *
+ * @param schema - The base schema node.
  * @param extension - The values to extend on the base schema node.
- * @returns
+ *
+ * @returns {@link @formkit/core#FormKitSchemaNode | FormKitSchemaNode}
+ *
  * @public
  */
 function extendSchema(schema, extension = {}) {
@@ -98514,13 +99377,13 @@ function extendSchema(schema, extension = {}) {
     return (0,_formkit_utils__WEBPACK_IMPORTED_MODULE_0__.extend)(schema, extension);
 }
 /**
- * ================================================================
- * NOTE: This function is deprecated. Use `createSection` instead!
- * ================================================================
+ * @deprecated This function is deprecated. Use `createSection` instead!
  *
  * @param key - A new section key name.
  * @param schema - The default schema in this composable slot.
- * @returns
+ *
+ * @returns {@link @formkit/core#FormKitSchemaComposable | FormKitSchemaComposable}
+ *
  * @public
  */
 function composable(key, schema) {
@@ -98552,20 +99415,16 @@ function composable(key, schema) {
 }
 /**
  * Creates an input schema with all of the wrapping base schema.
- * @param inputSchema - Content to store in the input section key location.
+ *
+ * @param inputSection - Content to store in the input section key location.
+ *
+ * @returns {@link @formkit/core#FormKitExtendableSchemaRoot | FormKitExtendableSchemaRoot}
+ *
  * @public
  */
 function useSchema(inputSection) {
     return outer(wrapper(label('$label'), inner(prefix(), inputSection(), suffix())), help('$help'), messages(message('$message.value')));
 }
-/**
- * Creates a new reusable section.
- * @param section - A single section of schema
- * @param el - The element or a function that returns a schema node.
- * @param root - When true returns an extendable root schema node.
- * @returns
- * @public
- */
 function createSection(section, el, root = false) {
     return (...children) => {
         const extendable = (extensions) => {
@@ -98594,13 +99453,18 @@ function createSection(section, el, root = false) {
                     : node,
             };
         };
+        extendable._s = section;
         return root ? createRoot(extendable) : extendable;
     };
 }
 /**
  * Returns an extendable schema root node.
+ *
  * @param rootSection - Creates the root node.
- * @returns
+ *
+ * @returns {@link @formkit/core#FormKitExtendableSchemaRoot | FormKitExtendableSchemaRoot}
+ *
+ * @internal
  */
 function createRoot(rootSection) {
     return (extensions) => {
@@ -98610,13 +99474,17 @@ function createRoot(rootSection) {
 /**
  * Applies attributes to a given schema section by applying a higher order
  * function that merges a given set of attributes into the node.
- * @param attrs - Apply attributes to a FormKitSchemaExtendableSection
- * @param section - A section to apply attributes to
- * @returns
+ *
+ * @param attrs - Attributes to apply to a {@link FormKitSchemaExtendableSection
+ * | FormKitSchemaExtendableSection}.
+ * @param section - A section to apply attributes to.
+ *
+ * @returns {@link FormKitSchemaExtendableSection | FormKitSchemaExtendableSection}
+ *
  * @public
  */
 function $attrs(attrs, section) {
-    return (extensions) => {
+    const extendable = (extensions) => {
         const node = section(extensions);
         const attributes = typeof attrs === 'function' ? attrs() : attrs;
         if (!(0,_formkit_utils__WEBPACK_IMPORTED_MODULE_0__.isObject)(attributes))
@@ -98629,17 +99497,22 @@ function $attrs(attrs, section) {
         }
         return node;
     };
+    extendable._s = section._s;
+    return extendable;
 }
 /**
+ * Applies a condition to a given schema section.
  *
  * @param condition - A schema condition to apply to a section.
  * @param then - The section that applies if the condition is true.
  * @param otherwise - (else) The section that applies if the condition is false.
- * @returns
+ *
+ * @returns {@link FormKitSchemaExtendableSection | FormKitSchemaExtendableSection}
+ *
  * @public
  */
 function $if(condition, then, otherwise) {
-    return (extensions) => {
+    const extendable = (extensions) => {
         const node = then(extensions);
         if (otherwise ||
             (isSchemaObject(node) && 'if' in node) ||
@@ -98661,13 +99534,18 @@ function $if(condition, then, otherwise) {
         }
         return node;
     };
+    extendable._s = (0,_formkit_utils__WEBPACK_IMPORTED_MODULE_0__.token)();
+    return extendable;
 }
 /**
  * Applies a condition to a given schema section.
+ *
  * @param varName - The name of the variable that holds the current instance.
  * @param inName - The variable we are iterating over.
- * @param section - A section to repeat
- * @returns
+ * @param section - A section to repeat.
+ *
+ * @returns {@link FormKitSchemaExtendableSection | FormKitSchemaExtendableSection}
+ *
  * @public
  */
 function $for(varName, inName, section) {
@@ -98684,27 +99562,35 @@ function $for(varName, inName, section) {
 }
 /**
  * Extends a schema node with a given set of extensions.
+ *
  * @param section - A section to apply an extension to.
  * @param extendWith - A partial schema snippet to apply to the section.
- * @returns
+ *
+ * @returns {@link FormKitSchemaExtendableSection | FormKitSchemaExtendableSection}
+ *
  * @public
  */
 function $extend(section, extendWith) {
-    return (extensions) => {
+    const extendable = (extensions) => {
         const node = section({});
         if (isSlotCondition(node)) {
             if (Array.isArray(node.else))
                 return node;
-            node.else = extendSchema(extendSchema(node.else, extendWith), extensions);
+            node.else = extendSchema(extendSchema(node.else, extendWith), section._s ? extensions[section._s] : {});
             return node;
         }
-        return extendSchema(extendSchema(node, extendWith), extensions);
+        return extendSchema(extendSchema(node, extendWith), section._s ? extensions[section._s] : {});
     };
+    extendable._s = section._s;
+    return extendable;
 }
 /**
  * Creates a root schema section.
+ *
  * @param section - A section to make a root from.
- * @returns
+ *
+ * @returns {@link FormKitSchemaExtendableSection | FormKitSchemaExtendableSection}
+ *
  * @public
  */
 function $root(section) {
@@ -98966,7 +99852,12 @@ const radio = {
     /**
      * Additional features that should be added to your input
      */
-    features: [options, radios, defaultIcon('decorator', 'radioDecorator')],
+    features: [
+        disables,
+        options,
+        radios,
+        defaultIcon('decorator', 'radioDecorator'),
+    ],
 };
 
 /**
@@ -99098,13 +99989,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
+ * FormKit Observer is a utility to wrap a FormKitNode in a dependency tracking observer proxy.
+ *
+ * @packageDocumentation
+ */
+/**
  * A registry of all revoked observers.
  */
 const revokedObservers = new WeakSet();
 /**
- * The FormKitNode to observe.
- * @param node - Any formkit node to observe.
- * @returns
+ * Creates the observer.
+ * @param node - The {@link @formkit/core#FormKitNode | FormKitNode} to observe.
+ * @param dependencies - The dependent nodes and the events that are required to
+ * watch for changes.
+ * @returns Returns a {@link @formkit/observer#FormKitObservedNode | FormKitObservedNode}.
  * @public
  */
 function createObserver(node, dependencies) {
@@ -99178,10 +100076,12 @@ function createObserver(node, dependencies) {
     const { proxy: observed, revoke, } = Proxy.revocable(node, {
         get(...args) {
             switch (args[1]) {
+                case '_node':
+                    return node;
                 case 'deps':
                     return deps;
                 case 'watch':
-                    return (block) => watch(observed, block);
+                    return (block, after) => watch(observed, block, after);
                 case 'observe':
                     return () => {
                         const old = new Map(deps);
@@ -99202,6 +100102,7 @@ function createObserver(node, dependencies) {
                         removeListeners(receipts);
                         revokedObservers.add(args[2]);
                         revoke();
+                        return undefined;
                     };
             }
             const value = Reflect.get(...args);
@@ -99219,17 +100120,18 @@ function createObserver(node, dependencies) {
     return observed;
 }
 /**
- * Given two maps (toAdd and toRemove) apply the dependencies as event listeners
- * on the underlying nodes.
- * @param node - The node to apply dependencies to
- * @param delta - The toAdd and toRemove dependency Maps
- * @public
+ * Given two maps (`toAdd` and `toRemove`), apply the dependencies as event
+ * listeners on the underlying nodes.
+ * @param node - The node to apply dependencies to.
+ * @param callback - The callback to add or remove.
+ * @internal
  */
 function applyListeners(node, [toAdd, toRemove], callback) {
     toAdd.forEach((events, depNode) => {
         events.forEach((event) => {
+            var _a;
             node.receipts.has(depNode) || node.receipts.set(depNode, {});
-            node.receipts.set(depNode, Object.assign(node.receipts.get(depNode), {
+            node.receipts.set(depNode, Object.assign((_a = node.receipts.get(depNode)) !== null && _a !== void 0 ? _a : {}, {
                 [event]: depNode.on(event, callback),
             }));
         });
@@ -99249,7 +100151,7 @@ function applyListeners(node, [toAdd, toRemove], callback) {
 }
 /**
  * Remove all the receipts from the observed node and subtree.
- * @param receipts - The formkit observer receipts to remove
+ * @param receipts - The FormKit observer receipts to remove.
  * @public
  */
 function removeListeners(receipts) {
@@ -99266,21 +100168,27 @@ function removeListeners(receipts) {
  * @param block - The block of code to observe
  * @public
  */
-async function watch(node, block) {
+function watch(node, block, after) {
+    const doAfterObservation = (res) => {
+        const newDeps = node.stopObserve();
+        applyListeners(node, diffDeps(oldDeps, newDeps), () => watch(node, block, after));
+        if (after)
+            after(res);
+    };
     const oldDeps = new Map(node.deps);
     node.observe();
     const res = block(node);
     if (res instanceof Promise)
-        await res;
-    const newDeps = node.stopObserve();
-    applyListeners(node, diffDeps(oldDeps, newDeps), () => watch(node, block));
+        res.then((val) => doAfterObservation(val));
+    else
+        doAfterObservation(res);
 }
 /**
  * Determines which nodes should be added as dependencies and which should be
  * removed.
- * @param previous - The previous watcher dependencies
- * @param current - The new/current watcher dependencies
- * @returns
+ * @param previous - The previous watcher dependencies.
+ * @param current - The new/current watcher dependencies.
+ * @returns A tuple of maps: `toAdd` and `toRemove`.
  * @public
  */
 function diffDeps(previous, current) {
@@ -99311,9 +100219,9 @@ function diffDeps(previous, current) {
     return [toAdd, toRemove];
 }
 /**
- * Checks if the given noe is revoked.
+ * Checks if the given node is revoked.
  * @param node - Any observed node to check.
- * @returns
+ * @returns A `boolean` indicating if the node is revoked.
  * @public
  */
 function isKilled(node) {
@@ -99699,9 +100607,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * A function to generate FormKit class functions from a javascript object
- * @param classes - An object of input types with nested objects of sectionKeys and class lists
- * @returns FormKitClassFunctions
+ * This package contains the official themes for FormKit. Read the
+ * {@link https://formkit.com/getting-started/installation |
+ * installation documentation} for more information.
+ *
+ * @packageDocumentation
+ */
+/**
+ * A function to generate FormKit class functions from a JavaScript object.
+ * @param classes - An object of input types with nested objects of sectionKeys and class lists.
+ * @returns An object of sectionKeys with class functions.
  * @public
  */
 function generateClasses(classes) {
@@ -99787,10 +100702,13 @@ const iconRegistry = {};
  */
 const iconRequests = {};
 /**
- * Creates the theme plugin based on a given theme name
- * @param theme - The name or id of the theme to apply
- * @param icons - Icons you want to add to the global icon registry
- * @param iconLoader - A function that handles loading an icon when it is not found in the registry
+ * Creates the theme plugin based on a given theme name.
+ * @param theme - The name or id of the theme to apply.
+ * @param icons - Icons you want to add to the global icon registry.
+ * @param iconLoaderUrl - A function that returns a remote url for retrieving an
+ * SVG icon by name.
+ * @param iconLoader - A function that handles loading an icon when it is not
+ * found in the registry.
  * @public
  */
 function createThemePlugin(theme, icons, iconLoaderUrl, iconLoader) {
@@ -99886,8 +100804,11 @@ function loadTheme(theme) {
     }
 }
 /**
- * Returns a function responsible for loading an icon by name
- * @param iconLoader - a function for loading an icon when it's not found in the iconRegistry
+ * Returns a function responsible for loading an icon by name.
+ * @param iconLoader - a function for loading an icon when it's not found in the
+ * iconRegistry.
+ * @param iconLoaderUrl - a function that returns a remote URL for retrieving an
+ * SVG icon by name.
  * @public
  */
 function createIconHandler(iconLoader, iconLoaderUrl) {
@@ -99901,13 +100822,13 @@ function createIconHandler(iconLoader, iconLoaderUrl) {
         }
         if (typeof iconName !== 'string')
             return; // bail if we got something that wasn't a boolean or string
-        // check if we've already loaded the icon before
-        const icon = iconRegistry[iconName];
         // is this a default icon that should only load from a stylesheet?
         const isDefault = iconName.startsWith('default:');
         iconName = isDefault ? iconName.split(':')[1] : iconName;
+        // check if we've already loaded the icon before
+        const iconWasAlreadyLoaded = iconName in iconRegistry;
         let loadedIcon = undefined;
-        if (icon || iconName in iconRegistry) {
+        if (iconWasAlreadyLoaded) {
             return iconRegistry[iconName];
         }
         else if (!iconRequests[iconName]) {
@@ -100102,6 +101023,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "undefine": () => (/* binding */ undefine)
 /* harmony export */ });
 /**
+ * Commonly shared utility functions between official FormKit packages.
+ *
+ * You can add this package by using `npm install @formkit/utils` or `yarn add @formkit/utils`.
+ *
+ * @packageDocumentation
+ */
+/**
  * Explicit keys that should always be cloned.
  */
 const explicitKeys = [
@@ -100114,7 +101042,18 @@ const explicitKeys = [
 ];
 /**
  * Generates a random string.
+ *
+ * @example
+ *
+ * ```javascript
+ * import { token } from '@formkit/utils'
+ *
+ * const tk = token()
+ * // 'jkbyqnphqm'
+ * ```
+ *
  * @returns string
+ *
  * @public
  */
 function token() {
@@ -100123,8 +101062,20 @@ function token() {
 /**
  * Creates a new set of the specified type and uses the values from an Array or
  * an existing Set.
- * @param items -
- * @returns Set
+ *
+ * @example
+ *
+ * ```javascript
+ * import { setify } from '@formkit/utils'
+ *
+ * const tk = setify(['a', 'b'])
+ * // Set(2) {'a', 'b'}
+ * ```
+ *
+ * @param items - An array or a Set.
+ *
+ * @returns `Set<T>`
+ *
  * @public
  */
 function setify(items) {
@@ -100132,9 +101083,12 @@ function setify(items) {
 }
 /**
  * Given 2 arrays, return them as a combined array with no duplicates.
- * @param arr1 -
- * @param arr2 -
- * @returns any[]
+ *
+ * @param arr1 - First array.
+ * @param arr2 - Second array.
+ *
+ * @returns `any[]`
+ *
  * @public
  */
 function dedupe(arr1, arr2) {
@@ -100145,20 +101099,27 @@ function dedupe(arr1, arr2) {
 }
 /**
  * Checks if the given property exists on the given object.
- * @param obj -
- * @param property -
+ *
+ * @param obj - An object to check.
+ * @param property - The property to check.
+ *
+ * @returns `boolean`
+ *
  * @public
  */
 function has(obj, property) {
     return Object.prototype.hasOwnProperty.call(obj, property);
 }
 /**
- * Compare two values for equality optionally at depth.
- * @param valA - Any type of input
- * @param valB - Any type of output
- * @param deep - Indicate if we should recurse into the object
- * @param explicit - Explicit keys
- * @returns boolean
+ * Compare two values for equality, optionally at depth.
+ *
+ * @param valA - First value.
+ * @param valB - Second value.
+ * @param deep - If it will compare deeply if it's an object.
+ * @param explicit - An array of keys to explicity check.
+ *
+ * @returns `boolean`
+ *
  * @public
  */
 function eq(valA, // eslint-disable-line
@@ -100195,7 +101156,11 @@ deep = true, explicit = ['__key']) {
 }
 /**
  * Determines if a value is empty or not.
- * @param value - any type of value that could be returned by an input.
+ *
+ * @param value - The value to check if it's empty.
+ *
+ * @returns `boolean`
+ *
  * @public
  */
 function empty(value // eslint-disable-line
@@ -100223,7 +101188,11 @@ function empty(value // eslint-disable-line
 }
 /**
  * Escape a string for use in regular expressions.
- * @param string - The string to escape.
+ *
+ * @param string - String to be escaped.
+ *
+ * @returns `string`
+ *
  * @public
  */
 function escapeExp(string) {
@@ -100231,9 +101200,18 @@ function escapeExp(string) {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 /**
- * Given a string format (date) return a regex to match against.
- * @param format - The format of the string
- * @returns
+ * Given a string date format, return a regex to match against.
+ *
+ * @param format - String to be transformed to RegExp.
+ *
+ * @example
+ *
+ * ```javascript
+ * regexForFormat('MM') // returns '(0[1-9]|1[012])'
+ * ```
+ *
+ * @returns `RegExp`
+ *
  * @public
  */
 function regexForFormat(format) {
@@ -100252,8 +101230,12 @@ function regexForFormat(format) {
     }, escaped));
 }
 /**
- * Given a FormKit input type
- * @param type - Any FormKit input type
+ * Given a FormKit input type, returns the correct lowerCased() type.
+ *
+ * @param type - String to return to check for correct type
+ *
+ * @returns `'list' | 'group' | 'input'`
+ *
  * @public
  */
 function nodeType(type) {
@@ -100265,9 +101247,12 @@ function nodeType(type) {
     return 'input';
 }
 /**
- * Determines if an object is an object or not.
- * @param o - any value
- * @returns
+ * Determines if an object is an object.
+ *
+ * @param o - The value to be checked.
+ *
+ * @returns `boolean`
+ *
  * @public
  */
 // eslint-disable-next-line @typescript-eslint/ban-types
@@ -100276,19 +101261,25 @@ function isRecord(o) {
 }
 /**
  * Checks if an object is a simple array or record.
- * @param o - A value to check
- * @returns
+ *
+ * @param o - Value to be checked.
+ *
+ * @returns `boolean`
+ *
  * @public
  */
 function isObject(o) {
     return isRecord(o) || Array.isArray(o);
 }
 /**
- * Attempts to determine if an object is a plain object. Mostly lifted from
- * is-plain-object: https://github.com/jonschlinkert/is-plain-object
+ * Attempts to determine if an object is a POJO (Plain Old JavaScript Object).
+ * Mostly lifted from is-plain-object: https://github.com/jonschlinkert/is-plain-object
  * Copyright (c) 2014-2017, Jon Schlinkert.
- * @param o - any value
- * @returns
+ *
+ * @param o - The value to be checked.
+ *
+ * @returns `boolean`
+ *
  * @public
  */
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
@@ -100310,10 +101301,16 @@ function isPojo(o) {
 }
 /**
  * Recursively merge data from additional into original returning a new object.
- * @param original - An object to extend
- * @param additional - An object to modify the original object with.
- * @param arrays - By default replaces arrays, but can also append to them.
- * @param ignoreUndefined - when true it treats undefined values as if they dont exist
+ *
+ * @param original - The original array.
+ * @param additional - The array to merge.
+ * @param extendArrays - If it will extend/concatenate array values instead of
+ * replacing them.
+ * @param ignoreUndefined - If it will preserve values from the original object
+ * even if the additional object has those values set to undefined.
+ *
+ * @returns `Record<string, any> | string | null`
+ *
  * @public
  */
 function extend(original, additional, extendArrays = false, ignoreUndefined = false) {
@@ -100353,7 +101350,11 @@ function extend(original, additional, extendArrays = false, ignoreUndefined = fa
     return merged;
 }
 /**
- * Determine if the given string is fully quoted. Examples:
+ * Determine if the given string is fully quoted.
+ *
+ * @example
+ *
+ * ```javascript
  * hello - false
  * "hello" - true
  * 'world' - true
@@ -100362,7 +101363,12 @@ function extend(original, additional, extendArrays = false, ignoreUndefined = fa
  * "hello"'there' - false
  * "hello""there" - false
  * 'hello === world' - true
- * @param str - A string to check.
+ * ```
+ *
+ * @param str - The string to check.
+ *
+ * @returns `boolean`
+ *
  * @public
  */
 function isQuotedString(str) {
@@ -100383,7 +101389,11 @@ function isQuotedString(str) {
 }
 /**
  * Remove extra escape characters.
- * @param str - A string to remove escape characters from.
+ *
+ * @param str - String to remove extra escape characters from.
+ *
+ * @returns `string`
+ *
  * @public
  */
 function rmEscapes(str) {
@@ -100401,9 +101411,13 @@ function rmEscapes(str) {
     return clean;
 }
 /**
- * Performs a recursive Object.assign like operation.
- * @param a - An object to be extended by object b
- * @param b - An object to copy values from
+ * Performs a recursive `Object.assign`-like operation.
+ *
+ * @param a - An object to be assigned.
+ * @param b - An object to get values from.
+ *
+ * @returns `A & B`
+ *
  * @public
  */
 function assignDeep(a, b) {
@@ -100427,7 +101441,11 @@ function assignDeep(a, b) {
 /**
  * Filters out values from an object that should not be considered "props" of
  * a core node, like "value" and "name".
- * @param attrs - An object to extract core node config from.
+ *
+ * @param sets - The arrays to get values filtered out of.
+ *
+ * @returns `Record<string, any>`
+ *
  * @public
  */
 function nodeProps(...sets) {
@@ -100437,8 +101455,12 @@ function nodeProps(...sets) {
     }, {});
 }
 /**
- * Parse a string for comma-separated arguments
- * @param str - A string to parse
+ * Parse a string for comma-separated arguments.
+ *
+ * @param str - String to parse arguments from.
+ *
+ * @returns `string[]`
+ *
  * @public
  */
 function parseArgs(str) {
@@ -100476,10 +101498,14 @@ function parseArgs(str) {
     return args;
 }
 /**
- * Return a new (shallow) object with all properties from a given object
- * that are present in the array.
- * @param obj - An object to clone
- * @param toRemove - An array of keys to remove
+ * Return a new (shallow) object with any desired props removed.
+ *
+ * @param obj - The starting object.
+ * @param toRemove - The array of properties to remove. Accepts strings or
+ * regular expressions.
+ *
+ * @returns `Record<string, any>`
+ *
  * @public
  */
 function except(obj, toRemove) {
@@ -100495,11 +101521,14 @@ function except(obj, toRemove) {
 }
 /**
  * Extracts a set of keys from a given object. Importantly, this will extract
- * values even if they are not set on the original object they will just have an
- * undefined value.
- * @param obj - An object to extract values from
- * @param include - A set of keys to extract
- * @returns
+ * values even if they are not set on the original object — they will just have
+ * an undefined value.
+ *
+ * @param obj - The object to get values from.
+ * @param include - The array of items to get.
+ *
+ * @returns `Record<string, any>`
+ *
  * @public
  */
 function only(obj, include) {
@@ -100518,9 +101547,12 @@ function only(obj, include) {
     return clean;
 }
 /**
- * This converts kebab-case to camelCase. It ONLY converts from kebab for
- * efficiency stake.
- * @param str - String to convert.
+ * This converts kebab-case to camelCase. It ONLY converts from kebab to camel.
+ *
+ * @param str - String to be camel cased.
+ *
+ * @returns `string`
+ *
  * @public
  */
 function camel(str) {
@@ -100528,8 +101560,11 @@ function camel(str) {
 }
 /**
  * This converts camel-case to kebab case. It ONLY converts from camel to kebab.
- * @param str - Converts camel to kebab
- * @returns
+ *
+ * @param str - String to be kebabed.
+ *
+ * @returns `string`
+ *
  * @public
  */
 function kebab(str) {
@@ -100539,9 +101574,13 @@ function kebab(str) {
         .toLowerCase();
 }
 /**
- * Very shallowly clones the given object.
- * @param obj - The object to shallow clone
- * @returns
+ * Shallowly clones the given object.
+ *
+ * @param obj - Object to be shallowly cloned.
+ * @param explicit - The array of keys to be explicity cloned.
+ *
+ * @returns `T`
+ *
  * @public
  */
 function shallowClone(obj, explicit = explicitKeys) {
@@ -100559,9 +101598,14 @@ function shallowClone(obj, explicit = explicitKeys) {
     return obj;
 }
 /**
- * Perform a recursive clone on a given object. This only intended to be used
- * for simple objects like arrays and pojos.
- * @param obj - Object to clone
+ * Perform a recursive clone on a given object. Only intended to be used
+ * for simple objects like arrays and POJOs.
+ *
+ * @param obj - Object to be cloned.
+ * @param explicit - Array of items to be explicity cloned.
+ *
+ * @returns `T`
+ *
  * @public
  */
 function clone(obj, explicit = explicitKeys) {
@@ -100600,9 +101644,13 @@ function clone(obj, explicit = explicitKeys) {
     return returnObject;
 }
 /**
- * Clones anything. If the item is scalar, no worries, it passes it back. if it
+ * Clones anything. If the item is scalar, no worries, it passes it back. If it
  * is an object, it performs a (fast/loose) clone operation.
- * @param obj - The object to clone
+ *
+ * @param obj - The value to be cloned.
+ *
+ * @returns `T`
+ *
  * @public
  */
 function cloneAny(obj) {
@@ -100612,8 +101660,12 @@ function cloneAny(obj) {
 }
 /**
  * Get a specific value via dot notation.
- * @param obj - An object to fetch data from
- * @param addr - An "address" in dot notation
+ *
+ * @param obj - An object to fetch data from.
+ * @param addr - An "address" in dot notation.
+ *
+ * @returns `unknown`
+ *
  * @public
  */
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
@@ -100636,11 +101688,14 @@ function getAt(obj, addr) {
 }
 /**
  * Determines if the value of a prop that is either present (true) or not
- * present (undefined). For example the prop disabled should disable
+ * present (undefined). For example, the prop disabled should disable
  * by just existing, but what if it is set to the string "false" — then it
  * should not be disabled.
- * @param value - value to be checked
- * @returns
+ *
+ * @param value - Value to check for undefined.
+ *
+ * @returns `true | undefined`
+ *
  * @public
  */
 function undefine(value) {
@@ -100650,8 +101705,11 @@ function undefine(value) {
 }
 /**
  * Defines an object as an initial value.
- * @param obj - Object
- * @returns
+ *
+ * @param obj - Object to be added an initial value.
+ *
+ * @returns `T & { __init?: true }`
+ *
  * @public
  */
 /* eslint-disable-next-line @typescript-eslint/ban-types */
@@ -100664,7 +101722,12 @@ function init(obj) {
         : obj;
 }
 /**
- * Turn any string into a URL/DOM safe string.
+ * Turn any string into a URL/DOM-safe string.
+ *
+ * @param str - String to be slugified to a URL-safe string.
+ *
+ * @returns `string`
+ *
  * @public
  */
 function slugify(str) {
@@ -100678,7 +101741,12 @@ function slugify(str) {
 }
 /**
  * Spreads an object or an array, otherwise returns the same value.
- * @param obj - Any value, but will spread objects and arrays
+ *
+ * @param obj - The object to be spread.
+ * @param explicit - The array of items to be explicity spread.
+ *
+ * @returns `T`
+ *
  * @public
  */
 function spread(obj, explicit = explicitKeys) {
@@ -100701,9 +101769,14 @@ function spread(obj, explicit = explicitKeys) {
 }
 /**
  * Apply non enumerable properties to an object.
- * @param obj - The object to apply non-enumerable properties to
- * @param explicit - An array of non-enumerable properties to apply
- * @internal
+ *
+ * @param original - Original object
+ * @param obj - Objecto to aplly the values
+ * @param explicit - Array of items to be explicity added.
+ *
+ * @returns `T`
+ *
+ * @public
  */
 // eslint-disable-next-line @typescript-eslint/ban-types
 function applyExplicit(original, obj, explicit) {
@@ -100732,6 +101805,7 @@ function applyExplicit(original, obj, explicit) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createMessageName": () => (/* binding */ createMessageName),
 /* harmony export */   "createValidationPlugin": () => (/* binding */ createValidationPlugin),
 /* harmony export */   "getValidationMessages": () => (/* binding */ getValidationMessages)
 /* harmony export */ });
@@ -100753,16 +101827,16 @@ const validatingMessage = (0,_formkit_core__WEBPACK_IMPORTED_MODULE_0__.createMe
     key: 'validating',
 });
 /**
- * The actual validation plugin function, everything must be bootstrapped here.
- * @param node - The node to bind validation to.
+ * The actual validation plugin function. Everything must be bootstrapped here.
+ * @param baseRules - Base validation rules to include in the plugin. By default,
+ * FormKit makes all rules in the @formkit/rules package available via the
+ * defaultConfig.
  * @public
  */
 function createValidationPlugin(baseRules = {}) {
     return function validationPlugin(node) {
-        let availableRules = {
-            ...baseRules,
-            ...(0,_formkit_utils__WEBPACK_IMPORTED_MODULE_2__.cloneAny)(node.props.validationRules),
-        };
+        let propRules = (0,_formkit_utils__WEBPACK_IMPORTED_MODULE_2__.cloneAny)(node.props.validationRules || {});
+        let availableRules = { ...baseRules, ...propRules };
         // create an observed node
         let observedNode = (0,_formkit_observer__WEBPACK_IMPORTED_MODULE_1__.createObserver)(node);
         const state = { input: (0,_formkit_utils__WEBPACK_IMPORTED_MODULE_2__.token)(), rerun: null, isPassing: true };
@@ -100777,12 +101851,20 @@ function createValidationPlugin(baseRules = {}) {
          * @returns
          */
         function reboot(newValidation, newRules) {
-            if ((0,_formkit_utils__WEBPACK_IMPORTED_MODULE_2__.eq)(availableRules, newRules) && (0,_formkit_utils__WEBPACK_IMPORTED_MODULE_2__.eq)(validation, newValidation))
+            var _a;
+            if ((0,_formkit_utils__WEBPACK_IMPORTED_MODULE_2__.eq)(Object.keys(propRules || {}), Object.keys(newRules || {})) &&
+                (0,_formkit_utils__WEBPACK_IMPORTED_MODULE_2__.eq)(validation, newValidation))
                 return;
+            propRules = (0,_formkit_utils__WEBPACK_IMPORTED_MODULE_2__.cloneAny)(newRules);
             validation = (0,_formkit_utils__WEBPACK_IMPORTED_MODULE_2__.cloneAny)(newValidation);
-            availableRules = { ...baseRules, ...(0,_formkit_utils__WEBPACK_IMPORTED_MODULE_2__.cloneAny)(node.props.validationRules) };
+            availableRules = { ...baseRules, ...propRules };
             // Destroy all observers that may re-trigger validation on an old stack
             (0,_formkit_observer__WEBPACK_IMPORTED_MODULE_1__.removeListeners)(observedNode.receipts);
+            // Clear existing message observers
+            (_a = node.props.parsedRules) === null || _a === void 0 ? void 0 : _a.forEach((validation) => {
+                var _a;
+                validation.messageObserver = (_a = validation.messageObserver) === null || _a === void 0 ? void 0 : _a.kill();
+            });
             // Remove all existing messages before re-validating
             node.store.filter(() => false, 'validation');
             node.props.parsedRules = parseRules(newValidation, availableRules);
@@ -100924,6 +102006,9 @@ function runRule(validation, node, after) {
  */
 function removeMessage(node, validation) {
     const key = `rule_${validation.name}`;
+    if (validation.messageObserver) {
+        validation.messageObserver = validation.messageObserver.kill();
+    }
     if ((0,_formkit_utils__WEBPACK_IMPORTED_MODULE_2__.has)(node.store, key)) {
         node.store.remove(key);
     }
@@ -100934,38 +102019,46 @@ function removeMessage(node, validation) {
  * @param validation - The validation object
  */
 function createFailedMessage(node, validation, removeImmediately) {
-    const i18nArgs = createI18nArgs(node, validation);
-    const customMessage = createCustomMessage(node, validation, i18nArgs);
-    // Here we short circuit the i18n system to force the output.
-    const message = (0,_formkit_core__WEBPACK_IMPORTED_MODULE_0__.createMessage)({
-        blocking: validation.blocking,
-        key: `rule_${validation.name}`,
-        meta: {
-            /**
-             * Use this key instead of the message root key to produce i18n validation
-             * messages.
-             */
-            messageKey: validation.name,
-            /**
-             * For messages that were created *by or after* a debounced or async
-             * validation rule — we make note of it so we can immediately remove them
-             * as soon as the next commit happens.
-             */
-            removeImmediately,
-            /**
-             * Determines if this message should be passed to localization.
-             */
-            localize: !customMessage,
-            /**
-             * The arguments that will be passed to the validation rules
-             */
-            i18nArgs,
-        },
-        type: 'validation',
-        value: customMessage || 'This field is not valid.',
+    if ((0,_formkit_observer__WEBPACK_IMPORTED_MODULE_1__.isKilled)(node))
+        return;
+    if (!validation.messageObserver) {
+        validation.messageObserver = (0,_formkit_observer__WEBPACK_IMPORTED_MODULE_1__.createObserver)(node._node);
+    }
+    validation.messageObserver.watch((node) => {
+        const i18nArgs = createI18nArgs(node, validation);
+        return i18nArgs;
+    }, (i18nArgs) => {
+        const customMessage = createCustomMessage(node, validation, i18nArgs);
+        // Here we short circuit the i18n system to force the output.
+        const message = (0,_formkit_core__WEBPACK_IMPORTED_MODULE_0__.createMessage)({
+            blocking: validation.blocking,
+            key: `rule_${validation.name}`,
+            meta: {
+                /**
+                 * Use this key instead of the message root key to produce i18n validation
+                 * messages.
+                 */
+                messageKey: validation.name,
+                /**
+                 * For messages that were created *by or after* a debounced or async
+                 * validation rule — we make note of it so we can immediately remove them
+                 * as soon as the next commit happens.
+                 */
+                removeImmediately,
+                /**
+                 * Determines if this message should be passed to localization.
+                 */
+                localize: !customMessage,
+                /**
+                 * The arguments that will be passed to the validation rules
+                 */
+                i18nArgs,
+            },
+            type: 'validation',
+            value: customMessage || 'This field is not valid.',
+        });
+        node.store.set(message);
     });
-    node.store.set(message);
-    return message;
 }
 /**
  * Returns a custom validation message if applicable.
@@ -100998,9 +102091,12 @@ function createI18nArgs(node, validation) {
     ];
 }
 /**
- * The name used in validation messages.
+ * Given a node, this returns the name that should be used in validation
+ * messages. This is either the `validationLabel` prop, the `label` prop, or
+ * the name of the input (in that order).
  * @param node - The node to display
  * @returns
+ * @public
  */
 function createMessageName(node) {
     if (typeof node.props.validationLabel === 'function') {
@@ -101176,7 +102272,7 @@ function fnHints(existingHints, rule) {
 }
 /**
  * Extracts all validation messages from the given node and all its descendants.
- * This is not reactive and must be re called each time the messages change.
+ * This is not reactive and must be re-called each time the messages change.
  * @param node - The FormKit node to extract validation rules from — as well as its descendants.
  * @public
  */
@@ -101218,6 +102314,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "FormKit": () => (/* binding */ FormKit),
 /* harmony export */   "FormKitIcon": () => (/* binding */ FormKitIcon),
+/* harmony export */   "FormKitMessages": () => (/* binding */ FormKitMessages),
 /* harmony export */   "FormKitSchema": () => (/* binding */ FormKitSchema),
 /* harmony export */   "bindings": () => (/* binding */ vueBindings),
 /* harmony export */   "clearErrors": () => (/* reexport safe */ _formkit_core__WEBPACK_IMPORTED_MODULE_0__.clearErrors),
@@ -101801,20 +102898,23 @@ function createRenderFn(instanceCreator, data, instanceKey) {
         return requirements.reduce((tokens, token) => {
             if (token.startsWith('slots.')) {
                 const slot = token.substring(6);
-                const hasSlot = data.slots && (0,_formkit_utils__WEBPACK_IMPORTED_MODULE_2__.has)(data.slots, slot);
+                const hasSlot = () => data.slots &&
+                    (0,_formkit_utils__WEBPACK_IMPORTED_MODULE_2__.has)(data.slots, slot) &&
+                    typeof data.slots[slot] === 'function';
                 if (hints.if) {
                     // If statement — dont render the slot, check if it exists
-                    tokens[token] = () => hasSlot;
+                    tokens[token] = hasSlot;
                 }
-                else if (data.slots && hasSlot) {
+                else if (data.slots) {
                     // Render the slot with current scope data
                     const scopedData = slotData(data, instanceKey);
-                    tokens[token] = () => data.slots[slot](scopedData);
-                    return tokens;
+                    tokens[token] = () => hasSlot() ? data.slots[slot](scopedData) : null;
                 }
             }
-            const value = getRef(token, data);
-            tokens[token] = () => useScope(token, value.value);
+            else {
+                const value = getRef(token, data);
+                tokens[token] = () => useScope(token, value.value);
+            }
             return tokens;
         }, {});
     }, instanceKey);
@@ -101822,6 +102922,7 @@ function createRenderFn(instanceCreator, data, instanceKey) {
 let i = 0;
 /**
  * The FormKitSchema vue component:
+ *
  * @public
  */
 const FormKitSchema = (0,vue__WEBPACK_IMPORTED_MODULE_1__.defineComponent)({
@@ -101948,11 +103049,13 @@ const props = nativeProps;
 
 /**
  * The symbol that represents the formkit parent injection value.
+ *
  * @public
  */
 const parentSymbol = Symbol('FormKitParent');
 /**
  * The root FormKit component.
+ *
  * @public
  */
 const FormKit = (0,vue__WEBPACK_IMPORTED_MODULE_1__.defineComponent)({
@@ -102005,8 +103108,11 @@ const FormKit = (0,vue__WEBPACK_IMPORTED_MODULE_1__.defineComponent)({
 
 /**
  * The Create a new instance of the FormKit plugin for Vue.
+ *
  * @param app - A Vue application
  * @param config - FormKit Vue plugin configuration options
+ *
+ * @internal
  */
 function createPlugin(app, options) {
     app
@@ -102028,16 +103134,19 @@ function createPlugin(app, options) {
 }
 /**
  * The symbol key for accessing the FormKit node options.
+ *
  * @public
  */
 const optionsSymbol = Symbol.for('FormKitOptions');
 /**
  * The symbol key for accessing FormKit root configuration.
+ *
  * @public
  */
 const configSymbol = Symbol.for('FormKitConfig');
 /**
  * Create the FormKit plugin.
+ *
  * @public
  */
 const plugin = {
@@ -102078,9 +103187,11 @@ const plugin = {
  */
 const invalidGet = Symbol();
 /**
+ * A special watcher for Vue that reports the location of a deep mutation.
  *
- * @param obj - An object to observe at depth
- * @param callback - A callback that
+ * @param obj - An object to observe at depth.
+ * @param callback - A callback to call when a change is detected.
+ *
  * @public
  */
 function watchVerbose(obj, callback) {
@@ -102299,12 +103410,16 @@ function onlyListeners(props) {
 }
 /**
  * A composable for creating a new FormKit node.
+ *
  * @param type - The type of node (input, group, list)
  * @param attrs - The FormKit "props" — which is really the attrs list.
- * @returns
+ *
+ * @returns {@link @formkit/core#FormKitNode | FormKitNode}
+ *
  * @public
  */
 function useInput(props, context, options = {}) {
+    var _a;
     /**
      * The configuration options, these are provided by either the plugin or by
      * explicit props.
@@ -102319,9 +103434,11 @@ function useInput(props, context, options = {}) {
      */
     const listeners = onlyListeners(instance === null || instance === void 0 ? void 0 : instance.vnode.props);
     /**
-     * Determines if the prop is v-modeled.
+     * Determines if the prop is v-modeled. Credit to:
+     * {@link https://github.com/LinusBorg | Thorsten Lünborg}
+     * for coming up with this solution.
      */
-    const isVModeled = props.modelValue !== undefined;
+    const isVModeled = 'modelValue' in ((_a = instance === null || instance === void 0 ? void 0 : instance.vnode.props) !== null && _a !== void 0 ? _a : {});
     /**
      * Determines if the object being passed as a v-model is reactive.
      */
@@ -102453,6 +103570,10 @@ function useInput(props, context, options = {}) {
      */
     (0,vue__WEBPACK_IMPORTED_MODULE_1__.watchEffect)(() => {
         const attrs = (0,_formkit_utils__WEBPACK_IMPORTED_MODULE_2__.except)((0,_formkit_utils__WEBPACK_IMPORTED_MODULE_2__.nodeProps)(context.attrs), pseudoPropNames.value);
+        // An explicit exception to ensure naked "multiple" attributes appear on the
+        // outer wrapper as data-multiple="true"
+        if ('multiple' in attrs)
+            attrs.multiple = (0,_formkit_utils__WEBPACK_IMPORTED_MODULE_2__.undefine)(attrs.multiple);
         node.props.attrs = Object.assign({}, node.props.attrs || {}, attrs);
     });
     /**
@@ -102578,7 +103699,12 @@ function isComponent(obj) {
  * FormKit features in place such as labels, help text, validation messages, and
  * class support.
  *
- * @param schemaOrComponent - The actual schema of the input.
+ * @param schemaOrComponent - The actual schema of the input or the component.
+ * @param definitionOptions - Any options in the FormKitTypeDefinition you want
+ * to define.
+ *
+ * @returns {@link @formkit/core#FormKitTypeDefinition | FormKitTypeDefinition}
+ *
  * @public
  */
 function createInput(schemaOrComponent, definitionOptions = {}) {
@@ -102609,8 +103735,80 @@ function createInput(schemaOrComponent, definitionOptions = {}) {
 }
 
 /**
+ * @internal
+ */
+const messages = (0,_formkit_inputs__WEBPACK_IMPORTED_MODULE_3__.createSection)('messages', () => ({
+    $el: 'ul',
+    if: '$fns.length($messages)',
+}), true);
+/**
+ * @internal
+ */
+const message = (0,_formkit_inputs__WEBPACK_IMPORTED_MODULE_3__.createSection)('message', () => ({
+    $el: 'li',
+    for: ['message', '$messages'],
+    attrs: {
+        key: '$message.key',
+        id: `$id + '-' + $message.key`,
+        'data-message-type': '$message.type',
+    },
+}));
+/**
+ * The actual schema to render for the messages.
+ */
+const definition = messages(message('$message.value'));
+/**
+ * Renders the messages for a parent node, or any node explicitly passed to it.
+ * @public
+ */
+const FormKitMessages = (0,vue__WEBPACK_IMPORTED_MODULE_1__.defineComponent)({
+    props: {
+        node: {
+            type: Object,
+            required: false,
+        },
+        sectionsSchema: {
+            type: Object,
+            default: {},
+        },
+        defaultPosition: {
+            type: [String, Boolean],
+            default: false,
+        },
+    },
+    setup(props, context) {
+        const node = (0,vue__WEBPACK_IMPORTED_MODULE_1__.computed)(() => {
+            return props.node || (0,vue__WEBPACK_IMPORTED_MODULE_1__.inject)(parentSymbol, undefined);
+        });
+        (0,vue__WEBPACK_IMPORTED_MODULE_1__.watch)(node, () => {
+            var _a;
+            if (((_a = node.value) === null || _a === void 0 ? void 0 : _a.context) && !(0,_formkit_utils__WEBPACK_IMPORTED_MODULE_2__.undefine)(props.defaultPosition)) {
+                node.value.context.defaultMessagePlacement = false;
+            }
+        }, { immediate: true });
+        const schema = definition(props.sectionsSchema || {});
+        const data = (0,vue__WEBPACK_IMPORTED_MODULE_1__.computed)(() => {
+            var _a, _b, _c, _d, _e, _f;
+            return {
+                messages: ((_b = (_a = node.value) === null || _a === void 0 ? void 0 : _a.context) === null || _b === void 0 ? void 0 : _b.messages) || {},
+                fns: ((_d = (_c = node.value) === null || _c === void 0 ? void 0 : _c.context) === null || _d === void 0 ? void 0 : _d.fns) || {},
+                classes: ((_f = (_e = node.value) === null || _e === void 0 ? void 0 : _e.context) === null || _f === void 0 ? void 0 : _f.classes) || {},
+            };
+        });
+        return () => {
+            var _a;
+            return ((_a = node.value) === null || _a === void 0 ? void 0 : _a.context)
+                ? (0,vue__WEBPACK_IMPORTED_MODULE_1__.h)(FormKitSchema, { schema, data: data.value }, { ...context.slots })
+                : null;
+        };
+    },
+});
+
+/**
  * A plugin that creates Vue-specific context object on each given node.
+ *
  * @param node - FormKitNode to create the context on.
+ *
  * @public
  */
 const vueBindings = function vueBindings(node) {
@@ -102730,7 +103928,7 @@ const vueBindings = function vueBindings(node) {
                         const classesPropClasses = (0,_formkit_core__WEBPACK_IMPORTED_MODULE_0__.createClasses)(property, node, node.props[`_${property}Class`]);
                         const sectionPropClasses = (0,_formkit_core__WEBPACK_IMPORTED_MODULE_0__.createClasses)(property, node, node.props[`${property}Class`]);
                         className = (0,_formkit_core__WEBPACK_IMPORTED_MODULE_0__.generateClassList)(node, property, rootClasses, globalConfigClasses, classesPropClasses, sectionPropClasses);
-                        target[property] = className;
+                        target[property] = className !== null && className !== void 0 ? className : '';
                     });
                 }
             }
@@ -102782,6 +103980,7 @@ const vueBindings = function vueBindings(node) {
         messages,
         node: (0,vue__WEBPACK_IMPORTED_MODULE_1__.markRaw)(node),
         options: node.props.options,
+        defaultMessagePlacement: true,
         state: {
             blurred: false,
             complete: isComplete,
@@ -102962,6 +104161,7 @@ const vueBindings = function vueBindings(node) {
 /**
  * Default configuration options. Includes all validation rules,
  * en i18n messages.
+ *
  * @public
  */
 const defaultConfig = (options = {}) => {
@@ -102996,6 +104196,7 @@ const defaultConfig = (options = {}) => {
 
 /**
  * Renders an icon using the current IconLoader set at the root FormKit config
+ *
  * @public
  */
 const FormKitIcon = (0,vue__WEBPACK_IMPORTED_MODULE_1__.defineComponent)({
@@ -103020,6 +104221,19 @@ const FormKitIcon = (0,vue__WEBPACK_IMPORTED_MODULE_1__.defineComponent)({
         const config = (0,vue__WEBPACK_IMPORTED_MODULE_1__.inject)(optionsSymbol, {});
         const parent = (0,vue__WEBPACK_IMPORTED_MODULE_1__.inject)(parentSymbol, null);
         let iconHandler = undefined;
+        function loadIcon() {
+            if (!iconHandler || typeof iconHandler !== 'function')
+                return;
+            const iconOrPromise = iconHandler(props.icon);
+            if (iconOrPromise instanceof Promise) {
+                iconOrPromise.then((iconValue) => {
+                    icon.value = iconValue;
+                });
+            }
+            else {
+                icon.value = iconOrPromise;
+            }
+        }
         if (props.iconLoader && typeof props.iconLoader === 'function') {
             // if we have a locally supplied loader, then use it
             iconHandler = (0,_formkit_themes__WEBPACK_IMPORTED_MODULE_7__.createIconHandler)(props.iconLoader);
@@ -103040,19 +104254,11 @@ const FormKitIcon = (0,vue__WEBPACK_IMPORTED_MODULE_1__.defineComponent)({
                 iconHandler = iconPlugin.iconHandler;
             }
         }
-        if (iconHandler && typeof iconHandler === 'function') {
-            const iconOrPromise = iconHandler(props.icon);
-            if (iconOrPromise instanceof Promise) {
-                iconOrPromise.then((iconValue) => {
-                    icon.value = iconValue;
-                });
-            }
-            else {
-                icon.value = iconOrPromise;
-            }
-        }
+        (0,vue__WEBPACK_IMPORTED_MODULE_1__.watch)(() => props.icon, () => {
+            loadIcon();
+        }, { immediate: true });
         return () => {
-            if (icon.value) {
+            if (props.icon && icon.value) {
                 return (0,vue__WEBPACK_IMPORTED_MODULE_1__.h)('span', {
                     class: 'formkit-icon',
                     innerHTML: icon.value
