@@ -17,7 +17,7 @@
                     <div class="p-3 position-absolute rounded sub-menu w-50 z-9999"  style="background: #018787;display: none;">
                         <div class="d-flex justify-content-between" >
                             <div class="mx-1 region w-25">
-                                <div class="border-bottom border-secondary name-region fs-5  fw-bolder" >شرقية</div>
+                                <div style="border-bottom:1px solid #fcfdff54 ;" class="name-region fs-5  fw-bolder" >شرقية</div>
                                 <div class="items">
                 <li><a href="#" class="text-decoration-none fs-6 mb-1 mt-1 text-white">azeaeazzae</a></li>
                 <li><a href="#" class="text-decoration-none fs-6 mb-1 mt-1 text-white">azeaeazzae</a></li>
@@ -25,25 +25,25 @@
             </div>
         </div>
         <div class="mx-1 region w-25">
-            <div class="border-bottom border-secondary name-region fs-5" >شرقية</div>
+            <div style="border-bottom:1px solid #fcfdff54 ;" class="name-region fs-5" >شرقية</div>
             <div class="items" >
                 <li><a href="#" class="text-decoration-none fs-6 mb-1 mt-1 text-white">azeaeazzae</a></li>
             </div>
         </div>
         <div class="mx-1 region w-25">
-            <div class="border-bottom border-secondary name-region fs-5" >شرقية</div>
+            <div style="border-bottom:1px solid #fcfdff54 ;" class="name-region fs-5" >شرقية</div>
             <div class="items" >
                 <li><a href="#" class="text-decoration-none fs-6 mb-1 mt-1 text-white">azeaeazzae</a></li>
             </div>
         </div>
         <div class="mx-1 region w-25">
-            <div class="border-bottom border-secondary name-region fs-5" >شرقية</div>
+            <div style="border-bottom:1px solid #fcfdff54 ;" class="name-region fs-5" >شرقية</div>
             <div class="items" >
                 <li><a href="#" class="text-decoration-none fs-6 mb-1 mt-1 text-white">azeaeazzae</a></li>
             </div>
         </div>
         <div class="mx-1 region w-25" >
-            <div class="border-bottom border-secondary name-region fs-5" >شرقية</div>
+            <div style="border-bottom:1px solid #fcfdff54 ;" class="name-region fs-5" >شرقية</div>
             <div class="items" >
                 <li class="fs-6">aeaezaeza</li>
             </div>
