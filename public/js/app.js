@@ -26723,7 +26723,7 @@ __webpack_require__.r(__webpack_exports__);
       effectImg: false,
       imgBestRecipe: false,
       show: "",
-      activeComponent: ''
+      activeComponent: ""
     };
   },
   methods: {
@@ -26739,7 +26739,7 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {});
     },
     autoType: function autoType() {
-      new (typewriter_effect_dist_core__WEBPACK_IMPORTED_MODULE_0___default())("#title", {
+      new (typewriter_effect_dist_core__WEBPACK_IMPORTED_MODULE_0___default())("#name-regione", {
         strings: ["ماعرفتيش واش طيبي <br> !!!  ", "عدنا الحل"],
         autoStart: true,
         loop: true
@@ -26766,39 +26766,40 @@ __webpack_require__.r(__webpack_exports__);
     EffectBestRecipe: function EffectBestRecipe() {
       this.imgBestRecipe = !this.imgBestRecipe;
       if (this.imgBestRecipe) {
-        $(event.target).find('.opc').css('opacity', '0.7');
-        $(event.target).find('.icon').css('opacity', '1');
+        $(event.target).find(".opc").css("opacity", "0.7");
+        $(event.target).find(".icon").css("opacity", "1");
       } else {
-        $(event.target).find('.opc').css('opacity', '0');
-        $(event.target).find('.icon').css('opacity', '0');
+        $(event.target).find(".opc").css("opacity", "0");
+        $(event.target).find(".icon").css("opacity", "0");
       }
     },
     scrollSlider: function scrollSlider(action, name_slider) {
       var show = document.getElementById(name_slider);
       var right = parseInt(show.style.right);
       var widthSlider = show.offsetWidth;
-      console.log(right - widthSlider);
-      console.log('right => ' + right);
-      console.log('left => ' + show.offsetLeft);
-      console.log(' width => ' + widthSlider);
-      if (action === 'right') {
+      if (action === "right") {
         if (right < widthSlider - 300) {
-          show.style.right = right + 300 + 'px';
+          show.style.right = right + 300 + "px";
         } else {
-          show.style.right = '0px';
+          show.style.right = "0px";
         }
       } else {
         if (right > 0) {
-          show.style.right = right - 300 + 'px';
+          show.style.right = right - 300 + "px";
         }
       }
     },
     wheneScroll: function wheneScroll() {
-      if ($(window).scrollTop() > 300) {
-        $('#navigation-bar').fadeIn('slow');
+      if ($(window).scrollTop() > 200) {
+        $("#home-navbar").fadeIn("slow");
       } else {
-        $('#navigation-bar').fadeOut();
+        $("#home-navbar").fadeOut("fast");
       }
+    },
+    hoverLink: function hoverLink() {
+      $(".index-nav li a").removeClass("link-active");
+      $(event.target).addClass("link-active");
+      $(event.target).find('.sub-menu').fadeToggle();
     }
   }
 });
@@ -28457,11 +28458,43 @@ var _hoisted_2 = {
   },
   dir: "ltr"
 };
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "position-absolute text-center w-50 z-9999",
+var _hoisted_3 = {
+  "class": "index-nav h-auto position-absolute top-0 w-100 z-9999"
+};
+var _hoisted_4 = {
+  "class": "align-items-center d-flex flex-row font-amiri justify-content-around justify-content-center mx-auto nav p-3 w-50",
+  style: {
+    "color": "white"
+  }
+};
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<a href=\"#\" class=\"fw-bolder p-2 rounded text-decoration-none link-active\" style=\"color:white;\">معجنات</a><div class=\"p-3 position-absolute rounded sub-menu w-50 z-9999\" style=\"background:#018787;display:none;\"><div class=\"d-flex justify-content-between\"><div class=\"mx-1 region w-25\"><div class=\"border-bottom border-secondary name-region fs-5 fw-bolder\">شرقية</div><div class=\"items\"><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li></div></div><div class=\"mx-1 region w-25\"><div class=\"border-bottom border-secondary name-region fs-5\">شرقية</div><div class=\"items\"><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li></div></div><div class=\"mx-1 region w-25\"><div class=\"border-bottom border-secondary name-region fs-5\">شرقية</div><div class=\"items\"><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li></div></div><div class=\"mx-1 region w-25\"><div class=\"border-bottom border-secondary name-region fs-5\">شرقية</div><div class=\"items\"><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li></div></div><div class=\"mx-1 region w-25\"><div class=\"border-bottom border-secondary name-region fs-5\">شرقية</div><div class=\"items\"><li class=\"fs-6\">aeaezaeza</li></div></div></div></div>", 2);
+var _hoisted_7 = [_hoisted_5];
+var _hoisted_8 = {
+  "class": "fs-4"
+};
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+  "class": "fs-3 position-relative",
+  style: {}
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "http://127.0.0.1:8000/images/logo2.png",
+  alt: "",
+  style: {
+    "width": "138px",
+    "position": "relative"
+  },
+  "class": ""
+})], -1 /* HOISTED */);
+var _hoisted_10 = {
+  "class": "fs-4"
+};
+var _hoisted_11 = {
+  "class": "fs-4"
+};
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "position-absolute text-center w-50 z-8888",
   style: {
     "left": "25%",
-    "top": "10%",
+    "top": "15%",
     "mix-blend-mode": "screen"
   }
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -28469,41 +28502,45 @@ var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   style: {
     "letter-spacing": "15px"
   }
-}, "COUSINTI")], -1 /* HOISTED */);
-var _hoisted_4 = {
+}, " COUSINTI ")], -1 /* HOISTED */);
+var _hoisted_13 = {
   "class": "center-text h-50 position-absolute w-100 z-5555 d-flex justify-content-center flex-column",
   style: {
-    "top": "25%"
+    "top": "30%"
   }
 };
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "mt-5 mb-5"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "title display-4 font-amiri text-center text-white fw-bolder",
-  id: "title"
-})], -1 /* HOISTED */);
-var _hoisted_6 = {
+  "class": "name-regione display-4 font-amiri text-center text-white fw-bolder",
+  id: "name-regione"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "Typewriter__wrapper"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("ماعرفتيش واش طيبي "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" !!! ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "Typewriter__cursor"
+}, "|")])], -1 /* HOISTED */);
+var _hoisted_15 = {
   "class": "steps"
 };
-var _hoisted_7 = {
+var _hoisted_16 = {
   "class": "container"
 };
-var _hoisted_8 = {
+var _hoisted_17 = {
   "class": "bg-body h-auto mt-sm-5 mx-sm-auto shape col-12 col-md-5",
   style: {
     "border-radius": "22% 0%",
     "height": "174px"
   }
 };
-var _hoisted_9 = {
+var _hoisted_18 = {
   "class": "d-flex flex-column h-75 items justify-content-around p-5",
   dir: "rtl"
 };
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"title font-amiri fs-3 fw-bold text-black-title text-center\"> اجعل يومك احلي في 3 خطوات </div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div>", 4);
-var _hoisted_14 = {
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"name-regione font-amiri fs-3 fw-bold text-black-name-regione text-center\"> اجعل يومك احلي في 3 خطوات </div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div>", 4);
+var _hoisted_23 = {
   "class": "font-amiri random text-center"
 };
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "cover position-relative"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "w-100 h-100 opacity-75 bg-perso position-absolute",
@@ -28511,43 +28548,43 @@ var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
     "background": "linear-gradient(177deg,rgb(83, 196, 180),#ffffffb8)"
   }
 })], -1 /* HOISTED */);
-var _hoisted_16 = {
+var _hoisted_25 = {
   "class": "choose_food h-auto mb-5 mt-5",
   style: {
     "width": "100",
     "height": "900px"
   }
 };
-var _hoisted_17 = {
+var _hoisted_26 = {
   "class": "container"
 };
-var _hoisted_18 = {
+var _hoisted_27 = {
   "class": "row"
 };
-var _hoisted_19 = {
+var _hoisted_28 = {
   "class": "align-items-center col-12 text-dark d-flex flex-row-reverse justify-content-center mb-5 text-center"
 };
-var _hoisted_20 = ["src"];
-var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
-  "class": "text-black-title h2"
+var _hoisted_29 = ["src"];
+var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
+  "class": "text-black-name-regione h2"
 }, "انواع الوصفات", -1 /* HOISTED */);
-var _hoisted_22 = ["src"];
-var _hoisted_23 = ["id"];
-var _hoisted_24 = {
+var _hoisted_31 = ["src"];
+var _hoisted_32 = ["id"];
+var _hoisted_33 = {
   "class": "d-flex flex-column h-100 justify-content-around position-absolute w-100 z-8888"
 };
-var _hoisted_25 = {
+var _hoisted_34 = {
   "class": "d-flex flex-column justify-content-around text-center text-white squar",
   style: {
     "background": "#17a2b8b8",
     "height": "10%"
   }
 };
-var _hoisted_26 = ["href"];
-var _hoisted_27 = {
+var _hoisted_35 = ["href"];
+var _hoisted_36 = {
   "class": "font-amiri h4 text-white"
 };
-var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_37 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "bg-dark w-100",
   style: {
     "height": "350px"
@@ -28560,174 +28597,209 @@ var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "h-100 w-100",
   style: {}
 })]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"triange\"\r\n                             id=\"triangle-bottomright\">\r\n                        </div> ")], -1 /* HOISTED */);
-var _hoisted_29 = {
+var _hoisted_38 = {
   "class": "best-of-recipe mb-5 p-3 px-0"
 };
-var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"font-amiri mb-5 pb-3 text-center w-100\" style=\"border-bottom:1px solid lightgrey;border-right:799px solid transparent;border-left:800px solid transparent;\"><div class=\"title d-flex align-items-center justify-content-center\"><div class=\"h2 fw-bolder m-1\">افضل الوصفات</div><i class=\"fa fa-star-half-alt text-warning\"></i></div><div class=\"fst-italic text-muted\"> اكثر الوصفات اعجابا</div></div>", 1);
-var _hoisted_31 = {
+var _hoisted_39 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"font-amiri mb-5 pb-3 text-center w-100\" style=\"border-bottom:1px solid lightgrey;border-right:799px solid transparent;border-left:800px solid transparent;\"><div class=\"name-regione d-flex align-items-center justify-content-center\"><div class=\"h2 fw-bolder m-1\">افضل الوصفات</div><i class=\"fa fa-star-half-alt text-warning\"></i></div><div class=\"fst-italic text-muted\">اكثر الوصفات اعجابا</div></div>", 1);
+var _hoisted_40 = {
   "class": "cover"
 };
-var _hoisted_32 = {
+var _hoisted_41 = {
   "class": "container"
 };
-var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_42 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": ""
 }, null, -1 /* HOISTED */);
-var _hoisted_34 = {
+var _hoisted_43 = {
   "class": "row"
 };
-var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"icon align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute w-100 z-5555\" style=\"top:45%;transition:all 1s;opacity:0;\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
-var _hoisted_36 = [_hoisted_35];
-var _hoisted_37 = {
+var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"icon align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute w-100 z-5555\" style=\"top:45%;transition:all 1s;opacity:0;\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
+var _hoisted_45 = [_hoisted_44];
+var _hoisted_46 = {
   "class": "col-12 col-md-6"
 };
-var _hoisted_38 = {
+var _hoisted_47 = {
   "class": "row h-100"
 };
-var _hoisted_39 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
-var _hoisted_40 = [_hoisted_39];
-var _hoisted_41 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
-var _hoisted_42 = [_hoisted_41];
-var _hoisted_43 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
-var _hoisted_44 = [_hoisted_43];
-var _hoisted_45 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
-var _hoisted_46 = [_hoisted_45];
-var _hoisted_47 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<section class=\"sing_up bg-dark position-relative d-flex align-items-center mb-5 font-amiri\"><div class=\"bg-black h-100 opacity-75 opt w-100 position-absolute\"></div><div class=\"container position-relative text-white\" style=\"z-index:22;\"><div class=\"align-items-center align-items-end d-flex flex-column justify-content-center\"><div class=\"display-1 font-weight-bolder\" dir=\"rtl\">جربة وصفة ونجحتلك ? </div><div class=\"fs-5 lh-lg text-right\">أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أوالعديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا </div><div class=\"form mt-4 mt-lg-5\"><a href=\"/register\" class=\"font-weight-bolder fs-3 m-1 p-2 px-5 rounded rounded-pill text-decoration-none text-first\" style=\"color:white;background:#229191;\">الحساب </a><a href=\"/rules\" class=\"bg-gradient bg-light font-weight-bolder fs-3 m-1 p-2 px-5 rounded rounded-pill text-decoration-none text-first text-info\">القوانين</a></div></div></div></section>", 1);
-var _hoisted_48 = {
+var _hoisted_48 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
+var _hoisted_49 = [_hoisted_48];
+var _hoisted_50 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
+var _hoisted_51 = [_hoisted_50];
+var _hoisted_52 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
+var _hoisted_53 = [_hoisted_52];
+var _hoisted_54 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
+var _hoisted_55 = [_hoisted_54];
+var _hoisted_56 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<section class=\"sing_up bg-dark position-relative d-flex align-items-center mb-5 font-amiri\"><div class=\"bg-black h-100 opacity-75 opt w-100 position-absolute\"></div><div class=\"container position-relative text-white\" style=\"z-index:22;\"><div class=\"align-items-center align-items-end d-flex flex-column justify-content-center\"><div class=\"display-1 font-weight-bolder\" dir=\"rtl\"> جربة وصفة ونجحتلك ? </div><div class=\"fs-5 lh-lg text-right\"> أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أوالعديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا </div><div class=\"form mt-4 mt-lg-5\"><a href=\"/register\" class=\"font-weight-bolder fs-3 m-1 p-2 px-5 rounded rounded-pill text-decoration-none text-first\" style=\"color:white;background:#229191;\">الحساب </a><a href=\"/rules\" class=\"bg-gradient bg-light font-weight-bolder fs-3 m-1 p-2 px-5 rounded rounded-pill text-decoration-none text-first text-info\">القوانين</a></div></div></div></section>", 1);
+var _hoisted_57 = {
   "class": "sweats font-amiri position-relative"
 };
-var _hoisted_49 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-flex flex-column align-items-center justify-content-center w-100 mb-5\"><div class=\"h2 fw-bolder m-1 text-center mb-1\">اخر الحلويات</div><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div>", 1);
-var _hoisted_50 = {
+var _hoisted_58 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-flex flex-column align-items-center justify-content-center w-100 mb-5\"><div class=\"h2 fw-bolder m-1 text-center mb-1\">اخر الحلويات</div><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div>", 1);
+var _hoisted_59 = {
   "class": "align-items-center d-flex flex-column sliderSweats w-100",
   style: {
     "transition": "all 1s"
   }
 };
-var _hoisted_51 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-inline-flex position-relative w-75 overflow-hidden\" style=\"height:400px;\"><div class=\"d-flex items position-relative\" style=\"right:0px;\" id=\"slideSweats\" dir=\"rtl\"><div id=\"item-slider\" data-show=\"1\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/111/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"2\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/107/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/122/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/108/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/99/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div></div></div>", 1);
-var _hoisted_52 = {
+var _hoisted_60 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-inline-flex position-relative w-75 overflow-hidden\" style=\"height:400px;\"><div class=\"d-flex items position-relative\" style=\"right:0px;\" id=\"slideSweats\" dir=\"rtl\"><div id=\"item-slider\" data-show=\"1\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/111/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"2\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/107/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/122/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/108/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/99/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div></div></div>", 1);
+var _hoisted_61 = {
   "class": "action"
 };
-var _hoisted_53 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+var _hoisted_62 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
   "class": "fa fa-chevron-right"
 }, null, -1 /* HOISTED */);
-var _hoisted_54 = [_hoisted_53];
-var _hoisted_55 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+var _hoisted_63 = [_hoisted_62];
+var _hoisted_64 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
   "class": "fa fa-chevron-left"
 }, null, -1 /* HOISTED */);
-var _hoisted_56 = [_hoisted_55];
-var _hoisted_57 = {
+var _hoisted_65 = [_hoisted_64];
+var _hoisted_66 = {
   "class": "salts font-amiri mt-5"
 };
-var _hoisted_58 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-flex flex-column align-items-center justify-content-center w-100 mb-5\"><div class=\"h2 fw-bolder m-1 text-center mb-1\">اخر المملحات</div><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div>", 1);
-var _hoisted_59 = {
+var _hoisted_67 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-flex flex-column align-items-center justify-content-center w-100 mb-5\"><div class=\"h2 fw-bolder m-1 text-center mb-1\">اخر المملحات</div><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div>", 1);
+var _hoisted_68 = {
   "class": "align-items-center d-flex flex-column slideSalts w-100",
   style: {
     "transition": "all 1s"
   }
 };
-var _hoisted_60 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-inline-flex position-relative w-75 overflow-hidden\" style=\"height:400px;\"><div class=\"d-flex items position-relative\" style=\"right:0px;\" id=\"slideSalts\" dir=\"rtl\"><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/105/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/102/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/102/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">xxxxxxxxxx</a></div><div class=\"fs-6 text-black-50\">حلويات</div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div></div></div>", 1);
-var _hoisted_61 = {
+var _hoisted_69 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-inline-flex position-relative w-75 overflow-hidden\" style=\"height:400px;\"><div class=\"d-flex items position-relative\" style=\"right:0px;\" id=\"slideSalts\" dir=\"rtl\"><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/105/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/102/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/102/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">xxxxxxxxxx</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div></div></div>", 1);
+var _hoisted_70 = {
   "class": "action mt-3"
 };
-var _hoisted_62 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<section class=\"bestChefs h-auto\" dir=\"rtl\"><div class=\"w-100\"><div class=\"d-flex flex-column justify-content-center mb-5 w-100 mt-5\"><h1 class=\"text-center\">افضل الطهاة</h1><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div><div class=\"chefs\"><div class=\"container\"><div class=\"row\"><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=3\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=4\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=5\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=6\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div></div></div></div></div></section><section class=\"sponsore w-100 mw-100 mb-5\" style=\"font-family:&#39;dance&#39;;\"><div class=\"align-items-center d-flex justify-content-center w-100\"><div class=\"position-relative mb-4\"><div class=\"fs-2 fw-bold text-center\">Sponsored</div></div></div><div class=\"align-items-center d-flex justify-content-center w-100 text-center\" style=\"height:100px;\"><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div></div></section>", 2);
-var _hoisted_64 = {
+var _hoisted_71 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<section class=\"bestChefs h-auto\" dir=\"rtl\"><div class=\"w-100\"><div class=\"d-flex flex-column justify-content-center mb-5 w-100 mt-5\"><h1 class=\"text-center\">افضل الطهاة</h1><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div><div class=\"chefs\"><div class=\"container\"><div class=\"row\"><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=3\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=4\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=5\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=6\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div></div></div></div></div></section><section class=\"sponsore w-100 mw-100 mb-5\" style=\"font-family:&#39;dance&#39;;\"><div class=\"align-items-center d-flex justify-content-center w-100\"><div class=\"position-relative mb-4\"><div class=\"fs-2 fw-bold text-center\">Sponsored</div></div></div><div class=\"align-items-center d-flex justify-content-center w-100 text-center\" style=\"height:100px;\"><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div></div></section>", 2);
+var _hoisted_73 = {
   "class": "footer"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_nav_bar = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("nav-bar");
   var _component_footer_page = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("footer-page");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.KeepAlive, null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)($data.activeComponent)))], 1024 /* DYNAMIC_SLOTS */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_nav_bar)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"navbar w-100 bg-perso\">\r\n            <div class=\"container\">\r\n                <nav class=\"d-flex\">\r\n                    <li><a href=\"#\"\r\n                           class=\"font-amiri fs-3 px-4 rounded text-white text-decoration-none\">حلويات</a></li>\r\n                    <li><a href=\"#\"\r\n                           class=\"font-amiri fs-3 px-4 rounded text-white text-decoration-none\">حلويات</a></li>\r\n                    <li><a href=\"#\"\r\n                           class=\"font-amiri fs-3 px-4 rounded text-white text-decoration-none\">حلويات</a></li>\r\n                    <li><a href=\"#\"\r\n                           class=\"font-amiri fs-3 px-4 rounded text-white text-decoration-none\">حلويات</a></li>\r\n                </nav>\r\n            </div>\r\n        </div> "), _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    "class": "btn fs-4 fw-bolder mt-5 w-50",
-    onClick: _cache[0] || (_cache[0] = function ($event) {
-      return $data.activeComponent = 'random-recipe';
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.KeepAlive, null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)($data.activeComponent)))], 1024 /* DYNAMIC_SLOTS */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_nav_bar)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+    "class": "fs-4",
+    onMouseenter: _cache[0] || (_cache[0] = function ($event) {
+      return $options.hoverLink();
     }),
+    onMouseleave: _cache[1] || (_cache[1] = function ($event) {
+      return $options.hoverLink();
+    })
+  }, _hoisted_7, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    onMouseenter: _cache[2] || (_cache[2] = function ($event) {
+      return $options.hoverLink();
+    }),
+    href: "#",
+    "class": "fw-bolder p-2 rounded text-decoration-none",
     style: {
-      "background": "#344040"
+      "color": "white"
     }
-  }, "اختيار وصفة")])])])])])]), _hoisted_15]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  }, "حلويات", 32 /* HYDRATE_EVENTS */)]), _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    onMouseenter: _cache[3] || (_cache[3] = function ($event) {
+      return $options.hoverLink();
+    }),
+    href: "#",
+    "class": "fw-bolder p-2 rounded text-decoration-none",
+    style: {
+      "color": "white"
+    }
+  }, "حلويات", 32 /* HYDRATE_EVENTS */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    onMouseenter: _cache[4] || (_cache[4] = function ($event) {
+      return $options.hoverLink();
+    }),
+    href: "#",
+    "class": "fw-bolder p-2 rounded text-decoration-none",
+    style: {
+      "color": "white"
+    }
+  }, "حلويات", 32 /* HYDRATE_EVENTS */)])])]), _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [_hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    "class": "btn fs-4 fw-bolder mt-5 w-50",
+    style: {
+      "background": "rgb(52, 64, 64)"
+    },
+    onClick: _cache[5] || (_cache[5] = function ($event) {
+      return $data.activeComponent = 'random-recipe';
+    })
+  }, " اختيار وصفة ")])])])])])]), _hoisted_24]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     "class": "ms-2",
     src: $options.w_path + '/images/V2.png',
     alt: ""
-  }, null, 8 /* PROPS */, _hoisted_20), _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  }, null, 8 /* PROPS */, _hoisted_29), _hoisted_30, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     "class": "ms-2",
     src: $options.w_path + '/images/V2.png',
     alt: ""
-  }, null, 8 /* PROPS */, _hoisted_22)]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.types_recipe, function (type) {
+  }, null, 8 /* PROPS */, _hoisted_31)]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.types_recipe, function (type) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       "class": "col-xs-12 col-md-6 col-lg-4 item overflow-hidden p-0 position-relative",
       id: type.type,
-      onMouseenter: _cache[1] || (_cache[1] = function ($event) {
+      onMouseenter: _cache[6] || (_cache[6] = function ($event) {
         return $options.EffectCategorie();
       }),
-      onMouseleave: _cache[2] || (_cache[2] = function ($event) {
+      onMouseleave: _cache[7] || (_cache[7] = function ($event) {
         return $options.EffectCategorie();
       }),
       key: type.recipe
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
       href: '/similar/' + type.type,
       "class": "text-decoration-none"
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(type.type), 1 /* TEXT */)], 8 /* PROPS */, _hoisted_26)])]), _hoisted_28], 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_23);
-  }), 128 /* KEYED_FRAGMENT */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"col-xs-12 col-md-6 col-lg-4 position-relative p-0 item overflow-hidden\"\r\n                     v-for=\"type in types_recipe\"\r\n                     :key=\"type.recipe\">\r\n                    <div class=\"name position-absolute text-center\"\r\n                         style=\"margin: 0 2%;width: 96%;z-index: 1;top: 40%;\">\r\n\r\n                        <div class=\"display-6 font-weight-bolder text-white\">\r\n                            <a href=\"#\"\r\n                               class=\"position-relative  text-decoration-none text-white\"\r\n                               style=\"z-index: 100;\">{{ type.type }}</a>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"h-100 opt position-absolute w-100 overflow-hidden\"></div>\r\n                    <img class=\"w-100 item\"\r\n                         :src=\"w_path + '/images/1.jpg'\"\r\n                         alt=\"\"\r\n                         srcset=\"\"\r\n                         style=\"height: 500px;\">\r\n                </div> ")])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_29, [_hoisted_30, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [_hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(type.type), 1 /* TEXT */)], 8 /* PROPS */, _hoisted_35)])]), _hoisted_37], 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_32);
+  }), 128 /* KEYED_FRAGMENT */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"col-xs-12 col-md-6 col-lg-4 position-relative p-0 item overflow-hidden\"\r\n                     v-for=\"type in types_recipe\"\r\n                     :key=\"type.recipe\">\r\n                    <div class=\"name position-absolute text-center\"\r\n                         style=\"margin: 0 2%;width: 96%;z-index: 1;top: 40%;\">\r\n\r\n                        <div class=\"display-6 font-weight-bolder text-white\">\r\n                            <a href=\"#\"\r\n                               class=\"position-relative  text-decoration-none text-white\"\r\n                               style=\"z-index: 100;\">{{ type.type }}</a>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"h-100 opt position-absolute w-100 overflow-hidden\"></div>\r\n                    <img class=\"w-100 item\"\r\n                         :src=\"w_path + '/images/1.jpg'\"\r\n                         alt=\"\"\r\n                         srcset=\"\"\r\n                         style=\"height: 500px;\">\r\n                </div> ")])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_38, [_hoisted_39, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_40, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_41, [_hoisted_42, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_43, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "col-12 col-md-6",
-    onMouseenter: _cache[3] || (_cache[3] = function ($event) {
+    onMouseenter: _cache[8] || (_cache[8] = function ($event) {
       return $options.EffectBestRecipe();
     }),
-    onMouseleave: _cache[4] || (_cache[4] = function ($event) {
+    onMouseleave: _cache[9] || (_cache[9] = function ($event) {
       return $options.EffectBestRecipe();
     })
-  }, _hoisted_36, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_45, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_46, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "col-6 mb-1 rounded img-fluid",
-    onMouseenter: _cache[5] || (_cache[5] = function ($event) {
+    onMouseenter: _cache[10] || (_cache[10] = function ($event) {
       return $options.EffectBestRecipe();
     }),
-    onMouseleave: _cache[6] || (_cache[6] = function ($event) {
+    onMouseleave: _cache[11] || (_cache[11] = function ($event) {
       return $options.EffectBestRecipe();
     })
-  }, _hoisted_40, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_49, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "col-6 mb-1 rounded img-fluid",
-    onMouseenter: _cache[7] || (_cache[7] = function ($event) {
+    onMouseenter: _cache[12] || (_cache[12] = function ($event) {
       return $options.EffectBestRecipe();
     }),
-    onMouseleave: _cache[8] || (_cache[8] = function ($event) {
+    onMouseleave: _cache[13] || (_cache[13] = function ($event) {
       return $options.EffectBestRecipe();
     })
-  }, _hoisted_42, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_51, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "col-6 mb-1 rounded img-fluid",
-    onMouseenter: _cache[9] || (_cache[9] = function ($event) {
+    onMouseenter: _cache[14] || (_cache[14] = function ($event) {
       return $options.EffectBestRecipe();
     }),
-    onMouseleave: _cache[10] || (_cache[10] = function ($event) {
+    onMouseleave: _cache[15] || (_cache[15] = function ($event) {
       return $options.EffectBestRecipe();
     })
-  }, _hoisted_44, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_53, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "col-6 mb-1 rounded img-fluid",
-    onMouseenter: _cache[11] || (_cache[11] = function ($event) {
+    onMouseenter: _cache[16] || (_cache[16] = function ($event) {
       return $options.EffectBestRecipe();
     }),
-    onMouseleave: _cache[12] || (_cache[12] = function ($event) {
+    onMouseleave: _cache[17] || (_cache[17] = function ($event) {
       return $options.EffectBestRecipe();
     })
-  }, _hoisted_46, 32 /* HYDRATE_EVENTS */)])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <section class=\"sweets mb-5\">\r\n        <div class=\"container p-1\">\r\n            <div class=\"row\">\r\n                <div class=\"col-xs-12 col-md-6\">\r\n                    <div class=\"images\">\r\n                        <img class=\"img-fluid\"\r\n                             :src=\"w_path + '/images/chef_sweet.jpg'\"\r\n                             alt=\"\">\r\n                        <img class=\"img-fluid vector_3 position-relative\"\r\n                             :src=\"w_path + '/images/V3.png'\"\r\n                             alt=\"\">\r\n                    </div>\r\n\r\n                </div>\r\n                <div class=\"col-md-6 col-xs-12 text-right text-dark\">\r\n                    <div class=\"intoduction w-100 h-100\">\r\n                        <div class=\"title h4 \">\r\n                            انواع الحلويات الجزائرية\r\n                        </div>\r\n                        <div class=\"text lh-lg mt-5 ps-5 mb-5 w-100 h-50\">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى\r\n                        </div>\r\n                        <div class=\"d-flex justify-content-end readMore \">\r\n                            <div class=\"btn-primary-perso rounded-5 \">\r\n                                <a href=\"#\"\r\n                                   class=\"position-relative text-decoration-none h5 font-weight-bolder\">\r\n                                    متابعة </a>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-12 d-flex justify-content-around mt-5\">\r\n                    <div class=\"shapes w-25\">\r\n                        <div class=\"shape mt-2 m-auto w-100\"></div>\r\n                        <div class=\"shape mt-2 m-auto w-75\"></div>\r\n                        <div class=\"shape mt-2 m-auto w-50\"></div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section> "), _hoisted_47, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_48, [_hoisted_49, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_50, [_hoisted_51, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_52, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_55, 32 /* HYDRATE_EVENTS */)])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <section class=\"sweets mb-5\">\r\n        <div class=\"container p-1\">\r\n            <div class=\"row\">\r\n                <div class=\"col-xs-12 col-md-6\">\r\n                    <div class=\"images\">\r\n                        <img class=\"img-fluid\"\r\n                             :src=\"w_path + '/images/chef_sweet.jpg'\"\r\n                             alt=\"\">\r\n                        <img class=\"img-fluid vector_3 position-relative\"\r\n                             :src=\"w_path + '/images/V3.png'\"\r\n                             alt=\"\">\r\n                    </div>\r\n\r\n                </div>\r\n                <div class=\"col-md-6 col-xs-12 text-right text-dark\">\r\n                    <div class=\"intoduction w-100 h-100\">\r\n                        <div class=\"name-regione h4 \">\r\n                            انواع الحلويات الجزائرية\r\n                        </div>\r\n                        <div class=\"text lh-lg mt-5 ps-5 mb-5 w-100 h-50\">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى\r\n                        </div>\r\n                        <div class=\"d-flex justify-content-end readMore \">\r\n                            <div class=\"btn-primary-perso rounded-5 \">\r\n                                <a href=\"#\"\r\n                                   class=\"position-relative text-decoration-none h5 font-weight-bolder\">\r\n                                    متابعة </a>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-12 d-flex justify-content-around mt-5\">\r\n                    <div class=\"shapes w-25\">\r\n                        <div class=\"shape mt-2 m-auto w-100\"></div>\r\n                        <div class=\"shape mt-2 m-auto w-75\"></div>\r\n                        <div class=\"shape mt-2 m-auto w-50\"></div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section> "), _hoisted_56, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_57, [_hoisted_58, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_59, [_hoisted_60, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_61, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "next align-items-center bg-light d-flex end-0 h-100 h-50 justify-content-center position-absolute text-first top-0 px-4 shadow pointer",
-    onClick: _cache[13] || (_cache[13] = function ($event) {
+    onClick: _cache[18] || (_cache[18] = function ($event) {
       return $options.scrollSlider('right', 'slideSweats');
     })
-  }, _hoisted_54), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_63), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "prev align-items-center bg-light d-flex start-0 h-100 h-50 justify-content-center position-absolute text-first top-0 px-4 shadow pointer",
-    onClick: _cache[14] || (_cache[14] = function ($event) {
+    onClick: _cache[19] || (_cache[19] = function ($event) {
       return $options.scrollSlider('left', 'slideSweats');
     })
-  }, _hoisted_56)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_57, [_hoisted_58, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_59, [_hoisted_60, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_61, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+  }, _hoisted_65)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_66, [_hoisted_67, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_68, [_hoisted_69, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_70, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
     "class": "fa fa-chevron-left mt-1 text-white bg-perso mx-3 p-2 px-5 rounded-pill pointer",
-    onClick: _cache[15] || (_cache[15] = function ($event) {
+    onClick: _cache[20] || (_cache[20] = function ($event) {
       return $options.scrollSlider('left', 'slideSalts');
     })
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
     "class": "fa fa-chevron-right mt-1 text-white bg-perso mx-3 p-2 px-5 rounded-pill pointer",
-    onClick: _cache[16] || (_cache[16] = function ($event) {
+    onClick: _cache[21] || (_cache[21] = function ($event) {
       return $options.scrollSlider('right', 'slideSalts');
     })
-  })])])]), _hoisted_62, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_64, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_footer_page)])], 64 /* STABLE_FRAGMENT */);
+  })])])]), _hoisted_71, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_73, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_footer_page)])], 64 /* STABLE_FRAGMENT */);
 }
 
 /***/ }),
@@ -36890,7 +36962,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_images_header_shape_1_png__WEBPACK_IMPORTED_MODULE_2__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.header {\r\n    width: 100%;\r\n    max-width: 100%;\r\n    height: 1050px;\r\n    background-color: rgb(199, 199, 199);\n}\n#slideSweats,\r\n#slideSalts {\r\n    transition: all 1s;\n}\n.header .cover {\r\n    background: url(\"https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg\");\r\n    background-size: cover;\r\n    max-width: 100%;\r\n    height: 100%;\n}\n.header .steps .separator {\r\n    width: 30%;\r\n    height: 1px;\r\n    background: #164;\n}\n.header .shape {\r\n    /* background: white; */\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: cover;\n}\n.header button {\r\n    color: white;\n}\n.header button:hover {\r\n    background: white;\r\n    color: #229191;\r\n    box-shadow: 0px 0px 20px #229191;\r\n    transition: all 1s ease;\n}\r\n\r\n/* TYPES RECIPES */\n#triangle-bottomright {\r\n    width: 0;\r\n    height: 0;\r\n    border-bottom: 400px solid #00c4ff6b;\r\n    border-left: 330px solid transparent;\r\n    position: absolute;\r\n    top: 0;\r\n    right: 0;\n}\nimg,\r\ndiv.squar {\r\n    transition: 1s;\n}\n.best-of-recipe {}\n.best-of-recipe .cover {\r\n    height: auto;\r\n    width: 100%;\r\n    background: url(\"https://i.pinimg.com/564x/bb/0d/c5/bb0dc5b2d6c9566fa965809367ff29d2.jpg\");\r\n    background-size: inherit;\r\n    background-repeat: no-repeat;\n}\n.sing_up {\r\n    height: 500px;\r\n    background: url(\"https://i.pinimg.com/564x/38/61/10/386110194c0b59f92a1124fe85120836.jpg\");\r\n    background-size: cover;\r\n    background-attachment: fixed;\r\n    background-position: center;\n}\n.bestChefs .separator {\r\n    /* background-attachment: fixed; */\n}\n.bestChefs div.chefs {\r\n    height: 500px;\r\n    /* background: url('https://i.pinimg.com/564x/f6/4c/97/f64c97785241fefe3ea312f1bd225703.jpg');\r\n    background-size: cover;\r\n    background-position: right; */\r\n    background: linear-gradient(transparent, #54545445, transparent);\n}\n.bestChefs .sep,\r\n.salts .sep,\r\n.sweats .sep {\r\n    height: 1px;\r\n    background: #ff8d00;\r\n    margin: auto;\n}\r\n\r\n/* width */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar {\r\n    width: 5px;\r\n    height: 5px;\n}\r\n\r\n/* Track */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar-track {\r\n    box-shadow: inset 0 0 5px #367a7a;\r\n    border-radius: 10px;\n}\r\n\r\n/* Handle */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar-thumb {\r\n    background: #229191;\r\n    border-radius: 10px;\n}\n#slide {\r\n    transition: all 1s;\n}\na.rounded-pill:hover {\r\n    opacity: 0.7;\r\n    transition: opacity 1s;\n}\n@media only screen and (max-width: 760px) {\n.description {\r\n        font-size: 0.9rem !important;\n}\n.header .shape div div:last-of-type div {\r\n        background: white;\r\n        border: none;\n}\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.header {\r\n    width: 100%;\r\n    max-width: 100%;\r\n    height: 1050px;\r\n    background-color: rgb(199, 199, 199);\n}\n#slideSweats,\r\n#slideSalts {\r\n    transition: all 1s;\n}\n.header .cover {\r\n    background: url(\"https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg\");\r\n    background-size: cover;\r\n    max-width: 100%;\r\n    height: 100%;\n}\n.header .steps .separator {\r\n    width: 30%;\r\n    height: 1px;\r\n    background: #164;\n}\n.header .shape {\r\n    /* background: white; */\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: cover;\n}\n.header button {\r\n    color: white;\n}\n.header button:hover {\r\n    background: white;\r\n    color: #229191;\r\n    box-shadow: 0px 0px 20px #229191;\r\n    transition: all 1s ease;\n}\n.header .index-nav li .link-active {\r\n    border-width: 2px;\r\n    border-style: solid;\r\n    -o-border-image: linear-gradient(268deg, #17a2b800, #00ffb8, #17a2b800) 1;\r\n       border-image: linear-gradient(268deg, #17a2b800, #00ffb8, #17a2b800) 1;\r\n    border-top: none;\r\n    border-right: none;\r\n    border-left: none;\r\n    transition: border-image 1s;\r\n    transition: border-image 1s, -o-border-image 1s;\n}\r\n\r\n/* TYPES RECIPES */\n#triangle-bottomright {\r\n    width: 0;\r\n    height: 0;\r\n    border-bottom: 400px solid #00c4ff6b;\r\n    border-left: 330px solid transparent;\r\n    position: absolute;\r\n    top: 0;\r\n    right: 0;\n}\nimg,\r\ndiv.squar {\r\n    transition: 1s;\n}\n.best-of-recipe {}\n.best-of-recipe .cover {\r\n    height: auto;\r\n    width: 100%;\r\n    background: url(\"https://i.pinimg.com/564x/bb/0d/c5/bb0dc5b2d6c9566fa965809367ff29d2.jpg\");\r\n    background-size: inherit;\r\n    background-repeat: no-repeat;\n}\n.sing_up {\r\n    height: 500px;\r\n    background: url(\"https://i.pinimg.com/564x/38/61/10/386110194c0b59f92a1124fe85120836.jpg\");\r\n    background-size: cover;\r\n    background-attachment: fixed;\r\n    background-position: center;\n}\n.bestChefs .separator {\r\n    /* background-attachment: fixed; */\n}\n.bestChefs div.chefs {\r\n    height: 500px;\r\n    /* background: url('https://i.pinimg.com/564x/f6/4c/97/f64c97785241fefe3ea312f1bd225703.jpg');\r\n    background-size: cover;\r\n    background-position: right; */\r\n    background: linear-gradient(transparent, #54545445, transparent);\n}\n.bestChefs .sep,\r\n.salts .sep,\r\n.sweats .sep {\r\n    height: 1px;\r\n    background: #ff8d00;\r\n    margin: auto;\n}\r\n\r\n/* width */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar {\r\n    width: 5px;\r\n    height: 5px;\n}\r\n\r\n/* Track */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar-track {\r\n    box-shadow: inset 0 0 5px #367a7a;\r\n    border-radius: 10px;\n}\r\n\r\n/* Handle */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar-thumb {\r\n    background: #229191;\r\n    border-radius: 10px;\n}\n#slide {\r\n    transition: all 1s;\n}\na.rounded-pill:hover {\r\n    opacity: 0.7;\r\n    transition: opacity 1s;\n}\n@media only screen and (max-width: 760px) {\n.description {\r\n        font-size: 0.9rem !important;\n}\n.header .shape div div:last-of-type div {\r\n        background: white;\r\n        border: none;\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
