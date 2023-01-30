@@ -2,6 +2,7 @@
     <!-- https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg -->
 
     <div class="header position-relative overflow-hidden" dir="rtl">
+        <h1>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h1>
         <KeepAlive>
             <component :is="activeComponent" />
         </KeepAlive>
