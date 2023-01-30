@@ -2,9 +2,15 @@
 
 <head>
 
-    <link rel="icon" type="image/x-icon" href="{{asset ('images/logo.png')}}">
+  
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <!-- <link rel="stylesheet" type="text/css" href="{{asset ('css/index.css')}}"> -->
+    <link rel="icon" type="image/x-icon" href="{{asset ('images/logo.png')}}">
+    <title>{{ config('app.name', 'Laravel') }}</title>
+    
     @include('scripts.scripts_css')
 
 </head>
