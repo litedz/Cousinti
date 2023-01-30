@@ -1,5 +1,6 @@
 <template>
     <!-- https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg -->
+
     <div class="header position-relative overflow-hidden" dir="rtl">
         <KeepAlive>
             <component :is="activeComponent" />
@@ -11,65 +12,78 @@
         <div class="index-nav h-auto position-absolute top-0 w-100 z-9999 ">
             <div class="align-items-center d-flex flex-row font-amiri justify-content-around justify-content-center mx-auto nav p-3 w-50"
                 style="color: white">
-                <li class="fs-4"  @mouseenter="hoverLink()" @mouseleave="hoverLink()">
-                    <a href="#" class="fw-bolder p-2 rounded text-decoration-none link-active"
-                        style="color: white">معجنات</a>
-                    <div class="p-3 position-absolute rounded sub-menu w-50 z-9999"  style="background: #018787;display: none;">
-                        <div class="d-flex justify-content-between" >
-                            <div class="mx-1 region w-25">
-                                <div style="border-bottom:1px solid #fcfdff54 ;" class="name-region fs-5  fw-bolder" >شرقية</div>
-                                <div class="items">
-                <li><a href="#" class="text-decoration-none fs-6 mb-1 mt-1 text-white">azeaeazzae</a></li>
-                <li><a href="#" class="text-decoration-none fs-6 mb-1 mt-1 text-white">azeaeazzae</a></li>
-              
+                <li class="fs-4">
+                    <a href="#" class="fw-bolder p-2 rounded text-decoration-none link-active" @mouseenter="hoverLink()"
+                        data-menu="submenu1" style="color: white">معجنات</a>
+                    <div id="submenu1" @mouseleave="hoverLink('leave')"
+                        class="p-3 position-absolute mt-3 rounded sub-menu w-50 z-9999"
+                        style="background: rgb(1, 135, 135);display: none;">
+                        <!-- <div class="bg-gradient border-bottom h-auto position-absolute px-2 remove-submenu rounded-top w-100"
+                            style="top: 0;right: 0;">
+                <li class="fa fa-remove fs-5 pointer" style="color: #206060;" data-menu="submenu1"
+                    @click="hoverLink('')"></li>
+            </div> -->
+            <div class="d-flex justify-content-between  position-relative">
+                <div class="mx-1 region w-25">
+                    <div style="border-bottom:1px solid #fcfdff54;" class="name-region fs-5 fw-bolder">شرقية</div>
+                    <div class="items">
+                        <li><a href="#" class="text-decoration-none fs-6 mb-1 mt-1 text-white">azeaeazzae</a></li>
+                        <li><a href="#" class="text-decoration-none fs-6 mb-1 mt-1 text-white">azeaeazzae</a></li>
+                    </div>
+                </div>
+                <div class="mx-1 region w-25">
+                    <div style="border-bottom:1px solid #fcfdff54;" class="name-region fs-5">شرقية
+                    </div>
+                    <div class="items">
+                        <li><a href="#" class="text-decoration-none fs-6 mb-1 mt-1 text-white">azeaeazzae</a></li>
+                    </div>
+                </div>
+                <div class="mx-1 region w-25">
+                    <div style="border-bottom:1px solid #fcfdff54;" class="name-region fs-5">شرقية
+                    </div>
+                    <div class="items">
+                        <li><a href="#" class="text-decoration-none fs-6 mb-1 mt-1 text-white">azeaeazzae</a></li>
+                    </div>
+                </div>
+                <div class="mx-1 region w-25">
+                    <div style="border-bottom:1px solid #fcfdff54;" class="name-region fs-5">شرقية
+                    </div>
+                    <div class="items">
+                        <li><a href="#" class="text-decoration-none fs-6 mb-1 mt-1 text-white">azeaeazzae</a></li>
+                    </div>
+                </div>
+                <div class="mx-1 region w-25">
+                    <div style="border-bottom:1px solid #fcfdff54;" class="name-region fs-5">شرقية
+                    </div>
+                    <div class="items">
+                        <li class="fs-6">aeaezaeza</li>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="mx-1 region w-25">
-            <div style="border-bottom:1px solid #fcfdff54 ;" class="name-region fs-5" >شرقية</div>
-            <div class="items" >
-                <li><a href="#" class="text-decoration-none fs-6 mb-1 mt-1 text-white">azeaeazzae</a></li>
-            </div>
-        </div>
-        <div class="mx-1 region w-25">
-            <div style="border-bottom:1px solid #fcfdff54 ;" class="name-region fs-5" >شرقية</div>
-            <div class="items" >
-                <li><a href="#" class="text-decoration-none fs-6 mb-1 mt-1 text-white">azeaeazzae</a></li>
-            </div>
-        </div>
-        <div class="mx-1 region w-25">
-            <div style="border-bottom:1px solid #fcfdff54 ;" class="name-region fs-5" >شرقية</div>
-            <div class="items" >
-                <li><a href="#" class="text-decoration-none fs-6 mb-1 mt-1 text-white">azeaeazzae</a></li>
-            </div>
-        </div>
-        <div class="mx-1 region w-25" >
-            <div style="border-bottom:1px solid #fcfdff54 ;" class="name-region fs-5" >شرقية</div>
-            <div class="items" >
-                <li class="fs-6">aeaezaeza</li>
-            </div>
-        </div>
-    </div>
-    </div>
-    </li>
-    <li class="fs-4">
-        <a @mouseenter="hoverLink()" href="#" class="fw-bolder p-2 rounded text-decoration-none"
-            style="color: white">حلويات</a>
-    </li>
-    <li class="fs-3 position-relative" style="">
-        <img src="http://127.0.0.1:8000/images/logo2.png" alt="" style="width: 138px; position: relative" class="" />
-    </li>
-    <li class="fs-4">
-        <a @mouseenter="hoverLink()" href="#" class="fw-bolder p-2 rounded text-decoration-none"
-            style="color: white">حلويات</a>
-    </li>
-    <li class="fs-4">
-        <a @mouseenter="hoverLink()" href="#" class="fw-bolder p-2 rounded text-decoration-none"
-            style="color: white">حلويات</a>
-    </li>
+
+
+        </li>
+        <li class="fs-4">
+            <a @mouseenter="hoverLink()" href="#" class="fw-bolder p-2 rounded text-decoration-none"
+                style="color: white">حلويات</a>
+        </li>
+        <li class="fs-3 position-relative" style="">
+            <img src="http://127.0.0.1:8000/images/logo2.png" alt="" style="width: 138px; position: relative"
+                class="" />
+        </li>
+        <li class="fs-4">
+            <a @mouseenter="hoverLink()" href="#" class="fw-bolder p-2 rounded text-decoration-none"
+                style="color: white">حلويات</a>
+        </li>
+        <li class="fs-4">
+            <a @mouseenter="hoverLink()" href="#" class="fw-bolder p-2 rounded text-decoration-none"
+                style="color: white">حلويات</a>
+        </li>
     </div>
     </div>
 
-    <div class="position-absolute text-center w-50 z-8888" style="left: 25%; top: 15%; mix-blend-mode: screen">
+    <div class="position-absolute text-center  z-8888" style="left: 31%;top: 15%;mix-blend-mode: screen;width: 38%;">
         <div class="bg-white display-1 fw-bolder text text-black" style="letter-spacing: 15px">
             COUSINTI
         </div>
@@ -88,7 +102,7 @@
                     style="border-radius: 22% 0%; height: 174px">
                     <div class="d-flex flex-column h-75 items justify-content-around p-5" dir="rtl">
                         <div class="name-regione font-amiri fs-3 fw-bold text-black-name-regione text-center">
-                            اجعل يومك احلي في 3 خطوات 
+                            اجعل يومك احلي في 3 خطوات
                         </div>
                         <div class="item align-items-center d-flex align-items-center justify-content-around">
                             <li class="border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info"></li>
@@ -106,7 +120,8 @@
                                 asperiores.</span>
                         </div>
                         <div class="font-amiri random text-center">
-                            <button class="btn fs-4 fw-bolder mt-5 w-50" style="background: rgb(52, 64, 64)" @click="activeComponent ='random-recipe'">
+                            <button class="btn fs-4 fw-bolder mt-5 w-50" style="background: rgb(52, 64, 64)"
+                                @click="activeComponent = 'random-recipe'">
                                 اختيار وصفة
                             </button>
                         </div>
@@ -117,7 +132,8 @@
     </div>
 
     <div class="cover position-relative">
-        <div class="w-100 h-100 opacity-75 bg-perso position-absolute" style="background: linear-gradient(177deg,rgb(83, 196, 180),#ffffffb8);"></div>
+        <div class="w-100 h-100 opacity-75 bg-perso position-absolute"
+            style="background: linear-gradient(177deg,rgb(83, 196, 180),#ffffffb8);"></div>
     </div>
     </div>
 
@@ -369,46 +385,7 @@
             </div>
         </div>
     </section>
-    <!-- <section class="sweets mb-5">
-        <div class="container p-1">
-            <div class="row">
-                <div class="col-xs-12 col-md-6">
-                    <div class="images">
-                        <img class="img-fluid"
-                             :src="w_path + '/images/chef_sweet.jpg'"
-                             alt="">
-                        <img class="img-fluid vector_3 position-relative"
-                             :src="w_path + '/images/V3.png'"
-                             alt="">
-                    </div>
 
-                </div>
-                <div class="col-md-6 col-xs-12 text-right text-dark">
-                    <div class="intoduction w-100 h-100">
-                        <div class="name-regione h4 ">
-                            انواع الحلويات الجزائرية
-                        </div>
-                        <div class="text lh-lg mt-5 ps-5 mb-5 w-100 h-50">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى
-                        </div>
-                        <div class="d-flex justify-content-end readMore ">
-                            <div class="btn-primary-perso rounded-5 ">
-                                <a href="#"
-                                   class="position-relative text-decoration-none h5 font-weight-bolder">
-                                    متابعة </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 d-flex justify-content-around mt-5">
-                    <div class="shapes w-25">
-                        <div class="shape mt-2 m-auto w-100"></div>
-                        <div class="shape mt-2 m-auto w-75"></div>
-                        <div class="shape mt-2 m-auto w-50"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <section class="sing_up bg-dark position-relative d-flex align-items-center mb-5 font-amiri">
         <div class="bg-black h-100 opacity-75 opt w-100 position-absolute"></div>
@@ -946,6 +923,7 @@ export default {
             imgBestRecipe: false,
             show: "",
             activeComponent: "",
+            showSubmenu: '',
         };
     },
     methods: {
@@ -1016,10 +994,17 @@ export default {
                 $("#home-navbar").fadeOut("fast");
             }
         },
-        hoverLink() {
+        hoverLink(action) {
+
             $(".index-nav li a").removeClass("link-active");
             $(event.target).addClass("link-active");
-            $(event.target).find('.sub-menu').fadeToggle();
+            if ($(event.target).hasClass('.link-active') == false) {
+                $('.sub-menu').fadeOut();
+            }
+            $('#' + event.target.getAttribute('data-menu')).fadeIn();
+            if (action == "leave") {
+                $('#' + event.target.getAttribute('data-menu')).fadeOut();
+            }
         },
     },
 };
@@ -1076,6 +1061,11 @@ export default {
     border-right: none;
     border-left: none;
     transition: border-image 1s;
+}
+
+.index-nav .sub-menu a:hover {
+    color: #164;
+    transition: all 0.5s;
 }
 
 /* TYPES RECIPES */
