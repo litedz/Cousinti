@@ -121,30 +121,30 @@ $utilities: map-merge(
 }
 
 .w-100-perso {
-    width: 100%;
+    width: 100% !important;
 }
 .w-75-perso {
-    width: 75%;
+    width: 75% !important;
 }
 .w-50-perso {
-    width: 50%;
+    width: 50% !important;
 }
 .w-25-perso {
-    width: 25%;
+    width: 25% !important;
 }
 
 @media only screen and (max-width: 790px) {
     .w-100-sc {
-        width: 100%;
+        width: 100% !important;
     }
     .w-75-sc {
-        width: 75%;
+        width: 75% !important;
     }
     .w-50-sc {
-        width: 50%;
+        width: 50% !important;
     }
     .w-25-sc {
-        width: 25%;
+        width: 25% !important;
     }
 
     /* Margin */
@@ -161,39 +161,62 @@ $utilities: map-merge(
     }
 
     .p-mt-sc-3 {
-        margin-top: 1 !important;
+        margin-top: .75rem !important;
     }
 
     .p-mt-sc-4 {
-        margin-top: 1.5rem !important;
+        margin-top: 1rem !important;
     }
 
     .p-mt-sc-5 {
-        margin-top: 3rem !important;
+        margin-top: 1.25rem !important;
     }
 
-    .mb-xs-5 {
-        margin-bottom: 3rem;
+    .p-mb-sc-0 {
+        margin-bottom: 0rem !important;
+    }
+    .p-mb-sc-1 {
+        margin-bottom: .25rem !important;
+    }
+    .p-mb-sc-2 {
+        margin-bottom: .50rem !important;
+    }
+    .p-mb-sc-3 {
+        margin-bottom: .75rem !important;
+    }
+    .p-mb-sc-4 {
+        margin-bottom: 1rem !important;
+    }
+    .p-mb-sc-5 {
+        margin-bottom: 1.25rem !important;
     }
 
     .font-08 {
-        font-size: 0.8rem;
+        font-size: .25rem !important;
     }
 
     .font-sc-1 {
-        font-size: 1rem;
+        font-size: .50rem !important;
     }
 
     .font-sc-2 {
-        font-size: 1.2rem;
+        font-size: .75rem !important;
     }
 
     .font-sc-3 {
-        font-size: 1.5rem;
+        font-size: 1rem !important;
     }
 
     .font-sc-4 {
-        font-size: 2rem;
+        font-size: 1.50rem !important;
+    }
+
+
+    .p-h-auto-sc{
+        height: auto !important;
+    }
+    .p-d-none-sc{
+        display: none !important;
     }
 }
 
@@ -201,7 +224,6 @@ $utilities: map-merge(
     .w-100-md {
         width: 100% !important;
     }
-
     .p-mt-md-0 {
         margin-top: 0;
     }
@@ -224,6 +246,9 @@ $utilities: map-merge(
 
     .p-mt-md-5 {
         margin-top: 3rem !important;
+    }
+    .p-d-none-md{
+        display: none !important;
     }
 }
 
@@ -254,5 +279,8 @@ $utilities: map-merge(
 
     .mb-xs-5 {
         margin-bottom: 3rem;
+    }
+    .p-d-none-lg{
+        display: none !important;
     }
 }

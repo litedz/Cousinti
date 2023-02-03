@@ -1,17 +1,18 @@
 <template>
     <div class="random_recipe pb-5 pt-2 rounded"
          style="padding: 7%;">
+         <div class="position-fixed w-100 h-100 end-0 top-0 bg-dark opacity-50 z-8888"></div>
         <div class="end-0 m-1 position-absolute remove pointer text-right text-white top-0"
              style="z-index: 9999;">
             <div class="bg-primary-color rounded-circle text-center text-white"
-                 style="width: 30px;height:30px"><i class="fa fa-remove p-1"
-                   aria-hidden="true"></i></div>
+                 style="width: 30px;height:30px"><i class="bg-perso fa fa-remove p-1 px-2 rounded-circle"
+                   aria-hidden="true" @click="$emit('CloseRecipe')"></i></div>
         </div>
         <div class="bg-black h-100 opacity-50 opt position-absolute top-0 start-0 w-100">
 
         </div>
         <div class="container position-relative"
-             style="z-index: 200;">
+             style="z-index: 9999;">
             <div class="row">
                 <div class="bg-light border-bottom col-12 font-22 font-weight-bolder m-auto mb-2 p-2 text-center title rounded-pill w-100 "><a class="text-decoration-none text-first"
                        :href="'/recipes/' + random_recipe.id">{{ random_recipe.name }}</a></div>
@@ -46,7 +47,7 @@
                                     <button type="button"
                                             @click="getRandomRecipe()"
                                             dir="rtl"
-                                            class="btn btn-primary btn-primary-perso"
+                                            class="btn btn-primary btn-primary-perso p-mb-sc-0"
                                             style="background-color: #168272; border:#168272;width:40%">
                                         <span>تغيير</span>
                                         <li class="fa fa-rotate fa-2xs"></li>
@@ -75,6 +76,9 @@
 export default {
     inject: ["w_path"],
     mounted() {
+        this.getRandomRecipe();
+    },
+    activated(){
         this.getRandomRecipe();
     },
     data() {
@@ -108,8 +112,7 @@ export default {
     background-image: url("https://i.pinimg.com/564x/51/1a/20/511a203da88f8738b47a66222f33352b.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-
-    top: 2%;
+    top: 10%;
     left: 25%;
     z-index: 9999;
 }
@@ -119,7 +122,7 @@ export default {
         width: 100%;
         background-image: url("https://wc.wallpaperuse.com/wallp/93-937789_s.jpg");
         left: 0;
-        top: 0;
+        top: 5.5%;
         z-index: 9999;
     }
 
@@ -141,7 +144,7 @@ export default {
     }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) {
     .random_recipe {
         width: 100%;
         background-image: url("https://wc.wallpaperuse.com/wallp/93-937789_s.jpg");

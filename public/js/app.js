@@ -26724,10 +26724,13 @@ __webpack_require__.r(__webpack_exports__);
       imgBestRecipe: false,
       show: "",
       activeComponent: "",
-      showSubmenu: ''
+      showSubmenu: ""
     };
   },
   methods: {
+    backTop: function backTop() {
+      document.documentElement.scrollTop = 0;
+    },
     availableTypes: function availableTypes() {
       var _this = this;
       axios({
@@ -26792,21 +26795,31 @@ __webpack_require__.r(__webpack_exports__);
     },
     wheneScroll: function wheneScroll() {
       if ($(window).scrollTop() > 200) {
+        $("#btn-back-to-top").fadeIn();
         $("#home-navbar").fadeIn("slow");
       } else {
+        $("#btn-back-to-top").fadeOut();
         $("#home-navbar").fadeOut("fast");
       }
     },
     hoverLink: function hoverLink(action) {
-      $(".index-nav li a").removeClass("link-active");
-      $(event.target).addClass("link-active");
-      if ($(event.target).hasClass('.link-active') == false) {
-        $('.sub-menu').fadeOut();
-      }
-      $('#' + event.target.getAttribute('data-menu')).fadeIn();
       if (action == "leave") {
-        $('#' + event.target.getAttribute('data-menu')).fadeOut();
+        $("#" + event.target.getAttribute("data-menu")).fadeOut();
+        $(".sub-menu").fadeOut();
+      } else {
+        $(".index-nav li a").removeClass("link-nav");
+        $(event.target).addClass("link-nav");
+        if ($(event.target).hasClass(".link-nav") == false) {
+          $(".sub-menu").fadeOut();
+        }
+        $("#" + event.target.getAttribute("data-menu")).fadeIn();
       }
+    },
+    toggleNav: function toggleNav() {
+      $(".nav").fadeToggle();
+    },
+    testEmit: function testEmit() {
+      alert("emit send");
     }
   }
 });
@@ -26918,27 +26931,27 @@ __webpack_require__.r(__webpack_exports__);
   inject: ["w_path"],
   data: function data() {
     return {
-      show: '',
+      show: "",
       rightBarShow: false
     };
   },
   methods: {
     toggleNav: function toggleNav() {
-      $("#" + event.target.getAttribute("data-target")).toggleClass('test');
+      $("#" + event.target.getAttribute("data-target")).toggleClass("test");
       $("#" + event.target.getAttribute("data-target")).slideToggle();
     },
     SlideRightBar: function SlideRightBar() {
       this.rightBarShow = !this.rightBarShow;
-      $('.Right-navbar').css('right', '0');
+      $(".Right-navbar").css("right", "0");
       if (this.rightBarShow) {
-        $('.Right-navbar').css('right', '0');
+        $(".Right-navbar").css("right", "0");
       } else {
-        $('.Right-navbar').css('right', '-100%');
+        $(".Right-navbar").css("right", "-100%");
       }
     },
     slideSubMenu: function slideSubMenu() {
-      $('#' + event.target.getAttribute('data-toggle')).find('.sub-menu').fadeToggle();
-      $('#' + event.target.getAttribute('data-toggle')).find('.fa-slide').toggleClass('fa-chevron-left fa-chevron-down');
+      $("#" + event.target.getAttribute("data-toggle")).find(".sub-menu").fadeToggle();
+      $("#" + event.target.getAttribute("data-toggle")).find(".fa-slide").toggleClass("fa-chevron-left fa-chevron-down");
     },
     wheneScroll: function wheneScroll() {
       if ($(window).scrollTop() > 300) {
@@ -26997,6 +27010,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   inject: ["w_path"],
   mounted: function mounted() {
+    this.getRandomRecipe();
+  },
+  activated: function activated() {
     this.getRandomRecipe();
   },
   data: function data() {
@@ -28457,7 +28473,21 @@ var _hoisted_1 = {
   "class": "header position-relative overflow-hidden",
   dir: "rtl"
 };
-var _hoisted_2 = {
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "login-icon d-flex flex-row position-absolute",
+  style: {
+    "left": "2%",
+    "top": "2%",
+    "z-index": "9991 !important"
+  }
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "/login",
+  "class": "fa fa-door-open fa-sign-in fs-2 mx-3 text-white text-decoration-none",
+  "data-toggle": "tooltip",
+  "data-placement": "top",
+  title: "تسجيل الدخول "
+})], -1 /* HOISTED */);
+var _hoisted_3 = {
   id: "home-navbar",
   "class": "home-navbar",
   style: {
@@ -28465,25 +28495,27 @@ var _hoisted_2 = {
   },
   dir: "ltr"
 };
-var _hoisted_3 = {
-  "class": "index-nav h-auto position-absolute top-0 w-100 z-9999"
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+  "class": "fa fa-bars-staggered"
+}, null, -1 /* HOISTED */);
+var _hoisted_5 = [_hoisted_4];
+var _hoisted_6 = {
+  "class": "font-amiri mx-auto nav p-3"
 };
-var _hoisted_4 = {
-  "class": "align-items-center d-flex flex-row font-amiri justify-content-around justify-content-center mx-auto nav p-3 w-50",
-  style: {
-    "color": "white"
-  }
-};
-var _hoisted_5 = {
-  "class": "fs-4"
-};
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-flex justify-content-between position-relative\"><div class=\"mx-1 region w-25\"><div style=\"border-bottom:1px solid #fcfdff54;\" class=\"name-region fs-5 fw-bolder\">شرقية</div><div class=\"items\"><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li></div></div><div class=\"mx-1 region w-25\"><div style=\"border-bottom:1px solid #fcfdff54;\" class=\"name-region fs-5\">شرقية </div><div class=\"items\"><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li></div></div><div class=\"mx-1 region w-25\"><div style=\"border-bottom:1px solid #fcfdff54;\" class=\"name-region fs-5\">شرقية </div><div class=\"items\"><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li></div></div><div class=\"mx-1 region w-25\"><div style=\"border-bottom:1px solid #fcfdff54;\" class=\"name-region fs-5\">شرقية </div><div class=\"items\"><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li></div></div><div class=\"mx-1 region w-25\"><div style=\"border-bottom:1px solid #fcfdff54;\" class=\"name-region fs-5\">شرقية </div><div class=\"items\"><li class=\"fs-6\">aeaezaeza</li></div></div></div>", 1);
 var _hoisted_7 = {
   "class": "fs-4"
 };
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-flex justify-content-between position-relative\"><div class=\"mx-1 region w-25\"><div style=\"border-bottom:1px solid #fcfdff54;\" class=\"name-region fs-5 fw-bolder\"> شرقية </div><div class=\"items\"><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li></div></div><div class=\"mx-1 region w-25\"><div style=\"border-bottom:1px solid #fcfdff54;\" class=\"name-region fs-5\"> شرقية </div><div class=\"items\"><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li></div></div><div class=\"mx-1 region w-25\"><div style=\"border-bottom:1px solid #fcfdff54;\" class=\"name-region fs-5\"> شرقية </div><div class=\"items\"><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li></div></div><div class=\"mx-1 region w-25\"><div style=\"border-bottom:1px solid #fcfdff54;\" class=\"name-region fs-5\"> شرقية </div><div class=\"items\"><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li></div></div><div class=\"mx-1 region w-25\"><div style=\"border-bottom:1px solid #fcfdff54;\" class=\"name-region fs-5\"> شرقية </div><div class=\"items\"><li class=\"fs-6\">aeaezaeza</li></div></div></div>", 1);
+var _hoisted_9 = [_hoisted_8];
+var _hoisted_10 = {
+  "class": "fs-4"
+};
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-flex justify-content-between position-relative\"><div class=\"mx-1 region w-25\"><div style=\"border-bottom:1px solid #fcfdff54;\" class=\"name-region fs-5 fw-bolder\"> ezaeaezaea </div><div class=\"items\"><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li></div></div><div class=\"mx-1 region w-25\"><div style=\"border-bottom:1px solid #fcfdff54;\" class=\"name-region fs-5\"> شرقية </div><div class=\"items\"><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li></div></div><div class=\"mx-1 region w-25\"><div style=\"border-bottom:1px solid #fcfdff54;\" class=\"name-region fs-5\"> شرقية </div><div class=\"items\"><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li></div></div><div class=\"mx-1 region w-25\"><div style=\"border-bottom:1px solid #fcfdff54;\" class=\"name-region fs-5\"> شرقية </div><div class=\"items\"><li><a href=\"#\" class=\"text-decoration-none fs-6 mb-1 mt-1 text-white\">azeaeazzae</a></li></div></div><div class=\"mx-1 region w-25\"><div style=\"border-bottom:1px solid #fcfdff54;\" class=\"name-region fs-5\"> شرقية </div><div class=\"items\"><li class=\"fs-6\">aeaezaeza</li></div></div></div>", 1);
+var _hoisted_12 = [_hoisted_11];
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
   "class": "fs-3 position-relative",
-  style: {}
+  style: {},
+  id: "logo"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
   src: "http://127.0.0.1:8000/images/logo2.png",
   alt: "",
@@ -28493,33 +28525,27 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   },
   "class": ""
 })], -1 /* HOISTED */);
-var _hoisted_9 = {
+var _hoisted_14 = {
   "class": "fs-4"
 };
-var _hoisted_10 = {
+var _hoisted_15 = {
   "class": "fs-4"
 };
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "position-absolute text-center z-8888",
-  style: {
-    "left": "31%",
-    "top": "15%",
-    "mix-blend-mode": "screen",
-    "width": "38%"
-  }
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "logo-title position-absolute text-center z-7777"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "bg-white display-1 fw-bolder text text-black",
   style: {
     "letter-spacing": "15px"
   }
 }, " COUSINTI ")], -1 /* HOISTED */);
-var _hoisted_12 = {
+var _hoisted_17 = {
   "class": "center-text h-50 position-absolute w-100 z-5555 d-flex justify-content-center flex-column",
   style: {
     "top": "30%"
   }
 };
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "mt-5 mb-5"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "name-regione display-4 font-amiri text-center text-white fw-bolder",
@@ -28529,72 +28555,72 @@ var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("ماعرفتيش واش طيبي "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" !!! ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "Typewriter__cursor"
 }, "|")])], -1 /* HOISTED */);
-var _hoisted_14 = {
+var _hoisted_19 = {
   "class": "steps"
 };
-var _hoisted_15 = {
+var _hoisted_20 = {
   "class": "container"
 };
-var _hoisted_16 = {
-  "class": "bg-body h-auto mt-sm-5 mx-sm-auto shape col-12 col-md-5",
+var _hoisted_21 = {
+  "class": "bg-body h-auto mt-sm-5 mx-sm-auto shape col-12 col-md-9 col-lg-5",
   style: {
     "border-radius": "22% 0%",
     "height": "174px"
   }
 };
-var _hoisted_17 = {
+var _hoisted_22 = {
   "class": "d-flex flex-column h-75 items justify-content-around p-5",
   dir: "rtl"
 };
-var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"name-regione font-amiri fs-3 fw-bold text-black-name-regione text-center\"> اجعل يومك احلي في 3 خطوات </div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div>", 4);
-var _hoisted_22 = {
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"name-regione font-amiri fs-3 fw-bold text-black-name-regione text-center\"> اجعل يومك احلي في 3 خطوات </div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div><div class=\"item align-items-center d-flex align-items-center justify-content-around\"><li class=\"border fa fa-apple-whole fs-1 m-1 p-2 rounded-circle text-info\"></li><span class=\"m-1\">Lorem ipsum dolor st, atqeriam, asperiores.</span></div>", 4);
+var _hoisted_27 = {
   "class": "font-amiri random text-center"
 };
-var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "cover position-relative"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "w-100 h-100 opacity-75 bg-perso position-absolute",
   style: {
-    "background": "linear-gradient(177deg,rgb(83, 196, 180),#ffffffb8)"
+    "background": "linear-gradient(\r\n                        177deg,\r\n                        rgb(83, 196, 180),\r\n                        #ffffffb8\r\n                    )"
   }
 })], -1 /* HOISTED */);
-var _hoisted_24 = {
+var _hoisted_29 = {
   "class": "choose_food h-auto mb-5 mt-5",
   style: {
     "width": "100",
     "height": "900px"
   }
 };
-var _hoisted_25 = {
+var _hoisted_30 = {
   "class": "container"
 };
-var _hoisted_26 = {
+var _hoisted_31 = {
   "class": "row"
 };
-var _hoisted_27 = {
+var _hoisted_32 = {
   "class": "align-items-center col-12 text-dark d-flex flex-row-reverse justify-content-center mb-5 text-center"
 };
-var _hoisted_28 = ["src"];
-var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
+var _hoisted_33 = ["src"];
+var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
   "class": "text-black-name-regione h2"
 }, "انواع الوصفات", -1 /* HOISTED */);
-var _hoisted_30 = ["src"];
-var _hoisted_31 = ["id"];
-var _hoisted_32 = {
+var _hoisted_35 = ["src"];
+var _hoisted_36 = ["id"];
+var _hoisted_37 = {
   "class": "d-flex flex-column h-100 justify-content-around position-absolute w-100 z-8888"
 };
-var _hoisted_33 = {
+var _hoisted_38 = {
   "class": "d-flex flex-column justify-content-around text-center text-white squar",
   style: {
     "background": "#17a2b8b8",
     "height": "10%"
   }
 };
-var _hoisted_34 = ["href"];
-var _hoisted_35 = {
+var _hoisted_39 = ["href"];
+var _hoisted_40 = {
   "class": "font-amiri h4 text-white"
 };
-var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_41 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "bg-dark w-100",
   style: {
     "height": "350px"
@@ -28607,86 +28633,104 @@ var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "h-100 w-100",
   style: {}
 })]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"triange\"\r\n                             id=\"triangle-bottomright\">\r\n                        </div> ")], -1 /* HOISTED */);
-var _hoisted_37 = {
+var _hoisted_42 = {
   "class": "best-of-recipe mb-5 p-3 px-0"
 };
-var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"font-amiri mb-5 pb-3 text-center w-100\" style=\"border-bottom:1px solid lightgrey;border-right:799px solid transparent;border-left:800px solid transparent;\"><div class=\"name-regione d-flex align-items-center justify-content-center\"><div class=\"h2 fw-bolder m-1\">افضل الوصفات</div><i class=\"fa fa-star-half-alt text-warning\"></i></div><div class=\"fst-italic text-muted\">اكثر الوصفات اعجابا</div></div>", 1);
-var _hoisted_39 = {
+var _hoisted_43 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"font-amiri mb-5 pb-3 text-center w-100\" style=\"border-bottom:1px solid lightgrey;border-right:799px solid transparent;border-left:800px solid transparent;\"><div class=\"name-regione d-flex align-items-center justify-content-center\"><div class=\"h2 fw-bolder m-1\">افضل الوصفات</div><i class=\"fa fa-star-half-alt text-warning\"></i></div><div class=\"fst-italic text-muted\">اكثر الوصفات اعجابا</div></div>", 1);
+var _hoisted_44 = {
   "class": "cover"
 };
-var _hoisted_40 = {
+var _hoisted_45 = {
   "class": "container"
 };
-var _hoisted_41 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_46 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": ""
 }, null, -1 /* HOISTED */);
-var _hoisted_42 = {
+var _hoisted_47 = {
   "class": "row"
 };
-var _hoisted_43 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"icon align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute w-100 z-5555\" style=\"top:45%;transition:all 1s;opacity:0;\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
-var _hoisted_44 = [_hoisted_43];
-var _hoisted_45 = {
-  "class": "col-12 col-md-6"
+var _hoisted_48 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"icon align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute w-100 z-5555\" style=\"top:45%;transition:all 1s;opacity:0;\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
+var _hoisted_49 = [_hoisted_48];
+var _hoisted_50 = {
+  "class": "col-12 col-md-6 p-mt-sc-4"
 };
-var _hoisted_46 = {
+var _hoisted_51 = {
   "class": "row h-100"
 };
-var _hoisted_47 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
-var _hoisted_48 = [_hoisted_47];
-var _hoisted_49 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
-var _hoisted_50 = [_hoisted_49];
-var _hoisted_51 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
-var _hoisted_52 = [_hoisted_51];
-var _hoisted_53 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
-var _hoisted_54 = [_hoisted_53];
-var _hoisted_55 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<section class=\"sing_up bg-dark position-relative d-flex align-items-center mb-5 font-amiri\"><div class=\"bg-black h-100 opacity-75 opt w-100 position-absolute\"></div><div class=\"container position-relative text-white\" style=\"z-index:22;\"><div class=\"align-items-center align-items-end d-flex flex-column justify-content-center\"><div class=\"display-1 font-weight-bolder\" dir=\"rtl\"> جربة وصفة ونجحتلك ? </div><div class=\"fs-5 lh-lg text-right\"> أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أوالعديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا </div><div class=\"form mt-4 mt-lg-5\"><a href=\"/register\" class=\"font-weight-bolder fs-3 m-1 p-2 px-5 rounded rounded-pill text-decoration-none text-first\" style=\"color:white;background:#229191;\">الحساب </a><a href=\"/rules\" class=\"bg-gradient bg-light font-weight-bolder fs-3 m-1 p-2 px-5 rounded rounded-pill text-decoration-none text-first text-info\">القوانين</a></div></div></div></section>", 1);
-var _hoisted_56 = {
+var _hoisted_52 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
+var _hoisted_53 = [_hoisted_52];
+var _hoisted_54 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
+var _hoisted_55 = [_hoisted_54];
+var _hoisted_56 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
+var _hoisted_57 = [_hoisted_56];
+var _hoisted_58 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"position-relative\"><div class=\"bg-dark end-0 h-100 opc position-absolute top-0 w-100\" style=\"transition:all 1s;opacity:0;\"><div class=\"align-items-center d-flex flex-column info justify-content-between justify-content-center position-absolute top-50 w-100 z-5555\"><div class=\"name h3 text-white\"><a href=\"#\" class=\"text-decoration-none text-white\">Lorem zmloxxx</a></div><div class=\"icons\"><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a><a href=\"#\"><li class=\"bg-info fa fa-heart-circle-bolt p-3 rounded-circle text-white m-1\"></li></a></div></div></div><div class=\"img w-100\"><img src=\"https://picsum.photos/200\" class=\"w-100\" alt=\"\"></div></div>", 1);
+var _hoisted_59 = [_hoisted_58];
+var _hoisted_60 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<section class=\"sing_up bg-dark position-relative d-flex align-items-center mb-5 font-amiri\"><div class=\"bg-black h-100 opacity-75 opt w-100 position-absolute\"></div><div class=\"container position-relative text-white\" style=\"z-index:22;\"><div class=\"align-items-center align-items-end d-flex flex-column justify-content-center\"><div class=\"display-1 font-weight-bolder\" dir=\"rtl\"> جربة وصفة ونجحتلك ? </div><div class=\"fs-5 lh-lg text-right\"> أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أوالعديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أنمن النصوص أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا النص أو العديد من النصوص أن تولد مثل هذا </div><div class=\"form mt-4 mt-lg-5\"><a href=\"/register\" class=\"font-weight-bolder fs-3 m-1 p-2 px-5 rounded rounded-pill text-decoration-none text-first\" style=\"color:white;background:#229191;\">الحساب </a><a href=\"/rules\" class=\"bg-gradient bg-light font-weight-bolder fs-3 m-1 p-2 px-5 rounded rounded-pill text-decoration-none text-first text-info\">القوانين</a></div></div></div></section>", 1);
+var _hoisted_61 = {
   "class": "sweats font-amiri position-relative"
 };
-var _hoisted_57 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-flex flex-column align-items-center justify-content-center w-100 mb-5\"><div class=\"h2 fw-bolder m-1 text-center mb-1\">اخر الحلويات</div><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div>", 1);
-var _hoisted_58 = {
+var _hoisted_62 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-flex flex-column align-items-center justify-content-center w-100 mb-5\"><div class=\"h2 fw-bolder m-1 text-center mb-1\">اخر الحلويات</div><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div>", 1);
+var _hoisted_63 = {
   "class": "align-items-center d-flex flex-column sliderSweats w-100",
   style: {
     "transition": "all 1s"
   }
 };
-var _hoisted_59 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-inline-flex position-relative w-75 overflow-hidden\" style=\"height:400px;\"><div class=\"d-flex items position-relative\" style=\"right:0px;\" id=\"slideSweats\" dir=\"rtl\"><div id=\"item-slider\" data-show=\"1\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/111/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"2\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/107/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/122/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/108/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/99/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div></div></div>", 1);
-var _hoisted_60 = {
+var _hoisted_64 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-inline-flex position-relative w-75 overflow-hidden\" style=\"height:400px;\"><div class=\"d-flex items position-relative\" style=\"right:0px;\" id=\"slideSweats\" dir=\"rtl\"><div id=\"item-slider\" data-show=\"1\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/111/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"2\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/107/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/122/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/108/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div id=\"item-slider\" data-show=\"3\" class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;transition:all 1s;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/99/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div></div></div>", 1);
+var _hoisted_65 = {
   "class": "action"
 };
-var _hoisted_61 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+var _hoisted_66 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
   "class": "fa fa-chevron-right"
 }, null, -1 /* HOISTED */);
-var _hoisted_62 = [_hoisted_61];
-var _hoisted_63 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+var _hoisted_67 = [_hoisted_66];
+var _hoisted_68 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
   "class": "fa fa-chevron-left"
 }, null, -1 /* HOISTED */);
-var _hoisted_64 = [_hoisted_63];
-var _hoisted_65 = {
+var _hoisted_69 = [_hoisted_68];
+var _hoisted_70 = {
   "class": "salts font-amiri mt-5"
 };
-var _hoisted_66 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-flex flex-column align-items-center justify-content-center w-100 mb-5\"><div class=\"h2 fw-bolder m-1 text-center mb-1\">اخر المملحات</div><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div>", 1);
-var _hoisted_67 = {
+var _hoisted_71 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-flex flex-column align-items-center justify-content-center w-100 mb-5\"><div class=\"h2 fw-bolder m-1 text-center mb-1\">اخر المملحات</div><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div>", 1);
+var _hoisted_72 = {
   "class": "align-items-center d-flex flex-column slideSalts w-100",
   style: {
     "transition": "all 1s"
   }
 };
-var _hoisted_68 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-inline-flex position-relative w-75 overflow-hidden\" style=\"height:400px;\"><div class=\"d-flex items position-relative\" style=\"right:0px;\" id=\"slideSalts\" dir=\"rtl\"><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/105/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/102/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/102/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">xxxxxxxxxx</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div></div></div>", 1);
-var _hoisted_69 = {
+var _hoisted_73 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-inline-flex position-relative w-75 overflow-hidden\" style=\"height:400px;\"><div class=\"d-flex items position-relative\" style=\"right:0px;\" id=\"slideSalts\" dir=\"rtl\"><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/105/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/102/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/102/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">Name</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div><div class=\"bg-light h-100 item mx-1 p-3 rounded\" style=\"width:350px;\"><div class=\"d-flex flex-column justify-content-center\"><div class=\"img\"><img src=\"https://picsum.photos/id/100/150\" alt=\"\" class=\"w-100\"><div class=\"align-items-baseline d-flex justify-content-between p-1\"><div class=\"info\"><div class=\"fs-4 fw-bolder text-black-500\"><a class=\"text-decoration-none text-first pointer\" href=\"#\">xxxxxxxxxx</a></div><div class=\"fs-6 text-black-50\"> حلويات </div></div><div><li class=\"fa fa-heart text-danger\"></li></div></div></div></div></div></div></div>", 1);
+var _hoisted_74 = {
   "class": "action mt-3"
 };
-var _hoisted_70 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<section class=\"bestChefs h-auto\" dir=\"rtl\"><div class=\"w-100\"><div class=\"d-flex flex-column justify-content-center mb-5 w-100 mt-5\"><h1 class=\"text-center\">افضل الطهاة</h1><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div><div class=\"chefs\"><div class=\"container\"><div class=\"row\"><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=3\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=4\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=5\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=6\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div></div></div></div></div></section><section class=\"sponsore w-100 mw-100 mb-5\" style=\"font-family:&#39;dance&#39;;\"><div class=\"align-items-center d-flex justify-content-center w-100\"><div class=\"position-relative mb-4\"><div class=\"fs-2 fw-bold text-center\">Sponsored</div></div></div><div class=\"align-items-center d-flex justify-content-center w-100 text-center\" style=\"height:100px;\"><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div></div></section>", 2);
-var _hoisted_72 = {
+var _hoisted_75 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<section class=\"bestChefs h-auto\" dir=\"rtl\"><div class=\"w-100\"><div class=\"d-flex flex-column justify-content-center mb-5 w-100 mt-5\"><h1 class=\"text-center\">افضل الطهاة</h1><div class=\"sep mt-1\" style=\"width:8%;\"></div><div class=\"sep mt-1\" style=\"width:6%;\"></div><div class=\"sep mt-1\" style=\"width:4%;\"></div></div><div class=\"chefs p-mb-sc-5 p-h-auto-sc\"><div class=\"container\"><div class=\"row\"><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=3\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=4\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=5\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div><div class=\"col-3\"><div class=\"chef p-2 rounded\" style=\"height:auto;background:#b1b1b133;\"><div class=\"d-flex flex-column\"><div class=\"w-100\"><img class=\"w-100\" src=\"https://i.pravatar.cc/300?img=6\" alt=\"\"></div><div class=\"font-italic fs-5 fw-normal mt-1 mx-0 name text-center\"><a href=\"#\" class=\"text-decoration-none text-info\">Mohamed el habib</a></div><div class=\"font-italic fs-6 fw-normal m-1 mx-0 specialité text-center\" style=\"color:#e35516;\"><a href=\"#\" class=\"text-decoration-none\" style=\"color:#e35516;\">Specialité</a></div><div><a href=\"#\" class=\"bg-info btn text-white w-100 text-decoration-none\">Profile</a></div></div></div></div></div></div></div></div></section><section class=\"sponsore w-100 mw-100 mb-5\" style=\"font-family:&#39;dance&#39;;\"><div class=\"align-items-center d-flex justify-content-center w-100\"><div class=\"position-relative mb-4\"><div class=\"fs-2 fw-bold text-center\">Sponsored</div></div></div><div class=\"align-items-center d-flex justify-content-center w-100 text-center\" style=\"height:100px;\"><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div><div class=\"item mx-2\"><a href=\"#\"><img src=\"https://picsum.photos/70\" alt=\"\" class=\"rounded-circle\"></a><div class=\"name_comapny fw-bold\">Lorem azxpp</div></div></div></section>", 2);
+var _hoisted_77 = {
   "class": "footer"
 };
+var _hoisted_78 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "fas fa-arrow-up"
+}, null, -1 /* HOISTED */);
+var _hoisted_79 = [_hoisted_78];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_nav_bar = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("nav-bar");
   var _component_footer_page = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("footer-page");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.KeepAlive, null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)($data.activeComponent)))], 1024 /* DYNAMIC_SLOTS */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_nav_bar)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.KeepAlive, null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)($data.activeComponent), {
+    onCloseRecipe: _cache[0] || (_cache[0] = function ($event) {
+      return $data.activeComponent = 'empty';
+    })
+  }, null, 32 /* HYDRATE_EVENTS */))], 1024 /* DYNAMIC_SLOTS */)), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_nav_bar)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "index-nav h-auto position-absolute top-0 w-100 z-8888",
+    onMouseleave: _cache[8] || (_cache[8] = function ($event) {
+      return $options.hoverLink('leave');
+    })
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    "class": "btn btn-toggle m-2",
+    onClick: _cache[1] || (_cache[1] = function ($event) {
+      return $options.toggleNav();
+    })
+  }, _hoisted_5), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     href: "#",
-    "class": "fw-bolder p-2 rounded text-decoration-none link-active",
-    onMouseenter: _cache[0] || (_cache[0] = function ($event) {
+    "class": "fw-bolder p-2 rounded text-decoration-none link-nav",
+    onMouseenter: _cache[2] || (_cache[2] = function ($event) {
       return $options.hoverLink();
     }),
     "data-menu": "submenu1",
@@ -28695,7 +28739,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }
   }, "معجنات", 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     id: "submenu1",
-    onMouseleave: _cache[1] || (_cache[1] = function ($event) {
+    onMouseleave: _cache[3] || (_cache[3] = function ($event) {
       return $options.hoverLink('leave');
     }),
     "class": "p-3 position-absolute mt-3 rounded sub-menu w-50 z-9999",
@@ -28703,25 +28747,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       "background": "rgb(1, 135, 135)",
       "display": "none"
     }
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"bg-gradient border-bottom h-auto position-absolute px-2 remove-submenu rounded-top w-100\"\r\n                            style=\"top: 0;right: 0;\">\r\n                <li class=\"fa fa-remove fs-5 pointer\" style=\"color: #206060;\" data-menu=\"submenu1\"\r\n                    @click=\"hoverLink('')\"></li>\r\n            </div> "), _hoisted_6], 32 /* HYDRATE_EVENTS */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-    onMouseenter: _cache[2] || (_cache[2] = function ($event) {
-      return $options.hoverLink();
-    }),
-    href: "#",
-    "class": "fw-bolder p-2 rounded text-decoration-none",
-    style: {
-      "color": "white"
-    }
-  }, "حلويات", 32 /* HYDRATE_EVENTS */)]), _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-    onMouseenter: _cache[3] || (_cache[3] = function ($event) {
-      return $options.hoverLink();
-    }),
-    href: "#",
-    "class": "fw-bolder p-2 rounded text-decoration-none",
-    style: {
-      "color": "white"
-    }
-  }, "حلويات", 32 /* HYDRATE_EVENTS */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  }, _hoisted_9, 32 /* HYDRATE_EVENTS */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    "data-menu": "submenu2",
     onMouseenter: _cache[4] || (_cache[4] = function ($event) {
       return $options.hoverLink();
     }),
@@ -28730,62 +28757,74 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     style: {
       "color": "white"
     }
-  }, "حلويات", 32 /* HYDRATE_EVENTS */)])])]), _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }, "home", 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    id: "submenu2",
+    onMouseleave: _cache[5] || (_cache[5] = function ($event) {
+      return $options.hoverLink('leave');
+    }),
+    "class": "p-3 position-absolute mt-3 rounded sub-menu w-50 z-9999",
+    style: {
+      "background": "rgb(1, 135, 135)",
+      "display": "none"
+    }
+  }, _hoisted_12, 32 /* HYDRATE_EVENTS */)]), _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    onMouseenter: _cache[6] || (_cache[6] = function ($event) {
+      return $options.hoverLink();
+    }),
+    href: "#",
+    "class": "fw-bolder p-2 rounded text-decoration-none",
+    style: {
+      "color": "white"
+    }
+  }, "حلويات", 32 /* HYDRATE_EVENTS */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    onMouseenter: _cache[7] || (_cache[7] = function ($event) {
+      return $options.hoverLink();
+    }),
+    href: "#",
+    "class": "fw-bolder p-2 rounded text-decoration-none",
+    style: {
+      "color": "white"
+    }
+  }, "حلويات", 32 /* HYDRATE_EVENTS */)])])], 32 /* HYDRATE_EVENTS */), _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "btn fs-4 fw-bolder mt-5 w-50",
     style: {
       "background": "rgb(52, 64, 64)"
     },
-    onClick: _cache[5] || (_cache[5] = function ($event) {
+    onClick: _cache[9] || (_cache[9] = function ($event) {
       return $data.activeComponent = 'random-recipe';
     })
-  }, " اختيار وصفة ")])])])])])]), _hoisted_23]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  }, " اختيار وصفة ")])])])])])]), _hoisted_28]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     "class": "ms-2",
     src: $options.w_path + '/images/V2.png',
     alt: ""
-  }, null, 8 /* PROPS */, _hoisted_28), _hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  }, null, 8 /* PROPS */, _hoisted_33), _hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     "class": "ms-2",
     src: $options.w_path + '/images/V2.png',
     alt: ""
-  }, null, 8 /* PROPS */, _hoisted_30)]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.types_recipe, function (type) {
+  }, null, 8 /* PROPS */, _hoisted_35)]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.types_recipe, function (type) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       "class": "col-xs-12 col-md-6 col-lg-4 item overflow-hidden p-0 position-relative",
       id: type.type,
-      onMouseenter: _cache[6] || (_cache[6] = function ($event) {
+      onMouseenter: _cache[10] || (_cache[10] = function ($event) {
         return $options.EffectCategorie();
       }),
-      onMouseleave: _cache[7] || (_cache[7] = function ($event) {
+      onMouseleave: _cache[11] || (_cache[11] = function ($event) {
         return $options.EffectCategorie();
       }),
       key: type.recipe
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
       href: '/similar/' + type.type,
       "class": "text-decoration-none"
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(type.type), 1 /* TEXT */)], 8 /* PROPS */, _hoisted_34)])]), _hoisted_36], 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_31);
-  }), 128 /* KEYED_FRAGMENT */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"col-xs-12 col-md-6 col-lg-4 position-relative p-0 item overflow-hidden\"\r\n                     v-for=\"type in types_recipe\"\r\n                     :key=\"type.recipe\">\r\n                    <div class=\"name position-absolute text-center\"\r\n                         style=\"margin: 0 2%;width: 96%;z-index: 1;top: 40%;\">\r\n\r\n                        <div class=\"display-6 font-weight-bolder text-white\">\r\n                            <a href=\"#\"\r\n                               class=\"position-relative  text-decoration-none text-white\"\r\n                               style=\"z-index: 100;\">{{ type.type }}</a>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"h-100 opt position-absolute w-100 overflow-hidden\"></div>\r\n                    <img class=\"w-100 item\"\r\n                         :src=\"w_path + '/images/1.jpg'\"\r\n                         alt=\"\"\r\n                         srcset=\"\"\r\n                         style=\"height: 500px;\">\r\n                </div> ")])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_37, [_hoisted_38, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_40, [_hoisted_41, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_42, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_40, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(type.type), 1 /* TEXT */)], 8 /* PROPS */, _hoisted_39)])]), _hoisted_41], 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_36);
+  }), 128 /* KEYED_FRAGMENT */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"col-xs-12 col-md-6 col-lg-4 position-relative p-0 item overflow-hidden\"\r\n                     v-for=\"type in types_recipe\"\r\n                     :key=\"type.recipe\">\r\n                    <div class=\"name position-absolute text-center\"\r\n                         style=\"margin: 0 2%;width: 96%;z-index: 1;top: 40%;\">\r\n\r\n                        <div class=\"display-6 font-weight-bolder text-white\">\r\n                            <a href=\"#\"\r\n                               class=\"position-relative  text-decoration-none text-white\"\r\n                               style=\"z-index: 100;\">{{ type.type }}</a>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"h-100 opt position-absolute w-100 overflow-hidden\"></div>\r\n                    <img class=\"w-100 item\"\r\n                         :src=\"w_path + '/images/1.jpg'\"\r\n                         alt=\"\"\r\n                         srcset=\"\"\r\n                         style=\"height: 500px;\">\r\n                </div> ")])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_42, [_hoisted_43, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_44, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_45, [_hoisted_46, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "col-12 col-md-6",
-    onMouseenter: _cache[8] || (_cache[8] = function ($event) {
-      return $options.EffectBestRecipe();
-    }),
-    onMouseleave: _cache[9] || (_cache[9] = function ($event) {
-      return $options.EffectBestRecipe();
-    })
-  }, _hoisted_44, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_45, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_46, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "col-6 mb-1 rounded img-fluid",
-    onMouseenter: _cache[10] || (_cache[10] = function ($event) {
-      return $options.EffectBestRecipe();
-    }),
-    onMouseleave: _cache[11] || (_cache[11] = function ($event) {
-      return $options.EffectBestRecipe();
-    })
-  }, _hoisted_48, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "col-6 mb-1 rounded img-fluid",
     onMouseenter: _cache[12] || (_cache[12] = function ($event) {
       return $options.EffectBestRecipe();
     }),
     onMouseleave: _cache[13] || (_cache[13] = function ($event) {
       return $options.EffectBestRecipe();
     })
-  }, _hoisted_50, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_49, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_50, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_51, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "col-6 mb-1 rounded img-fluid",
     onMouseenter: _cache[14] || (_cache[14] = function ($event) {
       return $options.EffectBestRecipe();
@@ -28793,7 +28832,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onMouseleave: _cache[15] || (_cache[15] = function ($event) {
       return $options.EffectBestRecipe();
     })
-  }, _hoisted_52, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_53, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "col-6 mb-1 rounded img-fluid",
     onMouseenter: _cache[16] || (_cache[16] = function ($event) {
       return $options.EffectBestRecipe();
@@ -28801,27 +28840,55 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onMouseleave: _cache[17] || (_cache[17] = function ($event) {
       return $options.EffectBestRecipe();
     })
-  }, _hoisted_54, 32 /* HYDRATE_EVENTS */)])])])])])]), _hoisted_55, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_56, [_hoisted_57, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_58, [_hoisted_59, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_60, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_55, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "col-6 mb-1 rounded img-fluid",
+    onMouseenter: _cache[18] || (_cache[18] = function ($event) {
+      return $options.EffectBestRecipe();
+    }),
+    onMouseleave: _cache[19] || (_cache[19] = function ($event) {
+      return $options.EffectBestRecipe();
+    })
+  }, _hoisted_57, 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "col-6 mb-1 rounded img-fluid",
+    onMouseenter: _cache[20] || (_cache[20] = function ($event) {
+      return $options.EffectBestRecipe();
+    }),
+    onMouseleave: _cache[21] || (_cache[21] = function ($event) {
+      return $options.EffectBestRecipe();
+    })
+  }, _hoisted_59, 32 /* HYDRATE_EVENTS */)])])])])])]), _hoisted_60, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_61, [_hoisted_62, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_63, [_hoisted_64, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_65, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "next align-items-center bg-light d-flex end-0 h-100 h-50 justify-content-center position-absolute text-first top-0 px-4 shadow pointer",
-    onClick: _cache[18] || (_cache[18] = function ($event) {
+    onClick: _cache[22] || (_cache[22] = function ($event) {
       return $options.scrollSlider('right', 'slideSweats');
     })
-  }, _hoisted_62), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_67), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "prev align-items-center bg-light d-flex start-0 h-100 h-50 justify-content-center position-absolute text-first top-0 px-4 shadow pointer",
-    onClick: _cache[19] || (_cache[19] = function ($event) {
+    onClick: _cache[23] || (_cache[23] = function ($event) {
       return $options.scrollSlider('left', 'slideSweats');
     })
-  }, _hoisted_64)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_65, [_hoisted_66, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_67, [_hoisted_68, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_69, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+  }, _hoisted_69)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_70, [_hoisted_71, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_72, [_hoisted_73, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_74, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
     "class": "fa fa-chevron-left mt-1 text-white bg-perso mx-3 p-2 px-5 rounded-pill pointer",
-    onClick: _cache[20] || (_cache[20] = function ($event) {
+    onClick: _cache[24] || (_cache[24] = function ($event) {
       return $options.scrollSlider('left', 'slideSalts');
     })
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
     "class": "fa fa-chevron-right mt-1 text-white bg-perso mx-3 p-2 px-5 rounded-pill pointer",
-    onClick: _cache[21] || (_cache[21] = function ($event) {
+    onClick: _cache[25] || (_cache[25] = function ($event) {
       return $options.scrollSlider('right', 'slideSalts');
     })
-  })])])]), _hoisted_70, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_72, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_footer_page)])], 64 /* STABLE_FRAGMENT */);
+  })])])]), _hoisted_75, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_77, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_footer_page)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[26] || (_cache[26] = function ($event) {
+      return $options.backTop();
+    }),
+    type: "button",
+    "class": "btn btn-info btn-floating btn-lg position-fixed rounded-pill z-9999",
+    style: {
+      "right": "5%",
+      "bottom": "5%",
+      "display": "none"
+    },
+    id: "btn-back-to-top"
+  }, _hoisted_79)], 64 /* STABLE_FRAGMENT */);
 }
 
 /***/ }),
@@ -29075,7 +29142,7 @@ var _hoisted_2 = {
   id: "navSlide"
 };
 var _hoisted_3 = {
-  "class": "align-items-center d-flex flex-row-reverse search w-25 px-2"
+  "class": "align-items-center d-flex flex-row-reverse px-2 search w-100-md w-100-sc w-25-perso"
 };
 var _hoisted_4 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -29089,36 +29156,39 @@ var _hoisted_4 = /*#__PURE__*/_withScopeId(function () {
   }, "تسجيل")], -1 /* HOISTED */);
 });
 var _hoisted_5 = {
-  "class": "logo start-0 w-50 text-center"
+  "class": "logo p-d-none-sc start-0 text-center w-50"
 };
-var _hoisted_6 = ["src"];
-var _hoisted_7 = {
+var _hoisted_6 = {
+  href: "/"
+};
+var _hoisted_7 = ["src"];
+var _hoisted_8 = {
   "class": "toggleBar end-0 w-25 text-right"
 };
-var _hoisted_8 = {
+var _hoisted_9 = {
   "class": "Right-navbar rounded border-top d-flex flex-column"
 };
-var _hoisted_9 = {
+var _hoisted_10 = {
   "class": "border-bottom close-nav p-2 text-right w-100"
 };
-var _hoisted_10 = {
+var _hoisted_11 = {
   id: "item1",
   "class": "item font-amiri p-2 start-0 text-center w-100 border-bottom position-relative"
 };
-var _hoisted_11 = {
+var _hoisted_12 = {
   "class": "d-flex justify-content-center align-items-center"
 };
-var _hoisted_12 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_13 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
     "class": "fa fa-slide fa-chevron-left text-dark w-25"
   }, null, -1 /* HOISTED */);
 });
-var _hoisted_13 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_14 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
     "class": "fa fa-home fs-5 text-dark mx-3"
   }, null, -1 /* HOISTED */);
 });
-var _hoisted_14 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_15 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "bg-light p-2 position-absolute rounded-start sub-menu w-100 z-8888",
     style: {
@@ -29131,24 +29201,24 @@ var _hoisted_14 = /*#__PURE__*/_withScopeId(function () {
     "class": "text-decoration-none text-info fs-6"
   }, "azezaeazeazeaz")])], -1 /* HOISTED */);
 });
-var _hoisted_15 = {
+var _hoisted_16 = {
   id: "item2",
   "class": "item font-amiri p-2 start-0 text-center w-100 border-bottom position-relative"
 };
-var _hoisted_16 = {
+var _hoisted_17 = {
   "class": "d-flex justify-content-center align-items-center"
 };
-var _hoisted_17 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_18 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
     "class": "fa fa-slide fa-chevron-left text-dark w-25"
   }, null, -1 /* HOISTED */);
 });
-var _hoisted_18 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_19 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
     "class": "fa fa-home fs-5 text-dark mx-3"
   }, null, -1 /* HOISTED */);
 });
-var _hoisted_19 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_20 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "bg-light p-2 position-absolute rounded-start sub-menu w-100 z-8888",
     style: {
@@ -29165,38 +29235,38 @@ var _hoisted_19 = /*#__PURE__*/_withScopeId(function () {
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_loading_page = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("loading-page");
   var _component_search = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("search");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_loading_page), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" v-if=\"this.$attrs.show_navbar == true\" "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_search), _hoisted_4]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_loading_page), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" v-if=\"this.$attrs.show_navbar == true\" "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_search), _hoisted_4]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     src: $options.w_path + '/images/logo2.png',
     style: {
       "height": "auto",
       "width": "80px"
     },
     alt: ""
-  }, null, 8 /* PROPS */, _hoisted_6)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+  }, null, 8 /* PROPS */, _hoisted_7)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
     "class": "fa fa-bars-staggered fs-3 h-100 p-2 px-3 rounded text-white pointer",
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return $options.SlideRightBar();
     })
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <nav class=\"end-0 navbar navbar-expand-lg navbar-light position-relative w-100 justify-content-end\"\r\n           style=\"z-index: 9998;\">\r\n        <button class=\"navbar-toggler m-3\"\r\n                type=\"button\"\r\n                data-toggle=\"collapse\"\r\n                data-target=\"#navbarNav\"\r\n                aria-controls=\"navbarNav\"\r\n                aria-expanded=\"false\"\r\n                aria-label=\"Toggle navigation\">\r\n          <span class=\"fa fa-bars text-white\"></span>\r\n        </button>\r\n        <div class=\"collapse navbar-collapse text-center \"\r\n             id=\"navbarNav\">\r\n          <div class=\"container\">\r\n            <ul class=\"navbar-nav justify-content-center\"\r\n                dir=\"rtl\">\r\n              <li class=\"nav-item\">\r\n                <a class=\"nav-link font-amiri fs-5 fw-normal m-2 mx-3 text-decoration-none text-white\"\r\n                   href=\"/home\">Home</a>\r\n              </li>\r\n              <li class=\"nav-item\">\r\n                <a class=\"nav-link font-amiri fs-5 fw-normal m-2 mx-3 text-decoration-none text-white\"\r\n                   href=\"/sweat\">حلويات</a>\r\n              </li>\r\n            </ul>\r\n          </div>\r\n        </div>\r\n      </nav> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
     "class": "bg-light fa fa-remove p-1 px-2 rounded-circle text-muted pointer",
     onClick: _cache[1] || (_cache[1] = function ($event) {
       return $options.SlideRightBar();
     })
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     "class": "fs-5 fw-bold link-right-bar text-decoration-none text-white title w-50",
     "data-toggle": "item1",
     href: "#",
     onClick: _cache[2] || (_cache[2] = function ($event) {
       return $options.slideSubMenu();
     })
-  }, "حلويات"), _hoisted_13]), _hoisted_14]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  }, "حلويات"), _hoisted_14]), _hoisted_15]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     "class": "fs-5 fw-bold link-right-bar text-decoration-none text-white title w-50",
     "data-toggle": "item2",
     href: "#",
     onClick: _cache[3] || (_cache[3] = function ($event) {
       return $options.slideSubMenu();
     })
-  }, "home"), _hoisted_18]), _hoisted_19])])]);
+  }, "home"), _hoisted_19]), _hoisted_20])])]);
 }
 
 /***/ }),
@@ -29252,60 +29322,61 @@ var _hoisted_1 = {
 };
 var _hoisted_2 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "end-0 m-1 position-absolute remove pointer text-right text-white top-0",
-    style: {
-      "z-index": "9999"
-    }
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "bg-primary-color rounded-circle text-center text-white",
-    style: {
-      "width": "30px",
-      "height": "30px"
-    }
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-    "class": "fa fa-remove p-1",
-    "aria-hidden": "true"
-  })])], -1 /* HOISTED */);
+    "class": "position-fixed w-100 h-100 end-0 top-0 bg-dark opacity-50 z-8888"
+  }, null, -1 /* HOISTED */);
 });
-var _hoisted_3 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_3 = {
+  "class": "end-0 m-1 position-absolute remove pointer text-right text-white top-0",
+  style: {
+    "z-index": "9999"
+  }
+};
+var _hoisted_4 = {
+  "class": "bg-primary-color rounded-circle text-center text-white",
+  style: {
+    "width": "30px",
+    "height": "30px"
+  }
+};
+var _hoisted_5 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "bg-black h-100 opacity-50 opt position-absolute top-0 start-0 w-100"
   }, null, -1 /* HOISTED */);
 });
-var _hoisted_4 = {
+var _hoisted_6 = {
   "class": "container position-relative",
   style: {
-    "z-index": "200"
+    "z-index": "9999"
   }
 };
-var _hoisted_5 = {
+var _hoisted_7 = {
   "class": "row"
 };
-var _hoisted_6 = {
+var _hoisted_8 = {
   "class": "bg-light border-bottom col-12 font-22 font-weight-bolder m-auto mb-2 p-2 text-center title rounded-pill w-100"
 };
-var _hoisted_7 = ["href"];
-var _hoisted_8 = {
+var _hoisted_9 = ["href"];
+var _hoisted_10 = {
   "class": "image_recette col-12 p-0 img-fluid mt-3 rounded text-center"
 };
-var _hoisted_9 = ["src"];
-var _hoisted_10 = {
+var _hoisted_11 = ["src"];
+var _hoisted_12 = {
   "class": "col-12 p-0"
 };
-var _hoisted_11 = {
+var _hoisted_13 = {
   "class": "bg-light info m-auto mt-2 rounded p-3"
 };
-var _hoisted_12 = {
+var _hoisted_14 = {
   "class": "random"
 };
-var _hoisted_13 = {
+var _hoisted_15 = {
   "class": "row align-items-end"
 };
-var _hoisted_14 = {
+var _hoisted_16 = {
   "class": "rating col-12 col-sm-12 col-md-6 m",
   dir: "rtl"
 };
-var _hoisted_15 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_17 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "h6 d-flex"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -29314,75 +29385,81 @@ var _hoisted_15 = /*#__PURE__*/_withScopeId(function () {
     "class": "text-muted"
   }, "نسبة النجاح مبنية علي عدد اعجابات المستخديمن")], -1 /* HOISTED */);
 });
-var _hoisted_16 = {
+var _hoisted_18 = {
   "class": "progress",
   style: {
     "height": "30px"
   }
 };
-var _hoisted_17 = {
+var _hoisted_19 = {
   "class": "actions text-center col-12 col-sm-12 col-md-6"
 };
-var _hoisted_18 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_20 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "تغيير", -1 /* HOISTED */);
 });
-var _hoisted_19 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_21 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
     "class": "fa fa-rotate fa-2xs"
   }, null, -1 /* HOISTED */);
 });
-var _hoisted_20 = [_hoisted_18, _hoisted_19];
-var _hoisted_21 = ["href"];
-var _hoisted_22 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_22 = [_hoisted_20, _hoisted_21];
+var _hoisted_23 = ["href"];
+var _hoisted_24 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "الوصفة", -1 /* HOISTED */);
 });
-var _hoisted_23 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_25 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
     "class": "fa fa-check fa-2xs"
   }, null, -1 /* HOISTED */);
 });
-var _hoisted_24 = [_hoisted_22, _hoisted_23];
+var _hoisted_26 = [_hoisted_24, _hoisted_25];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "bg-perso fa fa-remove p-1 px-2 rounded-circle",
+    "aria-hidden": "true",
+    onClick: _cache[0] || (_cache[0] = function ($event) {
+      return _ctx.$emit('CloseRecipe');
+    })
+  })])]), _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     "class": "text-decoration-none text-first",
     href: '/recipes/' + $data.random_recipe.id
-  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.random_recipe.name), 9 /* TEXT, PROPS */, _hoisted_7)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.random_recipe.images_recipe, function (cover) {
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.random_recipe.name), 9 /* TEXT, PROPS */, _hoisted_9)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.random_recipe.images_recipe, function (cover) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
       key: cover.recipe,
       src: $options.w_path + '/storage/recipes/' + cover.name,
       "class": "w-100 rounded",
       alt: "",
       srcset: ""
-    }, null, 8 /* PROPS */, _hoisted_9);
-  }), 128 /* KEYED_FRAGMENT */))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    }, null, 8 /* PROPS */, _hoisted_11);
+  }), 128 /* KEYED_FRAGMENT */))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "bg-success fs-6 fw-bolder progress-bar progress-bar-striped",
     role: "progressbar",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)('width:' + this.rating + '%;'),
     "aria-valuemin": "0",
     "aria-valuemax": "100"
-  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.rating) + "%", 5 /* TEXT, STYLE */)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.rating) + "%", 5 /* TEXT, STYLE */)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     type: "button",
-    onClick: _cache[0] || (_cache[0] = function ($event) {
+    onClick: _cache[1] || (_cache[1] = function ($event) {
       return $options.getRandomRecipe();
     }),
     dir: "rtl",
-    "class": "btn btn-primary btn-primary-perso",
+    "class": "btn btn-primary btn-primary-perso p-mb-sc-0",
     style: {
       "background-color": "#168272",
       "border": "#168272",
       "width": "40%"
     }
-  }, _hoisted_20), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  }, _hoisted_22), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     href: '/recipes/' + $data.random_recipe.id,
     dir: "rtl",
     "class": "btn btn-primary m-1",
     style: {
       "width": "40%"
     },
-    onClick: _cache[1] || (_cache[1] = function ($event) {
+    onClick: _cache[2] || (_cache[2] = function ($event) {
       return _ctx.recette();
     })
-  }, _hoisted_24, 8 /* PROPS */, _hoisted_21)])])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END OF COMPONENT  ")]);
+  }, _hoisted_26, 8 /* PROPS */, _hoisted_23)])])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END OF COMPONENT  ")]);
 }
 
 /***/ }),
@@ -36984,7 +37061,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_images_header_shape_1_png__WEBPACK_IMPORTED_MODULE_2__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.header {\r\n    width: 100%;\r\n    max-width: 100%;\r\n    height: 1050px;\r\n    background-color: rgb(199, 199, 199);\n}\n#slideSweats,\r\n#slideSalts {\r\n    transition: all 1s;\n}\n.header .cover {\r\n    background: url(\"https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg\");\r\n    background-size: cover;\r\n    max-width: 100%;\r\n    height: 100%;\n}\n.header .steps .separator {\r\n    width: 30%;\r\n    height: 1px;\r\n    background: #164;\n}\n.header .shape {\r\n    /* background: white; */\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: cover;\n}\n.header button {\r\n    color: white;\n}\n.header button:hover {\r\n    background: white;\r\n    color: #229191;\r\n    box-shadow: 0px 0px 20px #229191;\r\n    transition: all 1s ease;\n}\n.header .index-nav li .link-active {\r\n    border-width: 2px;\r\n    border-style: solid;\r\n    -o-border-image: linear-gradient(268deg, #17a2b800, #00ffb8, #17a2b800) 1;\r\n       border-image: linear-gradient(268deg, #17a2b800, #00ffb8, #17a2b800) 1;\r\n    border-top: none;\r\n    border-right: none;\r\n    border-left: none;\r\n    transition: border-image 1s;\r\n    transition: border-image 1s, -o-border-image 1s;\n}\n.index-nav .sub-menu a:hover {\r\n    color: #164;\r\n    transition: all 0.5s;\n}\r\n\r\n/* TYPES RECIPES */\n#triangle-bottomright {\r\n    width: 0;\r\n    height: 0;\r\n    border-bottom: 400px solid #00c4ff6b;\r\n    border-left: 330px solid transparent;\r\n    position: absolute;\r\n    top: 0;\r\n    right: 0;\n}\nimg,\r\ndiv.squar {\r\n    transition: 1s;\n}\n.best-of-recipe {}\n.best-of-recipe .cover {\r\n    height: auto;\r\n    width: 100%;\r\n    background: url(\"https://i.pinimg.com/564x/bb/0d/c5/bb0dc5b2d6c9566fa965809367ff29d2.jpg\");\r\n    background-size: inherit;\r\n    background-repeat: no-repeat;\n}\n.sing_up {\r\n    height: 500px;\r\n    background: url(\"https://i.pinimg.com/564x/38/61/10/386110194c0b59f92a1124fe85120836.jpg\");\r\n    background-size: cover;\r\n    background-attachment: fixed;\r\n    background-position: center;\n}\n.bestChefs .separator {\r\n    /* background-attachment: fixed; */\n}\n.bestChefs div.chefs {\r\n    height: 500px;\r\n    /* background: url('https://i.pinimg.com/564x/f6/4c/97/f64c97785241fefe3ea312f1bd225703.jpg');\r\n    background-size: cover;\r\n    background-position: right; */\r\n    background: linear-gradient(transparent, #54545445, transparent);\n}\n.bestChefs .sep,\r\n.salts .sep,\r\n.sweats .sep {\r\n    height: 1px;\r\n    background: #ff8d00;\r\n    margin: auto;\n}\r\n\r\n/* width */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar {\r\n    width: 5px;\r\n    height: 5px;\n}\r\n\r\n/* Track */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar-track {\r\n    box-shadow: inset 0 0 5px #367a7a;\r\n    border-radius: 10px;\n}\r\n\r\n/* Handle */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar-thumb {\r\n    background: #229191;\r\n    border-radius: 10px;\n}\n#slide {\r\n    transition: all 1s;\n}\na.rounded-pill:hover {\r\n    opacity: 0.7;\r\n    transition: opacity 1s;\n}\n@media only screen and (max-width: 760px) {\n.description {\r\n        font-size: 0.9rem !important;\n}\n.header .shape div div:last-of-type div {\r\n        background: white;\r\n        border: none;\n}\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n/* generale */\nbody {\r\n    transition: all 0.5ms;\n}\n.header {\r\n    width: 100%;\r\n    max-width: 100%;\r\n    height: 1050px;\r\n    background-color: rgb(199, 199, 199);\n}\n#slideSweats,\r\n#slideSalts {\r\n    transition: all 1s;\n}\n.header .cover {\r\n    background: url(\"https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg\");\r\n    background-size: cover;\r\n    max-width: 100%;\r\n    height: 100%;\n}\n.header .steps .separator {\r\n    width: 30%;\r\n    height: 1px;\r\n    background: #164;\n}\n.header .shape {\r\n    /* background: white; */\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: cover;\n}\n.header button {\r\n    color: white;\n}\n.header button:hover {\r\n    background: white;\r\n    color: #229191;\r\n    box-shadow: 0px 0px 20px #229191;\r\n    transition: all 1s ease;\n}\n.header .index-nav li .link-nav {\r\n    border-width: 2px;\r\n    border-style: solid;\r\n    -o-border-image: linear-gradient(268deg, #17a2b800, #00ffb8, #17a2b800) 1;\r\n       border-image: linear-gradient(268deg, #17a2b800, #00ffb8, #17a2b800) 1;\r\n    border-top: none;\r\n    border-right: none;\r\n    border-left: none;\r\n    transition: border-image 1s;\r\n    transition: border-image 1s, -o-border-image 1s;\n}\n.index-nav .sub-menu a:hover {\r\n    color: #164;\r\n    transition: all 0.5s;\n}\n.index-nav .nav {\r\n    width: 50%;\r\n    color: white;\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-around;\n}\n.logo-title {\r\n    left: 31%;\r\n    top: 15%;\r\n    mix-blend-mode: screen;\r\n    width: 38%;\n}\n.btn-toggle {\r\n    display: none;\n}\r\n/* TYPES RECIPES */\n#triangle-bottomright {\r\n    width: 0;\r\n    height: 0;\r\n    border-bottom: 400px solid #00c4ff6b;\r\n    border-left: 330px solid transparent;\r\n    position: absolute;\r\n    top: 0;\r\n    right: 0;\n}\nimg,\r\ndiv.squar {\r\n    transition: 1s;\n}\n.best-of-recipe {\n}\n.best-of-recipe .cover {\r\n    height: auto;\r\n    width: 100%;\r\n    background: url(\"https://i.pinimg.com/564x/bb/0d/c5/bb0dc5b2d6c9566fa965809367ff29d2.jpg\");\r\n    background-size: inherit;\r\n    background-repeat: no-repeat;\n}\n.sing_up {\r\n    height: 500px;\r\n    background: url(\"https://i.pinimg.com/564x/38/61/10/386110194c0b59f92a1124fe85120836.jpg\");\r\n    background-size: cover;\r\n    background-attachment: fixed;\r\n    background-position: center;\n}\n.bestChefs .separator {\r\n    /* background-attachment: fixed; */\n}\n.bestChefs div.chefs {\r\n    height: 500px;\r\n    /* background: url('https://i.pinimg.com/564x/f6/4c/97/f64c97785241fefe3ea312f1bd225703.jpg');\r\n    background-size: cover;\r\n    background-position: right; */\r\n    background: linear-gradient(transparent, #54545445, transparent);\n}\n.bestChefs .sep,\r\n.salts .sep,\r\n.sweats .sep {\r\n    height: 1px;\r\n    background: #ff8d00;\r\n    margin: auto;\n}\r\n\r\n/* width */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar {\r\n    width: 5px;\r\n    height: 5px;\n}\r\n\r\n/* Track */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar-track {\r\n    box-shadow: inset 0 0 5px #367a7a;\r\n    border-radius: 10px;\n}\r\n\r\n/* Handle */\n.sweats .sliderSweats .d-inline-flex::-webkit-scrollbar-thumb {\r\n    background: #229191;\r\n    border-radius: 10px;\n}\n#slide {\r\n    transition: all 1s;\n}\na.rounded-pill:hover {\r\n    opacity: 0.7;\r\n    transition: opacity 1s;\n}\r\n/* Extra small media */\n@media only screen and (max-width: 760px) {\n.login-icon {\r\n        top: 1% !important;\r\n        left: 1% !important;\n}\n.btn-toggle {\r\n        display: block;\r\n        margin: 0.25rem !important;\n}\n.logo-title {\r\n        left: 10%;\r\n        width: 80%;\n}\n.index-nav #logo {\r\n        display: none;\n}\n.index-nav .nav {\r\n        display: none;\r\n        background: #229191;\n}\n.index-nav .nav li.fs-4 {\r\n        font-size: 0.9rem !important;\r\n        width: 100% !important;\r\n        text-align: center !important;\r\n        margin-bottom: 5%;\n}\n.index-nav .nav li.fs-4 .sub-menu {\r\n        position: relative !important;\r\n        width: 100% !important;\n}\n.index-nav .nav {\r\n        width: 100%;\n}\n.description {\r\n        font-size: 0.9rem !important;\n}\n.header .shape div div:last-of-type div {\r\n        background: white;\r\n        border: none;\n}\n.best-of-recipe div:first-of-type{\r\n        border: none !important;\n}\n}\n@media only screen and (min-width: 768px) and (max-width: 992px) {\n.logo-title {\r\n        left: 20%;\r\n        width: 60%;\n}\n.index-nav .nav {\r\n        display: none;\r\n        width: 100% !important;\r\n        background: #229191;\n}\n.index-nav .nav li {\r\n        display: flex;\r\n        justify-content: center;\r\n        flex-flow: row;\r\n        flex-direction: column;\r\n        align-items: center;\n}\n.index-nav .nav li #logo {\r\n        display: none;\n}\n.index-nav .nav li .sub-menu{\r\n        position: relative !important;\r\n        width: 100% !important;\n}\n.index-nav .nav li .sub-menu .region .name-region{\r\n        text-align: center;\n}\n.best-of-recipe div:first-of-type{\r\n        border: none !important;\n}\n}\n@media only screen and (min-width: 992px) {\n.logo-title {\r\n        left: 25%;\r\n        width: 50%;\n}\n.btn-toggle {\r\n        display: none !important;\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -37056,7 +37133,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#navigation-bar .top-bar[data-v-f7391524] {\r\n  z-index: 9998;\r\n  position: relative;\r\n  top: 34%;\r\n  background: #229191;\r\n  height: 50px;\n}\n#navigation-bar .top-bar .logo[data-v-f7391524] {\r\n  width: 80px;\r\n  height: 80px;\n}\n#navigation-bar .Right-navbar[data-v-f7391524] {\r\n  width: 15%;\r\n  right: -100%;\r\n  bottom: 0;\r\n  position: fixed;\r\n  height: 95%;\r\n  background: linear-gradient(0deg, #00ffb8ba, #229191 55%);\r\n  z-index: 9999;\r\n  transition: right 1s;\n}\n#navigation-bar .Right-navbar .sub-menu[data-v-f7391524] {\r\n  top: 0;\r\n  right: 100%;\n}\r\n\r\n\r\n\r\n\r\n\r\n/* #navigation-bar .toggleBar{\r\n  display: none;\r\n} */\nnav.navbar[data-v-f7391524] {\r\n  background: hsl(170, 81%, 29%);\n}\n@media only screen and (max-width: 768px) {\n#navigation-bar .Right-navbar[data-v-f7391524] {\r\n    width: 50%;\n}\n}\n@media only screen and (min-width: 768px) and (max-width:992px) {\nnav.navbar[data-v-f7391524] {\r\n    background: hsl(170, 81%, 29%);\n}\n}\n@media only screen and (min-width: 992px) {\nnav.navbar[data-v-f7391524] {\r\n    background: hsl(170, 81%, 29%);\n}\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#navigation-bar .top-bar[data-v-f7391524] {\r\n  z-index: 9998;\r\n  position: relative;\r\n  top: 34%;\r\n  background: #229191;\r\n  height: 50px;\n}\n#navigation-bar .top-bar .logo[data-v-f7391524] {\r\n  width: 80px;\r\n  height: 80px;\n}\n#navigation-bar .Right-navbar[data-v-f7391524] {\r\n  width: 15%;\r\n  right: -100%;\r\n  bottom: 0;\r\n  position: fixed;\r\n  height: 95%;\r\n  background: linear-gradient(0deg, #00ffb8ba, #229191 55%);\r\n  z-index: 9999;\r\n  transition: right 1s;\n}\n#navigation-bar .Right-navbar .sub-menu[data-v-f7391524] {\r\n  top: 0;\r\n  right: 100%;\n}\r\n\r\n/* #navigation-bar .toggleBar{\r\n  display: none;\r\n} */\nnav.navbar[data-v-f7391524] {\r\n  background: hsl(170, 81%, 29%);\n}\r\n\r\n/* small Screen */\n@media only screen and (max-width: 768px) {\n#navigation-bar .Right-navbar[data-v-f7391524] {\r\n    width: 50%;\n}\n}\r\n\r\n/*       Mediam screen  */\n@media only screen and (min-width: 768px) and (max-width: 992px) {\nnav.navbar[data-v-f7391524] {\r\n    background: hsl(170, 81%, 29%);\n}\n}\r\n\r\n/*       Large  screen  */\n@media only screen and (min-width: 992px) {\nnav.navbar[data-v-f7391524] {\r\n    background: hsl(170, 81%, 29%);\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -37104,7 +37181,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.random_recipe[data-v-1e18a34f] {\r\n    /* display: none; */\r\n    position: fixed;\r\n    width: 50%;\r\n    height: auto;\r\n    background-image: url(\"https://i.pinimg.com/564x/51/1a/20/511a203da88f8738b47a66222f33352b.jpg\");\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n\r\n    top: 2%;\r\n    left: 25%;\r\n    z-index: 9999;\n}\n@media only screen and (max-width: 768px) {\n.random_recipe[data-v-1e18a34f] {\r\n        width: 100%;\r\n        background-image: url(\"https://wc.wallpaperuse.com/wallp/93-937789_s.jpg\");\r\n        left: 0;\r\n        top: 0;\r\n        z-index: 9999;\n}\n.random_recipe div.block[data-v-1e18a34f]:last-of-type {\r\n        border-right: none;\n}\n.random_recipe .random .actions button[data-v-1e18a34f] {\r\n        width: 100%;\r\n        margin-bottom: 10px;\n}\n.random_recipe .rating[data-v-1e18a34f] {\r\n        margin-bottom: 10px;\n}\n.btn-primary-perso[data-v-1e18a34f] {\r\n        background: #0e8573;\n}\n}\n@media only screen and (max-width: 1200px) {\n.random_recipe[data-v-1e18a34f] {\r\n        width: 100%;\r\n        background-image: url(\"https://wc.wallpaperuse.com/wallp/93-937789_s.jpg\");\r\n        left: 0;\r\n        top: 0;\r\n        z-index: 9999;\n}\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.random_recipe[data-v-1e18a34f] {\r\n    /* display: none; */\r\n    position: fixed;\r\n    width: 50%;\r\n    height: auto;\r\n    background-image: url(\"https://i.pinimg.com/564x/51/1a/20/511a203da88f8738b47a66222f33352b.jpg\");\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    top: 10%;\r\n    left: 25%;\r\n    z-index: 9999;\n}\n@media only screen and (max-width: 768px) {\n.random_recipe[data-v-1e18a34f] {\r\n        width: 100%;\r\n        background-image: url(\"https://wc.wallpaperuse.com/wallp/93-937789_s.jpg\");\r\n        left: 0;\r\n        top: 5.5%;\r\n        z-index: 9999;\n}\n.random_recipe div.block[data-v-1e18a34f]:last-of-type {\r\n        border-right: none;\n}\n.random_recipe .random .actions button[data-v-1e18a34f] {\r\n        width: 100%;\r\n        margin-bottom: 10px;\n}\n.random_recipe .rating[data-v-1e18a34f] {\r\n        margin-bottom: 10px;\n}\n.btn-primary-perso[data-v-1e18a34f] {\r\n        background: #0e8573;\n}\n}\n@media only screen and (min-width: 1200px) {\n.random_recipe[data-v-1e18a34f] {\r\n        width: 100%;\r\n        background-image: url(\"https://wc.wallpaperuse.com/wallp/93-937789_s.jpg\");\r\n        left: 0;\r\n        top: 0;\r\n        z-index: 9999;\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
