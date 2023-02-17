@@ -1,5 +1,6 @@
 <template>
     <!-- https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg -->
+    <loading-page></loading-page>
 
     <div class="header position-relative overflow-hidden" dir="rtl">
         <KeepAlive>
@@ -428,32 +429,10 @@
                                 style=""
                             />
                         </div>
-
-                        <!-- <div class="triange"
-                             id="triangle-bottomright">
-                        </div> -->
                     </div>
                 </div>
 
-                <!-- <div class="col-xs-12 col-md-6 col-lg-4 position-relative p-0 item overflow-hidden"
-                     v-for="type in types_recipe"
-                     :key="type.recipe">
-                    <div class="name position-absolute text-center"
-                         style="margin: 0 2%;width: 96%;z-index: 1;top: 40%;">
 
-                        <div class="display-6 font-weight-bolder text-white">
-                            <a href="#"
-                               class="position-relative  text-decoration-none text-white"
-                               style="z-index: 100;">{{ type.type }}</a>
-                        </div>
-                    </div>
-                    <div class="h-100 opt position-absolute w-100 overflow-hidden"></div>
-                    <img class="w-100 item"
-                         :src="w_path + '/images/1.jpg'"
-                         alt=""
-                         srcset=""
-                         style="height: 500px;">
-                </div> -->
             </div>
         </div>
     </section>

@@ -26,15 +26,17 @@ class User extends Authenticatable
         'password',
         'age',
         'phone',
-        'avatar'
+        'avatar',
+        'Id_user_media',
+        
     ];
-
     /**
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>
      */
     protected $hidden = [
+        'Id_user_media',
         'password',
         'remember_token',
     ];

@@ -8,11 +8,8 @@
             <div class="container">
                 <div class="section">
                     <div class="row">
-
-                        <div class="col-6 col-xs-3 col-md-4"
-                             v-for="recipe in sameRecipe"
-                             :key="recipe.same"
-                             id="item">
+                        <div class="col-6 col-xs-3 col-md-4" id="item" v-for="recipe in sameRecipe"
+                             :key="recipe.same">
                             <div class="d-flex flex-column align-items-center">
                                 <img class="w-75 rounded"
                                      v-for="cover in recipe.images_recipe"

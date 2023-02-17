@@ -12,12 +12,13 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" class="font-amiri">
         @yield('app')
     </div>
 
 
     @include('scripts.scripts_js')
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 </body>
 
 </html>

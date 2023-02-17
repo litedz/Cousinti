@@ -13,11 +13,7 @@
 
 <body>
     <div id="app">
-
-
-
         @include('admin.top-nav-bar')
-        <nav-bar></nav-bar>
         <similar-recipes type='{{ request()->type }}'></similar-recipes>
 
     </div>

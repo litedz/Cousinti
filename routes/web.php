@@ -11,6 +11,7 @@ use App\Models\recipe;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
@@ -40,7 +41,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
-})->middleware('auth');
+});
 Route::get('/user/profile/{id}', function () {
     return view('user.profile-user');
 });
@@ -57,11 +58,16 @@ Route::get('/user/profile/edit/{id}', function () {
 
 
 
+
 Route::get('/test', function () {
 
-    dd(event(new TestListener(55)));
-});
-Route::post('/test', function () {
+
+    $vl = Hash::make('5910479819045906');
+
+    echo $vl.'<br>';
+    dd(Hash::check('5910479819045906','$2y$10$fuCQss3eYBtBVzp7f/P9GulropNv//IIdTbGqhnvdG3mcDW7JQtii'));
+
+
 });
 
 // *****************************  recipe views    ***********************************************
@@ -145,4 +151,8 @@ Route::get('register', function () {
     return view('user.register');
 })->name('user.register')->middleware('check.login');
 Route::POST('/register', [UserController::class, 'store']);
+Route::POST('/register/facebook/', [UserController::class, 'RegisterWithFace']);
 // ***********************************************************************************************
+
+
+Route::post('/facebook/login', [LoginController::class, 'loginWithMedia']);

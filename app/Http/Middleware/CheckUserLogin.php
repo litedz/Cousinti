@@ -4,13 +4,11 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
 
-class CheckLogin
+class CheckUserLogin
 {
     /**
-     * Handle an incoming request.
+     *  Check if user if comming form media or just the website
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
@@ -19,10 +17,7 @@ class CheckLogin
     public function handle(Request $request, Closure $next)
     {
 
-        if (!Auth::check()) {
-            return $next($request);
-        } 
-        return redirect('/home');
-        
+        dd($request);
+        return $next($request);
     }
 }

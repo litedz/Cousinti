@@ -6,6 +6,7 @@ use App\Models\image;
 use App\Models\Rating;
 use App\Models\recipe;
 use App\Models\User;
+use App\Models\user_media;
 use Illuminate\Auth\TokenGuard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -19,7 +20,7 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * 
      */
     public function index()
     {
@@ -29,7 +30,7 @@ class UserController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * 
      */
     public function create(request $request)
     {
@@ -40,7 +41,7 @@ class UserController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * 
      */
     public function store(Request $request)
     {
@@ -68,8 +69,6 @@ class UserController extends Controller
         }
         $store = User::create($valid);
         if ($store) {
-
-
             return response()->json('created');
         } else {
             throw new Exception('يوجد خطا في التسجيل يرجى المحاولة من جديد ', 1);
@@ -79,13 +78,10 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\JsonResponse
+
      */
     public function show(User $user)
     {
-
-        // return response()->json(['user' => $user]);
     }
 
     /**
@@ -95,7 +91,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return response()->json(['profile' => collect($user)->except('id', 'created_at', 'updated_at')]);
+        return response()->json(['profile' => collect($user)->except(['id', 'created_at', 'updated_at'])]);
     }
 
     /**
@@ -129,7 +125,7 @@ class UserController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
+     * 
      */
     public function destroy(User $user)
     {
@@ -182,6 +178,36 @@ class UserController extends Controller
             return response()->json(['liked' => false]);
         } else {
             return response()->json(['liked' => true]);
+        }
+    }
+
+    public function RegisterWithFace(Request $e)
+    {
+
+        $valid = $e->validate([
+            'email' => 'required|email',
+            'UserIdFace' => 'required|integer',
+            'age' => 'integer|max:100|min:10',
+            'username' => 'required',
+        ]);
+        try {
+            $store_User = User::create([
+                'Id_user_media' => Hash::make($e->UserIdFace),
+                'username' => $e->username,
+                'email' => $e->email,
+                'age' => $e->age,
+                'avatar' => $e->avatar,
+            ]);
+            $store_User->save();
+        } catch (\Throwable $th) {
+           return $th->getMessage();
+            
+        }
+
+
+
+        if ($store_User) {
+            return response()->json('created');
         }
     }
 }

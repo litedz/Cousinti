@@ -5,8 +5,13 @@
         <div class="container-fluid align-items-center d-flex justify-content-between">
             <div class="auth w-100">
                 <div class="info d-flex flex-row-reverse justify-content-start align-items-center">
-                    <div class=""
-                         v-if="this.$attrs.auth_status == true">
+                    <div class="" v-if="this.$attrs.auth_status == true && this.$attrs.checkmediauser == true">
+                        <img :src="this.$attrs.avatar"
+                             style="width: 50px;height: 50px;"
+                             alt="avatar"
+                             class="rounded-circle m-2" />
+                    </div>
+                    <div class="" v-if="this.$attrs.auth_status == true && this.$attrs.checkmediauser == false">
                         <img :src="w_path + '/storage/' + this.$attrs.avatar"
                              style="width: 50px;height: 50px;"
                              alt="avatar"

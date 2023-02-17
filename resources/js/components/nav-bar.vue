@@ -1,6 +1,5 @@
 <template>
   <div id="navigation-bar" class="navigation-bar position-relative z-9999">
-    <loading-page></loading-page>
     <!-- v-if="this.$attrs.show_navbar == true" -->
     <div class="top-bar w-100 d-flex" id="navSlide">
       <div class="align-items-center d-flex flex-row-reverse px-2 search w-100-md w-100-sc w-25-perso">

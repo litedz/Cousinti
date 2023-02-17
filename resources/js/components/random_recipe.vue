@@ -146,10 +146,10 @@ export default {
 
 @media only screen and (min-width: 1200px) {
     .random_recipe {
-        width: 100%;
+        width: 50%;
         background-image: url("https://wc.wallpaperuse.com/wallp/93-937789_s.jpg");
-        left: 0;
-        top: 0;
+        left: 25%;
+        top: 10%;
         z-index: 9999;
     }
 }
