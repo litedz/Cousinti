@@ -2,74 +2,33 @@
     <div class="dashboard w-100 d-flex position-fixed h-100" dir="">
         <div class="left-bar d-flex flex-column border-end">
             <div class="logo w-100 text-center border-bottom">
-                <img
-                    :src="this.w_path + '/images/logo2.png'"
-                    class="w-50 mx-auto"
-                    alt=""
-                />
+                <img :src="this.w_path + '/images/logo2.png'" class="w-50 mx-auto" alt="" />
             </div>
             <div class="sidebar list-unstyled">
-                <div
-                    class="head-link border-bottom text-center"
-                    @click="toggleMenu()"
-                    id="home"
-                >
+                <div class="head-link border-bottom text-center" @click="toggleMenu()" id="home">
                     <li class="p-2">
-                        <a
-                            href="/home"
-                            class="text-capitalize text-decoration-none font-weight-bold text-white"
-                            data-link="home"
-                            ><span
-                                class="fa fa-home m-1 fa-2xs text-first"
-                            ></span
-                            >home</a
-                        >
+                        <a href="/home" class="text-capitalize text-decoration-none font-weight-bold text-white"
+                            data-link="home"><span class="fa fa-home m-1 fa-2xs text-first"></span>home</a>
                     </li>
                 </div>
-                <div
-                    class="head-link border-bottom text-center"
-                    @click="toggleMenu()"
-                    id="reccete"
-                >
+                <div class="head-link border-bottom text-center" @click="toggleMenu()" id="reccete">
                     <li class="p-2">
-                        <a
-                            href="#"
-                            class="text-capitalize text-decoration-none font-weight-bold text-white"
-                            data-link="reccete"
-                            ><span
-                                class="fa fa-magnifying-glass m-1 fa-2xs text-first m-2"
-                            ></span
-                            >recipes</a
-                        >
+                        <a href="#" class="text-capitalize text-decoration-none font-weight-bold text-white"
+                            data-link="reccete"><span
+                                class="fa fa-magnifying-glass m-1 fa-2xs text-first m-2"></span>recipes</a>
                     </li>
                     <div class="sub-menu">
-                        <li
-                            class="border-bottom p-2 text-black-50 link-item pointer"
-                            @click="changeCompo('add-recipe', 'add-recipe')"
-                        >
-                            <span
-                                class="fa fa-home m-1 fa-2xs text-first"
-                            ></span
-                            >Add Recipe
+                        <li class="border-bottom p-2 text-black-50 link-item pointer"
+                            @click="changeCompo('add-recipe', 'add-recipe')">
+                            <span class="fa fa-home m-1 fa-2xs text-first"></span>Add Recipe
                         </li>
-                        <li
-                            class="border-bottom p-2 text-black-50 link-item pointer"
-                            @click="
-                                changeCompo('table-recipes', 'update-recipe')
-                            "
-                        >
-                            <span
-                                class="fa fa-home m-1 fa-2xs text-first"
-                            ></span
-                            >Your recipe
+                        <li class="border-bottom p-2 text-black-50 link-item pointer" @click="
+                            changeCompo('table-recipes', 'update-recipe')
+                        ">
+                            <span class="fa fa-home m-1 fa-2xs text-first"></span>Your recipe
                         </li>
-                        <li
-                            class="border-bottom p-2 text-black-50 link-item pointer"
-                        >
-                            <span
-                                class="fa fa-home m-1 fa-2xs text-first"
-                            ></span
-                            >Add Product
+                        <li class="border-bottom p-2 text-black-50 link-item pointer">
+                            <span class="fa fa-home m-1 fa-2xs text-first"></span>Add Product
                         </li>
                     </div>
                 </div>
@@ -77,58 +36,32 @@
             </div>
             <div class="profile p-3 d-flex position-relative">
                 <div class="avatar">
-                    <img
-                        class="rounded-circle"
-                        :src="w_path + '/storage/' + info.avatar"
-                        alt=""
-                        style="width: 70px; height: 70px"
-                    />
+                    <img v-if="info.Id_user_media == null" class="rounded-circle" :src="w_path + '/storage/' + info.avatar"
+                        alt="" style="width: 70px; height: 70px" />
+                    <img v-else class="rounded-circle" :src="info.avatar" alt="" style="width: 70px; height: 70px" />
+                    
                 </div>
-                <div
-                    class="d-flex flex-column info m-1 p-2 w-75 justify-content-around h-100"
-                >
+                <div class="d-flex flex-column info m-1 p-2 w-75 justify-content-around h-100">
                     <div class="actions">
-                        <i
-                            class="fa fa-circle fa-2xs"
-                            style="color: #1cd71c"
-                            aria-hidden="true"
-                        ></i>
+                        <i class="fa fa-circle fa-2xs" style="color: #1cd71c" aria-hidden="true"></i>
                     </div>
-                    <a
-                        href="#"
-                        class="font-1 font-weight-bold text-decoration-none text-truncate text-white w-75"
-                        >{{ info.username }}</a
-                    >
+                    <a href="#" class="font-1 font-weight-bold text-decoration-none text-truncate text-white w-75">{{
+                        info.username }}</a>
                     <div class="DropDowmenu">
-                        <a
-                            href="#"
-                            class="text-white text-decoration-none dopDownMenu-link fa fa-align-center"
-                            data-link="menu-profile"
-                            @click="DropDowmenu()"
-                        ></a>
-                        <div
-                            class="bottom-100 menu-profile p-2 position-absolute rounded w-100"
-                            id="menu-profile"
-                        >
+                        <a href="#" class="text-white text-decoration-none dopDownMenu-link fa fa-align-center"
+                            data-link="menu-profile" @click="DropDowmenu()"></a>
+                        <div class="bottom-100 menu-profile p-2 position-absolute rounded w-100" id="menu-profile">
                             <li class="border-bottom p-2 pointer">
-                                <div
-                                    class="profile-link d-flex flex-row justify-content-start align-items-center"
-                                    @click="changeCompo('edit-profile')"
-                                >
-                                    <span
-                                        class="fa fa-home m-1 fa-2xs text-first"
-                                    ></span>
+                                <div class="profile-link d-flex flex-row justify-content-start align-items-center"
+                                    @click="changeCompo('edit-profile')">
+                                    <span class="fa fa-home m-1 fa-2xs text-first"></span>
                                     <span class="">Edit profile</span>
                                 </div>
                             </li>
                             <li class="border-bottom p-2 pointer">
-                                <div
-                                    class="profile-link d-flex flex-row justify-content-start align-items-center"
-                                    @click="logout()"
-                                >
-                                    <span
-                                        class="fa fa-door-open m-1 fa-2xs text-first"
-                                    ></span>
+                                <div class="profile-link d-flex flex-row justify-content-start align-items-center"
+                                    @click="logout()">
+                                    <span class="fa fa-door-open m-1 fa-2xs text-first"></span>
                                     <span class="text-capitalize">logout</span>
                                 </div>
                             </li>
@@ -140,19 +73,13 @@
         <div class="right-bar w-100 overflow-auto">
             <div class="content p-3">
                 <KeepAlive>
-                    <component
-                        :is="this.activeComponent"
-                        v-on:some-event="get_id_recipe($event)"
-                        :update_recipe_id="this.recipe_update_id"
-                        :action="this.action_recipe"
-                        :auth_id="info.id"
-                    />
+                    <component :is="this.activeComponent" v-on:some-event="get_id_recipe($event)"
+                        :update_recipe_id="this.recipe_update_id" :action="this.action_recipe" :auth_id="info.id" />
                 </KeepAlive>
             </div>
         </div>
     </div>
-    <!-- // components : add-recipe,table-recipes -->
-</template>
+<!-- // components : add-recipe,table-recipes --></template>
 
 <script>
 export default {
@@ -210,7 +137,7 @@ export default {
                         }
                     }
                 })
-                .catch((error) => {});
+                .catch((error) => { });
         },
     },
 };

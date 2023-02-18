@@ -41,7 +41,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
-});
+})->middleware('auth');
 Route::get('/user/profile/{id}', function () {
     return view('user.profile-user');
 });

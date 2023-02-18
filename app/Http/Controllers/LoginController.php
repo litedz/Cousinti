@@ -60,55 +60,6 @@ class LoginController extends Controller
             throw new Exception($e->getMessage());
         }
 
-
-
-        // $user = User::where('email',$request->email)->first();
-        // $userId= Hash::check($request->Id_user_media, $user->Id_user_media);
-        // if (Auth::attempt($credentials)) {
-        //     return response()->json([
-        //         'status' => 'success',
-        //         'message' => 'Successful logged',
-
-        //     ]);
-        // }
-        // else{
-        //     throw new Exception("User Not Found", 1);
-        // }
-
-
-        // else{
-        //     echo 'failed .. ';
-        // }
-
     }
 }
 
-
-
-
-// namespace App\Traits;
-// use App\Models\User;
-// use Exception;
-// use Illuminate\Support\Facades\Hash;
-
-// /**
-//  * 
-//  */
-// trait LoginMedia
-// {
-//     public static function attempMedia($email,$IdUser)
-//     {
-//         $user = User::where('email',$email)->first();
-//         if (!$user > 1) {
-//             throw new Exception("User Not Found", 1);
-            
-//         }
-//         $userId= Hash::check($IdUser, $user->Id_user_media);
-//         if (!$userId) {
-//             throw new Exception($email .'Or Id is Inccorect', 1);
-//         }
-
-//         return true;
-        
-//     }
-// }
