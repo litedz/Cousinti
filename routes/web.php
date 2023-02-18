@@ -3,6 +3,7 @@
 use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\GuestRecipeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\UserController;
 use App\Http\Resources\RecipeResource;
@@ -42,13 +43,9 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware('auth');
-Route::get('/user/profile/{id}', function () {
-    return view('user.profile-user');
-});
-Route::get('/user/profile/edit/{id}', function () {
-    return view('user.profile-user');
-});
 
+
+Route::resource('profile',ProfileController::class)->parameter('profile','user_id');
 
 // -------------------------> User actions
 

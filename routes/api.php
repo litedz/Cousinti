@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Resources\RecipeResource;
 use App\Models\recipe;
@@ -32,3 +33,6 @@ Route::POST('/register/facebook/', [UserController::class, 'RegisterWithFace']);
 Route::POST('/login/facebook/', [LoginController::class, 'loginWithMedia']);
 
 
+
+
+Route::resource('profile',ProfileController::class)->parameter('profile','user_id');

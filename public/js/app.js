@@ -27123,7 +27123,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  inject: ['w_path']
+});
 
 /***/ }),
 
@@ -29532,10 +29534,94 @@ var _withScopeId = function _withScopeId(n) {
 var _hoisted_1 = {
   "class": "h-100 gradient-custom-2 profile"
 };
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"container py-5 h-100\" data-v-d27c9828><div class=\"row d-flex justify-content-center align-items-center h-100\" data-v-d27c9828><div class=\"col col-lg-9 col-xl-7\" data-v-d27c9828><div class=\"card\" data-v-d27c9828><div class=\"rounded-top text-white d-flex flex-row\" style=\"background-color:#878787;height:200px;\" data-v-d27c9828><div class=\"ms-4 mt-5 d-flex flex-column\" style=\"width:150px;\" data-v-d27c9828><img src=\"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp\" alt=\"Generic placeholder image\" class=\"img-fluid img-thumbnail mt-4 mb-2\" style=\"width:150px;z-index:1;\" data-v-d27c9828><button type=\"button\" class=\"btn btn-outline-dark\" data-mdb-ripple-color=\"dark\" style=\"z-index:1;\" data-v-d27c9828> Edit profile </button></div><div class=\"ms-3\" style=\"margin-top:130px;\" data-v-d27c9828><h5 data-v-d27c9828>Andy Horwitz</h5><p data-v-d27c9828>New York</p></div></div><div class=\"p-4 text-black\" style=\"background-color:#f8f9fa;\" data-v-d27c9828><div class=\"d-flex justify-content-end text-center py-1\" data-v-d27c9828><div data-v-d27c9828><p class=\"mb-1 h5\" data-v-d27c9828>253</p><p class=\"small text-muted mb-0\" data-v-d27c9828>Photos</p></div><div class=\"px-3\" data-v-d27c9828><p class=\"mb-1 h5\" data-v-d27c9828>1026</p><p class=\"small text-muted mb-0\" data-v-d27c9828>Followers</p></div><div data-v-d27c9828><p class=\"mb-1 h5\" data-v-d27c9828>478</p><p class=\"small text-muted mb-0\" data-v-d27c9828>Following</p></div></div></div><div class=\"card-body p-4 text-black\" data-v-d27c9828><div class=\"mb-5\" data-v-d27c9828><p class=\"lead fw-normal mb-1\" data-v-d27c9828>About</p><div class=\"p-4\" style=\"background-color:#f8f9fa;\" data-v-d27c9828><p class=\"font-italic mb-1\" data-v-d27c9828>Web Developer</p><p class=\"font-italic mb-1\" data-v-d27c9828>Lives in New York</p><p class=\"font-italic mb-0\" data-v-d27c9828>Photographer</p></div></div><div class=\"d-flex justify-content-between align-items-center mb-4\" data-v-d27c9828><p class=\"lead fw-normal mb-0\" data-v-d27c9828>Recent Recette</p><p class=\"mb-0\" data-v-d27c9828><a href=\"#!\" class=\"text-muted\" data-v-d27c9828>Show all</a></p></div><div class=\"row g-2\" data-v-d27c9828><div class=\"col mb-2\" data-v-d27c9828><img src=\"https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp\" alt=\"image 1\" class=\"w-100 rounded-3\" data-v-d27c9828></div><div class=\"col mb-2\" data-v-d27c9828><img src=\"https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(107).webp\" alt=\"image 1\" class=\"w-100 rounded-3\" data-v-d27c9828></div></div><div class=\"row g-2\" data-v-d27c9828><div class=\"col\" data-v-d27c9828><img src=\"https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(108).webp\" alt=\"image 1\" class=\"w-100 rounded-3\" data-v-d27c9828></div><div class=\"col\" data-v-d27c9828><img src=\"https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(114).webp\" alt=\"image 1\" class=\"w-100 rounded-3\" data-v-d27c9828></div></div></div></div></div></div></div>", 1);
-var _hoisted_3 = [_hoisted_2];
+var _hoisted_2 = {
+  "class": "container py-5 h-100"
+};
+var _hoisted_3 = {
+  "class": "row d-flex justify-content-center align-items-center h-100"
+};
+var _hoisted_4 = {
+  "class": "col col-lg-9 col-xl-7"
+};
+var _hoisted_5 = {
+  "class": "card"
+};
+var _hoisted_6 = {
+  "class": "rounded-top text-white d-flex flex-row",
+  style: {
+    "background-color": "#878787",
+    "height": "200px"
+  }
+};
+var _hoisted_7 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "ms-4 mt-5 d-flex flex-column",
+    style: {
+      "width": "150px"
+    }
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp",
+    alt: "Generic placeholder image",
+    "class": "img-fluid img-thumbnail mt-4 mb-2",
+    style: {
+      "width": "150px",
+      "z-index": "1"
+    }
+  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    type: "button",
+    "class": "btn btn-outline-dark",
+    "data-mdb-ripple-color": "dark",
+    style: {
+      "z-index": "1"
+    }
+  }, " Edit profile ")], -1 /* HOISTED */);
+});
+var _hoisted_8 = {
+  "class": "ms-3",
+  style: {
+    "margin-top": "130px"
+  }
+};
+var _hoisted_9 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "New York", -1 /* HOISTED */);
+});
+var _hoisted_10 = {
+  "class": "p-4 text-black",
+  style: {
+    "background-color": "#f8f9fa"
+  }
+};
+var _hoisted_11 = {
+  "class": "d-flex justify-content-end text-center py-1"
+};
+var _hoisted_12 = {
+  "class": "mb-1 h5"
+};
+var _hoisted_13 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+    "class": "small text-muted mb-0"
+  }, "Recipes", -1 /* HOISTED */);
+});
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"px-3\" data-v-d27c9828><p class=\"mb-1 h5\" data-v-d27c9828>1026</p><p class=\"small text-muted mb-0\" data-v-d27c9828>Followers</p></div><div data-v-d27c9828><p class=\"mb-1 h5\" data-v-d27c9828>478</p><p class=\"small text-muted mb-0\" data-v-d27c9828>Following</p></div>", 2);
+var _hoisted_16 = {
+  "class": "card-body p-4 text-black"
+};
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"mb-5\" data-v-d27c9828><p class=\"lead fw-normal mb-1\" data-v-d27c9828>About</p><div class=\"p-4\" style=\"background-color:#f8f9fa;\" data-v-d27c9828><p class=\"font-italic mb-1\" data-v-d27c9828>Web Developer</p><p class=\"font-italic mb-1\" data-v-d27c9828>Lives in New York</p><p class=\"font-italic mb-0\" data-v-d27c9828>Photographer</p></div></div><div class=\"d-flex justify-content-between align-items-center mb-4\" data-v-d27c9828><p class=\"lead fw-normal mb-0\" data-v-d27c9828>Recent Recette</p><p class=\"mb-0\" data-v-d27c9828><a href=\"#!\" class=\"text-muted\" data-v-d27c9828>Show all</a></p></div>", 2);
+var _hoisted_19 = {
+  "class": "row"
+};
+var _hoisted_20 = {
+  "class": "col-6 mb-2"
+};
+var _hoisted_21 = ["src"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("section", _hoisted_1, _hoisted_3);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("section", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$attrs.profile.username), 1 /* TEXT */), _hoisted_9])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$attrs.profile.recipes.length), 1 /* TEXT */), _hoisted_13]), _hoisted_14])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.$attrs.profile.recipes, function (images) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+      src: $options.w_path + '/storage/recipes/' + images.images_recipe[0].name,
+      alt: "image 1",
+      "class": "w-100 rounded-3"
+    }, null, 8 /* PROPS */, _hoisted_21)]);
+  }), 256 /* UNKEYED_FRAGMENT */))])])])])])])]);
 }
 
 /***/ }),
@@ -37437,7 +37523,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.btn-outline-dark[data-v-d27c9828]{\r\n    background: #0E8572;\r\n    border: none;\r\n    color: white;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.btn-outline-dark[data-v-d27c9828] {\r\n  background: #0E8572;\r\n  border: none;\r\n  color: white;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

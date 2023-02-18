@@ -1,5 +1,5 @@
 @extends('root')
 @section('app')
 
-<profile-user></profile-user>
+<profile-user :profile="{{ $profile_user}}"></profile-user>
 @endsection
