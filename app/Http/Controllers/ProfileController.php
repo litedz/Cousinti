@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\user;
 use Illuminate\Http\Request;
-use PhpParser\ErrorHandler\Collecting;
+use Illuminate\Support\Facades\Gate;
 
 class ProfileController extends Controller
 {
@@ -45,12 +45,17 @@ class ProfileController extends Controller
      * @param  \App\Models\user  $user
 
      */
-    public function show(user $user, $profile)
+    public function show(user $user, $user_id, Request $request)
     {
+        if (Gate::allows('view', $user)) {
+            $editPerm = true;
+        }
 
-        $profile_user = collect($user::with('recipes.images_recipe')->where('id', $profile)->first())->only(['username','recipes']);
+        $editPerm = (Gate::allows('view', $user)) ? true : false;
+
+        $profile_user = collect($user::with('recipes.images_recipe')->where('id', $user_id)->first())->only(['username', 'recipes', 'avatar', 'Id_user_media']);
         // return response()->json($profile_user);
-        return view('user.profile-user',compact('profile_user'));
+        return view('user.profile-user', compact('profile_user','editPerm'));
     }
 
     /**

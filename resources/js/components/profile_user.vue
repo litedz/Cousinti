@@ -6,10 +6,15 @@
           <div class="card">
             <div class="rounded-top text-white d-flex flex-row" style="background-color: #878787; height:200px;">
               <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
+                <img v-if="$attrs.profile.Id_user_media == null" :src="w_path + '/storage/' + $attrs.profile.avatar"
                   alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
                   style="width: 150px; z-index: 1">
-                <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark" style="z-index: 1;">
+
+                <img v-else :src="$attrs.profile.avatar" alt="Generic placeholder image"
+                  class="img-fluid img-thumbnail mt-4 mb-2" style="width: 150px; z-index: 1">
+
+                <button v-if="$attrs.edit_perm == true" type="button" class="btn btn-outline-dark"
+                  data-mdb-ripple-color="dark" style="z-index: 1;" @click="EditProfile()">
                   Edit profile
                 </button>
               </div>
@@ -35,21 +40,22 @@
               </div>
             </div>
             <div class="card-body p-4 text-black">
-              <div class="mb-5">
-                <p class="lead fw-normal mb-1">About</p>
-                <div class="p-4" style="background-color: #f8f9fa;">
-                  <p class="font-italic mb-1">Web Developer</p>
-                  <p class="font-italic mb-1">Lives in New York</p>
-                  <p class="font-italic mb-0">Photographer</p>
-                </div>
-              </div>
+              <!-- <div class="mb-5">
+                  <p class="lead fw-normal mb-1">About</p>
+                  <div class="p-4" style="background-color: #f8f9fa;">
+                    <p class="font-italic mb-1">Web Developer</p>
+                    <p class="font-italic mb-1">Lives in New York</p>
+                    <p class="font-italic mb-0">Photographer</p>
+                  </div>
+                </div> -->
               <div class="d-flex justify-content-between align-items-center mb-4">
                 <p class="lead fw-normal mb-0">Recent Recette</p>
                 <p class="mb-0"><a href="#!" class="text-muted">Show all</a></p>
               </div>
               <div class="row">
                 <div class="col-6 mb-2" v-for="images in $attrs.profile.recipes">
-                  <img :src="w_path + '/storage/recipes/' + images.images_recipe[0].name" alt="image 1" class="w-100 rounded-3">
+                  <img :src="w_path + '/storage/recipes/' + images.images_recipe[0].name" alt="image 1"
+                    class="w-100 rounded-3">
                 </div>
 
               </div>
@@ -64,8 +70,13 @@
 
 <script>
 export default {
-  inject:['w_path'],
+  inject: ['w_path'],
 
+  methods: {
+    EditProfile() {
+      assertExpressionStatemen
+    },
+  }
 }
 </script>
 
