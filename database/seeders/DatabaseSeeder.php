@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             ImageSeeder::class,
             CommentsSeeder::class,
             ingredientSeeder::class,
+            ProfileSeeder::class,
             // RatingSeeder::class,
         ]);
     }

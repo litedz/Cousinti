@@ -45,7 +45,7 @@ Route::get('/dashboard', function () {
 })->middleware('auth');
 
 
-Route::resource('profile',ProfileController::class)->parameter('profile','user_id');
+Route::resource('profile',ProfileController::class)->parameter('profile','user_id')->middleware(['auth','check.facebookUser']);
 
 // -------------------------> User actions
 

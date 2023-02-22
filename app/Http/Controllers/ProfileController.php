@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\user;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Storage;
+use App\Services\ProfileServices;
+use Exception;
 
 class ProfileController extends Controller
 {
@@ -36,7 +39,7 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd('store method');
     }
 
     /**
@@ -47,15 +50,13 @@ class ProfileController extends Controller
      */
     public function show(user $user, $user_id, Request $request)
     {
-        if (Gate::allows('view', $user)) {
-            $editPerm = true;
-        }
 
-        $editPerm = (Gate::allows('view', $user)) ? true : false;
+        $editPerm = (Gate::allows('update', $user)) ? true : false;
 
-        $profile_user = collect($user::with('recipes.images_recipe')->where('id', $user_id)->first())->only(['username', 'recipes', 'avatar', 'Id_user_media']);
-        // return response()->json($profile_user);
-        return view('user.profile-user', compact('profile_user','editPerm'));
+        $profile_user = collect($user::with(['recipes.images_recipe', 'profile_setting'])
+            ->where('id', $user_id)->firstOrFail())
+            ->only(['username', 'recipes', 'avatar', 'Id_user_media', 'background', 'profile_setting']);
+        return view('user.profile-user', compact('profile_user', 'editPerm'));
     }
 
     /**
@@ -63,11 +64,11 @@ class ProfileController extends Controller
      *
      * @param  \App\Models\user  $user
      */
-    public function edit(user $user)
+    public function edit(user $user, $user_id)
     {
 
-        dd('xxx');
-        return view('user.profile-user');
+        $edit_user = $user::find($user_id)->first();
+        return response()->json(['info' => collect($edit_user)->only(['username', 'background'])]);
     }
 
     /**
@@ -77,9 +78,14 @@ class ProfileController extends Controller
      * @param  \App\Models\user  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, user $user)
+    public function update(Request $request, ProfileServices $profileServices)
     {
-        //
+        try {
+            $profileServices->UpdateProfile($request);
+        } catch (\Throwable $th) {
+            throw new Exception($th->getMessage(), 1);
+        }
+        return response()->json(['status' => 'updated', 'message' => 'تم تحديث البروفايل بنجاح']);
     }
 
     /**

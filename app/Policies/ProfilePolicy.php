@@ -52,9 +52,9 @@ class ProfilePolicy
      * 
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, user $model)
+    public function update(User $user)
     {
-        //
+        return request()->user_id == auth()->user()->id;
     }
 
     /**

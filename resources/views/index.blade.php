@@ -9,7 +9,7 @@
         request()->merge(['checkmediauser' => true]);
     }
 @endphp
-<top-nav-bar :auth_status=true user="{{auth()->user()->username}}" avatar="{{auth()->user()->avatar}}" :checkmediauser="{{request()->input('checkmediauser')}}"></top-nav-bar>
+<top-nav-bar :auth_status=true user="{{auth()->user()->username}}" user_id="{{auth()->user()->id}}" avatar="{{auth()->user()->avatar}}" :checkmediauser="{{request()->input('checkmediauser')}}"></top-nav-bar>
 @endauth
 
 <index></index>

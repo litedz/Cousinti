@@ -41,7 +41,7 @@ class LoginController extends Controller
     public function logout()
     {
         Auth::logout();
-        return response()->json('logout');
+        return redirect()->route('home');
     }
 
     public function loginWithMedia(Request $request, LoginMediaService $media)

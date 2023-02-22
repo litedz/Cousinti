@@ -29,6 +29,7 @@ class User extends Authenticatable
         'phone',
         'avatar',
         'Id_user_media',
+        'profile_id',
         
     ];
     /**
@@ -58,5 +59,9 @@ class User extends Authenticatable
     public function recipe_liked()
     {
         return $this->hasMany(Rating::class);
+    }
+    public function profile_setting()
+    {
+       return $this->belongsTo(Profile::class,'profile_id','id');
     }
 }
