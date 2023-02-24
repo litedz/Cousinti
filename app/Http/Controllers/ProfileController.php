@@ -68,7 +68,7 @@ class ProfileController extends Controller
     {
 
         $edit_user = $user::find($user_id)->first();
-        return response()->json(['info' => collect($edit_user)->only(['username', 'background'])]);
+        return response()->json(['info' => collect($edit_user)->only(['username', 'profile_setting'])]);
     }
 
     /**

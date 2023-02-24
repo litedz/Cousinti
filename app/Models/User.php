@@ -18,6 +18,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     
+     protected $with='profile_setting';
     protected $fillable = [
         'username',
         'last_name',

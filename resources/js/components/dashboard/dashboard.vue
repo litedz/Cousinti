@@ -62,7 +62,7 @@
                                 <div class="profile-link d-flex flex-row justify-content-start align-items-center"
                                     @click="logout()">
                                     <span class="fa fa-door-open m-1 fa-2xs text-first"></span>
-                                    <span class="text-capitalize">logout</span>
+                                    <a href="/logout" class="text-black-title text-capitalize text-decoration-none">Logout</a>
                                 </div>
                             </li>
                         </div>

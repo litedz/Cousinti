@@ -17,7 +17,7 @@ class ImageFactory extends Factory
         return [
             'name' => 'default-cover.png',
             'cover' => 'active',
-            'recipe_id' => recipe::all()->random()->id,
+            'recipe_id' => $this->faker->numbe(1,10),
         ];
     }
 }

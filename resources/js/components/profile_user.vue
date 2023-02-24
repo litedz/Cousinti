@@ -6,7 +6,7 @@
         <div class="col col-lg-9 col-xl-7">
           <div class="card">
             <div class="rounded-top px-4 text-white d-flex flex-row"
-              :style="'background-color:' + profile.background + '; height:200px;'">
+              :style="'background-color:' + profile.profile_setting.background + '; height:200px;'">
               <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
                 <img v-if="profile.Id_user_media == null" :src="w_path + '/storage/' + profile.avatar"
                   alt="Generic placeholder image" class="img-fluid img-thumbnail mb-2 mt-4 z-9999"
@@ -71,7 +71,7 @@
                       </a>
                     </div>
                   </Transition>
-                  <img :src="w_path + '/storage/recipes/' + images.images_recipe[0].name" alt="image 1"
+                  <img v-if="images.images_recipe[0]" :src="w_path + '/storage/recipes/' + images.images_recipe[0].name" alt="image 1"
                     class="w-100 rounded-3">
                 </div>
               </div>
@@ -151,8 +151,10 @@ export default {
   props: { profile: Object, user_id: Number },
   inject: ['w_path'],
   watch: {
-    EditForm:{
-  
+    EditForm() {
+      if (this.EditForm) {
+        this.getProfileInfo();
+      }
     }
   },
   data() {
@@ -173,8 +175,8 @@ export default {
 
       }).then((response) => {
         if (response.data) {
-          this.ProfileInfo = response.data.info.username;
-          this.ProfileInfo = response.data.info.background;
+          this.ProfileInfo.name = response.data.info.username;
+          this.ProfileInfo.background = response.data.info.profile_setting.background;
         }
 
       }).catch((error) => {
@@ -185,8 +187,11 @@ export default {
 
     EditProfileUser() {
       let info = new FormData();
-      info.append('name', this.ProfileInfo.name);
-      info.append('avatar', document.getElementById('avatar').files[0]);
+      let avatarProfile = document.getElementById('avatar').files[0];
+      info.append('username', this.ProfileInfo.name);
+      if (avatarProfile !== undefined) {
+        info.append('avatar', avatarProfile);
+      }
       info.append('background', this.ProfileInfo.background);
       info.append('_method', 'PUT');
       axios({

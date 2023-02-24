@@ -18,6 +18,7 @@ return new class extends Migration
             $table->boolean('public');
             $table->boolean('recipes');
             $table->boolean('last_activity');
+            $table->string('background')->default('#878787');
             $table->timestamps();
         });
     }
