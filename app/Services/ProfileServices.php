@@ -17,8 +17,6 @@ class ProfileServices
             'background' => 'required',
             'avatar' => 'nullable|image',
         ]);
-
-
         //  find User 
         $user = User::where('id', auth()->user()->id)->firstOrfail();
 
@@ -44,5 +42,21 @@ class ProfileServices
         if (!$update_user && !$update_background) {
             throw new Exception("Error Processing Request", 1);
         }
+    }
+
+    public function UpdatePermissionService(Request $request)
+    {
+        $PermValid = $request->validate([
+            'last_activity' => 'required',
+            'recipes' => 'required',
+        ]);
+        $user = User::where('id', auth()->user()->id)->firstOrFail();
+        $updatePerm = Profile::where('id', $user->id)->update($PermValid);
+
+        if (!$updatePerm) {
+            throw new Exception("خطا في تحديث الصلاحيات", 1);
+        }
+
+     
     }
 }

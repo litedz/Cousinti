@@ -57,13 +57,13 @@
               <div class="no-recipe" v-if="profile.recipes.length == 0">
                 <div class="bg-light fs-4 fw-lighter p-3 rounded text-center text-muted">لا يوجد وصفات</div>
               </div>
-              <div class="" v-else-if="profile.profile_setting.recipes == 0">
+              <div class="" v-else-if="ProfileInfo.setting.recipes == 'false' || ProfileInfo.setting.recipes == 0">
                 <div class="bg-light fs-4 fw-lighter p-3 rounded text-center text-muted">تم حجب الوصفات</div>
               </div>
               <div class="row">
                 <div class="col-6 mb-2 p-0 position-relative singel-recipe" v-for="images in profile.recipes"
                   @mouseenter="show = 'RecipeTitle'" @mouseleave="show = ' '"
-                  v-if="profile.profile_setting.recipes !== 0">
+                  v-if="profile.profile_setting.recipes !== 'true' && profile.profile_setting.recipes !== 0">
                   <Transition name="fade">
                     <div class="bg-perso fs-1 h-100 position-absolute position-relative rounded-3 text-center w-100"
                       v-show="show == 'RecipeTitle'">
@@ -71,20 +71,15 @@
                       </a>
                     </div>
                   </Transition>
-                  <img v-if="images.images_recipe[0]" :src="w_path + '/storage/recipes/' + images.images_recipe[0].name" alt="image 1"
-                    class="w-100 rounded-3">
+                  <img v-if="images.images_recipe[0]" :src="w_path + '/storage/recipes/' + images.images_recipe[0].name"
+                    alt="image 1" class="w-100 rounded-3">
                 </div>
               </div>
             </div>
-
             <div class="Recent Activity">
               <div class="lead mb-2 mx-4 title">النشاط الأخير</div>
               <hr>
-
-
-
-
-              <div v-if="profile.profile_setting.last_activity == 0">
+              <div v-if="ProfileInfo.setting.last_activity == 'false' || ProfileInfo.setting.last_activity == 0">
                 <div class="bg-light fs-4 fw-lighter p-3 rounded text-center text-muted">تم حجب النشاطات</div>
               </div>
               <div v-else class="Activitys mx-0 p-3 rounded row w-100">
@@ -105,6 +100,8 @@
       </div>
     </div>
     <Transition name="fade">
+      <!-- Edit profile Form  -->
+
       <div class="bg-light border p-3 position-fixed pt-5 rounded tab-pane w-50 z-9999" style="left: 25%;top: 20%;"
         v-show="EditForm">
         <div class="tab-pane" id="edit">
@@ -115,7 +112,6 @@
                 <input class="form-control" type="text" v-model="ProfileInfo.name">
               </div>
             </div>
-
             <div class="form-group row">
               <label class="col-lg-2 fw-bolder text-black-title col-form-label form-control-label">تغيير صورة
                 البروفايل</label>
@@ -129,13 +125,28 @@
                 <input class="form-control w-25" type="color" v-model="ProfileInfo.background">
               </div>
             </div>
+            <div class="Setting d-grid gap gap-2">
+              <div class="border-bottom h4 p-1 rounded text-black-title title">خيارات البروفايل</div>
+              <!-- Default checked -->
+              <div class="d-flex form-check form-switch row-cols-4">
+                <label class="form-check-label fw-semibold" for="flexSwitchCheckChecked">عرض اخر الوصفات</label>
+                <input v-model="ProfileInfo.setting.recipes" class="form-check-input" type="checkbox" role="switch"
+                  id="flexSwitchCheckChecked1" :checked="ProfileInfo.setting.recipes == true">
+              </div>
+              <div class="d-flex form-check form-switch row-cols-4">
+                <label class="form-check-label fw-semibold" for="flexSwitchCheckChecked">عرض اخر النشاطات</label>
+                <input v-model="ProfileInfo.setting.last_activity" class="form-check-input" type="checkbox" role="switch"
+                  id="flexSwitchCheckChecked" :checked="ProfileInfo.setting.last_activity == true">
+              </div>
+              <input type="button" class="btn btn-primary mx-1 col-12 col-md-2" value="حفط التفيير"
+                @click="UpdatePermissions()">
+            </div>
 
 
 
-            <div class="form-group row">
-              <label class="col-lg-2 fw-bolder text-black-title col-form-label form-control-label"></label>
+            <div class="border-top form-group pt-2 row">
               <div class="col-lg-9">
-                <input type="reset" class="btn btn-secondary mx-1" value="Cancel" @click="EditForm = false">
+                <input type="button" class="btn btn-secondary mx-1" value="Cancel" @click="EditForm = false">
                 <input type="button" class="btn btn-primary mx-1" value="Save Changes" @click="EditProfileUser()">
               </div>
             </div>
@@ -150,12 +161,12 @@
 export default {
   props: { profile: Object, user_id: Number },
   inject: ['w_path'],
-  watch: {
-    EditForm() {
-      if (this.EditForm) {
-        this.getProfileInfo();
-      }
-    }
+  mounted() {
+    this.ProfileInfo.name = this.profile.username;
+    this.ProfileInfo.background = this.profile.profile_setting.background;
+    this.ProfileInfo.setting.recipes = this.profile.profile_setting.recipes;
+    this.ProfileInfo.setting.last_activity = this.profile.profile_setting.last_activity;
+
   },
   data() {
     return {
@@ -164,6 +175,10 @@ export default {
       ProfileInfo: {
         name: '',
         background: '',
+        setting: {
+          recipes: '',
+          last_activity: '',
+        }
       }
     };
   },
@@ -175,6 +190,7 @@ export default {
 
       }).then((response) => {
         if (response.data) {
+          console.log(response.data);
           this.ProfileInfo.name = response.data.info.username;
           this.ProfileInfo.background = response.data.info.profile_setting.background;
         }
@@ -211,6 +227,27 @@ export default {
         this.$refs.status.Display('danger', error.response.data.message, 'خطاء');
       });
     },
+    UpdatePermissions() {
+      let setting = new FormData();
+      setting.append('last_activity', this.ProfileInfo.setting.last_activity);
+      setting.append('recipes', this.ProfileInfo.setting.recipes);
+      setting.append('_method', 'PUT');
+      axios({
+        method: 'POST',
+        url: '/profile/' + this.user_id + '/edit/permission',
+        data: setting,
+      }).then((response) => {
+        if (response.data.status == 'updated') {
+          this.$refs.status.Display('success', 'تم تحديث البروفايل', 'تمت التحديث بنجاح');
+          setTimeout(() => {
+            window.location.reload();
+          }, 2000);
+        }
+      }).catch((error) => {
+        this.$refs.status.Display('danger', error.response.data.message, 'خطاء');
+      });;
+    },
+
   }
 }
 </script>

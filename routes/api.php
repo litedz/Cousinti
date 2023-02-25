@@ -41,3 +41,6 @@ route::get('/test/test', function () {
     $profile_user = collect(User::with(['recipes.images_recipe', 'profile_setting'])->where('id', 7)->firstOrFail())->only(['username', 'recipes', 'avatar', 'Id_user_media', 'background', 'profile_setting']);
     return $profile_user;
 });
+
+
+Route::get('profile/{user_id}/edit/permission', [ProfileController::class, 'updatePerm'])->name('profile.edit.perm')->middleware(['auth', 'check.facebookUser']);

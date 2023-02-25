@@ -98,4 +98,18 @@ class ProfileController extends Controller
     {
         //
     }
+
+    public function updatePerm(request $request, ProfileServices $profileServices)
+    {
+        try {
+            $profileServices->UpdatePermissionService($request);
+        } catch (\Throwable $th) {
+            throw new Exception($th->getMessage(), 1);
+        }
+        return response()->json([
+            'status' => 'updated',
+            'message' => 'لقد تم تحديث الصلاحيات بنجاح',
+            'class' => 'success'
+        ]);
+    }
 }

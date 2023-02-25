@@ -17,7 +17,7 @@ class ImageFactory extends Factory
         return [
             'name' => 'default-cover.png',
             'cover' => 'active',
-            'recipe_id' => $this->faker->numbe(1,10),
+            'recipe_id' => $this->faker->numberBetween(1,10),
         ];
     }
 }

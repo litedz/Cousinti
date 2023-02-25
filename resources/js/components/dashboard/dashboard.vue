@@ -36,10 +36,13 @@
             </div>
             <div class="profile p-3 d-flex position-relative">
                 <div class="avatar">
-                    <img v-if="info.Id_user_media == null" class="rounded-circle" :src="w_path + '/storage/' + info.avatar"
-                        alt="" style="width: 70px; height: 70px" />
-                    <img v-else class="rounded-circle" :src="info.avatar" alt="" style="width: 70px; height: 70px" />
-                    
+                    <a :href="w_path+'/profile/'+info.id" v-if="info.Id_user_media == null" ><img class="rounded-circle"
+                            :src="w_path + '/storage/' + info.avatar" alt="" style="width: 70px; height: 70px" />
+                    </a>
+                    <a :href="w_path+'/profile/'+info.id" v-else >
+                    <img class="rounded-circle" :src="info.avatar" alt="" style="width: 70px; height: 70px" />
+                </a>
+
                 </div>
                 <div class="d-flex flex-column info m-1 p-2 w-75 justify-content-around h-100">
                     <div class="actions">
@@ -62,7 +65,8 @@
                                 <div class="profile-link d-flex flex-row justify-content-start align-items-center"
                                     @click="logout()">
                                     <span class="fa fa-door-open m-1 fa-2xs text-first"></span>
-                                    <a href="/logout" class="text-black-title text-capitalize text-decoration-none">Logout</a>
+                                    <a href="/logout"
+                                        class="text-black-title text-capitalize text-decoration-none">Logout</a>
                                 </div>
                             </li>
                         </div>
@@ -79,7 +83,8 @@
             </div>
         </div>
     </div>
-<!-- // components : add-recipe,table-recipes --></template>
+    <!-- // components : add-recipe,table-recipes -->
+</template>
 
 <script>
 export default {
@@ -201,5 +206,4 @@ li {
 .right-bar .content {
     width: 100%;
     height: auto;
-}
-</style>
+}</style>

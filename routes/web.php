@@ -45,7 +45,9 @@ Route::get('/dashboard', function () {
 })->middleware('auth');
 
 
-Route::resource('profile',ProfileController::class)->parameter('profile','user_id')->middleware(['auth','check.facebookUser']);
+Route::put('profile/{user_id}/edit/permission', [ProfileController::class, 'updatePerm'])->name('profile.edit.perm')->middleware(['auth', 'check.facebookUser']);
+Route::resource('profile', ProfileController::class)->parameter('profile', 'user_id')->middleware(['auth', 'check.facebookUser']);
+
 
 // -------------------------> User actions
 
@@ -61,10 +63,8 @@ Route::get('/test', function () {
 
     $vl = Hash::make('5910479819045906');
 
-    echo $vl.'<br>';
-    dd(Hash::check('5910479819045906','$2y$10$fuCQss3eYBtBVzp7f/P9GulropNv//IIdTbGqhnvdG3mcDW7JQtii'));
-
-
+    echo $vl . '<br>';
+    dd(Hash::check('5910479819045906', '$2y$10$fuCQss3eYBtBVzp7f/P9GulropNv//IIdTbGqhnvdG3mcDW7JQtii'));
 });
 
 // *****************************  recipe views    ***********************************************
