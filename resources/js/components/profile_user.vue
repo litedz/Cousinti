@@ -63,7 +63,7 @@
               <div class="row">
                 <div class="col-6 mb-2 p-0 position-relative singel-recipe" v-for="images in profile.recipes"
                   @mouseenter="show = 'RecipeTitle'" @mouseleave="show = ' '"
-                  v-if="profile.profile_setting.recipes !== 'true' && profile.profile_setting.recipes !== 0">
+                  v-if="profile.profile_setting.recipes == 'true'">
                   <Transition name="fade">
                     <div class="bg-perso fs-1 h-100 position-absolute position-relative rounded-3 text-center w-100"
                       v-show="show == 'RecipeTitle'">

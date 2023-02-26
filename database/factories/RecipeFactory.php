@@ -25,7 +25,7 @@ class RecipeFactory extends Factory
             'name' => $this->faker->sentence(2),
             'type_id' => types_recipes::all()->random()->id,
             'url_video' => 'https://www.youtube.com/cousinti',
-            'user_id' => User::pluck('id')->random(),
+            'user_id' => User::factory(),
             'how_todo' => $this->faker->realText(),
         ];
     }

@@ -37,9 +37,9 @@
                 </div>
                 <div class="overflow-hidden position-relative h-auto p-mt-lg-5 p-mt-md-4">
                     <div class="position-absolute w-100 h-100 start-50 opacity-75" style="
-                                background-image: url('http://127.0.0.1:8000/images/bg-login2.png');
-                                background-position: left;
-                            "></div>
+                                    background-image: url('http://127.0.0.1:8000/images/bg-login2.png');
+                                    background-position: left;
+                                "></div>
                     <div class="m-auto">
                         <FormKit type="form" #default="{ state: { valid } }" @submit="login()" :actions="false"
                             form-class="p-5 bg-white position-relative z-8888">
@@ -113,7 +113,7 @@ export default {
         return {
             email: "",
             password: "",
-            remember_me: "",
+            remember_me: false,
             accessTokenFb: "",
             csrf: document
                 .querySelector("meta[name=csrf-token]")
@@ -132,6 +132,7 @@ export default {
             const data = new FormData();
             data.append("email", this.email);
             data.append("password", this.password);
+            data.append("remember_me", this.remember_me);
             axios({
                 method: "post",
                 url: "/login",
@@ -187,12 +188,12 @@ export default {
                         let profile = response.data;
                         let email = profile.email;
                         let UserIdFace = profile.id;
-                        this.CheckAuthWebsite(email,UserIdFace);
+                        this.CheckAuthWebsite(email, UserIdFace);
                     }
 
                 });
         },
-        CheckAuthWebsite(email,UserIdFace) {
+        CheckAuthWebsite(email, UserIdFace) {
             var FacebookData = new FormData();
             FacebookData.append('email', email);
             FacebookData.append('Id_user_media', UserIdFace);
