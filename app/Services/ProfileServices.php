@@ -50,13 +50,20 @@ class ProfileServices
             'last_activity' => 'required',
             'recipes' => 'required',
         ]);
+
+        // dd($request->all());
+        // die();
         $user = User::where('id', auth()->user()->id)->firstOrFail();
-        $updatePerm = Profile::where('id', $user->id)->update($PermValid);
+        $updatePerm = Profile::where('id', $user->profile_id)
+            ->update([
+                'last_activity' => $request->last_activity,
+                'recipes' => $request->recipes
+
+            ]);
+
 
         if (!$updatePerm) {
             throw new Exception("خطا في تحديث الصلاحيات", 1);
         }
-
-     
     }
 }

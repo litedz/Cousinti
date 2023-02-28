@@ -9,5 +9,5 @@ class Profile extends Model
 {
     use HasFactory;
 
-
+    protected $fillable =['last_activity','recipes'];
 }

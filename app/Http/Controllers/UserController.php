@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\image;
+use App\Models\Profile;
 use App\Models\Rating;
 use App\Models\recipe;
 use App\Models\User;
@@ -69,6 +70,14 @@ class UserController extends Controller
         }
         $store = User::create($valid);
         if ($store) {
+            //create profile 
+            $profile = Profile::factory()->create();
+
+            $profile_id = $profile ? $profile->id : throw new Exception("Error Processing Request", 1);
+
+            User::where('id', $store->id)->update([
+                'profile_id' => $profile_id,
+            ]);
             return response()->json('created');
         } else {
             throw new Exception('يوجد خطا في التسجيل يرجى المحاولة من جديد ', 1);
@@ -200,8 +209,7 @@ class UserController extends Controller
             ]);
             $store_User->save();
         } catch (\Throwable $th) {
-           return $th->getMessage();
-            
+            return $th->getMessage();
         }
 
 

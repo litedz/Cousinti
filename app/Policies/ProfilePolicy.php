@@ -54,7 +54,9 @@ class ProfilePolicy
      */
     public function update(User $user)
     {
-        return request()->user_id == auth()->user()->id;
+
+
+        return $user->id == auth()->user()->id;
     }
 
     /**
@@ -91,6 +93,11 @@ class ProfilePolicy
     public function forceDelete(User $user, user $model)
     {
         //
+    }
+    public function edit()
+    {
+
+        return request()->user_id == auth()->user()->id;
     }
 
  

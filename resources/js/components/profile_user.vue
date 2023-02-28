@@ -57,13 +57,13 @@
               <div class="no-recipe" v-if="profile.recipes.length == 0">
                 <div class="bg-light fs-4 fw-lighter p-3 rounded text-center text-muted">لا يوجد وصفات</div>
               </div>
-              <div class="" v-else-if="ProfileInfo.setting.recipes == 'false' || ProfileInfo.setting.recipes == 0">
+              <div class="" v-else-if="ProfileInfo.setting.recipes == 0">
                 <div class="bg-light fs-4 fw-lighter p-3 rounded text-center text-muted">تم حجب الوصفات</div>
               </div>
               <div class="row">
                 <div class="col-6 mb-2 p-0 position-relative singel-recipe" v-for="images in profile.recipes"
                   @mouseenter="show = 'RecipeTitle'" @mouseleave="show = ' '"
-                  v-if="profile.profile_setting.recipes == 'true'">
+                  v-if="profile.profile_setting.recipes ==1">
                   <Transition name="fade">
                     <div class="bg-perso fs-1 h-100 position-absolute position-relative rounded-3 text-center w-100"
                       v-show="show == 'RecipeTitle'">
@@ -79,7 +79,7 @@
             <div class="Recent Activity">
               <div class="lead mb-2 mx-4 title">النشاط الأخير</div>
               <hr>
-              <div v-if="ProfileInfo.setting.last_activity == 'false' || ProfileInfo.setting.last_activity == 0">
+              <div v-if="ProfileInfo.setting.last_activity == 0">
                 <div class="bg-light fs-4 fw-lighter p-3 rounded text-center text-muted">تم حجب النشاطات</div>
               </div>
               <div v-else class="Activitys mx-0 p-3 rounded row w-100">
@@ -131,12 +131,12 @@
               <div class="d-flex form-check form-switch row-cols-4">
                 <label class="form-check-label fw-semibold" for="flexSwitchCheckChecked">عرض اخر الوصفات</label>
                 <input v-model="ProfileInfo.setting.recipes" class="form-check-input" type="checkbox" role="switch"
-                  id="flexSwitchCheckChecked1" :checked="ProfileInfo.setting.recipes == true">
+                  id="flexSwitchCheckChecked1" :checked="ProfileInfo.setting.recipes == 1">
               </div>
               <div class="d-flex form-check form-switch row-cols-4">
                 <label class="form-check-label fw-semibold" for="flexSwitchCheckChecked">عرض اخر النشاطات</label>
                 <input v-model="ProfileInfo.setting.last_activity" class="form-check-input" type="checkbox" role="switch"
-                  id="flexSwitchCheckChecked" :checked="ProfileInfo.setting.last_activity == true">
+                  id="flexSwitchCheckChecked" :checked="ProfileInfo.setting.last_activity == 1">
               </div>
               <input type="button" class="btn btn-primary mx-1 col-12 col-md-2" value="حفط التفيير"
                 @click="UpdatePermissions()">
@@ -166,6 +166,18 @@ export default {
     this.ProfileInfo.background = this.profile.profile_setting.background;
     this.ProfileInfo.setting.recipes = this.profile.profile_setting.recipes;
     this.ProfileInfo.setting.last_activity = this.profile.profile_setting.last_activity;
+
+  },
+  watch: {
+    ProfileInfo: {
+
+      handler(val) {
+        console.log(val.setting);
+        this.ProfileInfo.setting.recipes = (this.ProfileInfo.setting.recipes == true ? 1 : 0);
+        this.ProfileInfo.setting.last_activity = (this.ProfileInfo.setting.last_activity == true ? 1 : 0);
+      },
+      deep: true
+    },
 
   },
   data() {
@@ -247,6 +259,9 @@ export default {
         this.$refs.status.Display('danger', error.response.data.message, 'خطاء');
       });;
     },
+    tes() {
+      alert('xxx');
+    }
 
   }
 }

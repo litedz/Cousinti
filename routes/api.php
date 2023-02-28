@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Resources\RecipeResource;
+use App\Models\Profile;
 use App\Models\recipe;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -27,15 +28,17 @@ use Illuminate\Support\Facades\Route;
 
 
 
-// Route::get('/test', function () {
-// });
+Route::get('/test', function () {
+    $t=1;
+    dd(boolval($t));
+});
 // Route::POST('/register/facebook/', [UserController::class, 'RegisterWithFace']);
 // Route::POST('/login/facebook/', [LoginController::class, 'loginWithMedia']);
 
 
 
 
-// Route::resource('profile', ProfileController::class)->parameter('profile', 'user_id');
+Route::resource('profile', ProfileController::class)->parameter('profile', 'user_id');
 
 
 // route::get('/test/test', function () {
