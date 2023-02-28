@@ -18,7 +18,7 @@ class CommentsFactory extends Factory
         return [
             'comment' => $this->faker->sentence(),
             'recipe_id' => recipe::pluck('id')->random(),
-            'user_id' => User::all()->random()->id,
+            'user_id' => User::pluck('id')->random(),
         ];
     }
 }

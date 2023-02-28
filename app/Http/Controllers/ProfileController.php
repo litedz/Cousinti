@@ -54,8 +54,8 @@ class ProfileController extends Controller
         $editPerm = Gate::inspect('edit', 'App\\Models\User')->allowed() ? true : false;
 
 
-        $profile_user = collect($user::with(['recipes.images_recipe', 'profile_setting'])->where('id', $user_id)->firstOrFail())
-            ->only(['username', 'recipes', 'avatar', 'Id_user_media', 'background', 'profile_setting']);
+        $profile_user = collect($user::with(['recipes.images_recipe', 'profile_setting','comments'])->where('id', $user_id)->firstOrFail())
+            ->only(['username', 'recipes', 'avatar', 'Id_user_media', 'background', 'profile_setting','comments']);
         return view('user.profile-user', compact('profile_user', 'editPerm'));
     }
 

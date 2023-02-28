@@ -57,3 +57,9 @@ Route::prefix('guest')->group(function () {
     route::post('filter/{filter_key}', [GuestRecipeController::class, 'filter'])->name('guest.recipe.filter');
     route::post('search/{search_key}', [GuestRecipeController::class, 'search'])->name('guest.recipe.search');
 });
+
+
+route::get('/comment',function(){
+    return User::with('comments')->where('id',1)->get();
+    
+});

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -64,5 +65,9 @@ class User extends Authenticatable
     public function profile_setting()
     {
        return $this->belongsTo(Profile::class,'profile_id','id');
+    }
+    public function Comments()
+    {
+       return $this->hasMany(comments::class)->limit(2)->latest();
     }
 }

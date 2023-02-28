@@ -1,47 +1,34 @@
 <template>
   <!-- <li class="item d-flex" v-for="ing in this.single_recipe.ingredient" :key="ing">{{ing.name_ingredient}}<div class="font-weight-bolder">100g</div></li> -->
   <!-- <img class="w-100 h-100" :src="this.w_path + '/storage/' + $attrs.user_id + '/' + this.single_recipe.name + '/' + img.name"> -->
-  <div class="single-recipe"
-       style="">
+  <div class="single-recipe" style="">
     <status ref="status"></status>
     <div class="content mt-5">
       <div class="container-fluid">
         <div class="row">
           <div class="col-12 col-md-6 mb-5 images">
-            <div class="images w-100"
-                 style="height: auto">
-              <div v-for="img in this.single_recipe.images_recipe"
-                   :key="img"
-                   class="head-image">
-                <img class="w-100 m-1 p-1"
-                     style="height: 500px"
-                     v-if="img.cover == 'active'"
-                     :src="
-                       this.w_path +
-                       '/storage/recipes/' +
-                       img.name
-                     " />
+            <div class="images w-100" style="height: auto">
+              <div v-for="img in this.single_recipe.images_recipe" :key="img" class="head-image">
+                <img class="w-100 m-1 p-1" style="height: 500px" v-if="img.cover == 'active'" :src="
+                  this.w_path +
+                  '/storage/recipes/' +
+                  img.name
+                " />
               </div>
               <div class="other-images d-flex justify-content-end">
                 <div v-for="img in this.single_recipe
-                .images_recipe"
-                     :key="img"
-                     class="w-auto">
-                  <img class="m-1 p-1"
-                       style="height: 250px;width:250px"
-                       v-if="img.cover !== 'active'"
-                       :src="
-                         this.w_path +
-                         '/storage/recipes/' +
-                         img.name
-                       " />
+                  .images_recipe" :key="img" class="w-auto">
+                  <img class="m-1 p-1" style="height: 250px;width:250px" v-if="img.cover !== 'active'" :src="
+                    this.w_path +
+                    '/storage/recipes/' +
+                    img.name
+                  " />
                 </div>
               </div>
             </div>
           </div>
           <div class="col-12 col-md-6 border-bottom">
-            <div class="ingredients h-100"
-                 dir="rtl">
+            <div class="ingredients h-100" dir="rtl">
               <div class="row h-100 px-5 d-flex flex-column">
                 <div class="col-12 mb-5">
                   <h1 class="name_recipe">
@@ -54,16 +41,12 @@
                     <div>
                       <a :href="
                         '/similar/' + this.type_recipe
-                      "
-                         class="text-first text-decoration-none">{{ this.type_recipe }}</a>
+                      " class="text-first text-decoration-none">{{ this.type_recipe }}</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-8 position-relative">
-                  <img :src="Path + '/images/sep2.png'"
-                       class="position-absolute start-0"
-                       alt=""
-                       srcset="" />
+                  <img :src="Path + '/images/sep2.png'" class="position-absolute start-0" alt="" srcset="" />
                   <div class="items">
                     <table class="table table-bordered table-hover text-center">
                       <thead>
@@ -81,17 +64,15 @@
                       </thead>
 
                       <tbody>
-                        <tr class="item-ingredient"
-                            v-for="(ing, index) in this
-                            .single_recipe
-                            .ingredient"
-                            :key="ing">
+                        <tr class="item-ingredient" v-for="(ing,index) in this
+                          .single_recipe
+                          .ingredient" :key="ing">
                           <td class="font-weight-bolder">
                             {{ index + 1 }}
                           </td>
                           <td class="font-2">
                             {{
-                                ing.name_ingredient
+                              ing.name_ingredient
                             }}
                           </td>
                           <td class="font-2">
@@ -103,8 +84,7 @@
                   </div>
                 </div>
 
-                <div class="how_to col-12 mt-5"
-                     dir="rtl">
+                <div class="how_to col-12 mt-5" dir="rtl">
                   <div>
                     <div class="title h1">
                       طريقة التحضير
@@ -117,53 +97,40 @@
               </div>
             </div>
           </div>
-          <div class="col-12 mt-5"
-               id="how">
+          <div class="col-12 mt-5" id="how">
             <div class="row">
               <div class="video col-12 col-md-6">
                 <div class="video-prepare">
-                  <iframe width="100%"
-                          type="text/html"
-                          id="player"
-                          height="315"
-                          :src="
-                          'https://www.youtube.com/embed/' +
-                          this.single_recipe.url_video"
-                          title="YouTube video player"
-                          frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen></iframe>
+                  <iframe width="100%" type="text/html" id="player" height="315" :src="
+                    'https://www.youtube.com/embed/' +
+                    this.single_recipe.url_video" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
                 </div>
               </div>
-              <div class="col-12 col-md-6"
-                   dir="rtl">
+              <div class="col-12 col-md-6" dir="rtl">
                 <div class="d-flex flex-column p-3 justify-content-around h-100 px-5">
                   <div class="d-flex align-items-center">
                     <li class="fa fa-line-chart m-1 text-warning"></li>
                     <div class="h3 m-1">نسبة النجاح</div>
 
                   </div>
-                  <div class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quod eum sequi nulla quae voluptatem sit officia, odio explicabo atque quos, laborum porro? Voluptas aliquid qui incidunt, adipisci sunt corrupti.</div>
+                  <div class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quod eum sequi
+                    nulla quae voluptatem sit officia, odio explicabo atque quos, laborum porro? Voluptas aliquid qui
+                    incidunt, adipisci sunt corrupti.</div>
 
-                  <div class="progress w-50"
-                       style="height: 30px">
-                    <div class="bg-success fs-3 fw-bolder progress-bar progress-bar-striped"
-                         role="progressbar"
-                         :style="'width:' + this.rating + '%; height: 30px'"
-                         aria-valuemin="0"
-                         aria-valuemax="100">{{ this.rating }}%</div>
+                  <div class="progress w-50" style="height: 30px">
+                    <div class="bg-success fs-3 fw-bolder progress-bar progress-bar-striped" role="progressbar"
+                      :style="'width:' + this.rating + '%; height: 30px'" aria-valuemin="0" aria-valuemax="100">{{
+                        this.rating }}%</div>
                   </div>
                   <div class="votes d-flex">
                     <div>
 
-                      <li class="fa fa-2xl fa-heart m-1 pointer text-danger fa-solid"
-                          v-if="liked"
-                          aria-hidden="true"
-                          @click="like()"></li>
-                      <li class="fa fa-2xl fa-heart m-1 pointer text-danger fa-regular"
-                          aria-hidden="true"
-                          v-else
-                          @click="like()"></li>
+                      <li class="fa fa-2xl fa-heart m-1 pointer text-danger fa-solid" v-if="liked" aria-hidden="true"
+                        @click="like()"></li>
+                      <li class="fa fa-2xl fa-heart m-1 pointer text-danger fa-regular" aria-hidden="true" v-else
+                        @click="like()"></li>
                     </div>
                   </div>
                 </div>
@@ -190,7 +157,6 @@ import comments from "./comments.vue";
 
 export default {
   mounted() {
-
     window.addEventListener("scroll", this.whenScroll);
     this.getRecipe();
     this.checkLikeRecipe();

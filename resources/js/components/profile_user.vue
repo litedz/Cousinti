@@ -62,8 +62,7 @@
               </div>
               <div class="row">
                 <div class="col-6 mb-2 p-0 position-relative singel-recipe" v-for="images in profile.recipes"
-                  @mouseenter="show = 'RecipeTitle'" @mouseleave="show = ' '"
-                  v-if="profile.profile_setting.recipes ==1">
+                  @mouseenter="show = 'RecipeTitle'" @mouseleave="show = ' '" v-if="profile.profile_setting.recipes == 1">
                   <Transition name="fade">
                     <div class="bg-perso fs-1 h-100 position-absolute position-relative rounded-3 text-center w-100"
                       v-show="show == 'RecipeTitle'">
@@ -82,16 +81,15 @@
               <div v-if="ProfileInfo.setting.last_activity == 0">
                 <div class="bg-light fs-4 fw-lighter p-3 rounded text-center text-muted">تم حجب النشاطات</div>
               </div>
-              <div v-else class="Activitys mx-0 p-3 rounded row w-100">
-                <div class="bg-light col-12 d-flex flex-column fs-6 p-2">
+              <div v-else-if="ProfileInfo.comments.length !== 0" class="Activitys mx-0 p-3 rounded row w-100">
+                <div class="bg-light col-12 d-flex flex-column m-1 fs-6 p-2" v-for="comment in ProfileInfo.comments">
                   <span class="fa fa-comments mb-2" style="color: #3fcccc;"></span>
                   <div class="d-flex fs-5 mb-2 text">
-                    <div class="fw-bolder ms-2 pointer text-black-title username" style="color: #636060;">sakijujegy</div>
+                    <div class="fw-bolder ms-2 pointer text-black-title username" style="color: #636060;">
+                      {{ ProfileInfo.name }}</div>
                     <div class="ms-3">اضاف تعليق :</div>
-                    <div class="comment text-truncate w-25">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                      numquam autem odit iure ullam excepturi. Laborum incidunt ab, fugiat alias esse recusandae fugit
-                      sequi a autem quisquam ut, nemo culpa?</div>
-                  </div><span class="position-relative text-info time">17h ago</span>
+                    <div class="comment text-truncate w-25">{{ comment.comment }}</div>
+                  </div><span class="position-relative text-info time">{{ formateDate(comment.created_at) }}</span>
                 </div>
               </div>
             </div>
@@ -99,9 +97,8 @@
         </div>
       </div>
     </div>
+    <!-- Edit profile Form  -->
     <Transition name="fade">
-      <!-- Edit profile Form  -->
-
       <div class="bg-light border p-3 position-fixed pt-5 rounded tab-pane w-50 z-9999" style="left: 25%;top: 20%;"
         v-show="EditForm">
         <div class="tab-pane" id="edit">
@@ -158,6 +155,7 @@
 </template>
 
 <script>
+import  moment from "moment";
 export default {
   props: { profile: Object, user_id: Number },
   inject: ['w_path'],
@@ -166,13 +164,12 @@ export default {
     this.ProfileInfo.background = this.profile.profile_setting.background;
     this.ProfileInfo.setting.recipes = this.profile.profile_setting.recipes;
     this.ProfileInfo.setting.last_activity = this.profile.profile_setting.last_activity;
+    this.ProfileInfo.comments = this.profile.comments;
 
   },
   watch: {
     ProfileInfo: {
-
       handler(val) {
-        console.log(val.setting);
         this.ProfileInfo.setting.recipes = (this.ProfileInfo.setting.recipes == true ? 1 : 0);
         this.ProfileInfo.setting.last_activity = (this.ProfileInfo.setting.last_activity == true ? 1 : 0);
       },
@@ -190,7 +187,8 @@ export default {
         setting: {
           recipes: '',
           last_activity: '',
-        }
+        },
+        comments: '',
       }
     };
   },
@@ -259,9 +257,9 @@ export default {
         this.$refs.status.Display('danger', error.response.data.message, 'خطاء');
       });;
     },
-    tes() {
-      alert('xxx');
-    }
+    formateDate(created_at) {
+      return moment(created_at, false).fromNow();
+    },
 
   }
 }
