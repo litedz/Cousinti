@@ -8,6 +8,7 @@ use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\UserController;
 use App\Http\Resources\RecipeResource;
 use App\Listeners\TestListener;
+use App\Models\comments;
 use App\Models\recipe;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -57,15 +58,6 @@ Route::resource('profile', ProfileController::class)->parameter('profile', 'user
 
 
 
-
-Route::get('/test', function () {
-
-
-    $vl = Hash::make('5910479819045906');
-
-    echo $vl . '<br>';
-    dd(Hash::check('5910479819045906', '$2y$10$fuCQss3eYBtBVzp7f/P9GulropNv//IIdTbGqhnvdG3mcDW7JQtii'));
-});
 
 // *****************************  recipe views    ***********************************************
 
@@ -132,7 +124,8 @@ Route::middleware(['auth'])->group(function () {
         Route::POST('avatar', [UserController::class, 'updateAvatar']);
         Route::POST('password', [UserController::class, 'changePassword']);
         Route::get('{recipe_id}/liked', [UserController::class, 'RecipeUserLiked'])->name('recipe.liked');
-    });
+    }
+    );
 });
 
 

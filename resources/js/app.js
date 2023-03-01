@@ -8,11 +8,14 @@ const { createApp } = require('vue');
 
 const { AutoTyping } = require('autotyping');
 
+
+const {Bootstrap5Pagination} =require('laravel-vue-pagination');
 require('./bootstrap');
 
-require('moment');
+
 
 window.Vue = require('vue').default;
+
 
 
 
@@ -38,9 +41,7 @@ window.Vue = require('vue').default;
 
 
 
-
-
-import index from './components/index.vue'
+import index from './components/index.vue';
 import loading_page from './components/loading-page.vue'
 import login from './components/login.vue';
 import guest_topbar from './components/guest-topbar';
@@ -76,8 +77,6 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue';
 import ChevronDownIcon from '@heroicons/vue/solid/ChevronDoubleDownIcon';
 
 import { createI18n } from 'vue-i18n'
-import moment from 'moment';
-
 
 const messages = {
   ar: {
@@ -112,6 +111,9 @@ const app = createApp({
 
 
 
+app.component('pagination', Bootstrap5Pagination);
+
+
 app.component('index', index);
 app.component('login', login);
 app.component('search', search);
@@ -136,7 +138,6 @@ app.component('guest-topbar', guest_topbar);
 // recipe component
 app.component('add-recipe', add_recipe);
 app.component('update-recipe', update_recipe);
-
 
 app.use(plugin, defaultConfig);
 app.use(i18n).mount('#app');

@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Resources\RecipeResource;
+use App\Models\comments;
 use App\Models\Profile;
 use App\Models\recipe;
 use App\Models\User;
@@ -28,17 +29,14 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/test', function () {
-    $t=1;
-    dd(boolval($t));
-});
+
 // Route::POST('/register/facebook/', [UserController::class, 'RegisterWithFace']);
 // Route::POST('/login/facebook/', [LoginController::class, 'loginWithMedia']);
 
 
 
 
-Route::resource('profile', ProfileController::class)->parameter('profile', 'user_id');
+// Route::resource('profile', ProfileController::class)->parameter('profile', 'user_id');
 
 
 // route::get('/test/test', function () {
@@ -52,14 +50,9 @@ Route::resource('profile', ProfileController::class)->parameter('profile', 'user
 
 
 
-Route::prefix('guest')->group(function () {
-    Route::resource('recipe', GuestRecipeController::class)->names('guest.recipe');
-    route::post('filter/{filter_key}', [GuestRecipeController::class, 'filter'])->name('guest.recipe.filter');
-    route::post('search/{search_key}', [GuestRecipeController::class, 'search'])->name('guest.recipe.search');
-});
+// Route::prefix('guest')->group(function () {
+//     Route::resource('recipe', GuestRecipeController::class)->names('guest.recipe');
+//     route::post('filter/{filter_key}', [GuestRecipeController::class, 'filter'])->name('guest.recipe.filter');
+//     route::post('search/{search_key}', [GuestRecipeController::class, 'search'])->name('guest.recipe.search');
+// });
 
-
-route::get('/comment',function(){
-    return User::with('comments')->where('id',1)->get();
-    
-});
