@@ -13,18 +13,10 @@
                             </div>
                             <div class="form mt-4 d-flex flex-column text-right">
 
-                                <label for="comment"
-                                       class="mt-2 mb-2">Comments :</label>
-                                <textarea class="form-control"
-                                          v-model="comment"
-                                          name=""
-                                          id=""
-                                          cols="30"
-                                          rows="10"
-                                          placeholder="اترك تعليف"></textarea>
-                                <button type="button"
-                                        @click="add_comment()"
-                                        class="btn btn-primary btn-lg w-50 mt-2">
+                                <label for="comment" class="mt-2 mb-2">Comments :</label>
+                                <textarea class="form-control" v-model="comment" name="" id="" cols="30" rows="10"
+                                    placeholder="اترك تعليف"></textarea>
+                                <button type="button" @click="add_comment()" class="btn btn-primary btn-lg w-50 mt-2">
                                     ارسال
                                 </button>
                             </div>
@@ -32,18 +24,17 @@
                     </div>
                     <div class="col-12 col-md-7">
                         <div class="single-comment mb-1 bg-white d-flex flex-row-reverse rounded position-relative pt-2 pb-2"
-                             v-for="comment in comments"
-                             :key="comment.recipe">
+                            v-for="comment in comments" :key="comment.recipe">
                             <div class="left-shape position-absolute"></div>
                             <div class="avatar w-25">
-                                <img class="rounded-circle mt-2"
-                                     :src="w_path + '/storage/' + comment.user.avatar"
-                                     style="width: 80px;height: 80px;"
-                                     alt=""
-                                     srcset="" />
+                                <img class="rounded-circle mt-2" :src="w_path + '/storage/' + comment.user.avatar"
+                                    style="width: 80px;height: 80px;" alt="" srcset="" />
                             </div>
                             <div class="d-flex flex-column info mx-3 text-black text-right w-75 font-amiri">
-                                <div class="fs-5 mt-1 name">{{ comment.user.username }}</div>
+                                <div class="fs-5 mt-1 name">
+                                    <a class="text-capitalize text-dark text-decoration-none" :href="'/profile/'+comment.user.id">{{ comment.user.username }}</a>
+                                
+                                </div>
                                 <span class="text-info time">{{ formateDate(comment.created_at) }}</span>
                                 <div class="comment lh-lg fs-6">
                                     {{ comment.comment }}

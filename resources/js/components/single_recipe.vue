@@ -1,6 +1,4 @@
 <template>
-  <!-- <li class="item d-flex" v-for="ing in this.single_recipe.ingredient" :key="ing">{{ing.name_ingredient}}<div class="font-weight-bolder">100g</div></li> -->
-  <!-- <img class="w-100 h-100" :src="this.w_path + '/storage/' + $attrs.user_id + '/' + this.single_recipe.name + '/' + img.name"> -->
   <div class="single-recipe" style="">
     <status ref="status"></status>
     <div class="content mt-5">
@@ -9,11 +7,8 @@
           <div class="col-12 col-md-6 mb-5 images">
             <div class="images w-100" style="height: auto">
               <div v-for="img in this.single_recipe.images_recipe" :key="img" class="head-image">
-                <img class="w-100 m-1 p-1" style="height: 500px" v-if="img.cover == 'active'" :src="
-                  this.w_path +
-                  '/storage/recipes/' +
-                  img.name
-                " />
+                <img class="w-100 m-1 p-1" style="height: 500px" v-if="img.cover == 'active'"
+                  :src="this.w_path + '/storage/recipes/' + img.name" />
               </div>
               <div class="other-images d-flex justify-content-end">
                 <div v-for="img in this.single_recipe

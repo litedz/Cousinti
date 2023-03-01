@@ -59,7 +59,7 @@ class CommentsController extends Controller
     public function show(Request $request)
     {
         $recipe_id = $request->comment;
-        $recipe_comments = comments::with(['user'])->where('recipe_id', $recipe_id)->get();
+        $recipe_comments = comments::with(['user'])->where('recipe_id', $recipe_id)->paginate(5);
         return response()->json(CommentResource::collection($recipe_comments));
     }
 
