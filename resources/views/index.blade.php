@@ -1,6 +1,7 @@
 @extends('app')
 @section('app')
 
+<h1>test github hostinger</h1>
 @auth
 @php
     if (is_null(auth()->user()->Id_user_media)) {

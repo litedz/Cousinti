@@ -505,7 +505,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6 p-mt-sc-4">
-                        <div class="row h-100">
+                        <div class="row h-100 p-xxl-5">
                             <div
                                 class="col-6 mb-1 rounded img-fluid"
                                 @mouseenter="EffectBestRecipe()"
@@ -1875,9 +1875,9 @@ div.squar {
 .best-of-recipe .cover {
     height: auto;
     width: 100%;
-    background: url("https://i.pinimg.com/564x/bb/0d/c5/bb0dc5b2d6c9566fa965809367ff29d2.jpg");
+    /* background: url("https://i.pinimg.com/564x/bb/0d/c5/bb0dc5b2d6c9566fa965809367ff29d2.jpg");
     background-size: inherit;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 
 .sing_up {

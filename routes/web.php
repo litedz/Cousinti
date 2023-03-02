@@ -129,7 +129,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 
-Route::resource('comments', CommentsController::class)->middleware('auth');
+Route::resource('comments', CommentsController::class);
 
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('check.login');
@@ -146,3 +146,9 @@ Route::POST('/register/facebook/', [UserController::class, 'RegisterWithFace']);
 
 
 Route::post('/facebook/login', [LoginController::class, 'loginWithMedia']);
+
+
+
+Route::get('test', function () {
+    return view('test');
+});

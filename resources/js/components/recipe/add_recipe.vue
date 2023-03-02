@@ -120,7 +120,7 @@
                    help="الكمية باالغارم (g)"
                    help-class="text-black-50"
                    @keydown.enter="add_ingredient_table"
-                   validation="required|number" />
+                   validation="required" />
 
 
           <button type="button"
@@ -128,8 +128,8 @@
                   @click="add_ingredient_table()"
                   @keyup.enter="add_ingredient_table"></button>
         </div>
-        <div class="d-flex justify-content-start">
-          <p class="m-1 text-black-50 text-weight-500">اضافة مكونات</p>
+        <div class="align-items-center d-flex justify-content-start">
+          <p class="fs-3 fw-bolder m-1 text-black-50 text-weight-500">اضافة مكونات</p>
           <span>
             <i @click="show_inputs = 'add_ingredient_table'"
                class="

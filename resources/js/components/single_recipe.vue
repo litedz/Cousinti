@@ -3,11 +3,11 @@
     <status ref="status"></status>
     <div class="content mt-5">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-6 mb-5 images">
+        <div class="row g-4">
+          <div class="col-12 col-md-6 images">
             <div class="images w-100" style="height: auto">
               <div v-for="img in this.single_recipe.images_recipe" :key="img" class="head-image">
-                <img class="w-100 m-1 p-1" style="height: 500px" v-if="img.cover == 'active'"
+                <img class="w-100 m-1 p-1" style="height: 720px" v-if="img.cover == 'active'"
                   :src="this.w_path + '/storage/recipes/' + img.name" />
               </div>
               <div class="other-images d-flex justify-content-end">
@@ -24,9 +24,9 @@
           </div>
           <div class="col-12 col-md-6 border-bottom">
             <div class="ingredients h-100" dir="rtl">
-              <div class="row h-100 px-5 d-flex flex-column">
+              <div class="d-flex flex-column gap-5 h-100 px-5 row">
                 <div class="col-12 mb-5">
-                  <h1 class="name_recipe">
+                  <h1 class="name_recipe fs-3">
                     {{ this.single_recipe.name }}
                   </h1>
                   <div class="type_recipe d-flex align-items-baseline">
@@ -40,19 +40,19 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-8 position-relative">
+                <div class="col-12 col-md-8 position-relative">
                   <img :src="Path + '/images/sep2.png'" class="position-absolute start-0" alt="" srcset="" />
                   <div class="items">
                     <table class="table table-bordered table-hover text-center">
                       <thead>
                         <tr>
-                          <th class="h4 fw-bolder">
+                          <th class="fs-5 fw-bolder">
                             #
                           </th>
-                          <th class="h4 fw-bolder">
+                          <th class="fs-5 fw-bolder">
                             الاسم
                           </th>
-                          <th class="h4 fw-bolder">
+                          <th class="fs-5 fw-bolder">
                             الكمية
                           </th>
                         </tr>
@@ -62,15 +62,15 @@
                         <tr class="item-ingredient" v-for="(ing,index) in this
                           .single_recipe
                           .ingredient" :key="ing">
-                          <td class="font-weight-bolder">
+                          <td class="text-muted">
                             {{ index + 1 }}
                           </td>
-                          <td class="font-2">
+                          <td class="fs-5">
                             {{
                               ing.name_ingredient
                             }}
                           </td>
-                          <td class="font-2">
+                          <td class="fs-5">
                             {{ ing.quantity }}
                           </td>
                         </tr>
@@ -81,8 +81,11 @@
 
                 <div class="how_to col-12 mt-5" dir="rtl">
                   <div>
-                    <div class="title h1">
-                      طريقة التحضير
+                    <div class="align-items-center d-flex gap-2 title">
+                      <i class="fa-kitchen-set fa-light fa-solid fs-3 text-info"></i>
+                      <div class="fs-3">طريقة التحضير</div>
+                     
+                      
                     </div>
                     <div class="text lh-lg mt-5 text-black-50 text-body">
                       {{ this.single_recipe.how_todo }}
@@ -92,7 +95,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 mt-5" id="how">
+          <div class="col-12" id="how">
             <div class="row">
               <div class="video col-12 col-md-6">
                 <div class="video-prepare">
@@ -264,6 +267,10 @@ export default {
 
   .single-recipe .content .ingredients .col-4 img {
     display: none;
+  }
+
+  .head-image .img{
+    height: 100% !important;
   }
 }
 </style>

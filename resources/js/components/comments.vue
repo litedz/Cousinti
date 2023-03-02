@@ -23,6 +23,9 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-7">
+                        <!-- <div class="text-center" v-if ="comments.lenght == 0">
+                        no comment Yet
+                        </div> -->
                         <div class="single-comment mb-1 bg-white d-flex flex-row-reverse rounded position-relative pt-2 pb-2"
                             v-for="comment in comments.data" :key="comment.recipe">
                             <div class="left-shape position-absolute"></div>
