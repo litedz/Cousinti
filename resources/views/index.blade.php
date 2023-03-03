@@ -1,6 +1,5 @@
 @extends('app')
 @section('app')
-
 @auth
 @php
     if (is_null(auth()->user()->Id_user_media)) {
