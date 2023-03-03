@@ -286,7 +286,7 @@
                 class="bg-white display-1 fw-bolder text text-black"
                 style="letter-spacing: 15px"
             >
-                COUSINTI test
+                COUSINTI
             </div>
         </div>
         <div
