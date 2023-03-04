@@ -19,6 +19,7 @@
 
 
     <div id="app" class="font-amiri" style="background-color: #EBF1F4;">
+        <loading-page></loading-page>
         @yield('app')
     </div>
 

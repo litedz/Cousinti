@@ -90,8 +90,9 @@
                             </div>
                         </div>
                     </div>
+                    
 
-                    <div class=" subscribe col-12 col-md-4 d-flex flex-column justify-content-between pt-5 position-relative mb-2 h-auto">
+                    <div class=" subscribe col-12 col-md-4 d-flex flex-column justify-content-between pt-5 position-relative gap-3">
                         <div class="separator position-absolute">
                             <img :src="path + '/images/l33.png'"
                                  alt=""
@@ -99,7 +100,7 @@
                         </div>
                         <h1 class="fw-bold">متابعتنا</h1>
                         <div class="font-14">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque error fugit dolore mollitia consectetur animi facere minus nobis blanditiis nulla aut adipisci itaque, ullam temporibus deleniti. Explicabo pariatur cumque excepturi.</div>
-                        <div class="form mt-4">
+                        <div class="form">
                             <input class="form-control"
                                    type="email"
                                    name=""

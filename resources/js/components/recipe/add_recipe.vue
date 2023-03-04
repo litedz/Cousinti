@@ -315,5 +315,7 @@ export default {
 </script>
 
 <style>
-.formkit-messages {}
+.formkit-messages {
+  color: red;
+}
 </style>

@@ -84,8 +84,8 @@
                     <div class="align-items-center d-flex gap-2 title">
                       <i class="fa-kitchen-set fa-light fa-solid fs-3 text-info"></i>
                       <div class="fs-3">طريقة التحضير</div>
-                     
-                      
+
+
                     </div>
                     <div class="text lh-lg mt-5 text-black-50 text-body">
                       {{ this.single_recipe.how_todo }}
@@ -98,7 +98,8 @@
           <div class="col-12" id="how">
             <div class="row">
               <div class="video col-12 col-md-6">
-                <div class="video-prepare">
+                <div class="video-prepare"
+                  v-if="this.single_recipe.url_video !== null">
                   <iframe width="100%" type="text/html" id="player" height="315" :src="
                     'https://www.youtube.com/embed/' +
                     this.single_recipe.url_video" title="YouTube video player" frameborder="0"
@@ -107,7 +108,7 @@
                 </div>
               </div>
               <div class="col-12 col-md-6" dir="rtl">
-                <div class="d-flex flex-column p-3 justify-content-around h-100 px-5">
+                <div class="d-flex flex-column p-3 justify-content-around h-100 px-5 gap-3">
                   <div class="d-flex align-items-center">
                     <li class="fa fa-line-chart m-1 text-warning"></li>
                     <div class="h3 m-1">نسبة النجاح</div>
@@ -269,7 +270,7 @@ export default {
     display: none;
   }
 
-  .head-image .img{
+  .head-image .img {
     height: 100% !important;
   }
 }

@@ -13,6 +13,7 @@
 
 <body>
     <div id="app" class="font-amiri">
+        <loading-page></loading-page>
         @yield('app')
     </div>
 

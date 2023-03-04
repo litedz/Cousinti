@@ -10,6 +10,7 @@ use App\Models\Rating;
 use App\Models\recipe;
 use App\Models\types_recipes;
 use App\Models\User;
+use App\Rules\YoutubeRule;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -164,7 +165,7 @@ class RecipeController extends Controller
             'name' => 'required|string',
             'ingredients' => 'required',
             'selected_type' => 'required|string',
-            'url_video' => 'nullable|url',
+            'url_video' => ['nullable','url',new YoutubeRule],
             'how_todo' => 'required|string',
 
         ]);
@@ -199,18 +200,10 @@ class RecipeController extends Controller
                 $this->head_image =  $request->file('head_image');
             }
         }
-        // id of video Youtube
-        if ($request->url_video && $request->url_video !== null) {
-
-            if (str_contains($request->url_video, 'https://youtu.be/') || str_contains($request->url_video, 'https://www.youtube.com')) {
-
-                $id_video_youtube = explode('https://youtu.be/', $request->url_video);
-                $this->video_url = end($id_video_youtube);
-            } else {
-                throw new Exception("يجب ان يكون رابط الفيديوا صحيح", 1);
-            }
-        }
-
+        // Store id of video Youtube
+    
+        $id_video_youtube = explode('https://youtu.be/', $request->url_video);
+        $this->video_url = end($id_video_youtube);
 
         //store image in varriable other images
         for ($i = 0; $i < count($request->file()); $i++) {

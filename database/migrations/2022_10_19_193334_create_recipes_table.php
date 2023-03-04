@@ -18,7 +18,7 @@ class CreateRecipesTable extends Migration
             $table->string('name');
             $table->foreignId('type_id')->constrained('types_recipes');
             $table->longText('how_todo');
-            $table->string('url_video');
+            $table->string('url_video')->nullable();
             $table->integer('rating')->default(0);
             $table->foreignId('user_id')->constrained('users');
             $table->integer('like')->default(0);
