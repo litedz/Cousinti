@@ -203,12 +203,12 @@
 
     <div class="cover position-relative">
         <div class="w-100 h-100 opacity-75 bg-perso position-absolute" style="
-                        background: linear-gradient(
-                            177deg,
-                            rgb(83, 196, 180),
-                            #ffffffb8
-                        );
-                    "></div>
+                                        background: linear-gradient(
+                                            177deg,
+                                            rgb(83, 196, 180),
+                                            #ffffffb8
+                                        );
+                                    "></div>
     </div>
     </div>
 
@@ -221,12 +221,10 @@
                     <h1 class="text-black-name-regione h2">انواع الوصفات</h1>
                     <img class="ms-2" :src="w_path + '/images/V2.png'" alt="" />
                 </div>
-                <div class="col-xs-12 col-md-6 col-lg-4 item overflow-hidden p-0 position-relative" :id="type.type"
-                    @mouseenter="EffectCategorie()" @mouseleave="EffectCategorie()" v-for="type in types_recipe"
-                    :key="type.recipe">
+                <!-- <div class="col-xs-12 col-md-6 col-lg-4 item overflow-hidden p-0 position-relative" :id="type.type"
+                    @mouseenter="EffectCategorie()" @mouseleave="EffectCategorie()" v-for="type in types_recipe" :key="type.recipe">
                     <div class="d-flex flex-column h-100 justify-content-around position-absolute w-100 z-8888">
-                        <div class="d-flex flex-column justify-content-around text-center text-white squar"
-                            style="background: #17a2b8b8; height: 10%">
+                        <div class="d-flex flex-column justify-content-around text-center text-white squar" style="background: #17a2b8b8;">
                             <a :href="'/similar/' + type.type" class="text-decoration-none">
                                 <div class="font-amiri h4 text-white">
                                     {{ type.type }}
@@ -240,6 +238,14 @@
                             <img src="http://127.0.0.1:8000/images/1.jpg" alt="" class="h-100 w-100" style="" />
                         </div>
                     </div>
+                </div> -->
+
+                <div class="types">
+                    <div class="opacity"></div>
+                    <div class="type">
+                        <img :src="w_path+'/images/1.jpg'" alt="">
+                        <div class="title-type">title</div>
+                    </div>
                 </div>
 
 
@@ -249,10 +255,10 @@
 
     <section class="best-of-recipe mb-5 p-3 px-0">
         <div class="font-amiri mb-5 pb-3 text-center w-100" style="
-                    border-bottom: 1px solid lightgrey;
-                    border-right: 799px solid transparent;
-                    border-left: 800px solid transparent;
-                ">
+                                    border-bottom: 1px solid lightgrey;
+                                    border-right: 799px solid transparent;
+                                    border-left: 800px solid transparent;
+                                ">
             <div class="name-regione d-flex align-items-center justify-content-center">
                 <div class="h2 fw-bolder m-1">افضل الوصفات</div>
                 <i class="fa fa-star-half-alt text-warning"></i>
