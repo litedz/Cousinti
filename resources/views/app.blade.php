@@ -18,7 +18,8 @@
 <body>
 
 
-    <div id="app" class="font-amiri" style="background-color: #EBF1F4;">
+    {{-- <div id="app" class="font-farhati" style="background-color: #EBF1F4;"> --}}
+    <div id="app" class="font-farhati" style="background: hsl(33deg 35% 99%)">
         <loading-page></loading-page>
         @yield('app')
     </div>

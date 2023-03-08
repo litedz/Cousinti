@@ -11,6 +11,10 @@
     font-family: dance;
     src: url("../css/fonts/DancingScript-Bold.ttf");
 }
+@font-face {
+    font-family: farhati;
+    src: url("../css/fonts/RAFarhati-Regular.otf");
+}
 
 body,
 html {

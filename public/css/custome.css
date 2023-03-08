@@ -1,5 +1,27 @@
 /* FIRST COLOR #0E8572  */
 
+.first-color{
+    color: #EF6F82 !important;
+}
+.second-color{
+    color: #FFFFE8 !important;
+}
+.third-color{
+    color:#CDE990  !important;
+}
+.bg-first-color{
+    background: #fd6d8c !important;
+}
+.bg-second-color{
+    background: #FFFFE8 !important;
+}
+.bg-third-color{
+    background:#CDE990  !important;
+}
+.bg-gray{
+    background: #e5e7eb !important;
+}
+
 /* Standar style */
 
 ul {
@@ -73,6 +95,9 @@ $utilities: map-merge(
 
 .font-amiri {
     font-family: "amiri";
+}
+.font-farhati {
+    font-family: "farhati";
 }
 
 .text-black-title {

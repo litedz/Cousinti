@@ -1,55 +1,118 @@
 <template>
-  <div id="navigation-bar" class="navigation-bar position-relative z-9999">
-    <!-- v-if="this.$attrs.show_navbar == true" -->
-    <div class="top-bar w-100 d-flex" id="navSlide">
-      <div class="align-items-center d-flex flex-row-reverse px-2 search w-100-md w-100-sc w-25-perso">
-        <search></search>
-        <div class="form d-flex font-amiri">
-          <a href="/login" class="bg-white border btn fw-bold mx-1 text-decoration-none text-dark px-4">دخول</a>
-          <a href="/register" class="bg-white border btn fw-bold mx-1 text-decoration-none text-dark px-4">تسجيل</a>
-        </div>
-      </div>
-      <div class="logo  p-d-none-sc start-0 text-center w-50">
-        <a href="/">
-          <img :src="w_path + '/images/logo2.png'" style="height: auto; width: 80px" alt="" />
-        </a>
-      </div>
-      <div class="toggleBar end-0 w-25 text-right">
-        <li class="fa fa-bars-staggered fs-3 h-100 p-2 px-3 rounded text-white pointer" @click="SlideRightBar()"></li>
-      </div>
+  <div class="border-bottom border-top d-flex justify-content-center navbar" style="transition: all 0.5s;">
+    <div class="d-flex justify-content-start w-100">
+      <Button type="button" class="btn end-0 mt-1 mx-2 position-absolute top-0" id="toggleButton">
+        <span class="fa fa-bars first-color fs-4" @click="toggleNav()" data-target="nav"></span>
+      </Button>
     </div>
+    <nav id="nav" class="">
+      <div class="slide-icon w-100 p-d-none-lg p-d-none-md">
+        <span class="end-0 fa fa-bars-staggered m-2 pointer" data-target="nav" @click="toggleNav()"
+          style="color:rgb(255 89 123 / 80%)"></span>
+      </div>
+      <div class="border-bottom logo-menu pb-2 text-center w-100">
+        <img src="https://via.placeholder.com/150" class="rounded-circle">
+      </div>
+      <div  id="link-nav" class="hoverable">
+        <li class="fs-5 pointer">
+          <div class="align-items-center d-flex gap-2 justify-content-center">
+            <a class="text-decoration-none text-black">حلويات</a>
+            <span class="fa fa-2xs fa-chevron-down first-color "></span>
+          </div>
+          <div class="drowDownMenu p-3 position-absolute w-50 rounded" style="left:25%;background:#3b3959;">
+            <div class="container">
+              <div class="row g-2">
+                <div class="bg-white col mx-1 rounded">
+                  <div class="bg-white img-container p-1 position-relative rounded mw-100"><img class="img-recipe w-100"
+                      src="https://placekitten.com/200/200" alt="">
+                    <div class="bg-white bottom-0 end-0 h-100 overlay position-absolute start-0 top-0 w-100">
+                      <div
+                        class="align-items-center d-flex first-color flex-column h-100 justify-content-around recipe-info">
+                        <a href="#" class="first-color fs-2 name_recipe text-decoration-none">Lorem psiurc</a>
+                        <div class="author d-flex flex-column-reverse"><a href="#"
+                            class="fs-6 name-author text-decoration-none" style="color:#90625c;">Mohamed elhabib</a><img
+                            class="avatar mx-auto rounded-circle w-50" src="https://i.pravatar.cc/60"></div>
+                        <div class="rating d-flex flex"><span
+                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span><span
+                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span><span
+                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="border-top text-black-title text-center">صابلي العيد خفيف
+                  </div>
+                </div>
+                <div class="bg-white col mx-1 rounded">
+                  <div class="bg-white img-container p-1 position-relative rounded mw-100"><img class="img-recipe w-100"
+                      src="https://placekitten.com/200/200" alt="">
+                    <div class="bg-white bottom-0 end-0 h-100 overlay position-absolute start-0 top-0 w-100">
+                      <div
+                        class="align-items-center d-flex first-color flex-column h-100 justify-content-around recipe-info">
+                        <a href="#" class="first-color fs-2 name_recipe text-decoration-none">Lorem psiurc</a>
+                        <div class="author d-flex flex-column-reverse"><a href="#"
+                            class="fs-6 name-author text-decoration-none" style="color:#90625c;">Mohamed elhabib</a><img
+                            class="avatar mx-auto rounded-circle w-50" src="https://i.pravatar.cc/60"></div>
+                        <div class="rating d-flex flex"><span
+                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span><span
+                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span><span
+                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="border-top text-black-title text-center">صابلي العيد خفيف
+                  </div>
+                </div>
+                <div class="bg-white col mx-1 rounded">
+                  <div class="bg-white img-container p-1 position-relative rounded mw-100"><img class="img-recipe w-100"
+                      src="https://placekitten.com/200/200" alt="">
+                    <div class="bg-white bottom-0 end-0 h-100 overlay position-absolute start-0 top-0 w-100">
+                      <div
+                        class="align-items-center d-flex first-color flex-column h-100 justify-content-around recipe-info">
+                        <a href="#" class="first-color fs-2 name_recipe text-decoration-none">Lorem psiurc</a>
+                        <div class="author d-flex flex-column-reverse"><a href="#"
+                            class="fs-6 name-author text-decoration-none" style="color:#90625c;">Mohamed elhabib</a><img
+                            class="avatar mx-auto rounded-circle w-50" src="https://i.pravatar.cc/60"></div>
+                        <div class="rating d-flex flex"><span
+                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span><span
+                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span><span
+                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="border-top text-black-title text-center">صابلي العيد خفيف
+                  </div>
+                </div>
+                <div class="more col-12">
+                  <a class="#">
+                    <h1 class="">راية المزيد</h1>
+                    <span class="fa fa-dots"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </div>
+      <div  id="link-nav" class="hoverable">
+        <li class="fs-5 pointer">
+          <div class="align-items-center d-flex gap-2 justify-content-center">
+            
+            <a class="text-decoration-none text-black">zeaezaeza</a>
+          </div>
+     
+        </li>
+      </div>
 
-    <div class="Right-navbar rounded border-top d-flex flex-column">
-      <div class="border-bottom close-nav p-2 text-right w-100">
-        <li class="bg-light fa fa-remove p-1 px-2 rounded-circle text-muted pointer" @click="SlideRightBar()"></li>
+ 
+      <div
+        class="social-media border-left border-right border-top bottom-0 contact d-flex gap-2 justify-content-center p-2 position-absolute rounded w-100"
+        style="background: #fbfbfb;">
+        <li class="fa fa-hand-holding-heart"></li>
+        <li class="fa fa-hand-holding-heart"></li>
+        <li class="fa fa-hand-holding-heart"></li>
+        <li class="fa fa-hand-holding-heart"></li>
       </div>
-      <div id="item1" class="item font-amiri p-2 start-0 text-center w-100 border-bottom position-relative">
-        <div class="d-flex justify-content-center align-items-center">
-          <li class="fa fa-slide fa-chevron-left text-dark w-25"></li>
-          <a class="fs-5 fw-bold link-right-bar text-decoration-none text-white title w-50" data-toggle="item1" href="#"
-            @click="slideSubMenu()">حلويات</a>
-          <li class="fa fa-home fs-5 text-dark mx-3"></li>
-        </div>
-        <div class="bg-light p-2 position-absolute rounded-start sub-menu w-100 z-8888" style="display: none">
-          <li class="border-bottom p-2">
-            <a href="#" class="text-decoration-none text-info fs-6">azezaeazeazeaz</a>
-          </li>
-        </div>
-      </div>
-      <div id="item2" class="item font-amiri p-2 start-0 text-center w-100 border-bottom position-relative">
-        <div class="d-flex justify-content-center align-items-center">
-          <li class="fa fa-slide fa-chevron-left text-dark w-25"></li>
-          <a class="fs-5 fw-bold link-right-bar text-decoration-none text-white title w-50" data-toggle="item2" href="#"
-            @click="slideSubMenu()">home</a>
-          <li class="fa fa-home fs-5 text-dark mx-3"></li>
-        </div>
-        <div class="bg-light p-2 position-absolute rounded-start sub-menu w-100 z-8888" style="display: none">
-          <li class="border-bottom p-2">
-            <a href="#" class="text-decoration-none text-info fs-6">xxxxxxxxxx</a>
-          </li>
-        </div>
-      </div>
-    </div>
+    </nav>
   </div>
 </template>
 
@@ -70,10 +133,9 @@ export default {
   },
   methods: {
     toggleNav() {
-      $("#" + event.target.getAttribute("data-target")).toggleClass(
-        "test"
-      );
-      $("#" + event.target.getAttribute("data-target")).slideToggle();
+      $("#" + event.target.getAttribute("data-target")).toggleClass("show_navbar");
+      $("#toggleButton").fadeToggle();
+      $('.navbar').toggleClass('border-bottom border-top')
     },
 
     SlideRightBar() {
@@ -120,6 +182,11 @@ export default {
 };
 </script>
 <style scoped>
+#nav {
+  display: flex;
+  gap: 1rem;
+}
+
 #navigation-bar .top-bar {
   z-index: 9998;
   position: relative;
@@ -149,32 +216,153 @@ export default {
   right: 100%;
 }
 
-/* #navigation-bar .toggleBar{
-  display: none;
-} */
+
+.drowDownMenu .overlay {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 1s;
+
+}
+
+.drowDownMenu .img-container:hover .overlay {
+  opacity: 0.75;
+  transition: opacity 1s;
+}
+
+
 
 nav.navbar {
   background: hsl(170, 81%, 29%);
 }
 
+#nav .hoverable {}
+
+#nav .drowDownMenu {
+  display: none;
+  transition: all 1s;
+}
+
+#nav .hoverable:hover .drowDownMenu {
+  display: block;
+  animation: fadeInMenu 1s;
+  transition: all 1s;
+  
+}
+@keyframes fadeInMenu {
+  0% { opacity: 0;display: none; }
+  100% { opacity: 1; }
+}
+
 /* small Screen */
 @media only screen and (max-width: 768px) {
+
+
+  .show_navbar {
+    gap: 21px !important;
+    width: 50% !important;
+    height: 100% !important;
+    background: hsl(0, 0%, 97%) !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    transition: all 1s !important;
+    z-index: 9999;
+  }
+
+  #nav {
+    position: fixed;
+    flex-direction: column;
+    right: -100%;
+    height: 100%;
+    transition: all 1s;
+    display: flex;
+    gap: 1rem;
+    top: 0;
+  }
+
+  #nav #link-nav {
+    /* display: flex !important; */
+    flex-direction: column !important;
+    /* justify-content: center !important;
+    align-items: center !important; */
+  }
+
+
+
+  #nav .drowDownMenu {
+    display: none !important;
+    left: 0 !important;
+    background: #3b3959;
+    width: 100% !important;
+    position: relative !important;
+    overflow: auto;
+    height: 500px;
+  }
+
+  
+
+
+
   #navigation-bar .Right-navbar {
     width: 50%;
   }
+
+  #toggleButton {
+    position: relative !important;
+  }
 }
+
 
 /*       Mediam screen  */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   nav.navbar {
     background: hsl(170, 81%, 29%);
   }
+
+  #toggleButton {
+    display: none !important;
+  }
+
+  .show_navbar {
+    display: none !important;
+  }
+
+  .show_navbar .logo-menu,
+  .social-media {
+    display: none !important;
+  }
+
+  #nav {
+    display: flex !important;
+    gap: 1rem !important;
+  }
+
 }
 
 /*       Large  screen  */
 @media only screen and (min-width: 992px) {
   nav.navbar {
     background: hsl(170, 81%, 29%);
+  }
+
+  #toggleButton {
+    display: none !important;
+  }
+
+  .show_navbar {
+    display: none !important;
+  }
+
+  #nav .logo-menu,
+  .social-media {
+    display: none !important;
+  }
+
+  #nav {
+    display: flex !important;
+    gap: 1rem !important;
   }
 }
 </style>
