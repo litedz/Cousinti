@@ -6,29 +6,38 @@
       </Button>
     </div>
     <nav id="nav" class="">
-      <div class="slide-icon w-100 p-d-none-lg p-d-none-md">
-        <span class="end-0 fa fa-bars-staggered m-2 pointer" data-target="nav" @click="toggleNav()"
-          style="color:rgb(255 89 123 / 80%)"></span>
+      <!-- Top Menu  -->
+      <div class="p-d-none-lg p-d-none-md  slide-icon w-100">
+        <div class="d-flex justify-content-center position-relative">
+          <span class="menu mt-1">Menu</span>
+          <span class="end-0 fa fa-bars-staggered m-2 pointer position-absolute z-9999" data-target="nav"
+            @click="toggleNav()" style="color: rgba(255, 89, 123, 0.8);"></span>
+        </div>
       </div>
+      <!-- Logo  website -->
       <div class="border-bottom logo-menu pb-2 text-center w-100">
         <img src="https://via.placeholder.com/150" class="rounded-circle">
+      </div><!-- Search Bar  -->
+      <div class="align-items-center d-flex gap-1 position-relative r search"><input type="text"
+          placeholder="  البحث في الموقع" class="form-control rounded"><span class="fa fa-search position-absolute"
+          style="left: 5%;color: #8F625B;"></span>
       </div>
-      <div  id="link-nav" class="hoverable">
+      <!-- Links nav bar -->
+      <div id="link-nav" class="hoverable">
         <li class="fs-5 pointer">
-          <div class="align-items-center d-flex gap-2 justify-content-center">
-            <a class="text-decoration-none text-black">حلويات</a>
-            <span class="fa fa-2xs fa-chevron-down first-color "></span>
-          </div>
-          <div class="drowDownMenu p-3 position-absolute w-50 rounded" style="left:25%;background:#3b3959;">
+          <div class="align-items-center d-flex gap-2 justify-content-center"><a
+              class="text-decoration-none text-black">حلويات</a><span
+              class="fa fa-2xs fa-chevron-down first-color"></span></div>
+          <div class="drowDownMenu p-3 position-absolute w-50 rounded z-8888 bg-white-p" style="left:25%;background:;">
             <div class="container">
               <div class="row g-2">
-                <div class="bg-white col mx-1 rounded">
-                  <div class="bg-white img-container p-1 position-relative rounded mw-100"><img class="img-recipe w-100"
+                <div class="col mx-1 rounded">
+                  <div class="img-container p-1 position-relative rounded mw-100"><img class="img-recipe w-100"
                       src="https://placekitten.com/200/200" alt="">
                     <div class="bg-white bottom-0 end-0 h-100 overlay position-absolute start-0 top-0 w-100">
                       <div
                         class="align-items-center d-flex first-color flex-column h-100 justify-content-around recipe-info">
-                        <a href="#" class="first-color fs-2 name_recipe text-decoration-none">Lorem psiurc</a>
+                        <a href="#" class="first-color name_recipe text-decoration-none">Lorem psiurc</a>
                         <div class="author d-flex flex-column-reverse"><a href="#"
                             class="fs-6 name-author text-decoration-none" style="color:#90625c;">Mohamed elhabib</a><img
                             class="avatar mx-auto rounded-circle w-50" src="https://i.pravatar.cc/60"></div>
@@ -39,16 +48,15 @@
                       </div>
                     </div>
                   </div>
-                  <div class="border-top text-black-title text-center">صابلي العيد خفيف
-                  </div>
+                  <div class="border-top text-black-title text-center">صابلي العيد خفيف </div>
                 </div>
-                <div class="bg-white col mx-1 rounded">
-                  <div class="bg-white img-container p-1 position-relative rounded mw-100"><img class="img-recipe w-100"
+                <div class="col mx-1 rounded">
+                  <div class="img-container p-1 position-relative rounded mw-100"><img class="img-recipe w-100"
                       src="https://placekitten.com/200/200" alt="">
                     <div class="bg-white bottom-0 end-0 h-100 overlay position-absolute start-0 top-0 w-100">
                       <div
                         class="align-items-center d-flex first-color flex-column h-100 justify-content-around recipe-info">
-                        <a href="#" class="first-color fs-2 name_recipe text-decoration-none">Lorem psiurc</a>
+                        <a href="#" class="first-color name_recipe text-decoration-none">Lorem psiurc</a>
                         <div class="author d-flex flex-column-reverse"><a href="#"
                             class="fs-6 name-author text-decoration-none" style="color:#90625c;">Mohamed elhabib</a><img
                             class="avatar mx-auto rounded-circle w-50" src="https://i.pravatar.cc/60"></div>
@@ -59,16 +67,15 @@
                       </div>
                     </div>
                   </div>
-                  <div class="border-top text-black-title text-center">صابلي العيد خفيف
-                  </div>
+                  <div class="border-top text-black-title text-center">صابلي العيد خفيف </div>
                 </div>
-                <div class="bg-white col mx-1 rounded">
-                  <div class="bg-white img-container p-1 position-relative rounded mw-100"><img class="img-recipe w-100"
+                <div class="col mx-1 rounded">
+                  <div class="img-container p-1 position-relative rounded mw-100"><img class="img-recipe w-100"
                       src="https://placekitten.com/200/200" alt="">
                     <div class="bg-white bottom-0 end-0 h-100 overlay position-absolute start-0 top-0 w-100">
                       <div
                         class="align-items-center d-flex first-color flex-column h-100 justify-content-around recipe-info">
-                        <a href="#" class="first-color fs-2 name_recipe text-decoration-none">Lorem psiurc</a>
+                        <a href="#" class="first-color name_recipe text-decoration-none">Lorem psiurc</a>
                         <div class="author d-flex flex-column-reverse"><a href="#"
                             class="fs-6 name-author text-decoration-none" style="color:#90625c;">Mohamed elhabib</a><img
                             class="avatar mx-auto rounded-circle w-50" src="https://i.pravatar.cc/60"></div>
@@ -79,34 +86,31 @@
                       </div>
                     </div>
                   </div>
-                  <div class="border-top text-black-title text-center">صابلي العيد خفيف
-                  </div>
+                  <div class="border-top text-black-title text-center">صابلي العيد خفيف </div>
                 </div>
-                <div class="more col-12">
-                  <a class="#">
-                    <h1 class="">راية المزيد</h1>
-                    <span class="fa fa-dots"></span>
-                  </a>
-                </div>
+                <div class="more col-12"><a href="#" class="border btn btn-block btn-lg fs-5 rounded-5"
+                    style="color: #E47C8D;">راية المزيد</a></div>
               </div>
             </div>
           </div>
         </li>
       </div>
-      <div  id="link-nav" class="hoverable">
+      <div id="link-nav" class="hoverable">
         <li class="fs-5 pointer">
-          <div class="align-items-center d-flex gap-2 justify-content-center">
-            
-            <a class="text-decoration-none text-black">zeaezaeza</a>
-          </div>
-     
+          <div class="align-items-center d-flex gap-2 justify-content-center"><a
+              class="text-decoration-none text-black">zeaezaeza</a></div>
         </li>
       </div>
-
- 
+      <div id="link-nav" class="hoverable">
+        <li class="fs-5 pointer">
+          <div class="align-items-center d-flex gap-2 justify-content-center"><a
+              class="text-decoration-none text-black">معجنات</a><span
+              class="fa fa-2xs fa-chevron-down first-color"></span></div>
+        </li>
+      </div>
       <div
         class="social-media border-left border-right border-top bottom-0 contact d-flex gap-2 justify-content-center p-2 position-absolute rounded w-100"
-        style="background: #fbfbfb;">
+        style="background:#fbfbfb;">
         <li class="fa fa-hand-holding-heart"></li>
         <li class="fa fa-hand-holding-heart"></li>
         <li class="fa fa-hand-holding-heart"></li>
@@ -187,6 +191,8 @@ export default {
   gap: 1rem;
 }
 
+
+
 #navigation-bar .top-bar {
   z-index: 9998;
   position: relative;
@@ -225,7 +231,7 @@ export default {
 }
 
 .drowDownMenu .img-container:hover .overlay {
-  opacity: 0.75;
+  opacity: 0.85;
   transition: opacity 1s;
 }
 
@@ -246,11 +252,18 @@ nav.navbar {
   display: block;
   animation: fadeInMenu 1s;
   transition: all 1s;
-  
+
 }
+
 @keyframes fadeInMenu {
-  0% { opacity: 0;display: none; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+    display: none;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 /* small Screen */
@@ -261,7 +274,8 @@ nav.navbar {
     gap: 21px !important;
     width: 50% !important;
     height: 100% !important;
-    background: hsl(0, 0%, 97%) !important;
+    border-left: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    background: hsl(60deg 20% 99%) !important;
     flex-direction: column !important;
     align-items: center !important;
     position: fixed !important;
@@ -301,7 +315,7 @@ nav.navbar {
     height: 500px;
   }
 
-  
+
 
 
 
@@ -339,6 +353,10 @@ nav.navbar {
     gap: 1rem !important;
   }
 
+  #nav .search {
+    display: none !important;
+  }
+
 }
 
 /*       Large  screen  */
@@ -364,5 +382,10 @@ nav.navbar {
     display: flex !important;
     gap: 1rem !important;
   }
+
+  #nav .search {
+    display: none !important;
+  }
+
 }
 </style>

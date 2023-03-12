@@ -1,154 +1,612 @@
 <template>
-    <div class="wrapper" dir="rtl">
-        <section class="header d-grid gap-5">
-            <div class="bg-first-color pb-1 pt-1 top-bar">
-                <div class="container">
-                    <div class="align-items-center d-flex justify-content-around">
-                        <div class="search">
-                            <div class="align-items-center d-flex gap-2 search-form">
-                                <li class="fa fa-search" style="color: hsl(60deg 0% 100%);"></li>
-                                <input type="text" id="search" class="border-0 form-control form-control-sm"
-                                    style="border: none;" placeholder="البحث عن وصفة">
-                            </div>
-                        </div>
-                        <div class="contact d-flex fs-4 gap-1 h-100">
-                            <i class="fa fa-apple-whole fs-5 rounded-circle" style="color: #e5e7eb;"></i>
-                            <i class="fa fa-apple-whole fs-5 rounded-circle" style="color: #e5e7eb;"></i>
-                            <i class="fa fa-apple-whole fs-5 rounded-circle" style="color: #e5e7eb; "></i>
-                            <i class="fa fa-apple-whole fs-5 rounded-circle" style="color: #e5e7eb;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="logo text-center">
+	<div class="wrapper" dir="rtl">
+		<section class="header d-grid gap-5">
+			<div class="bg-first-color pb-1 pt-1 top-bar">
+				<div class="container">
+					<div class="align-items-center d-flex justify-content-around">
+						<div class="search">
+							<div class="align-items-center d-flex gap-2 search-form">
+								<li class="fa fa-search" style="color: hsl(60deg 0% 100%);"></li>
+								<input type="text" id="search" class="border-0 form-control form-control-sm"
+									style="border: none;" placeholder="البحث عن وصفة">
+							</div>
+						</div>
+						<div class="contact d-flex fs-4 gap-1 h-100">
+							<i class="fa fa-apple-whole fs-5 rounded-circle" style="color: #e5e7eb;"></i>
+							<i class="fa fa-apple-whole fs-5 rounded-circle" style="color: #e5e7eb;"></i>
+							<i class="fa fa-apple-whole fs-5 rounded-circle" style="color: #e5e7eb; "></i>
+							<i class="fa fa-apple-whole fs-5 rounded-circle" style="color: #e5e7eb;"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="logo text-center">
+				<div class="cover position-absolute top-0">
 
-                <div class="title" style="font-size: 5rem;">كوزينتي</div><span class="first-color fw-bold slogan"
-                    style="letter-spacing: 1px;">اشعل شغفك بالطعام معنا كل يوم</span>
+				</div>
+				<div class="title" style="font-size: 5rem;">كوزينتي</div><span class="first-color fw-bold slogan"
+					style="letter-spacing: 1px;">اشعل شغفك بالطعام معنا كل يوم</span>
+			</div>
+			<div class="nav-bar-home">
+				<nav-bar></nav-bar>
+			</div>
+			<div class="random-recipes" dir="rtl">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-4">
+							<div class="position-relative recipe">
+								<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
+									style="
+																										background: linear-gradient(1deg, black,transparent, transparent);
+																									">
+									<div class="name-recipe">Mohamedl habbib</div>
+									<div class="fs-5 fw-semibold type" style="
+																										color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">حلويات</div>
 
-            </div>
-            <div class="nav-bar-home">
-                <nav-bar></nav-bar>
-            </div>
-        </section>
-    </div>
+								</div><img class="rounded w-100"
+									src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
+									alt="">
+							</div>
+						</div>
+						<div class="col-8">
+							<div class="row gy-3">
+								<div class="col-3">
+									<div class="position-relative recipe">
+										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
+											style="
+																										background: linear-gradient(1deg, black,transparent, transparent);
+																									">
+											<div class="name-recipe">Mohamedl habbib</div>
+											<div class="fs-5 fw-semibold type" style="
+																										color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
+
+										</div><img class="rounded w-100"
+											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
+											alt="">
+									</div>
+								</div>
+								<div class="col-3">
+									<div class="position-relative recipe">
+										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
+											style="
+																										background: linear-gradient(1deg, black,transparent, transparent);
+																									">
+											<div class="name-recipe">Mohamedl habbib</div>
+											<div class="fs-5 fw-semibold type" style="
+																										color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">عجائن</div>
+
+										</div><img class="rounded w-100"
+											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
+											alt="">
+									</div>
+								</div>
+								<div class="col-3">
+									<div class="position-relative recipe">
+										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
+											style="
+																										background: linear-gradient(1deg, black,transparent, transparent);
+																									">
+											<div class="name-recipe">Mohamedl habbib</div>
+											<div class="fs-5 fw-semibold type" style="
+																										color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
+
+										</div><img class="rounded w-100"
+											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
+											alt="">
+									</div>
+								</div>
+								<div class="col-3">
+									<div class="position-relative recipe">
+										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
+											style="
+																										background: linear-gradient(1deg, black,transparent, transparent);
+																									">
+											<div class="name-recipe">Mohamedl habbib</div>
+											<div class="fs-5 fw-semibold type" style="
+																										color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
+
+										</div><img class="rounded w-100"
+											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
+											alt="">
+									</div>
+								</div>
+								<div class="col-3">
+									<div class="position-relative recipe">
+										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
+											style="
+																										background: linear-gradient(1deg, black,transparent, transparent);
+																									">
+											<div class="name-recipe">Mohamedl habbib</div>
+											<div class="fs-5 fw-semibold type" style="
+																										color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
+
+										</div><img class="rounded w-100"
+											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
+											alt="">
+									</div>
+								</div>
+								<div class="col-3">
+									<div class="position-relative recipe">
+										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
+											style="
+																										background: linear-gradient(1deg, black,transparent, transparent);
+																									">
+											<div class="name-recipe">Mohamedl habbib</div>
+											<div class="fs-5 fw-semibold type" style="
+																										color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
+
+										</div><img class="rounded w-100"
+											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
+											alt="">
+									</div>
+								</div>
+								<div class="col-3">
+									<div class="position-relative recipe">
+										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
+											style="
+																										background: linear-gradient(1deg, black,transparent, transparent);
+																									">
+											<div class="name-recipe">Mohamedl habbib</div>
+											<div class="fs-5 fw-semibold type" style="
+																										color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
+
+										</div><img class="rounded w-100"
+											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
+											alt="">
+									</div>
+								</div>
+								<div class="col-3">
+									<div class="position-relative recipe">
+										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
+											style="
+																										background: linear-gradient(1deg, black,transparent, transparent);
+																									">
+											<div class="name-recipe">Mohamedl habbib</div>
+											<div class="fs-5 fw-semibold type" style="
+																										color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
+
+										</div><img class="rounded w-100"
+											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
+											alt="">
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="Trending mt-xl-5">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-3 right-bar p-d-none-sc">
+						<div class="trend">
+							<div
+								class="align-items-center border d-flex flex-row-reverse gap-1 header justify-content-between pe-3">
+								<span class="fa fa-arrow-trend-up fs-4 h-100 p-2 third-color"></span><span
+									class="fs-3 text-black-title">وصفات هذا الشهر</span>
+							</div>
+							<div class="border-end border-left d-grid px-3 recipes" style="direction:rtl;">
+								<div class="border d-flex mt-2 p-1 recipe">
+									<img src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg"
+										alt="" class="" style="height: 80px;">
+									<div class="d-flex flex-column gap-1 mx-2">
+										<div class="fs-3 name-recipe text-black-title">lorem lixoe;kxizae mvv lz</div>
+										<div class="text-black-50 type">Pasta</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="populer"></div>
+					</div>
+					<div class="col-12 col-md-8 left-bar">
+						<div class="fs-2 header position-relative text-black-title">رمضانيات</div>
+
+						<div class="row justify-content-center">
+							<div class="col-12 col-md-6" style="">
+								<div class="d-grid position-relative recipe" style="">
+									<div class="img-container position-relative">
+										<div
+											class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
+											<span class="level">
+												<span class="mx-2">Beginner</span>
+												<span class="fa fa-signal-perfect"></span>
+											</span>
+											<span class="time">
+												<span class="mx-2">30 Min</span>
+												<span class="fa fa-clock-four"></span>
+											</span>
+										</div>
+										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
+											style="/* top:20%; */">
+
+
+
+										</div><img
+											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
+											alt="" class="w-100">
+									</div>
+									<div class="fs-3 title">Lorem ozlooxxx</div>
+									<div class="d-grid gap-1"><span
+											class="author fst-italic fw-bolder text-black-50">Author</span><span
+											class="data second-color fs-6"><span class="">12/12/2023</span><span
+												class="fa fa-calendar-alt"></span></span></div>
+								</div>
+							</div>
+						</div>
+						<div class="gy-4 justify-content-center row">
+							<div class="col-12 col-md-3" style="">
+								<div class="d-grid position-relative recipe" style="">
+									<div class="img-container position-relative">
+										<div
+											class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
+											<span class="level">
+												<span class="mx-2">Beginner</span>
+												<span class="fa fa-signal-perfect"></span>
+											</span>
+											<span class="time">
+												<span class="mx-2">30 Min</span>
+												<span class="fa fa-clock-four"></span>
+											</span>
+										</div>
+										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
+											style="/* top:20%; */">
+
+
+
+										</div><img
+											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
+											alt="" class="w-100">
+									</div>
+									<div class="fs-3 title">Lorem ozlooxxx</div>
+									<div class="d-grid gap-1"><span
+											class="author fst-italic fw-bolder text-black-50">Author</span><span
+											class="data second-color fs-6"><span class="">12/12/2023</span><span
+												class="fa fa-calendar-alt"></span></span></div>
+								</div>
+							</div>
+							<div class="col-12 col-md-3" style="">
+								<div class="d-grid position-relative recipe" style="">
+									<div class="img-container position-relative">
+										<div
+											class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
+											<span class="level">
+												<span class="mx-2">Beginner</span>
+												<span class="fa fa-signal-perfect"></span>
+											</span>
+											<span class="time">
+												<span class="mx-2">30 Min</span>
+												<span class="fa fa-clock-four"></span>
+											</span>
+										</div>
+										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
+											style="/* top:20%; */">
+
+
+
+										</div><img
+											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
+											alt="" class="w-100">
+									</div>
+									<div class="fs-3 title">Lorem ozlooxxx</div>
+									<div class="d-grid gap-1"><span
+											class="author fst-italic fw-bolder text-black-50">Author</span><span
+											class="data second-color fs-6"><span class="">12/12/2023</span><span
+												class="fa fa-calendar-alt"></span></span></div>
+								</div>
+							</div>
+							<div class="col-12 col-md-3" style="">
+								<div class="d-grid position-relative recipe" style="">
+									<div class="img-container position-relative">
+										<div
+											class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
+											<span class="level">
+												<span class="mx-2">Beginner</span>
+												<span class="fa fa-signal-perfect"></span>
+											</span>
+											<span class="time">
+												<span class="mx-2">30 Min</span>
+												<span class="fa fa-clock-four"></span>
+											</span>
+										</div>
+										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
+											style="/* top:20%; */">
+
+
+
+										</div><img
+											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
+											alt="" class="w-100">
+									</div>
+									<div class="fs-3 title">Lorem ozlooxxx</div>
+									<div class="d-grid gap-1"><span
+											class="author fst-italic fw-bolder text-black-50">Author</span><span
+											class="data second-color fs-6"><span class="">12/12/2023</span><span
+												class="fa fa-calendar-alt"></span></span></div>
+								</div>
+							</div>
+							<div class="col-12 col-md-3" style="">
+								<div class="d-grid position-relative recipe" style="">
+									<div class="img-container position-relative">
+										<div
+											class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
+											<span class="level">
+												<span class="mx-2">Beginner</span>
+												<span class="fa fa-signal-perfect"></span>
+											</span>
+											<span class="time">
+												<span class="mx-2">30 Min</span>
+												<span class="fa fa-clock-four"></span>
+											</span>
+										</div>
+										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
+											style="/* top:20%; */">
+
+
+
+										</div><img
+											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
+											alt="" class="w-100">
+									</div>
+									<div class="fs-3 title">Lorem ozlooxxx</div>
+									<div class="d-grid gap-1"><span
+											class="author fst-italic fw-bolder text-black-50">Author</span><span
+											class="data second-color fs-6"><span class="">12/12/2023</span><span
+												class="fa fa-calendar-alt"></span></span></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="categories d-grid gap-5">
+			<div class="align-items-center d-flex flex-column heading justify-content-center position-relative text-center">
+				<img src="http://127.0.0.1:8000/images/shape-v2.png" class="" style="width:120px;"><span
+					class="fs-1 mt-2 position-absolute top-50 w-100">Heading</span>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="categorie col-2 overflow-hidden p-0">
+						<div class="img-container"><img
+								src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+								alt="" class="w-100">
+							<div class="title"></div>
+						</div>
+					</div>
+					<div class="categorie col-2 overflow-hidden p-0">
+						<div class="img-container"><img
+								src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFzdGF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+								alt="" class="w-100">
+							<div class="title"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
 </template>
 
 <script>
 import Typewriter from "typewriter-effect/dist/core";
 export default {
-    inject: ["w_path"],
-    mounted() {
-        this.availableTypes();
-        this.autoType();
-        window.addEventListener("scroll", this.wheneScroll);
-    },
-    unmounted() {
-        window.removeEventListener("scroll", this.wheneScroll);
-    },
-    data() {
-        return {
-            types_recipe: "",
-            effectImg: false,
-            imgBestRecipe: false,
-            show: "",
-            activeComponent: "",
-            showSubmenu: "",
-        };
-    },
-    methods: {
-        backTop() {
-            document.documentElement.scrollTop = 0;
-        },
-        availableTypes() {
-            axios({ method: "get", url: "types_recipe" })
-                .then((response) => {
-                    if (response.data) {
-                        this.types_recipe = response.data;
-                    }
-                })
-                .catch((error) => { });
-        },
-        autoType() {
-            new Typewriter("#name-regione", {
-                strings: ["ماعرفتيش واش طيبي <br> !!!  ", "عدنا الحل"],
-                autoStart: true,
-                loop: true,
-            });
-        },
-        EffectCategorie() {
-            this.effectImg = !this.effectImg;
-            if (this.effectImg) {
-                $("#" + event.target.id)
-                    .find("img")
-                    .css({ transform: "scale(1.1)" });
-                $("#" + event.target.id)
-                    .find(".squar")
-                    .css({ height: "100%" });
-            } else {
-                $("#" + event.target.id)
-                    .find(".squar")
-                    .css({ height: "10%" });
-                $("#" + event.target.id)
-                    .find("img")
-                    .css({ transform: "scale(1)" });
-            }
-        },
-        EffectBestRecipe() {
-            this.imgBestRecipe = !this.imgBestRecipe;
-            if (this.imgBestRecipe) {
-                $(event.target).find(".opc").css("opacity", "0.7");
-                $(event.target).find(".icon").css("opacity", "1");
-            } else {
-                $(event.target).find(".opc").css("opacity", "0");
-                $(event.target).find(".icon").css("opacity", "0");
-            }
-        },
-        scrollSlider(action, name_slider) {
-            var show = document.getElementById(name_slider);
-            let right = parseInt(show.style.right);
-            let widthSlider = show.offsetWidth;
-            if (action === "right") {
-                if (right < widthSlider - 300) {
-                    show.style.right = right + 300 + "px";
-                } else {
-                    show.style.right = "0px";
-                }
-            } else {
-                if (right > 0) {
-                    show.style.right = right - 300 + "px";
-                }
-            }
-        },
-        wheneScroll() {
-            if ($(window).scrollTop() > 200) {
-                $("#btn-back-to-top").fadeIn();
-                $("#home-navbar").fadeIn("slow");
-            } else {
-                $("#btn-back-to-top").fadeOut();
-                $("#home-navbar").fadeOut("fast");
-            }
-        },
-        hoverLink(action) {
-            if (action == "leave") {
-                $("#" + event.target.getAttribute("data-menu")).fadeOut();
-                $(".sub-menu").fadeOut();
-            } else {
-                $(".index-nav li a").removeClass("link-nav");
-                $(event.target).addClass("link-nav");
-                if ($(event.target).hasClass(".link-nav") == false) {
-                    $(".sub-menu").fadeOut();
-                }
-                $("#" + event.target.getAttribute("data-menu")).fadeIn();
-            }
-        },
-        toggleNav() {
-            $(".nav").fadeToggle();
-        },
-        testEmit() {
-            alert("emit send");
-        },
-    },
+	inject: ["w_path"],
+	mounted() {
+		this.availableTypes();
+		this.autoType();
+		window.addEventListener("scroll", this.wheneScroll);
+	},
+	unmounted() {
+		window.removeEventListener("scroll", this.wheneScroll);
+	},
+	data() {
+		return {
+			types_recipe: "",
+			effectImg: false,
+			imgBestRecipe: false,
+			show: "",
+			activeComponent: "",
+			showSubmenu: "",
+		};
+	},
+	methods: {
+		backTop() {
+			document.documentElement.scrollTop = 0;
+		},
+		availableTypes() {
+			axios({ method: "get", url: "types_recipe" })
+				.then((response) => {
+					if (response.data) {
+						this.types_recipe = response.data;
+					}
+				})
+				.catch((error) => { });
+		},
+		autoType() {
+			new Typewriter("#name-regione", {
+				strings: ["ماعرفتيش واش طيبي <br> !!!  ", "عدنا الحل"],
+				autoStart: true,
+				loop: true,
+			});
+		},
+		EffectCategorie() {
+			this.effectImg = !this.effectImg;
+			if (this.effectImg) {
+				$("#" + event.target.id)
+					.find("img")
+					.css({ transform: "scale(1.1)" });
+				$("#" + event.target.id)
+					.find(".squar")
+					.css({ height: "100%" });
+			} else {
+				$("#" + event.target.id)
+					.find(".squar")
+					.css({ height: "10%" });
+				$("#" + event.target.id)
+					.find("img")
+					.css({ transform: "scale(1)" });
+			}
+		},
+		EffectBestRecipe() {
+			this.imgBestRecipe = !this.imgBestRecipe;
+			if (this.imgBestRecipe) {
+				$(event.target).find(".opc").css("opacity", "0.7");
+				$(event.target).find(".icon").css("opacity", "1");
+			} else {
+				$(event.target).find(".opc").css("opacity", "0");
+				$(event.target).find(".icon").css("opacity", "0");
+			}
+		},
+		scrollSlider(action, name_slider) {
+			var show = document.getElementById(name_slider);
+			let right = parseInt(show.style.right);
+			let widthSlider = show.offsetWidth;
+			if (action === "right") {
+				if (right < widthSlider - 300) {
+					show.style.right = right + 300 + "px";
+				} else {
+					show.style.right = "0px";
+				}
+			} else {
+				if (right > 0) {
+					show.style.right = right - 300 + "px";
+				}
+			}
+		},
+		wheneScroll() {
+			if ($(window).scrollTop() > 200) {
+				$("#btn-back-to-top").fadeIn();
+				$("#home-navbar").fadeIn("slow");
+			} else {
+				$("#btn-back-to-top").fadeOut();
+				$("#home-navbar").fadeOut("fast");
+			}
+		},
+		hoverLink(action) {
+			if (action == "leave") {
+				$("#" + event.target.getAttribute("data-menu")).fadeOut();
+				$(".sub-menu").fadeOut();
+			} else {
+				$(".index-nav li a").removeClass("link-nav");
+				$(event.target).addClass("link-nav");
+				if ($(event.target).hasClass(".link-nav") == false) {
+					$(".sub-menu").fadeOut();
+				}
+				$("#" + event.target.getAttribute("data-menu")).fadeIn();
+			}
+		},
+		toggleNav() {
+			$(".nav").fadeToggle();
+		},
+		testEmit() {
+			alert("emit send");
+		},
+	},
 };
 </script>
 
-<style></style>
+
+
+<style>
+.wrapper {
+	max-width: 100%;
+	height: 2000px;
+}
+
+.logo {
+	background: url('~/images/image-removebg.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 46%;
+}
+
+.random-recipes .recipe .ovelay {
+	/* opacity: 0 !important;
+	transition: all 1s; */
+}
+
+.random-recipes .recipe:hover .overlay {
+
+	opacity: 1 !important;
+	transition: all 1s;
+
+}
+
+
+.left-bar .header:after {
+	content: '';
+	background: #bdbdbd;
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	top: 50%;
+	margin: 0 30px;
+	text-shadow: 1px 1px red;
+}
+
+.left-bar .header:before {
+	content: '';
+	height: 44px;
+	width: 70px;
+	background: #c9c9c900;
+	position: absolute;
+	/* top: 39%; */
+	z-index: 1;
+	opacity: 0.2;
+	border-radius: 50%;
+	right: 3%;
+	z-index: 2;
+	border-left: 5px solid red;
+}
+
+.Trending .img-container .overlay {
+	opacity: 0;
+}
+
+.Trending .img-container .info {
+	opacity: 0;
+}
+
+.Trending .img-container:hover .overlay {
+	opacity: 0.8;
+	transition: all 1s;
+}
+
+.Trending .img-container:hover .info {
+	opacity: 1;
+	transition: all 1s;
+}
+
+.categories .heading span::after {
+	content: '';
+	width: 45%;
+	height: 1px;
+	position: absolute;
+	background: #c9c9c9;
+	top: 50%;
+	left: 0;
+	margin: 0 10px;
+}
+
+.categories .heading span::before {
+	content: '';
+	width: 45%;
+	height: 1px;
+	position: absolute;
+	background: #c9c9c9;
+	top: 50%;
+	right: 0;
+	margin: 0 10px;
+}
+
+.categories .img-container img{
+	transform: scale(1);
+	transition: all 1s;
+}
+.categories .img-container:hover img {
+	transform: scale(1.1);
+	transition: all 1s;
+}
+</style>

@@ -504,7 +504,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .img-account-profile {
   height: 10rem;
 }

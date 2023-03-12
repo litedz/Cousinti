@@ -4,16 +4,19 @@
     color: #EF6F82 !important;
 }
 .second-color{
-    color: #FFFFE8 !important;
+    color: #8F625B !important;
 }
 .third-color{
     color:#CDE990  !important;
 }
+.bg-white-p{
+    background: #F6F6F4 !important;
+}
 .bg-first-color{
-    background: #fd6d8c !important;
+    background: #EF6F82 !important;
 }
 .bg-second-color{
-    background: #FFFFE8 !important;
+    background: #8F625B !important;
 }
 .bg-third-color{
     background:#CDE990  !important;
@@ -27,6 +30,9 @@
 ul {
     list-style: none;
     padding: 0;
+}
+li{
+    list-style: none !important;
 }
 
 a {
