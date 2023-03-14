@@ -37,11 +37,11 @@
 							<div class="position-relative recipe">
 								<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
 									style="
-																																																					background: linear-gradient(1deg, black,transparent, transparent);
-																																																				">
+																																																									background: linear-gradient(1deg, black,transparent, transparent);
+																																																								">
 									<div class="name-recipe">Mohamedl habbib</div>
 									<div class="fs-5 fw-semibold type" style="
-																																																					color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">حلويات</div>
+																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">حلويات</div>
 
 								</div><img class="rounded w-100"
 									src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
@@ -54,11 +54,11 @@
 									<div class="position-relative recipe">
 										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
 											style="
-																																																					background: linear-gradient(1deg, black,transparent, transparent);
-																																																				">
+																																																									background: linear-gradient(1deg, black,transparent, transparent);
+																																																								">
 											<div class="name-recipe">Mohamedl habbib</div>
 											<div class="fs-5 fw-semibold type" style="
-																																																					color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
+																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
 
 										</div><img class="rounded w-100"
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
@@ -69,11 +69,11 @@
 									<div class="position-relative recipe">
 										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
 											style="
-																																																					background: linear-gradient(1deg, black,transparent, transparent);
-																																																				">
+																																																									background: linear-gradient(1deg, black,transparent, transparent);
+																																																								">
 											<div class="name-recipe">Mohamedl habbib</div>
 											<div class="fs-5 fw-semibold type" style="
-																																																					color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">عجائن</div>
+																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">عجائن</div>
 
 										</div><img class="rounded w-100"
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
@@ -84,11 +84,11 @@
 									<div class="position-relative recipe">
 										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
 											style="
-																																																					background: linear-gradient(1deg, black,transparent, transparent);
-																																																				">
+																																																									background: linear-gradient(1deg, black,transparent, transparent);
+																																																								">
 											<div class="name-recipe">Mohamedl habbib</div>
 											<div class="fs-5 fw-semibold type" style="
-																																																					color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
+																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
 
 										</div><img class="rounded w-100"
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
@@ -99,11 +99,11 @@
 									<div class="position-relative recipe">
 										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
 											style="
-																																																					background: linear-gradient(1deg, black,transparent, transparent);
-																																																				">
+																																																									background: linear-gradient(1deg, black,transparent, transparent);
+																																																								">
 											<div class="name-recipe">Mohamedl habbib</div>
 											<div class="fs-5 fw-semibold type" style="
-																																																					color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
+																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
 
 										</div><img class="rounded w-100"
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
@@ -114,11 +114,11 @@
 									<div class="position-relative recipe">
 										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
 											style="
-																																																					background: linear-gradient(1deg, black,transparent, transparent);
-																																																				">
+																																																									background: linear-gradient(1deg, black,transparent, transparent);
+																																																								">
 											<div class="name-recipe">Mohamedl habbib</div>
 											<div class="fs-5 fw-semibold type" style="
-																																																					color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
+																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
 
 										</div><img class="rounded w-100"
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
@@ -129,11 +129,11 @@
 									<div class="position-relative recipe">
 										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
 											style="
-																																																					background: linear-gradient(1deg, black,transparent, transparent);
-																																																				">
+																																																									background: linear-gradient(1deg, black,transparent, transparent);
+																																																								">
 											<div class="name-recipe">Mohamedl habbib</div>
 											<div class="fs-5 fw-semibold type" style="
-																																																					color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
+																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
 
 										</div><img class="rounded w-100"
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
@@ -144,11 +144,11 @@
 									<div class="position-relative recipe">
 										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
 											style="
-																																																					background: linear-gradient(1deg, black,transparent, transparent);
-																																																				">
+																																																									background: linear-gradient(1deg, black,transparent, transparent);
+																																																								">
 											<div class="name-recipe">Mohamedl habbib</div>
 											<div class="fs-5 fw-semibold type" style="
-																																																					color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
+																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
 
 										</div><img class="rounded w-100"
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
@@ -159,11 +159,11 @@
 									<div class="position-relative recipe">
 										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
 											style="
-																																																					background: linear-gradient(1deg, black,transparent, transparent);
-																																																				">
+																																																									background: linear-gradient(1deg, black,transparent, transparent);
+																																																								">
 											<div class="name-recipe">Mohamedl habbib</div>
 											<div class="fs-5 fw-semibold type" style="
-																																																					color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
+																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
 
 										</div><img class="rounded w-100"
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
@@ -431,6 +431,76 @@
 				</div>
 			</div>
 		</section>
+		<section class="traditional-recipes">
+			<div class="heading">
+				<div class="astrodivider"><div class="astrodividermask"></div><span><i>&#10038;</i></span></div>
+
+			</div>
+
+			<div class="container">
+				<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+							aria-current="true" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+							aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+							aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="https://picsum.photos/id/59/1000" class="d-block w-100" alt="">
+							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
+								<h5 class="fs-1">القرود الغربي</h5>
+								<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+									العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+									الحروف التى يولدها التطبيق.
+									إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما
+									تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على
+									وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
+									first slide.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="https://picsum.photos/id/56/1000" class="d-block w-100" alt="">
+							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
+								<h5 class="fs-1">Second slide label</h5>
+								<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+									العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+									الحروف التى يولدها التطبيق.
+									إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما
+									تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على
+									وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
+									second slide.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="https://picsum.photos/id/55/1000" class="d-block w-100" alt="">
+							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
+								<h5 class="fs-1">Third slide label</h5>
+								<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+									العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+									الحروف التى يولدها التطبيق.
+									إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما
+									تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على
+									وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
+									third slide.</p>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+						data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+						data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+		</section>
 	</div>
 </template>
 
@@ -664,12 +734,69 @@ export default {
 	background-position: center;
 }
 
-.random-recipe .row .cover{
+.random-recipe .row .cover {
 
-	background: url('~/images/test2.png');
+	background: url('~/images/bg-random-recipe.png');
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: -45%;
+	background-position: -113% 100%;
 
 }
-</style>
+
+.random-recipe .carousel-indicators {
+	width: 20px !important;
+	height: 20px !important;
+	border-radius: 50% !important; 
+}
+
+.traditional-recipes {}
+
+
+.traditional-recipes .astrodivider {
+	margin: 64px auto;
+	width: 400px;
+	max-width: 100%;
+	position: relative;
+}
+
+.traditional-recipes .astrodividermask {
+	overflow: hidden;
+	height: 20px;
+}
+
+.traditional-recipes .astrodividermask:after {
+	content: '';
+	display: block;
+	margin: -25px auto 0;
+	width: 100%;
+	height: 25px;
+	border-radius: 125px / 12px;
+	box-shadow: 0 0 8px #ef6f82;
+}
+
+.traditional-recipes .astrodivider span {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	bottom: 100%;
+	margin-bottom: -25px;
+	left: 50%;
+	margin-left: -25px;
+	border-radius: 100%;
+	box-shadow: 0 2px 4px #ef6f82;
+	background: #fff;
+}
+
+.traditional-recipes .astrodivider i {
+	position: absolute;
+	top: 4px;
+	bottom: 4px;
+	left: 4px;
+	right: 4px;
+	border-radius: 100%;
+	border: 1px dashed #b9727d;
+	text-align: center;
+	line-height: 40px;
+	font-style: normal;
+	color: #ef6f82;
+}</style>

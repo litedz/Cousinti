@@ -15,4 +15,5 @@
 
 <index auth_status="{{ Auth::check()}}"></index>
 
+
 @endsection
