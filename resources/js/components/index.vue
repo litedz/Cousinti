@@ -22,7 +22,6 @@
 			</div>
 			<div class="logo text-center">
 				<div class="cover position-absolute top-0">
-
 				</div>
 				<div class="title" style="font-size: 5rem;">كوزينتي</div><span class="first-color fw-bold slogan"
 					style="letter-spacing: 1px;">اشعل شغفك بالطعام معنا كل يوم</span>
@@ -30,157 +29,62 @@
 			<div class="nav-bar-home">
 				<nav-bar></nav-bar>
 			</div>
-			<div class="random-recipes" dir="rtl">
+			<div class="Top-recipes" dir="rtl">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-4">
+						<div class="col-4 p-0">
 							<div class="position-relative recipe">
 								<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
-									style="
-																																																									background: linear-gradient(1deg, black,transparent, transparent);
-																																																								">
+									style="background: linear-gradient(1deg, black,transparent, transparent);">
 									<div class="name-recipe">Mohamedl habbib</div>
-									<div class="fs-5 fw-semibold type" style="
-																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">حلويات</div>
+									<div class="btn btn-danger bg-gradient fs-6 fw-bolder px-3 text-white type"
+										style="letter-spacing: 1px;">
+										عجائن </div>
 
 								</div><img class="rounded w-100"
 									src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
 									alt="">
 							</div>
 						</div>
-						<div class="col-8">
-							<div class="row gy-3">
-								<div class="col-3">
-									<div class="position-relative recipe">
-										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
-											style="
-																																																									background: linear-gradient(1deg, black,transparent, transparent);
-																																																								">
-											<div class="name-recipe">Mohamedl habbib</div>
-											<div class="fs-5 fw-semibold type" style="
-																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
 
-										</div><img class="rounded w-100"
-											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="">
-									</div>
+						<div class="col-4 p-0">
+							<div class="position-relative recipe">
+								<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
+									style="background: linear-gradient(1deg, black,transparent, transparent);">
+									<div class="name-recipe">Mohamedl habbib</div>
+									<div class="btn btn-danger bg-gradient fs-6 fw-bolder px-3 text-white type"
+										style="letter-spacing: 1px;">
+										عجائن </div>
 								</div>
-								<div class="col-3">
-									<div class="position-relative recipe">
-										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
-											style="
-																																																									background: linear-gradient(1deg, black,transparent, transparent);
-																																																								">
-											<div class="name-recipe">Mohamedl habbib</div>
-											<div class="fs-5 fw-semibold type" style="
-																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">عجائن</div>
-
-										</div><img class="rounded w-100"
-											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="">
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="position-relative recipe">
-										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
-											style="
-																																																									background: linear-gradient(1deg, black,transparent, transparent);
-																																																								">
-											<div class="name-recipe">Mohamedl habbib</div>
-											<div class="fs-5 fw-semibold type" style="
-																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
-
-										</div><img class="rounded w-100"
-											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="">
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="position-relative recipe">
-										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
-											style="
-																																																									background: linear-gradient(1deg, black,transparent, transparent);
-																																																								">
-											<div class="name-recipe">Mohamedl habbib</div>
-											<div class="fs-5 fw-semibold type" style="
-																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
-
-										</div><img class="rounded w-100"
-											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="">
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="position-relative recipe">
-										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
-											style="
-																																																									background: linear-gradient(1deg, black,transparent, transparent);
-																																																								">
-											<div class="name-recipe">Mohamedl habbib</div>
-											<div class="fs-5 fw-semibold type" style="
-																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
-
-										</div><img class="rounded w-100"
-											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="">
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="position-relative recipe">
-										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
-											style="
-																																																									background: linear-gradient(1deg, black,transparent, transparent);
-																																																								">
-											<div class="name-recipe">Mohamedl habbib</div>
-											<div class="fs-5 fw-semibold type" style="
-																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
-
-										</div><img class="rounded w-100"
-											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="">
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="position-relative recipe">
-										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
-											style="
-																																																									background: linear-gradient(1deg, black,transparent, transparent);
-																																																								">
-											<div class="name-recipe">Mohamedl habbib</div>
-											<div class="fs-5 fw-semibold type" style="
-																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
-
-										</div><img class="rounded w-100"
-											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="">
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="position-relative recipe">
-										<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
-											style="
-																																																									background: linear-gradient(1deg, black,transparent, transparent);
-																																																								">
-											<div class="name-recipe">Mohamedl habbib</div>
-											<div class="fs-5 fw-semibold type" style="
-																																																									color: #8F625B;text-shadow: 0px 0px 3px #8f625b;">Swear</div>
-
-										</div><img class="rounded w-100"
-											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="">
-									</div>
-								</div>
-
+								<img class="rounded w-100"
+									src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
+									alt="">
 							</div>
 						</div>
+						<div class="col-4 p-0">
+							<div class="position-relative recipe">
+								<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
+									style="background: linear-gradient(1deg, black,transparent, transparent);">
+									<div class="name-recipe">Mohamedl habbib</div>
+									<div class="btn btn-danger bg-gradient fs-6 fw-bolder px-3 text-white type"
+										style="letter-spacing: 1px;">
+										عجائن </div>
+								</div>
+								<img class="rounded w-100"
+									src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
+									alt="">
+							</div>
+						</div>
+
+
 					</div>
 				</div>
 			</div>
 		</section>
 		<section class="Trending mt-xl-5">
-			<div class="container-fluid">
+			<div class="container">
 				<div class="row">
-					<div class="col-3 right-bar p-d-none-sc">
+					<div class="col-4 p-d-none-sc right-bar">
 						<div class="trend">
 							<div
 								class="align-items-center border d-flex flex-row-reverse gap-1 header justify-content-between pe-3">
@@ -188,9 +92,9 @@
 									class="fs-3 text-black-title">وصفات هذا الشهر</span>
 							</div>
 							<div class="border-end border-left d-grid px-3 recipes" style="direction:rtl;">
-								<div class="border d-flex mt-2 p-1 recipe">
-									<img src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg"
-										alt="" class="" style="height: 80px;">
+								<div class="border d-flex mt-2 p-1 recipe"><img
+										src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg"
+										alt="" class="" style="height:80px;">
 									<div class="d-flex flex-column gap-1 mx-2">
 										<div class="fs-3 name-recipe text-black-title">lorem lixoe;kxizae mvv lz</div>
 										<div class="text-black-50 type">Pasta</div>
@@ -200,32 +104,22 @@
 						</div>
 						<div class="populer"></div>
 					</div>
-					<div class="col-12 col-md-8 left-bar">
+					<div class="col-12 col-md-8 d-grid gap-4 left-bar">
 						<div class="fs-2 header position-relative text-black-title">رمضانيات</div>
-
 						<div class="row justify-content-center">
-							<div class="col-12 col-md-6" style="">
+							<div class="col-12 col-md-12" style="">
 								<div class="d-grid position-relative recipe" style="">
 									<div class="img-container position-relative">
 										<div
 											class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
-											<span class="level">
-												<span class="mx-2">Beginner</span>
-												<span class="fa fa-signal-perfect"></span>
-											</span>
-											<span class="time">
-												<span class="mx-2">30 Min</span>
-												<span class="fa fa-clock-four"></span>
-											</span>
+											<span class="level"><span class="mx-2">Beginner</span><span
+													class="fa fa-signal-perfect"></span></span><span class="time"><span
+													class="mx-2">30 Min</span><span class="fa fa-clock-four"></span></span>
 										</div>
 										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
-											style="/* top:20%; */">
-
-
-
-										</div><img
+											style=""></div><img
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="" class="w-100">
+											alt="" class="w-100" style="height:500px;">
 									</div>
 									<div class="fs-3 title">Lorem ozlooxxx</div>
 									<div class="d-grid gap-1"><span
@@ -236,26 +130,17 @@
 							</div>
 						</div>
 						<div class="gy-4 justify-content-center row">
-							<div class="col-12 col-md-3" style="">
+							<div class="col-6 col-md-3" style="">
 								<div class="d-grid position-relative recipe" style="">
 									<div class="img-container position-relative">
 										<div
 											class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
-											<span class="level">
-												<span class="mx-2">Beginner</span>
-												<span class="fa fa-signal-perfect"></span>
-											</span>
-											<span class="time">
-												<span class="mx-2">30 Min</span>
-												<span class="fa fa-clock-four"></span>
-											</span>
+											<span class="level"><span class="mx-2">Beginner</span><span
+													class="fa fa-signal-perfect"></span></span><span class="time"><span
+													class="mx-2">30 Min</span><span class="fa fa-clock-four"></span></span>
 										</div>
 										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
-											style="/* top:20%; */">
-
-
-
-										</div><img
+											style=""></div><img
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
 											alt="" class="w-100">
 									</div>
@@ -266,26 +151,17 @@
 												class="fa fa-calendar-alt"></span></span></div>
 								</div>
 							</div>
-							<div class="col-12 col-md-3" style="">
+							<div class="col-6 col-md-3" style="">
 								<div class="d-grid position-relative recipe" style="">
 									<div class="img-container position-relative">
 										<div
 											class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
-											<span class="level">
-												<span class="mx-2">Beginner</span>
-												<span class="fa fa-signal-perfect"></span>
-											</span>
-											<span class="time">
-												<span class="mx-2">30 Min</span>
-												<span class="fa fa-clock-four"></span>
-											</span>
+											<span class="level"><span class="mx-2">Beginner</span><span
+													class="fa fa-signal-perfect"></span></span><span class="time"><span
+													class="mx-2">30 Min</span><span class="fa fa-clock-four"></span></span>
 										</div>
 										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
-											style="/* top:20%; */">
-
-
-
-										</div><img
+											style=""></div><img
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
 											alt="" class="w-100">
 									</div>
@@ -296,26 +172,17 @@
 												class="fa fa-calendar-alt"></span></span></div>
 								</div>
 							</div>
-							<div class="col-12 col-md-3" style="">
+							<div class="col-6 col-md-3" style="">
 								<div class="d-grid position-relative recipe" style="">
 									<div class="img-container position-relative">
 										<div
 											class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
-											<span class="level">
-												<span class="mx-2">Beginner</span>
-												<span class="fa fa-signal-perfect"></span>
-											</span>
-											<span class="time">
-												<span class="mx-2">30 Min</span>
-												<span class="fa fa-clock-four"></span>
-											</span>
+											<span class="level"><span class="mx-2">Beginner</span><span
+													class="fa fa-signal-perfect"></span></span><span class="time"><span
+													class="mx-2">30 Min</span><span class="fa fa-clock-four"></span></span>
 										</div>
 										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
-											style="/* top:20%; */">
-
-
-
-										</div><img
+											style=""></div><img
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
 											alt="" class="w-100">
 									</div>
@@ -326,26 +193,17 @@
 												class="fa fa-calendar-alt"></span></span></div>
 								</div>
 							</div>
-							<div class="col-12 col-md-3" style="">
+							<div class="col-6 col-md-3" style="">
 								<div class="d-grid position-relative recipe" style="">
 									<div class="img-container position-relative">
 										<div
 											class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
-											<span class="level">
-												<span class="mx-2">Beginner</span>
-												<span class="fa fa-signal-perfect"></span>
-											</span>
-											<span class="time">
-												<span class="mx-2">30 Min</span>
-												<span class="fa fa-clock-four"></span>
-											</span>
+											<span class="level"><span class="mx-2">Beginner</span><span
+													class="fa fa-signal-perfect"></span></span><span class="time"><span
+													class="mx-2">30 Min</span><span class="fa fa-clock-four"></span></span>
 										</div>
 										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
-											style="/* top:20%; */">
-
-
-
-										</div><img
+											style=""></div><img
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
 											alt="" class="w-100">
 									</div>
@@ -356,7 +214,6 @@
 												class="fa fa-calendar-alt"></span></span></div>
 								</div>
 							</div>
-
 						</div>
 					</div>
 				</div>
@@ -433,8 +290,9 @@
 		</section>
 		<section class="traditional-recipes">
 			<div class="heading">
-				<div class="astrodivider"><div class="astrodividermask"></div><span><i>&#10038;</i></span></div>
-
+				<div class="astrodivider">
+					<div class="astrodividermask"></div><span><i class="fa fa-solid fa-utensils"></i></span>
+				</div>
 			</div>
 
 			<div class="container">
@@ -449,7 +307,8 @@
 					</div>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img src="https://picsum.photos/id/59/1000" class="d-block w-100" alt="">
+							<img src="https://picsum.photos/id/59/1000" class="d-block w-100" alt=""
+								style="width: 100%;height: 1000px;">
 							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
 								<h5 class="fs-1">القرود الغربي</h5>
 								<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
@@ -462,7 +321,8 @@
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img src="https://picsum.photos/id/56/1000" class="d-block w-100" alt="">
+							<img src="https://picsum.photos/id/56/1000" class="d-block w-100" alt=""
+								style="width: 100%;height: 1000px;">
 							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
 								<h5 class="fs-1">Second slide label</h5>
 								<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
@@ -475,7 +335,8 @@
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img src="https://picsum.photos/id/55/1000" class="d-block w-100" alt="">
+							<img src="https://picsum.photos/id/55/1000" class="d-block w-100" alt=""
+								style="width: 100%;height: 1000px;">
 							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
 								<h5 class="fs-1">Third slide label</h5>
 								<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
@@ -498,6 +359,48 @@
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Next</span>
 					</button>
+				</div>
+			</div>
+		</section>
+		<section class="d-grid interesting">
+			<div class="border-top container d-grid gap-5 mt-1">
+				<div class="d-flex flex-column fs-1 heading-separator mb-3 mt-3 position-relative text-center"><span
+						class="">interesting</span><img :src="w_path + '/images/seperator-interesting.png'" alt=""
+						class="position-absolute w-25" style="left: 38%;top: 85%;/* transform: rotate(180deg); */"></div>
+				<div class="row">
+					<div class="col-3 right-bar">
+						<div class="border col-12 mb-2 social-media">
+							<div class="bg-second-color fs-5 fw-bolder heading p-2 text-center text-white"><span>Follow
+									Us</span></div>
+							<div class="d-flex fs-4 gap-2 justify-content-center p-3 text-black-title"><i
+									class="fa-brands fa-facebook"></i><i class="fa-brands fa-youtube"></i><i
+									class="fa-brands fa-instagram"></i></div>
+						</div>
+						<div class="border col-12 top-user">
+							<div class="bg-gradient bg-second-color fs-5 heading p-2 text-center text-white"><span>Most
+									Posted</span></div>
+							<div class="bg-light d-flex gap-2 m-1 px-2 rounded user"><img src="https://i.pravatar.cc/70"
+									alt="avatar" title="avatar" class="rounded-circle">
+								<div class="d-flex flex-column gap-1 justify-content-start"><span
+										class="fs-4 name">Mohamed</span><span class="first-color fs-6">Pasta</span></div>
+							</div>
+						</div>
+					</div>
+					<div class="content col-8">
+						<div class="row">
+							<div class="col-12">
+								<div class="d-flex"><img src="https://picsum.photos/120" alt=""
+										class="img-thumbnail rounded">
+									<div class="d-grid px-3">
+										<div class="fs-1 title">Lorem ipsum dolor sit amet</div>
+										<div class="discption fs-6 text-black-title">Lorem ipsum dolor sit amet, consectetur
+											adipisicing elit. Minus vel iusto natus illo sunt! Repellat .</div>
+										<div class="date font-italic fs-6 second-color">12/12/1220</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -622,9 +525,6 @@ export default {
 	},
 };
 </script>
-
-
-
 <style>
 .wrapper {
 	max-width: 100%;
@@ -746,7 +646,7 @@ export default {
 .random-recipe .carousel-indicators {
 	width: 20px !important;
 	height: 20px !important;
-	border-radius: 50% !important; 
+	border-radius: 50% !important;
 }
 
 .traditional-recipes {}
@@ -754,7 +654,7 @@ export default {
 
 .traditional-recipes .astrodivider {
 	margin: 64px auto;
-	width: 400px;
+	width: 50%;
 	max-width: 100%;
 	position: relative;
 }
@@ -799,4 +699,5 @@ export default {
 	line-height: 40px;
 	font-style: normal;
 	color: #ef6f82;
-}</style>
+}
+</style>
