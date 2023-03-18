@@ -1,5 +1,5 @@
 <template>
-  <div class="border-bottom border-top d-flex justify-content-center navbar" style="transition: all 0.5s;">
+  <div class="border-bottom border-top d-flex justify-content-center navbar z-8888" style="transition: all 0.5s;">
     <div class="d-flex justify-content-start w-100">
       <Button type="button" class="btn end-0 mt-1 mx-2 position-absolute top-0" id="toggleButton">
         <span class="fa fa-bars first-color fs-4" @click="toggleNav()" data-target="nav"></span>
@@ -120,7 +120,7 @@
   </div>
 </template>
 
-<script>
+<script scoped>
 export default {
   mounted() {
     window.addEventListener("scroll", this.wheneScroll);
@@ -160,29 +160,33 @@ export default {
         .toggleClass("fa-chevron-left fa-chevron-down");
     },
     wheneScroll() {
+
       if ($(window).scrollTop() > 300) {
-        $(".top-bar").css({
+        $(".navbar").css({
           position: "fixed",
-          // top: "auto",
-        });
-      } else {
-        $(".top-bar").css({
-          position: "relative",
-          top: "0",
-        });
-      }
-    },
-    toggleSubMenu() {
-      // $("a.active").removeClass("active");
-      // $("#navigation-bar #sub-menus").fadeOut();
-      // $(event.target).toggleClass("active");
-      // $(event.target).find("#sub-menus").fadeIn();
-      // $("#navigation-bar").mouseleave(function () {
-      //   $("#navigation-bar #sub-menus").fadeOut();
-      //   $("#navigation-bar").find("a.active").removeClass("active");
-      // });
-    },
+          width: "100%",
+          background: 'rgb(255, 255, 255)',
+          'box-shadow': '1px 1px 14px #ef6f82',
+      });
+    } else {
+      $(".navbar").css({
+        position: "relative",
+        top: "0",
+        'box-shadow': 'none',
+      });
+    }
   },
+  toggleSubMenu() {
+    // $("a.active").removeClass("active");
+    // $("#navigation-bar #sub-menus").fadeOut();
+    // $(event.target).toggleClass("active");
+    // $(event.target).find("#sub-menus").fadeIn();
+    // $("#navigation-bar").mouseleave(function () {
+    //   $("#navigation-bar #sub-menus").fadeOut();
+    //   $("#navigation-bar").find("a.active").removeClass("active");
+    // });
+  },
+},
 };
 </script>
 <style scoped>

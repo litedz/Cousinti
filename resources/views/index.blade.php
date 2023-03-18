@@ -2,8 +2,6 @@
 @section('app')
 @auth
 @php
-
-
     if (is_null(auth()->user()->Id_user_media)) {
         request()->merge(['checkmediauser' => false]);
     }else {

@@ -1,7 +1,7 @@
 <template>
 	<div class="wrapper d-grid gap-5 " dir="rtl">
-		<section class="header d-grid gap-5">
-			<div class="bg-first-color pb-1 pt-1 top-bar">
+		<section class="header d-grid gap-5" @click="test">
+			<div class="bg-first-color pb-1 pt-1 top-bar z-8888">
 				<div class="container">
 					<div class="align-items-center d-flex justify-content-around">
 						<div class="search">
@@ -41,7 +41,7 @@
 										style="letter-spacing: 1px;">
 										عجائن </div>
 
-								</div><img class="rounded w-100"
+								</div><img class="w-100"
 									src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
 									alt="">
 							</div>
@@ -56,7 +56,7 @@
 										style="letter-spacing: 1px;">
 										عجائن </div>
 								</div>
-								<img class="rounded w-100"
+								<img class="w-100"
 									src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
 									alt="">
 							</div>
@@ -70,7 +70,7 @@
 										style="letter-spacing: 1px;">
 										عجائن </div>
 								</div>
-								<img class="rounded w-100"
+								<img class="w-100"
 									src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
 									alt="">
 							</div>
@@ -89,7 +89,66 @@
 							<div
 								class="align-items-center border d-flex flex-row-reverse gap-1 header justify-content-between pe-3">
 								<span class="fa fa-arrow-trend-up fs-4 h-100 p-2 third-color"></span><span
-									class="fs-3 text-black-title">وصفات هذا الشهر</span>
+									class="fs-3 text-black-title">وصفات هذا الشهر</span></div>
+							<div class="border-end border-left d-grid px-3 recipes" style="direction:rtl;">
+								<div class="border d-flex mt-2 p-1 recipe"><img
+										src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg"
+										alt="" class="" style="height:80px;">
+									<div class="d-flex flex-column gap-1 mx-2">
+										<div class="fs-3 name-recipe text-black-title">lorem lixoe;kxizae mvv lz</div>
+										<div class="text-black-50 type">Pasta</div>
+									</div>
+								</div>
+							</div>
+							<div class="border-end border-left d-grid px-3 recipes" style="direction:rtl;">
+								<div class="border d-flex mt-2 p-1 recipe"><img
+										src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg"
+										alt="" class="" style="height:80px;">
+									<div class="d-flex flex-column gap-1 mx-2">
+										<div class="fs-3 name-recipe text-black-title">lorem lixoe;kxizae mvv lz</div>
+										<div class="text-black-50 type">Pasta</div>
+									</div>
+								</div>
+							</div>
+							<div class="border-end border-left d-grid px-3 recipes" style="direction:rtl;">
+								<div class="border d-flex mt-2 p-1 recipe"><img
+										src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg"
+										alt="" class="" style="height:80px;">
+									<div class="d-flex flex-column gap-1 mx-2">
+										<div class="fs-3 name-recipe text-black-title">lorem lixoe;kxizae mvv lz</div>
+										<div class="text-black-50 type">Pasta</div>
+									</div>
+								</div>
+							</div>
+							<div class="border-end border-left d-grid px-3 recipes" style="direction:rtl;">
+								<div class="border d-flex mt-2 p-1 recipe"><img
+										src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg"
+										alt="" class="" style="height:80px;">
+									<div class="d-flex flex-column gap-1 mx-2">
+										<div class="fs-3 name-recipe text-black-title">lorem lixoe;kxizae mvv lz</div>
+										<div class="text-black-50 type">Pasta</div>
+									</div>
+								</div>
+							</div>
+							<div class="border-end border-left d-grid px-3 recipes" style="direction:rtl;">
+								<div class="border d-flex mt-2 p-1 recipe"><img
+										src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg"
+										alt="" class="" style="height:80px;">
+									<div class="d-flex flex-column gap-1 mx-2">
+										<div class="fs-3 name-recipe text-black-title">lorem lixoe;kxizae mvv lz</div>
+										<div class="text-black-50 type">Pasta</div>
+									</div>
+								</div>
+							</div>
+							<div class="border-end border-left d-grid px-3 recipes" style="direction:rtl;">
+								<div class="border d-flex mt-2 p-1 recipe"><img
+										src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg"
+										alt="" class="" style="height:80px;">
+									<div class="d-flex flex-column gap-1 mx-2">
+										<div class="fs-3 name-recipe text-black-title">lorem lixoe;kxizae mvv lz</div>
+										<div class="text-black-50 type">Pasta</div>
+									</div>
+								</div>
 							</div>
 							<div class="border-end border-left d-grid px-3 recipes" style="direction:rtl;">
 								<div class="border d-flex mt-2 p-1 recipe"><img
@@ -244,7 +303,7 @@
 			</div>
 		</section>
 		<section class="subscribe mt-5">
-			<div class="p-4 position-relative">
+			<div class="p-4 position-relative z-5555">
 				<div class="container">
 					<div class="d-flex flex-column gap-2 justify-content-center p-4 position-relative w-100 z-9999">
 						<div class="d-flex flex-column text-center">
@@ -484,9 +543,10 @@ import Typewriter from "typewriter-effect/dist/core";
 export default {
 	inject: ["w_path"],
 	mounted() {
+		window.addEventListener("scroll", this.wheneScroll);
 		this.availableTypes();
 		this.autoType();
-		window.addEventListener("scroll", this.wheneScroll);
+
 	},
 	unmounted() {
 		window.removeEventListener("scroll", this.wheneScroll);
@@ -567,13 +627,25 @@ export default {
 			}
 		},
 		wheneScroll() {
-			if ($(window).scrollTop() > 200) {
-				$("#btn-back-to-top").fadeIn();
-				$("#home-navbar").fadeIn("slow");
-			} else {
-				$("#btn-back-to-top").fadeOut();
-				$("#home-navbar").fadeOut("fast");
-			}
+			// if ($(window).scrollTop() > 300) {
+			// 	$(".top-bar").css({
+			// 		position: "fixed",
+			// 		width: "100%",
+			// 	});
+			// } else {
+			// 	$(".top-bar").css({
+			// 		position: "relative",
+			// 		top: "0",
+			// 	});
+			// }
+			// if ($(window).scrollTop() > 200) {
+			// 	alert('xxx');
+			// 	$("#btn-back-to-top").fadeIn();
+			// 	$("#home-navbar").fadeIn("slow");
+			// } else {
+			// 	$("#btn-back-to-top").fadeOut();
+			// 	$("#home-navbar").fadeOut("fast");
+			// }
 		},
 		hoverLink(action) {
 			if (action == "leave") {
@@ -591,14 +663,11 @@ export default {
 		toggleNav() {
 			$(".nav").fadeToggle();
 		},
-		testEmit() {
-			alert("emit send");
-		},
+
 	},
 };
 </script>
-<style>
-.wrapper {
+<style>.wrapper {
 	max-width: 100%;
 	height: 5000px;
 }
@@ -610,10 +679,7 @@ export default {
 	background-position: 46%;
 }
 
-.random-recipes .recipe .ovelay {
-	/* opacity: 0 !important;
-	transition: all 1s; */
-}
+
 
 .random-recipes .recipe:hover .overlay {
 
@@ -644,7 +710,7 @@ export default {
 	z-index: 1;
 	opacity: 0.2;
 	border-radius: 50%;
-	right: 3%;
+	right: 6%;
 	z-index: 2;
 	border-left: 5px solid red;
 }
@@ -720,9 +786,6 @@ export default {
 	height: 20px !important;
 	border-radius: 50% !important;
 }
-
-.traditional-recipes {}
-
 
 .traditional-recipes .astrodivider {
 	margin: 64px auto;
