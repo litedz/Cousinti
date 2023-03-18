@@ -1,5 +1,5 @@
 <template>
-	<div class="wrapper" dir="rtl">
+	<div class="wrapper d-grid gap-5 " dir="rtl">
 		<section class="header d-grid gap-5">
 			<div class="bg-first-color pb-1 pt-1 top-bar">
 				<div class="container">
@@ -365,9 +365,9 @@
 		<section class="d-grid interesting">
 			<div class="border-top container d-grid gap-5 mt-1">
 				<div class="d-flex flex-column fs-1 heading-separator mb-3 mt-3 position-relative text-center"><span
-						class="">interesting</span><img :src="w_path + '/images/seperator-interesting.png'" alt=""
-						class="position-absolute w-25" style="left: 38%;top: 85%;/* transform: rotate(180deg); */"></div>
-				<div class="row">
+						class="">interesting</span><img src="http://127.0.0.1:8000/images/seperator-interesting.png" alt=""
+						class="position-absolute w-25" style="left:38%;top:85%;"></div>
+				<div class="border-top pt-3 row">
 					<div class="col-3 right-bar">
 						<div class="border col-12 mb-2 social-media">
 							<div class="bg-second-color fs-5 fw-bolder heading p-2 text-center text-white"><span>Follow
@@ -384,6 +384,31 @@
 								<div class="d-flex flex-column gap-1 justify-content-start"><span
 										class="fs-4 name">Mohamed</span><span class="first-color fs-6">Pasta</span></div>
 							</div>
+							<div class="bg-light d-flex gap-2 m-1 px-2 rounded user"><img src="https://i.pravatar.cc/70"
+									alt="avatar" title="avatar" class="rounded-circle">
+								<div class="d-flex flex-column gap-1 justify-content-start"><span
+										class="fs-4 name">Mohamed</span><span class="first-color fs-6">Pasta</span></div>
+							</div>
+							<div class="bg-light d-flex gap-2 m-1 px-2 rounded user"><img src="https://i.pravatar.cc/70"
+									alt="avatar" title="avatar" class="rounded-circle">
+								<div class="d-flex flex-column gap-1 justify-content-start"><span
+										class="fs-4 name">Mohamed</span><span class="first-color fs-6">Pasta</span></div>
+							</div>
+							<div class="bg-light d-flex gap-2 m-1 px-2 rounded user"><img src="https://i.pravatar.cc/70"
+									alt="avatar" title="avatar" class="rounded-circle">
+								<div class="d-flex flex-column gap-1 justify-content-start"><span
+										class="fs-4 name">Mohamed</span><span class="first-color fs-6">Pasta</span></div>
+							</div>
+							<div class="bg-light d-flex gap-2 m-1 px-2 rounded user"><img src="https://i.pravatar.cc/70"
+									alt="avatar" title="avatar" class="rounded-circle">
+								<div class="d-flex flex-column gap-1 justify-content-start"><span
+										class="fs-4 name">Mohamed</span><span class="first-color fs-6">Pasta</span></div>
+							</div>
+							<div class="bg-light d-flex gap-2 m-1 px-2 rounded user"><img src="https://i.pravatar.cc/70"
+									alt="avatar" title="avatar" class="rounded-circle">
+								<div class="d-flex flex-column gap-1 justify-content-start"><span
+										class="fs-4 name">Mohamed</span><span class="first-color fs-6">Pasta</span></div>
+							</div>
 						</div>
 					</div>
 					<div class="content col-8">
@@ -392,7 +417,51 @@
 								<div class="d-flex"><img src="https://picsum.photos/120" alt=""
 										class="img-thumbnail rounded">
 									<div class="d-grid px-3">
-										<div class="fs-1 title">Lorem ipsum dolor sit amet</div>
+										<div class="fs-4 title">Lorem ipsum dolor sit amet</div>
+										<div class="discption fs-6 text-black-title">Lorem ipsum dolor sit amet, consectetur
+											adipisicing elit. Minus vel iusto natus illo sunt! Repellat .</div>
+										<div class="date font-italic fs-6 second-color">12/12/1220</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="d-flex"><img src="https://picsum.photos/120" alt=""
+										class="img-thumbnail rounded">
+									<div class="d-grid px-3">
+										<div class="fs-4 title">Lorem ipsum dolor sit amet</div>
+										<div class="discption fs-6 text-black-title">Lorem ipsum dolor sit amet, consectetur
+											adipisicing elit. Minus vel iusto natus illo sunt! Repellat .</div>
+										<div class="date font-italic fs-6 second-color">12/12/1220</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="d-flex"><img src="https://picsum.photos/120" alt=""
+										class="img-thumbnail rounded">
+									<div class="d-grid px-3">
+										<div class="fs-4 title">Lorem ipsum dolor sit amet</div>
+										<div class="discption fs-6 text-black-title">Lorem ipsum dolor sit amet, consectetur
+											adipisicing elit. Minus vel iusto natus illo sunt! Repellat .</div>
+										<div class="date font-italic fs-6 second-color">12/12/1220</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="d-flex"><img src="https://picsum.photos/120" alt=""
+										class="img-thumbnail rounded">
+									<div class="d-grid px-3">
+										<div class="fs-4 title">Lorem ipsum dolor sit amet</div>
+										<div class="discption fs-6 text-black-title">Lorem ipsum dolor sit amet, consectetur
+											adipisicing elit. Minus vel iusto natus illo sunt! Repellat .</div>
+										<div class="date font-italic fs-6 second-color">12/12/1220</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="d-flex"><img src="https://picsum.photos/120" alt=""
+										class="img-thumbnail rounded">
+									<div class="d-grid px-3">
+										<div class="fs-4 title">Lorem ipsum dolor sit amet</div>
 										<div class="discption fs-6 text-black-title">Lorem ipsum dolor sit amet, consectetur
 											adipisicing elit. Minus vel iusto natus illo sunt! Repellat .</div>
 										<div class="date font-italic fs-6 second-color">12/12/1220</div>
@@ -403,6 +472,9 @@
 					</div>
 				</div>
 			</div>
+		</section>
+		<section class="footer">
+			<footer-page></footer-page>
 		</section>
 	</div>
 </template>
@@ -699,5 +771,4 @@ export default {
 	line-height: 40px;
 	font-style: normal;
 	color: #ef6f82;
-}
-</style>
+}</style>
