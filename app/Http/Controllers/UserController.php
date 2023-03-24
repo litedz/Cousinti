@@ -46,8 +46,6 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-
-
         $valid = $request->validate([
             'username' => 'required',
             'last_name' => 'required',
@@ -182,6 +180,7 @@ class UserController extends Controller
     public function RecipeUserLiked(Request $request)
     {
 
+        
         $liked = Rating::where('user_id', auth()->user()->id)->where('recipe_id', $request->recipe_id)->get();
         if (count($liked) == 0) {
             return response()->json(['liked' => false]);

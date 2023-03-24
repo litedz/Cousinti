@@ -1,31 +1,7 @@
 <template>
 	<div class="wrapper d-grid gap-5 " dir="rtl">
 		<section class="header d-grid gap-5" @click="test">
-			<div class="bg-first-color pb-1 pt-1 top-bar z-8888">
-				<div class="container">
-					<div class="align-items-center d-flex justify-content-around">
-						<div class="search">
-							<div class="align-items-center d-flex gap-2 search-form">
-								<li class="fa fa-search" style="color: hsl(60deg 0% 100%);"></li>
-								<input type="text" id="search" class="border-0 form-control form-control-sm"
-									style="border: none;" placeholder="البحث عن وصفة">
-							</div>
-						</div>
-						<div class="contact d-flex fs-4 gap-1 h-100">
-							<i class="fa fa-apple-whole fs-5 rounded-circle" style="color: #e5e7eb;"></i>
-							<i class="fa fa-apple-whole fs-5 rounded-circle" style="color: #e5e7eb;"></i>
-							<i class="fa fa-apple-whole fs-5 rounded-circle" style="color: #e5e7eb; "></i>
-							<i class="fa fa-apple-whole fs-5 rounded-circle" style="color: #e5e7eb;"></i>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="logo text-center">
-				<div class="cover position-absolute top-0">
-				</div>
-				<div class="title" style="font-size: 5rem;">كوزينتي</div><span class="first-color fw-bold slogan"
-					style="letter-spacing: 1px;">اشعل شغفك بالطعام معنا كل يوم</span>
-			</div>
+			<top-bar></top-bar>
 			<div class="nav-bar-home">
 				<nav-bar></nav-bar>
 			</div>
@@ -35,28 +11,37 @@
 						<div class="col-4 p-0">
 							<div class="position-relative recipe">
 								<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
-									style="background: linear-gradient(1deg, black,transparent, transparent);">
+									style="background:linear-gradient(1deg, black,transparent, transparent);">
 									<div class="name-recipe">Mohamedl habbib</div>
-									<div class="btn btn-danger bg-gradient fs-6 fw-bolder px-3 text-white type"
-										style="letter-spacing: 1px;">
-										عجائن </div>
-
+									<div class="px-4 text-start w-100" style="letter-spacing:1px;" bis_skin_checked="1">
+										<div bis_skin_checked="1"
+											class="badge bg-danger bg-gradient fs-6 fw-bolder text-white type">حلويات</div>
+									</div>
+									<div
+										class="d-flex flex-row-reverse justify-content-between justify-content-center px-4 w-100">
+										<span class="date fs-6 text-white-50">dimanche, 19 mars 2023</span>
+										<span class="fs-6 text-white-50">25 views</span>
+									</div>
 								</div><img class="w-100"
 									src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
 									alt="">
 							</div>
 						</div>
-
 						<div class="col-4 p-0">
 							<div class="position-relative recipe">
 								<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
-									style="background: linear-gradient(1deg, black,transparent, transparent);">
+									style="background:linear-gradient(1deg, black,transparent, transparent);">
 									<div class="name-recipe">Mohamedl habbib</div>
-									<div class="btn btn-danger bg-gradient fs-6 fw-bolder px-3 text-white type"
-										style="letter-spacing: 1px;">
-										عجائن </div>
-								</div>
-								<img class="w-100"
+									<div class="px-4 text-start w-100" style="letter-spacing:1px;" bis_skin_checked="1">
+										<div bis_skin_checked="1"
+											class="badge bg-danger bg-gradient fs-6 fw-bolder text-white type">حلويات</div>
+									</div>
+									<div
+										class="d-flex flex-row-reverse justify-content-between justify-content-center px-4 w-100">
+										<span class="date fs-6 text-white-50">dimanche, 19 mars 2023</span>
+										<span class="fs-6 text-white-50">25 views</span>
+									</div>
+								</div><img class="w-100"
 									src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
 									alt="">
 							</div>
@@ -64,19 +49,22 @@
 						<div class="col-4 p-0">
 							<div class="position-relative recipe">
 								<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
-									style="background: linear-gradient(1deg, black,transparent, transparent);">
+									style="background:linear-gradient(1deg, black,transparent, transparent);">
 									<div class="name-recipe">Mohamedl habbib</div>
-									<div class="btn btn-danger bg-gradient fs-6 fw-bolder px-3 text-white type"
-										style="letter-spacing: 1px;">
-										عجائن </div>
-								</div>
-								<img class="w-100"
+									<div class="px-4 text-start w-100" style="letter-spacing:1px;" bis_skin_checked="1">
+										<div bis_skin_checked="1"
+											class="badge bg-danger bg-gradient fs-6 fw-bolder text-white type">حلويات</div>
+									</div>
+									<div
+										class="d-flex flex-row-reverse justify-content-between justify-content-center px-4 w-100">
+										<span class="date fs-6 text-white-50">dimanche, 19 mars 2023</span>
+										<span class="fs-6 text-white-50">25 views</span>
+									</div>
+								</div><img class="w-100"
 									src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
 									alt="">
 							</div>
 						</div>
-
-
 					</div>
 				</div>
 			</div>
@@ -89,77 +77,20 @@
 							<div
 								class="align-items-center border d-flex flex-row-reverse gap-1 header justify-content-between pe-3">
 								<span class="fa fa-arrow-trend-up fs-4 h-100 p-2 third-color"></span><span
-									class="fs-3 text-black-title">وصفات هذا الشهر</span></div>
-							<div class="border-end border-left d-grid px-3 recipes" style="direction:rtl;">
-								<div class="border d-flex mt-2 p-1 recipe"><img
-										src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg"
+									class="fs-3 text-black-title">وصفات هذا الشهر</span>
+							</div>
+							<div class="border d-grid p-3 px-3" style="direction:rtl;">
+								<div class="border d-flex mt-2 p-1 recipe">
+									<img src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg"
 										alt="" class="" style="height:80px;">
 									<div class="d-flex flex-column gap-1 mx-2">
 										<div class="fs-3 name-recipe text-black-title">lorem lixoe;kxizae mvv lz</div>
-										<div class="text-black-50 type">Pasta</div>
+										<a href="" class="text-black-50 type text-decoration-none">Pasta</a>
 									</div>
 								</div>
 							</div>
-							<div class="border-end border-left d-grid px-3 recipes" style="direction:rtl;">
-								<div class="border d-flex mt-2 p-1 recipe"><img
-										src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg"
-										alt="" class="" style="height:80px;">
-									<div class="d-flex flex-column gap-1 mx-2">
-										<div class="fs-3 name-recipe text-black-title">lorem lixoe;kxizae mvv lz</div>
-										<div class="text-black-50 type">Pasta</div>
-									</div>
-								</div>
-							</div>
-							<div class="border-end border-left d-grid px-3 recipes" style="direction:rtl;">
-								<div class="border d-flex mt-2 p-1 recipe"><img
-										src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg"
-										alt="" class="" style="height:80px;">
-									<div class="d-flex flex-column gap-1 mx-2">
-										<div class="fs-3 name-recipe text-black-title">lorem lixoe;kxizae mvv lz</div>
-										<div class="text-black-50 type">Pasta</div>
-									</div>
-								</div>
-							</div>
-							<div class="border-end border-left d-grid px-3 recipes" style="direction:rtl;">
-								<div class="border d-flex mt-2 p-1 recipe"><img
-										src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg"
-										alt="" class="" style="height:80px;">
-									<div class="d-flex flex-column gap-1 mx-2">
-										<div class="fs-3 name-recipe text-black-title">lorem lixoe;kxizae mvv lz</div>
-										<div class="text-black-50 type">Pasta</div>
-									</div>
-								</div>
-							</div>
-							<div class="border-end border-left d-grid px-3 recipes" style="direction:rtl;">
-								<div class="border d-flex mt-2 p-1 recipe"><img
-										src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg"
-										alt="" class="" style="height:80px;">
-									<div class="d-flex flex-column gap-1 mx-2">
-										<div class="fs-3 name-recipe text-black-title">lorem lixoe;kxizae mvv lz</div>
-										<div class="text-black-50 type">Pasta</div>
-									</div>
-								</div>
-							</div>
-							<div class="border-end border-left d-grid px-3 recipes" style="direction:rtl;">
-								<div class="border d-flex mt-2 p-1 recipe"><img
-										src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg"
-										alt="" class="" style="height:80px;">
-									<div class="d-flex flex-column gap-1 mx-2">
-										<div class="fs-3 name-recipe text-black-title">lorem lixoe;kxizae mvv lz</div>
-										<div class="text-black-50 type">Pasta</div>
-									</div>
-								</div>
-							</div>
-							<div class="border-end border-left d-grid px-3 recipes" style="direction:rtl;">
-								<div class="border d-flex mt-2 p-1 recipe"><img
-										src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg"
-										alt="" class="" style="height:80px;">
-									<div class="d-flex flex-column gap-1 mx-2">
-										<div class="fs-3 name-recipe text-black-title">lorem lixoe;kxizae mvv lz</div>
-										<div class="text-black-50 type">Pasta</div>
-									</div>
-								</div>
-							</div>
+
+
 						</div>
 						<div class="populer"></div>
 					</div>
@@ -286,17 +217,51 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="categorie col-2 overflow-hidden p-0">
-						<div class="img-container"><img
-								src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+						<div class="img-container position-relative"><img
+								src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80"
 								alt="" class="w-100">
-							<div class="title"></div>
+							<div class="h1 position-absolute text-center text-white title top-50 w-100 opacity-0"
+								style="background: #a52a2a82;">Pasta</div>
 						</div>
 					</div>
 					<div class="categorie col-2 overflow-hidden p-0">
-						<div class="img-container"><img
-								src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFzdGF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+						<div class="img-container position-relative"><img
+								src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFzdGF8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
 								alt="" class="w-100">
-							<div class="title"></div>
+							<div class="h1 position-absolute text-center text-white title top-50 w-100 opacity-0"
+								style="background: #a52a2a82;">Pasta</div>
+						</div>
+					</div>
+					<div class="categorie col-2 overflow-hidden p-0">
+						<div class="img-container position-relative"><img
+								src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFzdGF8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
+								alt="" class="w-100">
+							<div class="h1 position-absolute text-center text-white title top-50 w-100 opacity-0"
+								style="background: #a52a2a82;">Pasta</div>
+						</div>
+					</div>
+					<div class="categorie col-2 overflow-hidden p-0">
+						<div class="img-container position-relative"><img
+								src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFzdGF8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
+								alt="" class="w-100">
+							<div class="h1 position-absolute text-center text-white title top-50 w-100 opacity-0"
+								style="background: #a52a2a82;">Pasta</div>
+						</div>
+					</div>
+					<div class="categorie col-2 overflow-hidden p-0">
+						<div class="img-container position-relative"><img
+								src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFzdGF8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
+								alt="" class="w-100">
+							<div class="h1 position-absolute text-center text-white title top-50 w-100 opacity-0"
+								style="background: #a52a2a82;">Pasta</div>
+						</div>
+					</div>
+					<div class="categorie col-2 overflow-hidden p-0">
+						<div class="img-container position-relative"><img
+								src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFzdGF8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
+								alt="" class="w-100">
+							<div class="h1 position-absolute text-center text-white title top-50 w-100 opacity-0"
+								style="background: #a52a2a82;">Pasta</div>
 						</div>
 					</div>
 				</div>
@@ -667,7 +632,8 @@ export default {
 	},
 };
 </script>
-<style>.wrapper {
+<style>
+.wrapper {
 	max-width: 100%;
 	height: 5000px;
 }
@@ -765,7 +731,12 @@ export default {
 	transition: all 1s;
 }
 
-.subscribe div:first-of-type {
+.categories .img-container:hover .title {
+	opacity: 1 !important;
+	transition: all 1s;
+}
+
+section.subscribe div:first-of-type {
 	background: url('~/images/cover-subscribe.jpg');
 	background-size: cover;
 	background-attachment: fixed;

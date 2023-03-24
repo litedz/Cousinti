@@ -16,16 +16,19 @@
                                 <label for="comment" class="mt-2 mb-2">Comments :</label>
                                 <textarea class="form-control" v-model="comment" name="" id="" cols="30" rows="10"
                                     placeholder="اترك تعليف"></textarea>
-                                <button type="button" @click="add_comment()" class="btn btn-primary btn-lg w-50 mt-2">
+                                <button type="button" @click="add_comment()" class="bg-second-color btn btn-lg mt-2 text-white w-100 w-50">
                                     ارسال
                                 </button>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-7">
-                        <!-- <div class="text-center" v-if ="comments.lenght == 0">
-                        no comment Yet
-                        </div> -->
+                        <div class="text-center" v-if="comments.data && comments.data.length == 0 ">
+                            <div class="border fs-1 rounded text-black-50 text-capitalize w-100">
+                                no comment Yet
+                            </div>
+                           
+                        </div>
                         <div class="single-comment mb-1 bg-white d-flex flex-row-reverse rounded position-relative pt-2 pb-2"
                             v-for="comment in comments.data" :key="comment.recipe">
                             <div class="left-shape position-absolute"></div>
@@ -126,12 +129,14 @@ export default {
 
 <style>
 #comments .topbar_comments {
-    background: url("./images/shape-comments.png");
-    background-size: cover;
+    background: url('https://media.istockphoto.com/id/1090430162/vector/abstract-soft-speed-futuristic-swoosh-wave-three-minimalistic-divider-swoosh-lines-in.jpg?s=170667a&w=0&k=20&c=YLUpavzVQPZeSTBhMG2V6SoJ6cuC_dlMtq_9zjtwOmA=');
     height: 100px;
     text-align: center;
-    color: white;
     padding-top: 10px;
+    background-repeat: no-repeat;
+    background-position: 47% 14%;
+    background-origin: content-box;
+    background-size: auto;
 }
 
 #comments .comments-area {
@@ -141,7 +146,7 @@ export default {
 }
 
 #comments .comments-area .row {
-    background: #e4e4e4;
+    background: hsl(0 0% 96% / 1);
 }
 
 #comments .comments-area .row .leave-comment {
@@ -151,7 +156,7 @@ export default {
 }
 
 #comments .comments-area .row .leave-comment .title {
-    border-bottom: 1px solid #168272;
+    border-bottom: 1px solid #8f625b1f;
     color: #000000b5;
     font-size: 22px;
 }
@@ -163,7 +168,7 @@ export default {
 #comments .comments-area .row .left-shape {
     width: 0;
     height: 0;
-    border-top: 40px solid #168272;
+    border-top: 40px solid #ef6f82;
     border-right: 40px solid transparent;
     left: 0;
     top: 0;

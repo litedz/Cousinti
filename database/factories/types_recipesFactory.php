@@ -13,7 +13,7 @@ class types_recipesFactory extends Factory
      */
     public function definition()
     {
-        $types = array("حلويات", "ملحات", "اكل صحي", "معجنات", "اكل خفيف", "الضيوف", "فطور صباح", "الغداء", "العشاء");
+        $types = array("حلويات", "مملحات", "اكل صحي", "معجنات", "اكل خفيف", "الضيوف", "فطور صباح", "الغداء", "العشاء");
         return [
             'type' => array_rand(array_flip($types),1),
         ];

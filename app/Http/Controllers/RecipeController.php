@@ -165,7 +165,7 @@ class RecipeController extends Controller
             'name' => 'required|string',
             'ingredients' => 'required',
             'selected_type' => 'required|string',
-            'url_video' => ['nullable','url',new YoutubeRule],
+            'url_video' => ['nullable', 'url', new YoutubeRule],
             'how_todo' => 'required|string',
 
         ]);
@@ -201,7 +201,7 @@ class RecipeController extends Controller
             }
         }
         // Store id of video Youtube
-    
+
         $id_video_youtube = explode('https://youtu.be/', $request->url_video);
         $this->video_url = end($id_video_youtube);
 

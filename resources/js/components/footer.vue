@@ -2,8 +2,8 @@
     <section class="footer font-amiri" dir="rtl">
         <div class="content h-100" style="background:#3A3959;border-top:5px solid #ef6f82;">
             <div class="container position-relative text-white" style="z-index:10;">
-                <div class="row">
-                    <div class="col-6 col-md-4 pt-5">
+                <div class="row gy-4 pt-5" >
+                    <div class="col-6 col-md-3">
                         <div class="site-map d-flex flex-column h-auto">
                             <div class="font-sc-2 font-4 fw-bold">خريطة الموقع</div>
                             <nav class="list-unstyled d-flex flex-column"><a
@@ -16,8 +16,7 @@
                                     رئسية </a></nav>
                         </div>
                     </div>
-                    <div class="col-6 col-md-4 pt-5 position-relative">
-                        <div class="separator position-absolute"><img src="undefined/images/l33.png" alt="" srcset=""></div>
+                    <div class="col-6 col-md-3 position-relative">
                         <div class="d-flex flex-column justify-content-between social_media gap-4">
                             <div class="font-4 font-sc-2 fw-bold">منصات التواصل الاجتماعي</div>
                             <div class="d-grid gap-3">
@@ -26,21 +25,31 @@
                                         alt="">
                                     <div class="font-22"><a id="mediaLink" href="#"
                                             class="font-weight-bolder text-decoration-none"
-                                            style="color: hsl(0 0% 90% / 1);">متابعتنا علي صفحة الفيس بوك</a></div>
+                                            style="color:hsl(0 0% 90% / 1);">متابعتنا علي صفحة الفيس بوك</a></div>
                                 </div>
                                 <div class="align-items-center d-flex"><img class="ms-3 rounded-circle"
                                         src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-3-1.png"
                                         alt="">
                                     <div class="font-22"><a id="mediaLink" href="#"
                                             class="font-weight-bolder text-decoration-none"
-                                            style="color: hsl(0 0% 90% / 1);">متابعتنا علي صفحة الفيس بوك</a></div>
+                                            style="color:hsl(0 0% 90% / 1);">متابعتنا علي صفحة الفيس بوك</a></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div
-                        class="col-12 col-md-4 d-flex flex-column gap-3 justify-content-between position-relative pt-5 subscribe">
-                        <div class="separator position-absolute"><img src="undefined/images/l33.png" alt="" srcset=""></div>
+               
+                    <div class="col-12 col-md-3 d-grid gap-3">
+
+                        <h1 class="fw-bold title">latest posted</h1>
+
+                        <div class="gx-2 gy-2 row">
+                            <div class="col-6"><img src="https://picsum.photos/200" alt="" class="rounded w-100"></div>
+                            <div class="col-6"><img src="https://picsum.photos/200" alt="" class="rounded w-100"></div>
+                            <div class="col-6"><img src="https://picsum.photos/200" alt="" class="rounded w-100"></div>
+                            <div class="col-6"><img src="https://picsum.photos/200" alt="" class="rounded w-100"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 d-flex flex-column gap-3 position-relative subscribe">
                         <h1 class="fw-bold">متابعتنا</h1>
                         <div class="font-14">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                             Eaque error fugit dolore mollitia consectetur animi facere minus nobis blanditiis nulla aut
@@ -48,7 +57,7 @@
                         <div class="form"><input class="form-control" type="email" name=""
                                 placeholder="example@gmail.com"><button type="submit"
                                 class="bg-first-color bg-gradient btn btn-primary font-amiri fs-5 fw-bolder mt-2 w-100"
-                                style="/* background:#FFF2DE; */border:none;">اشتراك</button></div>
+                                style="border:none;">اشتراك</button></div>
                     </div>
                 </div>
             </div>

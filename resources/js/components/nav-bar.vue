@@ -165,28 +165,29 @@ export default {
         $(".navbar").css({
           position: "fixed",
           width: "100%",
+          top: "0",
           background: 'rgb(255, 255, 255)',
           'box-shadow': '1px 1px 14px #ef6f82',
-      });
-    } else {
-      $(".navbar").css({
-        position: "relative",
-        top: "0",
-        'box-shadow': 'none',
-      });
-    }
+        });
+      } else {
+        $(".navbar").css({
+          position: "relative",
+          top: "0",
+          'box-shadow': 'none',
+        });
+      }
+    },
+    toggleSubMenu() {
+      // $("a.active").removeClass("active");
+      // $("#navigation-bar #sub-menus").fadeOut();
+      // $(event.target).toggleClass("active");
+      // $(event.target).find("#sub-menus").fadeIn();
+      // $("#navigation-bar").mouseleave(function () {
+      //   $("#navigation-bar #sub-menus").fadeOut();
+      //   $("#navigation-bar").find("a.active").removeClass("active");
+      // });
+    },
   },
-  toggleSubMenu() {
-    // $("a.active").removeClass("active");
-    // $("#navigation-bar #sub-menus").fadeOut();
-    // $(event.target).toggleClass("active");
-    // $(event.target).find("#sub-menus").fadeIn();
-    // $("#navigation-bar").mouseleave(function () {
-    //   $("#navigation-bar #sub-menus").fadeOut();
-    //   $("#navigation-bar").find("a.active").removeClass("active");
-    // });
-  },
-},
 };
 </script>
 <style scoped>

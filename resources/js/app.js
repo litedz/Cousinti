@@ -51,7 +51,10 @@ import types_recipes from './components/dashboard/types_recipes.vue';
 import profile_user from './components/profile_user.vue';
 import edit_profile from './components/user/edit-profile.vue';
 import navbar from './components/nav-bar.vue';
+
+
 import search from './components/user/search.vue';
+import top_bar from './components/user/top-bar.vue';
 
 import comments from './components/comments.vue';
 import recipes from './components/recipes.vue';
@@ -134,6 +137,7 @@ app.component('loading-page', loading_page);
 app.component('similar-recipes', similar_recipes);
 app.component('register', register);
 app.component('guest-topbar', guest_topbar);
+app.component('top-bar', top_bar);
 
 // recipe component
 app.component('add-recipe', add_recipe);
