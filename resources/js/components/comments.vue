@@ -1,5 +1,6 @@
 <template>
     <div id="comments">
+        <status ref="status"></status>
         <div class="topbar_comments">
             <div class="h1">تعليقات</div>
         </div>
@@ -109,7 +110,7 @@ export default {
                 .catch((error) => {
 
                     if (error.response.data) {
-                        // this.$refs.status.display('danger', 'حل التعليق فارغ ', 'خطا', 'info');
+                        this.$refs.status.display('danger', error.response.message, 'خطا', 'info');
                     }
                 });
         },

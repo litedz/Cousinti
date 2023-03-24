@@ -56,7 +56,7 @@
                             adipisci itaque, ullam temporibus deleniti. Explicabo pariatur cumque excepturi.</div>
                         <div class="form"><input class="form-control" type="email" name=""
                                 placeholder="example@gmail.com"><button type="submit"
-                                class="bg-first-color bg-gradient btn btn-primary font-amiri fs-5 fw-bolder mt-2 w-100"
+                                class="bg-gradient bg-second-color btn btn-primary font-amiri fs-5 fw-bolder mt-2 w-100"
                                 style="border:none;">اشتراك</button></div>
                     </div>
                 </div>

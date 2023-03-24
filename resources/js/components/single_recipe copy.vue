@@ -7,17 +7,13 @@
           <div class="col-12 col-md-6 images">
             <div class="images w-100" style="height: auto">
               <div v-for="img in this.single_recipe.images_recipe" :key="img" class="head-image">
-                <img class="w-100 m-1 p-1" style="height: 720px" v-if="img.cover == 'active'"
+                <img class="w-100 m-1 p-1" style="height: 720px" 
+                v-if="img.cover == 'active'"
                   :src="this.w_path + '/storage/recipes/' + img.name" />
               </div>
               <div class="other-images d-flex justify-content-end">
-                <div v-for="img in this.single_recipe
-                  .images_recipe" :key="img" class="w-auto">
-                  <img class="m-1 p-1" style="height: 250px;width:250px" v-if="img.cover !== 'active'" :src="
-                    this.w_path +
-                    '/storage/recipes/' +
-                    img.name
-                  " />
+                <div v-for="img in this.single_recipe.images_recipe" :key="img" class="w-auto">
+                  <img class="m-1 p-1" style="height: 250px;width:250px" v-if="img.cover !== 'active'" :src="this.w_path +'/storage/recipes/' +img.name" />
                 </div>
               </div>
             </div>
@@ -59,9 +55,7 @@
                       </thead>
 
                       <tbody>
-                        <tr class="item-ingredient" v-for="(ing,index) in this
-                          .single_recipe
-                          .ingredient" :key="ing">
+                        <tr class="item-ingredient" v-for="(ing,index) in this.single_recipe.ingredient" :key="ing">
                           <td class="text-muted">
                             {{ index + 1 }}
                           </td>
@@ -98,8 +92,7 @@
           <div class="col-12" id="how">
             <div class="row">
               <div class="video col-12 col-md-6">
-                <div class="video-prepare"
-                  v-if="this.single_recipe.url_video !== null">
+                <div class="video-prepare" v-if="this.single_recipe.url_video !== null">
                   <iframe width="100%" type="text/html" id="player" height="315" :src="
                     'https://www.youtube.com/embed/' +
                     this.single_recipe.url_video" title="YouTube video player" frameborder="0"

@@ -3,7 +3,11 @@
     <status ref="status"></status>
     <div class="header d-grid">
       <div class="content">
-        <img src="https://picsum.photos/1900/300" alt="" class="mw-100">
+
+        <div v-for="img in this.single_recipe.images_recipe" :key="img">
+          <img v-if="img.cover == 'active'" :src="this.w_path + '/storage/recipes/' + img.name" class="mw-100"
+            style="width: 100%;height: 300px;">
+        </div>
         <div
           class="align-items-center bg-white-p d-flex gap-5 info-recipe justify-content-center mx-auto p-2 position-absolute rounded shadow w-50">
           <div class="time d-flex align-items-center gap-2"><span
@@ -33,13 +37,9 @@
           </div>
           <div class="mx-auto w-50">
             <ul class="list-ingredients">
-              <li>test1</li>
-              <li>test1</li>
-              <li>test1</li>
-              <li>test1</li>
-              <li>test1</li>
-              <li>test1</li>
-              <li>test1</li>
+              <li class="fs-6 fw-bolder text-black-title" v-for="(ing,index) in this.single_recipe.ingredient" :key="ing">
+                {{ ing.name_ingredient }}</li>
+
             </ul>
           </div>
         </div>
@@ -50,14 +50,9 @@
       <div class="container">
         <div class="heading"></div>
         <div class="row justify-content-center">
-          <div class="col-3">
-            <img class="w-100 rounded-4" src="https://picsum.photos/200" alt="" srcset="">
-          </div>
-          <div class="col-3">
-            <img class="w-100 rounded-4" src="https://picsum.photos/200" alt="" srcset="">
-          </div>
-          <div class="col-3">
-            <img class="w-100 rounded-4" src="https://picsum.photos/200" alt="" srcset="">
+          <div class="col-3" v-for="img in this.single_recipe.images_recipe" :key="img" >
+            <img class="w-100 rounded-4" v-if="img.cover !== 'active'" :src="this.w_path + '/storage/recipes/' + img.name"
+              alt="" srcset="">
           </div>
         </div>
       </div>
@@ -161,7 +156,7 @@ export default {
 }
 
 @media only screen and (max-width: 796px) {
-  .single-recipe .header .info-recipe{
+  .single-recipe .header .info-recipe {
     width: 100% !important;
     left: 0 !important;
     gap: 2% !important;

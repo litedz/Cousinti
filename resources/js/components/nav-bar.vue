@@ -26,14 +26,14 @@
       <div id="link-nav" class="hoverable">
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center"><a
-              class="text-decoration-none text-black">حلويات</a><span
+              class="text-decoration-none text-black">مملحات</a><span
               class="fa fa-2xs fa-chevron-down first-color"></span></div>
           <div class="drowDownMenu p-3 position-absolute w-50 rounded z-8888 bg-white-p" style="left:25%;background:;">
             <div class="container">
               <div class="row g-2">
                 <div class="col mx-1 rounded">
                   <div class="img-container p-1 position-relative rounded mw-100"><img class="img-recipe w-100"
-                      src="https://placekitten.com/200/200" alt="">
+                      src="https://picsum.photos/id/222/200/200" alt="">
                     <div class="bg-white bottom-0 end-0 h-100 overlay position-absolute start-0 top-0 w-100">
                       <div
                         class="align-items-center d-flex first-color flex-column h-100 justify-content-around recipe-info">
@@ -52,7 +52,7 @@
                 </div>
                 <div class="col mx-1 rounded">
                   <div class="img-container p-1 position-relative rounded mw-100"><img class="img-recipe w-100"
-                      src="https://placekitten.com/200/200" alt="">
+                      src="https://picsum.photos/id/100/200/200" alt="">
                     <div class="bg-white bottom-0 end-0 h-100 overlay position-absolute start-0 top-0 w-100">
                       <div
                         class="align-items-center d-flex first-color flex-column h-100 justify-content-around recipe-info">
@@ -71,7 +71,7 @@
                 </div>
                 <div class="col mx-1 rounded">
                   <div class="img-container p-1 position-relative rounded mw-100"><img class="img-recipe w-100"
-                      src="https://placekitten.com/200/200" alt="">
+                      src="https://picsum.photos/id/200/200/200" alt="">
                     <div class="bg-white bottom-0 end-0 h-100 overlay position-absolute start-0 top-0 w-100">
                       <div
                         class="align-items-center d-flex first-color flex-column h-100 justify-content-around recipe-info">
@@ -98,13 +98,27 @@
       <div id="link-nav" class="hoverable">
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center"><a
-              class="text-decoration-none text-black">zeaezaeza</a></div>
+              class="text-decoration-none text-black">اكل صحي</a></div>
         </li>
       </div>
       <div id="link-nav" class="hoverable">
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center"><a
               class="text-decoration-none text-black">معجنات</a><span
+              class="fa fa-2xs fa-chevron-down first-color"></span></div>
+        </li>
+      </div>
+      <div id="link-nav" class="hoverable">
+        <li class="fs-5 pointer">
+          <div class="align-items-center d-flex gap-2 justify-content-center"><a
+              class="text-decoration-none text-black">اكل خفيف</a><span
+              class="fa fa-2xs fa-chevron-down first-color"></span></div>
+        </li>
+      </div>
+      <div id="link-nav" class="hoverable">
+        <li class="fs-5 pointer">
+          <div class="align-items-center d-flex gap-2 justify-content-center"><a
+              class="text-decoration-none text-black">الضيوف</a><span
               class="fa fa-2xs fa-chevron-down first-color"></span></div>
         </li>
       </div>
