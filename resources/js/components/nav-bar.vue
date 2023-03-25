@@ -1,5 +1,6 @@
 <template>
-  <div class="border-bottom border-top d-flex justify-content-center navbar z-8888" style="transition: all 0.5s;">
+  <div class="border-bottom border-top d-flex justify-content-center navbar z-8888" style="transition: all 0.5s;"
+    dir="rtl">
     <div class="d-flex justify-content-start w-100">
       <Button type="button" class="btn end-0 mt-1 mx-2 position-absolute top-0" id="toggleButton">
         <span class="fa fa-bars first-color fs-4" @click="toggleNav()" data-target="nav"></span>
@@ -23,7 +24,14 @@
           style="left: 5%;color: #8F625B;"></span>
       </div>
       <!-- Links nav bar -->
-      <div id="link-nav" class="hoverable">
+
+      <div id="link-nav" class="hoverable p-2" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
+        <li class="fs-5 pointer">
+          <div class="align-items-center d-flex gap-2 justify-content-center"><a href="/"
+              class="text-decoration-none text-black">الرئيسة</a></div>
+        </li>
+      </div>
+      <div id="link-nav" class="hoverable p-2" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center"><a
               class="text-decoration-none text-black">مملحات</a><span
@@ -95,32 +103,33 @@
           </div>
         </li>
       </div>
-      <div id="link-nav" class="hoverable">
+      <div id="link-nav" class="hoverable p-2" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center"><a
               class="text-decoration-none text-black">اكل صحي</a></div>
         </li>
       </div>
-      <div id="link-nav" class="hoverable">
+      <div id="link-nav" class="hoverable p-2" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center"><a
               class="text-decoration-none text-black">معجنات</a><span
               class="fa fa-2xs fa-chevron-down first-color"></span></div>
         </li>
       </div>
-      <div id="link-nav" class="hoverable">
+      <div id="link-nav" class="hoverable p-2" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center"><a
               class="text-decoration-none text-black">اكل خفيف</a><span
               class="fa fa-2xs fa-chevron-down first-color"></span></div>
         </li>
       </div>
-      <div id="link-nav" class="hoverable">
+      <div id="link-nav" class="hoverable p-2" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center"><a
               class="text-decoration-none text-black">الضيوف</a><span
               class="fa fa-2xs fa-chevron-down first-color"></span></div>
         </li>
+
       </div>
       <div
         class="social-media border-left border-right border-top bottom-0 contact d-flex gap-2 justify-content-center p-2 position-absolute rounded w-100"
@@ -201,6 +210,11 @@ export default {
       //   $("#navigation-bar").find("a.active").removeClass("active");
       // });
     },
+    hoverLink() {
+      $('body').find('active-link').removeClass('active-link');
+      $(event.target).toggleClass('active-link');
+      $(event.target).find('a').toggleClass('text-black text-white');
+    }
   },
 };
 </script>
@@ -210,6 +224,16 @@ export default {
   gap: 1rem;
 }
 
+#nav .active-link {
+  background: #EF6F82;
+  color: white !important;
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+  padding-top: .5rem !important;
+  padding-bottom: .5rem !important;
+  border-radius: .25rem !important;
+  transition: all 1s;
+}
 
 
 #navigation-bar .top-bar {

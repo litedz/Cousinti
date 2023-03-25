@@ -2,7 +2,7 @@
   <div class="single-recipe d-grid gap-4" style="">
     <status ref="status"></status>
     <div class="header d-grid">
-      <div class="content">
+      <div class="content d-grid gap-4">
 
         <div v-for="img in this.single_recipe.images_recipe" :key="img">
           <img v-if="img.cover == 'active'" :src="this.w_path + '/storage/recipes/' + img.name" class="mw-100"
@@ -20,7 +20,8 @@
             <li>25</li>
             <li>ingredients</li>
           </div>
-          <div class="auhtoh border rounded-circle"><a href=""><img src="https://i.pravatar.cc/60" class="rounded-5"></a>
+          <div class="author border rounded-circle"><a :href="'/profile/' + this.single_recipe.user_id"><img
+                src="https://i.pravatar.cc/60" class="rounded-5"></a>
           </div>
           <div class="likes d-flex align-items-center gap-2"><span
               class="border fa fa-thumbs-up p-1 rounded-4 text-bg-primary"></span>
@@ -33,10 +34,11 @@
     <div class="ingredients mt-5">
       <div class="container">
         <div class="content">
-          <div class="border-bottom fs-1 mx-auto text-center title w-25">loloazea
+          <div class="border-bottom fs-1 mx-auto text-center title w-50">
+            {{ this.single_recipe.name }}
           </div>
           <div class="mx-auto w-50">
-            <ul class="list-ingredients">
+            <ul class="list-ingredients d-grid gap-3 ">
               <li class="fs-6 fw-bolder text-black-title" v-for="(ing,index) in this.single_recipe.ingredient" :key="ing">
                 {{ ing.name_ingredient }}</li>
 
@@ -46,18 +48,19 @@
       </div>
     </div>
 
-    <div class="more-images">
+    <div class="more-images" v-if="this.single_recipe.images_recipe && this.single_recipe.images_recipe.length > 2">
       <div class="container">
-        <div class="heading"></div>
+        <div class="fs-3 heading mb-4 position-relative px-2 text-right " style="border-right: 4px solid #f6a5af;">More
+          photos</div>
         <div class="row justify-content-center">
-          <div class="col-3" v-for="img in this.single_recipe.images_recipe" :key="img" >
+          <div class="col-3" v-for="img in this.single_recipe.images_recipe" :key="img">
             <img class="w-100 rounded-4" v-if="img.cover !== 'active'" :src="this.w_path + '/storage/recipes/' + img.name"
               alt="" srcset="">
           </div>
         </div>
       </div>
     </div>
-    <div class="comments">
+    <div class="comments mt-5">
       <comments :recipe_id="$attrs.recipe_id"></comments>
     </div>
 
@@ -154,6 +157,26 @@ export default {
 .single-recipe .ingredients .content .list-ingredients li {
   list-style: '- ' !important;
 }
+
+/* .single-recipe .more-images .heading::before {
+  content: '';
+  width: 4px;
+  height: 100%;
+  background: #ef6f82;
+  position: absolute;
+  right: 0;
+}
+*/
+/* .single-recipe .more-images .heading::after {
+  content: '';
+  width: 85%;
+  height: 1px;
+  background: #e3e3e3;
+  position: absolute;
+  left: 0;
+  top: 45%;
+}  */
+
 
 @media only screen and (max-width: 796px) {
   .single-recipe .header .info-recipe {

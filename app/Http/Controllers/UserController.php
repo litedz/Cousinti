@@ -2,19 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\image;
+
 use App\Models\Profile;
 use App\Models\Rating;
-use App\Models\recipe;
 use App\Models\User;
-use App\Models\user_media;
-use Illuminate\Auth\TokenGuard;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
-use Mockery\Undefined;
-use TheSeer\Tokenizer\Exception;
 
 class UserController extends Controller
 {

@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Request as FacadesRequest;
 
 class CommentsController extends Controller
 {
+
+
     /**
      * Display a listing of the resource.
      *
@@ -96,4 +98,6 @@ class CommentsController extends Controller
     {
         //
     }
+
+
 }

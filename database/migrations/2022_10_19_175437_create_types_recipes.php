@@ -16,6 +16,7 @@ class CreateTypesRecipes extends Migration
         Schema::create('types_recipes', function (Blueprint $table) {
             $table->id('id');
             $table->string('type');
+            $table->string('image')->default('default.png');
             $table->timestamps();
         });
     }

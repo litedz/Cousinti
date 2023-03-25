@@ -35,8 +35,5 @@ class recipe extends Model
         return $this->hasMany(Rating::class);
     }
 
-    protected static function newFactory()
-    {
-        return RecipeFactory::new();
-    }
+
 }

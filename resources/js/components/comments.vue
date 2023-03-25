@@ -2,7 +2,9 @@
     <div id="comments">
         <status ref="status"></status>
         <div class="topbar_comments">
-            <div class="h1">تعليقات</div>
+            <div class="align-items-center d-flex heading justify-content-center fs-1"><span>تعليقات</span>
+                <span class="fa fa-commenting first-color fs-3 mb-4 ms-1 h1"></span>
+            </div>
         </div>
         <div class="comments-area">
             <div class="container">
@@ -10,25 +12,24 @@
                     <div class="col-12 col-md-5">
                         <div class="leave-comment w-100 bg-white">
                             <div class="title font-weight-bolder p-4 text-center w-100">
-                                comments
+                                Leave Comments
                             </div>
                             <!-- form to add comments -->
                             <div class="form mt-4 d-flex flex-column text-right">
                                 <label for="comment" class="mt-2 mb-2">Comments :</label>
                                 <textarea class="form-control" v-model="comment" name="" id="" cols="30" rows="10"
                                     placeholder="اترك تعليف"></textarea>
-                                <button type="button" @click="add_comment()" class="bg-second-color btn btn-lg mt-2 text-white w-100 w-50">
+                                <button type="button" @click="add_comment()"
+                                    class="bg-second-color btn btn-lg mt-2 text-white w-100 w-50">
                                     ارسال
                                 </button>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-7">
-                        <div class="text-center" v-if="comments.data && comments.data.length == 0 ">
-                            <div class="border fs-1 rounded text-black-50 text-capitalize w-100">
-                                no comment Yet
-                            </div>
-                           
+                        <div class="h-100 position-relative text-center"  v-if="comments.data && comments.data.length == 0 ">
+                            <div class="border fs-4 position-absolute rounded text-black-50 text-capitalize top-50 w-100">
+                                لايوجد تعليقات كن اول من يضع تعليق </div>
                         </div>
                         <div class="single-comment mb-1 bg-white d-flex flex-row-reverse rounded position-relative pt-2 pb-2"
                             v-for="comment in comments.data" :key="comment.recipe">
@@ -130,20 +131,19 @@ export default {
 
 <style>
 #comments .topbar_comments {
-    background: url('https://media.istockphoto.com/id/1090430162/vector/abstract-soft-speed-futuristic-swoosh-wave-three-minimalistic-divider-swoosh-lines-in.jpg?s=170667a&w=0&k=20&c=YLUpavzVQPZeSTBhMG2V6SoJ6cuC_dlMtq_9zjtwOmA=');
+    /* background: url('https://media.istockphoto.com/id/1090430162/vector/abstract-soft-speed-futuristic-swoosh-wave-three-minimalistic-divider-swoosh-lines-in.jpg?s=170667a&w=0&k=20&c=YLUpavzVQPZeSTBhMG2V6SoJ6cuC_dlMtq_9zjtwOmA='); */
     height: 100px;
     text-align: center;
     padding-top: 10px;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-position: 47% 14%;
     background-origin: content-box;
-    background-size: auto;
+    background-size: auto; */
 }
 
 #comments .comments-area {
     width: 100%;
     height: auto;
-    margin: 6% 0;
 }
 
 #comments .comments-area .row {
@@ -180,5 +180,4 @@ export default {
         display: flex;
         flex-direction: column-reverse;
     }
-}
-</style>
+}</style>
