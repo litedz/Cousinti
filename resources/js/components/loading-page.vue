@@ -1,37 +1,18 @@
 
 <template>
-    <div class="loading-page">
-        <div>
-            <h1 class="">Loading ...</h1>
-            <div class="mt-5">
-                <div class="spinner-grow text-info"
-                     role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
-                <div class="spinner-grow text-info"
-                     role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
-                <div class="spinner-grow text-info"
-                     role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
-                <div class="spinner-grow text-info"
-                     role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
-                <div class="spinner-grow text-info"
-                     role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
-                <div class="spinner-grow text-info"
-                     role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
-                <div class="spinner-grow text-info"
-                     role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
+    <div class="loading-page h-100  position-fixed w-100 z-9999">
+        <div class="main bg-dark">
+            <div class="balls balls-1">
+                <div class="ball ball--1"></div>
+                <div class="ball ball--2"></div>
+                <div class="ball ball--3"></div>
+                <div class="ball ball--4"></div>
+            </div>
+            <div class="balls balls-2">
+                <div class="ball ball--1"></div>
+                <div class="ball ball--2"></div>
+                <div class="ball ball--3"></div>
+                <div class="ball ball--4"></div>
             </div>
         </div>
     </div>
@@ -53,19 +34,126 @@ $(document).ready(function () {
 </script>
   
 <style>
-.loading-page {
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 9999;
-    background: rgb(255, 255, 255);
+    height: 100vh;
+    position: relative;
 }
 
-.loading-page div:first-of-type {
-    position: relative;
-    margin: auto;
-    top: 40%;
-    text-align: center;
+.balls {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 40%;
+}
+
+.ball {
+    position: absolute;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background: peru;
+    border-radius: 50%;
+    margin: 0 20px;
+    animation: ball 4s infinite;
+}
+
+.ball--1 {
+    background-image: linear-gradient(to bottom, #FFE93E, #FF952A);
+}
+
+.ball--2 {
+    background-image: linear-gradient(to bottom, #FF009E, #FF0038);
+}
+
+.ball--3 {
+    background-image: linear-gradient(to bottom, #00F4FE, #00BDFB);
+}
+
+.ball--4 {
+    background-image: linear-gradient(to bottom, #FC00F9, #B500F9);
+}
+
+.balls-1 .ball--1 {
+    left: 20px;
+    animation-delay: 0;
+}
+
+.balls-1 .ball--2 {
+    left: 100px;
+    animation-delay: .05s;
+}
+
+.balls-1 .ball--3 {
+    left: 180px;
+    animation-delay: .1s;
+}
+
+.balls-1 .ball--4 {
+    left: 260px;
+    animation-delay: .15s;
+}
+
+.balls-2 .ball--1 {
+    left: 20px;
+    animation-delay: 2s;
+}
+
+.balls-2 .ball--2 {
+    left: 100px;
+    animation-delay: 2.05s;
+}
+
+.balls-2 .ball--3 {
+    left: 180px;
+    animation-delay: 2.1s;
+}
+
+.balls-2 .ball--4 {
+    left: 260px;
+    animation-delay: 2.15s;
+}
+
+@keyframes ball {
+
+    0%,
+    25% {
+        top: -50px;
+    }
+
+    35% {
+        top: calc(60% - 50px);
+    }
+
+    40% {
+        top: calc(45% - 50px);
+    }
+
+    45% {
+        top: calc(55% - 50px);
+    }
+
+    50%,
+    70% {
+        top: calc(50% - 25px);
+    }
+
+    80%,
+    100% {
+        top: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .balls {
+        left: 18%;
+    }
+
 }
 </style>

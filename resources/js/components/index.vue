@@ -331,7 +331,7 @@
 					</div>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img src="https://picsum.photos/id/59/1000" class="d-block w-100" alt=""
+							<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" class="d-block w-100" alt=""
 								style="width: 100%;height: 1000px;">
 							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
 								<h5 class="fs-1">القرود الغربي</h5>
@@ -345,7 +345,7 @@
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img src="https://picsum.photos/id/56/1000" class="d-block w-100" alt=""
+							<img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=780&q=80" class="d-block w-100" alt=""
 								style="width: 100%;height: 1000px;">
 							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
 								<h5 class="fs-1">Second slide label</h5>
@@ -359,7 +359,7 @@
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img src="https://picsum.photos/id/55/1000" class="d-block w-100" alt=""
+							<img src="https://images.unsplash.com/photo-1551106652-a5bcf4b29ab6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80" class="d-block w-100" alt=""
 								style="width: 100%;height: 1000px;">
 							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
 								<h5 class="fs-1">Third slide label</h5>

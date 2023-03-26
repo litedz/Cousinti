@@ -20,8 +20,7 @@
             <li>25</li>
             <li>ingredients</li>
           </div>
-          <div class="author border rounded-circle"><a :href="'/profile/' + this.single_recipe.user_id"><img
-                src="https://i.pravatar.cc/60" class="rounded-5"></a>
+          <div class="author border rounded-circle"><a :href="'/profile/'+this.single_recipe.user_id"><img src="https://i.pravatar.cc/60" class="rounded-5"></a>
           </div>
           <div class="likes d-flex align-items-center gap-2"><span
               class="border fa fa-thumbs-up p-1 rounded-4 text-bg-primary"></span>
@@ -35,7 +34,7 @@
       <div class="container">
         <div class="content">
           <div class="border-bottom fs-1 mx-auto text-center title w-50">
-            {{ this.single_recipe.name }}
+            {{this.single_recipe.name}}
           </div>
           <div class="mx-auto w-50">
             <ul class="list-ingredients d-grid gap-3 ">
@@ -50,8 +49,8 @@
 
     <div class="more-images" v-if="this.single_recipe.images_recipe && this.single_recipe.images_recipe.length > 2">
       <div class="container">
-        <div class="fs-3 heading mb-4 position-relative px-2 text-right " style="border-right: 4px solid #f6a5af;">More
-          photos</div>
+        <div  class="fs-3 heading mb-4 position-relative px-2 text-right " 
+          style="border-right: 4px solid #f6a5af;">More photos</div>
         <div class="row justify-content-center">
           <div class="col-3" v-for="img in this.single_recipe.images_recipe" :key="img">
             <img class="w-100 rounded-4" v-if="img.cover !== 'active'" :src="this.w_path + '/storage/recipes/' + img.name"

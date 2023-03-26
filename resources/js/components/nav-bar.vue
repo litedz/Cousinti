@@ -31,11 +31,12 @@
               class="text-decoration-none text-black">الرئيسة</a></div>
         </li>
       </div>
-      <div id="link-nav" class="hoverable p-2" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
+      <div id="link-nav" class="hoverable p-2 Dropable" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
         <li class="fs-5 pointer">
-          <div class="align-items-center d-flex gap-2 justify-content-center"><a
-              class="text-decoration-none text-black">مملحات</a><span
-              class="fa fa-2xs fa-chevron-down first-color"></span></div>
+          <div class="align-items-center d-flex gap-2 justify-content-center">
+            <a href="/similar/مملحات" class="text-decoration-none text-black">مملحات</a><span
+              class="fa fa-2xs fa-chevron-down first-color"></span>
+          </div>
           <div class="drowDownMenu p-3 position-absolute w-50 rounded z-8888 bg-white-p" style="left:25%;background:;">
             <div class="container">
               <div class="row g-2">
@@ -103,34 +104,15 @@
           </div>
         </li>
       </div>
-      <div id="link-nav" class="hoverable p-2" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
+      <div v-for="recipeType in types" :key="recipeType.name" id="link-nav" class="hoverable p-2"
+        @mouseenter="hoverLink()" @mouseleave="hoverLink()">
         <li class="fs-5 pointer">
-          <div class="align-items-center d-flex gap-2 justify-content-center"><a
-              class="text-decoration-none text-black">اكل صحي</a></div>
+          <div class="align-items-center d-flex gap-2 justify-content-center">
+            <a :href="'/similar/' + recipeType.type" class="text-decoration-none text-black">{{ recipeType.type }}</a>
+          </div>
         </li>
       </div>
-      <div id="link-nav" class="hoverable p-2" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
-        <li class="fs-5 pointer">
-          <div class="align-items-center d-flex gap-2 justify-content-center"><a
-              class="text-decoration-none text-black">معجنات</a><span
-              class="fa fa-2xs fa-chevron-down first-color"></span></div>
-        </li>
-      </div>
-      <div id="link-nav" class="hoverable p-2" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
-        <li class="fs-5 pointer">
-          <div class="align-items-center d-flex gap-2 justify-content-center"><a
-              class="text-decoration-none text-black">اكل خفيف</a><span
-              class="fa fa-2xs fa-chevron-down first-color"></span></div>
-        </li>
-      </div>
-      <div id="link-nav" class="hoverable p-2" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
-        <li class="fs-5 pointer">
-          <div class="align-items-center d-flex gap-2 justify-content-center"><a
-              class="text-decoration-none text-black">الضيوف</a><span
-              class="fa fa-2xs fa-chevron-down first-color"></span></div>
-        </li>
 
-      </div>
       <div
         class="social-media border-left border-right border-top bottom-0 contact d-flex gap-2 justify-content-center p-2 position-absolute rounded w-100"
         style="background:#fbfbfb;">
@@ -147,6 +129,7 @@
 export default {
   mounted() {
     window.addEventListener("scroll", this.wheneScroll);
+    this.getTypes();
   },
   unmounted() {
     window.removeEventListener("scroll", this.wheneScroll);
@@ -156,6 +139,7 @@ export default {
     return {
       show: "",
       rightBarShow: false,
+      types: '',
     };
   },
   methods: {
@@ -200,20 +184,23 @@ export default {
         });
       }
     },
-    toggleSubMenu() {
-      // $("a.active").removeClass("active");
-      // $("#navigation-bar #sub-menus").fadeOut();
-      // $(event.target).toggleClass("active");
-      // $(event.target).find("#sub-menus").fadeIn();
-      // $("#navigation-bar").mouseleave(function () {
-      //   $("#navigation-bar #sub-menus").fadeOut();
-      //   $("#navigation-bar").find("a.active").removeClass("active");
-      // });
-    },
+
     hoverLink() {
       $('body').find('active-link').removeClass('active-link');
       $(event.target).toggleClass('active-link');
       $(event.target).find('a').toggleClass('text-black text-white');
+    },
+    getTypes() {
+
+      axios({ method: "get", url: "/types_recipe" })
+        .then((response) => {
+          console.log(response);
+          if (response.data) {
+
+            this.types = response.data;
+          }
+        })
+        .catch((error) => { });
     }
   },
 };

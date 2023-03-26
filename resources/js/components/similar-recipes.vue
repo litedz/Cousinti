@@ -1,31 +1,28 @@
 <template>
-
-    <div class="similar-recipes w-100 h-auto mt-5 overflow-auto"
-         dir="rtl">
-        <div class="outer mx-auto w-75">
-            <div class="h1 font-amiri text-black-title"></div>
+    <div class="similar-recipes w-100 h-auto mt-5 overflow-auto" dir="rtl">
+        <div class="outer w-100">
+            <div class="cover-type h-25 position-relative rounded" >
+                <div class="bg-second-color h-100 opacity-50 overlay position-absolute w-100" ></div>
+                <div
+                    class="shadow-lg bg-white font-amiri h1 p-3 position-absolute rounded text-black-title text-center" style="left: 42%;top: 37.5%;width: 16%;">{{this.$attrs.type}}</div>
+            </div>
             <hr />
             <div class="container">
                 <div class="section">
                     <div class="row">
-                        <div class="col-6 col-xs-3 col-md-4" id="item" v-for="recipe in sameRecipe"
-                             :key="recipe.same">
-                            <div class="d-flex flex-column align-items-center">
-                                <img class="w-75 rounded"
-                                     v-for="cover in recipe.images_recipe"
-                                     :key="cover.recipe"
-                                     :src="w_path + '/storage/recipes/' + cover.name"
-                                     alt="" />
-                                <div class="title font-weight-light font-amiri h3 mt-3">
-                                    <a :href="'/recipes/' + recipe.id"
-                                       class="text-decoration-none text-first">{{ recipe.name }}</a>
+                        <div class="col-12 col-md-4" id="item" v-for="recipe in sameRecipe" :key="recipe.same">
+                            <div class="d-flex flex-column align-items-center gap-1">
+                                <img class="w-100 rounded" v-for="cover in recipe.images_recipe" :key="cover.recipe"
+                                    :src="w_path + '/storage/recipes/' + cover.name" alt="" />
+                                <div class="title font-weight-light font-amiri h3">
+                                    <a :href="'/recipes/' + recipe.id" class="text-black-title text-decoration-none">{{
+                                        recipe.name }}</a>
                                 </div>
-                                <div class="by d-flex">
+                                <div class="by d-flex gap-2">
                                     <div class="text-capitalize text-weight-500 text-black-50">
                                         الكاتب
                                     </div>
-                                    <a class="text-decoration-none text-info mx-1"
-                                       href="#">{{ recipe.author.username }}</a>
+                                    <a class="mx-1 opacity-75 second-color text-decoration-none" :href="'/profile/'+recipe.author.id">{{ recipe.author.username }}</a>
                                 </div>
                             </div>
                         </div>
@@ -34,6 +31,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="footer mt-5">
+            <footer-page></footer-page>
         </div>
     </div>
 </template>
@@ -54,8 +54,7 @@ export default {
         random_show() {
             setInterval(() => {
                 let x = document.querySelectorAll("#item").length;
-                $(
-                    ".item:nth-child(" + Math.floor(Math.random() * x) + 1 + ")"
+                $(".item:nth-child(" + Math.floor(Math.random() * x) + 1 + ")"
                 ).fadeToggle();
             }, 2000);
         },
@@ -85,4 +84,15 @@ export default {
 .similar-recipes .outer .section .row div.middle-col {
     margin-top: 3rem;
 }
-</style>
+.similar-recipes .outer .section .title a:hover {
+    color: #EF6F82 ;
+    transition: all 0.5s;
+}
+
+.similar-recipes .outer .cover-type {
+    background: url('/storage/types/default.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}</style>
