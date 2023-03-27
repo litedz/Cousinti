@@ -97,7 +97,7 @@
                   </div>
                   <div class="border-top text-black-title text-center">صابلي العيد خفيف </div>
                 </div>
-                <div class="more col-12"><a href="#" class="border btn btn-block btn-lg fs-5 rounded-5"
+                <div class="more col-12"><a href="/similar/مملحات" class="border btn btn-block btn-lg fs-5 rounded-5"
                     style="color: #E47C8D;">راية المزيد</a></div>
               </div>
             </div>

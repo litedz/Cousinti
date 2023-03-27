@@ -1,52 +1,49 @@
 <template>
-    <div class="login font-amiri">
+    <div class="login font-amiri mt-4">
         <status ref="status"></status>
         <loading-page></loading-page>
         <div class="d-flex p-mb-sm-4">
             <div class="cover">
-                <img class="" src="https://i.pinimg.com/564x/ac/60/7c/ac607c260e03deb80ce6e517291ce2b5.jpg" alt="" />
+                <img class="" :src="w_path+'/images/img-login.png'" alt="" />
             </div>
             <div class="content text-center mt-5">
-                <div class="steps d-flex align-items-center mx-auto p-mb-sm-4 w-100-sc w-100-md">
+                <div class="steps d-flex flex-row-reverse gap-4 align-items-center mx-auto p-mb-sm-4 w-100-sc w-100-md">
                     <div class="step">
                         <div class="align-items-center d-flex flex-column">
-                            <img style="width: 35%" src="https://cdn-icons-png.flaticon.com/512/3448/3448102.png" alt="" />
-                            <div class="title font-weight-bolder">
-                                Prepare recette
+                            <span class="fa fa-magnifying-glass-plus fa-solid second-color"></span>
+                            <div class="font-weight-bolder fs-4 text-black-title title">
+                                ابحث
                             </div>
                         </div>
                     </div>
                     <div class="separator"></div>
                     <div class="step">
                         <div class="align-items-center d-flex flex-column">
-                            <img style="width: 35%" src="https://cdn-icons-png.flaticon.com/512/3448/3448102.png" alt="" />
-                            <div class="title font-weight-bolder">
-                                Prepare recette
+                            <span class="fa fa-home fa-user-cog second-color"></span>
+                            <div class="font-weight-bolder fs-4 text-black-title title">
+                                جرب
                             </div>
                         </div>
                     </div>
                     <div class="separator"></div>
                     <div class="step">
                         <div class="align-items-center d-flex flex-column">
-                            <img style="width: 35%" src="https://cdn-icons-png.flaticon.com/512/3448/3448102.png" alt="" />
-                            <div class="title font-weight-bolder">
-                                Prepare recette
+                            <span class="fa fa-face-grin-stars second-color"></span>
+                            <div class="font-weight-bolder fs-4 text-black-title title">
+                                استمتع
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="overflow-hidden position-relative h-auto p-mt-lg-5 p-mt-md-4">
-                    <div class="position-absolute w-100 h-100 start-50 opacity-75" style="
-                                    background-image: url('http://127.0.0.1:8000/images/bg-login2.png');
-                                    background-position: left;
-                                "></div>
+                <div class="overflow-hidden position-relative h-auto p-mt-lg-5 p-mt-md-4"
+                    style="background-image: url('http://127.0.0.1:8000/images/bg-login2.png');background-position: left;">
+                    <div class="position-absolute w-100 h-100 start-50 opacity-75"></div>
                     <div class="m-auto">
                         <FormKit type="form" #default="{ state: { valid } }" @submit="login()" :actions="false"
-                            form-class="p-5 bg-white position-relative z-8888">
+                            form-class="bg-light m-lg-4 p-5 position-relative z-8888">
                             <div class="logo text-center">
                                 <img class="w-25" :src="this.w_path + '/images/logo.png'" alt="" />
                             </div>
-
                             <div class="text-black-title h1 mb-4 font-weight-bolder logo text-center">
                                 تسجيل الدخول
                             </div>
@@ -63,19 +60,20 @@
                                         <a class="text-decoration-none text-black m-1" href="#">تذكرني</a>
                                     </div>
                                     <div class="forget">
-                                        <a class="text-decoration-none text-first font-weight-bold" href="#">
+                                        <a class="text-decoration-none text-danger font-weight-bold" href="#">
                                             ? نسيت كلمة السر
                                         </a>
                                     </div>
                                 </div>
 
-                                <FormKit input-class="btn-primary-perso rounded mt-2 w-100 position-relative"
+                                <FormKit
+                                    input-class="bg-second-color btn-light fs-5 mt-2 p-1 position-relative rounded text-white w-100"
                                     :disabled="!valid" type="submit" :prefix-icon="this.lockIcon" label="دخول" />
 
                                 <div class="d-flex justify-content-end mt-3 text-black">
-                                    <p class="font-2 text-black-title">
-                                        لا تملك حساب ??
-                                        <a href="/register" class="text-decoration-none fw-bolder">انشاء واحد</a>
+                                    <p class="fs-6 text-black-title">
+                                        لا تملك حساب
+                                        <a href="/register" class="text-decoration-none fw-bolder">إنشاء حساب جديد</a>
                                     </p>
                                 </div>
                                 <div v-show="this.success_message.status" :class="'alert ' + success_message.class">
@@ -83,7 +81,7 @@
                                     </span>
                                 </div>
                                 <!-- // facebook login button  -->
-                                <div class="align-items-center bg-primary button-facebook d-flex font-amiri fs-6 fw-bold justify-content-center mx-auto p-2 rounded text-white w-50 pointer"
+                                <div class="align-items-center bg-primary button-facebook d-flex font-amiri fs-6 fw-bold justify-content-center mx-auto p-1 rounded text-white w-50 pointer"
                                     @click="ConnectToTheFacebook()">
                                     <img :src="w_path + '/images/faceicon.png'" alt="" data-v-aacc3324=""
                                         class="img-fluid mx-2" style="width: 25px;">
@@ -218,11 +216,11 @@ export default {
 
 <style scoped>
 .login {
-    background: #f3f3f3;
+    /* background: #f3f3f3; */
 }
 
 .login .content {
-    width: 75%;
+    width: 58%;
     height: max-content;
 }
 

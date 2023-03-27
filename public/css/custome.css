@@ -251,6 +251,15 @@ $utilities: map-merge(
     }
 }
 
+/* formkit customme */
+
+.formkit-message{
+    color: red;
+    font-weight: bolder;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
 @media only screen and (min-width: 790px) and (max-width: 1200px) {
     .w-100-md {
         width: 100% !important;

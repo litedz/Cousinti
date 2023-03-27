@@ -1,6 +1,6 @@
 
 <template>
-    <div class="loading-page h-100  position-fixed w-100 z-9999">
+    <div class="loading-page h-100  position-fixed w-100 z-9999 top-0">
         <div class="main bg-dark">
             <div class="balls balls-1">
                 <div class="ball ball--1"></div>
