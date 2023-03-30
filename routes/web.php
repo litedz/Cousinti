@@ -80,6 +80,8 @@ Route::get('/similar/{type}', function () {
 })->name('recipe.same_type');
 
 Route::post('/recipes/random', [RecipeController::class, 'randomRecipe'])->name('recipe.random');
+Route::post('/recipes/monthly', [RecipeController::class, 'RecipesMonthly'])->name('recipe.monthly');
+Route::post('/recipes/BestOf', [RecipeController::class, 'BestRecipe'])->name('recipe.BestOf');
 
 
 Route::middleware(['auth'])->group(function () {
@@ -120,11 +122,12 @@ Route::prefix('guest')->group(function () {
 Route::middleware(['auth'])->group(function () {
 
     Route::resource('user', UserController::class)->except(['store']);
-    Route::prefix('user')->group(function () {
-        Route::POST('avatar', [UserController::class, 'updateAvatar']);
-        Route::POST('password', [UserController::class, 'changePassword']);
-        Route::get('{recipe_id}/liked', [UserController::class, 'RecipeUserLiked'])->name('recipe.liked');
-    }
+    Route::prefix('user')->group(
+        function () {
+            Route::POST('avatar', [UserController::class, 'updateAvatar']);
+            Route::POST('password', [UserController::class, 'changePassword']);
+            Route::get('{recipe_id}/liked', [UserController::class, 'RecipeUserLiked'])->name('recipe.liked');
+        }
     );
 });
 
@@ -150,7 +153,4 @@ Route::post('/facebook/login', [LoginController::class, 'loginWithMedia']);
 
 
 Route::get('test', function () {
-    
 });
-
-

@@ -14,6 +14,6 @@ class types_recipes extends Seeder
      */
     public function run()
     {
-        model_types_recipes::factory(10)->create();
+        model_types_recipes::factory(4)->create();
     }
 }

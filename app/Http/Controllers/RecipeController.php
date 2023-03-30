@@ -11,6 +11,7 @@ use App\Models\recipe;
 use App\Models\types_recipes;
 use App\Models\User;
 use App\Rules\YoutubeRule;
+use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -33,7 +34,7 @@ class RecipeController extends Controller
     public function index()
     {
 
-        $recipes = RecipeResource::collection(recipe::with(['author', 'type', 'images_recipe' => function ($query) {
+        $recipes = RecipeResource::collection(recipe::with(['author', 'type_recipe', 'images_recipe' => function ($query) {
             $query->whereNotNull('cover')->get();
         }])->get());
 
@@ -109,7 +110,7 @@ class RecipeController extends Controller
     public function types_recipe()
     {
 
-        $types_recipe = types_recipes::select('type', 'id')->get();
+        $types_recipe = types_recipes::select('type', 'id', 'image')->get();
         return response()->json($types_recipe);
     }
 
@@ -385,5 +386,17 @@ class RecipeController extends Controller
             'random_recipe' => $random,
             'rating' => $rating,
         ]);
+    }
+
+    public function RecipesMonthly()
+    {
+
+        $recipeOfMonth = recipe::with(['type_recipe', 'images_recipe'])->whereMonth('created_at', Carbon::now()->format('m'))->limit(6)->get();
+        return response()->json($recipeOfMonth);
+    }
+    public function BestRecipe()
+    {
+        $BestRecipe = recipe::with(['type_recipe', 'images_recipe'])->orderByDesc('like')->limit(3)->get();
+        return response()->json($BestRecipe);
     }
 }

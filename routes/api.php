@@ -3,12 +3,14 @@
 use App\Http\Controllers\GuestRecipeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\UserController;
 use App\Http\Resources\RecipeResource;
 use App\Models\comments;
 use App\Models\Profile;
 use App\Models\recipe;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -56,3 +58,15 @@ use Illuminate\Support\Facades\Route;
 //     route::post('search/{search_key}', [GuestRecipeController::class, 'search'])->name('guest.recipe.search');
 // });
 
+
+// Route::get('test', function () {
+//     $s = recipe::whereMonth('created_at', Carbon::now()->format('m'))->limit(6)->get();
+//     // $a=Carbon::create('2000-01-01');
+//     // $c=$a->diff(Carbon::now());
+
+//     dd($s);
+//     //    return response()->json($s);
+// });
+
+// Route::post('/recipes/BestOf', [RecipeController::class, 'BestRecipe'])->name('recipe.BestOf');
+Route::resource('recipe', RecipeController::class);
