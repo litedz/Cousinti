@@ -337,31 +337,7 @@
 								<div class="d-flex flex-column gap-1 justify-content-start"><span
 										class="fs-4 name">Mohamed</span><span class="first-color fs-6">Pasta</span></div>
 							</div>
-							<div class="bg-light d-flex gap-2 m-1 px-2 rounded user"><img src="https://i.pravatar.cc/70"
-									alt="avatar" title="avatar" class="rounded-circle">
-								<div class="d-flex flex-column gap-1 justify-content-start"><span
-										class="fs-4 name">Mohamed</span><span class="first-color fs-6">Pasta</span></div>
-							</div>
-							<div class="bg-light d-flex gap-2 m-1 px-2 rounded user"><img src="https://i.pravatar.cc/70"
-									alt="avatar" title="avatar" class="rounded-circle">
-								<div class="d-flex flex-column gap-1 justify-content-start"><span
-										class="fs-4 name">Mohamed</span><span class="first-color fs-6">Pasta</span></div>
-							</div>
-							<div class="bg-light d-flex gap-2 m-1 px-2 rounded user"><img src="https://i.pravatar.cc/70"
-									alt="avatar" title="avatar" class="rounded-circle">
-								<div class="d-flex flex-column gap-1 justify-content-start"><span
-										class="fs-4 name">Mohamed</span><span class="first-color fs-6">Pasta</span></div>
-							</div>
-							<div class="bg-light d-flex gap-2 m-1 px-2 rounded user"><img src="https://i.pravatar.cc/70"
-									alt="avatar" title="avatar" class="rounded-circle">
-								<div class="d-flex flex-column gap-1 justify-content-start"><span
-										class="fs-4 name">Mohamed</span><span class="first-color fs-6">Pasta</span></div>
-							</div>
-							<div class="bg-light d-flex gap-2 m-1 px-2 rounded user"><img src="https://i.pravatar.cc/70"
-									alt="avatar" title="avatar" class="rounded-circle">
-								<div class="d-flex flex-column gap-1 justify-content-start"><span
-										class="fs-4 name">Mohamed</span><span class="first-color fs-6">Pasta</span></div>
-							</div>
+
 						</div>
 					</div>
 					<div class="content col-8">
