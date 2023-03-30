@@ -117,7 +117,7 @@ const app = createApp({
 app.component('pagination', Bootstrap5Pagination);
 
 
-app.component('index', index);
+app.component('index-page', index);
 app.component('login', login);
 app.component('search', search);
 app.component('dashboard', dashboard);

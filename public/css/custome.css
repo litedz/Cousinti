@@ -4,7 +4,8 @@
     color: #EF6F82 !important;
 }
 .second-color{
-    color: #8F625B !important;
+    color: #413C58 !important;
+    /* color: #8F625B !important; */
 }
 .third-color{
     color:#CDE990  !important;
@@ -16,7 +17,8 @@
     background: #EF6F82 !important;
 }
 .bg-second-color{
-    background: #8F625B !important;
+    background: #413C58 !important;
+    /* background: #8F625B !important; */
 }
 .bg-third-color{
     background:#CDE990  !important;

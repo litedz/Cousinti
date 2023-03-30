@@ -16,16 +16,16 @@
         </div>
       </div>
       <!-- Logo  website -->
-      <div class="border-bottom logo-menu pb-2 text-center w-100">
-        <img src="https://via.placeholder.com/150" class="rounded-circle">
+      <div class="border-bottom logo-menu pb-2 text-center w-100 position-relative">
+        <img :src="w_path + '/images/logo.png'" class="rounded-circle">
       </div><!-- Search Bar  -->
-      <div class="align-items-center d-flex gap-1 position-relative r search"><input type="text"
-          placeholder="  البحث في الموقع" class="form-control rounded"><span class="fa fa-search position-absolute"
-          style="left: 5%;color: #8F625B;"></span>
+      <div class="align-items-center d-flex gap-1 position-relative r search">
+        <input type="text" placeholder="  البحث في الموقع" class="form-control rounded"><span
+          class="fa fa-search position-absolute" style="left: 5%;color: #8F625B;"></span>
       </div>
       <!-- Links nav bar -->
 
-      <div id="link-nav" class="hoverable p-2" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
+      <div id="link-nav" class="hoverable p-2 active-link" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center"><a href="/"
               class="text-decoration-none text-black">الرئيسة</a></div>
@@ -37,7 +37,7 @@
             <a href="/similar/مملحات" class="text-decoration-none text-black">مملحات</a><span
               class="fa fa-2xs fa-chevron-down first-color"></span>
           </div>
-          <div class="drowDownMenu p-3 position-absolute w-50 rounded z-8888 bg-white-p" style="left:25%;background:;">
+          <div class="drowDownMenu p-3 position-absolute w-50 rounded z-8888 bg-white-p" style="left:25%;">
             <div class="container">
               <div class="row g-2">
                 <div class="col mx-1 rounded">
@@ -144,9 +144,16 @@ export default {
   },
   methods: {
     toggleNav() {
+      
       $("#" + event.target.getAttribute("data-target")).toggleClass("show_navbar");
+      
       $("#toggleButton").fadeToggle();
+      $(".logo-menu img").fadeToggle();
       $('.navbar').toggleClass('border-bottom border-top')
+
+      // if ($('#nav').hasClass('show_navbar')) {
+      //   $('#nav .logo-menu img').css('50%')
+      // }
     },
 
     SlideRightBar() {
@@ -186,7 +193,7 @@ export default {
     },
 
     hoverLink() {
-      $('body').find('active-link').removeClass('active-link');
+      $('#app').find('.active-link').removeClass('active-link');
       $(event.target).toggleClass('active-link');
       $(event.target).find('a').toggleClass('text-black text-white');
     },
@@ -194,7 +201,6 @@ export default {
 
       axios({ method: "get", url: "/types_recipe" })
         .then((response) => {
-          console.log(response);
           if (response.data) {
 
             this.types = response.data;
@@ -221,6 +227,13 @@ export default {
   border-radius: .25rem !important;
   transition: all 1s;
 }
+
+#nav .active-link a {
+
+  color: white !important;
+
+}
+
 
 
 #navigation-bar .top-bar {
@@ -300,6 +313,11 @@ nav.navbar {
 @media only screen and (max-width: 768px) {
 
 
+  .logo-menu img {
+    display: none;
+    width: 100%;
+  }
+
   .show_navbar {
     gap: 21px !important;
     width: 50% !important;
@@ -315,6 +333,12 @@ nav.navbar {
     z-index: 9999;
   }
 
+  .show_navbar .logo-menu img {
+    width: 100% !important;
+    transition: all 0.5s;
+  }
+
+
   #nav {
     position: fixed;
     flex-direction: column;
@@ -324,6 +348,7 @@ nav.navbar {
     display: flex;
     gap: 1rem;
     top: 0;
+    width: 50%;
   }
 
   #nav #link-nav {
@@ -377,6 +402,7 @@ nav.navbar {
   .social-media {
     display: none !important;
   }
+
 
   #nav {
     display: flex !important;

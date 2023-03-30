@@ -2,100 +2,110 @@
     <div class="login font-amiri mt-4">
         <status ref="status"></status>
         <loading-page></loading-page>
-        <div class="d-flex p-mb-sm-4">
-            <div class="cover">
-                <img class="" :src="w_path+'/images/img-login.png'" alt="" />
-            </div>
-            <div class="content text-center mt-5">
-                <div class="steps d-flex flex-row-reverse gap-4 align-items-center mx-auto p-mb-sm-4 w-100-sc w-100-md">
-                    <div class="step">
-                        <div class="align-items-center d-flex flex-column">
-                            <span class="fa fa-magnifying-glass-plus fa-solid second-color"></span>
-                            <div class="font-weight-bolder fs-4 text-black-title title">
-                                ابحث
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div
+                        class="align-items-center d-flex flex-row-reverse gap-4 justify-content-center p-mb-sm-4 steps w-100-md w-100-sc mb-4">
+                        <div class="step">
+                            <div class="align-items-center border d-flex flex-column p-2 rounded-circle px-3">
+                                <span class="fa fa-magnifying-glass-plus fa-solid text-info opacity-75"></span>
+                                <div class="font-weight-bolder fs-4 text-black-title title">
+                                    ابحث
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="step">
-                        <div class="align-items-center d-flex flex-column">
-                            <span class="fa fa-home fa-user-cog second-color"></span>
-                            <div class="font-weight-bolder fs-4 text-black-title title">
-                                جرب
+                        <div class="separator"></div>
+                        <div class="step">
+                            <div class="align-items-center border d-flex flex-column p-2 rounded-circle px-3">
+                                <span class="fa fa-home fa-user-cog text-danger opacity-75"></span>
+                                <div class="font-weight-bolder fs-4 text-black-title title">
+                                    جرب
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="step">
-                        <div class="align-items-center d-flex flex-column">
-                            <span class="fa fa-face-grin-stars second-color"></span>
-                            <div class="font-weight-bolder fs-4 text-black-title title">
-                                استمتع
+                        <div class="separator"></div>
+                        <div class="step">
+                            <div class="align-items-center border d-flex flex-column p-2 rounded-circle">
+                                <span class="fa fa-face-grin-stars text-warning opacity-75"></span>
+                                <div class="font-weight-bolder fs-4 text-black-title title">
+                                    استمتع
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="overflow-hidden position-relative h-auto p-mt-lg-5 p-mt-md-4"
-                    style="background-image: url('http://127.0.0.1:8000/images/bg-login2.png');background-position: left;">
-                    <div class="position-absolute w-100 h-100 start-50 opacity-75"></div>
-                    <div class="m-auto">
-                        <FormKit type="form" #default="{ state: { valid } }" @submit="login()" :actions="false"
-                            form-class="bg-light m-lg-4 p-5 position-relative z-8888">
-                            <div class="logo text-center">
-                                <img class="w-25" :src="this.w_path + '/images/logo.png'" alt="" />
-                            </div>
-                            <div class="text-black-title h1 mb-4 font-weight-bolder logo text-center">
-                                تسجيل الدخول
-                            </div>
-                            <div class="">
-                                <FormKit type="email" v-model="email" dir="rtl" input-class="form-control"
-                                    validation="required|email|length:3" name="اسم المستحدم" placeholder="اسم المستخدم" />
+                <div class="cover col-md-6">
+                    <img class="w-100" :src="w_path + '/images/img-login.png'" alt="" />
+                </div>
+                <div class="content text-center mt-5 col-12 col-md-6">
+                    <div class="overflow-hidden position-relative h-auto p-mt-lg-5 p-mt-md-4 content-login">
+                        <div class="position-absolute w-100 h-100 start-50 opacity-75"></div>
+                        <div class="m-auto">
+                            <FormKit type="form" #default="{ state: { valid } }" @submit="login()" :actions="false"
+                                form-class="bg-light m-lg-4 p-5 position-relative z-7777 d-grid gap-3">
+                                <div class="logo text-center">
+                                    <img :src="w_path + '/images/logo.png'" alt="" style="">
+                                </div>
+                                <div class="text-black-title h1 mb-4 font-weight-bolder  text-center">
+                                    تسجيل الدخول
+                                </div>
+                                <div class="">
+                                    <FormKit type="email" v-model="email" dir="rtl" input-class="form-control"
+                                        validation="required|email|length:3" name="اسم المستحدم"
+                                        placeholder="اسم المستخدم" />
 
-                                <FormKit type="password" v-model="password" dir="rtl" input-class="form-control mt-2"
-                                    validation="required|length:6" name="كلمة السر" placeholder="كلمة السر" />
-                                <div class="forgot_remember d-flex justify-content-between align-items-center mt-3">
-                                    <div class="remember_me d-flex align-items-center">
-                                        <FormKit type="checkbox" v-model="remember_me" dir="rtl"
-                                            input-class="form-check-input mt-2" name="remember" />
-                                        <a class="text-decoration-none text-black m-1" href="#">تذكرني</a>
+                                    <FormKit type="password" v-model="password" dir="rtl" input-class="form-control mt-2"
+                                        validation="required|length:6" name="كلمة السر" placeholder="كلمة السر" />
+                                    <div class="forgot_remember d-flex justify-content-between align-items-center mt-3">
+                                        <div class="remember_me d-flex align-items-center">
+                                            <FormKit type="checkbox" v-model="remember_me" dir="rtl"
+                                                input-class="form-check-input mt-2" name="remember" />
+                                            <a class="text-decoration-none text-black m-1" href="#">تذكرني</a>
+                                        </div>
+                                        <div class="forget">
+                                            <a class="text-decoration-none text-danger font-weight-bold" href="#">
+                                                ? نسيت كلمة السر
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="forget">
-                                        <a class="text-decoration-none text-danger font-weight-bold" href="#">
-                                            ? نسيت كلمة السر
-                                        </a>
+
+                                    <FormKit
+                                        input-class="bg-first-color border-0 formkit-input fs-5 mt-2 p-1 position-relative rounded text-white w-100"
+                                        :disabled="!valid" type="submit" :prefix-icon="this.lockIcon" label="دخول" />
+
+                                    <div class="d-flex justify-content-end mt-3 text-black">
+                                        <p class="fs-6 text-black-title">
+                                            لا تملك حساب
+                                            <a href="/register" class="text-decoration-none fw-bolder">إنشاء حساب جديد</a>
+                                        </p>
+                                    </div>
+                                    <div v-show="this.success_message.status" :class="'alert ' + success_message.class">
+                                        <span v-html="success_message.message">
+                                        </span>
+                                    </div>
+                                    <!-- // facebook login button  -->
+                                    <div class="d-flex justify-content-end">
+                                        <div class="align-items-center bg-primary button-facebook d-flex font-amiri fs-6 fw-bold justify-content-center  p-1 rounded-pill text-white w-50 pointer"
+                                            @click="ConnectToTheFacebook()">
+                                            <img :src="w_path + '/images/faceicon.png'" alt="" data-v-aacc3324=""
+                                                class="img-fluid mx-2" style="width: 25px;">
+                                            <div class="text">تسجيل عن طريق الفيس بوك</div>
+                                        </div>
                                     </div>
                                 </div>
-
-                                <FormKit
-                                    input-class="bg-second-color btn-light fs-5 mt-2 p-1 position-relative rounded text-white w-100"
-                                    :disabled="!valid" type="submit" :prefix-icon="this.lockIcon" label="دخول" />
-
-                                <div class="d-flex justify-content-end mt-3 text-black">
-                                    <p class="fs-6 text-black-title">
-                                        لا تملك حساب
-                                        <a href="/register" class="text-decoration-none fw-bolder">إنشاء حساب جديد</a>
-                                    </p>
+                                <div class="back">
+                                    <div class="align-items-center d-flex gap-1 justify-content-end px-3"><a href="/"
+                                            class="first-color fw-bolder text-decoration-none">الرئيسية</a><span
+                                            class="fa fa-arrow-right text-black-title"></span></div>
                                 </div>
-                                <div v-show="this.success_message.status" :class="'alert ' + success_message.class">
-                                    <span v-html="success_message.message">
-                                    </span>
-                                </div>
-                                <!-- // facebook login button  -->
-                                <div class="align-items-center bg-primary button-facebook d-flex font-amiri fs-6 fw-bold justify-content-center mx-auto p-1 rounded text-white w-50 pointer"
-                                    @click="ConnectToTheFacebook()">
-                                    <img :src="w_path + '/images/faceicon.png'" alt="" data-v-aacc3324=""
-                                        class="img-fluid mx-2" style="width: 25px;">
-                                    <div class="text">تسجيل عن طريق الفيس بوك</div>
-                                </div>
-
-                            </div>
-
-                        </FormKit>
+                            </FormKit>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer-page></footer-page>
+
     </div>
 </template>
 
@@ -220,7 +230,7 @@ export default {
 }
 
 .login .content {
-    width: 58%;
+    /* width: 58%; */
     height: max-content;
 }
 
@@ -229,23 +239,26 @@ export default {
 }
 
 .login .content div:last-of-type {
-    height: 60%;
+    /* height: 60%; */
 }
 
 .login .content div:last-of-type .h1 {
     letter-spacing: 0.04rem;
 }
 
-.login .content div:last-of-type .m-auto {
-    width: 50%;
-}
+.login .content div:last-of-type .m-auto {}
 
-.login .cover {
-    width: 50%;
-}
+.login .cover {}
 
 .login .cover img {
-    width: 75%;
+    /* width: 75%; */
+}
+
+.login .content .content-login {
+    /* background-image: url('~/images/bg-login2.png');
+    background-position: 10%;
+    background-size: contain;
+    background-repeat: no-repeat; */
 }
 
 .formkit-message {
@@ -278,9 +291,9 @@ export default {
 }
 
 .login .steps .separator {
-    width: 30%;
+    width: 10%;
     height: 1px;
-    background: #164;
+    background: #c9c9c9;
 }
 
 @media only screen and (max-width: 900px) {

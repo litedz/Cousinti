@@ -1,7 +1,6 @@
 <template>
 	<div class="wrapper d-grid gap-5 " dir="rtl">
-		<section class="header d-grid gap-5" @click="test">
-			<top-bar></top-bar>
+		<section class="header d-grid gap-5">
 			<div class="nav-bar-home">
 				<nav-bar></nav-bar>
 			</div>
@@ -331,8 +330,8 @@
 					</div>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" class="d-block w-100" alt=""
-								style="width: 100%;height: 1000px;">
+							<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+								class="d-block w-100" alt="" style="width: 100%;height: 1000px;">
 							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
 								<h5 class="fs-1">القرود الغربي</h5>
 								<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
@@ -345,8 +344,8 @@
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=780&q=80" class="d-block w-100" alt=""
-								style="width: 100%;height: 1000px;">
+							<img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=780&q=80"
+								class="d-block w-100" alt="" style="width: 100%;height: 1000px;">
 							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
 								<h5 class="fs-1">Second slide label</h5>
 								<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
@@ -359,8 +358,8 @@
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img src="https://images.unsplash.com/photo-1551106652-a5bcf4b29ab6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80" class="d-block w-100" alt=""
-								style="width: 100%;height: 1000px;">
+							<img src="https://images.unsplash.com/photo-1551106652-a5bcf4b29ab6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
+								class="d-block w-100" alt="" style="width: 100%;height: 1000px;">
 							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
 								<h5 class="fs-1">Third slide label</h5>
 								<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
@@ -504,13 +503,14 @@
 </template>
 
 <script>
-import Typewriter from "typewriter-effect/dist/core";
+// import Typewriter from "typewriter-effect/dist/core";
+
 export default {
 	inject: ["w_path"],
 	mounted() {
 		window.addEventListener("scroll", this.wheneScroll);
 		this.availableTypes();
-		this.autoType();
+		// this.autoType();
 
 	},
 	unmounted() {
@@ -638,23 +638,12 @@ export default {
 	height: 5000px;
 }
 
-.logo {
-	background: url('~/images/image-removebg.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: 46%;
-}
-
-
-
 .random-recipes .recipe:hover .overlay {
 
 	opacity: 1 !important;
 	transition: all 1s;
 
 }
-
-
 .left-bar .header:after {
 	content: '';
 	background: #bdbdbd;
@@ -805,4 +794,5 @@ section.subscribe div:first-of-type {
 	line-height: 40px;
 	font-style: normal;
 	color: #ef6f82;
-}</style>
+}
+</style>

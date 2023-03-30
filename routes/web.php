@@ -150,5 +150,7 @@ Route::post('/facebook/login', [LoginController::class, 'loginWithMedia']);
 
 
 Route::get('test', function () {
-    return view('test');
+    
 });
+
+

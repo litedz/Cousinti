@@ -1,102 +1,92 @@
 <template>
-  <div class="register-page">
-    <div class="content">
-      <status ref="status"></status>
-      <img :src="avatar" alt="">
-      <div class="register-area">
-        <div class="container">
-          <div class="row position-relative">
-            <div class="col-12 col-md-5 position-relative">
-              <div class="cover rounded-left">
-                <div class="img-cover w-100 h-100 position-absolute" style="z-index: 1">
-                  <img src="https://img.le-dictionnaire.com/cuisine.jpg" alt="" srcset=""
-                    class="h-100 w-100 rounded-left" />
-                </div>
-                <div class="h-100 opacity-50 opt position-absolute w-100 rounded-left" style="z-index: 10"></div>
-              </div>
-              <div
-                class="d-flex flex-column justify-content-evenly p-3 position-absolute text-white top-0 mt-5 rounded-left"
-                style="z-index: 11" dir="rtl">
-                <div class="title h1">نص الحساب</div>
-                <div class="font-08 lh-lg mt-4 text">
-                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس
-                  المساحة، لقد تم توليد هذا النص من مولد النص
-                  العربى، حيث يمكنك أن تولد مثل هذا النص أو
-                  العديد من النصوص الأخرى ...
-                </div>
+  <div class="register">
+    <status ref="status"></status>
+    <div class="container-fluid p-0">
+      <div class="row">
+        <div class="col-md-6 position-relative p-d-none-sc">
+          <div class="cover-container d-block h-100 position-fixed w-50" dir="rtl">
+            <div class="bg-second-color h-100 opacity-75 opt position-absolute w-100">
+              <div class="d-flex flex-column h-50 justify-content-center px-5 text">
+                <h1 class="fs-1 fw-bold text-white">انضم الينا اليوم واستمتع بالعديد من الوصفات اللذيذة!</h1>
+                <div class="fw-bold lh-lg text-white w-75">هل تبحث عن مصدر جيد للوصفات اللذيذة والمميزة؟ إذًا لا داعي
+                  للمزيد من البحث! سجل الآن على موقعنا الخاص بالوصفات الطعامية واستمتع بالعديد من المزايا الرائعة. بعد
+                  التسجيل، ستتمكن من الوصول إلى مجموعة كبيرة ومتنوعة من الوصفات، بما في ذلك الأطباق الرئيسية والحلويات
+                  والمقبلات والمشروبات والمزيد. ستتمكن أيضًا من حفظ وصفاتك المفضلة ومشاركتها مع أصدقائك وعائلتك. وما هو
+                  أفضل من ذلك؟ جميع الوصفات على موقعنا تم اختبارها واعتمادها من قبل خبراء الطهي، لذا يمكنك الاعتماد عليها
+                  لإعداد وجبات طعام رائعة لعائلتك وضيوفك. لا تفوت هذه الفرصة للاستمتاع بأشهى الوصفات الطعامية وتسجيل
+                  الدخول الى عالم الطهي الرائع. انضم الينا اليوم!</div>
               </div>
             </div>
-            <div class="col-12 col-md-5">
-              <div class="form h-100 p-2 pt-3 rounded-right border border-bottom-0" dir="rtl">
-                <div class="Sing-with w-100 border-bottom p-2 text-center">
-                  <!-- Login Button facebook -->
-                  <div
-                    class="align-items-center bg-primary button-facebook d-flex font-amiri fs-6 fw-bold justify-content-center mx-auto p-2 rounded text-white w-50 pointer"
-                    @click="ConnectToTheFacebook()">
-                    <img :src="w_path+'/images/faceicon.png'"  class="img-fluid mx-2" style="width: 25px;">
-                    <div class="text">تسجيل عن طريق الفيس بوك</div>
-                  </div>
-                  <!--    -->
-                </div>
-                <FormKit type="form" :actions="false">
-                  <FormKit type="text" v-model="username" dir="rtl" input-class="form-control mb-2 font-amiri fs-5"
-                    validation="required|length:3" name="username" label="اسم المستعار"
-                    label-class="mb-2 font-amiri font-2 me-1 mt-2" placeholder="اسم المستعار . . ." />
-
-                  <div class="d-flex">
-                    <FormKit type="text" v-model="first_name" dir="rtl" wrapper-class="m-1"
-                      input-class="form-control mb-2 font-amiri fs-5" validation="required|length:3" name="name"
-                      label="اسم الاول" label-class="mb-2 font-amiri font-2 me-1 mt-2" placeholder="اسم الاول . . ." />
-                    <FormKit type="text" wrapper-class="m-1" v-model="last_name" dir="rtl"
-                      input-class="form-control mb-2 font-amiri fs-5" validation="required|length:3" name="name"
-                      label="اسم الثاني" label-class="mb-2 font-amiri font-2 me-1 mt-2"
-                      placeholder="اسم الثاني . . ." />
-                  </div>
-                  <FormKit type="email" v-model="email" dir="rtl" input-class="form-control mb-2 font-amiri fs-5"
-                    validation="required|email|length:3" name="email" label="الايمايل"
-                    label-class="mb-2 font-amiri font-2 me-1 mt-2" placeholder="الايمايل الخاص بك  . . ." />
-
-                  <div class="d-flex">
-                    <FormKit type="tel" v-model="phone" dir="rtl" wrapper-class="m-1"
-                      input-class="form-control mb-2 font-amiri fs-5" validation="required|length:3" name="phone"
-                      label="الهاتف" label-class="mb-2 font-amiri font-2 me-1 mt-2" placeholder="07777777 " />
-                    <FormKit type="number" wrapper-class="m-1" v-model="age" dir="rtl"
-                      input-class="form-control mb-2 font-amiri fs-5" validation="required|max:100|numeric" name="name"
-                      label="العمر :" label-class="mb-2 font-amiri font-2 me-1 mt-2" placeholder="العمر . . ." />
-                  </div>
-                  <FormKit type="password" v-model="password" dir="rtl" input-class="form-control mb-2 font-amiri fs-5"
-                    validation="required|length:5" name="password" label="كلمة السر"
-                    label-class="mb-2 font-amiri font-2 me-1 mt-2" placeholder="كلمة السر . . ." />
-
-                  <FormKit type="password" v-model="password_confirm" dir="rtl"
-                    input-class="form-control mb-2 font-amiri fs-5" validation="required|confirm"
-                    name="password_confirm" label="اعادة كلمة السر" label-class="mb-2 font-amiri font-2 me-1 mt-2"
-                    placeholder="اعادة كلمة السر . . ." />
-
-                  <FormKit type="file" v-model="avatar" name="avatar" id="avatar"
-                    input-class="form-control mb-2 font-amiri fs-5" label="اختر صورة للحساب"
-                    label-class="mb-2 font-amiri font-2 me-1 mt-2" validation="required" />
-
-
-                  <FormKit
-                    input-class="btn btn-block btn-primary font-amiri font-weight-bold formkit-input fs-4 mt-3 w-50"
-                    @click="register()" type="button" label="تسجيل" />
-
-
-
-                  <div class="">
-                    <img class="mb-5 w-75" :src="path + '/images/bg-login.png'" alt="" />
-                  </div>
-                </FormKit>
-              </div>
-            </div>
-            <div class="overflow-hidden shape w-100">
-              <img :src="w_path + '/images/login-shape.png'" alt="" />
-            </div>
+            <div class="img"><img
+                src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1568&amp;q=80"
+                alt="" srcset="" class="h-100 w-100"></div>
           </div>
         </div>
+        <div class="col-md-4 offset-1">
+          <div class="back">
+            <div class="align-items-center d-flex gap-1 justify-content-end">
+              <a href="/" class="first-color fw-bolder text-decoration-none">الرئيسية</a><span
+                class="fa fa-arrow-right text-black-title"></span>
+            </div>
+          </div>
+          <div class="form h-100 p-2 pt-3 rounded-right border border-bottom-0 mt-4" dir="rtl">
+            <div class="w-100 border-bottom p-2 text-center">
+              <div class="logo text-center">
+                <img :src="w_path + '/images/logo.png'" alt="" style="">
+              </div>
+            </div>
+            <FormKit type="form" :actions="false" form-class="d-grid  gap-2 pt-2">
+              <FormKit type="text" v-model="username" dir="rtl" input-class="form-control font-amiri fs-5"
+                validation="required|length:3" name="username" label="اسم المستعار"
+                label-class="mb-2 font-amiri font-2 me-1 " placeholder="اسم المستعار . . ." />
+
+              <div class="d-flex">
+                <FormKit type="text" v-model="first_name" dir="rtl" wrapper-class="m-1"
+                  input-class="form-control font-amiri fs-5" validation="required|length:3" name="name" label="اسم الاول"
+                  label-class="mb-2 font-amiri font-2 me-1" placeholder="اسم الاول . . ." />
+                <FormKit type="text" wrapper-class="m-1" v-model="last_name" dir="rtl"
+                  input-class="form-control font-amiri fs-5" validation="required|length:3" name="name" label="اسم الثاني"
+                  label-class="mb-2 font-amiri font-2 me-1" placeholder="اسم الثاني . . ." />
+              </div>
+              <FormKit type="email" v-model="email" dir="rtl" input-class="form-control font-amiri fs-5"
+                validation="required|email|length:3" name="email" label="الايمايل"
+                label-class="mb-2 font-amiri font-2 me-1" placeholder="الايمايل الخاص بك  . . ." />
+
+              <div class="d-flex">
+                <FormKit type="tel" v-model="phone" dir="rtl" wrapper-class="m-1"
+                  input-class="form-control font-amiri fs-5" validation="required|length:3" name="phone" label="الهاتف"
+                  label-class="mb-2 font-amiri font-2 me-1" placeholder="07777777 " />
+                <FormKit type="number" wrapper-class="m-1" v-model="age" dir="rtl"
+                  input-class="form-control font-amiri fs-5" validation="required|max:100|numeric" name="name"
+                  label="العمر :" label-class="mb-2 font-amiri font-2 me-1" placeholder="العمر . . ." />
+              </div>
+              <FormKit type="password" v-model="password" dir="rtl" input-class="form-control font-amiri fs-5"
+                validation="required|length:5" name="password" label="كلمة السر" label-class="mb-2 font-amiri font-2 me-1"
+                placeholder="كلمة السر . . ." />
+
+              <FormKit type="password" v-model="password_confirm" dir="rtl" input-class="form-control font-amiri fs-5"
+                validation="required|confirm" name="password_confirm" label="اعادة كلمة السر"
+                label-class="mb-2 font-amiri font-2 me-1" placeholder="اعادة كلمة السر . . ." />
+
+              <FormKit type="file" v-model="avatar" name="avatar" id="avatar" input-class="form-control font-amiri fs-5"
+                label="اختر صورة للحساب" label-class="mb-2 font-amiri font-2 me-1" validation="required" />
+
+
+              <FormKit input-class="bg-first-color btn font-amiri font-weight-bold fs-4 text-white w-100"
+                @click="register()" type="button" label="تسجيل" />
+            </FormKit>
+            <!-- Login Button facebook -->
+            <div
+              class="align-items-center bg-primary button-facebook d-flex font-amiri fs-6 fw-bold justify-content-center mx-auto p-2 rounded text-white w-50 pointer"
+              @click="ConnectToTheFacebook()">
+              <img :src="w_path + '/images/faceicon.png'" class="img-fluid mx-2" style="width: 25px;">
+              <div class="text">تسجيل عن طريق الفيس بوك</div>
+            </div>
+            <!--    -->
+          </div>
+
+        </div>
       </div>
-      <footer-page></footer-page>
     </div>
   </div>
 </template>
@@ -217,14 +207,14 @@ export default {
           this.UserIdFace = profile.id;
           this.age = parseInt(moment(profile.birthday).fromNow());
           this.GetAvatar();
-          
+
         });
     },
     GetAvatar() {
       console.log('fetchin avatar .....');
       axios.get('https://graph.facebook.com/v16.0/me/picture?redirect=false&type=large&access_token=' + this.accessTokenFb)
         .then((response) => {
-          this.avatar =response.data.data.url;
+          this.avatar = response.data.data.url;
           this.registerWithFacebook();
         });
     },
@@ -250,9 +240,9 @@ export default {
               "حساب جديد"
             );
             setTimeout(() => {
-              window.location.href ='/dashboard'
+              window.location.href = '/dashboard'
             }, 3000);
-            
+
           }
         });
 
@@ -262,62 +252,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.register-page .content {
-  width: 100%;
-  height: auto;
-  top: 28%;
-  position: absolute;
-}
-
-.register-page .content .register-area {
-  width: 100%;
-  height: auto;
-  position: relative;
-  top: 15%;
-  background: white;
-  margin-bottom: 10%;
-}
-
-.register-page .content .register-area .row .col-12:last-of-type {
-  background: #d9d9d9;
-}
-
-.register-page .content .register-area .cover {
-  height: 500px;
-  background: #168272;
-}
-
-.register-page .content .register-area .cover .opt {
-  background: #168272;
-}
-
-.register-page .content .register-area .form {
-  background: hsl(0deg 0% 98%);
-}
-
-.register-page .content .register-area .shape {
-  position: absolute;
-  bottom: -4%;
-  left: -7%;
-}
-
-@media only screen and (max-width: 790px) {
-  .register-page .content {
-    height: auto;
-  }
-
-  .register-page .content .register-area {
-    height: auto;
-    margin-bottom: 4rem;
-  }
-
-  .register-page .content .register-area .shape {
-    display: none;
-  }
-
-  .register-page .content .register-area .col-12 {
-    padding: 0;
-  }
-}
-</style>
+<style scoped></style>
