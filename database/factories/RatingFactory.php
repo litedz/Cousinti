@@ -3,8 +3,8 @@
 namespace Database\Factories;
 
 use App\Models\recipe;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Foundation\Auth\User;
 
 class RatingFactory extends Factory
 {
