@@ -180,8 +180,8 @@
 		</section>
 		<section class="categories d-grid gap-5">
 			<div class="align-items-center d-flex flex-column heading justify-content-center position-relative text-center">
-				<img src="http://127.0.0.1:8000/images/shape-v2.png" class="" style="width:120px;"><span
-					class="fs-1 mt-2 position-absolute top-50 w-100">Heading</span>
+				<img :src="w_path + '/images/shape-v2.png'" class="" style="width:120px;">
+				<span class="fs-1 mt-2 position-absolute top-50 w-100">Heading</span>
 			</div>
 			<div class="container-fluid">
 				<div class="row">
@@ -318,7 +318,7 @@
 		<section class="d-grid interesting">
 			<div class="border-top container d-grid gap-5 mt-1">
 				<div class="d-flex flex-column fs-1 heading-separator mb-3 mt-3 position-relative text-center"><span
-						class="">interesting</span><img src="http://127.0.0.1:8000/images/seperator-interesting.png" alt=""
+						class="">interesting</span><img :src="w_path + '/images/seperator-interesting.png'" alt=""
 						class="position-absolute w-25" style="left:38%;top:85%;"></div>
 				<div class="border-top pt-3 row">
 					<div class="col-3 right-bar">
