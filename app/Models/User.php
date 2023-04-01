@@ -18,8 +18,8 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    
-     protected $with='profile_setting';
+
+    protected $with = 'profile_setting';
     protected $fillable = [
         'username',
         'last_name',
@@ -32,7 +32,8 @@ class User extends Authenticatable
         'avatar',
         'Id_user_media',
         'profile_id',
-        
+        'rank_id',
+
     ];
     /**
      * The attributes that should be hidden for serialization.
@@ -64,11 +65,10 @@ class User extends Authenticatable
     }
     public function profile_setting()
     {
-       return $this->belongsTo(Profile::class,'profile_id','id');
+        return $this->belongsTo(Profile::class, 'profile_id', 'id');
     }
     public function Comments()
     {
-       return $this->hasMany(comments::class)->limit(2)->latest();
+        return $this->hasMany(comments::class)->limit(2)->latest();
     }
-
 }
