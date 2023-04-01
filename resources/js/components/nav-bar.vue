@@ -144,9 +144,9 @@ export default {
   },
   methods: {
     toggleNav() {
-      
+
       $("#" + event.target.getAttribute("data-target")).toggleClass("show_navbar");
-      
+
       $("#toggleButton").fadeToggle();
       $(".logo-menu img").fadeToggle();
       $('.navbar').toggleClass('border-bottom border-top')
@@ -401,6 +401,11 @@ nav.navbar {
   .show_navbar .logo-menu,
   .social-media {
     display: none !important;
+  }
+
+  .logo-menu img {
+    display: none;
+    width: 100%;
   }
 
 

@@ -69,6 +69,6 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Route::post('/recipes/BestOf', [RecipeController::class, 'BestRecipe'])->name('recipe.BestOf');
-// Route::resource('recipe', RecipeController::class);
+Route::resource('recipe', RecipeController::class);
 
 Route::get('/user/mostPosted',[GuestRecipeController::class,'MostPosted']);

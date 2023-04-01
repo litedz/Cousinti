@@ -7,6 +7,7 @@ use App\Listeners\TestListener;
 use App\Models\recipe;
 use App\Models\types_recipes;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
@@ -27,14 +28,25 @@ class GuestRecipeController extends Controller
 
     public function index()
     {
-
-
-        $recipes = collect(recipe::with(['author', 'type_recipe', 'images_recipe' => function ($query) {
+        $recipes = collect(recipe::with(['author', 'comments', 'type_recipe', 'images_recipe' => function ($query) {
             $query->whereNotNull('cover')->get();
-        }])->whereHas('images_recipe')->get());
-
-
-        return response()->json(["recipes" => $recipes]);
+        }])
+            ->whereHas('images_recipe')
+            ->get());
+        $RecipeMostComment = collect(recipe::with('comments')->whereHas('comments')->get())->sortByDesc('comments')->take(2);
+        $UserMostPosted = collect(User::with('recipes')->whereHas('recipes')->get())->sortByDesc('recipes')->take(7);
+        $BestRecipe = recipe::with(['type_recipe', 'images_recipe'])->orderByDesc('like')->limit(3)->get();
+        $recipesOfMonth = recipe::with(['type_recipe', 'images_recipe','author'=> function($query){
+            $query->with('rank')->get();
+        }])->whereMonth('created_at', Carbon::now()->format('m'))->limit(6)->get();
+     
+        return response()->json([
+            "recipes" => $recipes,
+            'MostComment' => $RecipeMostComment,
+            'UserMostPosted' => $UserMostPosted,
+            'BestRecipe' => $BestRecipe,
+            'recipesOfMonth' => $recipesOfMonth,
+        ]);
     }
 
     /**
@@ -108,14 +120,5 @@ class GuestRecipeController extends Controller
         return response()->json(RecipeResource::collection(recipe::with(['author', 'images_recipe' => function ($query) {
             $query->whereNotNull('cover')->get();
         }])->where('name', 'like', '%' . $type . '%')->get()));
-    }
-
-
-    public function MostPosted()
-    {
-
-        $MostPosted = User::with('recipes')->whereHas('recipes')->get();
-
-        return response(collect($MostPosted)->sortByDesc('recipes')->take(7), 200);
     }
 }

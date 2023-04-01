@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\CommentResource;
 use App\Models\comments;
+use App\Models\recipe;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Request as FacadesRequest;
 
@@ -18,8 +19,7 @@ class CommentsController extends Controller
      */
     public function index()
     {
-
-        dd('xxxx');
+ 
     }
 
     /**
@@ -98,6 +98,4 @@ class CommentsController extends Controller
     {
         //
     }
-
-
 }

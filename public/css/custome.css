@@ -27,6 +27,14 @@
     background: #e5e7eb !important;
 }
 
+.color-link{
+    cursor: pointer;
+    color: hsl(191, 64%, 40%) !important;
+}
+.color-link:hover{
+    color: hsl(191, 64%, 30%) !important;
+}
+
 /* Standar style */
 
 ul {

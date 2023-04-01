@@ -38,7 +38,11 @@ class RecipeController extends Controller
             $query->whereNotNull('cover')->get();
         }])->get());
 
-        return response()->json(["recipes" => $recipes]);
+        return response()->json([
+            "recipes" => $recipes
+            
+        
+        ]);
     }
 
     /**
@@ -398,5 +402,10 @@ class RecipeController extends Controller
     {
         $BestRecipe = recipe::with(['type_recipe', 'images_recipe'])->orderByDesc('like')->limit(3)->get();
         return response()->json($BestRecipe);
+    }
+    public function MostPosted()
+    {
+        $UserMostPosted = collect(User::with('recipes')->whereHas('recipes')->get())->sortByDesc('recipes')->take(7);
+        return response()->json($UserMostPosted);
     }
 }

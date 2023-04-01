@@ -71,4 +71,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(comments::class)->limit(2)->latest();
     }
+    public function rank()
+    {
+       return $this->belongsTo(rank::class);
+    }
 }

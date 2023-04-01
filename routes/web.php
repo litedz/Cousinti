@@ -78,12 +78,7 @@ Route::get('/recipes/{recipe_id}', function ($recipe_id) {
 Route::get('/similar/{type}', function () {
     return view('recipes.same_type_recipe');
 })->name('recipe.same_type');
-
 Route::post('/recipes/random', [RecipeController::class, 'randomRecipe'])->name('recipe.random');
-Route::post('/recipes/monthly', [RecipeController::class, 'RecipesMonthly'])->name('recipe.monthly');
-Route::post('/recipes/BestOf', [RecipeController::class, 'BestRecipe'])->name('recipe.BestOf');
-
-
 Route::middleware(['auth'])->group(function () {
 
 
@@ -98,7 +93,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/recipes/search/{key}', [RecipeController::class, 'search_recipe'])->name('recipe.search');
     Route::get('/recipes/filter/{by}', [RecipeController::class, 'filter_recipes'])->name('recipe.filter');
     Route::post('recipe/like/{recipe_id}', [RecipeController::class, 'like_recipe']);
-
     Route::delete('recipe/image/{image_id}', [RecipeController::class, 'RemovePrevImage'])->name('recipe.image.remove');
 
 
@@ -153,4 +147,5 @@ Route::post('/facebook/login', [LoginController::class, 'loginWithMedia']);
 
 
 Route::get('test', function () {
+
 });

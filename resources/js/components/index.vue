@@ -7,7 +7,7 @@
 			<div class="Top-recipes" dir="rtl">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-4 p-0" v-for="recipe in  BestRecipes" :key="recipe.best">
+						<div class="col-12 col-md-4 p-0" v-for="recipe in  BestRecipes" :key="recipe.best">
 							<div class="position-relative recipe">
 								<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
 									style="background:linear-gradient(1deg, black,transparent, transparent);">
@@ -24,8 +24,8 @@
 									</div>
 								</div>
 								<img class="w-100" v-if="recipe.images_recipe.length !== 0"
-									:src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name" alt="">
-								<img class="w-100" v-else :src="w_path + '/storage/recipes/default-cover.png'" alt="">
+									:src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name" alt="image">
+								<img class="w-100" v-else :src="w_path + '/storage/recipes/default-cover.png'" alt="image">
 							</div>
 						</div>
 
@@ -52,11 +52,12 @@
 									<img v-else :src="w_path + '/storage/recipes/default-cover.png'" alt="image recipe"
 										title="image recipe" style="height:80px;">
 									<div class="d-flex flex-column gap-1 mx-2">
-										<div class="name-recipe"><a :href="w_path + '/recipes/' + recipe.id"
+										<div class="name-recipe">
+											<a :href="w_path + '/recipes/' + recipe.id"
 												class="text-black-title fs-3 text-decoration-none">{{ recipe.name }}</a>
 										</div>
 										<a href="" class="text-black-50 type text-decoration-none">{{
-											recipe.type_recipe.name }}</a>
+											recipe.author.rank.rank }}</a>
 									</div>
 								</div>
 							</div>
@@ -66,7 +67,7 @@
 					<div class="col-12 col-md-8 d-grid gap-4 left-bar">
 						<div class="fs-2 header position-relative text-black-title">رمضانيات</div>
 						<div class="row justify-content-center">
-							<div class="col-12 col-md-12" style="">
+							<div class="col-12 col-md-12 col-lg" style="">
 								<div class="d-grid position-relative recipe" style="">
 									<div class="img-container position-relative">
 										<div
@@ -78,18 +79,19 @@
 										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
 											style=""></div><img
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="" class="w-100" style="height:500px;">
+											alt="image" class="w-100" style="height:500px;">
 									</div>
 									<div class="fs-3 title">Lorem ozlooxxx</div>
-									<div class="d-grid gap-1"><span
-											class="author fst-italic fw-bolder text-black-50">Author</span><span
+									<div class="d-grid gap-1">
+										<span class="author fst-italic fw-bolder color-link">Author</span><span
 											class="data second-color fs-6"><span class="">12/12/2023</span><span
-												class="fa fa-calendar-alt"></span></span></div>
+												class="fa fa-calendar-alt"></span></span>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="gy-4 justify-content-center row">
-							<div class="col-6 col-md-3" style="">
+							<div class="col-6 col-md-6 col-lg-3" style="">
 								<div class="d-grid position-relative recipe" style="">
 									<div class="img-container position-relative">
 										<div
@@ -101,16 +103,16 @@
 										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
 											style=""></div><img
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="" class="w-100">
+											alt="image" class="w-100">
 									</div>
 									<div class="fs-3 title">Lorem ozlooxxx</div>
 									<div class="d-grid gap-1"><span
-											class="author fst-italic fw-bolder text-black-50">Author</span><span
+											class="author fst-italic fw-bolder color-link">Author</span><span
 											class="data second-color fs-6"><span class="">12/12/2023</span><span
 												class="fa fa-calendar-alt"></span></span></div>
 								</div>
 							</div>
-							<div class="col-6 col-md-3" style="">
+							<div class="col-6 col-md-6 col-lg-3" style="">
 								<div class="d-grid position-relative recipe" style="">
 									<div class="img-container position-relative">
 										<div
@@ -122,16 +124,16 @@
 										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
 											style=""></div><img
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="" class="w-100">
+											alt="image" class="w-100">
 									</div>
 									<div class="fs-3 title">Lorem ozlooxxx</div>
 									<div class="d-grid gap-1"><span
-											class="author fst-italic fw-bolder text-black-50">Author</span><span
+											class="author fst-italic fw-bolder color-link">Author</span><span
 											class="data second-color fs-6"><span class="">12/12/2023</span><span
 												class="fa fa-calendar-alt"></span></span></div>
 								</div>
 							</div>
-							<div class="col-6 col-md-3" style="">
+							<div class="col-6 col-md-6 col-lg-3" style="">
 								<div class="d-grid position-relative recipe" style="">
 									<div class="img-container position-relative">
 										<div
@@ -143,16 +145,16 @@
 										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
 											style=""></div><img
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="" class="w-100">
+											alt="image" class="w-100">
 									</div>
 									<div class="fs-3 title">Lorem ozlooxxx</div>
 									<div class="d-grid gap-1"><span
-											class="author fst-italic fw-bolder text-black-50">Author</span><span
+											class="author fst-italic fw-bolder color-link">Author</span><span
 											class="data second-color fs-6"><span class="">12/12/2023</span><span
 												class="fa fa-calendar-alt"></span></span></div>
 								</div>
 							</div>
-							<div class="col-6 col-md-3" style="">
+							<div class="col-6 col-md-6 col-lg-3" style="">
 								<div class="d-grid position-relative recipe" style="">
 									<div class="img-container position-relative">
 										<div
@@ -164,11 +166,11 @@
 										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
 											style=""></div><img
 											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="" class="w-100">
+											alt="image" class="w-100">
 									</div>
 									<div class="fs-3 title">Lorem ozlooxxx</div>
 									<div class="d-grid gap-1"><span
-											class="author fst-italic fw-bolder text-black-50">Author</span><span
+											class="author fst-italic fw-bolder color-link">Author</span><span
 											class="data second-color fs-6"><span class="">12/12/2023</span><span
 												class="fa fa-calendar-alt"></span></span></div>
 								</div>
@@ -184,10 +186,10 @@
 				<span class="fs-1 mt-2 position-absolute top-50 w-100">Heading</span>
 			</div>
 			<div class="container-fluid">
-				<div class="row">
-					<div class="categorie col-2 overflow-hidden p-0" v-for="cat in types_recipe" :key="cat.recipe">
+				<div class="row justify-content-center">
+					<div class="categorie col-3 col-md-2 overflow-hidden p-0" v-for="cat in types_recipe" :key="cat.recipe">
 						<div class="img-container position-relative">
-							<img :src="w_path + '/storage/types/' + cat.image" alt="" class="w-100">
+							<img :src="w_path + '/storage/types/' + cat.image" alt="image" class="w-100 h-auto">
 							<div class="h1 position-absolute text-center text-white title top-50 w-100 opacity-0"
 								style="background: #a52a2a82;">{{ cat.type }}</div>
 						</div>
@@ -204,9 +206,12 @@
 							<span class="fs-1">Enjoy with Our Website</span>
 							<span class="fs-5 text-black-50">Onclick and you are clitch</span>
 						</div>
-						<div class="d-flex gap-1 justify-content-center"><input type="text" name="" id=""
-								placeholder="Please Subscribe Here . . ." class="form-control w-25"><button type="button"
-								class="bg-second-color border-0 btn btn-danger">Subscribe</button></div>
+						<div class="d-flex gap-1 justify-content-center">
+							<input type="text" name="" id="" placeholder="Please Subscribe Here . . ."
+								class="form-control w-100-sc w-25-perso">
+							<button type="button" class="bg-second-color border-0 btn btn-danger"
+								name="subscribe">Subscribe</button>
+						</div>
 					</div>
 				</div>
 				<!-- <div class="bg-black h-100 opacity-25 overlay position-absolute top-0 w-100"></div> -->
@@ -216,7 +221,7 @@
 			<div class="" style="">
 				<div class="container pb-5">
 					<div class="row">
-						<div class="align-self-center col-6" style="">
+						<div class="align-self-center col-12 col-md-6 " style="">
 							<div class="align-items-start d-flex flex-column fs-6 gap-4 lh-lg p-3 rounded" style="">
 								<div class="fs-1 title">مشكلة الفطور في اليوم</div>
 								<div class="text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص
@@ -226,16 +231,18 @@
 									النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن
 									يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على
 									التصميم.</div>
-								<div class="d-flex gap-2 gap-3 justify-content-center"><button type="button"
+								<div class="d-flex gap-2 gap-3 justify-content-center">
+									<button type="button" name="recipeOfthe Day"
 										class="bg-first-color btn btn-lg fw-bolder text-white">وصفة اليوم</button><button
 										type="button" class="bg-white border btn btn-lg first-color fw-bolder">اختيار حسب
-										المقادير</button></div>
+										المقادير</button>
+								</div>
 							</div>
 						</div>
-						<div class="col-6 d-flex justify-content-center cover">
+						<div class="col-12 col-md-6 d-flex justify-content-center cover">
 							<img class="img-thumbnail"
 								src="https://images.unsplash.com/photo-1462799366257-558e43860291?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80"
-								alt="" style="height: 500px;">
+								alt="image" style="height: 500px;">
 						</div>
 					</div>
 				</div>
@@ -261,7 +268,7 @@
 					<div class="carousel-inner">
 						<div class="carousel-item active">
 							<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-								class="d-block w-100" alt="" style="width: 100%;height: 1000px;">
+								class="d-block w-100" alt="image" style="width: 100%;height: 1000px;">
 							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
 								<h5 class="fs-1">القرود الغربي</h5>
 								<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
@@ -275,7 +282,7 @@
 						</div>
 						<div class="carousel-item">
 							<img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=780&q=80"
-								class="d-block w-100" alt="" style="width: 100%;height: 1000px;">
+								class="d-block w-100" alt="image" style="width: 100%;height: 1000px;">
 							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
 								<h5 class="fs-1">Second slide label</h5>
 								<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
@@ -289,7 +296,7 @@
 						</div>
 						<div class="carousel-item">
 							<img src="https://images.unsplash.com/photo-1551106652-a5bcf4b29ab6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
-								class="d-block w-100" alt="" style="width: 100%;height: 1000px;">
+								class="d-block w-100" alt="image" style="width: 100%;height: 1000px;">
 							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
 								<h5 class="fs-1">Third slide label</h5>
 								<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
@@ -318,8 +325,10 @@
 		<section class="d-grid interesting">
 			<div class="border-top container d-grid gap-5 mt-1">
 				<div class="d-flex flex-column fs-1 heading-separator mb-3 mt-3 position-relative text-center"><span
-						class="">interesting</span><img :src="w_path + '/images/seperator-interesting.png'" alt=""
-						class="position-absolute w-25" style="left:38%;top:85%;"></div>
+						class="">interesting</span>
+					<img :src="w_path + '/images/seperator-interesting.png'" alt="image"
+						class="position-absolute w-25 h-auto" style="left:38%;top:85%;">
+				</div>
 				<div class="border-top pt-3 row">
 					<div class="col-3 right-bar">
 						<div class="border col-12 mb-2 social-media">
@@ -345,7 +354,7 @@
 					<div class="content col-8">
 						<div class="row">
 							<div class="col-12">
-								<div class="d-flex"><img src="https://picsum.photos/120" alt=""
+								<div class="d-flex"><img src="https://picsum.photos/120" alt="image"
 										class="img-thumbnail rounded">
 									<div class="d-grid px-3">
 										<div class="fs-4 title">Lorem ipsum dolor sit amet</div>
@@ -356,7 +365,7 @@
 								</div>
 							</div>
 							<div class="col-12">
-								<div class="d-flex"><img src="https://picsum.photos/120" alt=""
+								<div class="d-flex"><img src="https://picsum.photos/120" alt="image"
 										class="img-thumbnail rounded">
 									<div class="d-grid px-3">
 										<div class="fs-4 title">Lorem ipsum dolor sit amet</div>
@@ -367,7 +376,7 @@
 								</div>
 							</div>
 							<div class="col-12">
-								<div class="d-flex"><img src="https://picsum.photos/120" alt=""
+								<div class="d-flex"><img src="https://picsum.photos/120" alt="image"
 										class="img-thumbnail rounded">
 									<div class="d-grid px-3">
 										<div class="fs-4 title">Lorem ipsum dolor sit amet</div>
@@ -378,7 +387,7 @@
 								</div>
 							</div>
 							<div class="col-12">
-								<div class="d-flex"><img src="https://picsum.photos/120" alt=""
+								<div class="d-flex"><img src="https://picsum.photos/120" alt="image"
 										class="img-thumbnail rounded">
 									<div class="d-grid px-3">
 										<div class="fs-4 title">Lorem ipsum dolor sit amet</div>
@@ -389,7 +398,7 @@
 								</div>
 							</div>
 							<div class="col-12">
-								<div class="d-flex"><img src="https://picsum.photos/120" alt=""
+								<div class="d-flex"><img src="https://picsum.photos/120" alt="image"
 										class="img-thumbnail rounded">
 									<div class="d-grid px-3">
 										<div class="fs-4 title">Lorem ipsum dolor sit amet</div>
@@ -417,9 +426,10 @@ export default {
 	mounted() {
 		window.addEventListener("scroll", this.wheneScroll);
 		this.availableTypes();
-		this.RecipeOfMonth();
-		this.BestOfRecipe();
-		this.MostPoseted();
+		this.getRecipes();
+		// this.RecipeOfMonth();
+		// this.BestOfRecipe();
+		// this.MostPoseted();
 	},
 	unmounted() {
 		window.removeEventListener("scroll", this.wheneScroll);
@@ -428,6 +438,7 @@ export default {
 		return {
 			recipesMonthly: '',
 			UserMostPosted: '',
+			MostComment: '',
 			BestRecipes: '',
 			types_recipe: "",
 			effectImg: false,
@@ -439,7 +450,21 @@ export default {
 		};
 	},
 	methods: {
+		getRecipes() {
 
+			axios({ method: "get", url: "/guest/recipe" })
+				.then((response) => {
+					if (response.data) {
+
+
+						this.UserMostPosted = response.data.UserMostPosted;
+						this.BestRecipes = response.data.BestRecipe;
+						this.MostComment = response.data.MostComment;
+						this.recipesMonthly = response.data.recipesOfMonth;
+					}
+				})
+				.catch((error) => { });
+		},
 
 		formateData(created_at) {
 			return moment(created_at, false).format();
@@ -624,6 +649,9 @@ export default {
 .Trending .img-container:hover .info {
 	opacity: 1;
 	transition: all 1s;
+}
+.Trending .trend .recipe{
+	flex-direction: column !important;
 }
 
 .categories .heading span::after {

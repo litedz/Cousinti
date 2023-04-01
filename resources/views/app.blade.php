@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'none'">
     <link rel="icon" type="image/x-icon" href="{{asset ('images/logo.png')}}">
     <title>{{ config('app.name', 'Cousinti') }}</title>
     

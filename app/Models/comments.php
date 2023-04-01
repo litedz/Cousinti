@@ -16,5 +16,8 @@ class comments extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
- 
+    public function recipe()
+    {
+        return $this->belongsTo(recipe::class);
+    }
 }
