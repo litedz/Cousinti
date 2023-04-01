@@ -110,7 +110,7 @@ class RecipeController extends Controller
     public function types_recipe()
     {
 
-        $types_recipe = types_recipes::select('type', 'id', 'image')->get();
+        $types_recipe = collect(types_recipes::select('type', 'id', 'image')->get())->take(6);
         return response()->json($types_recipe);
     }
 
