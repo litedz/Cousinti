@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class rank extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['icon'];
 }
