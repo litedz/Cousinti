@@ -332,10 +332,12 @@
 						<div class="border col-12 top-user">
 							<div class="bg-gradient bg-second-color fs-5 heading p-2 text-center text-white"><span>Most
 									Posted</span></div>
-							<div class="bg-light d-flex gap-2 m-1 px-2 rounded user"><img src="https://i.pravatar.cc/70"
-									alt="avatar" title="avatar" class="rounded-circle">
-								<div class="d-flex flex-column gap-1 justify-content-start"><span
-										class="fs-4 name">Mohamed</span><span class="first-color fs-6">Pasta</span></div>
+							<div class="bg-light d-flex gap-2 m-1 px-2 rounded user" v-for="user in UserMostPosted"
+								:key="user.posted">
+								<img :src="w_path + '/storage/' + user.avatar" alt="avatar" title="avatar"
+									style="width: 70px;height: 70px;" class="rounded-circle">
+								<div class="d-flex flex-column gap-1 justify-content-start"><span class="fs-4 name">{{
+									user.username }}</span><span class="first-color fs-6">Pasta</span></div>
 							</div>
 
 						</div>
@@ -417,6 +419,7 @@ export default {
 		this.availableTypes();
 		this.RecipeOfMonth();
 		this.BestOfRecipe();
+		this.MostPoseted();
 	},
 	unmounted() {
 		window.removeEventListener("scroll", this.wheneScroll);
@@ -424,6 +427,7 @@ export default {
 	data() {
 		return {
 			recipesMonthly: '',
+			UserMostPosted: '',
 			BestRecipes: '',
 			types_recipe: "",
 			effectImg: false,
@@ -436,8 +440,18 @@ export default {
 	},
 	methods: {
 
+
 		formateData(created_at) {
 			return moment(created_at, false).format();
+		},
+		MostPoseted() {
+			axios({ method: "get", url: "/user/mostPosted" })
+				.then((response) => {
+					if (response.data) {
+						this.UserMostPosted = response.data;
+					}
+				})
+				.catch((error) => { });
 		},
 		BestOfRecipe() {
 			axios({ method: "post", url: "/recipes/BestOf" })

@@ -6,15 +6,25 @@ use App\Http\Resources\RecipeResource;
 use App\Listeners\TestListener;
 use App\Models\recipe;
 use App\Models\types_recipes;
+use App\Models\User;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
+use stdClass;
 
 class GuestRecipeController extends Controller
 {
+
+
+    protected $UserMostPosted;
+
+
     /**
      * Display a listing of the resource.
      *
      */
+
+
     public function index()
     {
 
@@ -100,4 +110,12 @@ class GuestRecipeController extends Controller
         }])->where('name', 'like', '%' . $type . '%')->get()));
     }
 
+
+    public function MostPosted()
+    {
+
+        $MostPosted = User::with('recipes')->whereHas('recipes')->get();
+
+        return response(collect($MostPosted)->sortByDesc('recipes')->take(7), 200);
+    }
 }

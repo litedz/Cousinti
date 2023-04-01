@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use SebastianBergmann\CodeCoverage\Node\Builder;
 use Database\Factories\RecipeFactory;
+
 class recipe extends Model
 {
     use HasFactory;
@@ -34,6 +35,8 @@ class recipe extends Model
     {
         return $this->hasMany(Rating::class);
     }
-
-
+    public function scopeRecipeCount()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
 }

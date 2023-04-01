@@ -118,7 +118,7 @@ Route::prefix('guest')->group(function () {
     route::post('search/{search_key}', [GuestRecipeController::class, 'search'])->name('guest.recipe.search');
 });
 
-
+Route::get('/user/mostPosted',[GuestRecipeController::class,'MostPosted']);
 Route::middleware(['auth'])->group(function () {
 
     Route::resource('user', UserController::class)->except(['store']);
