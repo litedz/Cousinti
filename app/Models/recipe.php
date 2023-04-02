@@ -15,20 +15,20 @@ class recipe extends Model
 
     protected $fillable = ['name', 'rating', 'type_id', 'how_todo', 'user_id'];
 
-    public function scopengredient()
+    public function scopeingredient()
     {
         return $this->hasMany(ingredients::class);
     }
-    public function scopeImages_recipe():HasMany
+    public function scopeimages_recipe():HasMany
     {
         return $this->hasMany(image::class);
     }
 
-    public function scopeAuthor()
+    public function scopeauthor()
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
-    public function scopeType_recipe():BelongsTo
+    public function scopetype_recipe():BelongsTo
     {
         return $this->belongsTo(types_recipes::class, 'type_id', 'id');
     }

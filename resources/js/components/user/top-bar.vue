@@ -2,7 +2,7 @@
 	<div class="bg-first-color pb-1 pt-1 top-bar z-8888" v-if="this.$attrs.show.length !== 1">
 		<div class="container">
 			<div class="align-items-center d-flex justify-content-between">
-				<div class="contact d-flex fs-4 gap-1 h-100">
+				<div class="contact fs-4 gap-1 h-100">
 					<i class="fa fa-apple-whole fs-5 rounded-circle" style="color: #e5e7eb;"></i>
 					<i class="fa fa-apple-whole fs-5 rounded-circle" style="color: #e5e7eb;"></i>
 					<i class="fa fa-apple-whole fs-5 rounded-circle" style="color: #e5e7eb; "></i>
@@ -42,9 +42,17 @@ export default {
 	width: 20%;
 }
 
-@media only screen and (max-width: 767px ) {
+.contact {
+	display: flex;
+}
+
+@media only screen and (max-width: 767px) {
 	.logo img {
 		display: none;
+	}
+
+	.contact {
+		display: none !important;
 	}
 }
 </style>

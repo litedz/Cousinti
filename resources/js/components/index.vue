@@ -1,5 +1,6 @@
 <template>
 	<div class="wrapper d-grid gap-5 " dir="rtl">
+		<random-recipe></random-recipe>
 		<section class="header d-grid gap-5">
 			<div class="nav-bar-home">
 				<nav-bar></nav-bar>
@@ -11,7 +12,9 @@
 							<div class="position-relative recipe">
 								<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
 									style="background:linear-gradient(1deg, black,transparent, transparent);">
-									<div class="name-recipe">{{ recipe.name }}</div>
+									<div class="name-recipe"><a :href="'/recipes/' + recipe.id"
+											class="text-decoration-none text-white">{{ recipe.name }}</a>
+									</div>
 									<div class="px-4 text-start w-100" style="letter-spacing:1px;" bis_skin_checked="1">
 										<div bis_skin_checked="1"
 											class="badge bg-danger bg-gradient fs-6 fw-bolder text-white type">
@@ -650,7 +653,8 @@ export default {
 	opacity: 1;
 	transition: all 1s;
 }
-.Trending .trend .recipe{
+
+.Trending .trend .recipe {
 	flex-direction: column !important;
 }
 
