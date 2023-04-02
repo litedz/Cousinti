@@ -1,6 +1,9 @@
 <template>
 	<div class="wrapper d-grid gap-5 " dir="rtl">
-		<random-recipe></random-recipe>
+		<KeepAlive>
+			<component :is="activeComponent" @CloseRecipe="activeComponent = 'empty'" />
+		</KeepAlive>
+
 		<section class="header d-grid gap-5">
 			<div class="nav-bar-home">
 				<nav-bar></nav-bar>
@@ -235,9 +238,10 @@
 									يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على
 									التصميم.</div>
 								<div class="d-flex gap-2 gap-3 justify-content-center">
-									<button type="button" name="recipeOfthe Day"
-										class="bg-first-color btn btn-lg fw-bolder text-white">وصفة اليوم</button><button
-										type="button" class="bg-white border btn btn-lg first-color fw-bolder">اختيار حسب
+									<button  @click="activeComponent = 'random-recipe'" type="button" name="recipeOfthe Day"
+										class="bg-first-color btn btn-lg fw-bolder text-white">وصفة اليوم</button>
+									<button type="button" class="bg-white border btn btn-lg first-color fw-bolder">اختيار
+										حسب
 										المقادير</button>
 								</div>
 							</div>

@@ -2,10 +2,12 @@
     <div class="random_recipe pb-5 pt-2 rounded" style="padding: 7%;">
         <div class="position-fixed w-100 h-100 end-0 top-0 bg-dark opacity-50 z-8888"></div>
         <div class="container position-relative bg-light" style="z-index: 9999;">
+
             <div class="end-0 m-1 position-absolute remove pointer text-right text-white top-0" style="z-index: 9999;">
-                <div class="bg-primary-color rounded-circle text-center text-white" style="width: 30px; height: 30px;"><i
-                        class="bg-dark bg-gradient fa fa-remove p-1 px-2 rounded-circle" aria-hidden="true"
-                        @click="$emit('CloseRecipe')"></i></div>
+                <div class="bg-primary-color rounded-circle text-center text-white" style="width: 30px; height: 30px;">
+                    <i class="bg-dark bg-gradient fa fa-remove p-1 px-2 rounded-circle" aria-hidden="true"
+                        @click="$emit('CloseRecipe')"></i>
+                </div>
             </div>
             <div class="row">
                 <div class="border-bottom col-12 font-22 font-weight-bolder p-2 text-center title w-100 first-color ">
@@ -50,8 +52,8 @@
                                         <span>تغيير</span>
                                         <li class="fa fa-rotate fa-2xs"></li>
                                     </a>
-                                    <a :href="'/recipes/' + random_recipe.id" dir="rtl" 
-                                    class="align-items-center bg-first-color btn btn-primary d-flex fw-bold gap-2 justify-content-center m-1 p-mb-sc-0 text-white w-50"
+                                    <a :href="'/recipes/' + random_recipe.id" dir="rtl"
+                                        class="align-items-center bg-first-color btn btn-primary d-flex fw-bold gap-2 justify-content-center m-1 p-mb-sc-0 text-white w-50"
                                         style="width: 40%;">
                                         <span>الوصفة</span>
                                         <li class="fa fa-check fa-2xs"></li>
