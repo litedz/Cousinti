@@ -34,11 +34,9 @@ class GuestRecipeController extends Controller
             ->whereHas('images_recipe')
             ->get());
         $RecipeMostComment = collect(recipe::with('comments')->whereHas('comments')->get())->sortByDesc('comments')->take(2);
-        $UserMostPosted = collect(User::with('recipes')->whereHas('recipes')->get())->sortByDesc('recipes')->take(7);
+        $UserMostPosted = collect(User::with(['recipes','rank'])->whereHas('recipes')->get())->sortByDesc('recipes')->take(7);
         $BestRecipe = recipe::with(['type_recipe', 'images_recipe'])->orderByDesc('like')->limit(3)->get();
-        $recipesOfMonth = recipe::with(['type_recipe', 'images_recipe','author'=> function($query){
-            $query->with('rank')->get();
-        }])->whereMonth('created_at', Carbon::now()->format('m'))->limit(6)->get();
+        $recipesOfMonth = recipe::with(['type_recipe', 'images_recipe'])->whereMonth('created_at', Carbon::now()->format('m'))->limit(6)->get();
      
         return response()->json([
             "recipes" => $recipes,

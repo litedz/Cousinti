@@ -1,8 +1,5 @@
 <template>
 	<div class="wrapper d-grid gap-5 " dir="rtl">
-		<KeepAlive>
-			<component :is="activeComponent" @CloseRecipe="activeComponent = 'empty'" />
-		</KeepAlive>
 
 		<section class="header d-grid gap-5">
 			<div class="nav-bar-home">
@@ -62,8 +59,9 @@
 											<a :href="w_path + '/recipes/' + recipe.id"
 												class="text-black-title fs-3 text-decoration-none">{{ recipe.name }}</a>
 										</div>
-										<a href="" class="text-black-50 type text-decoration-none">{{
-											recipe.author.rank.rank }}</a>
+										<a :href="'/similar/' + recipe.type_recipe.type"
+											class="type text-decoration-none color-link">{{
+												recipe.type_recipe.type }}</a>
 									</div>
 								</div>
 							</div>
@@ -238,7 +236,7 @@
 									يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على
 									التصميم.</div>
 								<div class="d-flex gap-2 gap-3 justify-content-center">
-									<button  @click="activeComponent = 'random-recipe'" type="button" name="recipeOfthe Day"
+									<button @click="activeComponent = 'random-recipe'" type="button" name="recipeOfthe Day"
 										class="bg-first-color btn btn-lg fw-bolder text-white">وصفة اليوم</button>
 									<button type="button" class="bg-white border btn btn-lg first-color fw-bolder">اختيار
 										حسب
@@ -255,6 +253,12 @@
 				</div>
 			</div>
 		</section>
+		<section class="compnent-random-recipe">
+			<KeepAlive>
+				<component :is="activeComponent" @CloseRecipe="activeComponent = 'empty'" />
+			</KeepAlive>
+		</section>
+
 		<section class="traditional-recipes">
 			<div class="heading">
 				<div class="astrodivider">
@@ -353,7 +357,7 @@
 								<img :src="w_path + '/storage/' + user.avatar" alt="avatar" title="avatar"
 									style="width: 70px;height: 70px;" class="rounded-circle">
 								<div class="d-flex flex-column gap-1 justify-content-start"><span class="fs-4 name">{{
-									user.username }}</span><span class="first-color fs-6">Pasta</span></div>
+									user.username }}</span><span class="first-color fs-6">{{user.rank.rank}}</span></div>
 							</div>
 
 						</div>
@@ -658,9 +662,7 @@ export default {
 	transition: all 1s;
 }
 
-.Trending .trend .recipe {
-	flex-direction: column !important;
-}
+
 
 .categories .heading span::after {
 	content: '';
@@ -768,5 +770,11 @@ section.subscribe div:first-of-type {
 	line-height: 40px;
 	font-style: normal;
 	color: #ef6f82;
+}
+
+@media only screen and (max-width: 767px) {
+	.Trending .trend .recipe {
+		flex-direction: column !important;
+	}
 }
 </style>
