@@ -15,6 +15,6 @@ class RankSeeder extends Seeder
      */
     public function run()
     {
-       rank::factory()->create();
+       rank::factory(3)->create();
     }
 }
