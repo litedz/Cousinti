@@ -354,7 +354,7 @@
 			</div>
 		</section>
 		<section class="footer">
-			<footer-page></footer-page>
+			<footer-page :latestRecipes="this.LatestRecipes"></footer-page>
 		</section>
 
 		<button @click="backTop()" type="button" class="btn btn-info btn-floating btn-lg position-fixed rounded-pill z-9999"
@@ -383,6 +383,7 @@ export default {
 			MostComment: '',
 			BestRecipes: '',
 			RatingRecipe: '',
+			LatestRecipes: '',
 			types_recipe: "",
 			effectImg: false,
 			imgBestRecipe: false,
@@ -398,13 +399,13 @@ export default {
 			axios({ method: "get", url: "/guest/recipe" })
 				.then((response) => {
 					if (response.data) {
-
-
+						console.log(response.data);
 						this.UserMostPosted = response.data.UserMostPosted;
 						this.BestRecipes = response.data.BestRecipe;
 						this.MostComment = response.data.MostComment;
 						this.recipesMonthly = response.data.recipesOfMonth;
 						this.RatingRecipe = response.data.RatingRecipe;
+						this.LatestRecipes = response.data.LatestRecipes;
 					}
 				})
 				.catch((error) => { });

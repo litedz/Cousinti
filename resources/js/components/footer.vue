@@ -45,47 +45,29 @@
 
                         <h1 class="fw-bold title">Latest Recipe</h1>
 
-                        <div class="gx-2 gy-2 row">
-                            <div class="col-6">
+                        <div class="gx-2 row">
+                            <div class="col-6" v-for="recipe in this.latestRecipes" :key="recipe.latest">
                                 <div class="img-container position-relative">
                                     <div class="bg-first-color h-100 overlay position-absolute top-0 w-100"></div>
                                     <div class="name-recipe fw-bold position-absolute text-center text-truncate  w-100 z-5555"
-                                        style="top: 45%;"><a href="#" class="text-decoration-none text-white">name recipe</a></div>
-                                    <img src="https://picsum.photos/200" alt="" class="rounded w-100">
+                                        style="top: 45%;">
+                                        <a :href="w_path + '/recipes/' + recipe.id" class="text-decoration-none text-white">
+                                            {{ recipe.name }}</a>
+                                    </div>
+                                    <img :src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name" alt=""
+                                        class="rounded w-100">
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="img-container position-relative">
-                                    <div class="bg-first-color h-100 overlay position-absolute top-0 w-100"></div>
-                                    <div class="name-recipe fw-bold position-absolute text-center text-truncate  w-100 z-5555"
-                                        style="top: 45%;"><a href="#" class="text-decoration-none text-white">name recipe</a></div>
-                                    <img src="https://picsum.photos/200" alt="" class="rounded w-100">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="img-container position-relative">
-                                    <div class="bg-first-color h-100 overlay position-absolute top-0 w-100"></div>
-                                    <div class="name-recipe fw-bold position-absolute text-center text-truncate  w-100 z-5555"
-                                        style="top: 45%;"><a href="#" class="text-decoration-none text-white">name recipe</a></div>
-                                    <img src="https://picsum.photos/200" alt="" class="rounded w-100">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="img-container position-relative">
-                                    <div class="bg-first-color h-100 overlay position-absolute top-0 w-100"></div>
-                                    <div class="name-recipe fw-bold position-absolute text-center text-truncate  w-100 z-5555"
-                                        style="top: 45%;"><a href="#" class="text-decoration-none text-white">name recipe</a></div>
-                                    <img src="https://picsum.photos/200" alt="" class="rounded w-100">
-                                </div>
-                            </div>
+
 
                         </div>
                     </div>
                     <div class="col-12 col-md-3 d-flex flex-column gap-3 position-relative subscribe">
                         <h1 class="fw-bold">متابعتنا</h1>
-                        <div class="font-14">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            Eaque error fugit dolore mollitia consectetur animi facere minus nobis blanditiis nulla aut
-                            adipisci itaque, ullam temporibus deleniti. Explicabo pariatur cumque excepturi.</div>
+                        <div class="font-14">
+                            اشترك الآن في موقعنا لتحصل على مجموعة واسعة من الوصفات الشهية والمبتكرة، وتتلقى إشعارات حول آخر
+                            الوصفات المضافة إلى موقعنا بانتظام
+                        </div>
                         <div class="form"><input class="form-control" type="email" name=""
                                 placeholder="example@gmail.com"><button type="submit"
                                 class="bg-gradient bg-second-color btn btn-primary font-amiri fs-5 fw-bolder mt-2 w-100"
@@ -102,6 +84,7 @@
 <script>
 export default {
     inject: ['w_path'],
+    props: ['latestRecipes'],
     data() {
 
         return {
