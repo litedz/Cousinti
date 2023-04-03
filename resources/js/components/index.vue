@@ -276,13 +276,11 @@
 						</div>
 						<div class="carousel-item">
 							<a href="#">
-							<img :src="w_path+'/images/2.jpg'"
-									class="d-block w-100" alt="..."></a>
+								<img :src="w_path + '/images/2.jpg'" class="d-block w-100" alt="..."></a>
 						</div>
 						<div class="carousel-item">
 							<a href="#">
-								<img :src="w_path+'/images/3.png'"
-									class="d-block w-100" alt="..."></a>
+								<img :src="w_path + '/images/3.png'" class="d-block w-100" alt="..."></a>
 						</div>
 					</div>
 					<div class="carousel-indicators">
@@ -292,13 +290,11 @@
 						</button>
 						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
 							class="thumbnail" aria-label="Slide 2">
-						<img :src="w_path+'/images/2.jpg'"
-								class="d-block w-100" alt="...">
+							<img :src="w_path + '/images/2.jpg'" class="d-block w-100" alt="...">
 						</button>
 						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
 							class="thumbnail" aria-label="Slide 3">
-							<img :src="w_path+'/images/3.png'"
-								class="d-block w-100" alt="...">
+							<img :src="w_path + '/images/3.png'" class="d-block w-100" alt="...">
 						</button>
 					</div>
 				</div>
@@ -327,8 +323,10 @@
 								:key="user.posted">
 								<img :src="w_path + '/storage/' + user.avatar" alt="avatar" title="avatar"
 									style="width: 70px;height: 70px;" class="rounded-circle">
-								<div class="d-flex flex-column gap-1 justify-content-start"><span class="fs-4 name">{{
-									user.username }}</span><span class="first-color fs-6">{{ user.rank.rank }}</span>
+								<div class="d-flex flex-column gap-1 justify-content-start">
+									<a :href="w_path + '/profile/' + user.id" class="fs-4 name text-black-title">{{
+										user.username }}
+									</a><span class="first-color fs-6">{{ user.rank.rank }}</span>
 								</div>
 							</div>
 
@@ -340,7 +338,8 @@
 								<div class="d-flex"><img src="https://picsum.photos/120" alt="image"
 										class="img-thumbnail rounded">
 									<div class="d-grid px-3">
-										<div class="fs-4 title">{{ recipe.name }}</div>
+										<div class=""><a class="fs-4 title text-decoration-none text-black-title"
+												:href="w_path + '/recipes/' + recipe.id">{{ recipe.name }}</a></div>
 										<div class="discption fs-6 text-black-title">{{ recipe.description }}</div>
 										<div class="date font-italic fs-6 second-color">{{ formateData(recipe.created_at) }}
 										</div>
