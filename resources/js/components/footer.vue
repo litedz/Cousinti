@@ -2,18 +2,21 @@
     <section class="footer font-amiri" dir="rtl">
         <div class="content h-100" style="background:#3A3959;border-top:5px solid #ef6f82;">
             <div class="container position-relative text-white" style="z-index:10;">
-                <div class="row gy-4 pt-5" >
+                <div class="row gy-4 pt-5">
                     <div class="col-6 col-md-3">
                         <div class="site-map d-flex flex-column h-auto">
                             <div class="font-sc-2 font-4 fw-bold">خريطة الموقع</div>
-                            <nav class="list-unstyled d-flex flex-column"><a
-                                    class="font-16 font-weight-bolder text-decoration-none text-white mt-3" href="#"><span
-                                        class="bg-first-color fa fa-home font-14 ms-3 p-2 rounded-circle"></span> رئسية
-                                </a><a class="font-16 font-weight-bolder text-decoration-none text-white mt-3"
-                                    href="#"><span class="bg-first-color fa fa-home font-14 ms-3 p-2 rounded-circle"></span>
-                                    رئسية </a><a class="font-16 font-weight-bolder text-decoration-none text-white mt-3"
-                                    href="#"><span class="bg-first-color fa fa-home font-14 ms-3 p-2 rounded-circle"></span>
-                                    رئسية </a></nav>
+                            <nav class="list-unstyled d-flex flex-column">
+                                <a class="font-16 font-weight-bolder text-decoration-none text-white mt-3" href="#">
+                                    <span class="border fa fa-home font-14 ms-3 p-2 rounded-circle"></span> رئسية
+                                </a>
+                                <a class="font-16 font-weight-bolder text-decoration-none text-white mt-3" href="#">
+                                    <span class="border fa fa-home font-14 ms-3 p-2 rounded-circle"></span>
+                                    رئسية </a>
+                                <a class="font-16 font-weight-bolder text-decoration-none text-white mt-3" href="#">
+                                    <span class="border fa fa-home font-14 ms-3 p-2 rounded-circle"></span>
+                                    رئسية </a>
+                            </nav>
                         </div>
                     </div>
                     <div class="col-6 col-md-3 position-relative">
@@ -37,16 +40,45 @@
                             </div>
                         </div>
                     </div>
-               
-                    <div class="col-12 col-md-3 d-grid gap-3">
 
-                        <h1 class="fw-bold title">latest posted</h1>
+                    <div class="col-12 col-md-3 d-grid gap-3 latest-recipe">
+
+                        <h1 class="fw-bold title">Latest Recipe</h1>
 
                         <div class="gx-2 gy-2 row">
-                            <div class="col-6"><img src="https://picsum.photos/200" alt="" class="rounded w-100"></div>
-                            <div class="col-6"><img src="https://picsum.photos/200" alt="" class="rounded w-100"></div>
-                            <div class="col-6"><img src="https://picsum.photos/200" alt="" class="rounded w-100"></div>
-                            <div class="col-6"><img src="https://picsum.photos/200" alt="" class="rounded w-100"></div>
+                            <div class="col-6">
+                                <div class="img-container position-relative">
+                                    <div class="bg-first-color h-100 overlay position-absolute top-0 w-100"></div>
+                                    <div class="name-recipe fw-bold position-absolute text-center text-truncate  w-100 z-5555"
+                                        style="top: 45%;"><a href="#" class="text-decoration-none text-white">name recipe</a></div>
+                                    <img src="https://picsum.photos/200" alt="" class="rounded w-100">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="img-container position-relative">
+                                    <div class="bg-first-color h-100 overlay position-absolute top-0 w-100"></div>
+                                    <div class="name-recipe fw-bold position-absolute text-center text-truncate  w-100 z-5555"
+                                        style="top: 45%;"><a href="#" class="text-decoration-none text-white">name recipe</a></div>
+                                    <img src="https://picsum.photos/200" alt="" class="rounded w-100">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="img-container position-relative">
+                                    <div class="bg-first-color h-100 overlay position-absolute top-0 w-100"></div>
+                                    <div class="name-recipe fw-bold position-absolute text-center text-truncate  w-100 z-5555"
+                                        style="top: 45%;"><a href="#" class="text-decoration-none text-white">name recipe</a></div>
+                                    <img src="https://picsum.photos/200" alt="" class="rounded w-100">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="img-container position-relative">
+                                    <div class="bg-first-color h-100 overlay position-absolute top-0 w-100"></div>
+                                    <div class="name-recipe fw-bold position-absolute text-center text-truncate  w-100 z-5555"
+                                        style="top: 45%;"><a href="#" class="text-decoration-none text-white">name recipe</a></div>
+                                    <img src="https://picsum.photos/200" alt="" class="rounded w-100">
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                     <div class="col-12 col-md-3 d-flex flex-column gap-3 position-relative subscribe">
@@ -127,8 +159,20 @@ export default {
 }
 
 .footer a:hover {
-    opacity: 0.5;
+    color: #EF6F82 !important;
+    border-color: #EF6F82 !important;
     transition: all 0.5s;
+}
+
+.footer .latest-recipe .img-container .overlay,
+.footer .latest-recipe .img-container .name-recipe {
+    opacity: 0;
+}
+
+.footer .latest-recipe .img-container:hover .overlay,
+.footer .latest-recipe .img-container:hover .name-recipe {
+    opacity: 0.75;
+    transition: all 1s;
 }
 
 @media only screen and (max-width: 768px) {

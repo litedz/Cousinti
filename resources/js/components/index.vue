@@ -267,69 +267,40 @@
 			</div>
 
 			<div class="container">
-				<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-					<div class="carousel-indicators">
-						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-							aria-current="true" aria-label="Slide 1"></button>
-						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-							aria-label="Slide 2"></button>
-						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-							aria-label="Slide 3"></button>
-					</div>
+				<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-								class="d-block w-100" alt="image" style="width: 100%;height: 1000px;">
-							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
-								<h5 class="fs-1">القرود الغربي</h5>
-								<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
-									العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
-									الحروف التى يولدها التطبيق.
-									إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما
-									تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على
-									وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
-									first slide.</p>
-							</div>
+							<a href="#">
+								<img :src="w_path + '/images/1.jpg'" class="d-block w-100" alt="..."></a>
 						</div>
 						<div class="carousel-item">
-							<img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=780&q=80"
-								class="d-block w-100" alt="image" style="width: 100%;height: 1000px;">
-							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
-								<h5 class="fs-1">Second slide label</h5>
-								<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
-									العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
-									الحروف التى يولدها التطبيق.
-									إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما
-									تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على
-									وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
-									second slide.</p>
-							</div>
+							<a href="#">
+							<img :src="w_path+'/images/2.jpg'"
+									class="d-block w-100" alt="..."></a>
 						</div>
 						<div class="carousel-item">
-							<img src="https://images.unsplash.com/photo-1551106652-a5bcf4b29ab6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
-								class="d-block w-100" alt="image" style="width: 100%;height: 1000px;">
-							<div class="carousel-caption d-none d-md-block" style="background: #0000009c;">
-								<h5 class="fs-1">Third slide label</h5>
-								<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
-									العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
-									الحروف التى يولدها التطبيق.
-									إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما
-									تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على
-									وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
-									third slide.</p>
-							</div>
+							<a href="#">
+								<img :src="w_path+'/images/3.png'"
+									class="d-block w-100" alt="..."></a>
 						</div>
 					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-						data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-						data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+							class="active thumbnail" aria-current="true" aria-label="Slide 1">
+							<img :src="w_path + '/images/1.jpg'" class="d-block w-100" alt="...">
+						</button>
+						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+							class="thumbnail" aria-label="Slide 2">
+						<img :src="w_path+'/images/2.jpg'"
+								class="d-block w-100" alt="...">
+						</button>
+						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+							class="thumbnail" aria-label="Slide 3">
+							<img :src="w_path+'/images/3.png'"
+								class="d-block w-100" alt="...">
+						</button>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -341,7 +312,7 @@
 						class="position-absolute w-25 h-auto" style="left:38%;top:85%;">
 				</div>
 				<div class="border-top pt-3 row">
-					<div class="col-3 right-bar">
+					<div class="col-3 right-bar p-d-none-sc">
 						<div class="border col-12 mb-2 social-media">
 							<div class="bg-second-color fs-5 fw-bolder heading p-2 text-center text-white"><span>Follow
 									Us</span></div>
@@ -357,68 +328,26 @@
 								<img :src="w_path + '/storage/' + user.avatar" alt="avatar" title="avatar"
 									style="width: 70px;height: 70px;" class="rounded-circle">
 								<div class="d-flex flex-column gap-1 justify-content-start"><span class="fs-4 name">{{
-									user.username }}</span><span class="first-color fs-6">{{user.rank.rank}}</span></div>
+									user.username }}</span><span class="first-color fs-6">{{ user.rank.rank }}</span>
+								</div>
 							</div>
 
 						</div>
 					</div>
-					<div class="content col-8">
+					<div class="content col-12 col-md-8">
 						<div class="row">
-							<div class="col-12">
+							<div class="col-12" v-for="recipe in RatingRecipe" :key="recipe.rating">
 								<div class="d-flex"><img src="https://picsum.photos/120" alt="image"
 										class="img-thumbnail rounded">
 									<div class="d-grid px-3">
-										<div class="fs-4 title">Lorem ipsum dolor sit amet</div>
-										<div class="discption fs-6 text-black-title">Lorem ipsum dolor sit amet, consectetur
-											adipisicing elit. Minus vel iusto natus illo sunt! Repellat .</div>
-										<div class="date font-italic fs-6 second-color">12/12/1220</div>
+										<div class="fs-4 title">{{ recipe.name }}</div>
+										<div class="discption fs-6 text-black-title">{{ recipe.description }}</div>
+										<div class="date font-italic fs-6 second-color">{{ formateData(recipe.created_at) }}
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-12">
-								<div class="d-flex"><img src="https://picsum.photos/120" alt="image"
-										class="img-thumbnail rounded">
-									<div class="d-grid px-3">
-										<div class="fs-4 title">Lorem ipsum dolor sit amet</div>
-										<div class="discption fs-6 text-black-title">Lorem ipsum dolor sit amet, consectetur
-											adipisicing elit. Minus vel iusto natus illo sunt! Repellat .</div>
-										<div class="date font-italic fs-6 second-color">12/12/1220</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-12">
-								<div class="d-flex"><img src="https://picsum.photos/120" alt="image"
-										class="img-thumbnail rounded">
-									<div class="d-grid px-3">
-										<div class="fs-4 title">Lorem ipsum dolor sit amet</div>
-										<div class="discption fs-6 text-black-title">Lorem ipsum dolor sit amet, consectetur
-											adipisicing elit. Minus vel iusto natus illo sunt! Repellat .</div>
-										<div class="date font-italic fs-6 second-color">12/12/1220</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-12">
-								<div class="d-flex"><img src="https://picsum.photos/120" alt="image"
-										class="img-thumbnail rounded">
-									<div class="d-grid px-3">
-										<div class="fs-4 title">Lorem ipsum dolor sit amet</div>
-										<div class="discption fs-6 text-black-title">Lorem ipsum dolor sit amet, consectetur
-											adipisicing elit. Minus vel iusto natus illo sunt! Repellat .</div>
-										<div class="date font-italic fs-6 second-color">12/12/1220</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-12">
-								<div class="d-flex"><img src="https://picsum.photos/120" alt="image"
-										class="img-thumbnail rounded">
-									<div class="d-grid px-3">
-										<div class="fs-4 title">Lorem ipsum dolor sit amet</div>
-										<div class="discption fs-6 text-black-title">Lorem ipsum dolor sit amet, consectetur
-											adipisicing elit. Minus vel iusto natus illo sunt! Repellat .</div>
-										<div class="date font-italic fs-6 second-color">12/12/1220</div>
-									</div>
-								</div>
-							</div>
+
 						</div>
 					</div>
 				</div>
@@ -427,6 +356,11 @@
 		<section class="footer">
 			<footer-page></footer-page>
 		</section>
+
+		<button @click="backTop()" type="button" class="btn btn-info btn-floating btn-lg position-fixed rounded-pill z-9999"
+			style="right: 5%; bottom: 5%; display: none" id="btn-back-to-top">
+			<i class="fas fa-arrow-up"></i>
+		</button>
 	</div>
 </template>
 
@@ -438,9 +372,6 @@ export default {
 		window.addEventListener("scroll", this.wheneScroll);
 		this.availableTypes();
 		this.getRecipes();
-		// this.RecipeOfMonth();
-		// this.BestOfRecipe();
-		// this.MostPoseted();
 	},
 	unmounted() {
 		window.removeEventListener("scroll", this.wheneScroll);
@@ -451,6 +382,7 @@ export default {
 			UserMostPosted: '',
 			MostComment: '',
 			BestRecipes: '',
+			RatingRecipe: '',
 			types_recipe: "",
 			effectImg: false,
 			imgBestRecipe: false,
@@ -472,42 +404,16 @@ export default {
 						this.BestRecipes = response.data.BestRecipe;
 						this.MostComment = response.data.MostComment;
 						this.recipesMonthly = response.data.recipesOfMonth;
+						this.RatingRecipe = response.data.RatingRecipe;
 					}
 				})
 				.catch((error) => { });
 		},
 
 		formateData(created_at) {
-			return moment(created_at, false).format();
-		},
-		MostPoseted() {
-			axios({ method: "get", url: "/user/mostPosted" })
-				.then((response) => {
-					if (response.data) {
-						this.UserMostPosted = response.data;
-					}
-				})
-				.catch((error) => { });
-		},
-		BestOfRecipe() {
-			axios({ method: "post", url: "/recipes/BestOf" })
-				.then((response) => {
-					if (response.data) {
-						this.BestRecipes = response.data;
-					}
-				})
-				.catch((error) => { });
+			return moment(created_at, true).format('LLLL');
 		},
 
-		RecipeOfMonth() {
-			axios({ method: "post", url: "/recipes/monthly" })
-				.then((response) => {
-					if (response.data) {
-						this.recipesMonthly = response.data;
-					}
-				})
-				.catch((error) => { });
-		},
 		backTop() {
 			document.documentElement.scrollTop = 0;
 		},
@@ -565,25 +471,12 @@ export default {
 			}
 		},
 		wheneScroll() {
-			// if ($(window).scrollTop() > 300) {
-			// 	$(".top-bar").css({
-			// 		position: "fixed",
-			// 		width: "100%",
-			// 	});
-			// } else {
-			// 	$(".top-bar").css({
-			// 		position: "relative",
-			// 		top: "0",
-			// 	});
-			// }
-			// if ($(window).scrollTop() > 200) {
-			// 	alert('xxx');
-			// 	$("#btn-back-to-top").fadeIn();
-			// 	$("#home-navbar").fadeIn("slow");
-			// } else {
-			// 	$("#btn-back-to-top").fadeOut();
-			// 	$("#home-navbar").fadeOut("fast");
-			// }
+			if ($(window).scrollTop() > 200) {
+				$("#btn-back-to-top").fadeIn();
+
+			} else {
+				$("#btn-back-to-top").fadeOut();
+			}
 		},
 		hoverLink(action) {
 			if (action == "leave") {
@@ -717,12 +610,27 @@ section.subscribe div:first-of-type {
 
 }
 
-.random-recipe .carousel-indicators {
+/* .random-recipe .carousel-indicators {
 	width: 20px !important;
 	height: 20px !important;
 	border-radius: 50% !important;
+} */
+/* Slider */
+.carousel-indicators button.thumbnail {
+	width: 100px;
 }
 
+.carousel-indicators button.thumbnail:not(.active) {
+	opacity: 0.7;
+}
+
+.carousel-indicators {
+	position: static;
+}
+
+
+
+/*
 .traditional-recipes .astrodivider {
 	margin: 64px auto;
 	width: 50%;
@@ -730,12 +638,13 @@ section.subscribe div:first-of-type {
 	position: relative;
 }
 
+
 .traditional-recipes .astrodividermask {
 	overflow: hidden;
 	height: 20px;
 }
 
-.traditional-recipes .astrodividermask:after {
+ .traditional-recipes .astrodividermask:after {
 	content: '';
 	display: block;
 	margin: -25px auto 0;
@@ -770,11 +679,54 @@ section.subscribe div:first-of-type {
 	line-height: 40px;
 	font-style: normal;
 	color: #ef6f82;
-}
+} */
 
 @media only screen and (max-width: 767px) {
 	.Trending .trend .recipe {
 		flex-direction: column !important;
 	}
+
+	/* Slider */
+	.traditional-recipes .carousel-inner {
+		display: flex;
+	}
+
+	.traditional-recipes .carousel-item {
+		display: block;
+		margin-right: 0;
+		flex: 0 0 calc(100% / 3);
+	}
+
+	.traditional-recipes .img-wrapper {
+		height: 21vw;
+	}
+}
+
+.traditional-recipes .carousel-inner {
+	padding: 1em;
+}
+
+.traditional-recipes .card {
+	margin: 0 0.5em;
+	border-radius: 0;
+	box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+	font-size: 0.9em;
+}
+
+.traditional-recipes .carousel-control-prev,
+.traditional-recipes .carousel-control-next {
+	width: 6vh;
+	height: 6vh;
+	background-color: #e1e1e1;
+	border-radius: 50%;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity: 0.5;
+}
+
+.traditional-recipes .carousel-control-prev:hover,
+.traditional-recipes .carousel-control-next:hover {
+	opacity: 0.8;
+
 }
 </style>

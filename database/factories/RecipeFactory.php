@@ -23,8 +23,7 @@ class RecipeFactory extends Factory
             'url_video' => 'https://www.youtube.com/cousinti',
             'user_id' => User::factory(),
             'how_todo' => $this->faker->realText(),
+            'description' => $this->faker->realText(),
         ];
     }
-
-
 }
