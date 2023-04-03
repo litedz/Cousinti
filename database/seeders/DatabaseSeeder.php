@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             types_recipes::class,
+            RankSeeder::class,
             UsersSeeder::class,
             RecipeSeeder::class,
             ImageSeeder::class,
