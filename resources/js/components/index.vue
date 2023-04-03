@@ -340,7 +340,8 @@
 									<div class="d-grid px-3">
 										<div class=""><a class="fs-4 title text-decoration-none text-black-title"
 												:href="w_path + '/recipes/' + recipe.id">{{ recipe.name }}</a></div>
-										<div class="discption fs-6 text-black-title">{{ recipe.description }}</div>
+										<div class="discption text-truncate fs-6 text-black-title">{{ recipe.description }}
+										</div>
 										<div class="date font-italic fs-6 second-color">{{ formateData(recipe.created_at) }}
 										</div>
 									</div>
