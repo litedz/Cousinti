@@ -13,7 +13,7 @@ class recipe extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'rating', 'type_id', 'how_todo', 'user_id'];
+    protected $fillable = ['name', 'rating', 'type_id', 'how_todo', 'user_id','description'];
 
     public function scopeingredient()
     {
