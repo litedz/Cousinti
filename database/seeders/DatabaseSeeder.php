@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
             types_recipes::class,
             RankSeeder::class,
             UsersSeeder::class,
-            RecipeSeeder::class,
+            recipeSeeder::class,
             ImageSeeder::class,
             CommentsSeeder::class,
             ingredientSeeder::class,
