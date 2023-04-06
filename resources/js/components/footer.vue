@@ -105,7 +105,7 @@ export default {
                 .then((response) => {
                     if (response.data) {
                         console.log(response.data);
-                        this.$refs.status.Display('danger', error.response.data.message.original)
+                        this.$refs.status.Display('success', response.data)
                     }
                 })
                 .catch((error) => {
