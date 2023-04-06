@@ -1,6 +1,6 @@
 <template>
 	<div class="wrapper d-grid gap-5 " dir="rtl">
-
+		<status ref="status"></status>
 		<section class="header d-grid gap-5">
 			<div class="nav-bar-home">
 				<nav-bar></nav-bar>
@@ -399,7 +399,6 @@ export default {
 			axios({ method: "get", url: "/guest/recipe" })
 				.then((response) => {
 					if (response.data) {
-						console.log(response.data);
 						this.UserMostPosted = response.data.UserMostPosted;
 						this.BestRecipes = response.data.BestRecipe;
 						this.MostComment = response.data.MostComment;
@@ -408,7 +407,8 @@ export default {
 						this.LatestRecipes = response.data.LatestRecipes;
 					}
 				})
-				.catch((error) => { });
+				.catch((error) => { 
+				});
 		},
 
 		formateData(created_at) {

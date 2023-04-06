@@ -1,5 +1,6 @@
 <template>
     <section class="footer font-amiri" dir="rtl">
+        <status ref="status"></status>
         <div class="content h-100" style="background:#3A3959;border-top:5px solid #ef6f82;">
             <div class="container position-relative text-white" style="z-index:10;">
                 <div class="row gy-4 pt-5">
@@ -68,10 +69,13 @@
                             اشترك الآن في موقعنا لتحصل على مجموعة واسعة من الوصفات الشهية والمبتكرة، وتتلقى إشعارات حول آخر
                             الوصفات المضافة إلى موقعنا بانتظام
                         </div>
-                        <div class="form"><input class="form-control" type="email" name=""
-                                placeholder="example@gmail.com"><button type="submit"
+                        <div class="form">
+                            <input v-model="subscribeEmail" class="form-control" type="email" name=""
+                                placeholder="example@gmail.com">
+                            <button type="button" @click="subscribe()"
                                 class="bg-gradient bg-second-color btn btn-primary font-amiri fs-5 fw-bolder mt-2 w-100"
-                                style="border:none;">اشتراك</button></div>
+                                style="border:none;">اشتراك</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -89,8 +93,31 @@ export default {
 
         return {
             Path: window.location.host,
+            subscribeEmail: '',
         }
-    }
+
+    },
+    methods: {
+        subscribe() {
+            let data = new FormData();
+            data.append('email', this.subscribeEmail)
+            axios({ method: "post", url: "/subscribe", data: data })
+                .then((response) => {
+                    if (response.data) {
+                        console.log(response.data);
+                        this.$refs.status.Display('danger', error.response.data.message.original)
+                    }
+                })
+                .catch((error) => {
+
+                    console.log(error.response);
+                    if (error.response.data) {
+                        this.$refs.status.Display('danger', error.response.data.message);
+                    }
+
+                });
+        },
+    },
 }
 </script>
 

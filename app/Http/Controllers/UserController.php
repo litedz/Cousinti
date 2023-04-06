@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Events\SubscribeEvent;
+use App\Jobs\Subscribe as JobsSubscribe;
 use App\Models\Profile;
 use App\Models\Rating;
+use App\Models\Subscribe;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use Throwable;
 
 class UserController extends Controller
 {
@@ -100,10 +103,11 @@ class UserController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
+     * @param  integer  $user_id Required
      * @param  \App\Models\User  $user
 
      */
-    public function update(Request $request, $user_id)
+    public function update(User $user, Request $request, $user_id)
     {
 
 
@@ -213,5 +217,18 @@ class UserController extends Controller
         }
     }
 
+    public function Subscribe(Subscribe $subscribe,  Request $e)
+    {
+        $validate = $e->validate([
+            'email' => 'required|email|max:255',
+        ]);
+        $exist_email = Subscribe::where('email', $e->email)->first();
+        if ($exist_email) {
+            throw new Exception('You have already account with this email please login in');
+        }
 
+        $subscribed = JobsSubscribe::dispatch($e->email);
+
+        return $subscribed ? response()->json('تم الاشتراك معنا في الموقع بنجاح') : throw new Exception("Error Processing Request", 1);
+    }
 }

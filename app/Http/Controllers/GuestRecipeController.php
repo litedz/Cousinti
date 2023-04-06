@@ -2,16 +2,14 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Http\Resources\RecipeResource;
-use App\Listeners\TestListener;
 use App\Models\recipe;
 use App\Models\types_recipes;
 use App\Models\User;
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Http\Request;
-use Illuminate\Support\Collection;
-use stdClass;
+
 
 class GuestRecipeController extends Controller
 {
@@ -39,7 +37,7 @@ class GuestRecipeController extends Controller
         $BestRecipe = recipe::with(['type_recipe', 'images_recipe'])->orderByDesc('like')->limit(3)->get();
         $recipesOfMonth = recipe::with(['type_recipe', 'images_recipe'])->whereMonth('created_at', Carbon::now()->format('m'))->limit(6)->get();
         $RatingRecipe = recipe::with(['type_recipe', 'images_recipe'])->orderByDesc('rating')->limit(5)->get();
-        $LatestRecipes=Recipe::with('images_recipe')->whereHas('images_recipe')->latestRecipe()->orderBy('created_at')->limit(4)->get();
+        $LatestRecipes = Recipe::with('images_recipe')->whereHas('images_recipe')->latestRecipe()->orderBy('created_at')->limit(4)->get();
         return response()->json([
             "recipes" => $recipes,
             'MostComment' => $RecipeMostComment,
@@ -123,4 +121,8 @@ class GuestRecipeController extends Controller
             $query->whereNotNull('cover')->get();
         }])->where('name', 'like', '%' . $type . '%')->get()));
     }
+
+
+
+
 }

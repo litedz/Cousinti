@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\UserController;
 use App\Http\Resources\RecipeResource;
+use App\Jobs\Subscribe;
 use App\Listeners\TestListener;
 use App\Models\comments;
 use App\Models\recipe;
@@ -105,16 +106,19 @@ Route::middleware(['auth'])->group(function () {
 
 // *****************************  Auth reg/log    ***********************************************
 
-
+// Guest Routes
 Route::prefix('guest')->group(function () {
     Route::resource('recipe', GuestRecipeController::class)->names('guest.recipe');
     route::post('filter/{filter_key}', [GuestRecipeController::class, 'filter'])->name('guest.recipe.filter');
     route::post('search/{search_key}', [GuestRecipeController::class, 'search'])->name('guest.recipe.search');
+    route::get('subscribe', [GuestRecipeController::class, 'Subscribe'])->name('guest.recipe.search');
 });
 
-Route::get('/user/mostPosted',[GuestRecipeController::class,'MostPosted']);
-Route::middleware(['auth'])->group(function () {
+//Subscribe route
+Route::post('/subscribe', [UserController::class, 'Subscribe']);
 
+Route::middleware(['auth'])->group(function () {
+    //User Routes 
     Route::resource('user', UserController::class)->except(['store']);
     Route::prefix('user')->group(
         function () {
@@ -128,7 +132,7 @@ Route::middleware(['auth'])->group(function () {
 
 Route::resource('comments', CommentsController::class);
 
-
+//Authantication
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('check.login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.user');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
@@ -141,11 +145,10 @@ Route::POST('/register', [UserController::class, 'store']);
 Route::POST('/register/facebook/', [UserController::class, 'RegisterWithFace']);
 // ***********************************************************************************************
 
-
+//Api Facebook 
 Route::post('/facebook/login', [LoginController::class, 'loginWithMedia']);
-
-
 
 Route::get('test', function () {
 
+    Subscribe::dispatch('maamarjoe@gmail.com');
 });
