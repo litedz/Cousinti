@@ -36,10 +36,9 @@ class SubscribeListener
             'email' => $event->email,
         ]);
         $mailable = Mail::to($event->email)->send(new NewsRecipesMail());
-
     }
 
-    public function failed(SubscribeEvent $event, Throwable $e)
+    public function failed(Throwable $e)
     {
         return 'Failed Subscribe Please Try later';
     }

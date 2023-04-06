@@ -104,15 +104,15 @@ export default {
             axios({ method: "post", url: "/subscribe", data: data })
                 .then((response) => {
                     if (response.data) {
-                        console.log(response.data);
-                        this.$refs.status.Display('success', response.data)
+                        this.$refs.status.Display('success', response.data, 'Success', 'fa-check-circle');
+                        this.subscribeEmail = '';
                     }
                 })
                 .catch((error) => {
 
-                    console.log(error.response);
-                    if (error.response.data) {
-                        this.$refs.status.Display('danger', error.response.data.message);
+                    console.log(error);
+                    if (error.response) {
+                        this.$refs.status.Display('danger', error.response.data.message, 'Error', 'exclamation-circle');
                     }
 
                 });
