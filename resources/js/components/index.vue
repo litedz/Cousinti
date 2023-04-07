@@ -354,7 +354,7 @@
 			</div>
 		</section>
 		<section class="footer">
-			<footer-page :latestRecipes="this.LatestRecipes"></footer-page>
+			<footer-page></footer-page>
 		</section>
 
 		<button @click="backTop()" type="button" class="btn btn-info btn-floating btn-lg position-fixed rounded-pill z-9999"

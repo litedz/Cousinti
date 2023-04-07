@@ -14,6 +14,6 @@ class ingredientSeeder extends Seeder
      */
     public function run()
     {
-        ingredients::factory()->create();
+        ingredients::factory(20)->create();
     }
 }

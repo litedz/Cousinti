@@ -47,7 +47,7 @@
                         <h1 class="fw-bold title">Latest Recipe</h1>
 
                         <div class="gx-2 row">
-                            <div class="col-6" v-for="recipe in this.latestRecipes" :key="recipe.latest">
+                            <div class="col-6" v-for="recipe in this.recipesLatest" :key="recipe.latest">
                                 <div class="img-container position-relative">
                                     <div class="bg-first-color h-100 overlay position-absolute top-0 w-100"></div>
                                     <div class="name-recipe fw-bold position-absolute text-center text-truncate  w-100 z-5555"
@@ -88,12 +88,16 @@
 <script>
 export default {
     inject: ['w_path'],
-    props: ['latestRecipes'],
+
+    mounted() {
+        this.latestRecipes();
+    },
     data() {
 
         return {
             Path: window.location.host,
             subscribeEmail: '',
+            recipesLatest: '',
         }
 
     },
@@ -117,6 +121,14 @@ export default {
 
                 });
         },
+        latestRecipes() {
+
+
+            axios({ method: 'get', url: '/guest/recipes/latest', }).then((response) => {
+
+                this.recipesLatest = response.data;
+            });
+        }
     },
 }
 </script>

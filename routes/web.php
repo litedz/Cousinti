@@ -86,7 +86,8 @@ Route::prefix('guest')->group(function () {
     Route::resource('recipe', GuestRecipeController::class)->names('guest.recipe');
     route::get('filter/{type}', [GuestRecipeController::class, 'filter'])->name('guest.recipe.filter');
     route::post('search/{search_key}', [GuestRecipeController::class, 'search'])->name('guest.recipe.search');
-    route::get('subscribe', [GuestRecipeController::class, 'Subscribe'])->name('guest.recipe.search');
+    route::get('subscribe', [GuestRecipeController::class, 'Subscribe'])->name('guest.recipe.subscribe');
+    route::get('recipes/latest', [GuestRecipeController::class, 'LatestRecipes'])->name('guest.recipe.latest');
 });
 
 //Subscribe route

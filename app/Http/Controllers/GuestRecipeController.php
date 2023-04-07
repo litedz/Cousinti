@@ -39,7 +39,7 @@ class GuestRecipeController extends Controller
             'BestRecipe' => $BestRecipe,
             'recipesOfMonth' => $recipesOfMonth,
             'RatingRecipe' => $RatingRecipe,
-            'LatestRecipes' => $LatestRecipes,
+            'LatestRecipes' => $this->LatestRecipes(),
         ]);
     }
 
@@ -97,8 +97,8 @@ class GuestRecipeController extends Controller
         $type = types_recipes::where('type', $type)->firstOrFail();
 
         $recipes = RecipeResource::collection(recipe::with([
-            'author','type_recipe', 'images_recipe' => function ($query) {
-               $query->whereNotNull('cover')->get();
+            'author', 'type_recipe', 'images_recipe' => function ($query) {
+                $query->whereNotNull('cover')->get();
             },
         ])
             ->where('type_id', $type->id)
@@ -113,5 +113,12 @@ class GuestRecipeController extends Controller
         return response()->json(RecipeResource::collection(recipe::with(['author', 'images_recipe' => function ($query) {
             $query->whereNotNull('cover')->get();
         }])->where('name', 'like', '%' . $type . '%')->get()));
+    }
+
+    public function LatestRecipes()
+    {
+        $LatestRecipes = recipe::with('images_recipe')->whereHas('images_recipe')->latestRecipe()->orderBy('created_at')->limit(4)->get();
+
+        return $LatestRecipes;
     }
 }
