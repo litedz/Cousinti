@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
 
 class TableIngredientsAddColumn extends Migration
 {
@@ -13,7 +11,7 @@ class TableIngredientsAddColumn extends Migration
      */
     public function up()
     {
-        
+
     }
 
     /**

@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -18,8 +16,8 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-
     protected $with = 'profile_setting';
+
     protected $fillable = [
         'username',
         'last_name',
@@ -35,6 +33,7 @@ class User extends Authenticatable
         'rank_id',
 
     ];
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -63,14 +62,17 @@ class User extends Authenticatable
     {
         return $this->hasMany(Rating::class);
     }
+
     public function profile_setting()
     {
         return $this->belongsTo(Profile::class, 'profile_id', 'id');
     }
+
     public function Comments()
     {
         return $this->hasMany(comments::class)->limit(2)->latest();
     }
+
     public function rank()
     {
        return $this->belongsTo(rank::class);

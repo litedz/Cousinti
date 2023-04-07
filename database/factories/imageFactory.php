@@ -17,7 +17,7 @@ class ImageFactory extends Factory
         return [
             'name' => 'default-cover.png',
             'cover' => 'active',
-            'recipe_id' => $this->faker->numberBetween(1,Recipe::all()->count()),
+            'recipe_id' => $this->faker->numberBetween(1, Recipe::all()->count()),
         ];
     }
 }

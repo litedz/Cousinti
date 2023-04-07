@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\TestEvent;
 use App\Http\Resources\RecipeResource;
 use App\Models\image;
 use App\Models\ingredients;
@@ -16,20 +15,19 @@ use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Validator;
-use Mockery\Undefined;
-
 
 class RecipeController extends Controller
 {
     private $ingredients = [];
+
     private $head_image;
-    private $video_url = "https://www.youtube.com/";
+
+    private $video_url = 'https://www.youtube.com/';
+
     private $other_images;
+
     /**
      * Display a listing of the resource.
-     *
-
      */
     public function index()
     {
@@ -39,16 +37,13 @@ class RecipeController extends Controller
         }])->get());
 
         return response()->json([
-            "recipes" => $recipes
-            
-        
+            'recipes' => $recipes,
+
         ]);
     }
 
     /**
      * Show the form for creating a new resource.
-     *
-
      */
     public function create()
     {
@@ -57,9 +52,6 @@ class RecipeController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-
      */
     public function store(Request $request)
     {
@@ -83,6 +75,7 @@ class RecipeController extends Controller
             $this->storeHeadImage($recipe->id);
             $this->storeIngredients($recipe->id);
         }
+
         return response()->json([
             'status' => 'تم اضافة الوصفة',
             'message' => 'لقد تم اضافة الوصفة يمكنك اضافة المزيد',
@@ -94,35 +87,31 @@ class RecipeController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\recipe  $recipe
-
      */
     public function show($recipe_id)
     {
-        $recipe = recipe::with(['ingredient', 'type_recipe', 'images_recipe'  => function ($query) {
+        $recipe = recipe::with(['ingredient', 'type_recipe', 'images_recipe' => function ($query) {
             $query->orderByDesc('cover');
         }])->findOrFail($recipe_id);
+
         return response()->json([
             'recipe' => $recipe,
         ]);
     }
 
-
     /**
      * Display all  resource.
-
      */
     public function types_recipe()
     {
 
         $types_recipe = collect(types_recipes::select('type', 'id', 'image')->get())->take(6);
+
         return response()->json($types_recipe);
     }
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\recipe  $recipe
-
      */
     public function edit(recipe $recipe)
     {
@@ -132,16 +121,12 @@ class RecipeController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\recipe  $recipe
-
      */
     public function update(Request $request, $update_recipe_id)
     {
 
         $this->validate_recipe($request);
-
-
 
         $recipe_update = recipe::where('id', $update_recipe_id)->update([
             'name' => $request->name,
@@ -152,6 +137,7 @@ class RecipeController extends Controller
         if ($recipe_update) {
             $this->storeIngredients($update_recipe_id);
             $this->UpdateImages($request, $update_recipe_id);
+
             return response()->json([
                 'status' => 'تم',
                 'message' => 'تم تحديث الوصفة بنجاح',
@@ -159,9 +145,6 @@ class RecipeController extends Controller
             ]);
         }
     }
-
-
-
 
     public function validate_recipe($request)
     {
@@ -179,14 +162,14 @@ class RecipeController extends Controller
             return response([
                 'status' => 'خطاء',
                 'message' => 'لا يمكن اضافة وصفة بدون مكونات',
-                'class' => 'danger'
+                'class' => 'danger',
             ], 200);
         } else {
             // Store ingredients in var ingredients
             foreach (json_decode($request->ingredients) as $item => $value) {
                 array_push(
                     $this->ingredients,
-                    ['name_ingredient' => $value->name_ingredient, 'quantity' => $value->quantity,]
+                    ['name_ingredient' => $value->name_ingredient, 'quantity' => $value->quantity]
                 );
             }
         }
@@ -202,7 +185,7 @@ class RecipeController extends Controller
 
         if ($request->hasFile('head_image')) {
             if ($request->file('head_image')->isValid()) {
-                $this->head_image =  $request->file('head_image');
+                $this->head_image = $request->file('head_image');
             }
         }
         // Store id of video Youtube
@@ -212,34 +195,34 @@ class RecipeController extends Controller
 
         //store image in varriable other images
         for ($i = 0; $i < count($request->file()); $i++) {
-            if ($request->hasFile('image_' . $i)) {
-                $this->other_images['image_' . $i] = $request->file('image_' . $i);
+            if ($request->hasFile('image_'.$i)) {
+                $this->other_images['image_'.$i] = $request->file('image_'.$i);
             }
         }
 
         return true;
     }
+
     public function destroy($recipe_id)
     {
         image::where('recipe_id', $recipe_id)->delete();
         ingredients::where('recipe_id', $recipe_id)->delete();
         $recipe = recipe::find($recipe_id);
-        Storage::disk('public')->deleteDirectory(auth()->user()->id . '/' . $recipe->name);
+        Storage::disk('public')->deleteDirectory(auth()->user()->id.'/'.$recipe->name);
         $recipe->delete();
+
         return response()->json([
             'status' => 'تم حذف الوصفة بنجاح',
             'class' => 'success',
         ]);
     }
 
-
     public function UpdateImages(request $request, $recipe_id)
     {
 
-
         if ($this->head_image !== null) {
             $CheckHeadImage = image::where('recipe_id', $recipe_id)->where('cover', 'active')->firstOr(function () {
-                throw new Exception("Not found ", 1);
+                throw new Exception('Not found ', 1);
             });
 
             if ($CheckHeadImage) {
@@ -250,13 +233,12 @@ class RecipeController extends Controller
         if ($this->other_images !== null) {
             $CheckOtherImages = image::where('recipe_id', $recipe_id)->whereNull('cover')->get();
             if (count($CheckOtherImages) + count($this->other_images) > 3) { // Check if Recipe had +3 files
-                throw new Exception("لا يمكنك رفع اكثر من 3 صورة ", 1);
+                throw new Exception('لا يمكنك رفع اكثر من 3 صورة ', 1);
             } else {
                 $this->storeOtherImage($recipe_id);
             }
         }
     }
-
 
     public function storeIngredients($recipe_id)
     {
@@ -265,13 +247,14 @@ class RecipeController extends Controller
         // // store Ingredient
         for ($i = 0; $i < count($this->ingredients); $i++) {
             $insert = ingredients::create([
-                'name_ingredient' =>   $this->ingredients[$i]['name_ingredient'],
-                'quantity' =>   $this->ingredients[$i]['quantity'],
-                'recipe_id' =>   $recipe_id,
+                'name_ingredient' => $this->ingredients[$i]['name_ingredient'],
+                'quantity' => $this->ingredients[$i]['quantity'],
+                'recipe_id' => $recipe_id,
             ]);
             $insert->save();
         }
     }
+
     public function storeHeadImage($recipe_id)
     {
         $head_img = $this->head_image->store('recipes', 'public'); // Head Images
@@ -284,6 +267,7 @@ class RecipeController extends Controller
         ]);
         $save_head_image->save();
     }
+
     public function storeOtherImage($recipe_id)
     {
 
@@ -298,23 +282,22 @@ class RecipeController extends Controller
             $save_other_images->save();
         }
     }
+
     public function RemovePrevImage($image_id)
     {
         $image_name = image::find($image_id);
-        $delete_in_storage = Storage::disk('public')->delete('recipes/'  . $image_name->name);
+        $delete_in_storage = Storage::disk('public')->delete('recipes/'.$image_name->name);
         $delete_in_Db = $image_name->delete();
-
-
-
 
         if ($delete_in_storage && $delete_in_Db) {
             return response([
                 'status' => 'تم',
                 'message' => 'تم حذف الصورة',
-                'class' => 'info'
+                'class' => 'info',
             ], 200);
         }
     }
+
     public function like_recipe(request $e)
     {
         $users = User::all()->count();
@@ -354,27 +337,27 @@ class RecipeController extends Controller
     {
         if (isset($e->SearchBy) && $e->SearchBy == 'type') {
             $type_id = types_recipes::where('type', $type)->first()->id;
+
             return response()->json(RecipeResource::collection(recipe::with(['author', 'images_recipe' => function ($query) {
                 $query->whereNotNull('cover')->get();
             }])->where('type_id', $type_id)->get()));
         } else {
             return response()->json(RecipeResource::collection(recipe::with(['author', 'images_recipe' => function ($query) {
                 $query->whereNotNull('cover')->get();
-            }])->where('name', 'like', '%' . $type . '%')->get()));
+            }])->where('name', 'like', '%'.$type.'%')->get()));
         }
     }
+
     public function filterBy($key)
     {
-        # code...
+        // code...
     }
 
     /**
      * Get random Recipe.
      *
      * @return  \Illuminate\Http\JsonResponse random recipe
-
      */
-
     public function randomRecipe()
     {
 
@@ -383,9 +366,10 @@ class RecipeController extends Controller
         $random = recipe::with([
             'images_recipe' => function ($query) {
                 $query->whereNotNull('cover')->first();
-            }, 'author', 'ingredient'
+            }, 'author', 'ingredient',
         ])->where('id', $random_num)->first();
         $rating = Rating::where('recipe_id', $random_num)->first();
+
         return response()->json([
             'random_recipe' => $random,
             'rating' => $rating,
@@ -396,16 +380,21 @@ class RecipeController extends Controller
     {
 
         $recipeOfMonth = recipe::with(['type_recipe', 'images_recipe'])->whereMonth('created_at', Carbon::now()->format('m'))->limit(6)->get();
+
         return response()->json($recipeOfMonth);
     }
+
     public function BestRecipe()
     {
         $BestRecipe = recipe::with(['type_recipe', 'images_recipe'])->orderByDesc('like')->limit(3)->get();
+
         return response()->json($BestRecipe);
     }
+
     public function MostPosted()
     {
         $UserMostPosted = collect(User::with('recipes')->whereHas('recipes')->get())->sortByDesc('recipes')->take(7);
+
         return response()->json($UserMostPosted);
     }
 }

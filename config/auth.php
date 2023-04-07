@@ -1,7 +1,5 @@
 <?php
 
-use App\Models\user_media;
-
 return [
 
     /*

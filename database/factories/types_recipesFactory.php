@@ -13,7 +13,8 @@ class types_recipesFactory extends Factory
      */
     public function definition()
     {
-        $types = array("حلويات", "مملحات", "صحي", "معجنات", "صباحيات");
+        $types = ['حلويات', 'مملحات', 'صحي', 'معجنات', 'صباحيات'];
+
         return [
             'type' => array_rand(array_flip($types), 1),
         ];

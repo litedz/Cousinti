@@ -17,7 +17,7 @@ class ProfileServices
             'background' => 'required',
             'avatar' => 'nullable|image',
         ]);
-        //  find User 
+        //  find User
         $user = User::where('id', auth()->user()->id)->firstOrfail();
 
         if (isset($request->avatar)) {
@@ -25,22 +25,22 @@ class ProfileServices
             //remove old avatar if exist
             $remove_old_avatar = Storage::disk('public')->delete($user->avatar);
             if ($remove_old_avatar) {
-                // Store avatar 
+                // Store avatar
                 $store_avatar = $request->file('avatar')->store('avatars', 'public');
                 // update attribute in database
                 $update_avatar = $user->update(['avatar' => $store_avatar]);
             }
         }
-        // Update username  
+        // Update username
         $update_user = $user->update([
             'username' => $request->username,
         ]);
-        // Update background profile 
+        // Update background profile
         $update_background = Profile::where('id', auth()->user()->id)->update([
             'background' => $request->background,
         ]);
-        if (!$update_user && !$update_background) {
-            throw new Exception("Error Processing Request", 1);
+        if (! $update_user && ! $update_background) {
+            throw new Exception('Error Processing Request', 1);
         }
     }
 
@@ -57,13 +57,12 @@ class ProfileServices
         $updatePerm = Profile::where('id', $user->profile_id)
             ->update([
                 'last_activity' => $request->last_activity,
-                'recipes' => $request->recipes
+                'recipes' => $request->recipes,
 
             ]);
 
-
-        if (!$updatePerm) {
-            throw new Exception("خطا في تحديث الصلاحيات", 1);
+        if (! $updatePerm) {
+            throw new Exception('خطا في تحديث الصلاحيات', 1);
         }
     }
 }

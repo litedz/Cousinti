@@ -21,7 +21,6 @@ class CreateImages extends Migration
             $table->timestamps();
         });
     }
-    
 
     /**
      * Reverse the migrations.

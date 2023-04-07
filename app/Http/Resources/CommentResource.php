@@ -16,7 +16,7 @@ class CommentResource extends JsonResource
     {
         return [
             'comment' => $this->comment,
-            'user' => $this->whenLoaded('user')->only('username', 'avatar','id'),
+            'user' => $this->whenLoaded('user')->only('username', 'avatar', 'id'),
             'created_at' => $this->created_at,
         ];
     }

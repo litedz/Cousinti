@@ -4,20 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Http\Request;
 
 class types_recipes extends Model
 {
     use HasFactory;
 
-
-
-    protected $fillable = ['type','image'];
-
+    protected $fillable = ['type', 'image'];
 
     public function recipe()
     {
         return $this->hasMany(recipe::class);
     }
-
 }

@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Events\Subscribe;
 use App\Events\SubscribeEvent;
 use App\Listeners\SubscribeListener;
 use Illuminate\Auth\Events\Registered;

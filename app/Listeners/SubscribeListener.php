@@ -5,10 +5,6 @@ namespace App\Listeners;
 use App\Events\SubscribeEvent;
 use App\Mail\NewsRecipesMail;
 use App\Models\Subscribe;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Mail;
 use Throwable;
 
@@ -26,11 +22,8 @@ class SubscribeListener
 
     /**
      * Handle the event.
-     *
-     * @param  \App\Events\SubscribeEvent  $event
      */
     public function handle(SubscribeEvent $event)
-
     {
         Subscribe::create([
             'email' => $event->email,

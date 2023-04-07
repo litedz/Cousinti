@@ -17,7 +17,7 @@ class SubscribeFactory extends Factory
     public function definition()
     {
         return [
-           'email' => $this->faker->email(),
+            'email' => $this->faker->email(),
         ];
     }
 }

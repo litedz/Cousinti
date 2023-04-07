@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class ingredients extends Model
 {
     use HasFactory;
-    protected $fillable = ['name_ingredient', 'quantity','recipe_id'];
+
+    protected $fillable = ['name_ingredient', 'quantity', 'recipe_id'];
 }

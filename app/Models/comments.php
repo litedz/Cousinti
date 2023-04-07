@@ -11,11 +11,11 @@ class comments extends Model
 
     protected $fillable = ['recipe_id', 'comment', 'user_id'];
 
-
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
     public function recipe()
     {
         return $this->belongsTo(recipe::class);

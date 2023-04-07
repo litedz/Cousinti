@@ -2,14 +2,12 @@
 
 namespace Database\Factories;
 
-use App\Models\recipe;
 use App\Models\types_recipes;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class RecipeFactory extends Factory
 {
-
     /**
      * Define the model's default state.
      *

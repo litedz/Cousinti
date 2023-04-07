@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\SubscribeEvent;
 use App\Jobs\Subscribe as JobsSubscribe;
 use App\Models\Profile;
 use App\Models\Rating;
@@ -12,14 +11,11 @@ use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
-use Throwable;
 
 class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     * 
      */
     public function index()
     {
@@ -28,8 +24,6 @@ class UserController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *
-     * 
      */
     public function create(request $request)
     {
@@ -38,9 +32,6 @@ class UserController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * 
      */
     public function store(Request $request)
     {
@@ -66,14 +57,14 @@ class UserController extends Controller
         }
         $store = User::create($valid);
         if ($store) {
-            //create profile 
+            //create profile
             $profile = Profile::factory()->create();
 
-            $profile_id = $profile ? $profile->id : throw new Exception("Error Processing Request", 1);
-
+            $profile_id = $profile ? $profile->id : throw new Exception('Error Processing Request', 1);
             User::where('id', $store->id)->update([
                 'profile_id' => $profile_id,
             ]);
+
             return response()->json('created');
         } else {
             throw new Exception('يوجد خطا في التسجيل يرجى المحاولة من جديد ', 1);
@@ -82,8 +73,6 @@ class UserController extends Controller
 
     /**
      * Display the specified resource.
-     *
-
      */
     public function show(User $user)
     {
@@ -91,8 +80,6 @@ class UserController extends Controller
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\User  $user
      */
     public function edit(User $user)
     {
@@ -102,14 +89,10 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  integer  $user_id Required
-     * @param  \App\Models\User  $user
-
+     * @param  int  $user_id Required
      */
     public function update(User $user, Request $request, $user_id)
     {
-
 
         $valid = $request->validate([
             'username' => 'required',
@@ -123,15 +106,12 @@ class UserController extends Controller
         if ($update_User) {
             return response()->json('updated');
         } else {
-            throw new Exception("تمت خطا في التحديث", 1);
+            throw new Exception('تمت خطا في التحديث', 1);
         }
     }
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\User  $user
-     * 
      */
     public function destroy(User $user)
     {
@@ -148,13 +128,13 @@ class UserController extends Controller
             User::where('id', auth()->user()->id)->update([
                 'avatar' => $store_new_avatar,
             ]);
+
             return response()->json('updated');
         }
     }
 
     public function changePassword(request $request, User $user_id)
     {
-
 
         $validate = $request->validate([
             'currentPassword' => 'required|current_password',
@@ -165,7 +145,6 @@ class UserController extends Controller
                 'newPassword' => 'required',
                 'confirmPassword' => 'required|same:newPassword',
             ]);
-
 
             $changepassword = $user->update([
                 'password' => Hash::make($request->newPassword),
@@ -178,7 +157,6 @@ class UserController extends Controller
 
     public function RecipeUserLiked(Request $request)
     {
-
 
         $liked = Rating::where('user_id', auth()->user()->id)->where('recipe_id', $request->recipe_id)->get();
         if (count($liked) == 0) {
@@ -210,14 +188,12 @@ class UserController extends Controller
             return $th->getMessage();
         }
 
-
-
         if ($store_User) {
             return response()->json('created');
         }
     }
 
-    public function Subscribe(Subscribe $subscribe,  Request $e)
+    public function Subscribe(Subscribe $subscribe, Request $e)
     {
         $validate = $e->validate([
             'email' => 'required|email|max:255',
@@ -229,6 +205,6 @@ class UserController extends Controller
 
         $subscribed = JobsSubscribe::dispatch($e->email);
 
-        return $subscribed ? response()->json('تم الاشتراك معنا في الموقع بنجاح') : throw new Exception("Error Processing Request", 1);
+        return $subscribed ? response()->json('تم الاشتراك معنا في الموقع بنجاح') : throw new Exception('Error Processing Request', 1);
     }
 }
