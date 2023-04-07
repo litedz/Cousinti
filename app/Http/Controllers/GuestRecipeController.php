@@ -22,6 +22,7 @@ class GuestRecipeController extends Controller
             $query->whereNotNull('cover')->get();
         }])
             ->whereHas('images_recipe')
+            ->orderByDesc('id')
             ->get());
 
         $RecipeMostComment = collect(recipe::with('comments')->whereHas('comments')->get())->sortByDesc('comments')->take(2);
@@ -92,26 +93,25 @@ class GuestRecipeController extends Controller
 
     public function filter(request $e, $type)
     {
-        if (isset($e->SearchBy) && $e->SearchBy == 'type') {
-            $type_id = types_recipes::where('type', $type)->first()->id;
 
-            $recipes = RecipeResource::collection(recipe::with([
-                'author', 'images_recipe' => function ($query) {
-                    $query->whereNotNull('cover')->get();
-                },
-            ])
-                ->where('type_id', $type_id)
-                ->whereHas('images_recipe')
-                ->get());
+        $type = types_recipes::where('type', $type)->firstOrFail();
 
-            return response()->json($recipes);
-        }
+        $recipes = RecipeResource::collection(recipe::with([
+            'author','type_recipe', 'images_recipe' => function ($query) {
+               $query->whereNotNull('cover')->get();
+            },
+        ])
+            ->where('type_id', $type->id)
+            ->whereHas('images_recipe')
+            ->get());
+
+        return response()->json($recipes);
     }
 
     public function search($type)
     {
         return response()->json(RecipeResource::collection(recipe::with(['author', 'images_recipe' => function ($query) {
             $query->whereNotNull('cover')->get();
-        }])->where('name', 'like', '%'.$type.'%')->get()));
+        }])->where('name', 'like', '%' . $type . '%')->get()));
     }
 }

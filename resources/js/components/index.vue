@@ -499,7 +499,7 @@ export default {
 	},
 };
 </script>
-<style>
+<style scoped>
 .wrapper {
 	max-width: 100%;
 	height: 5000px;

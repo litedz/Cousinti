@@ -53,4 +53,5 @@ class recipe extends Model
     {
         $query->latest('created_at')->limit(4);
     }
+
 }

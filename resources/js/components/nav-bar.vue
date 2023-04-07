@@ -37,7 +37,7 @@
             <a href="/similar/مملحات" class="text-decoration-none text-black">مملحات</a><span
               class="fa fa-2xs fa-chevron-down first-color"></span>
           </div>
-          <div class="drowDownMenu p-3 position-absolute w-50 rounded z-8888 bg-white-p" style="left:25%;">
+          <!-- <div class="drowDownMenu p-3 position-absolute w-100 rounded z-8888 bg-white-p" style="left:0%;">
             <div class="container">
               <div class="row g-2">
                 <div class="col mx-1 rounded">
@@ -97,11 +97,13 @@
                   </div>
                   <div class="border-top text-black-title text-center">صابلي العيد خفيف </div>
                 </div>
-                <div class="more col-12"><a href="/similar/مملحات" class="border btn btn-block btn-lg fs-5 rounded-5"
-                    style="color: #E47C8D;">راية المزيد</a></div>
+                <div class="more col-12">
+                  <a href="/similar/مملحات" class="border btn btn-block fs-5" style="color: #EF6F82 !important;">راية
+                    المزيد</a>
+                </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </li>
       </div>
       <div v-for="recipeType in types" :key="recipeType.name" id="link-nav" class="hoverable p-2"
@@ -110,6 +112,16 @@
           <div class="align-items-center d-flex gap-2 justify-content-center">
             <a :href="'/similar/' + recipeType.type" class="text-decoration-none text-black">{{ recipeType.type }}</a>
           </div>
+        </li>
+      </div>
+      <div id="link-nav" class="hoverable p-2 Dropable" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
+        <li class="fs-5 pointer">
+          <div class="align-items-center d-flex gap-2 justify-content-center">
+            <a href="/recipes" class="text-decoration-none text-black">جميع الوصفات</a><span
+              class="fa fa-2xs fa-chevron-down first-color"></span>
+          </div>
+
+          
         </li>
       </div>
 

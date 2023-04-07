@@ -84,7 +84,7 @@ Route::middleware(['auth'])->group(function () {
 // Guest Routes
 Route::prefix('guest')->group(function () {
     Route::resource('recipe', GuestRecipeController::class)->names('guest.recipe');
-    route::post('filter/{filter_key}', [GuestRecipeController::class, 'filter'])->name('guest.recipe.filter');
+    route::get('filter/{type}', [GuestRecipeController::class, 'filter'])->name('guest.recipe.filter');
     route::post('search/{search_key}', [GuestRecipeController::class, 'search'])->name('guest.recipe.search');
     route::get('subscribe', [GuestRecipeController::class, 'Subscribe'])->name('guest.recipe.search');
 });
