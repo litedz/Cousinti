@@ -68,117 +68,73 @@
 						</div>
 						<div class="populer"></div>
 					</div>
+
 					<div class="col-12 col-md-8 d-grid gap-4 left-bar">
 						<div class="fs-2 header position-relative text-black-title">رمضانيات</div>
-						<div class="row justify-content-center">
-							<div class="col-12 col-md-12 col-lg" style="">
-								<div class="d-grid position-relative recipe" style="">
-									<div class="img-container position-relative">
-										<div
-											class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
-											<span class="level"><span class="mx-2">Beginner</span><span
-													class="fa fa-signal-perfect"></span></span><span class="time"><span
-													class="mx-2">30 Min</span><span class="fa fa-clock-four"></span></span>
+
+						<div class="row gy-3">
+							<div v-for="(recipe,index) in MostComment" :key="recipe.MostComment">
+								<div class="col-12" v-if="index == 0">
+									<div class="d-grid position-relative recipe">
+										<div class="img-container position-relative">
+											<div
+												class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
+												<span class="level">
+													<span class="mx-2">{{ recipe.level }}</span>
+													<span class="fa fa-signal-perfect"></span></span>
+												<span class="time">
+													<span class="mx-2">{{ recipe.how_long }} Min</span>
+													<span class="fa fa-clock-four"></span>
+												</span>
+											</div>
+											<div
+												class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100">
+											</div>
+											<img :src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name"
+												alt="image" class="w-100" style="height:500px;">
 										</div>
-										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
-											style=""></div><img
-											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="image" class="w-100" style="height:500px;">
-									</div>
-									<div class="fs-3 title">Lorem ozlooxxx</div>
-									<div class="d-grid gap-1">
-										<span class="author fst-italic fw-bolder color-link">Author</span><span
-											class="data second-color fs-6"><span class="">12/12/2023</span><span
-												class="fa fa-calendar-alt"></span></span>
+										<div class="fs-3 title">{{ recipe.name }}</div>
+										<div class="d-grid gap-1">
+											<a :href="'/profile/' + recipe.author.id"
+												class="author fst-italic fw-bolder color-link text-decoration-none">{{
+													recipe.author.username }}</a>
+											<span class="data second-color fs-6"><span class="">{{
+												formateData(recipe.created_at) }}</span><span
+													class="fa fa-calendar-alt"></span></span>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="gy-4 justify-content-center row">
-							<div class="col-6 col-md-6 col-lg-3" style="">
-								<div class="d-grid position-relative recipe" style="">
-									<div class="img-container position-relative">
-										<div
-											class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
-											<span class="level"><span class="mx-2">Beginner</span><span
-													class="fa fa-signal-perfect"></span></span><span class="time"><span
-													class="mx-2">30 Min</span><span class="fa fa-clock-four"></span></span>
+							<div v-for="(recipe,index) in MostComment" :key="recipe.MostComment">
+								<div class="col-6 col-md-6 col-lg-3" v-if="index !== 0">
+									<div class="d-grid position-relative recipe">
+										<div class="img-container position-relative">
+											<div
+												class="d-flex fw-bolder gap-2 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
+												<span class="level"><span class="mx-2">Beginner</span><span
+														class="fa fa-signal-perfect"></span></span><span class="time"><span
+														class="mx-2">30 Min</span><span
+														class="fa fa-clock-four"></span></span>
+											</div>
+											<div
+												class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100">
+											</div>
+											<img :src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name"
+												alt="image" class="w-100">
 										</div>
-										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
-											style=""></div><img
-											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="image" class="w-100">
+										<div class="fs-3 title text-truncate">{{ recipe.name }}</div>
+										<div class="d-grid gap-1"><a :href="'/profile/' + recipe.author.id"
+												class="author fst-italic fw-bolder color-link text-decoration-none">{{
+													recipe.author.username }}</a><span class="data second-color fs-6"><span
+													class="">{{ formateData(recipe.created_at) }}</span><span
+													class="fa fa-calendar-alt"></span></span></div>
 									</div>
-									<div class="fs-3 title">Lorem ozlooxxx</div>
-									<div class="d-grid gap-1"><span
-											class="author fst-italic fw-bolder color-link">Author</span><span
-											class="data second-color fs-6"><span class="">12/12/2023</span><span
-												class="fa fa-calendar-alt"></span></span></div>
+
+
 								</div>
+
 							</div>
-							<div class="col-6 col-md-6 col-lg-3" style="">
-								<div class="d-grid position-relative recipe" style="">
-									<div class="img-container position-relative">
-										<div
-											class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
-											<span class="level"><span class="mx-2">Beginner</span><span
-													class="fa fa-signal-perfect"></span></span><span class="time"><span
-													class="mx-2">30 Min</span><span class="fa fa-clock-four"></span></span>
-										</div>
-										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
-											style=""></div><img
-											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="image" class="w-100">
-									</div>
-									<div class="fs-3 title">Lorem ozlooxxx</div>
-									<div class="d-grid gap-1"><span
-											class="author fst-italic fw-bolder color-link">Author</span><span
-											class="data second-color fs-6"><span class="">12/12/2023</span><span
-												class="fa fa-calendar-alt"></span></span></div>
-								</div>
-							</div>
-							<div class="col-6 col-md-6 col-lg-3" style="">
-								<div class="d-grid position-relative recipe" style="">
-									<div class="img-container position-relative">
-										<div
-											class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
-											<span class="level"><span class="mx-2">Beginner</span><span
-													class="fa fa-signal-perfect"></span></span><span class="time"><span
-													class="mx-2">30 Min</span><span class="fa fa-clock-four"></span></span>
-										</div>
-										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
-											style=""></div><img
-											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="image" class="w-100">
-									</div>
-									<div class="fs-3 title">Lorem ozlooxxx</div>
-									<div class="d-grid gap-1"><span
-											class="author fst-italic fw-bolder color-link">Author</span><span
-											class="data second-color fs-6"><span class="">12/12/2023</span><span
-												class="fa fa-calendar-alt"></span></span></div>
-								</div>
-							</div>
-							<div class="col-6 col-md-6 col-lg-3" style="">
-								<div class="d-grid position-relative recipe" style="">
-									<div class="img-container position-relative">
-										<div
-											class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
-											<span class="level"><span class="mx-2">Beginner</span><span
-													class="fa fa-signal-perfect"></span></span><span class="time"><span
-													class="mx-2">30 Min</span><span class="fa fa-clock-four"></span></span>
-										</div>
-										<div class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100"
-											style=""></div><img
-											src="https://www.seriouseats.com/thmb/e16lLOoVEix_JZTv7iNyAuWkPn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"
-											alt="image" class="w-100">
-									</div>
-									<div class="fs-3 title">Lorem ozlooxxx</div>
-									<div class="d-grid gap-1"><span
-											class="author fst-italic fw-bolder color-link">Author</span><span
-											class="data second-color fs-6"><span class="">12/12/2023</span><span
-												class="fa fa-calendar-alt"></span></span></div>
-								</div>
-							</div>
+
 						</div>
 					</div>
 				</div>
@@ -222,11 +178,11 @@
 			</div>
 		</section>
 		<section class="random-recipe mt-5">
-			<div class="" style="">
+			<div class="">
 				<div class="container pb-5">
 					<div class="row">
-						<div class="align-self-center col-12 col-md-6 " style="">
-							<div class="align-items-start d-flex flex-column fs-6 gap-4 lh-lg p-3 rounded" style="">
+						<div class="align-self-center col-12 col-md-6 ">
+							<div class="align-items-start d-flex flex-column fs-6 gap-4 lh-lg p-3 rounded">
 								<div class="fs-1 title">مشكلة الفطور في اليوم</div>
 								<div class="text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص
 									من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى
@@ -407,7 +363,7 @@ export default {
 						this.LatestRecipes = response.data.LatestRecipes;
 					}
 				})
-				.catch((error) => { 
+				.catch((error) => {
 				});
 		},
 

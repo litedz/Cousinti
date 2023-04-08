@@ -12,14 +12,16 @@ class recipe extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'rating', 'type_id', 'how_todo', 'user_id', 'description'];
+    protected $with = ['author', 'images_recipe'];
 
-    public function scopeingredient()
+    protected $fillable = ['name', 'rating', 'type_id', 'how_todo', 'user_id', 'description', 'how_long', 'level'];
+
+    public function scopeingredient(): HasMany
     {
         return $this->hasMany(ingredients::class);
     }
 
-    public function scopeimages_recipe(): HasMany
+    public function images_recipe()
     {
         return $this->hasMany(image::class);
     }

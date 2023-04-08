@@ -22,6 +22,8 @@ class RecipeFactory extends Factory
             'user_id' => User::factory(),
             'how_todo' => $this->faker->realText(),
             'description' => $this->faker->text(),
+            'level' => $this->faker->text(5),
+            'how_long' => $this->faker->numberBetween(0, 100),
         ];
     }
 }
