@@ -34,8 +34,8 @@
       <div id="link-nav" class="hoverable p-2 Dropable" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center">
-            <a href="/similar/مملحات" class="text-decoration-none text-black">مملحات</a><span
-              class="fa fa-2xs fa-chevron-down first-color"></span>
+            <a href="/similar/مملحات" class="text-decoration-none text-black">مملحات</a>
+           
           </div>
           <!-- <div class="drowDownMenu p-3 position-absolute w-100 rounded z-8888 bg-white-p" style="left:0%;">
             <div class="container">
@@ -117,8 +117,7 @@
       <div id="link-nav" class="hoverable p-2 Dropable" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center">
-            <a href="/recipes" class="text-decoration-none text-black">جميع الوصفات</a><span
-              class="fa fa-2xs fa-chevron-down first-color"></span>
+            <a href="/recipes" class="text-decoration-none text-black">جميع الوصفات</a> 
           </div>
 
           
