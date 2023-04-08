@@ -4,16 +4,17 @@
 			<div class="align-items-center d-flex justify-content-between">
 				<div class="contact fs-4 gap-1 h-100">
 					<a class="text-decoration-none flex-center gap-2">
-						<div class="fs-6 text-white"><span class="fw-bold"> Contact :</span> <span>+1207445810</span></div>
-						<div class="fs-6 text-white"><span class="fw-bold">Email :</span> <span>Support@cousinti.com</span></div>
+						<div class="fs-6 text-white"><span class="fw-bold"> Contact :</span> <span class="pointer">+1207445810</span></div>
+						<div class="fs-6 text-white"><span class="fw-bold">Email :</span> <span class="pointer">Support@cousinti.com</span></div>
 					</a>
 				</div>
 				<div class="search w-50">
-					<div class="align-items-center d-flex gap-2 search-form">
+					<!-- <div class="align-items-center d-flex gap-2 search-form">
 						<li class="fa fa-search" style="color: hsl(60deg 0% 100%);"></li>
 						<input type="text" id="search" class="border-0 form-control form-control-sm" style="border: none;"
 							placeholder="البحث عن وصفة">
-					</div>
+					</div> -->
+					<search></search>
 				</div>
 
 				<div class="align-items-center d-flex fw-bolder gap-2 login rounded" bis_skin_checked="1"

@@ -109,9 +109,13 @@ class GuestRecipeController extends Controller
 
     public function search($type)
     {
-        return response()->json(RecipeResource::collection(recipe::with(['author', 'images_recipe' => function ($query) {
+        $recipes_found = RecipeResource::collection(recipe::with(['author', 'images_recipe' => function ($query) 
+        {
             $query->whereNotNull('cover')->get();
-        }])->where('name', 'like', '%'.$type.'%')->get()));
+        }])
+        ->whereHas('images_recipe')
+        ->where('name', 'like', '%' . $type . '%')->get());
+        return response()->json($recipes_found);
     }
 
     public function LatestRecipes()
