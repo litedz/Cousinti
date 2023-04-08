@@ -1,5 +1,5 @@
 <template>
-    <div class="random_recipe pb-5 pt-2 rounded" style="padding: 7%;">
+    <div class="random_recipe pb-5 pt-2 rounded" style="padding: 7%;" v-for="recipe in random_recipe ">
         <div class="position-fixed w-100 h-100 end-0 top-0 bg-dark opacity-50 z-8888"></div>
         <div class="container position-relative bg-light" style="z-index: 9999;">
 
@@ -11,21 +11,21 @@
             </div>
             <div class="row">
                 <div class="border-bottom col-12 font-22 font-weight-bolder p-2 text-center title w-100 first-color ">
-                    <a class="text-decoration-none" :href="'/recipes/' + random_recipe.id">{{ random_recipe.name
+                    <a class="text-decoration-none third-color" :href="'/recipes/' + recipe.id">{{ recipe.name
                     }}</a>
                 </div>
                 <div class="img-recipe-container col-12 p-0 img-fluid mt-3 rounded text-center position-relative">
-                    <img v-for="cover in random_recipe.images_recipe" :key="cover.recipe"
-                        :src="w_path + '/storage/recipes/' + cover.name" class="w-100 rounded" alt="" srcset="">
+                    <img :src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name" class="w-100 rounded" alt=""
+                        srcset="">
                     <div class="overlay w-100 h-100 bg-first-color position-absolute top-0"></div>
                     <div
                         class="info-recipe align-items-center d-flex gap-4 justify-content-center position-absolute top-50 w-100">
                         <div class="time d-flex align-items-center gap-2 text-white">
-                            <span>23 min</span>
+                            <span>{{ recipe.how_long }} min</span>
                             <span class="fa fa-clock"></span>
                         </div>
                         <div class="like d-flex align-items-center gap-2 text-white">
-                            <span>25</span>
+                            <span>{{ recipe.like }}</span>
                             <span class="fa fa-heart"></span>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                                         <span>تغيير</span>
                                         <li class="fa fa-rotate fa-2xs"></li>
                                     </a>
-                                    <a :href="'/recipes/' + random_recipe.id" dir="rtl"
+                                    <a :href="'/recipes/' + recipe.id" dir="rtl"
                                         class="align-items-center bg-first-color btn btn-primary d-flex fw-bold gap-2 justify-content-center m-1 p-mb-sc-0 text-white w-50"
                                         style="width: 40%;">
                                         <span>الوصفة</span>
@@ -88,11 +88,11 @@ export default {
     methods: {
         getRandomRecipe() {
 
-            axios({ method: "post", url: "/recipes/random" })
+            axios({ method: "post", url: "guest/recipes/random" })
                 .then((response) => {
                     if (response.data.random_recipe) {
                         this.random_recipe = response.data.random_recipe;
-                        this.rating = response.data.rating.rating;
+                        // this.rating = response.data.rating.rating;
                     }
                 })
                 .catch((error) => { });
@@ -113,13 +113,13 @@ export default {
 }
 
 .random_recipe .img-recipe-container .overlay,
-.info-recipe {
-    opacity: 0;
+.random_recipe .img-recipe-container .info-recipe {
+    opacity: 0 !important;
     transition: all 1s;
 }
 
 .random_recipe .img-recipe-container:hover .overlay,
-.info-recipe {
+.random_recipe .img-recipe-container:hover .info-recipe {
     opacity: 0.75 !important;
     transition: all 0.5;
 }

@@ -30,7 +30,6 @@ class GuestRecipeController extends Controller
         $BestRecipe = recipe::with(['type_recipe', 'images_recipe'])->orderByDesc('like')->limit(3)->get();
         $recipesOfMonth = recipe::with(['type_recipe', 'images_recipe'])->whereMonth('created_at', Carbon::now()->format('m'))->limit(6)->get();
         $RatingRecipe = recipe::with(['type_recipe', 'images_recipe'])->orderByDesc('rating')->limit(5)->get();
-        $LatestRecipes = Recipe::with('images_recipe')->whereHas('images_recipe')->latestRecipe()->orderBy('created_at')->limit(4)->get();
 
         return response()->json([
             'recipes' => $recipes,
@@ -112,7 +111,7 @@ class GuestRecipeController extends Controller
     {
         return response()->json(RecipeResource::collection(recipe::with(['author', 'images_recipe' => function ($query) {
             $query->whereNotNull('cover')->get();
-        }])->where('name', 'like', '%' . $type . '%')->get()));
+        }])->where('name', 'like', '%'.$type.'%')->get()));
     }
 
     public function LatestRecipes()
@@ -120,5 +119,19 @@ class GuestRecipeController extends Controller
         $LatestRecipes = recipe::with('images_recipe')->whereHas('images_recipe')->latestRecipe()->orderBy('created_at')->limit(4)->get();
 
         return $LatestRecipes;
+    }
+
+    public function randomRecipe()
+    {
+
+        $random = collect(recipe::with(['author', 'ingredient', 'images_recipe' => function ($query) {
+            $query->whereNotNull('cover')->get();
+        }])
+            ->whereHas('images_recipe')
+            ->get())->random(1);
+
+        return response()->json([
+            'random_recipe' => $random,
+        ]);
     }
 }

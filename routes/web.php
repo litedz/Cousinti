@@ -60,7 +60,7 @@ Route::get('/recipes/{recipe_id}', function ($recipe_id) {
 Route::get('/similar/{type}', function () {
     return view('recipes.same_type_recipe');
 })->name('recipe.same_type');
-Route::post('/recipes/random', [RecipeController::class, 'randomRecipe'])->name('recipe.random');
+
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/recipe/{recipe_id}', [RecipeController::class, 'show']);
@@ -88,6 +88,7 @@ Route::prefix('guest')->group(function () {
     route::post('search/{search_key}', [GuestRecipeController::class, 'search'])->name('guest.recipe.search');
     route::get('subscribe', [GuestRecipeController::class, 'Subscribe'])->name('guest.recipe.subscribe');
     route::get('recipes/latest', [GuestRecipeController::class, 'LatestRecipes'])->name('guest.recipe.latest');
+    Route::post('recipes/random', [GuestRecipeController::class, 'randomRecipe'])->name('recipe.random');
 });
 
 //Subscribe route

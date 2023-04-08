@@ -10,7 +10,6 @@ use App\Models\recipe;
 use App\Models\types_recipes;
 use App\Models\User;
 use App\Rules\YoutubeRule;
-use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -358,44 +357,4 @@ class RecipeController extends Controller
      *
      * @return  \Illuminate\Http\JsonResponse random recipe
      */
-    public function randomRecipe()
-    {
-
-        $all_recipe = recipe::all();
-        $random_num = rand(0, count($all_recipe));
-        $random = recipe::with([
-            'images_recipe' => function ($query) {
-                $query->whereNotNull('cover')->first();
-            }, 'author', 'ingredient',
-        ])->where('id', $random_num)->first();
-        $rating = Rating::where('recipe_id', $random_num)->first();
-
-        return response()->json([
-            'random_recipe' => $random,
-            'rating' => $rating,
-        ]);
-    }
-
-    public function RecipesMonthly()
-    {
-
-        $recipeOfMonth = recipe::with(['type_recipe', 'images_recipe'])->whereMonth('created_at', Carbon::now()->format('m'))->limit(6)->get();
-
-        return response()->json($recipeOfMonth);
-    }
-
-    public function BestRecipe()
-    {
-        $BestRecipe = recipe::with(['type_recipe', 'images_recipe'])->orderByDesc('like')->limit(3)->get();
-
-        return response()->json($BestRecipe);
-    }
-
-    public function MostPosted()
-    {
-        $UserMostPosted = collect(User::with('recipes')->whereHas('recipes')->get())->sortByDesc('recipes')->take(7);
-
-        return response()->json($UserMostPosted);
-    }
-    
 }
