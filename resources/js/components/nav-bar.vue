@@ -35,7 +35,7 @@
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center">
             <a href="/similar/مملحات" class="text-decoration-none text-black">مملحات</a>
-           
+
           </div>
           <!-- <div class="drowDownMenu p-3 position-absolute w-100 rounded z-8888 bg-white-p" style="left:0%;">
             <div class="container">
@@ -117,10 +117,10 @@
       <div id="link-nav" class="hoverable p-2 Dropable" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center">
-            <a href="/recipes" class="text-decoration-none text-black">جميع الوصفات</a> 
+            <a href="/recipes" class="text-decoration-none text-black">جميع الوصفات</a>
           </div>
 
-          
+
         </li>
       </div>
 
@@ -133,6 +133,13 @@
         <li class="fa fa-hand-holding-heart"></li>
       </div>
     </nav>
+    <div class="align-items-center d-flex fw-bolder gap-2 login mx-2 position-absolute rounded start-0  form"
+      v-if="showLoginForm">
+      <a href="/login" class="btn p-2 px-4 rounded text-decoration-none text-white"
+        style="background: rgb(65, 60, 88);">Login</a>
+      <a href="/register" class="btn p-2 px-4 rounded text-decoration-none text-white"
+        style="background: hsl(251 19% 43% / 1);">Register</a>
+    </div>
   </div>
 </template>
 
@@ -151,6 +158,7 @@ export default {
       show: "",
       rightBarShow: false,
       types: '',
+      showLoginForm: false,
     };
   },
   methods: {
@@ -159,8 +167,10 @@ export default {
       $("#" + event.target.getAttribute("data-target")).toggleClass("show_navbar");
 
       $("#toggleButton").fadeToggle();
+
       $(".logo-menu img").fadeToggle();
-      $('.navbar').toggleClass('border-bottom border-top')
+      $('.navbar').toggleClass('border-bottom border-top');
+
 
       // if ($('#nav').hasClass('show_navbar')) {
       //   $('#nav .logo-menu img').css('50%')
@@ -172,8 +182,10 @@ export default {
       $(".Right-navbar").css("right", "0");
       if (this.rightBarShow) {
         $(".Right-navbar").css("right", "0");
+        this.showLoginForm = false;
       } else {
         $(".Right-navbar").css("right", "-100%");
+        this.showLoginForm = true;
       }
     },
     slideSubMenu() {
@@ -194,12 +206,18 @@ export default {
           background: 'rgb(255, 255, 255)',
           'box-shadow': '1px 1px 14px #ef6f82',
         });
+
+        // $('.login').addClass('d-flex');
+        this.showLoginForm = true;
+
       } else {
         $(".navbar").css({
           position: "relative",
           top: "0",
           'box-shadow': 'none',
         });
+
+        this.showLoginForm = false;
       }
     },
 

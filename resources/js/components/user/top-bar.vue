@@ -17,7 +17,7 @@
 					<search></search>
 				</div>
 
-				<div class="align-items-center d-flex fw-bolder gap-2 login rounded" bis_skin_checked="1"
+				<div class="align-items-center d-flex fw-bolder gap-2 login rounded"
 					style="/* background: rgb(65, 60, 88); */">
 					<a href="/login" class="btn p-2 px-4 rounded text-decoration-none text-white"
 						style="background: rgb(65, 60, 88);">Login</a>

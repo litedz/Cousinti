@@ -1,5 +1,5 @@
 <template>
-    <div class="dashboard w-100 d-flex position-fixed h-100" dir="">
+    <!-- <div class="dashboard w-100 d-flex position-fixed h-100" dir="">
         <div class="left-bar d-flex flex-column border-end">
             <div class="logo w-100 text-center border-bottom">
                 <img :src="this.w_path + '/images/logo2.png'" class="w-50 mx-auto" alt="" />
@@ -82,8 +82,408 @@
                 </KeepAlive>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- // components : add-recipe,table-recipes -->
+
+    <div id="sidebar" class='active'>
+        <div class="sidebar-wrapper active">
+            <div class="sidebar-header">
+                <img :src="w_path + '/images/logo.png'" alt="" srcset="">
+            </div>
+            <div class="sidebar-menu">
+                <ul class="menu">
+
+
+                    <li class='sidebar-title'>Main Menu</li>
+
+
+
+                    <li class="sidebar-item  ">
+                        <a href="index.html" class='sidebar-link'>
+                            <i data-feather="home" width="20"></i>
+                            <span>Dashboard</span>
+                        </a>
+
+                    </li>
+
+
+
+
+                    <li class="sidebar-item active has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i data-feather="triangle" width="20"></i>
+                            <span>Components</span>
+                        </a>
+
+                        <ul class="submenu active">
+
+                            <li>
+                                <a href="component-alert.html">Alert</a>
+                            </li>
+
+                            <li>
+                                <a href="component-badge.html">Badge</a>
+                            </li>
+
+                            <li>
+                                <a href="component-breadcrumb.html">Breadcrumb</a>
+                            </li>
+
+                            <li>
+                                <a href="component-buttons.html">Buttons</a>
+                            </li>
+
+                            <li>
+                                <a href="component-card.html">Card</a>
+                            </li>
+
+                            <li>
+                                <a href="component-carousel.html">Carousel</a>
+                            </li>
+
+                            <li>
+                                <a href="component-dropdowns.html">Dropdowns</a>
+                            </li>
+
+                            <li>
+                                <a href="component-list-group.html">List Group</a>
+                            </li>
+
+                            <li>
+                                <a href="component-modal.html">Modal</a>
+                            </li>
+
+                            <li>
+                                <a href="component-navs.html">Navs</a>
+                            </li>
+
+                            <li>
+                                <a href="component-pagination.html">Pagination</a>
+                            </li>
+
+                            <li>
+                                <a href="component-progress.html">Progress</a>
+                            </li>
+
+                            <li>
+                                <a href="component-spinners.html">Spinners</a>
+                            </li>
+
+                            <li>
+                                <a href="component-tooltips.html">Tooltips</a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+
+
+                    <li class="sidebar-item active has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i data-feather="briefcase" width="20"></i>
+                            <span>Extra Components</span>
+                        </a>
+
+                        <ul class="submenu active">
+
+                            <li>
+                                <a href="component-extra-avatar.html">Avatar</a>
+                            </li>
+
+                            <li>
+                                <a href="component-extra-divider.html">Divider</a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+
+
+                    <li class='sidebar-title'>Forms &amp; Tables</li>
+
+
+
+                    <li class="sidebar-item active has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i data-feather="file-text" width="20"></i>
+                            <span>Form Elements</span>
+                        </a>
+
+                        <ul class="submenu active">
+
+                            <li>
+                                <a href="form-element-input.html">Input</a>
+                            </li>
+
+                            <li>
+                                <a href="form-element-input-group.html">Input Group</a>
+                            </li>
+
+                            <li>
+                                <a href="form-element-select.html">Select</a>
+                            </li>
+
+                            <li>
+                                <a href="form-element-radio.html">Radio</a>
+                            </li>
+
+                            <li>
+                                <a href="form-element-checkbox.html">Checkbox</a>
+                            </li>
+
+                            <li>
+                                <a href="form-element-textarea.html">Textarea</a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+
+
+                    <li class="sidebar-item  ">
+                        <a href="form-layout.html" class='sidebar-link'>
+                            <i data-feather="layout" width="20"></i>
+                            <span>Form Layout</span>
+                        </a>
+
+                    </li>
+
+
+
+
+                    <li class="sidebar-item  ">
+                        <a href="form-editor.html" class='sidebar-link'>
+                            <i data-feather="layers" width="20"></i>
+                            <span>Form Editor</span>
+                        </a>
+
+                    </li>
+
+
+
+
+                    <li class="sidebar-item  ">
+                        <a href="table.html" class='sidebar-link'>
+                            <i data-feather="grid" width="20"></i>
+                            <span>Table</span>
+                        </a>
+
+                    </li>
+
+
+
+
+                    <li class="sidebar-item  ">
+                        <a href="table-datatable.html" class='sidebar-link'>
+                            <i data-feather="file-plus" width="20"></i>
+                            <span>Datatable</span>
+                        </a>
+
+                    </li>
+
+
+
+
+                    <li class='sidebar-title'>Extra UI</li>
+
+
+
+                    <li class="sidebar-item active has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i data-feather="user" width="20"></i>
+                            <span>Widgets</span>
+                        </a>
+
+                        <ul class="submenu active">
+
+                            <li>
+                                <a href="ui-chatbox.html">Chatbox</a>
+                            </li>
+
+                            <li>
+                                <a href="ui-pricing.html">Pricing</a>
+                            </li>
+
+                            <li>
+                                <a href="ui-todolist.html">To-do List</a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+
+
+                    <li class="sidebar-item active has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i data-feather="trending-up" width="20"></i>
+                            <span>Charts</span>
+                        </a>
+
+                        <ul class="submenu active">
+
+                            <li>
+                                <a href="ui-chart-chartjs.html">ChartJS</a>
+                            </li>
+
+                            <li>
+                                <a href="ui-chart-apexchart.html">Apexchart</a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+
+
+                    <li class='sidebar-title'>Pages</li>
+
+
+
+                    <li class="sidebar-item active has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i data-feather="user" width="20"></i>
+                            <span>Authentication</span>
+                        </a>
+
+                        <ul class="submenu active">
+
+                            <li>
+                                <a href="auth-login.html">Login</a>
+                            </li>
+
+                            <li>
+                                <a href="auth-register.html">Register</a>
+                            </li>
+
+                            <li>
+                                <a href="auth-forgot-password.html">Forgot Password</a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+
+
+                    <li class="sidebar-item active has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i data-feather="alert-circle" width="20"></i>
+                            <span>Errors</span>
+                        </a>
+
+                        <ul class="submenu active">
+
+                            <li>
+                                <a href="error-403.html">403</a>
+                            </li>
+
+                            <li>
+                                <a href="error-404.html">404</a>
+                            </li>
+
+                            <li>
+                                <a href="error-500.html">500</a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+        </div>
+    </div>
+    <div id="main">
+        <nav class="navbar navbar-header navbar-expand navbar-light">
+            <a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
+            <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav d-flex align-items-center navbar-light ml-auto">
+                    <li class="dropdown nav-icon">
+                        <a href="#" data-toggle="dropdown" class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
+                            <div class="d-lg-inline-block">
+                                <i data-feather="bell"></i>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-large">
+                            <h6 class='py-2 px-4'>Notifications</h6>
+                            <ul class="list-group rounded-none">
+                                <li class="list-group-item border-0 align-items-start">
+                                    <div class="avatar bg-success mr-3">
+                                        <span class="avatar-content"><i data-feather="shopping-cart"></i></span>
+                                    </div>
+                                    <div>
+                                        <h6 class='text-bold'>New Order</h6>
+                                        <p class='text-xs'>
+                                            An order made by Ahmad Saugi for product Samsung Galaxy S69
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown nav-icon mr-2">
+                        <a href="#" data-toggle="dropdown" class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
+                            <div class="d-lg-inline-block">
+                                <i data-feather="mail"></i>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#"><i data-feather="user"></i> Account</a>
+                            <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a>
+                            <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Logout</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            <div class="avatar mr-1">
+                                <img src="assets/images/avatar/avatar-s-1.png" alt="" srcset="">
+                            </div>
+                            <div class="d-none d-md-block d-lg-inline-block">Hi, Saugi</div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#"><i data-feather="user"></i> Account</a>
+                            <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a>
+                            <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <footer>
+            <div class="footer clearfix mb-0 text-muted">
+                <div class="float-left">
+                    <p>2020 &copy; Voler</p>
+                </div>
+                <div class="float-right">
+                    <p>Crafted with <span class='text-danger'><i data-feather="heart"></i></span> by <a
+                            href="http://ahmadsaugi.com">Ahmad Saugi</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
 </template>
 
 <script>
@@ -148,62 +548,1652 @@ export default {
 };
 </script>
 <style scoped>
+#app {
+    position: relative;
+}
+
+#main {
+    margin-left: 260px;
+    background-color: #F7FAFF;
+    min-height: 100vh;
+    transition: margin-left 0.6s ease-out;
+}
+
+#main .main-content {
+    padding: 2rem 1.5rem;
+}
+
+#main .main-content .page-title h3 {
+    font-size: 2rem;
+}
+
+#main .main-content .text-subtitle {
+    font-size: 0.9rem;
+}
+
+.breadcrumb-header .breadcrumb {
+    justify-content: flex-end;
+}
+
+.alert.alert-dismissible .close:focus,
+.custom-switch .custom-control-label:focus,
+.dropdown .dropdown-toggle:focus,
+.dropleft .dropdown-toggle:focus,
+.dropright .dropdown-toggle:focus,
+.dropup .dropdown-toggle:focus,
+.list-group button.list-group-item:focus,
+.modal .modal-content .modal-header .close:active,
+.modal .modal-content .modal-header .close:focus,
+.modal .modal-content .modal-header .close:hover,
+.navbar-components-wrapper .navbar .navbar-container.navbar-dark .navbar-toggler:focus,
+.navbar-components-wrapper .navbar .navbar-container.navbar-light .navbar-toggler:focus,
+.toast .toast-header .close:active,
+.toast .toast-header .close:focus,
+a:focus {
+    outline: 0;
+}
+
+section .section-title:after {
+    width: 70px;
+    height: 2px;
+    content: "";
+    margin: 0.6rem 0 1rem;
+    background-color: #5A8DEE;
+    display: block;
+}
+
 a {
     text-decoration: none;
+    outline: 0;
 }
 
-ul,
-li {
-    list-style: none;
+button {
+    outline: 0;
 }
 
-.left-bar {
-    background: linear-gradient(176deg, rgb(67 173 143), #168272);
-    width: 20%;
+svg.feather,
+i {
+    font-size: 14px;
+    height: 1rem;
 }
 
-.left-bar .sidebar {
-    margin-bottom: auto;
-    z-index: 5;
+footer {
+    padding: 1rem 1.5rem;
 }
 
-.left-bar div.sub-menu {
-    display: none;
+@media screen and (max-width: 767px) {
+    #main {
+        margin-left: 0;
+    }
+
+    .breadcrumb-header .breadcrumb {
+        justify-content: flex-start;
+        padding: 0;
+        font-size: 0.8rem;
+    }
 }
 
-.left-bar .profile {
-    height: 10%;
-    background: linear-gradient(179deg, #20a994, #ffffff00);
-    z-index: 10;
+/** 2.1 Alert  **/
+.alert {
+    border: none;
 }
 
-.left-bar .profile .DropDowmenu div.menu-profile {
-    /* display: none; */
-    background: #eeeeee;
-    left: -100%;
-    transition: all 0.5s;
+.alert p {
+    margin-bottom: 0;
 }
 
-.link-item {
-    background: #eeeeee;
-    color: hsl(0deg 0% 0% / 50%);
-    border-top: 1px solid #dee2e6;
+.alert button.close {
+    padding: 0.75rem;
+    line-height: 0.75;
+}
+
+.alert .alert-heading {
+    margin-left: 0.4rem;
+}
+
+.alert .alert-heading+p {
+    margin-left: 0.4rem;
+}
+
+.alert-primary {
+    background-color: #029eff;
+    color: #fff;
+    box-shadow: 1px 2px 9px rgba(2, 158, 255, 0.3);
+}
+
+.alert-primary a {
+    color: #fff;
+}
+
+.alert-secondary {
+    background-color: #ebeef3;
+    color: #383d41;
+    box-shadow: 1px 2px 9px rgba(235, 238, 243, 0.3);
+}
+
+.alert-secondary a {
+    color: #fff;
+}
+
+.alert-success {
+    background-color: #39DA8A;
+    color: #fff;
+    box-shadow: 1px 2px 9px rgba(57, 218, 138, 0.3);
+}
+
+.alert-success a {
+    color: #fff;
+}
+
+.alert-warning {
+    background-color: #fdd347;
+    color: #fff;
+    box-shadow: 1px 2px 9px rgba(253, 211, 71, 0.3);
+}
+
+.alert-warning a {
+    color: #fff;
+}
+
+.alert-danger {
+    background-color: #f55260;
+    color: #fff;
+    box-shadow: 1px 2px 9px rgba(245, 82, 96, 0.3);
+}
+
+.alert-danger a {
+    color: #fff;
+}
+
+.alert-dark {
+    background-color: #454546;
+    color: #fff;
+    box-shadow: 1px 2px 9px rgba(69, 69, 70, 0.3);
+}
+
+.alert-dark a {
+    color: #fff;
+}
+
+.alert-light {
+    background-color: #fefefe;
+    color: #818182;
+    box-shadow: 1px 2px 9px rgba(254, 254, 254, 0.3);
+}
+
+.alert-light a {
+    color: #fff;
+}
+
+.alert-info {
+    background-color: #56b6f7;
+    color: #fff;
+    box-shadow: 1px 2px 9px rgba(86, 182, 247, 0.3);
+}
+
+.alert-info a {
+    color: #fff;
+}
+
+.alert-light-primary {
+    background-color: #E2ECFF;
+}
+
+.alert-light-secondary {
+    background-color: #E6EAEE;
+}
+
+.alert-light-success {
+    background-color: #D2FFE8;
+}
+
+.alert-light-danger {
+    background-color: #FFDEDE;
+}
+
+.alert-light-warning {
+    background-color: #FFEED9;
+}
+
+.alert-light-info {
+    background-color: #CCF5F8;
+}
+
+/** 2.2 Avatar **/
+.avatar {
+    display: inline-flex;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+.avatar .avatar-content {
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.avatar .avatar-content svg,
+.avatar .avatar-content i {
+    color: #fff;
+    font-size: 1rem;
+    height: 1rem;
+}
+
+.avatar img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.avatar .avatar-status {
+    width: 0.7rem;
+    height: 0.7rem;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    bottom: 0;
+    right: 0;
+}
+
+.avatar.avatar-sm .avatar-content,
+.avatar.avatar-sm img {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+}
+
+.avatar.avatar-lg .avatar-content,
+.avatar.avatar-lg img {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+}
+
+.avatar.avatar-xl .avatar-content,
+.avatar.avatar-xl img {
+    width: 60px;
+    height: 60px;
+    font-size: 1.4rem;
+}
+
+/** 2.3 Badge **/
+.btn .badge {
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.btn .badge.bg-transparent {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    color: #fff;
+}
+
+/** 2.4 Buttons **/
+.btn i,
+.btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.btn.icon {
+    padding: 0.4rem 0.6rem;
+}
+
+.btn.icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.btn.icon.icon-left svg {
+    margin-right: 3px;
+}
+
+.btn.icon.icon-right svg {
+    margin-left: 3px;
+}
+
+.btn.btn-outline-white {
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn.btn-outline-white:hover {
+    color: #333;
+    background-color: #fff;
+}
+
+.btn.btn-primary {
+    color: #fff;
+}
+
+.btn.btn-secondary {
+    color: #fff;
+}
+
+.btn.btn-success {
+    color: #fff;
+}
+
+.btn.btn-danger {
+    color: #fff;
+}
+
+.btn.btn-warning {
+    color: #fff;
+}
+
+.btn.btn-info {
+    color: #fff;
+}
+
+.btn.btn-dark {
+    color: #fff;
+}
+
+.btn.btn-light {
+    color: #fff;
+}
+
+.btn.btn-link {
+    color: #fff;
+}
+
+.btn-group:not(.dropdown) .btn:not([class*=btn-]) {
+    border: 1px solid #DFE3E7;
+}
+
+.btn-group>.btn {
+    border-radius: 0.267rem;
+}
+
+.buttons .btn {
+    margin: 0 10px 10px 0;
+}
+
+/** 2.5 Breadcrumb **/
+.breadcrumb.breadcrumb-right {
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.breadcrumb.breadcrumb-center {
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/** 2.6 Carousel **/
+.carousel-inner {
+    border-radius: 0.7rem;
+    box-shadow: 0 5px 10px #adb5bd;
+}
+
+.carousel-caption h5 {
+    color: #fff;
+}
+
+/** 2.7 Divider **/
+.divider {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.divider .divider-text {
+    position: relative;
+    display: inline-block;
+    padding: 0 1rem;
+    background-color: #FFF;
+}
+
+.divider .divider-text:before,
+.divider .divider-text:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    border-top: 1px solid #DFE3E7;
+}
+
+.divider .divider-text:before {
+    right: 100%;
+}
+
+.divider .divider-text:after {
+    left: 100%;
+}
+
+.divider.divider-left .divider-text {
+    left: 0;
+    float: left;
+    padding-left: 0;
+}
+
+.divider.divider-left-center .divider-text {
+    left: -25%;
+}
+
+.divider.divider-right-center .divider-text {
+    left: 25%;
+}
+
+.divider.divider-right .divider-text {
+    float: right;
+    padding-right: 0;
+}
+
+/** 2.8 Dropdowns **/
+.dropdown-toggle:after {
+    color: #fff;
+}
+
+.dropdown-menu-large {
+    min-width: 16rem;
+}
+
+/** 2.9 Forms **/
+.form-group {
+    margin-bottom: 0.7rem;
+}
+
+.form-group label {
+    font-size: 0.755rem;
+    text-transform: uppercase;
+    color: rgba(35, 28, 99, 0.7);
     font-weight: 500;
 }
 
-.link-item:hover {
+.form-group small {
+    font-size: 0.7rem;
+}
+
+.form-group.with-title {
+    position: relative;
+}
+
+.form-group.with-title label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    font-size: 0.6rem;
+    background-color: #e9ecef;
+    width: 100%;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-group.with-title .form-control,
+.form-group.with-title dataTable-input {
+    padding-top: 2rem;
+}
+
+.form-group.with-title .form-control:focus~label,
+.form-group.with-title dataTable-input:focus~label {
+    border-left: 1px solid #5A8DEE;
+    border-top: 1px solid #5A8DEE;
+    border-right: 1px solid #5A8DEE;
+}
+
+.form-group[class*=has-icon-].has-icon-left .form-control {
+    padding-left: 2.5rem;
+}
+
+.form-group[class*=has-icon-].has-icon-left .form-control-icon {
+    left: 0;
+}
+
+.form-group[class*=has-icon-].has-icon-right .form-control {
+    padding-right: 2.5rem;
+}
+
+.form-group[class*=has-icon-].has-icon-right .form-control-icon {
+    right: 0;
+}
+
+.form-group[class*=has-icon-] .form-control:focus~.form-control-icon i,
+.form-group[class*=has-icon-] .form-control:focus~.form-control-icon svg {
+    color: #5A8DEE;
+}
+
+.form-group[class*=has-icon-] .form-control-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 0.6rem;
+}
+
+.form-group[class*=has-icon-] .form-control-icon i,
+.form-group[class*=has-icon-] .form-control-icon svg {
+    width: 1.2rem;
+}
+
+.form-check .form-check-input[class*=bg-] {
+    border: 0;
+}
+
+.form-check .form-check-input:focus {
+    box-shadow: none;
+}
+
+.form-check .form-check-input.form-check-primary {
+    background-color: #5A8DEE;
+    border-color: #5A8DEE;
+}
+
+.form-check .form-check-input.form-check-primary:not(:checked) {
+    background-color: transparent;
+    border: 1px solid #ced4da;
+}
+
+.form-check .form-check-input.form-check-primary.form-check-glow {
+    box-shadow: 0 0 5px #88adf3;
+}
+
+.form-check .form-check-input.form-check-primary.form-check-glow:not(:checked) {
+    box-shadow: none;
+}
+
+.form-check .form-check-input.form-check-secondary {
+    background-color: #475F7B;
+    border-color: #475F7B;
+}
+
+.form-check .form-check-input.form-check-secondary:not(:checked) {
+    background-color: transparent;
+    border: 1px solid #ced4da;
+}
+
+.form-check .form-check-input.form-check-secondary.form-check-glow {
+    box-shadow: 0 0 5px #5a789b;
+}
+
+.form-check .form-check-input.form-check-secondary.form-check-glow:not(:checked) {
+    box-shadow: none;
+}
+
+.form-check .form-check-input.form-check-success {
+    background-color: #39DA8A;
+    border-color: #39DA8A;
+}
+
+.form-check .form-check-input.form-check-success:not(:checked) {
+    background-color: transparent;
+    border: 1px solid #ced4da;
+}
+
+.form-check .form-check-input.form-check-success.form-check-glow {
+    box-shadow: 0 0 5px #64e2a3;
+}
+
+.form-check .form-check-input.form-check-success.form-check-glow:not(:checked) {
+    box-shadow: none;
+}
+
+.form-check .form-check-input.form-check-danger {
+    background-color: #FF5B5C;
+    border-color: #FF5B5C;
+}
+
+.form-check .form-check-input.form-check-danger:not(:checked) {
+    background-color: transparent;
+    border: 1px solid #ced4da;
+}
+
+.form-check .form-check-input.form-check-danger.form-check-glow {
+    box-shadow: 0 0 5px #ff8e8f;
+}
+
+.form-check .form-check-input.form-check-danger.form-check-glow:not(:checked) {
+    box-shadow: none;
+}
+
+.form-check .form-check-input.form-check-warning {
+    background-color: #FDAC41;
+    border-color: #FDAC41;
+}
+
+.form-check .form-check-input.form-check-warning:not(:checked) {
+    background-color: transparent;
+    border: 1px solid #ced4da;
+}
+
+.form-check .form-check-input.form-check-warning.form-check-glow {
+    box-shadow: 0 0 5px #fec273;
+}
+
+.form-check .form-check-input.form-check-warning.form-check-glow:not(:checked) {
+    box-shadow: none;
+}
+
+.form-check .form-check-input.form-check-info {
+    background-color: #00CFDD;
+    border-color: #00CFDD;
+}
+
+.form-check .form-check-input.form-check-info:not(:checked) {
+    background-color: transparent;
+    border: 1px solid #ced4da;
+}
+
+.form-check .form-check-input.form-check-info.form-check-glow {
+    box-shadow: 0 0 5px #11f0ff;
+}
+
+.form-check .form-check-input.form-check-info.form-check-glow:not(:checked) {
+    box-shadow: none;
+}
+
+.form-check .form-check-input.form-check-dark {
+    background-color: #222f3e;
+    border-color: #222f3e;
+}
+
+.form-check .form-check-input.form-check-dark:not(:checked) {
+    background-color: transparent;
+    border: 1px solid #ced4da;
+}
+
+.form-check .form-check-input.form-check-dark.form-check-glow {
+    box-shadow: 0 0 5px #34485f;
+}
+
+.form-check .form-check-input.form-check-dark.form-check-glow:not(:checked) {
+    box-shadow: none;
+}
+
+.form-check .form-check-input.form-check-light {
+    background-color: #A3AFBD;
+    border-color: #A3AFBD;
+}
+
+.form-check .form-check-input.form-check-light:not(:checked) {
+    background-color: transparent;
+    border: 1px solid #ced4da;
+}
+
+.form-check .form-check-input.form-check-light.form-check-glow {
+    box-shadow: 0 0 5px #c1c9d2;
+}
+
+.form-check .form-check-input.form-check-light.form-check-glow:not(:checked) {
+    box-shadow: none;
+}
+
+.form-check .form-check-input.form-check-link {
+    background-color: #2178d1;
+    border-color: #2178d1;
+}
+
+.form-check .form-check-input.form-check-link:not(:checked) {
+    background-color: transparent;
+    border: 1px solid #ced4da;
+}
+
+.form-check .form-check-input.form-check-link.form-check-glow {
+    box-shadow: 0 0 5px #4492e1;
+}
+
+.form-check .form-check-input.form-check-link.form-check-glow:not(:checked) {
+    box-shadow: none;
+}
+
+.form-check.form-check-sm .form-check-input {
+    width: 0.9rem;
+    height: 0.9rem;
+    margin-top: 0.3em;
+}
+
+.form-check.form-check-sm label {
+    font-size: 0.7rem;
+}
+
+.form-check.form-check-primary .form-check-input {
+    background-color: #5A8DEE;
+    border-color: #5A8DEE;
+}
+
+.form-check.form-check-secondary .form-check-input {
+    background-color: #475F7B;
+    border-color: #475F7B;
+}
+
+.form-check.form-check-success .form-check-input {
+    background-color: #39DA8A;
+    border-color: #39DA8A;
+}
+
+.form-check.form-check-danger .form-check-input {
+    background-color: #FF5B5C;
+    border-color: #FF5B5C;
+}
+
+.form-check.form-check-warning .form-check-input {
+    background-color: #FDAC41;
+    border-color: #FDAC41;
+}
+
+.form-check.form-check-info .form-check-input {
+    background-color: #00CFDD;
+    border-color: #00CFDD;
+}
+
+.form-check.form-check-dark .form-check-input {
+    background-color: #222f3e;
+    border-color: #222f3e;
+}
+
+.form-check.form-check-light .form-check-input {
+    background-color: #A3AFBD;
+    border-color: #A3AFBD;
+}
+
+.form-check.form-check-link .form-check-input {
+    background-color: #2178d1;
+    border-color: #2178d1;
+}
+
+.dataTable-input {
+    min-height: calc(1.5em + 0.934rem + 2px);
+    padding: 0.467rem 0.6rem;
+    font-size: 0.9025rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #555252;
+    background-color: white;
+    background-clip: padding-box;
+    border: 1px solid #DFE3E7;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.dataTable-input:focus {
+    color: #555252;
+    background-color: white;
+    border-color: #5A8DEE;
+    outline: 0;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+/** 2.10 Modal **/
+.modal .modal-content {
+    box-shadow: -8px 12px 18px 0 rgba(25, 42, 70, 0.13);
+    border: none;
+}
+
+.modal .modal-full {
+    max-width: 94%;
+}
+
+.modal .white {
     color: white;
-    background: hsl(171deg 72% 38%);
+}
+
+.modal .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal .modal-header .modal-title {
+    font-size: 1.1rem;
+}
+
+.modal .modal-header .close {
+    padding: 7px 10px;
+    border-radius: 50%;
+}
+
+.modal .modal-header .close:hover {
+    background: #dee2e6;
+}
+
+.modal .modal-header i,
+.modal .modal-header svg {
+    font-size: 12px;
+    height: 12px;
+    width: 12px;
+}
+
+.modal .modal-footer {
+    padding: 1rem 2rem;
+}
+
+.modal.modal-borderless .modal-header {
+    border-bottom: 0;
+}
+
+.modal.modal-borderless .modal-footer {
     border-top: 0;
+}
+
+/** 2.11 Sidebar **/
+#sidebar.active .sidebar-wrapper {
+    left: 0;
+}
+
+#sidebar:not(.active)~#main {
+    margin-left: 0;
+}
+
+.sidebar-wrapper {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+    bottom: 0;
+    border-right: 1px solid #eee;
+    box-shadow: 0 0 10px #ececec;
+    left: -260px;
+    transition: left 0.6s ease-out;
+}
+
+.sidebar-wrapper .sidebar-header {
+    padding: 2rem 2rem 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.sidebar-wrapper .sidebar-header img {
+    height: 2.5rem;
+}
+
+.sidebar-wrapper .sidebar-toggler.x {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    display: none;
+}
+
+.sidebar-wrapper .menu {
+    padding-left: 0;
+    margin-top: 2rem;
+}
+
+.sidebar-wrapper .menu .sidebar-title {
+    padding: 1.5rem 1.8rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.sidebar-wrapper .menu .sidebar-link {
+    display: block;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
     transition: all 0.5s;
 }
 
-.right-bar {
-    width: 100%;
-    /* height: 5000px; */
+.sidebar-wrapper .menu .sidebar-link:hover span {
+    opacity: 1;
 }
 
-.right-bar .content {
+.sidebar-wrapper .menu .sidebar-link>span {
+    color: #053382;
+    font-weight: 500;
+    margin-left: 1rem;
+    opacity: 0.8;
+}
+
+.sidebar-wrapper .menu .sidebar-item {
+    list-style: none;
+    margin-top: 0.5rem;
+    position: relative;
+}
+
+.sidebar-wrapper .menu .sidebar-item.has-sub .sidebar-link:after {
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9" style="fill:none;stroke:gray;stroke-width:1"></polyline></svg>');
+    position: absolute;
+    color: #ccc;
+    right: 15px;
+    top: 12px;
+    display: block;
+}
+
+.sidebar-wrapper .menu .sidebar-item.active .sidebar-link {
+    background-color: #e8f3ff;
+}
+
+.sidebar-wrapper .menu .sidebar-item.active .sidebar-link:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(46, 170, 244, 0.5);
+    width: 5px;
+}
+
+.sidebar-wrapper .menu .submenu {
+    list-style: none;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+}
+
+.sidebar-wrapper .menu .submenu.active {
+    max-height: 500px;
+}
+
+.sidebar-wrapper .menu .submenu li a {
+    padding: 0.7rem 3rem;
+    display: block;
+    color: #676767;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+}
+
+.sidebar-wrapper .menu .submenu li a:hover {
+    margin-left: 0.3rem;
+}
+
+@media screen and (max-width: 767px) {
+    .sidebar-wrapper {
+        left: -270px;
+    }
+
+    .sidebar-wrapper .sidebar-toggler.x {
+        display: block;
+    }
+}
+
+/** 2.12 Card **/
+.card {
+    box-shadow: -8px 12px 18px 0 rgba(25, 42, 70, 0.13);
+    margin-bottom: 2.2rem;
+}
+
+.card.card-statistic {
+    box-shadow: 1px 2px 5px rgba(47, 170, 244, 0.5);
+    background: linear-gradient(to bottom, #25a6f1, #54b9ff);
+    border: none;
+}
+
+.card.card-statistic .card-title {
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.8px;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.card.card-statistic .card-right p {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.card.card-statistic .card-right span.green {
+    color: #6fff6f;
+}
+
+.card.card-statistic .card-right span.red {
+    color: #ff7979;
+}
+
+.card.card-statistic .chart-wrapper {
+    height: 100px;
+}
+
+.card .card-header {
+    border: none;
+}
+
+.card .card-header h4 {
+    font-size: 1.2rem;
+}
+
+.card .card-header~.card-body {
+    padding-top: 0;
+}
+
+.card .card-content {
+    position: relative;
+}
+
+.card .card-title {
+    font-size: 1.2rem;
+}
+
+.card .card-body {
+    padding: 1.4rem 1.7rem;
+}
+
+.card .card-heading {
+    color: #555;
+    font-size: 1.5rem;
+}
+
+.card .card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.card .card-img-overlay p {
+    color: #eee;
+}
+
+.card .card-img-overlay .card-title {
+    color: #fff;
+}
+
+.pricing .card {
+    box-shadow: none;
+    margin-bottom: 0;
+    border-right: 1px solid #e9ecef;
+    box-shadow: 0 10px 10px #e9ecef;
+    margin-bottom: 0.5rem;
+}
+
+.pricing h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+.pricing .card-header .card-title {
+    font-size: 2rem !important;
+    margin-bottom: 0;
+}
+
+.pricing .card-header p {
+    font-size: 0.8rem;
+}
+
+.pricing ul li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+}
+
+.pricing ul li i,
+.pricing ul li svg {
+    width: 1rem;
+    color: #39DA8A;
+    font-size: 1rem;
+    margin-right: 7px;
+}
+
+.pricing .card-highlighted {
+    background-color: #5A8DEE;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.pricing .card-highlighted .card-header,
+.pricing .card-highlighted .card-body {
+    background-color: #5A8DEE;
+    color: #fff;
+}
+
+.pricing .card-highlighted ul li {
+    color: #fff;
+}
+
+.pricing .card-highlighted ul li i,
+.pricing .card-highlighted ul li svg {
+    color: tint-color(#28a745, 2);
+}
+
+.pricing .card-highlighted .card-footer {
+    background-color: #5A8DEE;
+}
+
+.pricing .card-highlighted .card-title {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+/** 2.13 Navs **/
+.nav-pills .nav-link.active {
+    box-shadow: 0 2px 10px rgba(90, 141, 238, 0.5);
+}
+
+.nav-tabs {
+    border: none;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+}
+
+.nav-tabs .nav-link:hover {
+    border: none;
+    text-shadow: 0 0 2px rgba(90, 141, 238, 0.3);
+}
+
+.nav-tabs .nav-link.active {
+    border: none;
+    position: relative;
+    color: #5A8DEE;
+}
+
+.nav-tabs .nav-link.active:after {
+    content: "";
     width: 100%;
-    height: auto;
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: #5A8DEE;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(90, 141, 238, 0.5);
+}
+
+/** 2.14 Navbar **/
+.navbar {
+    height: 70px;
+    padding: 1.5rem;
+}
+
+.navbar .nav-link-user img {
+    width: 30px;
+}
+
+.navbar.navbar-header li {
+    display: flex;
+    align-items: center;
+}
+
+.navbar.navbar-header li.nav-icon {
+    margin-right: 0.4rem;
+}
+
+.navbar.navbar-header li.nav-icon .nav-link {
+    display: block;
+    padding: 0.4rem;
+    border-radius: 50%;
+}
+
+.navbar.navbar-header li.nav-icon .nav-link:hover {
+    background-color: #e9ecef;
+}
+
+.navbar.navbar-header .dropdown>a {
+    color: #6c757d;
+    font-weight: 600;
+}
+
+.navbar.navbar-header .dropdown>a svg {
+    height: 24px;
+    width: 24px;
+}
+
+.navbar.navbar-header .dropdown>a:after {
+    display: none;
+}
+
+/** 2.15 Pagination **/
+.pagination.pagination-primary .page-item.active .page-link {
+    background-color: #5A8DEE;
+    border-color: #5A8DEE;
+    box-shadow: 0 2px 5px rgba(90, 141, 238, 0.3);
+}
+
+.pagination.pagination-secondary .page-item.active .page-link {
+    background-color: #475F7B;
+    border-color: #475F7B;
+    box-shadow: 0 2px 5px rgba(71, 95, 123, 0.3);
+}
+
+.pagination.pagination-success .page-item.active .page-link {
+    background-color: #39DA8A;
+    border-color: #39DA8A;
+    box-shadow: 0 2px 5px rgba(57, 218, 138, 0.3);
+}
+
+.pagination.pagination-danger .page-item.active .page-link {
+    background-color: #FF5B5C;
+    border-color: #FF5B5C;
+    box-shadow: 0 2px 5px rgba(255, 91, 92, 0.3);
+}
+
+.pagination.pagination-warning .page-item.active .page-link {
+    background-color: #FDAC41;
+    border-color: #FDAC41;
+    box-shadow: 0 2px 5px rgba(253, 172, 65, 0.3);
+}
+
+.pagination.pagination-info .page-item.active .page-link {
+    background-color: #00CFDD;
+    border-color: #00CFDD;
+    box-shadow: 0 2px 5px rgba(0, 207, 221, 0.3);
+}
+
+.pagination.pagination-dark .page-item.active .page-link {
+    background-color: #222f3e;
+    border-color: #222f3e;
+    box-shadow: 0 2px 5px rgba(34, 47, 62, 0.3);
+}
+
+.pagination.pagination-light .page-item.active .page-link {
+    background-color: #A3AFBD;
+    border-color: #A3AFBD;
+    box-shadow: 0 2px 5px rgba(163, 175, 189, 0.3);
+}
+
+.pagination.pagination-link .page-item.active .page-link {
+    background-color: #2178d1;
+    border-color: #2178d1;
+    box-shadow: 0 2px 5px rgba(33, 120, 209, 0.3);
+}
+
+.page-item:not(.active) .page-link:hover {
+    color: #000;
+}
+
+.page-item i,
+.page-item svg {
+    font-size: 13px;
+    width: 13px;
+    height: 13px;
+}
+
+.page-item .page-link {
+    font-size: 0.875rem;
+}
+
+.page-item .page-link:focus {
+    box-shadow: none;
+}
+
+.page-item:first-child {
+    margin-right: 0.4rem;
+}
+
+.page-item:last-child {
+    margin-left: 0.4rem;
+}
+
+/** 2.16 Table **/
+.table td,
+.dataTable-table td,
+.table thead th,
+.dataTable-table thead th {
+    vertical-align: middle;
+}
+
+.table thead th,
+.dataTable-table thead th {
+    border-bottom: 2px solid #475F7B;
+}
+
+.dataTable-container {
+    overflow-x: auto;
+}
+
+/** 2.17 Progress **/
+.progress.progress-primary {
+    overflow: visible;
+}
+
+.progress.progress-primary .progress-bar {
+    background-color: #5A8DEE;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 3px rgba(90, 141, 238, 0.8);
+}
+
+.progress.progress-secondary {
+    overflow: visible;
+}
+
+.progress.progress-secondary .progress-bar {
+    background-color: #475F7B;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 3px rgba(71, 95, 123, 0.8);
+}
+
+.progress.progress-success {
+    overflow: visible;
+}
+
+.progress.progress-success .progress-bar {
+    background-color: #39DA8A;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 3px rgba(57, 218, 138, 0.8);
+}
+
+.progress.progress-danger {
+    overflow: visible;
+}
+
+.progress.progress-danger .progress-bar {
+    background-color: #FF5B5C;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 3px rgba(255, 91, 92, 0.8);
+}
+
+.progress.progress-warning {
+    overflow: visible;
+}
+
+.progress.progress-warning .progress-bar {
+    background-color: #FDAC41;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 3px rgba(253, 172, 65, 0.8);
+}
+
+.progress.progress-info {
+    overflow: visible;
+}
+
+.progress.progress-info .progress-bar {
+    background-color: #00CFDD;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 3px rgba(0, 207, 221, 0.8);
+}
+
+.progress.progress-dark {
+    overflow: visible;
+}
+
+.progress.progress-dark .progress-bar {
+    background-color: #222f3e;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 3px rgba(34, 47, 62, 0.8);
+}
+
+.progress.progress-light {
+    overflow: visible;
+}
+
+.progress.progress-light .progress-bar {
+    background-color: #A3AFBD;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 3px rgba(163, 175, 189, 0.8);
+}
+
+.progress.progress-link {
+    overflow: visible;
+}
+
+.progress.progress-link .progress-bar {
+    background-color: #2178d1;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 3px rgba(33, 120, 209, 0.8);
+}
+
+.progress.progress-sm {
+    height: 0.4rem;
+}
+
+.progress.progress-lg {
+    height: 0.8rem;
+}
+
+.progress .progress-bar {
+    position: relative;
+    overflow: visible;
+}
+
+.progress .progress-bar.progress-label:before {
+    content: attr(aria-valuenow) "%";
+    position: absolute;
+    right: 0;
+    top: -1.3rem;
+    color: #495057;
+    font-size: 0.8rem;
+}
+
+/** 3.1 Chat **/
+.chat {
+    border-radius: 5px;
+}
+
+.chat.chat-left .chat-message {
+    background: #5A8DEE !important;
+    float: left !important;
+    color: #fff;
+}
+
+.chat .chat-message {
+    text-align: left !important;
+    float: right !important;
+    margin: 0.2rem 0 1.8rem 0.2rem !important;
+    color: #525361;
+    background-color: #FAFBFB !important;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3) !important;
+    padding: 0.75rem 1rem !important;
+    position: relative !important;
+    max-width: calc(100% - 5rem) !important;
+    clear: both !important;
+    word-break: break-word !important;
+    border-radius: 0.267rem !important;
+}
+
+/** 3.1 Todo **/
+.widget-todo-list-wrapper {
+    padding: 0;
+    margin: 0;
+}
+
+.widget-todo-list-wrapper .widget-todo-item {
+    padding: 0.8rem 2rem 0.8rem 0.8rem;
+    list-style: none;
+}
+
+.widget-todo-list-wrapper .widget-todo-item:hover {
+    background-color: #f8f9fa;
+}
+
+.widget-todo-list-wrapper .widget-todo-item .checkbox {
+    margin-left: 1rem;
+}
+
+.widget-todo-list-wrapper .widget-todo-item i,
+.widget-todo-list-wrapper .widget-todo-item svg {
+    font-size: 12px;
+    cursor: move;
+    height: 1rem;
+}
+
+/** 4.1 Auth Pages **/
+#auth {
+    background: #6c757d;
+    min-height: 100vh;
+    padding-top: 100px;
+    background-image: url('/images/background/auth.jpg');
+}
+
+#auth .card {
+    box-shadow: 0 5px 15px rgba(36, 104, 146, 0.6);
+    border: none;
+}
+
+/** 4.1 Error Pages **/
+#error {
+    height: 100vh;
+    width: 100%;
+    background-color: #e9ecef;
+}
+
+#error .error-title {
+    font-size: 10rem;
+}
+
+/** 5. Utilities **/
+.text-xxs {
+    font-size: 0.65rem;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.text-sm {
+    font-size: 0.85rem;
+}
+
+.font-bold {
+    font-weight: 800;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.pt-32 {
+    padding-top: 6rem;
+}
+
+.ml-50 {
+    margin-left: 0.5rem;
+}
+
+.w-0 {
+    width: 0;
+}
+
+.w-1 {
+    width: 0.25rem;
+}
+
+.w-2 {
+    width: 0.5rem;
+}
+
+.w-3 {
+    width: 0.75rem;
+}
+
+.w-4 {
+    width: 1rem;
+}
+
+.w-5 {
+    width: 1.25rem;
+}
+
+.w-10 {
+    width: 2.25rem;
+}
+
+.h-0 {
+    height: 0;
+}
+
+.h-1 {
+    height: 0.25rem;
+}
+
+.h-2 {
+    height: 0.5rem;
+}
+
+.h-3 {
+    height: 0.75rem;
+}
+
+.h-4 {
+    height: 1rem;
+}
+
+.h-5 {
+    height: 1.25rem;
+}
+
+.h-10 {
+    height: 2.25rem;
+}
+
+.rounded-none {
+    border-radius: 0;
+}
+
+.round {
+    border-radius: 1.5rem;
+}
+
+.rounded-full {
+    border-radius: 50%;
+}
+
+.square {
+    border-radius: 0;
+}
+
+.text-red {
+    color: #ff6384;
+}
+
+.bg-red {
+    background-color: #ff6384 !important;
+}
+
+.text-orange {
+    color: #ff9f40;
+}
+
+.bg-orange {
+    background-color: #ff9f40 !important;
+}
+
+.text-yellow {
+    color: #ffcd56;
+}
+
+.bg-yellow {
+    background-color: #ffcd56 !important;
+}
+
+.text-green {
+    color: #4bc0c0;
+}
+
+.bg-green {
+    background-color: #4bc0c0 !important;
+}
+
+.text-info {
+    color: #41B1F9;
+}
+
+.bg-info {
+    background-color: #41B1F9 !important;
+}
+
+.text-blue {
+    color: #3245D1;
+}
+
+.bg-blue {
+    background-color: #3245D1 !important;
+}
+
+.text-purple {
+    color: #9966ff;
+}
+
+.bg-purple {
+    background-color: #9966ff !important;
+}
+
+.text-grey {
+    color: #EBEFF6;
+}
+
+.bg-grey {
+    background-color: #EBEFF6 !important;
+}
+
+.text-gray-700 {
+    color: #4a5568;
+}
+
+.bg-gray-700 {
+    background-color: #4a5568 !important;
 }</style>

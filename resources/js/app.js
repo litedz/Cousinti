@@ -130,7 +130,7 @@ app.component('comments', comments);
 app.component('recipes', recipes);
 app.component('single-recipe', single_recipe);
 app.component('random-recipe', random_recipe);
-app.component('top-nav-bar', topnavbar);
+app.component('auth-nav-bar', topnavbar);
 app.component('footer-page', footerpage);
 app.component('nav-bar', navbar);
 app.component('loading-page', loading_page);
