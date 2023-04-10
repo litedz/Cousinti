@@ -461,7 +461,7 @@
       </KeepAlive>
     </div>
     <footer>
-      <div class="footer clearfix mb-0 text-muted">
+      <div class="bottom-0 end-0 footer position-absolute text-muted w-100 clearfix">
         <div class="float-left">
           <p>2020 &copy; Voler</p>
         </div>

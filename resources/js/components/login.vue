@@ -43,7 +43,7 @@
                         <div class="position-absolute w-100 h-100 start-50 opacity-75"></div>
                         <div class="m-auto">
                             <FormKit type="form" #default="{ state: { valid } }" @submit="login()" :actions="false"
-                                form-class="bg-light m-lg-4 p-5 position-relative z-7777 d-grid gap-3">
+                                form-class="bg-light shadow m-lg-4 p-5 position-relative z-7777 d-grid gap-3">
                                 <div class="logo text-center">
                                     <img class="w-50" :src="w_path + '/images/logo.png'" alt="" style="">
                                 </div>
