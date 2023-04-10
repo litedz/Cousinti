@@ -23,7 +23,10 @@
 
 
     @include('scripts.scripts_js')
-    <script src="{{asset('js/effects.js')}}"></script>
+
+
+
+
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 <template>
 	<div class="bg-first-color pb-1 pt-1 top-bar z-8888" v-if="this.$attrs.show.length !== 1">
 		<div class="container">
-			<div class="align-items-center d-flex justify-content-between">
+			<div class="align-items-center d-flex justify-content-between gap-1">
 				<div class="contact fs-4 gap-1 h-100">
 					<a class="text-decoration-none flex-center gap-2">
 						<div class="fs-6 text-white"><span class="fw-bold"> Contact :</span> <span class="pointer">+1207445810</span></div>
@@ -38,7 +38,7 @@ export default {
 	inject: ['w_path'],
 }
 </script>
-<style>
+<style scoped>
 .logo img {
 	width: 20%;
 }
@@ -54,6 +54,14 @@ export default {
 
 	.contact {
 		display: none !important;
+	}
+}
+
+
+@media only screen and ((min-width: 767px) and (max-width: 920px) ) {
+
+	.top-bar .search {
+		width: auto !important;
 	}
 }
 </style>

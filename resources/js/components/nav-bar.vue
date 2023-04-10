@@ -25,16 +25,16 @@
       </div>
       <!-- Links nav bar -->
 
-      <div id="link-nav" class="hoverable p-2 active-link" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
+      <div id="link-nav" class="hoverable p-2 " @mouseenter="hoverLink()" @mouseleave="hoverLink()">
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center"><a href="/"
-              class="text-decoration-none text-black">الرئيسة</a></div>
+              class="text-decoration-none text-black position-relative active-link">الرئيسة</a></div>
         </li>
       </div>
       <div id="link-nav" class="hoverable p-2 Dropable" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center">
-            <a href="/similar/مملحات" class="text-decoration-none text-black">مملحات</a>
+            <a href="/similar/مملحات" class="text-decoration-none text-black position-relative">مملحات</a>
 
           </div>
           <!-- <div class="drowDownMenu p-3 position-absolute w-100 rounded z-8888 bg-white-p" style="left:0%;">
@@ -110,14 +110,15 @@
         @mouseenter="hoverLink()" @mouseleave="hoverLink()">
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center">
-            <a :href="'/similar/' + recipeType.type" class="text-decoration-none text-black">{{ recipeType.type }}</a>
+            <a :href="'/similar/' + recipeType.type" class="text-decoration-none text-black position-relative">{{
+              recipeType.type }}</a>
           </div>
         </li>
       </div>
       <div id="link-nav" class="hoverable p-2 Dropable" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center">
-            <a href="/recipes" class="text-decoration-none text-black">جميع الوصفات</a>
+            <a href="/recipes" class="text-decoration-none text-black position-relative">الوصفات</a>
           </div>
 
 
@@ -185,7 +186,7 @@ export default {
         this.showLoginForm = false;
       } else {
         $(".Right-navbar").css("right", "-100%");
-        this.showLoginForm = true;
+
       }
     },
     slideSubMenu() {
@@ -222,9 +223,9 @@ export default {
     },
 
     hoverLink() {
+
       $('#app').find('.active-link').removeClass('active-link');
-      $(event.target).toggleClass('active-link');
-      $(event.target).find('a').toggleClass('text-black text-white');
+      $(event.target).find('a').toggleClass('text-black first-color active-link');
     },
     getTypes() {
 
@@ -246,7 +247,7 @@ export default {
   gap: 1rem;
 }
 
-#nav .active-link {
+/* #nav .active-link {
   background: #EF6F82;
   color: white !important;
   padding-right: 1.5rem !important;
@@ -255,13 +256,7 @@ export default {
   padding-bottom: .5rem !important;
   border-radius: .25rem !important;
   transition: all 1s;
-}
-
-#nav .active-link a {
-
-  color: white !important;
-
-}
+} */
 
 
 
@@ -327,6 +322,21 @@ nav.navbar {
 
 }
 
+#nav #link-nav a.active-link{
+  color: #EF6F82 !important;
+}
+#nav #link-nav a.active-link::after {
+
+  content: '\276F';
+  position: absolute;
+  transform: rotate(90deg);
+  left: 45%;
+  top: 80%;
+  transition: all 1s;
+  color: #EF6F82;
+}
+
+
 @keyframes fadeInMenu {
   0% {
     opacity: 0;
@@ -387,8 +397,6 @@ nav.navbar {
     align-items: center !important; */
   }
 
-
-
   #nav .drowDownMenu {
     display: none !important;
     left: 0 !important;
@@ -440,6 +448,7 @@ nav.navbar {
 
   #nav {
     display: flex !important;
+    align-items: center;
     gap: 1rem !important;
   }
 

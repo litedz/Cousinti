@@ -45,7 +45,7 @@
                             <FormKit type="form" #default="{ state: { valid } }" @submit="login()" :actions="false"
                                 form-class="bg-light m-lg-4 p-5 position-relative z-7777 d-grid gap-3">
                                 <div class="logo text-center">
-                                    <img :src="w_path + '/images/logo.png'" alt="" style="">
+                                    <img class="w-50" :src="w_path + '/images/logo.png'" alt="" style="">
                                 </div>
                                 <div class="text-black-title h1 mb-4 font-weight-bolder  text-center">
                                     تسجيل الدخول

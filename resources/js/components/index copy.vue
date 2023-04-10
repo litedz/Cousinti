@@ -962,7 +962,7 @@
 </template>
 
 <script>
-import Typewriter from "typewriter-effect/dist/core";
+import Typewriter from "/typewriter-effect/dist/core";
 export default {
     inject: ["w_path"],
     mounted() {

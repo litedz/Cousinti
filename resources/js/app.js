@@ -62,16 +62,19 @@ import random_recipe from './components/random_recipe.vue';
 import single_recipe from './components/single_recipe.vue';
 import similar_recipes from './components/similar-recipes.vue';
 
-import topnavbar from './components/top-nav-bar.vue';
+import authnavbar from './components/auth-nav-bar.vue';
 import footerpage from './components/footer.vue';
 
 import add_recipe from './components/recipe/add_recipe.vue';
 import update_recipe from './components/recipe/update-recipe.vue';
 import table_recipes from './components/recipe/table_recipes.vue';
-
+import table_datatable from './components/dashboard/table-datatable.vue';
 
 
 import status from './components/status.vue';
+
+//dashboard 
+import static_user from './components/dashboard/static.vue';
 
 
 
@@ -130,7 +133,7 @@ app.component('comments', comments);
 app.component('recipes', recipes);
 app.component('single-recipe', single_recipe);
 app.component('random-recipe', random_recipe);
-app.component('auth-nav-bar', topnavbar);
+app.component('auth-nav-bar', authnavbar);
 app.component('footer-page', footerpage);
 app.component('nav-bar', navbar);
 app.component('loading-page', loading_page);
@@ -142,6 +145,11 @@ app.component('top-bar', top_bar);
 // recipe component
 app.component('add-recipe', add_recipe);
 app.component('update-recipe', update_recipe);
+app.component('table-datatable', table_datatable);
+
+
+//dashboard
+app.component('static_user', static_user);
 
 app.use(plugin, defaultConfig);
 app.use(i18n).mount('#app');

@@ -39,7 +39,7 @@
 		<section class="Trending mt-xl-5">
 			<div class="container">
 				<div class="row">
-					<div class="col-4 p-d-none-sc right-bar">
+					<div class="col-4 col-md-5 p-d-none-sc right-bar">
 						<div class="trend">
 							<div
 								class="align-items-center border d-flex flex-row-reverse gap-1 header justify-content-between pe-3">
@@ -48,7 +48,7 @@
 							</div>
 							<div class="border d-grid p-3 px-3" style="direction:rtl;" v-for="recipe in recipesMonthly"
 								:key="recipesMonthly.recipe">
-								<div class="border d-flex mt-2 p-1 recipe">
+								<div class="border d-flex mt-2 p-1 recipe text-truncate">
 									<img v-if="recipe.images_recipe.length !== 0"
 										:src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name"
 										alt="image recipe" title="image recipe" style="height:80px;">
@@ -57,7 +57,8 @@
 									<div class="d-flex flex-column gap-1 mx-2">
 										<div class="name-recipe">
 											<a :href="w_path + '/recipes/' + recipe.id"
-												class="text-black-title fs-3 text-decoration-none">{{ recipe.name }}</a>
+												class="text-black-title fs-3 text-decoration-none" data-toggle="tooltip"
+												data-placement="top" :title="recipe.name">{{ recipe.name }}</a>
 										</div>
 										<a :href="'/similar/' + recipe.type_recipe.type"
 											class="type text-decoration-none color-link">{{
@@ -69,7 +70,7 @@
 						<div class="populer"></div>
 					</div>
 
-					<div class="col-12 col-md-8 d-grid gap-4 left-bar">
+					<div class="col-12 col-md-7 d-grid gap-4 left-bar">
 						<div class="fs-2 header position-relative text-black-title">رمضانيات</div>
 
 						<div class="row gy-3">
@@ -264,7 +265,7 @@
 						class="position-absolute w-25 h-auto" style="left:38%;top:85%;">
 				</div>
 				<div class="border-top pt-3 row">
-					<div class="col-3 right-bar p-d-none-sc">
+					<div class="col-3 col-md-4 right-bar p-d-none-sc">
 						<div class="border col-12 mb-2 social-media">
 							<div class="bg-second-color fs-5 fw-bolder heading p-2 text-center text-white"><span>Follow
 									Us</span></div>
@@ -585,80 +586,6 @@ section.subscribe div:first-of-type {
 	position: static;
 }
 
-
-
-/*
-.traditional-recipes .astrodivider {
-	margin: 64px auto;
-	width: 50%;
-	max-width: 100%;
-	position: relative;
-}
-
-
-.traditional-recipes .astrodividermask {
-	overflow: hidden;
-	height: 20px;
-}
-
- .traditional-recipes .astrodividermask:after {
-	content: '';
-	display: block;
-	margin: -25px auto 0;
-	width: 100%;
-	height: 25px;
-	border-radius: 125px / 12px;
-	box-shadow: 0 0 8px #ef6f82;
-}
-
-.traditional-recipes .astrodivider span {
-	width: 50px;
-	height: 50px;
-	position: absolute;
-	bottom: 100%;
-	margin-bottom: -25px;
-	left: 50%;
-	margin-left: -25px;
-	border-radius: 100%;
-	box-shadow: 0 2px 4px #ef6f82;
-	background: #fff;
-}
-
-.traditional-recipes .astrodivider i {
-	position: absolute;
-	top: 4px;
-	bottom: 4px;
-	left: 4px;
-	right: 4px;
-	border-radius: 100%;
-	border: 1px dashed #b9727d;
-	text-align: center;
-	line-height: 40px;
-	font-style: normal;
-	color: #ef6f82;
-} */
-
-@media only screen and (max-width: 767px) {
-	.Trending .trend .recipe {
-		flex-direction: column !important;
-	}
-
-	/* Slider */
-	.traditional-recipes .carousel-inner {
-		display: flex;
-	}
-
-	.traditional-recipes .carousel-item {
-		display: block;
-		margin-right: 0;
-		flex: 0 0 calc(100% / 3);
-	}
-
-	.traditional-recipes .img-wrapper {
-		height: 21vw;
-	}
-}
-
 .traditional-recipes .carousel-inner {
 	padding: 1em;
 }
@@ -685,5 +612,36 @@ section.subscribe div:first-of-type {
 .traditional-recipes .carousel-control-next:hover {
 	opacity: 0.8;
 
+}
+
+@media only screen and (max-width: 767px) {
+	.Trending .trend .recipe {
+		flex-direction: column !important;
+	}
+
+	/* Slider */
+	.traditional-recipes .carousel-inner {
+		display: flex;
+	}
+
+	.traditional-recipes .carousel-item {
+		display: block;
+		margin-right: 0;
+		flex: 0 0 calc(100% / 3);
+	}
+
+	.traditional-recipes .img-wrapper {
+		height: 21vw;
+	}
+}
+
+@media only screen and ((min-width: 767px) and (max-width: 920px) ) {
+
+	.Trending .recipe .name-recipe {
+		width: 50%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
 }
 </style>

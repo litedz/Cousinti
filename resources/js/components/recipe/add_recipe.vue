@@ -2,188 +2,110 @@
   <status ref="status"></status>
   <h1>{{ this.update_recipe_id }}</h1>
 
-  <div class="add_recipe bg-light mx-auto mb-5 p-3 rounded w-75"
-       dir="rtl">
+  <div class="add_recipe bg-white mb-5 mx-auto p-3 rounded shadow w-75" dir="rtl">
     <h3 class="text-center text-info">
       <span class="fa fa-plus-circle m-1 font-1"></span>اضافة وصفة جديدة
     </h3>
+
     <div v-if="this.erros_recipe">
-      <div class="alert alert-danger"
-           v-for="er in this.erros_recipe"
-           :key="er">
+      <div class="alert alert-danger" v-for="er in this.erros_recipe" :key="er">
         <li>{{ er[0] }}</li>
       </div>
     </div>
-    <FormKit type="form"
-             :actions="false">
-      <FormKit type="text"
-               name="name"
-               v-model="name_recipe"
-               input-class="form-control mt-2"
-               label="اسم الوصفة :"
-               label-class="text-weight-800"
-               help="اسم الوصفة لا يجب ان يحتوي علي ارقام"
-               help-class="text-black-50"
-               validation="required" />
+    <FormKit type="form" :actions="false">
+      <FormKit type="text" name="name" v-model="name_recipe" input-class="form-control mt-2" label="اسم الوصفة :"
+        label-class="text-weight-800" help="اسم الوصفة لا يجب ان يحتوي علي ارقام" help-class="text-black-50"
+        validation="required" />
 
-      <FormKit type="text"
-               name="source"
-               v-model="source_recipe"
-               input-class="form-control"
-               outer-class=" mt-3"
-               label="المصدر :"
-               label-class="text-weight-800"
-               help="مصدر الوصفة او اسم الشيف"
-               help-class="text-black-50"
-               validation="required" />
+      <FormKit type="text" name="source" v-model="source_recipe" input-class="form-control" outer-class=" mt-3"
+        label="المصدر :" label-class="text-weight-800" help="مصدر الوصفة او اسم الشيف" help-class="text-black-50"
+        validation="required" />
 
-      <label for="type"
-             class="text-weight-800 mt-3 mb-1">اختر نوع الوصفة :</label>
-      <select class="form-select"
-              validate="required"
-              v-model="selected_type"
-              id="select_type"
-              aria-label="Default select example">
-        <option :value="val.id"
-                v-for="val in this.types_recipe"
-                :key="val.e">
+      <label for="type" class="text-weight-800 mt-3 mb-1">اختر نوع الوصفة :</label>
+      <select class="form-select" validate="required" v-model="selected_type" id="select_type"
+        aria-label="Default select example">
+        <option :value="val.id" v-for="val in this.types_recipe" :key="val.e">
           {{ val.type }}
         </option>
       </select>
 
-      <FormKit type="url"
-               value="www.youtube.com"
-               name="video"
-               v-model="url_video"
-               input-class="form-control"
-               outer-class=" mt-3"
-               label="مقطع الفيديو :"
-               label-class="text-weight-800"
-               help="يجب ان يكون الرابط من اليوتيوب "
-               help-class="text-black-50"
-               validation="" />
+      <FormKit type="url" value="www.youtube.com" name="video" v-model="url_video" input-class="form-control"
+        outer-class=" mt-3" label="مقطع الفيديو :" label-class="text-weight-800" help="يجب ان يكون الرابط من اليوتيوب "
+        help-class="text-black-50" validation="" />
       <hr />
     </FormKit>
-    <FormKit type="form"
-             :actions="false">
-      <div class="ingredients border-bottom"
-           dir="rtl">
+    <FormKit type="form" :actions="false">
+      <div class="ingredients border-bottom" dir="rtl">
         <!-- Table ingredients  -->
-        <table class="table table-bordered table-hover table-white w-50 bg-white"
-               dir="rtl"
-               v-if="ingredients.length !== 0">
+        <table class="table table-bordered table-hover table-white w-50 bg-white" dir="rtl"
+          v-if="ingredients.length !== 0">
           <thead>
             <tr>
-              <th scope="col"
-                  class="text-center">المكونات</th>
-              <th scope="col"
-                  class="text-center">الكمية</th>
-              <th scope="col"
-                  class="text-center">الحذف</th>
+              <th scope="col" class="text-center">المكونات</th>
+              <th scope="col" class="text-center">الكمية</th>
+              <th scope="col" class="text-center">الحذف</th>
             </tr>
           </thead>
           <tbody>
-            <tr id="table_ingredients"
-                v-for="(key, index) in ingredients"
-                :key="key">
+            <tr id="table_ingredients" v-for="(key,index) in ingredients" :key="key">
               <td class="text-center">{{ key.name_ingredient }}</td>
               <td class="text-center">{{ key.quantity }}</td>
               <td class="text-center">
 
 
-                <i class="fa fa-circle-minus font-3 text-danger pointer"
-                   @click="removeFromtable(index)"
-                   aria-hidden="true"></i>
+                <i class="fa fa-circle-minus font-3 text-danger pointer" @click="removeFromtable(index)"
+                  aria-hidden="true"></i>
               </td>
             </tr>
           </tbody>
         </table>
 
-        <div class="d-flex w-50 align-items-center"
-             v-if="show_inputs == 'add_ingredient_table'">
-          <FormKit type="text"
-                   id="ingredient_name"
-                   name="ingredient"
-                   input-class="form-control mt-2"
-                   outer-class="ms-3 border-start p-1"
-                   label-class="text-weight-800"
-                   help="اسم المكون"
-                   help-class="text-black-50"
-                   validation="required" />
+        <div class="d-flex w-50 align-items-center" v-if="show_inputs == 'add_ingredient_table'">
+          <FormKit type="text" id="ingredient_name" name="ingredient" input-class="form-control mt-2"
+            outer-class="ms-3 border-start p-1" label-class="text-weight-800" help="اسم المكون" help-class="text-black-50"
+            validation="required" />
 
-          <FormKit type="text"
-                   name="quantity"
-                   id="ingredient_quantity"
-                   input-class="form-control mt-2"
-                   outer-class="ms-3 p-1"
-                   label-class="text-weight-800"
-                   help="الكمية باالغارم (g)"
-                   help-class="text-black-50"
-                   @keydown.enter="add_ingredient_table"
-                   validation="required" />
+          <FormKit type="text" name="quantity" id="ingredient_quantity" input-class="form-control mt-2"
+            outer-class="ms-3 p-1" label-class="text-weight-800" help="الكمية باالغارم (g)" help-class="text-black-50"
+            @keydown.enter="add_ingredient_table" validation="required" />
 
 
-          <button type="button"
-                  class="fa fa-2x fa-check-circle text-success pointer  border-0 bg-transparent"
-                  @click="add_ingredient_table()"
-                  @keyup.enter="add_ingredient_table"></button>
+          <button type="button" class="fa fa-2x fa-check-circle text-success pointer  border-0 bg-transparent"
+            @click="add_ingredient_table()" @keyup.enter="add_ingredient_table"></button>
         </div>
         <div class="align-items-center d-flex justify-content-start">
           <p class="fs-3 fw-bolder m-1 text-black-50 text-weight-500">اضافة مكونات</p>
           <span>
-            <i @click="show_inputs = 'add_ingredient_table'"
-               class="
-                border
-                fa fa-2 fa-plus-circle
-                font-3
-                rounded-circle
-                text-bg-info text-white
-                m-1
-                pointer
-              "
-               aria-hidden="true"></i></span>
+            <i @click="show_inputs = 'add_ingredient_table'" class="
+                  border
+                  fa fa-2 fa-plus-circle
+                  font-3
+                  rounded-circle
+                  text-bg-info text-white
+                  m-1
+                  pointer
+                " aria-hidden="true"></i></span>
         </div>
       </div>
     </FormKit>
 
     <div class="images mt-4">
-      <FormKit type="file"
-               id="head_file"
-               name="files"
-               label="الصورة الرئيسبة :"
-               label-class="text-weight-500"
-               file-remove-class="btn btn-primary m-2"
-               input-class="form-control mt-2"
-               validation="required|file" />
+      <FormKit type="file" id="head_file" name="files" label="الصورة الرئيسبة :" label-class="text-weight-500"
+        file-remove-class="btn btn-primary m-2" input-class="form-control mt-2" validation="required|file" />
 
-      <FormKit type="file"
-               id="files"
-               multiple
-               name="files"
-               label="الصور :"
-               label-class="text-weight-500"
-               file-remove-class="btn btn-primary m-2"
-               input-class="form-control mt-2"
-               validation="required|file" />
+      <FormKit type="file" id="files" multiple name="files" label="الصور :" label-class="text-weight-500"
+        file-remove-class="btn btn-primary m-2" input-class="form-control mt-2" validation="required|file" />
     </div>
 
-    <FormKit type="form"
-             :actions="false">
+    <FormKit type="form" :actions="false">
       <div class="how_todo mt-4">
-        <FormKit type="textarea"
-                 label="طريقة التحضير"
-                 label-class="font-3 mb-2 text-weight-800"
-                 v-model="how_todo"
-                 input-class="form-control"
-                 rows="10"
-                 validation="required|length:25"
-                 placeholder="مثال: لدينا اولا مزج البيض مع الفرينة"
-                 help="يجب ان لا يقل النص 200 حرف "
-                 help-class="text-black-50" />
+        <FormKit type="textarea" label="طريقة التحضير" label-class="font-3 mb-2 text-weight-800" v-model="how_todo"
+          input-class="form-control" rows="10" validation="required|length:25"
+          placeholder="مثال: لدينا اولا مزج البيض مع الفرينة" help="يجب ان لا يقل النص 200 حرف "
+          help-class="text-black-50" />
       </div>
-      <FormKit type="button"
-               input-class="btn btn-primary mt-2"
-               @click="add_recipe()">اضافة الوصفة<span class="fa fa-plus-circle m-2 text-white"></span></FormKit>
+      <FormKit type="button" input-class="btn btn-primary mt-2" @click="add_recipe()">اضافة الوصفة<span
+          class="fa fa-plus-circle m-2 text-white"></span></FormKit>
     </FormKit>
   </div>
 </template>
@@ -303,8 +225,8 @@ export default {
             }
           })
           .catch((error) => {
-            if (error.response.data.message.length !== 0 ) {
-                this.$refs.status.Display('danger', error.response.data.message, "تحذير");
+            if (error.response.data.message.length !== 0) {
+              this.$refs.status.Display('danger', error.response.data.message, "تحذير");
             }
 
           });

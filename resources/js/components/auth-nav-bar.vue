@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-perso top-area w-100 h-auto" style="z-index: 9999" id="nav-dashboard">
+    <div class="bg-first-color top-area w-100 h-auto" style="z-index: 9999" id="nav-dashboard">
         <div class="container-fluid align-items-center d-flex justify-content-between">
             <div class="auth w-100">
                 <div class="info d-flex flex-row-reverse justify-content-start align-items-center">
@@ -40,7 +40,7 @@
                     </div>
                     <div class="d-flex align-items-center w-100 position-relative">
                         <span
-                            class="bg-info fa fa-search m-1 p-2 rounded-circle text-white position-absolute start-0"></span>
+                            class="bg-dark fa fa-search m-1 p-2 rounded-circle text-white position-absolute start-0"></span>
                         <input class="form-control font-amiri w-100" type="search" placeholder="البحث عن وصفة  . . ."
                             name="search" v-on:keyup="search()" dir="rtl" v-model="text_search" />
                         <div class="search-found z-9999" style="">

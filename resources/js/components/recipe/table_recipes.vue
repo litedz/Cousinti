@@ -1,5 +1,5 @@
 <template >
-  <div class="table_recipes w-75 mx-auto p-3 rounded border">
+  <div class="bg-white border mx-auto p-3 rounded shadow table_recipes w-75">
     <status ref="status"></status>
     <table class="table align-middle mb-0 bg-white text-center">
       <caption class="font-3 m-3 text-center"
@@ -7,7 +7,7 @@
         <div>You dont have any recipe</div>
 
       </caption>
-      <thead class="bg-light">
+      <thead class="">
         <tr>
           <th class="p-3">Name Recipe</th>
           <th class="p-3">Tag</th>
