@@ -1,27 +1,20 @@
-@auth
-
-@php
-    $user_facebook = (!is_null(auth()->user()->Id_user_media)) ? request()->merge(['facebook_user' => true]) : request()->merge(['facebook_user' =>false]);
-@endphp
-@endauth
-{{-- <auth-nav-bar 
-:auth_status="true" 
-user="{{auth()->user()->username}}" 
-:user_id="{{auth()->user()->id}}" 
-avatar="{{auth()->user()->avatar}}" 
-checkmediauser="{{request()->input('facebook_user')}}">
-</auth-nav-bar>
-
-@endauth
- --}}
-
 <top-bar show='{{Auth::check()}}'></top-bar>
-<div class="mt-4 mb-4">
+@auth
+@php
+    if (is_null(auth()->user()->Id_user_media)) {
+        request()->merge(['checkmediauser' => false]);
+    }else {
+        request()->merge(['checkmediauser' => true]);
+    }
+@endphp
 <nav-bar
-:auth_status="true" 
+:auth_status="{{Auth::check()}}" 
 user="{{auth()->user()->username}}" 
 :user_id="{{auth()->user()->id}}" 
 avatar="{{auth()->user()->avatar}}" 
 checkmediauser="{{request()->input('facebook_user')}}">
 ></nav-bar>
-</div>
+@endauth
+@guest
+<nav-bar></nav-bar> 
+@endguest
