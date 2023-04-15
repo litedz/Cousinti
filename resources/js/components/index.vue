@@ -21,7 +21,7 @@
 									</div>
 									<div
 										class="d-flex flex-row-reverse justify-content-between justify-content-center px-4 w-100">
-										<span class="date fs-6 text-white-50">{{ formateData(recipe.created_at) }}</span>
+										<span class="date fs-6 text-white-50">{{ formateData(recipe.created_at,'LLLL') }}</span>
 										<!-- <span class="fs-6 text-white-50">25 views</span> -->
 									</div>
 								</div>
@@ -99,14 +99,14 @@
 												class="author fst-italic fw-bolder color-link text-decoration-none">{{
 													recipe.author.username }}</a>
 											<span class="data second-color fs-6"><span class="">{{
-												formateData(recipe.created_at) }}</span><span
+												formateData(recipe.created_at,'LL') }}</span><span
 													class="fa fa-calendar-alt"></span></span>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div v-for="(recipe,index) in MostComment" :key="recipe.MostComment">
-								<div class="col-6 col-md-6 col-lg-3" v-if="index !== 0">
+							
+								<div class="col-6 col-md-6 col-lg-3" v-if="index !== 0" v-for="(recipe,index) in MostComment" :key="recipe.MostComment">
 									<div class="d-grid position-relative recipe">
 										<div class="img-container position-relative">
 											<div
@@ -126,12 +126,12 @@
 										<div class="d-grid gap-1"><a :href="'/profile/' + recipe.author.id"
 												class="author fst-italic fw-bolder color-link text-decoration-none">{{
 													recipe.author.username }}</a><span class="data second-color fs-6"><span
-													class="">{{ formateData(recipe.created_at) }}</span><span
+													class="">{{ formateData(recipe.created_at,'LL') }}</span><span
 													class="fa fa-calendar-alt"></span></span></div>
 									</div>
 
 
-								</div>
+								
 
 							</div>
 
@@ -298,7 +298,7 @@
 												:href="w_path + '/recipes/' + recipe.id">{{ recipe.name }}</a></div>
 										<div class="discption text-truncate fs-6 text-black-title">{{ recipe.description }}
 										</div>
-										<div class="date font-italic fs-6 second-color">{{ formateData(recipe.created_at) }}
+										<div class="date font-italic fs-6 second-color">{{ formateData(recipe.created_at,'LL') }}
 										</div>
 									</div>
 								</div>
@@ -367,8 +367,8 @@ export default {
 				});
 		},
 
-		formateData(created_at) {
-			return moment(created_at, true).format('LLLL');
+		formateData(created_at,form) {
+			return moment(created_at, true).format(form);
 		},
 
 		backTop() {
