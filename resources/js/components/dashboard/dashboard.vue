@@ -95,23 +95,13 @@
         <ul class="menu">
 
 
-          <li class='sidebar-title'>Main Menu
-            <EyeIcon size="2x" />
-          </li>
-
-
-
+          <li class='sidebar-title'>Main Menu</li>
           <li class="sidebar-item active ">
             <a href="#" class='sidebar-link' style="background-color: #413C58;">
               <i class="first-color" data-feather="home" width="20"></i>
               <span @click="activeComponent = 'static_user'">Dashboard</span>
             </a>
-
           </li>
-
-
-
-
           <li class="sidebar-item  has-sub">
             <a href="#" class='sidebar-link'>
               <i class="text-danger" data-feather="triangle" width="20"></i>
@@ -125,6 +115,16 @@
                   <div class="d-flex ">
                     <span data-feather="plus-circle" class="text-success"></span>
                     <span @click="activeComponent = 'add-recipe'">Add Recipe</span>
+
+                  </div>
+
+                </a>
+              </li>
+              <li class="sub-item">
+                <a href="#">
+                  <div class="d-flex ">
+                    <span data-feather="plus-circle" class="text-success"></span>
+                    <span @click="activeComponent = 'update-recipe'">Edit Recipe</span>
 
                   </div>
 
@@ -156,232 +156,31 @@
             </ul>
 
           </li>
-
-
-
-
-          <li class="sidebar-item  has-sub">
+          <li class="sidebar-item ">
             <a href="#" class='sidebar-link'>
-              <i class="text-danger" data-feather="briefcase" width="20"></i>
-              <span>Extra Components</span>
+              <i class="text-danger" data-feather="activity" width="20"></i>
+              <span class="text-capitalize">Last Activity</span>
             </a>
-
-            <ul class="submenu ">
-
-              <li>
-                <a href="component-extra-avatar.html">Avatar</a>
-              </li>
-
-              <li>
-                <a href="component-extra-divider.html">Divider</a>
-              </li>
-
-            </ul>
-
           </li>
-
-
-
-
-          <li class='sidebar-title'>Forms &amp; Tables</li>
-
-
-
-          <li class="sidebar-item  has-sub">
+          <li class="sidebar-item ">
             <a href="#" class='sidebar-link'>
-              <i class="text-danger" data-feather="file-text" width="20"></i>
-              <span>Form Elements</span>
+              <i class="text-danger" data-feather="heart" width="20"></i>
+              <span class="text-capitalize">wish list</span>
             </a>
-
-            <ul class="submenu ">
-
-              <li>
-                <a href="form-element-input.html">Input</a>
-              </li>
-
-              <li>
-                <a href="form-element-input-group.html">Input Group</a>
-              </li>
-
-              <li>
-                <a href="form-element-select.html">Select</a>
-              </li>
-
-              <li>
-                <a href="form-element-radio.html">Radio</a>
-              </li>
-
-              <li>
-                <a href="form-element-checkbox.html">Checkbox</a>
-              </li>
-
-              <li>
-                <a href="form-element-textarea.html">Textarea</a>
-              </li>
-
-            </ul>
-
           </li>
-
-
-
-
-          <li class="sidebar-item  ">
-            <a href="form-layout.html" class='sidebar-link'>
-              <i class="text-danger" data-feather="layout" width="20"></i>
-              <span>Form Layout</span>
-            </a>
-
-          </li>
-
-
-
-
-          <li class="sidebar-item  ">
-            <a href="form-editor.html" class='sidebar-link'>
-              <i class="text-danger" data-feather="layers" width="20"></i>
-              <span>Form Editor</span>
-            </a>
-
-          </li>
-
-
-
-
-          <li class="sidebar-item  ">
-            <a href="table.html" class='sidebar-link'>
-              <i class="text-danger" data-feather="grid" width="20"></i>
-              <span>Table</span>
-            </a>
-
-          </li>
-
-
-
-
-          <li class="sidebar-item  ">
-            <a href="table-datatable.html" class='sidebar-link'>
-              <i class="text-danger" data-feather="file-plus" width="20"></i>
-              <span>Datatable</span>
-            </a>
-
-          </li>
-
-
-
-
-          <li class='sidebar-title'>Extra UI</li>
-
-
-
-          <li class="sidebar-item  has-sub">
+          <li class='sidebar-title'>Privacy</li>
+          <li class="sidebar-item ">
             <a href="#" class='sidebar-link'>
-              <i class="text-danger" data-feather="user" width="20"></i>
-              <span>Widgets</span>
+              <i class="text-danger" data-feather="settings" width="20"></i>
+              <span class="text-capitalize">Setting</span>
             </a>
-
-            <ul class="submenu ">
-
-              <li>
-                <a href="ui-chatbox.html">Chatbox</a>
-              </li>
-
-              <li>
-                <a href="ui-pricing.html">Pricing</a>
-              </li>
-
-              <li>
-                <a href="ui-todolist.html">To-do List</a>
-              </li>
-
-            </ul>
-
           </li>
-
-
-
-
-          <li class="sidebar-item  has-sub">
+          <li class="sidebar-item has-sub">
             <a href="#" class='sidebar-link'>
-              <i class="text-danger" data-feather="trending-up" width="20"></i>
-              <span>Charts</span>
+              <i class="text-danger" data-feather="shield" width="20"></i>
+              <span class="text-capitalize">Security</span>
             </a>
-
-            <ul class="submenu ">
-
-              <li>
-                <a href="ui-chart-chartjs.html">ChartJS</a>
-              </li>
-
-              <li>
-                <a href="ui-chart-apexchart.html">Apexchart</a>
-              </li>
-
-            </ul>
-
           </li>
-
-
-
-
-          <li class='sidebar-title'>Pages</li>
-
-
-
-          <li class="sidebar-item  has-sub">
-            <a href="#" class='sidebar-link'>
-              <i class="text-danger" data-feather="user" width="20"></i>
-              <span>Authentication</span>
-            </a>
-
-            <ul class="submenu ">
-
-              <li>
-                <a href="auth-login.html">Login</a>
-              </li>
-
-              <li>
-                <a href="auth-register.html">Register</a>
-              </li>
-
-              <li>
-                <a href="auth-forgot-password.html">Forgot Password</a>
-              </li>
-
-            </ul>
-
-          </li>
-
-
-
-
-          <li class="sidebar-item  has-sub">
-            <a href="#" class='sidebar-link'>
-              <i class="text-danger" data-feather="alert-circle" width="20"></i>
-              <span>Errors</span>
-            </a>
-
-            <ul class="submenu ">
-
-              <li>
-                <a href="error-403.html">403</a>
-              </li>
-
-              <li>
-                <a href="error-404.html">404</a>
-              </li>
-
-              <li>
-                <a href="error-500.html">500</a>
-              </li>
-
-            </ul>
-
-          </li>
-
-
-
-
         </ul>
       </div>
       <button class="sidebar-toggler btn x"><i class="text-danger" data-feather="x"></i></button>
@@ -419,33 +218,43 @@
               </ul>
             </div>
           </li>
-          <li class="dropdown nav-icon mr-2">
-            <a href="#" data-toggle="dropdown" class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
+          <li class="nav-icon mr-2" @click="show_messages = !show_messages">
+            <a href="#" class="nav-link nav-link-lg nav-link-user p-2 px-2">
               <div class="d-lg-inline-block">
-                <i class="" data-feather="mail"></i>
+                <i class="h-100" data-feather="mail"></i>
               </div>
             </a>
-            <div class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="#"><i class="text-danger" data-feather="user"></i> Account</a>
-              <a class="dropdown-item active" href="#"><i class="text-danger" data-feather="mail"></i> Messages</a>
-              <a class="dropdown-item" href="#"><i class="text-danger" data-feather="settings"></i> Settings</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"><i class="text-danger" data-feather="log-out"></i> Logout</a>
-            </div>
+            <Transition name="fade">
+              <div class="bg-white messages mx-4 p-2 position-absolute shadow top-100 w-50 z-5555" style="right: 8vh;"
+                v-show="show_messages">
+                <div class="align-items-start border-bottom d-flex mb-1 message"><img src="https://i.pravatar.cc/80"
+                    class="rounded-circle">
+                  <div class="d-flex flex-column justify-content-start mx-2"><a href="#"
+                      class="text-capitalize text-decoration-nonee">Name
+                      User</a>
+                    <div class="fs-6 lh-lg message-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                      perferendis maiores repellat debitis optio neque atque molestiae. Culpa ea cum rerum corrupti
+                      obcaecati ab iste eligendi nam, magni quasi laboriosam!</div><span
+                      class="time fs-6 text-muted time">12/12/1444</span>
+                  </div>
+                </div>
+              </div>
+            </Transition>
           </li>
           <li class="dropdown">
             <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
               <div class="avatar mr-1">
                 <img :src="w_path + '/storage/' + this.info.avatar" alt="" srcset="">
               </div>
-              <div class="d-none d-md-block d-lg-inline-block">Hi, {{ this.info.username }}</div>
+              <div class="d-none d-md-block d-lg-inline-block">Hi, <a :href="'/profile/' + this.info.id"
+                  class="text-black-50">{{ this.info.username }}</a></div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="#"><i class="text-danger" data-feather="user"></i> Account</a>
-              <a class="dropdown-item active" href="#"><i class="text-danger" data-feather="mail"></i> Messages</a>
-              <a class="dropdown-item" href="#"><i class="text-danger" data-feather="settings"></i> Settings</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"><i class="text-danger" data-feather="log-out"></i> Logout</a>
+              <a class="dropdown-item" :href="'/profile/'+this.info.id"><i class="third-color" data-feather="user"></i>Profile</a>
+
+            </div>
+            <div class="">
+              <a class="dropdown-item" href="#"><i class="third-color" data-feather="log-out"></i> Logout</a>
             </div>
           </li>
         </ul>
@@ -484,6 +293,7 @@ export default {
       activeComponent: "static_user",
       action_recipe: "",
       recipe_update_id: "", // id of recipe for update
+      show_messages: false,
     };
   },
   methods: {
@@ -593,6 +403,7 @@ export default {
 #main .main-content .text-subtitle {
   font-size: 0.9rem;
 }
+
 
 .breadcrumb-header .breadcrumb {
   justify-content: flex-end;
@@ -1742,6 +1553,7 @@ footer {
   border-radius: 50%;
 }
 
+
 .navbar.navbar-header li.nav-icon .nav-link:hover {
   background-color: #e9ecef;
 }
@@ -2219,5 +2031,4 @@ footer {
 
 .bg-gray-700 {
   background-color: #4a5568 !important;
-}
-</style>
+}</style>

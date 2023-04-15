@@ -3,10 +3,12 @@
         <div class="container-fluid align-items-center d-flex justify-content-between">
             <div class="auth w-100">
                 <div class="info d-flex flex-row-reverse justify-content-start align-items-center">
+                    <!-- authentication  with facebook user -->
                     <div class="" v-if="this.$attrs.auth_status == true && this.$attrs.checkmediauser == true">
                         <img :src="this.$attrs.avatar" style="width: 50px;height: 50px;" alt="avatar"
                             class="rounded-circle m-2" />
                     </div>
+                    <!-- authentication  with Laravel App -->
                     <div class="" v-if="this.$attrs.auth_status == true && this.$attrs.checkmediauser == false">
                         <a :href="w_path + '/profile/' + this.$attrs.user_id">
                             <img :src="w_path + '/storage/' + this.$attrs.avatar" style="width: 50px;height: 50px;"
@@ -22,19 +24,23 @@
 
                         <a class="fa fa-bars-staggered fs-4 text-white pointer text-decoration-none" @click="toggleMenu()"
                             data-link="quick-menu" data-toggle="navSlide"></a>
-                        <div class="bg-white end-0 quick-menu p-3 position-absolute text-center rounded" id="quick-menu">
+                        <div class="bg-white end-0 quick-menu p-3 position-absolute text-center rounded shadow" id="quick-menu">
                             <li class="head fw-bolder">Quick Menu</li>
-                            <li class="align-items-center border d-flex justify-content-end m-2 p-1 pointer rounded">
-                                <a href="/dashboard" class="text-decoration-none text-first">لوحة التحكم</a><span
-                                    class="fa fa-dashboard fs-6 m-2 text-first"></span>
+                            <li class="align-items-center border-bottom d-flex justify-content-end m-2 p-1 pointer rounded">
+                                <a href="/dashboard" class="text-decoration-none first-color">لوحة التحكم</a><span
+                                    class="fa fa-dashboard fs-6 m-2 first-color"></span>
                             </li>
-                            <li class="align-items-center border d-flex justify-content-end m-2 p-1 pointer rounded">
-                                <a href="/recipes" class="text-decoration-none text-first">الوصفات</a><span
-                                    class="fs-6 m-2 fa fa-list text-first"></span>
+                            <li class="align-items-center border-bottom d-flex justify-content-end m-2 p-1 pointer rounded">
+                                <a href="/recipes" class="text-decoration-none first-color">الوصفات</a><span
+                                    class="fs-6 m-2 fa fa-list first-color"></span>
                             </li>
-                            <li class="align-items-center border d-flex justify-content-end m-2 p-1 pointer rounded">
-                                <a href="/logout" class="text-decoration-none text-first">الخروج</a><span
-                                    class="fa fa-door-open fs-6 m-2 text-first"></span>
+                            <li class="align-items-center border-bottom d-flex justify-content-end m-2 p-1 pointer rounded">
+                                <a href="/recipes" class="text-decoration-none first-color">المفضلة</a><span
+                                    class="fs-6 m-2 fa fa-heartbeat first-color"></span>
+                            </li>
+                            <li class="align-items-center border-bottom d-flex justify-content-end m-2 p-1 pointer rounded">
+                                <a href="/logout" class="text-decoration-none first-color">الخروج</a><span
+                                    class="fa fa-door-open fs-6 m-2 first-color"></span>
                             </li>
                         </div>
                     </div>
@@ -134,9 +140,6 @@ export default {
         },
         toggleMenu() {
             $("#" + event.target.getAttribute("data-link")).fadeToggle("slow");
-            // $("#" + event.target.getAttribute("data-toggle")).slideToggle(
-            //     "slow"
-            // );
         },
 
         wheneScroll() {

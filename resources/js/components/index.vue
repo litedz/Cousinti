@@ -3,7 +3,6 @@
 		<status ref="status"></status>
 		<section class="header d-grid gap-5">
 			<div class="nav-bar-home">
-				<nav-bar></nav-bar>
 			</div>
 			<div class="Top-recipes" dir="rtl">
 				<div class="container-fluid">
@@ -314,7 +313,7 @@
 			<footer-page></footer-page>
 		</section>
 
-		<button @click="backTop()" type="button" class="btn btn-info btn-floating btn-lg position-fixed rounded-pill z-9999"
+		<button @click="backTop()" type="button" class="btn btn-info btn-floating btn-lg position-fixed rounded-pill z-7777"
 			style="right: 5%; bottom: 5%; display: none" id="btn-back-to-top">
 			<i class="fas fa-arrow-up"></i>
 		</button>

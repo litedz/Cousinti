@@ -17,9 +17,8 @@ class ProfileFactory extends Factory
     public function definition()
     {
         return [
-            'public' => boolval($this->faker->boolean(0)),
-            'last_activity' => boolval($this->faker->boolean(0)),
-            'recipes' => boolval($this->faker->boolean(0)),
+            'show_about_perm' => boolval($this->faker->boolean(50)),
+            'show_recipes_perm' => boolval($this->faker->boolean(50)),
         ];
     }
 }

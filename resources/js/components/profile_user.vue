@@ -1,102 +1,99 @@
 <template>
-  <section class="h-100 gradient-custom-2 profile" style="direction: rtl;">
+  <div class="bg-white container emp-profile shadow">
     <status ref="status"></status>
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100 ">
-        <div class="col col-lg-9 col-xl-7">
-          <div class="card">
-            <div class="rounded-top px-4 text-white d-flex flex-row"
-              :style="'background-color:' + profile.profile_setting.background + '; height:200px;'">
-              <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
-                <img v-if="profile.Id_user_media == null" :src="w_path + '/storage/' + profile.avatar"
-                  alt="Generic placeholder image" class="img-fluid img-thumbnail mb-2 mt-4 z-9999"
-                  style="width: 150px;height: 150px; z-index: 1">
-
-                <img v-else :src="profile.avatar" alt="Generic placeholder image"
-                  class="img-fluid img-thumbnail mb-2 mt-4 z-9999" style="width: 150px;height: 150px; z-index: 1">
-
-                <button v-if="$attrs.edit_perm == 1" type="button" class="btn btn-outline-dark"
-                  data-mdb-ripple-color="dark" style="z-index: 1;" @click="EditForm = true">
-                  Edit profile
-                </button>
-              </div>
-              <div class="ms-3" style="margin-top: 130px;">
-                <h5>{{ profile.username }}</h5>
-                <p>New York</p>
-              </div>
+    <form method="post">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="profile-img">
+            <img :src="w_path + '/storage/' + profile.avatar" alt="" />
+            <div class="file btn btn-lg btn-primary" v-if="this.$attrs.edit_perm">
+              Change Photo
+              <input type="file" name="file" />
             </div>
-            <div class="p-4 text-black" style="background-color: #f8f9fa;">
-              <div class="d-flex justify-content-end text-center py-1">
-                <div>
-                  <p class="mb-1 h5">{{ profile.recipes.length }}</p>
-                  <p class="small text-muted mb-0">Recipes</p>
-                </div>
-                <div class="px-3">
-                  <p class="mb-1 h5">1026</p>
-                  <p class="small text-muted mb-0">Followers</p>
-                </div>
-                <div>
-                  <p class="mb-1 h5">478</p>
-                  <p class="small text-muted mb-0">Following</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-body p-4 text-black Recent recipes">
-              <!-- <div class="mb-5">
-                                    <p class="lead fw-normal mb-1">About</p>
-                                    <div class="p-4" style="background-color: #f8f9fa;">
-                                      <p class="font-italic mb-1">Web Developer</p>
-                                      <p class="font-italic mb-1">Lives in New York</p>
-                                      <p class="font-italic mb-0">Photographer</p>
-                                    </div>
-                                  </div> -->
-              <div class="d-flex justify-content-between align-items-center mb-4">
-                <p class="lead fw-normal mb-0">اخر الوصفات</p>
-                <p class="mb-0"><a href="#!" class="text-muted">Show all</a></p>
-              </div>
-              <div class="no-recipe" v-if="profile.recipes.length == 0">
-                <div class="bg-light fs-4 fw-lighter p-3 rounded text-center text-muted">لا يوجد وصفات</div>
-              </div>
-              <div class="" v-else-if="ProfileInfo.setting.recipes == 0">
-                <div class="bg-light fs-4 fw-lighter p-3 rounded text-center text-muted">تم حجب الوصفات</div>
-              </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="profile-head text-warning">
+            <h5>
+              {{ profile.username }}
+            </h5>
+            <h6>
+              {{ profile.rank.rank }}
+            </h6>
+            <!-- <p class="proile-rating">RANKINGS : <span>8/10</span></p> -->
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                  aria-selected="true">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#Recipes" role="tab" aria-controls="profile"
+                  aria-selected="false">Latest Recipe</a>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content profile-tab" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
               <div class="row">
-                <div class="col-6 mb-2 p-0 position-relative singel-recipe" v-for="images in profile.recipes"
-                  @mouseenter="show = 'RecipeTitle'" @mouseleave="show = ' '" v-if="profile.profile_setting.recipes == 1">
-                  <Transition name="fade">
-                    <div class="bg-perso fs-1 h-100 position-absolute position-relative rounded-3 text-center w-100"
-                      v-show="show == 'RecipeTitle'">
-                      <a class="position-relative text-decoration-none text-white" style="top: 30%;" href="#">Titlt
-                      </a>
-                    </div>
-                  </Transition>
-                  <img v-if="images.images_recipe[0]" :src="w_path + '/storage/recipes/' + images.images_recipe[0].name"
-                    alt="image 1" class="w-100 rounded-3">
+                <div class="col-8">
+                  <div class="about-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam rerum facere est nam repellat! Itaque
+                    quisquam obcaecati laborum minus. Quam sunt ea ratione corporis necessitatibus tempora dolore alias
+                    pariatur magnam?
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="Recent Activity">
-              <div class="lead mb-2 mx-4 title">النشاط الأخير</div>
-              <hr>
-              <div v-if="ProfileInfo.setting.last_activity == 0">
-                <div class="bg-light fs-4 fw-lighter p-3 rounded text-center text-muted">تم حجب النشاطات</div>
-              </div>
-              <div v-else-if="ProfileInfo.comments.length !== 0" class="Activitys mx-0 p-3 rounded row w-100">
-                <div class="bg-light col-12 d-flex flex-column m-1 fs-6 p-2" v-for="comment in ProfileInfo.comments">
-                  <span class="fa fa-comments mb-2" style="color: #3fcccc;"></span>
-                  <div class="d-flex fs-5 mb-2 text">
-                    <div class="fw-bolder ms-2 pointer text-black-title username" style="color: #636060;">
-                      {{ ProfileInfo.name }}</div>
-                    <div class="ms-3">اضاف تعليق :</div>
-                    <div class="comment text-truncate w-25">{{ comment.comment }}</div>
-                  </div><span class="position-relative text-info time">{{ formateDate(comment.created_at) }}</span>
+            <div class="tab-pane fade" id="Recipes" role="tabpanel" aria-labelledby="Recipes-tab">
+              <div class="g-3 row">
+                <div class="col-4">
+                  <div class="img-container flex-center position-relative w-100 h-100">
+                    <div class="overlay w-100 position-absolute h-100 bg-black"></div>
+                    <div class="link-recipe position-absolute text-center text-truncate w-75 z-8888">
+                      <a href="/recipe" class="bg-white first-color fs-3 p-2 px-4 rounded w-50">Recipe Name
+                        azazazeeeeeee</a>
+                    </div>
+                    <img class="w-100" src="https://picsum.photos/200/300" alt="">
+                  </div>
                 </div>
+
               </div>
             </div>
           </div>
         </div>
+        <div class="col-md-2">
+          <div class="flex-center gap-2">
+            <input type="button" class="profile-edit-btn px-3 p-1" name="btnAddMore" value="Edit Profile"
+              v-if="this.$attrs.edit_perm" @click="EditForm = true" />
+            <!-- <input type="button" class="bg-third-color border btn p-1 px-3 rounded-5 text-white" name="btnAddMore"
+              value="Send Message" @click="showChat = true" v-if="!this.$attrs.edit_perm" /> -->
+          </div>
+        </div>
+        <div class="col-md-2">
+
+        </div>
       </div>
-    </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="profile-work">
+            <p class="text-uppercase">social media</p>
+            <a href="">Website Link</a><br />
+            <a href="">Bootsnipp Profile</a><br />
+            <a href="">Bootply Profile</a>
+            <p>SKILLS</p>
+            <a href="">Web Designer</a><br />
+            <a href="">Web Developer</a><br />
+          </div>
+        </div>
+        <div class="col-md-8">
+
+        </div>
+      </div>
+    </form>
+    <!-- <div class="position-fixed btn-primary btn top-50 w-100" @click="ss()">Click</div> -->
+    <form-message v-show="showChat" :user_id_recipient="this.profile.id" :user_id_send="this.auth_id"
+      @Close-Chat="showChat = false"></form-message>
+
     <!-- Edit profile Form  -->
     <Transition name="fade">
       <div class="bg-light border p-3 position-fixed pt-5 rounded tab-pane w-50 z-9999" style="left: 25%;top: 20%;"
@@ -151,13 +148,13 @@
         </div>
       </div>
     </Transition>
-  </section>
+  </div>
 </template>
 
 <script>
-import  moment from "moment";
+import moment from "moment";
 export default {
-  props: { profile: Object, user_id: Number },
+  props: { profile: Object, auth_id: Number },
   inject: ['w_path'],
   mounted() {
     this.ProfileInfo.name = this.profile.username;
@@ -165,6 +162,7 @@ export default {
     this.ProfileInfo.setting.recipes = this.profile.profile_setting.recipes;
     this.ProfileInfo.setting.last_activity = this.profile.profile_setting.last_activity;
     this.ProfileInfo.comments = this.profile.comments;
+    window.addEventListener('mousemove', this.ss);
 
   },
   watch: {
@@ -175,11 +173,18 @@ export default {
       },
       deep: true
     },
-
+    // showChat: {
+    //   handler() {
+    //     if (this.showChat) {
+    //       this.ss();
+    //     }
+    //   }
+    // },
   },
   data() {
     return {
       EditForm: false,
+      showChat: false,
       show: '',
       ProfileInfo: {
         name: '',
@@ -189,14 +194,22 @@ export default {
           last_activity: '',
         },
         comments: '',
-      }
+      },
     };
   },
   methods: {
+    ss() {
+      let body = document.querySelector('.card-body');
+      body.scrollTop = body.scrollHeight;
+    },
+    RemoveScrolle() {
+      window.removeEventListener('mouseenter', this.ss)
+      alert();
+    },
     getProfileInfo() {
       axios({
         method: 'get',
-        url: '/profile/' + this.user_id + '/edit',
+        url: '/profile/' + this.auth_id + '/edit',
 
       }).then((response) => {
         if (response.data) {
@@ -222,11 +235,11 @@ export default {
       info.append('_method', 'PUT');
       axios({
         method: 'POST',
-        url: '/profile/' + this.user_id,
+        url: '/profile/' + this.auth_id,
         data: info,
       }).then((response) => {
         if (response.data.status == 'updated') {
-          this.$refs.status.Display('success', 'تم تحديث البروفايل', 'تمت التحديث بنجاح');
+          this.$refs.status.Display('success', response.data.message, 'تمت التحديث بنجاح');
           setTimeout(() => {
             window.location.reload();
           }, 2000);
@@ -239,16 +252,16 @@ export default {
     },
     UpdatePermissions() {
       let setting = new FormData();
-      setting.append('last_activity', this.ProfileInfo.setting.last_activity);
-      setting.append('recipes', this.ProfileInfo.setting.recipes);
+      setting.append('show_about_perm', this.ProfileInfo.setting.last_activity);
+      setting.append('show_recipes_perm', this.ProfileInfo.setting.recipes);
       setting.append('_method', 'PUT');
       axios({
         method: 'POST',
-        url: '/profile/' + this.user_id + '/edit/permission',
+        url: '/profile/' + this.auth_id + '/edit/permission',
         data: setting,
       }).then((response) => {
         if (response.data.status == 'updated') {
-          this.$refs.status.Display('success', 'تم تحديث البروفايل', 'تمت التحديث بنجاح');
+          this.$refs.status.Display('success', response.data.message, 'تمت التحديث بنجاح');
           setTimeout(() => {
             window.location.reload();
           }, 2000);
@@ -260,31 +273,158 @@ export default {
     formateDate(created_at) {
       return moment(created_at, false).fromNow();
     },
+    recipesUser() {
+      axios({
+        method: 'get',
+        url: '/profile/' + this.auth_id + '/edit',
+
+      }).then((response) => {
+        if (response.data) {
+
+        }
+
+      }).catch((error) => {
+        this.$refs.status.Display('danger', error.response.data.message, 'خطاء');
+      });
+    },
 
   }
 }
 </script>
 
 <style scoped>
-.btn-outline-dark {
-  background: #0E8572;
-  border: none;
-  color: white;
+.emp-profile {
+  padding: 3%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border-radius: 0.5rem;
+  background: #fff;
 }
 
+.profile-img {
+  text-align: center;
+}
 
-/* .singel-recipe: div:first-of-type {
-  transition: all 1s;
-  animation: fadeIn-custome 1s;
-} */
-/* 
-@keyframes fadeIn-custome {
-  0% {
-    opacity: 0;
-  }
+.profile-img img {
+  width: 70%;
+  height: 100%;
+}
 
-  100% {
-    opacity: 0.75;
-  }
-} */
+.profile-img .file {
+  position: relative;
+  overflow: hidden;
+  margin-top: -20%;
+  width: 70%;
+  border: none;
+  border-radius: 0;
+  font-size: 15px;
+  background: #212529b8;
+}
+
+.profile-img .file input {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
+}
+
+.profile-head h5 {
+  color: #333;
+}
+
+.profile-head h6 {
+  color: #0062cc;
+}
+
+.profile-edit-btn {
+  border: none;
+  border-radius: 1.5rem;
+  width: 70%;
+  padding: 2%;
+  font-weight: 600;
+  color: #6c757d;
+  cursor: pointer;
+}
+
+.proile-rating {
+  font-size: 12px;
+  color: #818182;
+  margin-top: 5%;
+}
+
+.proile-rating span {
+  color: #495057;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.profile-head .nav-tabs {
+  margin-bottom: 5%;
+}
+
+.profile-head .nav-tabs .nav-link {
+  font-weight: 600;
+  border: none;
+  color: #EF6F82;
+}
+
+.nav-tabs .nav-link.active:after {
+  background-color: #ef6f82;
+  box-shadow: 0 2px 5px #ef6f82;
+}
+
+.profile-head .nav-tabs .nav-link.active {
+  border: none;
+  border-bottom: 2px solid #ef6f82;
+}
+
+.profile-work {
+  padding: 14%;
+  margin-top: -15%;
+}
+
+.profile-work p {
+  font-size: 12px;
+  color: #818182;
+  font-weight: 600;
+  margin-top: 10%;
+}
+
+.profile-work a {
+  text-decoration: none;
+  color: #495057;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.profile-work ul {
+  list-style: none;
+}
+
+.profile-tab label {
+  font-weight: 600;
+}
+
+.profile-tab p {
+  font-weight: 600;
+  color: #0062cc;
+}
+
+#Recipes .img-container .overlay {
+  opacity: 0;
+}
+
+#Recipes .img-container .link-recipe {
+  opacity: 0;
+}
+
+#Recipes .img-container:hover .overlay {
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+#Recipes .img-container:hover .link-recipe {
+  opacity: 1;
+  transition: all 0.5s;
+}
 </style>

@@ -15,10 +15,8 @@ return new class extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
-            $table->tinyText('public')->default('true');
-            $table->tinyText('recipes')->default('true');
-            $table->tinyText('last_activity')->default('true');
-            $table->string('background')->default('#878787');
+            $table->text('show_about_perm')->default('true');
+            $table->tinyText('show_recipes_perm')->default('true');
             $table->timestamps();
         });
     }

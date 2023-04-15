@@ -73,6 +73,9 @@ import table_datatable from './components/dashboard/table-datatable.vue';
 
 import status from './components/status.vue';
 
+//User 
+
+import form_message from './components/user/form-message.vue';
 //dashboard 
 import static_user from './components/dashboard/static.vue';
 
@@ -147,6 +150,11 @@ app.component('add-recipe', add_recipe);
 app.component('update-recipe', update_recipe);
 app.component('table-datatable', table_datatable);
 
+
+//User 
+
+
+app.component('form-message',form_message);
 
 //dashboard
 app.component('static_user', static_user);

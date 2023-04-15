@@ -1,12 +1,13 @@
 <template>
-  <div class="border-bottom border-top d-flex justify-content-center navbar z-8888" style="transition: all 0.5s;"
-    dir="rtl">
+  <div class="border-bottom border-top d-flex justify-content-center align-items-center navbar z-8888"
+    style="transition: all 0.5s;" dir="rtl">
     <div class="d-flex justify-content-start w-100">
       <Button type="button" class="btn end-0 mt-1 mx-2 position-absolute top-0" id="toggleButton">
         <span class="fa fa-bars first-color fs-4" @click="toggleNav()" data-target="nav"></span>
       </Button>
     </div>
-    <nav id="nav" class="">
+
+    <nav id="nav" class="align-items-center">
       <!-- Top Menu  -->
       <div class="p-d-none-lg p-d-none-md  slide-icon w-100">
         <div class="d-flex justify-content-center position-relative">
@@ -18,7 +19,8 @@
       <!-- Logo  website -->
       <div class="border-bottom logo-menu pb-2 text-center w-100 position-relative">
         <img :src="w_path + '/images/logo.png'" class="rounded-circle">
-      </div><!-- Search Bar  -->
+      </div>
+      <!-- Search Bar  -->
       <div class="align-items-center d-flex gap-1 position-relative r search">
         <input type="text" placeholder="  البحث في الموقع" class="form-control rounded"><span
           class="fa fa-search position-absolute" style="left: 5%;color: #8F625B;"></span>
@@ -125,6 +127,54 @@
         </li>
       </div>
 
+      <!-- Auth area  -->
+      <div class="auth-area px-2" v-if="this.$attrs.auth_status && this.$attrs.auth_status == true">
+        <div class="info align-items-center d-flex flex-row-reverse ">
+          <div class="" v-if="this.$attrs.auth_status == true && this.$attrs.checkmediauser == true">
+            <img :src="this.$attrs.avatar" style="width: 50px;height: 50px;" alt="avatar" class="rounded-circle m-2" />
+          </div>
+          <!-- authentication  with Laravel App -->
+          <div class="" v-if="this.$attrs.auth_status == true && this.$attrs.checkmediauser == false">
+            <a :href="w_path + '/profile/' + this.$attrs.user_id">
+              <img :src="w_path + '/storage/' + this.$attrs.avatar" style="width: 50px;height: 50px;" alt="avatar"
+                class="rounded-circle m-2" /></a>
+          </div>
+          <div class="dashboard position-relative text-right w-auto">
+            <div class="">
+              <div class="name text-truncate">
+                <a :href="'/profile/' + this.$attrs.user_id"
+                  class="text-decoration-none fs-6 fst-italic fw-bolder text-black-50"><span>Hi , </span>{{ this.$attrs.user }}</a>
+              </div>
+            </div>
+
+            <a class="fa fa-bars-staggered fs-4 first-color pointer text-decoration-none" @click="toggleMenu()"
+              data-link="quick-menu" data-toggle="navSlide"></a>
+            <div class="bg-white end-0 quick-menu p-3 position-absolute text-center rounded shadow" id="quick-menu">
+              <li class="head fw-bolder">Quick Menu</li>
+              <li class="align-items-center border-bottom d-flex justify-content-end m-2 p-1 pointer rounded">
+                <a href="/dashboard" class="text-decoration-none first-color">لوحة التحكم</a><span
+                  class="fa fa-dashboard fs-6 m-2 first-color"></span>
+              </li>
+              <li class="align-items-center border-bottom d-flex justify-content-end m-2 p-1 pointer rounded">
+                <a href="/recipes" class="text-decoration-none first-color">الوصفات</a><span
+                  class="fs-6 m-2 fa fa-list first-color"></span>
+              </li>
+              <li class="align-items-center border-bottom d-flex justify-content-end m-2 p-1 pointer rounded">
+                <a href="/recipes" class="text-decoration-none first-color">المفضلة</a><span
+                  class="fs-6 m-2 fa fa-heartbeat first-color"></span>
+              </li>
+              <li class="align-items-center border-bottom d-flex justify-content-end m-2 p-1 pointer rounded">
+                <a href="/logout" class="text-decoration-none first-color">الخروج</a><span
+                  class="fa fa-door-open fs-6 m-2 first-color"></span>
+              </li>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Media  -->
       <div
         class="social-media border-left border-right border-top bottom-0 contact d-flex gap-2 justify-content-center p-2 position-absolute rounded w-100"
         style="background:#fbfbfb;">
@@ -135,7 +185,7 @@
       </div>
     </nav>
     <div class="align-items-center d-flex fw-bolder gap-2 login mx-2 position-absolute rounded start-0  form"
-      v-if="showLoginForm">
+      v-if="showLoginForm && this.$attrs.auth_status !== 1" >
       <a href="/login" class="btn p-2 px-4 rounded text-decoration-none text-white"
         style="background: rgb(65, 60, 88);">Login</a>
       <a href="/register" class="btn p-2 px-4 rounded text-decoration-none text-white"
@@ -237,7 +287,12 @@ export default {
           }
         })
         .catch((error) => { });
-    }
+    },
+    toggleMenu() {
+      $("#" + event.target.getAttribute("data-link")).fadeToggle("slow");
+    },
+
+
   },
 };
 </script>
@@ -257,9 +312,6 @@ export default {
   border-radius: .25rem !important;
   transition: all 1s;
 } */
-
-
-
 #navigation-bar .top-bar {
   z-index: 9998;
   position: relative;
@@ -322,9 +374,10 @@ nav.navbar {
 
 }
 
-#nav #link-nav a.active-link{
+#nav #link-nav a.active-link {
   color: #EF6F82 !important;
 }
+
 #nav #link-nav a.active-link::after {
 
   content: '\276F';
@@ -334,6 +387,17 @@ nav.navbar {
   top: 80%;
   transition: all 1s;
   color: #EF6F82;
+}
+
+#nav .auth-area {
+  right: 5%;
+  position: absolute;
+}
+
+#nav .auth-area #quick-menu {
+  width: 400px;
+  z-index: 9999;
+  display: none;
 }
 
 
@@ -377,6 +441,14 @@ nav.navbar {
     transition: all 0.5s;
   }
 
+  #nav .auth-area {
+    position: relative !important;
+    background: #e9e9e9;
+    display: flex;
+    right: 0;
+    width: 100%;
+  }
+
 
   #nav {
     position: fixed;
@@ -407,10 +479,6 @@ nav.navbar {
     height: 500px;
   }
 
-
-
-
-
   #navigation-bar .Right-navbar {
     width: 50%;
   }
@@ -418,10 +486,16 @@ nav.navbar {
   #toggleButton {
     position: relative !important;
   }
+
+  #nav .auth-area #quick-menu {
+    bottom: 100% !important;
+  }
+
 }
 
 
 /*       Mediam screen  */
+
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   nav.navbar {
     background: hsl(170, 81%, 29%);
@@ -445,7 +519,6 @@ nav.navbar {
     width: 100%;
   }
 
-
   #nav {
     display: flex !important;
     align-items: center;
@@ -456,9 +529,19 @@ nav.navbar {
     display: none !important;
   }
 
+  #nav .auth-area {
+    position: relative !important;
+    background: #e9e9e9;
+    display: flex;
+    width: 100%;
+  }
+
+
+
 }
 
 /*       Large  screen  */
+
 @media only screen and (min-width: 992px) {
   nav.navbar {
     background: hsl(170, 81%, 29%);
@@ -485,6 +568,7 @@ nav.navbar {
   #nav .search {
     display: none !important;
   }
+
 
 }
 </style>

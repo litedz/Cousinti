@@ -1,5 +1,5 @@
 <template >
-  <div class="bg-white border mx-auto p-3 rounded shadow table_recipes w-75">
+  <div class="bg-white border mx-auto p-3 rounded shadow table_recipes">
     <status ref="status"></status>
     <table class="table align-middle mb-0 bg-white text-center">
       <caption class="font-3 m-3 text-center"

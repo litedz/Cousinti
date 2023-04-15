@@ -3,6 +3,7 @@
 use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\GuestRecipeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\UserController;
@@ -106,7 +107,19 @@ Route::middleware(['auth'])->group(function () {
     );
 });
 
+
+
+// Comments Routes
 Route::resource('comments', CommentsController::class);
+
+// Message or chat routes
+
+Route::resource('messages', MessageController::class);
+Route::post('messages/conversation',[MessageController::class,'conversation']);
+
+
+
+
 
 //Authantication
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('check.login');

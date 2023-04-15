@@ -14,14 +14,12 @@ class ProfileServices
     {
         $update_fields = $request->validate([
             'username' => 'required',
-            'background' => 'required',
             'avatar' => 'nullable|image',
         ]);
         //  find User
         $user = User::where('id', auth()->user()->id)->firstOrfail();
 
         if (isset($request->avatar)) {
-
             //remove old avatar if exist
             $remove_old_avatar = Storage::disk('public')->delete($user->avatar);
             if ($remove_old_avatar) {
@@ -35,11 +33,7 @@ class ProfileServices
         $update_user = $user->update([
             'username' => $request->username,
         ]);
-        // Update background profile
-        $update_background = Profile::where('id', auth()->user()->id)->update([
-            'background' => $request->background,
-        ]);
-        if (! $update_user && ! $update_background) {
+        if (!$update_user) {
             throw new Exception('Error Processing Request', 1);
         }
     }
@@ -47,21 +41,17 @@ class ProfileServices
     public function UpdatePermissionService(Request $request)
     {
         $PermValid = $request->validate([
-            'last_activity' => 'required',
-            'recipes' => 'required',
+            'show_about_perm' => 'required',
+            'show_recipes_perm' => 'required',
         ]);
 
         // dd($request->all());
         // die();
         $user = User::where('id', auth()->user()->id)->firstOrFail();
         $updatePerm = Profile::where('id', $user->profile_id)
-            ->update([
-                'last_activity' => $request->last_activity,
-                'recipes' => $request->recipes,
+            ->update($PermValid);
 
-            ]);
-
-        if (! $updatePerm) {
+        if (!$updatePerm) {
             throw new Exception('خطا في تحديث الصلاحيات', 1);
         }
     }

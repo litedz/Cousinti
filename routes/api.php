@@ -10,3 +10,8 @@
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Route;
+
+Route::resource('profile', ProfileController::class);

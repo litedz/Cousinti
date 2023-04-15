@@ -49,8 +49,8 @@ class ProfileController extends Controller
 
         $editPerm = Gate::inspect('edit', 'App\\Models\User')->allowed() ? true : false;
 
-        $profile_user = collect($user::with(['recipes.images_recipe', 'profile_setting', 'comments'])->where('id', $user_id)->firstOrFail())
-            ->only(['username', 'recipes', 'avatar', 'Id_user_media', 'background', 'profile_setting', 'comments']);
+        $profile_user = collect($user::with(['recipes.images_recipe', 'profile_setting', 'comments', 'rank'])->where('id', $user_id)->firstOrFail())
+            ->only(['username', 'id', 'avatar', 'Id_user_media', 'profile_setting', 'comments', 'rank']);
 
         return view('user.profile-user', compact('profile_user', 'editPerm'));
     }
@@ -61,7 +61,7 @@ class ProfileController extends Controller
     public function edit(user $user, $user_id)
     {
 
-        Gate::authorize('edit', User::class);
+        Gate::authorize('edit', 'App\\Models\User');
         $editPerm = true;
         $edit_user = $user::find($user_id)->first();
 
@@ -76,7 +76,7 @@ class ProfileController extends Controller
      */
     public function update(Request $request, ProfileServices $profileServices)
     {
-        Gate::authorize('update', User::class);
+        Gate::authorize('update',  'App\\Models\User');
         try {
             $profileServices->UpdateProfile($request);
         } catch (\Throwable $th) {
