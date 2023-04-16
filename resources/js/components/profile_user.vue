@@ -5,10 +5,23 @@
       <div class="row">
         <div class="col-md-4">
           <div class="profile-img">
-            <img :src="w_path + '/storage/' + profile.avatar" alt="" />
+            <img :src="w_path + '/storage/' + profile.avatar" alt="" class="w-100" />
             <div class="file btn btn-lg btn-primary" v-if="this.$attrs.edit_perm">
               Change Photo
               <input type="file" name="file" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5">
+              <div class="profile-work">
+                <p class="text-uppercase">social media</p>
+                <a href="">Website Link</a><br />
+                <a href="">Bootsnipp Profile</a><br />
+                <a href="">Bootply Profile</a>
+                <p>SKILLS</p>
+                <a href="">Web Designer</a><br />
+                <a href="">Web Developer</a><br />
+              </div>
             </div>
           </div>
         </div>
@@ -35,18 +48,21 @@
           <div class="tab-content profile-tab" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
               <div class="row">
-                <div class="col-8">
+                <div class="col-8" v-if="this.ProfileInfo.setting.about">
                   <div class="about-text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam rerum facere est nam repellat! Itaque
                     quisquam obcaecati laborum minus. Quam sunt ea ratione corporis necessitatibus tempora dolore alias
                     pariatur magnam?
                   </div>
                 </div>
+                <div class="col-12 text-center" v-else>
+                  <h1 class="text-muted text-capitalize">This Section Is private</h1>
+                </div>
               </div>
             </div>
             <div class="tab-pane fade" id="Recipes" role="tabpanel" aria-labelledby="Recipes-tab">
               <div class="g-3 row">
-                <div class="col-4">
+                <div class="col-4" v-if="this.ProfileInfo.setting.recipes">
                   <div class="img-container flex-center position-relative w-100 h-100">
                     <div class="overlay w-100 position-absolute h-100 bg-black"></div>
                     <div class="link-recipe position-absolute text-center text-truncate w-75 z-8888">
@@ -55,6 +71,9 @@
                     </div>
                     <img class="w-100" src="https://picsum.photos/200/300" alt="">
                   </div>
+                </div>
+                <div class="col-12 text-center" v-else>
+                  <h1 class="text-muted text-capitalize">private Recipes</h1>
                 </div>
 
               </div>
@@ -65,30 +84,13 @@
           <div class="flex-center gap-2">
             <input type="button" class="profile-edit-btn px-3 p-1" name="btnAddMore" value="Edit Profile"
               v-if="this.$attrs.edit_perm" @click="EditForm = true" />
-            <!-- <input type="button" class="bg-third-color border btn p-1 px-3 rounded-5 text-white" name="btnAddMore"
-              value="Send Message" @click="showChat = true" v-if="!this.$attrs.edit_perm" /> -->
           </div>
         </div>
         <div class="col-md-2">
 
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="profile-work">
-            <p class="text-uppercase">social media</p>
-            <a href="">Website Link</a><br />
-            <a href="">Bootsnipp Profile</a><br />
-            <a href="">Bootply Profile</a>
-            <p>SKILLS</p>
-            <a href="">Web Designer</a><br />
-            <a href="">Web Developer</a><br />
-          </div>
-        </div>
-        <div class="col-md-8">
 
-        </div>
-      </div>
     </form>
     <!-- <div class="position-fixed btn-primary btn top-50 w-100" @click="ss()">Click</div> -->
     <form-message v-show="showChat" :user_id_recipient="this.profile.id" :user_id_send="this.auth_id"
@@ -113,12 +115,6 @@
                 <input class="form-control" type="file" id="avatar">
               </div>
             </div>
-            <div class="form-group row">
-              <label class="col-lg-2 fw-bolder text-black-title col-form-label form-control-label">تغيير الخلفية</label>
-              <div class="col-lg-9">
-                <input class="form-control w-25" type="color" v-model="ProfileInfo.background">
-              </div>
-            </div>
             <div class="Setting d-grid gap gap-2">
               <div class="border-bottom h4 p-1 rounded text-black-title title">خيارات البروفايل</div>
               <!-- Default checked -->
@@ -128,9 +124,9 @@
                   id="flexSwitchCheckChecked1" :checked="ProfileInfo.setting.recipes == 1">
               </div>
               <div class="d-flex form-check form-switch row-cols-4">
-                <label class="form-check-label fw-semibold" for="flexSwitchCheckChecked">عرض اخر النشاطات</label>
-                <input v-model="ProfileInfo.setting.last_activity" class="form-check-input" type="checkbox" role="switch"
-                  id="flexSwitchCheckChecked" :checked="ProfileInfo.setting.last_activity == 1">
+                <label class="form-check-label fw-semibold" for="flexSwitchCheckChecked">عرض الوصف</label>
+                <input v-model="ProfileInfo.setting.about" class="form-check-input" type="checkbox" role="switch"
+                  id="flexSwitchCheckChecked" :checked="ProfileInfo.setting.about == 1">
               </div>
               <input type="button" class="btn btn-primary mx-1 col-12 col-md-2" value="حفط التفيير"
                 @click="UpdatePermissions()">
@@ -158,9 +154,8 @@ export default {
   inject: ['w_path'],
   mounted() {
     this.ProfileInfo.name = this.profile.username;
-    this.ProfileInfo.background = this.profile.profile_setting.background;
-    this.ProfileInfo.setting.recipes = this.profile.profile_setting.recipes;
-    this.ProfileInfo.setting.last_activity = this.profile.profile_setting.last_activity;
+    this.ProfileInfo.setting.recipes = this.profile.profile_setting.show_recipes_perm;
+    this.ProfileInfo.setting.about = this.profile.profile_setting.show_about_perm;
     this.ProfileInfo.comments = this.profile.comments;
     window.addEventListener('mousemove', this.ss);
 
@@ -169,7 +164,7 @@ export default {
     ProfileInfo: {
       handler(val) {
         this.ProfileInfo.setting.recipes = (this.ProfileInfo.setting.recipes == true ? 1 : 0);
-        this.ProfileInfo.setting.last_activity = (this.ProfileInfo.setting.last_activity == true ? 1 : 0);
+        this.ProfileInfo.setting.about = (this.ProfileInfo.setting.about == true ? 1 : 0);
       },
       deep: true
     },
@@ -188,10 +183,9 @@ export default {
       show: '',
       ProfileInfo: {
         name: '',
-        background: '',
         setting: {
           recipes: '',
-          last_activity: '',
+          about: '',
         },
         comments: '',
       },
@@ -252,7 +246,7 @@ export default {
     },
     UpdatePermissions() {
       let setting = new FormData();
-      setting.append('show_about_perm', this.ProfileInfo.setting.last_activity);
+      setting.append('show_about_perm', this.ProfileInfo.setting.about);
       setting.append('show_recipes_perm', this.ProfileInfo.setting.recipes);
       setting.append('_method', 'PUT');
       axios({
@@ -305,10 +299,7 @@ export default {
   text-align: center;
 }
 
-.profile-img img {
-  width: 70%;
-  height: 100%;
-}
+
 
 .profile-img .file {
   position: relative;
