@@ -5,8 +5,8 @@
             <div v-for="activity in lastActivitys">
                 <div class="activity border-bottom d-flex flex-column p-1 p-3 rounded" v-if="activity.comment">
                     <div class="fst-italic text-muted title">Comment</div>
-                    <div class="content d-flex">"{{ activity.comment }}" <div class="">a : <a
-                                :href="'/recipes/' + activity.recipe.id">{{ activity.recipe.id }}</a></div>
+                    <div class="content d-flex">"{{ activity.comment }}" <div class=""> <span class="fw-bolder mx-1">In :</span><a
+                                :href="'/recipes/' + activity.recipe.id">{{ activity.recipe.name }}</a></div>
                     </div>
                     <div>
                         <span class="fa-clock fa-regular"></span>
@@ -34,6 +34,8 @@
 import moment from "moment";
 export default {
     mounted() {
+    },
+    activated(){
         this.GetLastActivity();
     },
     data() {

@@ -34,7 +34,7 @@
                         <div class="single-comment mb-1 bg-white d-flex flex-row-reverse rounded position-relative pt-2 pb-2"
                             v-for="comment in comments.data" :key="comment.recipe">
                             <div class="left-shape position-absolute"></div>
-                            <div class="avatar w-25">
+                            <div class="avatar mx-2">
                                 <img class="rounded-circle mt-2" :src="w_path + '/storage/' + comment.user.avatar"
                                     style="width: 80px;height: 80px;" alt="" srcset="" />
                             </div>
