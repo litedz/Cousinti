@@ -89,12 +89,7 @@
             <div class="headImage position-relative" v-for="image in images" :key="image">
                 <li class="m-1 bg-light fa fa-remove font-3 position-absolute px-1 rounded-circle text-danger top-0 pointer"
                     @click="removeOtherImage(image.id)"></li>
-                <img class="w-25" :src="
-                    this.w_path +
-                    '/' +
-                    'storage/recipes/' +
-                    image.name
-                " v-if="image.cover === 'active'" />
+                <img class="w-25" :src="w_path + '/storage/recipes/' + this.update_recipe.images_recipe[0].name" />
             </div>
             <FormKit type="file" id="files" multiple name="files" label="الصور :" label-class="text-weight-500"
                 file-remove-class="btn btn-primary m-2" input-class="form-control mt-2" validation="file" />
@@ -174,9 +169,7 @@ export default {
                             this.update_recipe = recipe;
                             this.name_recipe = recipe.name;
                             this.selected_type = recipe.type_recipe.id;
-
                             this.url_video = recipe.url_video == null ? '' : "https://www.youtube.com/" + recipe.url_video;
-
                             this.ingredients = recipe.ingredient;
                             this.how_todo = recipe.how_todo;
                             this.images = recipe.images_recipe;

@@ -1,2 +1,4 @@
-<h1>test page</h1>
-<x-icon-camera/>
+@foreach ($s as $ls )
+    {{$ls->name}}
+    {{$ls->comment}}
+@endforeach

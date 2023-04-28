@@ -13,7 +13,7 @@ user="{{auth()->user()->username}}"
 :user_id="{{auth()->user()->id}}" 
 avatar="{{auth()->user()->avatar}}" 
 checkmediauser="{{request()->input('facebook_user')}}">
-></nav-bar>
+</nav-bar>
 @endauth
 @guest
 <nav-bar></nav-bar> 

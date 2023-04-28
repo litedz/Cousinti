@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Jobs\Subscribe as JobsSubscribe;
+use App\Models\comments;
 use App\Models\Profile;
 use App\Models\Rating;
+use App\Models\recipe;
 use App\Models\Subscribe;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
@@ -206,5 +210,13 @@ class UserController extends Controller
         $subscribed = JobsSubscribe::dispatch($e->email);
 
         return $subscribed ? response()->json('تم الاشتراك معنا في الموقع بنجاح') : throw new Exception('Error Processing Request', 1);
+    }
+    public function LastActivity()
+    {
+        $last_recipes = recipe::where('user_id', 20)->get();
+        $last_comments = comments::with('recipe')->where('user_id', 20)->get();
+
+        $last_activitys = collect($last_comments)->merge($last_recipes)->sortByDesc('created_at')->values();
+        return response()->json($last_activitys);
     }
 }

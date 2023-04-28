@@ -77,18 +77,22 @@
           <p class="fs-3 fw-bolder m-1 text-black-50 text-weight-500">اضافة مكونات</p>
           <span>
             <i @click="show_inputs = 'add_ingredient_table'" class="
-                  border
-                  fa fa-2 fa-plus-circle
-                  font-3
-                  rounded-circle
-                  text-bg-info text-white
-                  m-1
-                  pointer
-                " aria-hidden="true"></i></span>
+                    border
+                    fa fa-2 fa-plus-circle
+                    font-3
+                    rounded-circle
+                    text-bg-info text-white
+                    m-1
+                    pointer
+                  " aria-hidden="true"></i></span>
         </div>
+
+
       </div>
     </FormKit>
-
+    <FormKit type="text" name="level" v-model="level" input-class="form-control mt-2" label="مستوي الصوفة :"
+      label-class="text-weight-800" help="الحقل الافتراضي هو (مبتدئ)" help-class="text-black-50"
+      placeholder="مبدئ -متوسط - صعب" validation="required" />
     <div class="images mt-4">
       <FormKit type="file" id="head_file" name="files" label="الصورة الرئيسبة :" label-class="text-weight-500"
         file-remove-class="btn btn-primary m-2" input-class="form-control mt-2" validation="required|file" />
@@ -129,6 +133,7 @@ export default {
       name_recipe: "",
       source_recipe: "",
       url_video: [],
+      level: '',
       selected_type: "",
       types_recipe: [],
       ingredients: [],
@@ -206,6 +211,7 @@ export default {
       recipe_info.append("url_video", this.url_video);
       recipe_info.append("selected_type", this.selected_type);
       recipe_info.append("how_todo", this.how_todo);
+      recipe_info.append("level", this.level);
 
       if (ready === true) {
         axios({

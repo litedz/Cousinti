@@ -10,6 +10,7 @@ use App\Http\Controllers\UserController;
 use App\Jobs\Subscribe;
 use App\Models\recipe;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -65,10 +66,8 @@ Route::get('/similar/{type}', function () {
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/recipe/{recipe_id}', [RecipeController::class, 'show']);
-    Route::get('/user/recipes', [RecipeController::class, 'recipe_user'])->name('user.recipes');
-
+    Route::get('/user/recipes', [RecipeController::class, 'recipes_user'])->name('user.recipes');
     // --------------------------> recipe actions
-
     Route::resource('recipe', RecipeController::class);
     Route::post('recipe/{recipe_id}', [RecipeController::class, 'update']);
     Route::post('/recipes/search/{key}', [RecipeController::class, 'search_recipe'])->name('recipe.search');
@@ -94,15 +93,14 @@ Route::prefix('guest')->group(function () {
 
 //Subscribe route
 Route::post('/subscribe', [UserController::class, 'Subscribe']);
-
-Route::middleware(['auth'])->group(function () {
     //User Routes
-    Route::resource('user', UserController::class)->except(['store']);
-    Route::prefix('user')->group(
-        function () {
+Route::prefix('user')->group(function () {
+    Route::middleware(['auth'])->group(function () {
+            Route::resource('user', UserController::class)->except(['store']);
             Route::POST('avatar', [UserController::class, 'updateAvatar']);
             Route::POST('password', [UserController::class, 'changePassword']);
             Route::get('{recipe_id}/liked', [UserController::class, 'RecipeUserLiked'])->name('recipe.liked');
+            Route::get('lastActivity', [UserController::class, 'LastActivity'])->name('last.activity');
         }
     );
 });
@@ -115,7 +113,7 @@ Route::resource('comments', CommentsController::class);
 // Message or chat routes
 
 Route::resource('messages', MessageController::class);
-Route::post('messages/conversation',[MessageController::class,'conversation']);
+Route::post('messages/conversation', [MessageController::class, 'conversation']);
 
 
 
@@ -136,7 +134,6 @@ Route::POST('/register/facebook/', [UserController::class, 'RegisterWithFace']);
 //Api Facebook
 Route::post('/facebook/login', [LoginController::class, 'loginWithMedia']);
 
-Route::get('test', function () {
-
-    Subscribe::dispatch('maamarjoe@gmail.com');
+Route::get('test', function (Request $e) {
+    dd($e->query('name'));
 });

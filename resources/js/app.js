@@ -9,7 +9,7 @@ const { createApp } = require('vue');
 const { AutoTyping } = require('autotyping');
 
 
-const {Bootstrap5Pagination} =require('laravel-vue-pagination');
+const { Bootstrap5Pagination } = require('laravel-vue-pagination');
 require('./bootstrap');
 
 
@@ -76,8 +76,15 @@ import status from './components/status.vue';
 //User 
 
 import form_message from './components/user/form-message.vue';
+import last_activity from './components/user/last-activity.vue';
 //dashboard 
 import static_user from './components/dashboard/static.vue';
+
+
+
+
+import btn_wishlist from './components/btn_wishlist';
+
 
 
 
@@ -121,8 +128,6 @@ const app = createApp({
 
 
 app.component('pagination', Bootstrap5Pagination);
-
-
 app.component('index-page', index);
 app.component('login', login);
 app.component('search', search);
@@ -149,15 +154,17 @@ app.component('top-bar', top_bar);
 app.component('add-recipe', add_recipe);
 app.component('update-recipe', update_recipe);
 app.component('table-datatable', table_datatable);
-
-
 //User 
-
-
-app.component('form-message',form_message);
-
+app.component('form-message', form_message);
 //dashboard
 app.component('static_user', static_user);
+app.component('last-activity', last_activity);
+//actions components
+
+app.component('btn-wishlist', btn_wishlist);
+
+
+
 
 app.use(plugin, defaultConfig);
 app.use(i18n).mount('#app');

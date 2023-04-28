@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::table('recipes', function (Blueprint $table) {
             $table->integer('how_long')->nullable();
-            $table->string('level', 20);
+            $table->string('level', 20)->default('beginner');
         });
     }
 

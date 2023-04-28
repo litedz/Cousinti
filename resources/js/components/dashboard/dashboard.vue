@@ -156,7 +156,7 @@
             </ul>
 
           </li>
-          <li class="sidebar-item ">
+          <li class="sidebar-item" @click="activeComponent ='last-activity'">
             <a href="#" class='sidebar-link'>
               <i class="text-danger" data-feather="activity" width="20"></i>
               <span class="text-capitalize">Last Activity</span>
@@ -183,7 +183,7 @@
           </li>
         </ul>
       </div>
-      <button class="sidebar-toggler btn x"><i class="text-danger" data-feather="x"></i></button>
+      <button class="sidebar-toggler btn"><i class="text-danger" data-feather="x"></i></button>
     </div>
   </div>
   <div id="main">
@@ -269,17 +269,7 @@
           :update_recipe_id="this.recipe_update_id" :action="this.action_recipe" :auth_id="info.id" />
       </KeepAlive>
     </div>
-    <footer>
-      <div class="bottom-0 end-0 footer position-absolute text-muted w-100 clearfix">
-        <div class="float-left">
-          <p>2020 &copy; Voler</p>
-        </div>
-        <div class="float-right">
-          <p>Crafted with <span class='text-danger'><i class="text-danger" data-feather="heart"></i></span> by <a
-              href="http://ahmadsaugi.com">Ahmad Saugi</a></p>
-        </div>
-      </div>
-    </footer>
+
   </div>
   <div></div>
 </template>
@@ -290,7 +280,7 @@ export default {
   props: { info: Object },
   data() {
     return {
-      activeComponent: "static_user",
+      activeComponent: "last-activity",
       action_recipe: "",
       recipe_update_id: "", // id of recipe for update
       show_messages: false,
