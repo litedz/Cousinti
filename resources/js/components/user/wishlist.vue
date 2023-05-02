@@ -13,10 +13,13 @@
                     <div class="row">
                         <div class="col-3" v-for="item in wishList">
                             <div class="recipe">
-                                <img-hoverable :title="item.recipe[0].name"
-                                 :urlFile="item.recipe[0].images_recipe.name"
-                                    :level="item.recipe[0].level" :time="item.recipe.time"
-                                    :image="item.recipe[0].images_recipe.name"></img-hoverable>
+                                <img-hoverable 
+                                :title="item.recipe[0].name" 
+                                :urlFile="item.recipe[0].images_recipe[0].name"
+                                :level="item.recipe[0].level" 
+                                :time="item.recipe[0].how_long"
+                                :image="item.recipe[0].images_recipe[0].name">
+                            </img-hoverable>
                             </div>
                         </div>
 
@@ -32,14 +35,11 @@ export default {
     mounted() {
         this.GetWishList();
     },
-    watch: {
-        showWishlist() {
-            alert('xx');
-        }
+    activated() {
+       this.GetWishList();
     },
     data() {
         return {
-            WishListChange: false,
             wishList: '',
         }
     },

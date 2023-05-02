@@ -130,9 +130,13 @@
 
       <!-- Auth area  -->
       <div class="auth-area px-2" v-if="this.$attrs.auth_status && this.$attrs.auth_status == true">
-          <!-- Wish List Component -->
-        <wishlist v-if="showWishList" @close-wishlist="showWishList = false" :user_id="this.$attrs.user_id"></wishlist>
+        <!-- Wish List Component -->
+        <!-- <wishlist v-if="showWishList" @close-wishlist="showWishList = false" :user_id="this.$attrs.user_id"></wishlist> -->
+        <KeepAlive>
+          <component :is="activeComponent"  @close-wishlist="activeComponent = ''" :user_id="this.$attrs.user_id"></component>
+        </KeepAlive>
 
+        
         <div class="info align-items-center d-flex flex-row-reverse ">
           <div class="" v-if="this.$attrs.auth_status == true && this.$attrs.checkmediauser == true">
             <img :src="this.$attrs.avatar" style="width: 50px;height: 50px;" alt="avatar" class="rounded-circle m-2" />
@@ -151,7 +155,7 @@
                     this.$attrs.user }}</a>
               </div>
             </div>
-              <!-- Quick Menu  -->
+            <!-- Quick Menu  -->
 
             <a class="fa fa-bars-staggered fs-4 first-color pointer text-decoration-none" @click="toggleMenu()"
               data-link="quick-menu" data-toggle="navSlide"></a>
@@ -166,7 +170,7 @@
                   class="fs-6 m-2 fa fa-list first-color"></span>
               </li>
               <li class="align-items-center border-bottom d-flex justify-content-end m-2 p-1 pointer rounded">
-                <a href="#" class="text-decoration-none first-color" @click="showWishList = true">المفضلة</a><span
+                <a href="#" class="text-decoration-none first-color" @click="activeComponent = 'wishlist'">المفضلة</a><span
                   class="fs-6 m-2 fa fa-heartbeat first-color"></span>
               </li>
               <li class="align-items-center border-bottom d-flex justify-content-end m-2 p-1 pointer rounded">
@@ -217,6 +221,7 @@ export default {
       types: '',
       showLoginForm: false,
       showWishList: false,
+      activeComponent: '',
     };
   },
   methods: {

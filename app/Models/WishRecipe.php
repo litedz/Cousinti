@@ -16,6 +16,6 @@ class WishRecipe extends Model
 
     public function recipe()
     {
-        return $this->hasMany(recipe::class,"id",'user_id');
+        return $this->hasMany(recipe::class,"id",'recipe_id')->whereHas('images_recipe');
     }
 }

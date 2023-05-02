@@ -10,7 +10,7 @@ export default {
     props: ['recipe_id', 'user_id'],
     data() {
         return {
-
+            
         }
     },
     methods: {

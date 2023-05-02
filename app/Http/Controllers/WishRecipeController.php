@@ -53,7 +53,7 @@ class WishRecipeController extends Controller
     {
         $wishlistUser = WishRecipe::where('user_id', $id)->get();
 
-        return response()->json(['WishList'=>$wishlistUser], 200);
+        return response()->json(['WishList' => $wishlistUser], 200);
     }
 
     /**
