@@ -1,5 +1,6 @@
 <template>
     <div class="bg-first-color top-area w-100 h-auto" style="z-index: 9999" id="nav-dashboard">
+        
         <div class="container-fluid align-items-center d-flex justify-content-between">
             <div class="auth w-100">
                 <div class="info d-flex flex-row-reverse justify-content-start align-items-center">
@@ -35,7 +36,7 @@
                                     class="fs-6 m-2 fa fa-list first-color"></span>
                             </li>
                             <li class="align-items-center border-bottom d-flex justify-content-end m-2 p-1 pointer rounded">
-                                <a href="/recipes" class="text-decoration-none first-color">المفضلة</a><span
+                                <a href="#" class="text-decoration-none first-color" @click="showWishList = true">المفضلة</a><span
                                     class="fs-6 m-2 fa fa-heartbeat first-color"></span>
                             </li>
                             <li class="align-items-center border-bottom d-flex justify-content-end m-2 p-1 pointer rounded">
@@ -118,6 +119,7 @@ export default {
             Request_response: "",
             text_search: "",
             recipes_found: "",
+            showWishList:false,
         };
     },
     methods: {

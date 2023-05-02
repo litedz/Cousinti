@@ -355,10 +355,9 @@ class RecipeController extends Controller
     {
         // code...
     }
+    public function addToWishList()
+    {
+        
+    }
 
-    /**
-     * Get random Recipe.
-     *
-     * @return  \Illuminate\Http\JsonResponse random recipe
-     */
 }

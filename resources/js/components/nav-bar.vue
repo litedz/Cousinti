@@ -1,6 +1,7 @@
 <template>
   <div class="border-bottom border-top d-flex justify-content-center align-items-center navbar z-8888"
     style="transition: all 0.5s;" dir="rtl">
+
     <div class="d-flex justify-content-start w-100">
       <Button type="button" class="btn end-0 mt-1 mx-2 position-absolute top-0" id="toggleButton">
         <span class="fa fa-bars first-color fs-4" @click="toggleNav()" data-target="nav"></span>
@@ -129,6 +130,9 @@
 
       <!-- Auth area  -->
       <div class="auth-area px-2" v-if="this.$attrs.auth_status && this.$attrs.auth_status == true">
+          <!-- Wish List Component -->
+        <wishlist v-if="showWishList" @close-wishlist="showWishList = false" :user_id="this.$attrs.user_id"></wishlist>
+
         <div class="info align-items-center d-flex flex-row-reverse ">
           <div class="" v-if="this.$attrs.auth_status == true && this.$attrs.checkmediauser == true">
             <img :src="this.$attrs.avatar" style="width: 50px;height: 50px;" alt="avatar" class="rounded-circle m-2" />
@@ -143,9 +147,11 @@
             <div class="">
               <div class="name text-truncate">
                 <a :href="'/profile/' + this.$attrs.user_id"
-                  class="text-decoration-none fs-6 fst-italic fw-bolder text-black-50"><span>Hi , </span>{{ this.$attrs.user }}</a>
+                  class="text-decoration-none fs-6 fst-italic fw-bolder text-black-50"><span>Hi , </span>{{
+                    this.$attrs.user }}</a>
               </div>
             </div>
+              <!-- Quick Menu  -->
 
             <a class="fa fa-bars-staggered fs-4 first-color pointer text-decoration-none" @click="toggleMenu()"
               data-link="quick-menu" data-toggle="navSlide"></a>
@@ -160,7 +166,7 @@
                   class="fs-6 m-2 fa fa-list first-color"></span>
               </li>
               <li class="align-items-center border-bottom d-flex justify-content-end m-2 p-1 pointer rounded">
-                <a href="/recipes" class="text-decoration-none first-color">المفضلة</a><span
+                <a href="#" class="text-decoration-none first-color" @click="showWishList = true">المفضلة</a><span
                   class="fs-6 m-2 fa fa-heartbeat first-color"></span>
               </li>
               <li class="align-items-center border-bottom d-flex justify-content-end m-2 p-1 pointer rounded">
@@ -185,7 +191,7 @@
       </div>
     </nav>
     <div class="align-items-center d-flex fw-bolder gap-2 login mx-2 position-absolute rounded start-0  form"
-      v-if="showLoginForm && this.$attrs.auth_status !== 1" >
+      v-if="showLoginForm && this.$attrs.auth_status !== 1">
       <a href="/login" class="btn p-2 px-4 rounded text-decoration-none text-white"
         style="background: rgb(65, 60, 88);">Login</a>
       <a href="/register" class="btn p-2 px-4 rounded text-decoration-none text-white"
@@ -210,6 +216,7 @@ export default {
       rightBarShow: false,
       types: '',
       showLoginForm: false,
+      showWishList: false,
     };
   },
   methods: {
@@ -396,7 +403,7 @@ nav.navbar {
 
 #nav .auth-area #quick-menu {
   width: 400px;
-  z-index: 9999;
+  z-index: 9998;
   display: none;
 }
 

@@ -13,6 +13,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WishRecipeController;
 use App\Models\comments;
 use App\Models\recipe;
 use App\Models\User;
@@ -23,3 +24,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('lastActivity', [UserController::class, 'LastActivity'])->name('last.activity');
 
+Route::resource('wishlist', WishRecipeController::class);

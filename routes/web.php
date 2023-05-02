@@ -7,6 +7,7 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WishRecipeController;
 use App\Jobs\Subscribe;
 use App\Models\recipe;
 use App\Models\User;
@@ -63,8 +64,9 @@ Route::get('/similar/{type}', function () {
     return view('recipes.same_type_recipe');
 })->name('recipe.same_type');
 
-Route::middleware(['auth'])->group(function () {
 
+//Recipes Routes For Auth User
+Route::middleware(['auth'])->group(function () {
     Route::get('/recipe/{recipe_id}', [RecipeController::class, 'show']);
     Route::get('/user/recipes', [RecipeController::class, 'recipes_user'])->name('user.recipes');
     // --------------------------> recipe actions
@@ -74,10 +76,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/recipes/filter/{by}', [RecipeController::class, 'filter_recipes'])->name('recipe.filter');
     Route::post('recipe/like/{recipe_id}', [RecipeController::class, 'like_recipe']);
     Route::delete('recipe/image/{image_id}', [RecipeController::class, 'RemovePrevImage'])->name('recipe.image.remove');
-
-    // ***********************************************************************************************
-
-});
+    //wish list resource for user
+    Route::resource('wishlist', WishRecipeController::class);
+}); // ***********************************************************************************************
 
 // *****************************  Auth reg/log    ***********************************************
 
@@ -93,9 +94,10 @@ Route::prefix('guest')->group(function () {
 
 //Subscribe route
 Route::post('/subscribe', [UserController::class, 'Subscribe']);
-    //User Routes
+//User Routes
 Route::prefix('user')->group(function () {
-    Route::middleware(['auth'])->group(function () {
+    Route::middleware(['auth'])->group(
+        function () {
             Route::resource('user', UserController::class)->except(['store']);
             Route::POST('avatar', [UserController::class, 'updateAvatar']);
             Route::POST('password', [UserController::class, 'changePassword']);

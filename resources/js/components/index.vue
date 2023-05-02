@@ -8,7 +8,7 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-12 col-md-4 p-0" v-for="recipe in  BestRecipes" :key="recipe.best">
-							<div class="position-relative recipe">
+							<div class="position-relative recipe h-100 w-100">
 								<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
 									style="background:linear-gradient(1deg, black,transparent, transparent);">
 									<div class="name-recipe"><a :href="'/recipes/' + recipe.id"

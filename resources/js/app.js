@@ -82,8 +82,11 @@ import static_user from './components/dashboard/static.vue';
 
 
 
+// custome component 
 
-import btn_wishlist from './components/btn_wishlist';
+import img_hoverable from './components/custome/img_hoverable.vue'; 
+import btn_wishlist from './components/user/btn_wishlist.vue';
+import wishlist from './components/user/wishlist.vue';
 
 
 
@@ -162,6 +165,11 @@ app.component('last-activity', last_activity);
 //actions components
 
 app.component('btn-wishlist', btn_wishlist);
+app.component('img-hoverable', img_hoverable);
+
+
+
+app.component('wishlist', wishlist);
 
 
 

@@ -183,7 +183,7 @@
           </li>
         </ul>
       </div>
-      <button class="sidebar-toggler btn"><i class="text-danger" data-feather="x"></i></button>
+      
     </div>
   </div>
   <div id="main">
@@ -250,8 +250,9 @@
                   class="text-black-50">{{ this.info.username }}</a></div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" :href="w_path"><i class="third-color" data-feather="home"></i>Home</a>
               <a class="dropdown-item" :href="'/profile/'+this.info.id"><i class="third-color" data-feather="user"></i>Profile</a>
-
+              
             </div>
             <div class="">
               <a class="dropdown-item" href="#"><i class="third-color" data-feather="log-out"></i> Logout</a>
