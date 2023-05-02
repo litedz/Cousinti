@@ -95,11 +95,7 @@ class GuestRecipeController extends Controller
 
         $type = types_recipes::where('type', $type)->firstOrFail();
 
-        $recipes = RecipeResource::collection(recipe::with([
-            'author', 'type_recipe', 'images_recipe' => function ($query) {
-                $query->whereNotNull('cover')->get();
-            },
-        ])
+        $recipes = RecipeResource::collection(recipe::with(['author', 'type_recipe', 'images_recipe'])
             ->where('type_id', $type->id)
             ->whereHas('images_recipe')
             ->get());
@@ -109,12 +105,11 @@ class GuestRecipeController extends Controller
 
     public function search($type)
     {
-        $recipes_found = RecipeResource::collection(recipe::with(['author', 'images_recipe' => function ($query) 
-        {
+        $recipes_found = RecipeResource::collection(recipe::with(['author', 'images_recipe' => function ($query) {
             $query->whereNotNull('cover')->get();
         }])
-        ->whereHas('images_recipe')
-        ->where('name', 'like', '%' . $type . '%')->get());
+            ->whereHas('images_recipe')
+            ->where('name', 'like', '%' . $type . '%')->get());
         return response()->json($recipes_found);
     }
 

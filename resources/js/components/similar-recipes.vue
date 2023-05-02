@@ -61,7 +61,7 @@ export default {
         recipeSameType() {
             const data = new FormData();
             data.append("SearchBy", "type");
-            axios({ method: "post", url: "/guest/filter/" + this.$attrs.type, data: data })
+            axios({ method: "get", url: "/guest/filter/" + this.$attrs.type, data: data })
                 .then((response) => {
                     console.log(response);
                     if (response.data) {

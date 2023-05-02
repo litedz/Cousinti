@@ -1,7 +1,7 @@
 <template>
     <status ref="status"></status>
     <table class="bg-white mx-auto shadow table w-75">
-        <thead>
+        <thead class="bg-dark text-white">
             <tr>
                 <th scope="col" class="border-bottom px-5">Recipe</th>
                 <th scope="col" class="text-center border-bottom">Actions</th>

@@ -15,7 +15,7 @@
                             <div class="recipe">
                                 <img-hoverable 
                                 :title="item.recipe[0].name" 
-                                :urlFile="item.recipe[0].images_recipe[0].name"
+                                :urlFile="'recipes/'+item.recipe_id"
                                 :level="item.recipe[0].level" 
                                 :time="item.recipe[0].how_long"
                                 :image="item.recipe[0].images_recipe[0].name">

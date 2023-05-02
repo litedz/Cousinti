@@ -137,5 +137,8 @@ Route::POST('/register/facebook/', [UserController::class, 'RegisterWithFace']);
 Route::post('/facebook/login', [LoginController::class, 'loginWithMedia']);
 
 Route::get('test', function (Request $e) {
-    dd($e->query('name'));
+    // dd(auth()->user()->profile_setting()->create([
+    // 'show_about_perm' => 1,
+    // 'show_recipes_perm' => 1,
+    // ]));
 });
