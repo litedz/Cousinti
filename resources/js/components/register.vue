@@ -29,10 +29,10 @@
                 class="fa fa-arrow-right text-black-title"></span>
             </div>
           </div>
-          <div class="form h-100 p-2 pt-3 rounded-right border border-bottom-0 mt-4" dir="rtl">
+          <div class="form h-100 p-2 pt-3 rounded-right border border-bottom-0 mt-4 shadow" dir="rtl">
             <div class="w-100 border-bottom p-2 text-center">
               <div class="logo text-center">
-                <img :src="w_path + '/images/logo.png'" alt="" style="">
+                <img class="w-25" :src="w_path + '/images/logo.png'" alt="" style="">
               </div>
             </div>
             <FormKit type="form" :actions="false" form-class="d-grid  gap-2 pt-2">
@@ -40,7 +40,7 @@
                 validation="required|length:3" name="username" label="اسم المستعار"
                 label-class="mb-2 font-amiri font-2 me-1 " placeholder="اسم المستعار . . ." />
 
-              <div class="d-flex">
+              <div class="d-flex justify-content-between">
                 <FormKit type="text" v-model="first_name" dir="rtl" wrapper-class="m-1"
                   input-class="form-control font-amiri fs-5" validation="required|length:3" name="name" label="اسم الاول"
                   label-class="mb-2 font-amiri font-2 me-1" placeholder="اسم الاول . . ." />
@@ -52,7 +52,7 @@
                 validation="required|email|length:3" name="email" label="الايمايل"
                 label-class="mb-2 font-amiri font-2 me-1" placeholder="الايمايل الخاص بك  . . ." />
 
-              <div class="d-flex">
+              <div class="d-flex justify-content-between">
                 <FormKit type="tel" v-model="phone" dir="rtl" wrapper-class="m-1"
                   input-class="form-control font-amiri fs-5" validation="required|length:3" name="phone" label="الهاتف"
                   label-class="mb-2 font-amiri font-2 me-1" placeholder="07777777 " />

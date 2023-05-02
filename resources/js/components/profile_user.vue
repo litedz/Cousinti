@@ -11,7 +11,7 @@
               <input type="file" name="file" />
             </div>
           </div>
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-md-5">
               <div class="profile-work">
                 <p class="text-uppercase">social media</p>
@@ -23,7 +23,7 @@
                 <a href="">Web Developer</a><br />
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="col-md-6">
           <div class="profile-head text-warning">

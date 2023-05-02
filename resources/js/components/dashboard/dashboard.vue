@@ -169,7 +169,7 @@
             </a>
           </li>
           <li class='sidebar-title'>Privacy</li>
-          <li class="sidebar-item ">
+          <li class="sidebar-item" @click="activeComponent='edit-profile'">
             <a href="#" class='sidebar-link'>
               <i class="text-danger" data-feather="settings" width="20"></i>
               <span class="text-capitalize">Setting</span>
