@@ -74,13 +74,13 @@ class WishRecipeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\JsonResponse
      */
-    public function destroy($id)
+    public function destroy($id,Request $request)
     {
-        $deleteRecipeFromList = WishRecipe::where('user_id', $id)->delete();
+        $deleteRecipeFromList = WishRecipe::where('user_id', $id)->where('recipe_id',$request->recipe_id)->delete();
         if (!$deleteRecipeFromList) {
             throw new Exception("Error Processing Request", 1);
         }
 
-        return response()->json(['status' => 'Deleted'], 200);
+        return response()->json(['message' => 'Deleted'], 200);
     }
 }

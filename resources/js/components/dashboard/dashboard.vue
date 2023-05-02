@@ -162,7 +162,7 @@
               <span class="text-capitalize">Last Activity</span>
             </a>
           </li>
-          <li class="sidebar-item ">
+          <li class="sidebar-item " @click="activeComponent ='wishlist-setting'">
             <a href="#" class='sidebar-link'>
               <i class="text-danger" data-feather="heart" width="20"></i>
               <span class="text-capitalize">wish list</span>
@@ -281,7 +281,7 @@ export default {
   props: { info: Object },
   data() {
     return {
-      activeComponent: "last-activity",
+      activeComponent: "wishlist-setting",
       action_recipe: "",
       recipe_update_id: "", // id of recipe for update
       show_messages: false,

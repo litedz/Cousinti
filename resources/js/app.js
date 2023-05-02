@@ -79,6 +79,7 @@ import form_message from './components/user/form-message.vue';
 import last_activity from './components/user/last-activity.vue';
 //dashboard 
 import static_user from './components/dashboard/static.vue';
+import wishlist_setting from './components/dashboard/wishlist-setting.vue';
 
 
 
@@ -162,6 +163,7 @@ app.component('form-message', form_message);
 //dashboard
 app.component('static_user', static_user);
 app.component('last-activity', last_activity);
+app.component('wishlist-setting', wishlist_setting);
 //actions components
 
 app.component('btn-wishlist', btn_wishlist);
