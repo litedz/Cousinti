@@ -90,6 +90,10 @@ import btn_wishlist from './components/user/btn_wishlist.vue';
 import wishlist from './components/user/wishlist.vue';
 
 
+// admin component
+
+import dashboard_admin from "./components/admin/dashboard-admin.vue";
+import login_admin from "./components/admin/login-admin.vue";
 
 
 import { plugin, defaultConfig } from '@formkit/vue'
@@ -174,6 +178,10 @@ app.component('img-hoverable', img_hoverable);
 app.component('wishlist', wishlist);
 
 
+//admin
+
+app.component('dashboard-admin',dashboard_admin)
+app.component('login-admin',login_admin)
 
 
 app.use(plugin, defaultConfig);

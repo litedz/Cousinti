@@ -109,7 +109,8 @@ class GuestRecipeController extends Controller
             $query->whereNotNull('cover')->get();
         }])
             ->whereHas('images_recipe')
-            ->where('name', 'like', '%' . $type . '%')->get());
+            ->where('name', 'like', '%'.$type.'%')->get());
+
         return response()->json($recipes_found);
     }
 

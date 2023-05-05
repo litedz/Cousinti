@@ -77,11 +77,13 @@ class User extends Authenticatable
     {
         return $this->belongsTo(rank::class);
     }
+
     public function LatestRecipes()
     {
 
         return $this->hasMany(recipe::class);
     }
+
     public function LatestComments()
     {
         return $this->hasMany(comments::class);

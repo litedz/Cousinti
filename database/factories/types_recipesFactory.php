@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\types_recipes;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class types_recipesFactory extends Factory
@@ -13,10 +14,7 @@ class types_recipesFactory extends Factory
      */
     public function definition()
     {
-        $types = ['حلويات', 'مملحات', 'صحي', 'معجنات', 'صباحيات'];
 
-        return [
-            'type' => array_rand(array_flip($types), 1),
-        ];
+ 
     }
 }

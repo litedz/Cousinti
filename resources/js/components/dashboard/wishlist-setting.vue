@@ -16,6 +16,8 @@
                 </td>
             </tr>
 
+            <h1 v-if="wishList.length ==0" class="text-center text-muted">You dont have any recipe</h1>
+
         </tbody>
     </table>
 </template>
@@ -28,7 +30,7 @@ export default {
     mounted() {
         this.GetWishList();
     },
-    activated(){
+    activated() {
         this.GetWishList();
     },
     data() {

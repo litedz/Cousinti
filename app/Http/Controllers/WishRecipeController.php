@@ -21,7 +21,6 @@ class WishRecipeController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\JsonResponse
      */
     public function store(Request $request)
@@ -34,14 +33,14 @@ class WishRecipeController extends Controller
         $checkExist = WishRecipe::where('recipe_id', $request->recipe_id)
             ->where('user_id', $request->user_id)->first();
 
-        if (!$checkExist) {
+        if (! $checkExist) {
             $addToWishList = WishRecipe::create($validate_data);
-            return $addToWishList ? response()->json(['status' => 'success', 'message' => 'add to wish List',]) : throw new Exception("Error Processing ", 1);
+
+            return $addToWishList ? response()->json(['status' => 'success', 'message' => 'add to wish List']) : throw new Exception('Error Processing ', 1);
         } else {
-            throw new Exception("يوجد في  قائمة المفضلة", 1);
+            throw new Exception('يوجد في  قائمة المفضلة', 1);
         }
     }
-
 
     /**
      * Display the specified resource.
@@ -59,7 +58,6 @@ class WishRecipeController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
@@ -74,11 +72,11 @@ class WishRecipeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\JsonResponse
      */
-    public function destroy($id,Request $request)
+    public function destroy($id, Request $request)
     {
-        $deleteRecipeFromList = WishRecipe::where('user_id', $id)->where('recipe_id',$request->recipe_id)->delete();
-        if (!$deleteRecipeFromList) {
-            throw new Exception("Error Processing Request", 1);
+        $deleteRecipeFromList = WishRecipe::where('user_id', $id)->where('recipe_id', $request->recipe_id)->delete();
+        if (! $deleteRecipeFromList) {
+            throw new Exception('Error Processing Request', 1);
         }
 
         return response()->json(['message' => 'Deleted'], 200);

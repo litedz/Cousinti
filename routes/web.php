@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\GuestRecipeController;
 use App\Http\Controllers\LoginController;
@@ -11,7 +12,6 @@ use App\Http\Controllers\WishRecipeController;
 use App\Jobs\Subscribe;
 use App\Models\recipe;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -64,7 +64,6 @@ Route::get('/similar/{type}', function () {
     return view('recipes.same_type_recipe');
 })->name('recipe.same_type');
 
-
 //Recipes Routes For Auth User
 Route::middleware(['auth'])->group(function () {
     Route::get('/recipe/{recipe_id}', [RecipeController::class, 'show']);
@@ -107,8 +106,6 @@ Route::prefix('user')->group(function () {
     );
 });
 
-
-
 // Comments Routes
 Route::resource('comments', CommentsController::class);
 
@@ -116,10 +113,6 @@ Route::resource('comments', CommentsController::class);
 
 Route::resource('messages', MessageController::class);
 Route::post('messages/conversation', [MessageController::class, 'conversation']);
-
-
-
-
 
 //Authantication
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('check.login');
@@ -136,9 +129,16 @@ Route::POST('/register/facebook/', [UserController::class, 'RegisterWithFace']);
 //Api Facebook
 Route::post('/facebook/login', [LoginController::class, 'loginWithMedia']);
 
-Route::get('test', function (Request $e) {
-    // dd(auth()->user()->profile_setting()->create([
-    // 'show_about_perm' => 1,
-    // 'show_recipes_perm' => 1,
-    // ]));
+Route::get('test', function () {
+    return view('test');
+});
+
+// Admin Resources
+
+route::prefix('panel')->group(function () {
+
+    route::resource('admin', AdminController::class)->middleware('auth:admin')->except('index');
+    route::get('login', function () {
+        return view('admin.login-admin');
+    });
 });

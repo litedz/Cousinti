@@ -195,8 +195,8 @@ class RecipeController extends Controller
 
         //store image in varriable other images
         for ($i = 0; $i < count($request->file()); $i++) {
-            if ($request->hasFile('image_' . $i)) {
-                $this->other_images['image_' . $i] = $request->file('image_' . $i);
+            if ($request->hasFile('image_'.$i)) {
+                $this->other_images['image_'.$i] = $request->file('image_'.$i);
             }
         }
 
@@ -208,7 +208,7 @@ class RecipeController extends Controller
         image::where('recipe_id', $recipe_id)->delete();
         ingredients::where('recipe_id', $recipe_id)->delete();
         $recipe = recipe::find($recipe_id);
-        Storage::disk('public')->deleteDirectory(auth()->user()->id . '/' . $recipe->name);
+        Storage::disk('public')->deleteDirectory(auth()->user()->id.'/'.$recipe->name);
         $recipe->delete();
 
         return response()->json([
@@ -286,7 +286,7 @@ class RecipeController extends Controller
     public function RemovePrevImage($image_id)
     {
         $image_name = image::find($image_id);
-        $delete_in_storage = Storage::disk('public')->delete('recipes/' . $image_name->name);
+        $delete_in_storage = Storage::disk('public')->delete('recipes/'.$image_name->name);
         $delete_in_Db = $image_name->delete();
 
         if ($delete_in_storage && $delete_in_Db) {
@@ -347,7 +347,7 @@ class RecipeController extends Controller
         } else {
             return response()->json(RecipeResource::collection(recipe::with(['author', 'images_recipe' => function ($query) {
                 $query->whereNotNull('cover')->get();
-            }])->where('name', 'like', '%' . $type . '%')->get()));
+            }])->where('name', 'like', '%'.$type.'%')->get()));
         }
     }
 
@@ -355,9 +355,9 @@ class RecipeController extends Controller
     {
         // code...
     }
+
     public function addToWishList()
     {
-        
-    }
 
+    }
 }

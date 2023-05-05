@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             ingredientSeeder::class,
             ProfileSeeder::class,
             MessageSeeder::class,
+            RoleSeeder::class,
             // RatingSeeder::class,
         ]);
     }

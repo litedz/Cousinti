@@ -9,8 +9,6 @@ class MessageController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     *
      */
     public function index(Request $request)
     {
@@ -31,7 +29,6 @@ class MessageController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -41,7 +38,6 @@ class MessageController extends Controller
 
     /**
      * Display the specified resource.
-     *
      */
     public function show(Request $request)
     {
@@ -50,7 +46,6 @@ class MessageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\message  $message
      * @return \Illuminate\Http\Response
      */
     public function edit(message $message)
@@ -61,8 +56,6 @@ class MessageController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\message  $message
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, message $message)
@@ -73,7 +66,6 @@ class MessageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\message  $message
      * @return \Illuminate\Http\Response
      */
     public function destroy(message $message)
@@ -89,10 +81,11 @@ class MessageController extends Controller
             'user_id_recipient' => 'required|numeric',
         ]);
 
-        $chat = message::with('user')->whereIn('id_user_send',[ $request->user_id_send, $request->user_id_recipient])
+        $chat = message::with('user')->whereIn('id_user_send', [$request->user_id_send, $request->user_id_recipient])
             ->whereIn('id_user_recipient', [$request->user_id_send, $request->user_id_recipient])
             ->latest()
             ->get();
+
         return response()->json($chat, 200);
     }
 }

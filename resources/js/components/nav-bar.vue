@@ -34,13 +34,13 @@
               class="text-decoration-none text-black position-relative active-link">الرئيسة</a></div>
         </li>
       </div>
-      <div id="link-nav" class="hoverable p-2 Dropable" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
+    <!--   <div id="link-nav" class="hoverable p-2 Dropable" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
         <li class="fs-5 pointer">
           <div class="align-items-center d-flex gap-2 justify-content-center">
             <a href="/similar/مملحات" class="text-decoration-none text-black position-relative">مملحات</a>
 
           </div>
-          <!-- <div class="drowDownMenu p-3 position-absolute w-100 rounded z-8888 bg-white-p" style="left:0%;">
+          <div class="drowDownMenu p-3 position-absolute w-100 rounded z-8888 bg-white-p" style="left:0%;">
             <div class="container">
               <div class="row g-2">
                 <div class="col mx-1 rounded">
@@ -106,9 +106,9 @@
                 </div>
               </div>
             </div>
-          </div> -->
+          </div> 
         </li>
-      </div>
+      </div>-->
       <div v-for="recipeType in types" :key="recipeType.name" id="link-nav" class="hoverable p-2"
         @mouseenter="hoverLink()" @mouseleave="hoverLink()">
         <li class="fs-5 pointer">

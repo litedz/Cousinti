@@ -76,7 +76,7 @@ class ProfileController extends Controller
      */
     public function update(Request $request, ProfileServices $profileServices)
     {
-        Gate::authorize('update',  'App\\Models\User');
+        Gate::authorize('update', 'App\\Models\User');
         try {
             $profileServices->UpdateProfile($request);
         } catch (\Throwable $th) {

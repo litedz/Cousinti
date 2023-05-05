@@ -43,56 +43,7 @@ export default {
             lastActivitys: [],
         }
     },
-
-    computed: {
-        ss: function () {
-
-            // return this.lastActivitys.sort((a, b) => {
-            //     if (a.created_at < b.created_at) {
-            //         return -1;
-            //     }
-            //     if (a.created_at > b.created_at) {
-            //         return 1;
-            //     }
-            //     // a must be equal to b
-            //     return 0;
-            // });
-        },
-    },
-
     methods: {
-        sortedByDate(Activitys) {
-            return this.lastActivitys.sort(function compareFn(a, b) {
-                if (a.created_at > b.created_at) {
-                    return -1;
-                }
-                if (a.created_at < b.created_at) {
-                    return 1;
-                }
-                // a must be equal to b
-                return 0;
-            }
-            );
-            // for (let index = 0; index < Activitys.length; index++) {
-
-            //     if (index == 0) {
-            //         this.lastActivitys[index] = Activitys[index];
-            //     }
-            //     else {
-
-            //         if (Activitys[index].created_at < Activitys[index - 1].created_at) {
-
-            //             this.lastActivitys[index] = Activitys[index];
-
-            //         } else {
-
-            //             this.lastActivitys[index] = Activitys[index];
-            //         }
-            //     }
-            // }
-
-
-        },
         formateData(created_at, form) {
             return moment(created_at, true).format(form);
         },

@@ -33,7 +33,7 @@ class ProfileServices
         $update_user = $user->update([
             'username' => $request->username,
         ]);
-        if (!$update_user) {
+        if (! $update_user) {
             throw new Exception('Error Processing Request', 1);
         }
     }
@@ -51,7 +51,7 @@ class ProfileServices
         $updatePerm = Profile::where('id', $user->profile_id)
             ->update($PermValid);
 
-        if (!$updatePerm) {
+        if (! $updatePerm) {
             throw new Exception('خطا في تحديث الصلاحيات', 1);
         }
     }
