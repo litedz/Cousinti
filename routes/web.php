@@ -12,6 +12,7 @@ use App\Http\Controllers\WishRecipeController;
 use App\Jobs\Subscribe;
 use App\Models\recipe;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -151,4 +152,11 @@ route::prefix('panel')->group(function () {
     route::get('login', function () {
         return view('admin.login-admin');
     });
+});
+
+
+Route::get('/tokens/create', function (Request $request) {
+    $token = $request->user('admin')->createToken($request->token_name);
+ 
+    return ['token' => $token->plainTextToken];
 });

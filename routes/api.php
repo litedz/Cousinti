@@ -41,7 +41,7 @@ route::get('users', [AdminController::class, 'users'])->name('admin.actions.user
 route::get('recipes', [AdminController::class, 'recipes'])->name('admin.actions.recipes');
 route::get('comments', [AdminController::class, 'comments'])->name('admin.actions.comments');
 route::post('permissionUser', [AdminController::class, 'ChangePermUser'])->name('admin.actions.change.permission');
-route::post('recipes/approved', [AdminController::class, 'approveRecipe'])->name('admin.recipes.actions.approved');
+route::post('recipes/approved', [AdminController::class, 'approveRecipes'])->name('admin.recipes.actions.approved');
 route::delete('recipes/delete', [AdminController::class, 'deleteRecipe'])->name('admin.recipes.actions.delete');
 
 

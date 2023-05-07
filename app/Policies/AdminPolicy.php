@@ -17,7 +17,7 @@ class AdminPolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return true;
     }
 
     /**
@@ -79,5 +79,15 @@ class AdminPolicy
     public function forceDelete(User $user, admin $admin)
     {
         //
+    }
+
+       /**
+     * Determine Just the Admin can approve
+     *
+     * @return \Illuminate\Auth\Access\Response|bool
+     */
+    public function approveRecipe(admin $admin)
+    {
+       return true;
     }
 }

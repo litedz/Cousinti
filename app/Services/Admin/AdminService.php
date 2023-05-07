@@ -68,7 +68,7 @@ final class AdminService extends Authenticatable
      */
     public function approveRecipe($recipe_id)
     {
-        dd('approved');
+        
     }
     public function deleteRecipe($recipe_id)
     {

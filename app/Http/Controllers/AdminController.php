@@ -13,7 +13,7 @@ use App\Rules\RoleRule;
 use App\Services\Admin\AdminService;
 use Exception;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Gate;
 class AdminController extends Controller
 {
     /**
@@ -130,7 +130,7 @@ class AdminController extends Controller
 
         $validate = $request->validate([
             'user_id' => 'required',
-            'role' => ['required','alpha',new RoleRule],
+            'role' => ['required', 'alpha', new RoleRule],
         ]);
 
 
@@ -140,6 +140,18 @@ class AdminController extends Controller
             'status' => 'updated',
             'icon' => 'check',
         ]);
+    }
+    /**
+     * Approve Recipes Users.
+     * 
+     * @return void
+     */
+    public function approveRecipes(AdminService $adminService, Request $request): void
+    {
 
+        dd(Gate::allows('viewAny','App\\Models\admin'));
+        dd('xx');
+        die();
+        $adminService->approveRecipe($request->recipe_id);
     }
 }
