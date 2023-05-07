@@ -27,12 +27,6 @@ class YoutubeRule implements Rule
     {
 
         return ($attribute && $value !== null) && (str_contains($value, 'https://youtu.be/') || str_contains($value, 'https://www.youtube.com'));
-
-        // dd(str_contains($value, 'https://youtu.be/'));
-        // if (str_contains($value, 'https://youtu.be/') || str_contains($value, 'https://www.youtube.com')) {
-        //     return false;
-        // }
-        // return true;
     }
 
     /**

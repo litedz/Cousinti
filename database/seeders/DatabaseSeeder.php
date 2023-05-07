@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             ProfileSeeder::class,
             MessageSeeder::class,
             RoleSeeder::class,
+            AdminSeeder::class,
             // RatingSeeder::class,
         ]);
     }

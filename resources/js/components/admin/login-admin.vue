@@ -1,5 +1,6 @@
 <template>
 	<div class="login-page">
+		<status ref="status"></status>
 		<transition name="fade">
 			<div v-if="!registerActive" class="wallpaper-login"></div>
 		</transition>
@@ -10,11 +11,11 @@
 				<div class="col-lg-4 col-md-6 col-sm-8 mx-auto">
 					<div v-if="!registerActive" class="card login" v-bind:class="{ error: emptyFields }">
 						<h1>Sign In</h1>
-						<form class="d-flex flex-column form-group gap-3 ">
+						<form class="d-flex flex-column form-group gap-3 " @submit.prevent="doLogin">
 							<input v-model="emailLogin" type="email" class="form-control mb-2" placeholder="Email" required>
 							<input v-model="passwordLogin" type="password" class="form-control mb-2" placeholder="Password"
 								required>
-							<input type="submit" class="btn btn-primary" @click="doLogin">
+							<input type="submit" class="btn btn-primary">
 							<p>Don't have an account? <a href="#"
 									@click="registerActive = !registerActive,emptyFields = false">Sign up here</a>
 							</p>
@@ -24,7 +25,7 @@
 
 					<div v-else class="card register" v-bind:class="{ error: emptyFields }">
 						<h1>Sign Up</h1>
-						<form class="form-group">
+						<form class="form-group" @submit.prevent="">
 							<input v-model="emailReg" type="email" class="form-control" placeholder="Email" required>
 							<input v-model="passwordReg" type="password" class="form-control" placeholder="Password"
 								required>
@@ -59,13 +60,21 @@ export default {
 			if (this.emailLogin === "" || this.passwordLogin === "") {
 				this.emptyFields = true;
 			} else {
-				let data =new FormData();
-				data.append('emailLogin',this.emailLogin);
-				data.append('passwordLogin',this.passwordLogin);
-				axios.get('panel/admin',data).then((Response) => {
+				let data = new FormData();
+				data.append('email', this.emailLogin);
+				data.append('password', this.passwordLogin);
+				axios({ method: "post", url: "/panel/admin/login", data: data })
+					.then((response) => {
+						if (response.data) {
+							this.$refs.status.Display('success', response.data.message, 'success', 'check');
+							window.location.href = '/dashboard'
+						}
+					})
+					.catch((error) => {
 
-					console.log(Response.data);
-				})
+						this.$refs.status.Display('danger', error.response.data.message, 'warning', 'warning')
+
+					});
 			}
 		},
 
@@ -88,47 +97,47 @@ p {
 	padding: 20px;
 }
 
-.form-group {
-	input {
-		margin-bottom: 20px;
-	}
+.form-group {}
+
+input {
+	margin-bottom: 20px;
 }
 
 .login-page {
 	align-items: center;
 	display: flex;
 	height: 100vh;
+}
 
-	.wallpaper-login {
-		background: url(https://images.pexels.com/photos/32237/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center;
-		background-size: cover;
-		height: 100%;
-		position: absolute;
-		width: 100%;
-	}
+.wallpaper-login {
+	background: url('https://images.pexels.com/photos/32237/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center;
+	background-size: cover;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
 
-	.fade-enter-active,
-	.fade-leave-active {
-		transition: opacity .5s;
-	}
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity .5s;
+}
 
-	.fade-enter,
-	.fade-leave-to {
-		opacity: 0;
-	}
+.fade-enter,
+.fade-leave-to {
+	opacity: 0;
+}
 
-	.wallpaper-register {
-		background: url(https://images.pexels.com/photos/533671/pexels-photo-533671.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center;
-		background-size: cover;
-		height: 100%;
-		position: absolute;
-		width: 100%;
-		z-index: -1;
-	}
+.wallpaper-register {
+	background: url(https://images.pexels.com/photos/533671/pexels-photo-533671.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center;
+	background-size: cover;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
 
-	h1 {
-		margin-bottom: 1.5rem;
-	}
+h1 {
+	margin-bottom: 1.5rem;
 }
 
 .error {

@@ -15,7 +15,7 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-       admin::create([
+        admin::create([
             'username' => 'admin',
             'avatar' => 'avatars/admin.png',
             'email' => 'admin@email.com',

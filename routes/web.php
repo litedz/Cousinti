@@ -136,8 +136,18 @@ Route::get('test', function () {
 // Admin Resources
 
 route::prefix('panel')->group(function () {
+    route::middleware('auth:admin')->group(function () {
+        Route::get('/dashboard', function () {
+            return view('admin.dashboard-admin');
+        });
+    });
+    route::resource('admin', AdminController::class)->middleware('auth')->except('index');
+    route::post('admin/login', [AdminController::class, 'index'])->name('admin.index');
+    route::get('logout', [AdminController::class, 'LogOutAdmin'])->name('admin.logout');
+    route::get('users', [AdminController::class, 'users'])->name('admin.actions.users');
+    route::get('recipes', [AdminController::class, 'recipes'])->name('admin.actions.recipes');
+    route::get('comments', [AdminController::class, 'comments'])->name('admin.actions.comments');
 
-    route::resource('admin', AdminController::class)->middleware('auth:admin')->except('index');
     route::get('login', function () {
         return view('admin.login-admin');
     });

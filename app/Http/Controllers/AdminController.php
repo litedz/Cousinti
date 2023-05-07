@@ -2,21 +2,37 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LoginAdminRequest;
 use App\Http\Requests\StoreadminRequest;
 use App\Http\Requests\UpdateadminRequest;
 use App\Models\admin;
-use Illuminate\Support\Facades\Gate;
+use App\Models\comments;
+use App\Models\recipe;
+use App\Models\User;
+use App\Rules\RoleRule;
+use App\Services\Admin\AdminService;
+use Exception;
+use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\View\View
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function index()
+    public function index(AdminService $admin, LoginAdminRequest $request)
     {
-        dd(request()->all());
+
+
+        $credentials = $request->validated();
+
+        try {
+            $admin->login($credentials);
+        } catch (\Throwable $th) {
+            throw new Exception($th->getMessage(), 1);
+        }
+        return response()->json(['message' => 'success login']);
     }
 
     /**
@@ -26,7 +42,8 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admin.login-admin');
+        // return view('admin.login-admin');
+        return response('created');
     }
 
     /**
@@ -35,14 +52,19 @@ class AdminController extends Controller
 
      * @return \Illuminate\Http\JsonResponse
      */
-    public function store(StoreadminRequest $AdminRequest)
+    public function store(StoreadminRequest $AdminRequest, adminService $adminService)
     {
 
-        $val = $AdminRequest->validated();
-        echo 'xx';
-        // $this->authorize('create',$admin);
-        // $AdminRequest->validate(['username' => 'required']);
-        // dd(Gate::inspect('create','App\\Models\User'));
+        $credentials = $AdminRequest->only('username', 'password', 'email');
+
+        $credentials['avatar'] = $AdminRequest->file('avatar')->store('avatars/admin', 'public');
+
+        try {
+
+            $adminService->CreateAdmin($credentials);
+        } catch (\Throwable $th) {
+            throw new Exception($th->getMessage(), 1);
+        }
     }
 
     /**
@@ -75,13 +97,49 @@ class AdminController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(admin $admin)
+    public function destroy()
     {
-        //
+    }
+
+    public function LogOutAdmin(AdminService $adminService, Request $request)
+    {
+        $adminService->logOut($request);
+        if (!request()->ajax()) {
+            return redirect()->route('home');
+        }
+        return response()->json('LogOut');
+    }
+    public function users()
+    {
+        $users = collect(User::all())->sortBy('created_at')->values();
+        return response()->json(['users' => $users]);
+    }
+    public function recipes()
+    {
+        $recipes = collect(recipe::all())->sortBy('created_at')->values();
+        return response()->json(['recipes' => $recipes]);
+    }
+    public function comments()
+    {
+        $comments = collect(comments::all())->sortBy('created_at')->values();
+        return response()->json(['comments' => $comments]);
+    }
+
+    public function ChangePermUser(AdminService $adminService, Request $request)
+    {
+
+        $validate = $request->validate([
+            'user_id' => 'required',
+            'role' => ['required','alpha',new RoleRule],
+        ]);
+
+
+        $adminService->changePermissionUser($request->user_id, $request->role);
+
+        return response()->json([
+            'status' => 'updated',
+            'icon' => 'check',
+        ]);
+
     }
 }

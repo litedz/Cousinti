@@ -58,7 +58,9 @@ class Kernel extends HttpKernel
         'check.login' => \App\Http\Middleware\CheckLogin::class,
         'is.admin' => \App\Http\Middleware\IsAdmin::class,
         'check.facebookUser' => \App\Http\Middleware\UserFacebook::class,
-        'check.user' => \App\Http\Middleware\CheckUserLogin::class, //Check if user if comming form media or just the website
+        //Check if user if comming form media or just the website
+        'check.user' => \App\Http\Middleware\CheckUserLogin::class, 
+        
         'auth.session' => \Illuminate\Session\Middleware\AuthenticateSession::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,

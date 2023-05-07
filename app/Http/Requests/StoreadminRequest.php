@@ -24,7 +24,7 @@ class StoreadminRequest extends FormRequest
     public function rules()
     {
         return [
-            'username' => 'required|integer',
+            'username' => 'required',
             'email' => 'required|email',
             'password' => 'required|max:100|min:5|alpha_num',
             'avatar' => 'required|file|mimes:png,jpg',
