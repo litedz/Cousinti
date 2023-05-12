@@ -17,7 +17,7 @@ class CreateIngredients extends Migration
             $table->id();
             $table->string('name_ingredient');
             $table->string('quantity');
-            $table->foreignId('recipe_id')->constrained();
+            $table->foreignId('recipe_id')->constrained()->cascadeOnDelete();;
             $table->timestamps();
         });
     }

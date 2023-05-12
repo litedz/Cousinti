@@ -16,7 +16,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $with = 'profile_setting';
+    protected $with = ['profile_setting', 'role'];
 
     protected $fillable = [
         'username',
@@ -87,5 +87,9 @@ class User extends Authenticatable
     public function LatestComments()
     {
         return $this->hasMany(comments::class);
+    }
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
     }
 }

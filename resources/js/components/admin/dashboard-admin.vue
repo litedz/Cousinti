@@ -110,7 +110,7 @@
         <div class="main-content container-fluid">
 
             <KeepAlive>
-                <component :is="this.activeComponent" v-on:some-event="get_id_recipe($event)"
+                <component :is="this.activeComponent"
                     :update_recipe_id="this.recipe_update_id" :action="this.action_recipe" :auth_id="info.id" />
             </KeepAlive>
         </div>
@@ -125,48 +125,15 @@ export default {
     props: { info: Object },
     data() {
         return {
-            activeComponent: "wishlist-setting",
-            action_recipe: "",
-            recipe_update_id: "", // id of recipe for update
-            show_messages: false,
+            activeComponent: "users-table",
+
         };
     },
     methods: {
-        get_id_recipe(id) {
-            this.recipe_update_id = id;
-            this.activeComponent = "update-recipe";
-            this.action_recipe = "update-recipe";
-        },
-        changeCompo(nameCompo, action) {
-            this.activeComponent = nameCompo;
-            this.action_recipe = action;
-        },
-        toggleMenu() {
-            $("#" + event.target.getAttribute("data-link"))
-                .find(".sub-menu")
-                .slideToggle();
-        },
-
-        DropDowmenu() {
-            if (
-                $("#" + event.target.getAttribute("data-link")).hasClass(
-                    "show-menu"
-                )
-            ) {
-                $("#" + event.target.getAttribute("data-link")).css(
-                    "left",
-                    "-100%"
-                );
-                $("#" + event.target.getAttribute("data-link")).removeClass(
-                    "show-menu"
-                );
-            } else {
-                $("#" + event.target.getAttribute("data-link"))
-                    .css("left", "0")
-                    .addClass("show-menu");
-            }
-        },
-
+        // changeCompo(nameCompo, action) {
+        //     this.activeComponent = nameCompo;
+        //     this.action_recipe = action;
+        // },
         logout() {
             axios({ method: "get", url: "/logout" })
                 .then((response) => {

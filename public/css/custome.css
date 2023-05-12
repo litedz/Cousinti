@@ -148,6 +148,25 @@ $utilities: map-merge(
     font-weight: 800;
 }
 
+
+.top-45{
+    top: 45% !important;
+}
+.top-25{
+    top: 25% !important;
+}
+.top-75{
+    top: 75% !important;
+}
+.left-25{
+    left: 25% !important;
+}
+.left-45{
+    left: 45% !important;
+}
+.left-75{
+    left: 75% !important;
+}
 .bg-perso {
     background-color: #229191;
 }

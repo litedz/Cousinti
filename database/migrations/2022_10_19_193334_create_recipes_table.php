@@ -20,7 +20,7 @@ class CreateRecipesTable extends Migration
             $table->longText('how_todo');
             $table->string('url_video')->nullable();
             $table->integer('rating')->default(0);
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->integer('like')->default(0);
             $table->integer('dislike')->default(0);
             $table->timestamps();

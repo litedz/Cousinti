@@ -10,4 +10,11 @@ class Role extends Model
     use HasFactory;
 
     static $roles = ['admin', 'moderator', 'user'];
+
+
+    public function user()
+    {
+       return $this->hasOne(admin::class);
+    }
+    
 }

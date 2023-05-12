@@ -81,13 +81,11 @@ class AdminPolicy
         //
     }
 
-       /**
-     * Determine Just the Admin can approve
-     *
-     * @return \Illuminate\Auth\Access\Response|bool
+    /**
+     * Only Admin 
      */
-    public function approveRecipe(admin $admin)
+    public function IsAdmin()
     {
-       return true;
+        return admin::find(auth()->user()->id)->RoleUser->role == 'admin';
     }
 }

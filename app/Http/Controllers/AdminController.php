@@ -8,31 +8,32 @@ use App\Http\Requests\UpdateadminRequest;
 use App\Models\admin;
 use App\Models\comments;
 use App\Models\recipe;
+use App\Models\Role;
 use App\Models\User;
 use App\Rules\RoleRule;
 use App\Services\Admin\AdminService;
 use Exception;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\View;
+
 class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\JsonResponse|View
      */
     public function index(AdminService $admin, LoginAdminRequest $request)
     {
-
-
         $credentials = $request->validated();
-
         try {
             $admin->login($credentials);
         } catch (\Throwable $th) {
             throw new Exception($th->getMessage(), 1);
         }
-        return response()->json(['message' => 'success login']);
+        return redirect()->route('admin.dashboard');
     }
 
     /**
@@ -61,7 +62,7 @@ class AdminController extends Controller
 
         try {
 
-            $adminService->CreateAdmin($credentials);
+            $adminService->CreateUser($credentials);
         } catch (\Throwable $th) {
             throw new Exception($th->getMessage(), 1);
         }
@@ -125,7 +126,7 @@ class AdminController extends Controller
         return response()->json(['comments' => $comments]);
     }
 
-    public function ChangePermUser(AdminService $adminService, Request $request)
+    public function ChangeRoleUser(AdminService $adminService, Request $request)
     {
 
         $validate = $request->validate([
@@ -133,25 +134,93 @@ class AdminController extends Controller
             'role' => ['required', 'alpha', new RoleRule],
         ]);
 
-
-        $adminService->changePermissionUser($request->user_id, $request->role);
+        $adminService->changeRoleUser($request->user_id, $request->role);
 
         return response()->json([
             'status' => 'updated',
+            'message' => 'role Updated',
             'icon' => 'check',
+            'style' => 'success'
         ]);
     }
     /**
      * Approve Recipes Users.
      * 
-     * @return void
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function approveRecipes(AdminService $adminService, Request $request): void
+    public function approveRecipes(AdminService $adminService, Request $request, $recipe_id): JsonResponse
     {
 
-        dd(Gate::allows('viewAny','App\\Models\admin'));
-        dd('xx');
-        die();
+        if (!Gate::allow('IsAdmin', 'App\\Models\admin')) {
+            throw new Exception("You Dont have Permission to execute this action ", 1);
+        }
+
+        $valdiate = $request->validate([
+            'recipe_id' => 'required|integer'
+        ]);
+
         $adminService->approveRecipe($request->recipe_id);
+
+        return response()->json([
+            'style' => 'success',
+            'status' => 'Recipe Approved',
+            'icon' => 'check',
+        ]);
+    }
+    public function DenyRecipe(Request $request, AdminService $adminService)
+    {
+
+        $this->authorize('IsAdmin', 'App\\Models\admin');
+
+        $valdiate = $request->validate([
+            'recipe_id' => 'required|integer'
+        ]);
+
+        $adminService->denyRecipe($request->recipe_id);
+
+        return response()->json([
+            'style' => 'warning',
+            'status' => 'Recipe Deny',
+            'icon' => 'warning',
+        ]);
+    }
+    public function deleteRecipe(Request $request, AdminService $adminService)
+    {
+        if (!Gate::allows('IsAdmin', 'App\\Models\admin')) {
+            throw new Exception("You Dont have Permission to execute this action ", 1);
+        }
+        $valdiate = $request->validate([
+            'recipe_id' => 'required|integer'
+        ]);
+
+        $adminService->deleteRecipe($request->recipe_id);
+
+        return response()->json([
+            'style' => 'warning',
+            'status' => 'Recipe Deny',
+            'icon' => 'warning',
+        ]);
+    }
+
+    public function deleteUser(AdminService $adminService, Request $request, $user_id)
+    {
+        if (!Gate::allows('IsAdmin', 'App\\Models\admin')) {
+            throw new Exception("You Dont have Permission to execute this action ", 1);
+        }
+        $valdiate = $request->validate([
+            'user_id' => 'required|integer'
+        ]);
+
+        $adminService->deleteUser($request->user_id);
+
+        return response()->json([
+            'style' => 'warning',
+            'status' => 'User Deleted',
+            'icon' => 'warning',
+        ]);
+    }
+    public function AvailableRoles(Role $role)
+    {
+        return response()->json(['roles' => $role::$roles]);
     }
 }

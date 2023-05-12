@@ -67,7 +67,7 @@ export default {
 					.then((response) => {
 						if (response.data) {
 							this.$refs.status.Display('success', response.data.message, 'success', 'check');
-							window.location.href = '/dashboard'
+							window.location.href = '/panel/dashboard'
 						}
 					})
 					.catch((error) => {

@@ -38,7 +38,7 @@ window.Vue = require('vue').default;
  */
 
 
-
+import test from './components/test.vue';
 
 
 import index from './components/index.vue';
@@ -85,7 +85,7 @@ import wishlist_setting from './components/dashboard/wishlist-setting.vue';
 
 // custome component 
 
-import img_hoverable from './components/custome/img_hoverable.vue'; 
+import img_hoverable from './components/custome/img_hoverable.vue';
 import btn_wishlist from './components/user/btn_wishlist.vue';
 import wishlist from './components/user/wishlist.vue';
 
@@ -94,6 +94,10 @@ import wishlist from './components/user/wishlist.vue';
 
 import dashboard_admin from "./components/admin/dashboard-admin.vue";
 import login_admin from "./components/admin/login-admin.vue";
+import users_table from "./components/admin/users.vue";
+import recipe_table from "./components/admin/recipes.vue";
+import latest_activity_table from "./components/admin/latest-activity.vue";
+import admins_table from "./components/admin/admins-table.vue";
 
 
 import { plugin, defaultConfig } from '@formkit/vue'
@@ -135,6 +139,7 @@ const app = createApp({
 
 
 
+app.component('test', test);
 app.component('pagination', Bootstrap5Pagination);
 app.component('index-page', index);
 app.component('login', login);
@@ -180,10 +185,20 @@ app.component('wishlist', wishlist);
 
 //admin
 
-app.component('dashboard-admin',dashboard_admin)
-app.component('login-admin',login_admin)
+
+app.component('dashboard-admin', dashboard_admin)
+app.component('login-admin', login_admin)
+app.component('users-table', users_table)
+app.component('recipe-table', recipe_table)
+app.component('latest-activity-table', latest_activity_table)
+app.component('admins-table', admins_table)
 
 
+import { Refomate } from './components/formateDate'
+
+
+app.mixin(Refomate);
+// 
 app.use(plugin, defaultConfig);
 app.use(i18n).mount('#app');
 

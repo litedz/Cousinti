@@ -11,10 +11,12 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\WishRecipeController;
 use App\Jobs\Subscribe;
 use App\Models\recipe;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Process;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,7 +59,6 @@ Route::get('types_recipe', [RecipeController::class, 'types_recipe'])->name('rec
 
 Route::get('/recipes/{recipe_id}', function ($recipe_id) {
     $recipe_exist = recipe::findOrFail($recipe_id);
-
     return view('recipes.single-recipe', compact(['recipe_id' => 'recipe_id']));
 })->name('single.recipe');
 
@@ -130,33 +131,37 @@ Route::POST('/register/facebook/', [UserController::class, 'RegisterWithFace']);
 //Api Facebook
 Route::post('/facebook/login', [LoginController::class, 'loginWithMedia']);
 
-Route::get('test', function () {
-    return view('test');
+Route::get('test', function (Role $role) {
 });
 
 // Admin Resources
 
 route::prefix('panel')->group(function () {
     route::middleware('auth:admin')->group(function () {
-        Route::get('/dashboard', function () {
-            return view('admin.dashboard-admin');
-        });
+        Route::view('/dashboard', 'admin.dashboard-admin')->name('admin.dashboard');
+        route::get('logout', [AdminController::class, 'LogOutAdmin'])->name('admin.logout');
+        route::get('users', [AdminController::class, 'users'])->name('admin.actions.users');
+        route::get('recipes', [AdminController::class, 'recipes'])->name('admin.actions.recipes');
+        route::get('comments', [AdminController::class, 'comments'])->name('admin.actions.comments');
+
+        route::post('recipes/{recipe_id}/approved', [AdminController::class, 'approveRecipes'])->name('admin.recipes.actions.approved');
+        route::post('recipes/deny', [AdminController::class, 'denyRecipe'])->name('admin.recipes.actions.approved');
+        route::delete('recipes/delete', [AdminController::class, 'deleteRecipe'])->name('admin.recipes.actions.delete');
+        route::delete('users/{user_id}', [AdminController::class, 'deleteUser'])->name('admin.users.actions.delete');
+
+        route::post('role/change', [AdminController::class, 'ChangeRoleUser'])->name('admin.roles.change');
+        route::get('roles', [AdminController::class, 'AvailableRoles'])->name('admin.roles.actions.get');
     });
     route::resource('admin', AdminController::class)->middleware('auth')->except('index');
     route::post('admin/login', [AdminController::class, 'index'])->name('admin.index');
-    route::get('logout', [AdminController::class, 'LogOutAdmin'])->name('admin.logout');
-    route::get('users', [AdminController::class, 'users'])->name('admin.actions.users');
-    route::get('recipes', [AdminController::class, 'recipes'])->name('admin.actions.recipes');
-    route::get('comments', [AdminController::class, 'comments'])->name('admin.actions.comments');
 
-    route::get('login', function () {
-        return view('admin.login-admin');
-    });
+    route::view('login', 'admin.login-admin')->middleware('is.admin');
 });
 
 
-Route::get('/tokens/create', function (Request $request) {
-    $token = $request->user('admin')->createToken($request->token_name);
- 
-    return ['token' => $token->plainTextToken];
-});
+
+// Route::get('/tokens/create', function (Request $request) {
+//     $token = $request->user('admin')->createToken($request->token_name);
+
+//     return ['token' => $token->plainTextToken];
+// });

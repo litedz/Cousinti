@@ -35,7 +35,7 @@ final class AdminService extends Authenticatable
         Auth::loginUsingId($admin->id, true);
     }
 
-    public function CreateAdmin(array $admin): void
+    public function CreateUser(array $admin): void
     {
 
 
@@ -60,41 +60,52 @@ final class AdminService extends Authenticatable
      */
     public function deleteUser($user_id)
     {
-    }
-    /**
-     * 
-     * 
-     * @param int $recipe_id
-     */
-    public function approveRecipe($recipe_id)
-    {
-        
-    }
-    public function deleteRecipe($recipe_id)
-    {
-
-        dd('deleted');
-        $deleteRecipe = recipe::where('id', $recipe_id)->delete();
-        
+        $user = User::findOrfail($user_id)->delete();
     }
 
     /**
-     * 
-     * 
      * @param int $user_id
      * @param string $role
      */
-    public function changePermissionUser($user_id, $role)
+    public function changeRoleUser($user_id, $role)
     {
 
         $role = Role::where('role', '=', $role)->firstOrfail();
-        $changePerm = admin::findOr($user_id, function () {
+        $changePerm = User::findOr($user_id, function () {
             throw new Exception("User Not Found", 1);
         });
         //get Role id
         $changePerm->role_id = $role->id;
         $changePerm->save();
+    }
+    /**
+     * @param int $recipe_id
+     */
+    public function approveRecipe($recipe_id)
+    {
+        $ApproveRecipe = Recipe::findOr($recipe_id, function () {
+            throw new Exception("Recipe Not Found", 1);
+        });
 
-        return true;
+        $ApproveRecipe->is_approved = true;
+        $ApproveRecipe->save();
+    }
+    public function deleteRecipe($recipe_id)
+    {
+
+        $Recipe = Recipe::findOr($recipe_id, function () {
+            throw new Exception("Recipe Not Found", 1);
+        });
+        $deleteRecipe = recipe::where('id', $recipe_id)->forceDelete();
+    }
+    public function denyRecipe($recipe_id)
+    {
+
+        $Recipe = Recipe::findOr($recipe_id, function () {
+            throw new Exception("Recipe Not Found", 1);
+        });
+
+        $Recipe->is_approved = false;
+        $Recipe->save();
     }
 }

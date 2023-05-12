@@ -17,7 +17,7 @@ class CreateImages extends Migration
             $table->id();
             $table->string('name');
             $table->string('cover')->nullable();
-            $table->foreignId('recipe_id')->constrained();
+            $table->foreignId('recipe_id')->constrained()->cascadeOnDelete();;
             $table->timestamps();
         });
     }

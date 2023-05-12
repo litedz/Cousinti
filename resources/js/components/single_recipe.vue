@@ -3,7 +3,6 @@
     <status ref="status"></status>
     <div class="header d-grid">
       <div class="content d-grid gap-4">
-
         <div v-for="img in this.single_recipe.images_recipe" :key="img">
           <img v-if="img.cover == 'active'" :src="this.w_path + '/storage/recipes/' + img.name" class="mw-100"
             style="width: 100%;height: 300px;">
@@ -17,7 +16,7 @@
           </div>
           <div class="number-ingrediants d-flex align-items-center gap-2"><span
               class="border fa fa-finger-up fa-list-dots first-color fs-6 p-1 rounded-4"></span>
-            <li>25</li>
+            <li>{{this.ingredients.length}}</li>
             <li>ingredients</li>
           </div>
           <div class="author border rounded-circle"><a :href="'/profile/' + this.single_recipe.user_id"><img
@@ -25,7 +24,7 @@
           </div>
           <div class="likes d-flex align-items-center gap-2"><span
               class="border fa fa-thumbs-up p-1 rounded-4 text-bg-primary"></span>
-            <li>25</li>
+            <li>{{this.single_recipe.like}}</li>
             <li>Likes</li>
           </div>
           <div class="wishliste">
@@ -93,7 +92,7 @@ export default {
       single_recipe: "",
       type_recipe: '',
       rating: '',
-      liked: '',
+      ingredients:'',
     };
   },
   methods: {
@@ -134,7 +133,8 @@ export default {
             this.single_recipe = response.data.recipe;
 
             this.type_recipe = response.data.recipe.type_recipe.type;
-            this.rating = response.data.recipe.recipes_liked[0].rating;
+            this.rating = response.data.recipe.rating;
+            this.ingredients = response.data.recipe.ingredient;
           }
         })
         .catch((error) => { });
