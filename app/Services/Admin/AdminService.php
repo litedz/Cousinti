@@ -81,13 +81,13 @@ final class AdminService extends Authenticatable
     /**
      * @param int $recipe_id
      */
-    public function approveRecipe($recipe_id)
+    public function ChangeStatusRecipe($recipe_id, $status)
     {
         $ApproveRecipe = Recipe::findOr($recipe_id, function () {
             throw new Exception("Recipe Not Found", 1);
         });
 
-        $ApproveRecipe->is_approved = true;
+        $ApproveRecipe->is_approved = $status;
         $ApproveRecipe->save();
     }
     public function deleteRecipe($recipe_id)
@@ -100,12 +100,5 @@ final class AdminService extends Authenticatable
     }
     public function denyRecipe($recipe_id)
     {
-
-        $Recipe = Recipe::findOr($recipe_id, function () {
-            throw new Exception("Recipe Not Found", 1);
-        });
-
-        $Recipe->is_approved = false;
-        $Recipe->save();
     }
 }

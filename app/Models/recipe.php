@@ -12,7 +12,7 @@ class recipe extends Model
 {
     use HasFactory;
 
-    protected $with = ['author', 'images_recipe'];
+    protected $with = ['author', 'images_recipe','Type_recipe'];
 
     protected $fillable = ['name', 'rating', 'type_id', 'how_todo', 'user_id', 'description', 'how_long', 'level'];
 
@@ -26,12 +26,12 @@ class recipe extends Model
         return $this->hasMany(image::class);
     }
 
-    public function scopeauthor()
+    public function scopeAuthor()
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
 
-    public function scopetype_recipe(): BelongsTo
+    public function scopeType_recipe(): BelongsTo
     {
         return $this->belongsTo(types_recipes::class, 'type_id', 'id');
     }

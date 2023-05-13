@@ -1,25 +1,33 @@
 <template>
     <status ref="status"></status>
-    <table class="bg-white mx-auto shadow table w-75">
-        <thead class="bg-dark text-white">
-            <tr>
-                <th scope="col" class="border-bottom px-5">Recipe</th>
-                <th scope="col" class="text-center border-bottom">Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="item in wishList">
-                <td class="px-5"><a :href="w_path + '/recipes/' + item.recipe_id" class="text-black-title">{{
-                    item.recipe[0].name }}</a></td>
-                <td class="text-center">
-                    <li class="fa fa-trash-can fs-4 pointer text-danger" @click="removeFromWishList(item.recipe_id)"></li>
-                </td>
-            </tr>
 
-            <h1 v-if="wishList.length ==0" class="text-center text-muted">You dont have any recipe</h1>
 
-        </tbody>
-    </table>
+    <div class="w-75 mx-auto">
+        <h1 class="title">Your Wish List</h1>
+
+        <table class="bg-white table shadow w-100">
+
+            <thead class="bg-dark text-white">
+                <tr>
+                    <th scope="col" class="border-bottom px-5">Recipe</th>
+                    <th scope="col" class="text-center border-bottom">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in wishList">
+                    <td class="px-5"><a :href="w_path + '/recipes/' + item.recipe_id" class="text-black-title">{{
+                        item.recipe[0].name }}</a></td>
+                    <td class="text-center">
+                        <li class="fa fa-trash-can fs-4 pointer text-danger" @click="removeFromWishList(item.recipe_id)">
+                        </li>
+                    </td>
+                </tr>
+
+                <h1 v-if="wishList.length == 0" class="text-center text-muted">You dont have any Wish recipe</h1>
+
+            </tbody>
+        </table>
+    </div>
 </template>
 
 

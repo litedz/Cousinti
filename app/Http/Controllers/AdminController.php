@@ -117,7 +117,7 @@ class AdminController extends Controller
     }
     public function recipes()
     {
-        $recipes = collect(recipe::all())->sortBy('created_at')->values();
+        $recipes = collect(recipe::with('author')->get())->sortBy('created_at')->values();
         return response()->json(['recipes' => $recipes]);
     }
     public function comments()
@@ -144,26 +144,27 @@ class AdminController extends Controller
         ]);
     }
     /**
-     * Approve Recipes Users.
+     * Approve or Deny Recipes Users.
      * 
      * @return \Illuminate\Http\JsonResponse
      */
-    public function approveRecipes(AdminService $adminService, Request $request, $recipe_id): JsonResponse
+    public function ChangeStatusRecipe(AdminService $adminService, Request $request): JsonResponse
     {
 
-        if (!Gate::allow('IsAdmin', 'App\\Models\admin')) {
+        if (!Gate::allows('IsAdmin', 'App\\Models\admin')) {
             throw new Exception("You Dont have Permission to execute this action ", 1);
         }
-
         $valdiate = $request->validate([
-            'recipe_id' => 'required|integer'
+            'recipe_id' => 'required|integer',
+            // 'status' => 'in_array:[1,0]',
         ]);
 
-        $adminService->approveRecipe($request->recipe_id);
+        $adminService->ChangeStatusRecipe($request->recipe_id, $request->status);
 
         return response()->json([
-            'style' => 'success',
-            'status' => 'Recipe Approved',
+            'style' => 'info',
+            'status' => 'Info',
+            'message' => 'Status Updated',
             'icon' => 'check',
         ]);
     }
@@ -197,7 +198,8 @@ class AdminController extends Controller
 
         return response()->json([
             'style' => 'warning',
-            'status' => 'Recipe Deny',
+            'status' => 'info',
+            'message' => 'recipe Deleted',
             'icon' => 'warning',
         ]);
     }

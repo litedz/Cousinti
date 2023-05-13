@@ -25,6 +25,7 @@ class RecipeResource extends JsonResource
             'author' => $this->author,
             'type_recipe' => $this->type_recipe,
             'like' => $this->like,
+            'is_approved' => $this->is_approved,
         ];
     }
 }

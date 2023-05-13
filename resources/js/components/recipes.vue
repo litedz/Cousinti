@@ -63,10 +63,8 @@
                       recipe.name }}</a>
                   </div>
                   <div class="author">
-                    <a :href="
-                      '/profile/' + recipe.author.id
-                    " class="text-decoration-none text-black-50 font-14">{{
-  recipe.author.username }}</a>
+                    <a :href="'/profile/' + recipe.author.id
+                      " class="text-decoration-none text-black-50 font-14">{{ recipe.author.username }}</a>
                   </div>
                   <div class="rating">
                     <ul class="list-unstyled mt-2" style="padding: 0">
@@ -81,8 +79,9 @@
                     </ul>
                   </div>
                   <div class="type">
-                    <a :href="'/similar/' + recipe.type_recipe.type" class="bg-third-color font-14 fw-bold pb-1 pt-1 px-2 rounded-pill text-decoration-none text-success text-white">{{
-                      recipe.type_recipe.type }}</a>
+                    <a :href="'/similar/' + recipe.type_recipe.type"
+                      class="bg-third-color font-14 fw-bold pb-1 pt-1 px-2 rounded-pill text-decoration-none text-success text-white">{{
+                        recipe.type_recipe.type }}</a>
                   </div>
                 </div>
               </div>

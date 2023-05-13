@@ -144,8 +144,8 @@ route::prefix('panel')->group(function () {
         route::get('recipes', [AdminController::class, 'recipes'])->name('admin.actions.recipes');
         route::get('comments', [AdminController::class, 'comments'])->name('admin.actions.comments');
 
-        route::post('recipes/{recipe_id}/approved', [AdminController::class, 'approveRecipes'])->name('admin.recipes.actions.approved');
-        route::post('recipes/deny', [AdminController::class, 'denyRecipe'])->name('admin.recipes.actions.approved');
+        route::post('recipes/{recipe_id}/status', [AdminController::class, 'ChangeStatusRecipe'])->name('admin.recipes.actions.status');
+        // route::post('recipes/{recipe_id}/deny', [AdminController::class, 'denyRecipe'])->name('admin.recipes.actions.approved');
         route::delete('recipes/delete', [AdminController::class, 'deleteRecipe'])->name('admin.recipes.actions.delete');
         route::delete('users/{user_id}', [AdminController::class, 'deleteUser'])->name('admin.users.actions.delete');
 

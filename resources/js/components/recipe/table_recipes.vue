@@ -31,7 +31,8 @@
             <p class="text-muted mb-0">{{ recipe.type_recipe.type }}</p>
           </td>
           <td>
-            <span class="badge text-success">Published</span>
+            <span class="badge text-success" v-if="recipe.is_approved">Approved</span>
+            <span class="badge text-warning" v-else>Waiting</span>
           </td>
 
           <td>

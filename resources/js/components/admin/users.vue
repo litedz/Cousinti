@@ -9,7 +9,7 @@
                         <div class="col border-end">
                             <div class="p-2">
                                 <Button type="button" class="btn btn-info mb-1"
-                                    @click="ClearFilter()('email_verified_at')">Clear
+                                    @click="ClearFilter()">Clear
                                     Filter</Button>
                                 <div class="fs-4 text-black-50 title">Filter By Status</div>
                                 <div class="d-flex flex-column">

@@ -69,20 +69,20 @@
             </ul>
 
           </li>
-          <li class="sidebar-item" @click="activeComponent ='last-activity'">
+          <li class="sidebar-item" @click="activeComponent = 'last-activity'">
             <a href="#" class='sidebar-link'>
               <i class="text-danger" data-feather="activity" width="20"></i>
               <span class="text-capitalize">Last Activity</span>
             </a>
           </li>
-          <li class="sidebar-item " @click="activeComponent ='wishlist-setting'">
+          <li class="sidebar-item " @click="activeComponent = 'wishlist-setting'">
             <a href="#" class='sidebar-link'>
               <i class="text-danger" data-feather="heart" width="20"></i>
               <span class="text-capitalize">wish list</span>
             </a>
           </li>
           <li class='sidebar-title'>Privacy</li>
-          <li class="sidebar-item" @click="activeComponent='edit-profile'">
+          <li class="sidebar-item" @click="activeComponent = 'edit-profile'">
             <a href="#" class='sidebar-link'>
               <i class="text-danger" data-feather="settings" width="20"></i>
               <span class="text-capitalize">Setting</span>
@@ -96,7 +96,7 @@
           </li>
         </ul>
       </div>
-      
+
     </div>
   </div>
   <div id="main">
@@ -164,8 +164,9 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right">
               <a class="dropdown-item" :href="w_path"><i class="third-color" data-feather="home"></i>Home</a>
-              <a class="dropdown-item" :href="'/profile/'+this.info.id"><i class="third-color" data-feather="user"></i>Profile</a>
-              
+              <a class="dropdown-item" :href="'/profile/' + this.info.id"><i class="third-color"
+                  data-feather="user"></i>Profile</a>
+
             </div>
             <div class="">
               <a class="dropdown-item" href="#"><i class="third-color" data-feather="log-out"></i> Logout</a>
@@ -194,7 +195,7 @@ export default {
   props: { info: Object },
   data() {
     return {
-      activeComponent: "wishlist-setting",
+      activeComponent: "static_user",
       action_recipe: "",
       recipe_update_id: "", // id of recipe for update
       show_messages: false,
@@ -1935,4 +1936,5 @@ footer {
 
 .bg-gray-700 {
   background-color: #4a5568 !important;
-}</style>
+}
+</style>

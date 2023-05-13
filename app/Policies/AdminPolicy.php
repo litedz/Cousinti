@@ -17,7 +17,7 @@ class AdminPolicy
      */
     public function viewAny(User $user)
     {
-        return true;
+        // return true;
     }
 
     /**

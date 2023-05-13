@@ -125,7 +125,7 @@ export default {
     props: { info: Object },
     data() {
         return {
-            activeComponent: "users-table",
+            activeComponent: "recipe-table",
 
         };
     },
