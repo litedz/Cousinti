@@ -6,8 +6,6 @@
       </div>
       <div class="sidebar-menu">
         <ul class="menu">
-
-
           <li class='sidebar-title'>Main Menu</li>
           <li class="sidebar-item active ">
             <a href="#" class='sidebar-link' style="background-color: #413C58;">
@@ -88,10 +86,16 @@
               <span class="text-capitalize">Setting</span>
             </a>
           </li>
-          <li class="sidebar-item has-sub">
+          <li class="sidebar-item">
             <a href="#" class='sidebar-link'>
               <i class="text-danger" data-feather="shield" width="20"></i>
               <span class="text-capitalize">Security</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class='sidebar-link'>
+              <i class="text-danger" data-feather="shield" width="20"></i>
+              <span class="text-capitalize">Contact Support</span>
             </a>
           </li>
         </ul>
@@ -140,14 +144,14 @@
             <Transition name="fade">
               <div class="bg-white messages mx-4 p-2 position-absolute shadow top-100 w-50 z-5555" style="right: 8vh;"
                 v-show="show_messages">
-                <div class="align-items-start border-bottom d-flex mb-1 message"><img src="https://i.pravatar.cc/80"
-                    class="rounded-circle">
-                  <div class="d-flex flex-column justify-content-start mx-2"><a href="#"
-                      class="text-capitalize text-decoration-nonee">Name
-                      User</a>
-                    <div class="fs-6 lh-lg message-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                      perferendis maiores repellat debitis optio neque atque molestiae. Culpa ea cum rerum corrupti
-                      obcaecati ab iste eligendi nam, magni quasi laboriosam!</div><span
+                <h1 class="text-center fs-2 text-muted text-capitalize" v-if="messages.length == 0">You dont have Any
+                  Message</h1>
+                <div class="align-items-start flex-column border-bottom d-flex mb-1 message">
+                  <div class="border-bottom d-flex flex-column justify-content-start m-2 mx-2 pb-2 w-100"
+                    v-for="message in messages">
+
+                    <a href="#" class="text-capitalize text-decoration-nonee">{{ message.from }}</a>
+                    <div class="fs-6 lh-lg message-text">{{ message.message }}</div><span
                       class="time fs-6 text-muted time">12/12/1444</span>
                   </div>
                 </div>
@@ -180,8 +184,12 @@
     <div class="main-content container-fluid">
 
       <KeepAlive>
-        <component :is="this.activeComponent" v-on:some-event="get_id_recipe($event)"
-          :update_recipe_id="this.recipe_update_id" :action="this.action_recipe" :auth_id="info.id" />
+        <component :is="this.activeComponent" 
+        v-on:update-recipe="get_id_recipe($event)"
+        v-on:send-message="getMessages()"
+          :update_recipe_id="this.recipe_update_id" :action="this.action_recipe" :auth_id="info.id"
+          :auth_email="info.email" 
+           />
       </KeepAlive>
     </div>
 
@@ -193,12 +201,17 @@
 export default {
   inject: ["w_path"],
   props: { info: Object },
+
+  mounted() {
+    this.getMessages();
+  },
   data() {
     return {
-      activeComponent: "static_user",
+      activeComponent: "contact-us",
       action_recipe: "",
       recipe_update_id: "", // id of recipe for update
       show_messages: false,
+      messages: '',
     };
   },
   methods: {
@@ -235,6 +248,20 @@ export default {
           .css("left", "0")
           .addClass("show-menu");
       }
+    },
+
+    getMessages() {
+      let data = new FormData();
+      // data.append('from_user_id' ,this.$attrs.auth_id);
+      // data.append('message' ,);
+      axios({ method: "get", url: "/messages/" + this.info.id })
+        .then((response) => {
+          if (response.data) {
+            this.messages = response.data;
+          }
+        })
+        .catch((error) => { });
+
     },
 
     logout() {

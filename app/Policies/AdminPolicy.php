@@ -88,4 +88,9 @@ class AdminPolicy
     {
         return admin::find(auth()->user()->id)->RoleUser->role == 'admin';
     }
+
+    public  function IsSuperAdmin()
+    {
+        return auth('admin')->check();
+    }
 }

@@ -12,6 +12,8 @@
 */
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminMessagesController;
+use App\Http\Controllers\MessageController;
 use App\Models\Role;
 use App\Rules\InData;
 use App\Rules\InDataRule;
@@ -43,6 +45,18 @@ route::get('comments', [AdminController::class, 'comments'])->name('admin.action
 route::post('permissionUser', [AdminController::class, 'ChangePermUser'])->name('admin.actions.change.permission');
 route::post('recipes/approved', [AdminController::class, 'approveRecipes'])->name('admin.recipes.actions.approved');
 route::delete('recipes/delete', [AdminController::class, 'deleteRecipe'])->name('admin.recipes.actions.delete');
+
+
+
+Route::post('test', [MessageController::class,'store']);
+Route::get('test/messages', [MessageController::class,'index']);
+
+
+// Route::get('test/admin/messages', [AdminMessagesController::class,'index']);
+
+// Route::post('test/admin/messages', [MessageController::class,'ContactSuport']);
+
+Route::resource('message',MessageController::class);
 
 
 // Route::get('test', function (Request $request) {

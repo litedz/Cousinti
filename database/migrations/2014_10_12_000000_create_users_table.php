@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('avatar')->nullable();
             $table->string('first_name')->default('مجهول');
             $table->string('last_name')->default('مجهول');
-            $table->integer('age');
+            $table->integer('age')->default(0);
             $table->string('phone')->default('0 0 00 00 00 00');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

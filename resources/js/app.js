@@ -44,6 +44,7 @@ import test from './components/test.vue';
 import index from './components/index.vue';
 import loading_page from './components/loading-page.vue'
 import login from './components/login.vue';
+import contact_us from './components/contact-us.vue';
 import guest_topbar from './components/guest-topbar';
 import register from './components/register.vue';
 import dashboard from './components/dashboard/dashboard.vue';
@@ -71,7 +72,7 @@ import table_recipes from './components/recipe/table_recipes.vue';
 import table_datatable from './components/dashboard/table-datatable.vue';
 
 
-import status from './components/status.vue';
+import  status  from './components/status.vue';
 
 //User 
 
@@ -162,6 +163,9 @@ app.component('similar-recipes', similar_recipes);
 app.component('register', register);
 app.component('guest-topbar', guest_topbar);
 app.component('top-bar', top_bar);
+app.component('contact-us', contact_us);
+
+
 
 // recipe component
 app.component('add-recipe', add_recipe);
@@ -194,11 +198,11 @@ app.component('latest-activity-table', latest_activity_table)
 app.component('admins-table', admins_table)
 
 
-import { Refomate } from './components/formateDate'
+import { Refomate } from './components/formateDate';
+
 
 
 app.mixin(Refomate);
-// 
 app.use(plugin, defaultConfig);
 app.use(i18n).mount('#app');
 

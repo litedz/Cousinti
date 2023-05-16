@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class message extends Model
 {
     use HasFactory;
-
-    public function user()
-    {
-        return $this->belongsTo(User::class, 'id_user_recipient');
-    }
+    protected $fillable = ['user_id', 'email', 'message', 'recipient_id'];
+    // public function user()
+    // {
+    //     return $this->belongsTo(User::class, 'id_user_recipient');
+    // }
 }

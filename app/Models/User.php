@@ -31,7 +31,6 @@ class User extends Authenticatable
         'Id_user_media',
         'profile_id',
         'rank_id',
-
     ];
 
     /**

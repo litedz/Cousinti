@@ -2,18 +2,33 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\MessageReceivedEvent;
+use App\Http\Requests\AdminMessageRequest;
+use App\Http\Requests\MessageRequest;
+use App\Models\admin_messages;
 use App\Models\message;
+use App\Models\User;
+use Exception;
 use Illuminate\Http\Request;
+use Symfony\Component\Mailer\EventListener\MessageListener;
 
 class MessageController extends Controller
 {
+    public string $reply_message;
+
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index(Request $request, message $message)
     {
 
-        dd(request());
+        $messages = message::all();
+        MessageReceivedEvent::dispatch(
+            1,
+            'admin@support.com',
+            'Thank you for your message. We appreciate you taking the time to reach out to us will respond to it as soon as'
+        );
+        return response()->json($messages);
     }
 
     /**
@@ -23,7 +38,6 @@ class MessageController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -31,9 +45,21 @@ class MessageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MessageRequest $MessageRequest)
     {
-        dd($request->all());
+
+        $Message = $MessageRequest->validated();
+
+        try {
+            admin_messages::create($Message);
+            MessageReceivedEvent::dispatch(
+                20,
+                'admin@support.com',
+                'Thank you for your message. We appreciate you taking the time to reach out to us will respond to it as soon as'
+            );
+        } catch (\Throwable $th) {
+            throw new Exception("Error Send Message", 1);
+        }
     }
 
     /**
@@ -41,6 +67,10 @@ class MessageController extends Controller
      */
     public function show(Request $request)
     {
+
+        $message_user = message::where('recipient_id', $request->message)->get();
+
+        return response()->json($message_user);
     }
 
     /**
@@ -76,16 +106,35 @@ class MessageController extends Controller
     public function conversation(Request $request)
     {
 
-        $validateData = $request->validate([
-            'user_id_send' => 'required|numeric',
-            'user_id_recipient' => 'required|numeric',
-        ]);
+        // $validateData = $request->validate([
+        //     'user_id_send' => 'required|numeric',
+        //     'user_id_recipient' => 'required|numeric',
+        // ]);
 
-        $chat = message::with('user')->whereIn('id_user_send', [$request->user_id_send, $request->user_id_recipient])
-            ->whereIn('id_user_recipient', [$request->user_id_send, $request->user_id_recipient])
-            ->latest()
-            ->get();
+        // $chat = message::with('user')->whereIn('id_user_send', [$request->user_id_send, $request->user_id_recipient])
+        //     ->whereIn('id_user_recipient', [$request->user_id_send, $request->user_id_recipient])
+        //     ->latest()
+        //     ->get();
 
-        return response()->json($chat, 200);
+        // return response()->json($chat, 200);
+    }
+
+    public function ContactSuport(Request $request, MessageRequest $messageRequest)
+    {
+        $Message = $messageRequest->validated();
+
+        try {
+            admin_messages::create($Message);
+           $autoReply= MessageReceivedEvent::dispatch(
+                auth()->user()->id,
+                'admin@support.com',
+                'Thank you for your message. We appreciate you taking the time to reach out to us will respond to it as soon as'
+            );
+            if ($autoReply) {
+                return response()->json('Message Send');
+            }
+        } catch (\Throwable $th) {
+            throw new Exception("Error Send Message", 1);
+        }
     }
 }

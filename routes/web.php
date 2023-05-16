@@ -13,10 +13,14 @@ use App\Jobs\Subscribe;
 use App\Models\recipe;
 use App\Models\Role;
 use App\Models\User;
+use Faker\Generator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Process;
+use Faker\Container\ContainerInterface as testfaker;
+use Faker\Generator as Faker;
+use Faker\Provider as provider;
 
 /*
 |--------------------------------------------------------------------------
@@ -131,8 +135,13 @@ Route::POST('/register/facebook/', [UserController::class, 'RegisterWithFace']);
 //Api Facebook
 Route::post('/facebook/login', [LoginController::class, 'loginWithMedia']);
 
-Route::get('test', function (Role $role) {
+Route::get('test', function (Faker $faker) {
+
+
+
+    dd($faker->name());
 });
+Route::post('test', [MessageController::class, 'store']);
 
 // Admin Resources
 
@@ -158,8 +167,11 @@ route::prefix('panel')->group(function () {
     route::view('login', 'admin.login-admin')->middleware('is.admin');
 });
 
+// Route::post('test/admin/messages', [MessageController::class, 'ContactSuport']);
 
 
+Route::resource('messages', MessageController::class);
+Route::post('contact-support', [MessageController::class,'ContactSuport']);
 // Route::get('/tokens/create', function (Request $request) {
 //     $token = $request->user('admin')->createToken($request->token_name);
 

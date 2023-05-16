@@ -67,7 +67,7 @@ export default {
 
   methods: {
     update_recipe(recipe_id) {
-      this.$emit("some-event", recipe_id);
+      this.$emit("update-recipe", recipe_id);
     },
     delete_recipe(recipe_id) {
       axios({ method: "delete", url: "/recipe/" + recipe_id })
