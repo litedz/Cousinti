@@ -1,7 +1,7 @@
 <template>
     <div id="users-list">
         <status ref="status"></status>
-        <h1 class="border-bottom">User admin</h1>
+        <h1 class="border-bottom">Users Table</h1>
         <div class="bg-white d-grid">
             <div class="filter mb-1 rounded-1 text-white" style="background: slategray;">
                 <div class="w-100">

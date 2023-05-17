@@ -48,15 +48,17 @@ route::delete('recipes/delete', [AdminController::class, 'deleteRecipe'])->name(
 
 
 
-Route::post('test', [MessageController::class,'store']);
-Route::get('test/messages', [MessageController::class,'index']);
+Route::post('test', [MessageController::class, 'store']);
+Route::get('test/messages', [MessageController::class, 'index']);
 
 
 // Route::get('test/admin/messages', [AdminMessagesController::class,'index']);
 
 // Route::post('test/admin/messages', [MessageController::class,'ContactSuport']);
 
-Route::resource('message',MessageController::class);
+Route::resource('message', MessageController::class);
+
+Route::resource('admin_messages', AdminMessagesController::class);
 
 
 // Route::get('test', function (Request $request) {

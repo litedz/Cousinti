@@ -99,6 +99,7 @@ import users_table from "./components/admin/users.vue";
 import recipe_table from "./components/admin/recipes.vue";
 import latest_activity_table from "./components/admin/latest-activity.vue";
 import admins_table from "./components/admin/admins-table.vue";
+import admin_messages from "./components/admin/messages.vue";
 
 
 import { plugin, defaultConfig } from '@formkit/vue'
@@ -190,12 +191,13 @@ app.component('wishlist', wishlist);
 //admin
 
 
-app.component('dashboard-admin', dashboard_admin)
-app.component('login-admin', login_admin)
-app.component('users-table', users_table)
-app.component('recipe-table', recipe_table)
-app.component('latest-activity-table', latest_activity_table)
-app.component('admins-table', admins_table)
+app.component('dashboard-admin', dashboard_admin);
+app.component('login-admin', login_admin);
+app.component('users-table', users_table);
+app.component('recipes-table', recipe_table);
+app.component('latest-activity-table', latest_activity_table);
+app.component('admins-table', admins_table);
+app.component('admin-messages', admin_messages);
 
 
 import { Refomate } from './components/formateDate';

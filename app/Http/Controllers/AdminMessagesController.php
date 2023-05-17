@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\MessageRequest;
+use App\Mail\SendMailToUser;
+use App\Models\admin_messages;
 use App\Models\message;
+use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Mail;
 
 class AdminMessagesController extends Controller
 {
@@ -17,11 +21,13 @@ class AdminMessagesController extends Controller
      */
     public function index()
     {
-        if (!Gate::allows('IsSuperAdmin', 'App\\Models\admin')) {
-            throw new Exception("You Dont have Permission for this action ", 1);
-        }
 
-        $messages = message::all();
+
+        // if (!Gate::allows('IsSuperAdmin', 'App\\Models\admin')) {
+        //     throw new Exception("You Dont have Permission for this action ", 1);
+        // }
+
+        $messages = admin_messages::all();
 
         return response()->json($messages);
     }
@@ -39,6 +45,7 @@ class AdminMessagesController extends Controller
     public function store()
     {
 
+       
     }
 
     /**
@@ -86,8 +93,22 @@ class AdminMessagesController extends Controller
         //
     }
 
-    public function ReplyMessage(MessageRequest $messageRequest)
+    public function ReplyMessage(Request $request)
     {
 
+        $credentials = $request->validate([
+            'to_user_id' => 'required',
+            'subject' => 'required',
+            'body' => 'required',
+        ]);
+
+        $recipient = User::find($request->to_user_id);
+        try {
+            Mail::to('maamarjoker@gmail.com')->send(new SendMailToUser($recipient->username, $request->subject, $request->body));
+        } catch (\Throwable $th) {
+            throw new Exception("Error Reply Message", 404);
+        }
+
+        return response()->json(['message' => 'Mail Send'], 200);
     }
 }

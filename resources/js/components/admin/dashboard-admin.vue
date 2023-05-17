@@ -8,17 +8,23 @@
                 <ul class="menu">
                     <li class='sidebar-title'>Main Menu</li>
 
-                    <li class="sidebar-item" @click="activeComponent = ''">
+                    <li class="sidebar-item" @click="activeComponent = 'users-table'">
                         <a href="#" class='bg-light sidebar-link '>
                             <i class="text-danger" data-feather="activity" width="20"></i>
                             <span class="text-capitalize">Table Users</span>
                         </a>
                     </li>
-                    
-                    <li class="sidebar-item" @click="activeComponent = ''">
+
+                    <li class="sidebar-item" @click="activeComponent = 'recipes-table'">
                         <a href="#" class='bg-light sidebar-link '>
                             <i class="text-danger" data-feather="activity" width="20"></i>
                             <span class="text-capitalize">Table Recipes</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item" @click="activeComponent = 'admin-messages'">
+                        <a href="#" class='bg-light sidebar-link '>
+                            <i class="text-danger" data-feather="activity" width="20"></i>
+                            <span class="text-capitalize">Messages</span>
                         </a>
                     </li>
                 </ul>
@@ -109,9 +115,9 @@
         <!-- Main content -->
         <div class="main-content container-fluid">
 
-            <KeepAlive>
-                <component :is="this.activeComponent"
-                    :update_recipe_id="this.recipe_update_id" :action="this.action_recipe" :auth_id="info.id" />
+            <KeepAlive include="users-table,recipe-table">
+                <component :is="this.activeComponent" :update_recipe_id="this.recipe_update_id" :action="this.action_recipe"
+                    :auth_id="info.id" />
             </KeepAlive>
         </div>
 
@@ -125,15 +131,11 @@ export default {
     props: { info: Object },
     data() {
         return {
-            activeComponent: "recipe-table",
+            activeComponent: "admin-messages",
 
         };
     },
     methods: {
-        // changeCompo(nameCompo, action) {
-        //     this.activeComponent = nameCompo;
-        //     this.action_recipe = action;
-        // },
         logout() {
             axios({ method: "get", url: "/logout" })
                 .then((response) => {
@@ -1833,5 +1835,6 @@ footer {
 
 .bg-gray-700 {
     background-color: #4a5568 !important;
-}</style>
+}
+</style>
   

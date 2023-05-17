@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminMessagesController;
 use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\GuestRecipeController;
 use App\Http\Controllers\LoginController;
@@ -10,6 +11,7 @@ use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WishRecipeController;
 use App\Jobs\Subscribe;
+use App\Mail\SendMailToUser;
 use App\Models\recipe;
 use App\Models\Role;
 use App\Models\User;
@@ -137,9 +139,7 @@ Route::post('/facebook/login', [LoginController::class, 'loginWithMedia']);
 
 Route::get('test', function (Faker $faker) {
 
-
-
-    dd($faker->name());
+    return new SendMailToUser('test','provlem subject','loremazeaz eaeazeazeùlm eklemleaz');
 });
 Route::post('test', [MessageController::class, 'store']);
 
@@ -147,6 +147,7 @@ Route::post('test', [MessageController::class, 'store']);
 
 route::prefix('panel')->group(function () {
     route::middleware('auth:admin')->group(function () {
+        
         Route::view('/dashboard', 'admin.dashboard-admin')->name('admin.dashboard');
         route::get('logout', [AdminController::class, 'LogOutAdmin'])->name('admin.logout');
         route::get('users', [AdminController::class, 'users'])->name('admin.actions.users');
@@ -160,6 +161,9 @@ route::prefix('panel')->group(function () {
 
         route::post('role/change', [AdminController::class, 'ChangeRoleUser'])->name('admin.roles.change');
         route::get('roles', [AdminController::class, 'AvailableRoles'])->name('admin.roles.actions.get');
+
+        Route::resource('admin_messages/', AdminMessagesController::class);
+        Route::post('messages/Reply', [AdminMessagesController::class,'ReplyMessage']);
     });
     route::resource('admin', AdminController::class)->middleware('auth')->except('index');
     route::post('admin/login', [AdminController::class, 'index'])->name('admin.index');
@@ -172,6 +176,8 @@ route::prefix('panel')->group(function () {
 
 Route::resource('messages', MessageController::class);
 Route::post('contact-support', [MessageController::class,'ContactSuport']);
+
+
 // Route::get('/tokens/create', function (Request $request) {
 //     $token = $request->user('admin')->createToken($request->token_name);
 

@@ -2,6 +2,7 @@
     <div class="contact-support">
         <status ref="status"></status>
         <div class="container">
+        
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <div class="well well-sm">
@@ -73,7 +74,7 @@ export default {
                     }
                 })
                 .catch((error) => {
-                    console.log(error.response);
+            
                     this.$refs.status.Display('danger', error.response.data.message, 'warning', 'warning');
                 });
         },

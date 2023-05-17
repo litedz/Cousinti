@@ -31,7 +31,6 @@ class NewsRecipesMail extends Mailable
     {
         return new Envelope(
             subject: 'Welcome in Cousinti Blog',
-
         );
     }
 

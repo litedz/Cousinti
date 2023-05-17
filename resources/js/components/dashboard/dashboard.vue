@@ -207,7 +207,7 @@ export default {
   },
   data() {
     return {
-      activeComponent: "contact-us",
+      activeComponent: "admin-messages",
       action_recipe: "",
       recipe_update_id: "", // id of recipe for update
       show_messages: false,
