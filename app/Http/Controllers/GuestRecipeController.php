@@ -22,7 +22,7 @@ class GuestRecipeController extends Controller
             $query->whereNotNull('cover')->get();
         }])
             ->whereHas('images_recipe')
-            ->where('is_approved',true)
+            ->where('is_approved', true)
             ->orderByDesc('id')
             ->get());
 

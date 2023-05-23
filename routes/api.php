@@ -15,9 +15,6 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminMessagesController;
 use App\Http\Controllers\MessageController;
 use App\Models\Role;
-use App\Rules\InData;
-use App\Rules\InDataRule;
-use App\Rules\RoleRule;
 use App\Services\Admin\AdminService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -25,7 +22,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('test', function () {
     return view('test');
 });
-
 
 // route::prefix('panel')->group(function () {
 
@@ -46,11 +42,8 @@ route::post('permissionUser', [AdminController::class, 'ChangePermUser'])->name(
 route::post('recipes/approved', [AdminController::class, 'approveRecipes'])->name('admin.recipes.actions.approved');
 route::delete('recipes/delete', [AdminController::class, 'deleteRecipe'])->name('admin.recipes.actions.delete');
 
-
-
 Route::post('test', [MessageController::class, 'store']);
 Route::get('test/messages', [MessageController::class, 'index']);
-
 
 // Route::get('test/admin/messages', [AdminMessagesController::class,'index']);
 
@@ -59,7 +52,6 @@ Route::get('test/messages', [MessageController::class, 'index']);
 Route::resource('message', MessageController::class);
 
 Route::resource('admin_messages', AdminMessagesController::class);
-
 
 // Route::get('test', function (Request $request) {
 

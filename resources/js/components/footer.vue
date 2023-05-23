@@ -72,7 +72,7 @@
                         <div class="form">
                             <input v-model="subscribeEmail" class="form-control" type="email" name=""
                                 placeholder="example@gmail.com">
-                            <button type="button" @click="subscribe()"
+                            <button type="button" @click="subscribe()" :disabled="buttonSubscrube"
                                 class="bg-gradient bg-second-color btn btn-primary font-amiri fs-5 fw-bolder mt-2 w-100"
                                 style="border:none;">اشتراك</button>
                         </div>
@@ -98,18 +98,24 @@ export default {
             Path: window.location.host,
             subscribeEmail: '',
             recipesLatest: '',
+            buttonSubscrube: false
         }
 
     },
     methods: {
         subscribe() {
+            //display button subsribe
+            this.buttonSubscrube = true;
             let data = new FormData();
             data.append('email', this.subscribeEmail)
             axios({ method: "post", url: "/subscribe", data: data })
                 .then((response) => {
                     if (response.data) {
                         this.$refs.status.Display('success', response.data, 'Success', 'fa-check-circle');
+                        //initialization email input
                         this.subscribeEmail = '';
+                        //unable subscribe btn 
+                        this.buttonSubscrube = false;
                     }
                 })
                 .catch((error) => {

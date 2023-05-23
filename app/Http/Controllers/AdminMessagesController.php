@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\MessageRequest;
 use App\Mail\SendMailToUser;
 use App\Models\admin_messages;
 use App\Models\message;
@@ -21,7 +20,6 @@ class AdminMessagesController extends Controller
      */
     public function index()
     {
-
 
         // if (!Gate::allows('IsSuperAdmin', 'App\\Models\admin')) {
         //     throw new Exception("You Dont have Permission for this action ", 1);
@@ -44,14 +42,11 @@ class AdminMessagesController extends Controller
 
     public function store()
     {
-
-       
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\message  $message
      * @return \Illuminate\Http\Response
      */
     public function show(message $message)
@@ -62,7 +57,6 @@ class AdminMessagesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\message  $message
      * @return \Illuminate\Http\Response
      */
     public function edit(message $message)
@@ -73,8 +67,6 @@ class AdminMessagesController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\message  $message
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, message $message)
@@ -85,7 +77,6 @@ class AdminMessagesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\message  $message
      * @return \Illuminate\Http\Response
      */
     public function destroy(message $message)
@@ -104,9 +95,9 @@ class AdminMessagesController extends Controller
 
         $recipient = User::find($request->to_user_id);
         try {
-            Mail::to('maamarjoker@gmail.com')->send(new SendMailToUser($recipient->username, $request->subject, $request->body));
+            Mail::to($recipient->email)->send(new SendMailToUser($recipient->username, $request->subject, $request->body));
         } catch (\Throwable $th) {
-            throw new Exception("Error Reply Message", 404);
+            throw new Exception('Error Reply Message', 404);
         }
 
         return response()->json(['message' => 'Mail Send'], 200);

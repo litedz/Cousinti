@@ -33,6 +33,7 @@ class AdminController extends Controller
         } catch (\Throwable $th) {
             throw new Exception($th->getMessage(), 1);
         }
+
         return redirect()->route('admin.dashboard');
     }
 
@@ -105,24 +106,31 @@ class AdminController extends Controller
     public function LogOutAdmin(AdminService $adminService, Request $request)
     {
         $adminService->logOut($request);
-        if (!request()->ajax()) {
+        if (! request()->ajax()) {
             return redirect()->route('home');
         }
+
         return response()->json('LogOut');
     }
+
     public function users()
     {
         $users = collect(User::all())->sortBy('created_at')->values();
+
         return response()->json(['users' => $users]);
     }
+
     public function recipes()
     {
         $recipes = collect(recipe::with('author')->get())->sortBy('created_at')->values();
+
         return response()->json(['recipes' => $recipes]);
     }
+
     public function comments()
     {
         $comments = collect(comments::all())->sortBy('created_at')->values();
+
         return response()->json(['comments' => $comments]);
     }
 
@@ -140,19 +148,18 @@ class AdminController extends Controller
             'status' => 'updated',
             'message' => 'role Updated',
             'icon' => 'check',
-            'style' => 'success'
+            'style' => 'success',
         ]);
     }
+
     /**
      * Approve or Deny Recipes Users.
-     * 
-     * @return \Illuminate\Http\JsonResponse
      */
     public function ChangeStatusRecipe(AdminService $adminService, Request $request): JsonResponse
     {
 
-        if (!Gate::allows('IsAdmin', 'App\\Models\admin')) {
-            throw new Exception("You Dont have Permission to execute this action ", 1);
+        if (! Gate::allows('IsAdmin', 'App\\Models\admin')) {
+            throw new Exception('You Dont have Permission to execute this action ', 1);
         }
         $valdiate = $request->validate([
             'recipe_id' => 'required|integer',
@@ -168,13 +175,14 @@ class AdminController extends Controller
             'icon' => 'check',
         ]);
     }
+
     public function DenyRecipe(Request $request, AdminService $adminService)
     {
 
         $this->authorize('IsAdmin', 'App\\Models\admin');
 
         $valdiate = $request->validate([
-            'recipe_id' => 'required|integer'
+            'recipe_id' => 'required|integer',
         ]);
 
         $adminService->denyRecipe($request->recipe_id);
@@ -185,13 +193,14 @@ class AdminController extends Controller
             'icon' => 'warning',
         ]);
     }
+
     public function deleteRecipe(Request $request, AdminService $adminService)
     {
-        if (!Gate::allows('IsAdmin', 'App\\Models\admin')) {
-            throw new Exception("You Dont have Permission to execute this action ", 1);
+        if (! Gate::allows('IsAdmin', 'App\\Models\admin')) {
+            throw new Exception('You Dont have Permission to execute this action ', 1);
         }
         $valdiate = $request->validate([
-            'recipe_id' => 'required|integer'
+            'recipe_id' => 'required|integer',
         ]);
 
         $adminService->deleteRecipe($request->recipe_id);
@@ -206,11 +215,11 @@ class AdminController extends Controller
 
     public function deleteUser(AdminService $adminService, Request $request, $user_id)
     {
-        if (!Gate::allows('IsAdmin', 'App\\Models\admin')) {
-            throw new Exception("You Dont have Permission to execute this action ", 1);
+        if (! Gate::allows('IsAdmin', 'App\\Models\admin')) {
+            throw new Exception('You Dont have Permission to execute this action ', 1);
         }
         $valdiate = $request->validate([
-            'user_id' => 'required|integer'
+            'user_id' => 'required|integer',
         ]);
 
         $adminService->deleteUser($request->user_id);
@@ -221,6 +230,7 @@ class AdminController extends Controller
             'icon' => 'warning',
         ]);
     }
+
     public function AvailableRoles(Role $role)
     {
         return response()->json(['roles' => $role::$roles]);

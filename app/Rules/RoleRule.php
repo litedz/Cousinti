@@ -26,7 +26,7 @@ class RoleRule implements Rule
      */
     public function passes($attribute, $value)
     {
-        return in_array($value,Role::$roles);
+        return in_array($value, Role::$roles);
     }
 
     /**

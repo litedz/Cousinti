@@ -4,8 +4,6 @@ namespace App\Listeners;
 
 use App\Events\MessageReceivedEvent;
 use App\Models\message;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
 
 class MessageReceivedListener
 {
@@ -21,7 +19,6 @@ class MessageReceivedListener
     /**
      * Handle the event.
      *
-     * @param  \App\Events\MessageReceivedEvent  $event
      * @return void
      */
     public function handle(MessageReceivedEvent $event)

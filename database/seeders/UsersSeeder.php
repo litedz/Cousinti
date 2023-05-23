@@ -2,17 +2,13 @@
 
 namespace Database\Seeders;
 
-use App\Models\Profile;
-use App\Models\rank;
 use App\Models\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Foundation\Testing\WithFaker;
-use Faker\Generator;
 
 class UsersSeeder extends Seeder
 {
-
     protected $faker;
+
     /**
      * Run the database seeds.
      *
@@ -21,8 +17,7 @@ class UsersSeeder extends Seeder
     public function run()
     {
 
-
-        //create support user 
+        //create support user
         // user::create([
         //     'username' => 'Support',
         //     'avatar' => 'avatars/default.png',

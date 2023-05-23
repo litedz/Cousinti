@@ -11,18 +11,12 @@ use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WishRecipeController;
 use App\Jobs\Subscribe;
-use App\Mail\SendMailToUser;
 use App\Models\recipe;
-use App\Models\Role;
 use App\Models\User;
-use Faker\Generator;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Process;
-use Faker\Container\ContainerInterface as testfaker;
-use Faker\Generator as Faker;
-use Faker\Provider as provider;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,6 +59,7 @@ Route::get('types_recipe', [RecipeController::class, 'types_recipe'])->name('rec
 
 Route::get('/recipes/{recipe_id}', function ($recipe_id) {
     $recipe_exist = recipe::findOrFail($recipe_id);
+
     return view('recipes.single-recipe', compact(['recipe_id' => 'recipe_id']));
 })->name('single.recipe');
 
@@ -137,9 +132,8 @@ Route::POST('/register/facebook/', [UserController::class, 'RegisterWithFace']);
 //Api Facebook
 Route::post('/facebook/login', [LoginController::class, 'loginWithMedia']);
 
-Route::get('test', function (Faker $faker) {
-
-    return new SendMailToUser('test','provlem subject','loremazeaz eaeazeazeùlm eklemleaz');
+Route::get('test', function () {
+    event(new Registered(Auth()->user()));
 });
 Route::post('test', [MessageController::class, 'store']);
 
@@ -147,7 +141,7 @@ Route::post('test', [MessageController::class, 'store']);
 
 route::prefix('panel')->group(function () {
     route::middleware('auth:admin')->group(function () {
-        
+
         Route::view('/dashboard', 'admin.dashboard-admin')->name('admin.dashboard');
         route::get('logout', [AdminController::class, 'LogOutAdmin'])->name('admin.logout');
         route::get('users', [AdminController::class, 'users'])->name('admin.actions.users');
@@ -163,7 +157,7 @@ route::prefix('panel')->group(function () {
         route::get('roles', [AdminController::class, 'AvailableRoles'])->name('admin.roles.actions.get');
 
         Route::resource('admin_messages/', AdminMessagesController::class);
-        Route::post('messages/Reply', [AdminMessagesController::class,'ReplyMessage']);
+        Route::post('messages/Reply', [AdminMessagesController::class, 'ReplyMessage']);
     });
     route::resource('admin', AdminController::class)->middleware('auth')->except('index');
     route::post('admin/login', [AdminController::class, 'index'])->name('admin.index');
@@ -173,10 +167,8 @@ route::prefix('panel')->group(function () {
 
 // Route::post('test/admin/messages', [MessageController::class, 'ContactSuport']);
 
-
 Route::resource('messages', MessageController::class);
-Route::post('contact-support', [MessageController::class,'ContactSuport']);
-
+Route::post('contact-support', [MessageController::class, 'ContactSuport']);
 
 // Route::get('/tokens/create', function (Request $request) {
 //     $token = $request->user('admin')->createToken($request->token_name);

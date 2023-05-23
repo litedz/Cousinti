@@ -4,6 +4,7 @@ namespace App\Listeners;
 
 use App\Events\SubscribeEvent;
 use App\Mail\NewsRecipesMail;
+use App\Mail\WelcomeMail;
 use App\Models\Subscribe;
 use Illuminate\Support\Facades\Mail;
 use Throwable;
@@ -24,11 +25,12 @@ class SubscribeListener
      * Handle the event.
      */
     public function handle(SubscribeEvent $event)
-    {
-        Subscribe::create([
+    {;
+        $subscribe = Subscribe::create([
             'email' => $event->email,
         ]);
-        $mailable = Mail::to($event->email)->send(new NewsRecipesMail());
+
+        $mailable = Mail::to($event->email)->send(new WelcomeMail());
     }
 
     public function failed(Throwable $e)

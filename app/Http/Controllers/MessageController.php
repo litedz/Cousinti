@@ -3,14 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Events\MessageReceivedEvent;
-use App\Http\Requests\AdminMessageRequest;
 use App\Http\Requests\MessageRequest;
 use App\Models\admin_messages;
 use App\Models\message;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
-use Symfony\Component\Mailer\EventListener\MessageListener;
 
 class MessageController extends Controller
 {
@@ -28,6 +26,7 @@ class MessageController extends Controller
             'admin@support.com',
             'Thank you for your message. We appreciate you taking the time to reach out to us will respond to it as soon as'
         );
+
         return response()->json($messages);
     }
 
@@ -58,7 +57,7 @@ class MessageController extends Controller
                 'Thank you for your message. We appreciate you taking the time to reach out to us will respond to it as soon as'
             );
         } catch (\Throwable $th) {
-            throw new Exception("Error Send Message", 1);
+            throw new Exception('Error Send Message', 1);
         }
     }
 
@@ -125,7 +124,7 @@ class MessageController extends Controller
 
         try {
             admin_messages::create($Message);
-           $autoReply= MessageReceivedEvent::dispatch(
+            $autoReply = MessageReceivedEvent::dispatch(
                 auth()->user()->id,
                 'admin@support.com',
                 'Thank you for your message. We appreciate you taking the time to reach out to us will respond to it as soon as'
@@ -134,7 +133,7 @@ class MessageController extends Controller
                 return response()->json('Message Send');
             }
         } catch (\Throwable $th) {
-            throw new Exception("Error Send Message", 1);
+            throw new Exception('Error Send Message', 1);
         }
     }
 }

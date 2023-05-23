@@ -13,6 +13,6 @@ class image extends Model
 
     public function recipe()
     {
-       return $this->belongsTo(recipe::class);
+        return $this->belongsTo(recipe::class);
     }
 }

@@ -12,7 +12,7 @@ class recipe extends Model
 {
     use HasFactory;
 
-    protected $with = ['author', 'images_recipe','Type_recipe'];
+    protected $with = ['author', 'images_recipe', 'Type_recipe'];
 
     protected $fillable = ['name', 'rating', 'type_id', 'how_todo', 'user_id', 'description', 'how_long', 'level'];
 

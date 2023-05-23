@@ -82,14 +82,14 @@ class AdminPolicy
     }
 
     /**
-     * Only Admin 
+     * Only Admin
      */
     public function IsAdmin()
     {
         return admin::find(auth()->user()->id)->RoleUser->role == 'admin';
     }
 
-    public  function IsSuperAdmin()
+    public function IsSuperAdmin()
     {
         return auth('admin')->check();
     }

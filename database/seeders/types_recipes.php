@@ -15,8 +15,8 @@ class types_recipes extends Seeder
     public function run()
     {
         $types = ['حلويات', 'مملحات', 'صحي', 'معجنات', 'صباحيات'];
-        for ($i=0; $i <count($types) ; $i++) { 
+        for ($i = 0; $i < count($types); $i++) {
             model_types_recipes::create(['type' => $types[$i]]);
-         }
+        }
     }
 }

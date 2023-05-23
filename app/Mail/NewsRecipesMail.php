@@ -30,7 +30,7 @@ class NewsRecipesMail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Welcome in Cousinti Blog',
+            subject: 'Welcome in Our website Cousinti ',
         );
     }
 

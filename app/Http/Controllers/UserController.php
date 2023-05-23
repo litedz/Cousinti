@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Jobs\Subscribe as JobsSubscribe;
+use App\Events\SubscribeEvent;
+use App\Jobs\Subscribe;
 use App\Models\comments;
 use App\Models\Profile;
 use App\Models\Rating;
 use App\Models\recipe;
-use App\Models\Subscribe;
+use App\Models\Subscribe as ModelsSubscribe;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
@@ -125,14 +126,18 @@ class UserController extends Controller
 
         $delete_prev_avatar = Storage::disk('public')->delete($request->prev_avatar);
         $store_new_avatar = $request->file('new_avatar')->store('avatars', 'public');
-        if ($store_new_avatar) {
 
-            User::where('id', auth()->user()->id)->update([
-                'avatar' => $store_new_avatar,
-            ]);
+        return $store_new_avatar ? response()->json('updated') : false;
+        // if ($store_new_avatar) {
 
-            return response()->json('updated');
-        }
+        //     $user_user=User::where('id', auth()->user()->id)->update([
+        //         'avatar' => $store_new_avatar,
+        //     ]);
+
+        //     return response()->json('updated');
+        // }
+
+
     }
 
     public function changePassword(request $request, User $user_id)
@@ -195,18 +200,17 @@ class UserController extends Controller
         }
     }
 
-    public function Subscribe(Subscribe $subscribe, Request $e)
+    public function Subscribe(Request $e)
     {
         $validate = $e->validate([
             'email' => 'required|email|max:255',
         ]);
-        $exist_email = Subscribe::where('email', $e->email)->first();
+        $exist_email = ModelsSubscribe::where('email', $e->email)->first();
+
         if ($exist_email) {
             throw new Exception('You have already account with this email please login in');
         }
-
-        $subscribed = JobsSubscribe::dispatch($e->email);
-
+        $subscribed = event(new SubscribeEvent($e->email));;
         return $subscribed ? response()->json('تم الاشتراك معنا في الموقع بنجاح') : throw new Exception('Error Processing Request', 1);
     }
 

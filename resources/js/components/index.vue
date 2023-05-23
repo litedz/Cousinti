@@ -158,7 +158,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="subscribe mt-5">
+		<section class="subscribee mt-5">
 			<div class="p-4 position-relative z-5555">
 				<div class="container">
 					<div class="d-flex flex-column gap-2 justify-content-center p-4 position-relative w-100 z-9999">
@@ -167,10 +167,10 @@
 							<span class="fs-5 text-black-50">Onclick and you are clitch</span>
 						</div>
 						<div class="d-flex gap-1 justify-content-center">
-							<input type="text" name="" id="" placeholder="Please Subscribe Here . . ."
+							<input type="text" name="" id="" placeholder="Please Subscribesubscribee Here . . ."
 								class="form-control w-100-sc w-25-perso">
-							<button type="button" class="bg-second-color border-0 btn btn-danger"
-								name="subscribe">Subscribe</button>
+							<button type="button" class="bg-second-color border-0 btn btn-danger" 
+								name="subscribee">Subscribesubscribee</button>
 						</div>
 					</div>
 				</div>
@@ -346,7 +346,8 @@ export default {
 			show: "",
 			activeComponent: "",
 			showSubmenu: "",
-			subscrib: '',
+			subscribe: '',
+			buttonSubscrube:true,
 		};
 	},
 	methods: {
@@ -551,11 +552,11 @@ export default {
 	transition: all 1s;
 }
 
-section.subscribe div:first-of-type {
-	background: url('~/images/cover-subscribe.jpg');
+section.subscribee div:first-of-type {
+	/* background: url('~/images/cover-subscribee.jpg');
 	background-size: cover;
 	background-attachment: fixed;
-	background-position: center;
+	background-position: center; */
 }
 
 .random-recipe .row .cover {

@@ -305,6 +305,8 @@ export default {
             this.searchValue = '';
         },
 
+        
+
     },
 
 }

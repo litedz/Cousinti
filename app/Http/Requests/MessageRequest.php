@@ -27,7 +27,7 @@ class MessageRequest extends FormRequest
             'body' => 'required|min:50',
             'from_user_id' => 'required',
             'email' => 'email|required',
-            'subject' => 'required'
+            'subject' => 'required',
         ];
     }
 }

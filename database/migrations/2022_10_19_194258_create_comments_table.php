@@ -18,7 +18,7 @@ class CreateCommentsTable extends Migration
             $table->string('comment');
             $table->integer('parrent_id')->nullable();
             $table->foreignId('recipe_id')->constrained('recipes')->cascadeOnDelete();
-            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();;
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->timestamps();
         });
     }
