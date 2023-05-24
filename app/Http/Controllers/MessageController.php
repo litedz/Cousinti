@@ -69,7 +69,7 @@ class MessageController extends Controller
 
         $message_user = message::where('recipient_id', $request->message)->get();
 
-        return response()->json($message_user);
+        return response()->json(collect($message_user)->sortByDesc('created_at')->values());
     }
 
     /**

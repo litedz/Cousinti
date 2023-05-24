@@ -1,42 +1,22 @@
 <template>
   <div class="edit-profile">
     <status ref="status"></status>
-    <ul class="nav nav-tabs"
-        id="myTab"
-        role="tablist">
-      <li class="nav-item"
-          role="presentation">
-        <button class="nav-link active"
-                id="profile-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#profile"
-                type="button"
-                role="tab"
-                aria-controls="profile"
-                aria-selected="true">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+          role="tab" aria-controls="profile" aria-selected="true">
           Profile
         </button>
       </li>
-      <li class="nav-item"
-          role="presentation">
-        <button class="nav-link"
-                id="security-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#security"
-                type="button"
-                role="tab"
-                aria-controls="security"
-                aria-selected="false">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="security-tab" data-bs-toggle="tab" data-bs-target="#security" type="button"
+          role="tab" aria-controls="security" aria-selected="false">
           Security
         </button>
       </li>
     </ul>
-    <div class="tab-content"
-         id="myTabContent">
-      <div class="tab-pane fade active show"
-           id="profile"
-           role="tabpanel"
-           aria-labelledby="profile-tab">
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade active show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
         <div class="container-xl px-4 mt-4">
           <hr class="mt-0 mb-4" />
           <div class="row">
@@ -47,37 +27,25 @@
                 <div class="card-body text-center">
                   <!-- Profile picture image-->
                   <div class="Avatar w-100">
-                    <input type="file"
-                           name="avatar"
-                           id="avatar"
-                           hidden
-                           @change="buttonUnable()" />
-                    <div class="mx-auto position-relative rounded-circle w-50"
-                         @mouseenter="
-                           show = 'show_changeAvatar'
-                         "
-                         @mouseleave="show = ''">
+                    <input type="file" name="avatar" id="avatar" hidden @change="buttonUnable()" />
+                    <div class="mx-auto position-relative rounded-circle w-50" @mouseenter="
+                      show = 'show_changeAvatar'
+                      " @mouseleave="show = ''">
                       <Transition name="fade">
-                        <div class="h-100 position-absolute rounded-circle w-100"
-                             v-show="
-                               show ==
-                               'show_changeAvatar'
-                             "
-                             style="
+                        <div class="h-100 position-absolute rounded-circle w-100" v-show="show ==
+                          'show_changeAvatar'
+                          " style="
                                                         background: #28937e1c;
                                                     ">
                           <a href="#"
-                             class="end-0 fw-bolder position-absolute text-decoration-none text-white top-50 w-100"
-                             @click="getAvatar()">Change avatar</a>
+                            class="end-0 fw-bolder position-absolute text-decoration-none text-white top-50 w-100"
+                            @click="getAvatar()">Change avatar</a>
                         </div>
                       </Transition>
-                      <img class="img-account-profile rounded-circle mb-2 w-100"
-                           :src="
-                             w_path +
-                             '/storage/' +
-                             this.avatar
-                           "
-                           alt="" />
+                      <img class="img-account-profile rounded-circle mb-2 w-100" :src="w_path +
+                        '/storage/' +
+                        this.avatar
+                        " alt="" />
                     </div>
                   </div>
                   <!-- Profile picture help block-->
@@ -86,18 +54,13 @@
                   </div>
                   <!-- Profile picture upload button-->
 
-                  <button class="btn btn-primary mt-2"
-                          id="UploadAvatar"
-                          disabled
-                          @click="ChangeAvatar()"
-                          type="button">
+                  <button class="btn btn-primary mt-2" id="UploadAvatar" disabled @click="ChangeAvatar()" type="button">
                     صورة جديدة
                   </button>
                 </div>
               </div>
             </div>
-            <div class="col-xl-8"
-                 dir="rtl">
+            <div class="col-xl-8" dir="rtl">
               <!-- Account details card-->
               <div class="card mb-4">
                 <div class="card-header">
@@ -107,17 +70,13 @@
                   <form>
                     <!-- Form Group (username)-->
                     <div class="mb-3">
-                      <label class="small mb-1"
-                             for="inputUsername">{{
-                                 $t("labels.username")
-                             }}
+                      <label class="small mb-1" for="inputUsername">{{
+                        $t("labels.username")
+                      }}
                         (كيف سيظهر اسمك للمستخدمين
                         الآخرين على الموقع )</label>
-                      <input class="form-control"
-                             id="inputUsername"
-                             type="text"
-                             placeholder="Enter your username"
-                             v-model="username" />
+                      <input class="form-control" id="inputUsername" type="text" placeholder="Enter your username"
+                        v-model="username" />
                       <span class="text-danger">يمكنك تغيير اسم المستخدم مرة
                         واحدة
                       </span>
@@ -126,71 +85,48 @@
                     <div class="row gx-3 mb-3">
                       <!-- Form Group (first name)-->
                       <div class="col-md-6">
-                        <label class="small mb-1"
-                               for="inputFirstName">{{
-                                   $t("labels.first_name")
-                               }}</label>
-                        <input class="form-control"
-                               id="inputFirstName"
-                               type="text"
-                               placeholder="Enter your first name"
-                               v-model="first_name" />
+                        <label class="small mb-1" for="inputFirstName">{{
+                          $t("labels.first_name")
+                        }}</label>
+                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name"
+                          v-model="first_name" />
                       </div>
                       <!-- Form Group (last name)-->
                       <div class="col-md-6">
-                        <label class="small mb-1"
-                               for="inputLastName">{{
-                                   $t("labels.last_name")
-                               }}</label>
-                        <input class="form-control"
-                               id="inputLastName"
-                               type="text"
-                               placeholder="Enter your last name"
-                               v-model="last_name" />
+                        <label class="small mb-1" for="inputLastName">{{
+                          $t("labels.last_name")
+                        }}</label>
+                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name"
+                          v-model="last_name" />
                       </div>
                     </div>
                     <!-- Form Group (email address)-->
                     <div class="mb-3">
-                      <label class="small mb-1"
-                             for="inputEmailAddress">{{ $t("labels.email") }}</label>
-                      <input class="form-control"
-                             id="inputEmailAddress"
-                             type="email"
-                             placeholder="Enter your email address"
-                             v-model="email" />
+                      <label class="small mb-1" for="inputEmailAddress">{{ $t("labels.email") }}</label>
+                      <input class="form-control" id="inputEmailAddress" type="email"
+                        placeholder="Enter your email address" v-model="email" />
                     </div>
                     <!-- Form Row-->
                     <div class="row gx-3 mb-3">
                       <!-- Form Group (phone number)-->
                       <div class="col-md-6">
-                        <label class="small mb-1"
-                               for="inputPhone">{{
-                                   $t("labels.phone")
-                               }}</label>
-                        <input class="form-control"
-                               id="inputPhone"
-                               type="tel"
-                               placeholder="Enter your phone number"
-                               v-model="phone" />
+                        <label class="small mb-1" for="inputPhone">{{
+                          $t("labels.phone")
+                        }}</label>
+                        <input class="form-control" id="inputPhone" type="tel" placeholder="Enter your phone number"
+                          v-model="phone" />
                       </div>
                       <!-- Form Group (birthday)-->
                       <div class="col-md-6">
-                        <label class="small mb-1"
-                               for="inputBirthday">{{
-                                   $t("labels.age")
-                               }}</label>
-                        <input class="form-control"
-                               id="inputBirthday"
-                               type="text"
-                               name="birthday"
-                               placeholder="Enter your birthday"
-                               v-model="age" />
+                        <label class="small mb-1" for="inputBirthday">{{
+                          $t("labels.age")
+                        }}</label>
+                        <input class="form-control" id="inputBirthday" type="text" name="birthday"
+                          placeholder="Enter your birthday" v-model="age" />
                       </div>
                     </div>
                     <!-- Save changes button-->
-                    <button class="btn btn-primary"
-                            type="button"
-                            @click="UpdateInfo()">
+                    <button class="btn btn-primary" type="button" @click="UpdateInfo()">
                       {{ $t("labels.save_change") }}
                     </button>
                   </form>
@@ -202,10 +138,7 @@
       </div>
 
       <!-- tab security -->
-      <div class="tab-pane fade"
-           id="security"
-           role="tabpanel"
-           aria-labelledby="security-tab">
+      <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
         <div class="container-xl px-4 mt-4">
           <hr class="mt-0 mb-4" />
           <div class="row">
@@ -217,43 +150,26 @@
                   <form>
                     <!-- Form Group (current password)-->
                     <div class="mb-3">
-                      <FormKit type="password"
-                               id="currentPassword"
-                               v-model="currentPassword"
-                               :label="$t('labels.currentPassword')"
-                               label-class="small mb-1"
-                               input-class="form-control"
-                               :placeholder="$t('labels.currentPassword')" />
+                      <FormKit type="password" id="currentPassword" v-model="currentPassword"
+                        :label="$t('labels.currentPassword')" label-class="small mb-1" input-class="form-control"
+                        :placeholder="$t('labels.currentPassword')" />
                     </div>
                     <!-- Form Group (new password)-->
                     <FormKit type="group">
                       <div class="mb-3">
 
 
-                        <FormKit type="password"
-                                 name="password"
-                                 v-model="newPassword"
-                                 :label="$t('labels.newPassword')"
-                                 label-class="small mb-1"
-                                 input-class="form-control"
-                                 :placeholder="$t('labels.newPassword')" />
+                        <FormKit type="password" name="password" v-model="newPassword" :label="$t('labels.newPassword')"
+                          label-class="small mb-1" input-class="form-control" :placeholder="$t('labels.newPassword')" />
                       </div>
                       <!-- Form Group (confirm password)-->
                       <div class="mb-3">
-                        <FormKit type="password"
-                                 name="password_confirm"
-                                 validation="confirm"
-                                 v-model="confirmPassword"
-                                 validation-visibilty="live"
-                                 :label="$t('labels.confirmPassword')"
-                                 label-class="small mb-1"
-                                 input-class="form-control"
-                                 :placeholder="$t('labels.confirmPassword')" />
+                        <FormKit type="password" name="password_confirm" validation="confirm" v-model="confirmPassword"
+                          validation-visibilty="live" :label="$t('labels.confirmPassword')" label-class="small mb-1"
+                          input-class="form-control" :placeholder="$t('labels.confirmPassword')" />
                       </div>
                     </FormKit>
-                    <button class="btn btn-primary"
-                            @click="changePassword()"
-                            type="button">
+                    <button class="btn btn-primary" @click="changePassword()" type="button">
                       حفظ
                     </button>
                   </form>
@@ -275,22 +191,13 @@
                   </p>
                   <form>
                     <div class="form-check">
-                      <input class="form-check-input"
-                             id="radioPrivacy1"
-                             type="radio"
-                             name="radioPrivacy"
-                             checked="" />
-                      <label class="form-check-label"
-                             for="radioPrivacy1">Public (posts are available to
+                      <input class="form-check-input" id="radioPrivacy1" type="radio" name="radioPrivacy" checked="" />
+                      <label class="form-check-label" for="radioPrivacy1">Public (posts are available to
                         all users)</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input"
-                             id="radioPrivacy2"
-                             type="radio"
-                             name="radioPrivacy" />
-                      <label class="form-check-label"
-                             for="radioPrivacy2">Private (posts are available to
+                      <input class="form-check-input" id="radioPrivacy2" type="radio" name="radioPrivacy" />
+                      <label class="form-check-label" for="radioPrivacy2">Private (posts are available to
                         only users in your
                         groups)</label>
                     </div>
@@ -310,23 +217,14 @@
                   </p>
                   <form>
                     <div class="form-check">
-                      <input class="form-check-input"
-                             id="radioUsage1"
-                             type="radio"
-                             name="radioUsage"
-                             checked="" />
-                      <label class="form-check-label"
-                             for="radioUsage1">Yes, share data and crash
+                      <input class="form-check-input" id="radioUsage1" type="radio" name="radioUsage" checked="" />
+                      <label class="form-check-label" for="radioUsage1">Yes, share data and crash
                         reports with app
                         developers</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input"
-                             id="radioUsage2"
-                             type="radio"
-                             name="radioUsage" />
-                      <label class="form-check-label"
-                             for="radioUsage2">No, limit my data sharing with
+                      <input class="form-check-input" id="radioUsage2" type="radio" name="radioUsage" />
+                      <label class="form-check-label" for="radioUsage2">No, limit my data sharing with
                         app developers</label>
                     </div>
                   </form>
@@ -345,8 +243,7 @@
                     sure you want to delete your account,
                     select the button below.
                   </p>
-                  <button class="btn btn-danger-soft text-danger"
-                          type="button">
+                  <button class="btn btn-danger-soft text-danger" @click="deleteAccount()" type="button">
                     I understand, delete my account
                   </button>
                 </div>
@@ -491,15 +388,27 @@ export default {
         this.currentPassword = '';
         this.confirmPassword = '';
       }).catch((error) => {
-
-
         this.$refs.status.Display(
           "danger",
           Object.values(error.response.data.errors).toString(),
           "خطا"
         );
       });
-    }
+    },
+    deleteAccount() {
+      let data = new FormData();
+      data.append('user_id', this.$attrs.auth_id);
+      data.append('_method', 'DELETE');
+      axios.post('user/user/' + this.$attrs.auth_id, data).then((response) => {
+        if (response.data.status == 'Deleted') {
+          this.$refs.status.Display(response.data.style, response.data.message, response.data.status, response.data.icon);
+          setTimeout(() => {
+            window.location.href = '/home';
+          }, 3000);
+
+        }
+      }).catch((error) => { });
+    },
   },
 };
 </script>

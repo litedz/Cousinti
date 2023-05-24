@@ -11,9 +11,12 @@ use App\Models\recipe;
 use App\Models\Subscribe as ModelsSubscribe;
 use App\Models\User;
 use Exception;
+use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\Rule as ValidationRule;
 
 class UserController extends Controller
 {
@@ -116,9 +119,21 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(User $user)
+    public function destroy(User $user, Request $request)
     {
-        //
+
+
+        $val = $request->validate([
+            'user_id' => ['required', ValidationRule::requiredIf(auth()->user()->id)],
+        ]);
+        $deleteUser = User::find($request->user_id)->delete();
+
+        return $deleteUser ? response()->json([
+            'message' => 'Account Delete Please Wait you will redirect in 3s ',
+            'style' => 'danger',
+            'icon' => 'stop',
+            'status' => 'Deleted',
+        ]) : throw new Exception("Error Processing Request", 1);
     }
 
     public function updateAvatar(request $request)
@@ -165,11 +180,13 @@ class UserController extends Controller
     {
 
         $liked = Rating::where('user_id', auth()->user()->id)->where('recipe_id', $request->recipe_id)->get();
-        if (count($liked) == 0) {
-            return response()->json(['liked' => false]);
-        } else {
-            return response()->json(['liked' => true]);
-        }
+
+        return count($liked) ? response()->json(['liked' => false]) : response()->json(['liked' => true]);
+        // if (count($liked) == 0) {
+        //     return response()->json(['liked' => false]);
+        // } else {
+        //     return response()->json(['liked' => true]);
+        // }
     }
 
     public function RegisterWithFace(Request $e)
@@ -213,15 +230,13 @@ class UserController extends Controller
         try {
 
             $subscribed = Subscribe::dispatchSync($e->email);
-
         } catch (\Throwable $th) {
             throw new Exception($th->getMessage(), 1);
         }
 
         // $subscribed = event(new SubscribeEvent($e->email));
 
-       return response()->json('تم الاشتراك معنا في الموقع بنجاح');
-
+        return response()->json('تم الاشتراك معنا في الموقع بنجاح');
     }
 
     public function LastActivity()

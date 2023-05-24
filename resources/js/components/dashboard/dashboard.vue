@@ -93,7 +93,7 @@
             </a>
           </li>
           <li class="sidebar-item">
-            <a href="#" class='sidebar-link'>
+            <a href="#" class='sidebar-link' @click="activeComponent = 'contact-us'">
               <i class="text-danger" data-feather="shield" width="20"></i>
               <span class="text-capitalize">Contact Support</span>
             </a>
@@ -152,7 +152,7 @@
 
                     <a href="#" class="text-capitalize text-decoration-nonee">{{ message.from }}</a>
                     <div class="fs-6 lh-lg message-text">{{ message.message }}</div><span
-                      class="time fs-6 text-muted time">12/12/1444</span>
+                      class="time fs-6 text-muted time">{{formateDateWith(message.created_at,'LLL')}}</span>
                   </div>
                 </div>
               </div>
@@ -182,14 +182,10 @@
 
     <!-- Main content -->
     <div class="main-content container-fluid">
-
       <KeepAlive>
-        <component :is="this.activeComponent" 
-        v-on:update-recipe="get_id_recipe($event)"
-        v-on:send-message="getMessages()"
+        <component :is="this.activeComponent" v-on:update-recipe="get_id_recipe($event)" v-on:send-message="getMessages()"
           :update_recipe_id="this.recipe_update_id" :action="this.action_recipe" :auth_id="info.id"
-          :auth_email="info.email" 
-           />
+          :auth_email="info.email" />
       </KeepAlive>
     </div>
 

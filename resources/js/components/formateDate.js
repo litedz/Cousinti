@@ -5,7 +5,7 @@ export const Refomate = {
             return moment(created_at, false).fromNow();
         },
         formateDateWith(created_at,format){
-            return moment(created_at).creationData().input;
+            return moment(created_at).format(format);
         }
     },
 }
