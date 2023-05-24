@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\SubscribeEvent;
+
 use App\Jobs\Subscribe;
 use App\Models\comments;
 use App\Models\Profile;
@@ -137,7 +137,6 @@ class UserController extends Controller
         //     return response()->json('updated');
         // }
 
-
     }
 
     public function changePassword(request $request, User $user_id)
@@ -210,8 +209,19 @@ class UserController extends Controller
         if ($exist_email) {
             throw new Exception('You have already account with this email please login in');
         }
-        $subscribed = event(new SubscribeEvent($e->email));;
-        return $subscribed ? response()->json('تم الاشتراك معنا في الموقع بنجاح') : throw new Exception('Error Processing Request', 1);
+
+        try {
+
+            $subscribed = Subscribe::dispatchSync($e->email);
+
+        } catch (\Throwable $th) {
+            throw new Exception($th->getMessage(), 1);
+        }
+
+        // $subscribed = event(new SubscribeEvent($e->email));
+
+       return response()->json('تم الاشتراك معنا في الموقع بنجاح');
+
     }
 
     public function LastActivity()

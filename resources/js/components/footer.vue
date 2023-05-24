@@ -122,7 +122,10 @@ export default {
 
                     console.log(error);
                     if (error.response) {
+                        //unable subscribe btn 
+                        this.buttonSubscrube = false;
                         this.$refs.status.Display('danger', error.response.data.message, 'Error', 'exclamation-circle');
+
                     }
 
                 });

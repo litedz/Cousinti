@@ -117,6 +117,7 @@ Route::resource('comments', CommentsController::class);
 Route::resource('messages', MessageController::class);
 Route::post('messages/conversation', [MessageController::class, 'conversation']);
 
+
 //Authantication
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('check.login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.user');
@@ -156,7 +157,8 @@ route::prefix('panel')->group(function () {
         route::post('role/change', [AdminController::class, 'ChangeRoleUser'])->name('admin.roles.change');
         route::get('roles', [AdminController::class, 'AvailableRoles'])->name('admin.roles.actions.get');
 
-        Route::resource('admin_messages/', AdminMessagesController::class);
+        Route::resource('admin_messages', AdminMessagesController::class);
+
         Route::post('messages/Reply', [AdminMessagesController::class, 'ReplyMessage']);
     });
     route::resource('admin', AdminController::class)->middleware('auth')->except('index');

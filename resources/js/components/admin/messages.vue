@@ -36,7 +36,11 @@
                                                     @click="ReplyMessageForm(msg.from_user)">
                                                     <span class="fa fa-reply text-first"></span>
                                                     <span>Reply</span>
+
                                                 </div>
+                                                <button @click="RemoveMesssage(msg.id)"
+                                                    class="btn btn-danger btn-primary position-absolute"
+                                                    style="bottom: 5%;right: 1%;">Delete</button>
                                             </div>
                                         </div>
                                     </li>
@@ -48,6 +52,7 @@
                 </div>
             </div>
         </div>
+        <!-- Form reply user -->
         <div class="bg-gray-700 form-reply left-25 p-3 position-fixed rounded-1 top-25 w-50" v-if="Show_form_reply">
             <div class="w-100">
                 <span class="bg-white fa fa-remove p-1 pointer px-2 rounded-circle text-right"
@@ -127,6 +132,17 @@ export default {
             });
 
         },
+        RemoveMesssage(message_id) {
+            let data = new FormData();
+            data.append('message_id', message_id);
+            data.append('_method', 'DELETE');
+            axios.post('admin_messages/delete', data).then((response) => {
+                this.$refs.status.Display('success', response.data.message, 'status', 'info');
+                this.getMessagesAdmin();
+            }).catch((error) => {
+                this.$refs.status.Display('danger', error.response.data.message, 'warning', 'warning');
+            });
+        }
     },
 }
 </script>

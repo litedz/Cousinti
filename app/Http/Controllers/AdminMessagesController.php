@@ -77,11 +77,21 @@ class AdminMessagesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function destroy(message $message)
+    public function destroy(message $message,Request $request)
     {
-        //
+        $val = $request->validate([
+            'message_id' => 'required|integer'
+        ]);
+
+        try {
+          $deleteMessage =admin_messages::find($request->message_id)->delete();
+          return response()->json(['message' => 'Message Deleted']);
+
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     public function ReplyMessage(Request $request)
