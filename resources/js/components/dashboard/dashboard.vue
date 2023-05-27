@@ -1,5 +1,6 @@
 <template>
   <div id="sidebar" class='active'>
+    <status ref="status"></status>
     <div class="sidebar-wrapper active">
       <div class="sidebar-header">
         <img class="w-100" :src="w_path + '/images/logo.png'" alt="" srcset="">
@@ -51,19 +52,6 @@
 
                 </a>
               </li>
-              <li class="sub-item">
-                <a href="#">
-                  <div class="d-flex ">
-                    <span data-feather="activity" class="text-warning"></span>
-                    <span>Pounded Recipes</span>
-
-                  </div>
-
-                </a>
-              </li>
-
-
-
             </ul>
 
           </li>
@@ -84,12 +72,6 @@
             <a href="#" class='sidebar-link'>
               <i class="text-danger" data-feather="settings" width="20"></i>
               <span class="text-capitalize">Setting</span>
-            </a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#" class='sidebar-link'>
-              <i class="text-danger" data-feather="shield" width="20"></i>
-              <span class="text-capitalize">Security</span>
             </a>
           </li>
           <li class="sidebar-item">
@@ -142,17 +124,19 @@
               </div>
             </a>
             <Transition name="fade">
-              <div class="bg-white messages mx-4 p-2 position-absolute shadow top-100 w-50 z-5555" style="right: 8vh;"
-                v-show="show_messages">
+              <div class="bg-white messages mx-4 p-2 position-absolute shadow top-100 w-50 z-5555"
+                style="right: 8vh;height: 70vh;overflow-y: auto;" v-show="show_messages">
                 <h1 class="text-center fs-2 text-muted text-capitalize" v-if="messages.length == 0">You dont have Any
                   Message</h1>
                 <div class="align-items-start flex-column border-bottom d-flex mb-1 message">
-                  <div class="border-bottom d-flex flex-column justify-content-start m-2 mx-2 pb-2 w-100"
+                  <div
+                    class="border-bottom d-flex flex-column justify-content-start m-2 mx-2 pb-2 w-100 position-relative"
                     v-for="message in messages">
-
                     <a href="#" class="text-capitalize text-decoration-nonee">{{ message.from }}</a>
-                    <div class="fs-6 lh-lg message-text">{{ message.message }}</div><span
-                      class="time fs-6 text-muted time">{{formateDateWith(message.created_at,'LLL')}}</span>
+                    <div class="fs-6 lh-lg message-text">{{ message.message }}</div>
+                    <span class="time fs-6 text-muted time">{{ formateDateWith(message.created_at,'LLL') }}</span>
+                    <button type="button" class="btn btn-danger btn-sm end-0 fs-6 m-2 position-absolute top-0"
+                      @click="DeleteMessage(message.id)">Delete Message</button>
                   </div>
                 </div>
               </div>
@@ -173,7 +157,9 @@
 
             </div>
             <div class="">
-              <a class="dropdown-item" href="#"><i class="third-color" data-feather="log-out"></i> Logout</a>
+              <a class="dropdown-item" href="#" @click="logout()">
+                <i class="third-color" data-feather="log-out"></i>
+                Logout</a>
             </div>
           </li>
         </ul>
@@ -183,7 +169,10 @@
     <!-- Main content -->
     <div class="main-content container-fluid">
       <KeepAlive>
-        <component :is="this.activeComponent" v-on:update-recipe="get_id_recipe($event)" v-on:send-message="getMessages()"
+        <component 
+        :is="this.activeComponent" 
+        v-on:update-recipe="get_id_recipe($event)" 
+        v-on:send-message="getMessages()"
           :update_recipe_id="this.recipe_update_id" :action="this.action_recipe" :auth_id="info.id"
           :auth_email="info.email" />
       </KeepAlive>
@@ -203,7 +192,7 @@ export default {
   },
   data() {
     return {
-      activeComponent: "admin-messages",
+      activeComponent: "static_user",
       action_recipe: "",
       recipe_update_id: "", // id of recipe for update
       show_messages: false,
@@ -248,8 +237,6 @@ export default {
 
     getMessages() {
       let data = new FormData();
-      // data.append('from_user_id' ,this.$attrs.auth_id);
-      // data.append('message' ,);
       axios({ method: "get", url: "/messages/" + this.info.id })
         .then((response) => {
           if (response.data) {
@@ -259,9 +246,22 @@ export default {
         .catch((error) => { });
 
     },
+    DeleteMessage(message_id) {
+      let data = new FormData();
 
+      data.append("message_id", message_id);
+      data.append("_method", "DELETE");
+      axios.post('messages/' + message_id, data).then((response) => {
+        if (response.data) {
+          this.$refs.status.Display(response.data.style, response.data.message, response.data.status, response.data.icon);
+          this.getMessages();
+        }
+      })
+        .catch((error) => { });
+
+    },
     logout() {
-      axios({ method: "get", url: "/logout" })
+      axios.get('/logout')
         .then((response) => {
           if (response.data) {
             if (response.data == "logout") {

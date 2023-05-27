@@ -21,11 +21,36 @@
                             <span class="text-capitalize">Table Recipes</span>
                         </a>
                     </li>
-                    <li class="sidebar-item" @click="activeComponent = 'admin-messages'">
-                        <a href="#" class='bg-light sidebar-link '>
-                            <i class="text-danger" data-feather="activity" width="20"></i>
-                            <span class="text-capitalize">Messages</span>
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i class="text-danger" data-feather="mail" width="20"></i>
+                            <span>Messages</span>
                         </a>
+
+                        <ul class="submenu p-0">
+
+                            <li class="sub-item bg-gray border-bottom border-white">
+                                <a href="#">
+                                    <div class="d-flex ">
+                                        <span data-feather="plus-circle" class="text-success"></span>
+                                        <span  @click="activeComponent = 'admin-messages'">Show Message</span>
+
+                                    </div>
+
+                                </a>
+                            </li>
+                            <li class="sub-item bg-gray border-bottom border-white">
+                                <a href="#">
+                                    <div class="d-flex ">
+                                        <span data-feather="plus-circle" class="text-success"></span>
+                                        <span @click="activeComponent = 'add-message'">Send Message</span>
+                                    </div>
+
+                                </a>
+                            </li>
+
+                        </ul>
+
                     </li>
                 </ul>
             </div>
@@ -131,7 +156,7 @@ export default {
     props: { info: Object },
     data() {
         return {
-            activeComponent: "admin-messages",
+            activeComponent: "add-message",
 
         };
     },

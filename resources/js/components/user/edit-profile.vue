@@ -157,10 +157,9 @@
                     <!-- Form Group (new password)-->
                     <FormKit type="group">
                       <div class="mb-3">
-
-
-                        <FormKit type="password" name="password" v-model="newPassword" :label="$t('labels.newPassword')"
-                          label-class="small mb-1" input-class="form-control" :placeholder="$t('labels.newPassword')" />
+                        <FormKit type="password" name="password" v-model="newPassword" :label="$t('labels.newPassword')
+                          " label-class="small mb-1" input-class="form-control"
+                          :placeholder="$t('labels.newPassword')" />
                       </div>
                       <!-- Form Group (confirm password)-->
                       <div class="mb-3">
@@ -232,7 +231,6 @@
               </div>
             </div>
             <div class="col-lg-4">
-
               <!-- Delete account card-->
               <div class="card mb-4">
                 <div class="card-header">Delete Account</div>
@@ -259,7 +257,9 @@
 <script>
 export default {
   inject: ["w_path"],
-  mounted() { },
+  mounted() {
+    this.getUser(this.$attrs.auth_id);
+  },
   activated() {
     this.getUser(this.$attrs.auth_id);
   },
@@ -274,16 +274,17 @@ export default {
       age: "",
       show: "",
       avatar: "",
-      currentPassword: '',
-      newPassword: '',
-      confirmPassword: '',
+      currentPassword: "",
+      newPassword: "",
+      confirmPassword: "",
     };
   },
   methods: {
     getUser(id) {
       //   const data = new FormData();
       //   data.append(this.username, this.username);
-      axios({ method: "get", url: "user/" + id + "+/edit  " })
+      axios
+        .get("user/user/" + id + "/edit")
         .then((response) => {
           console.log(response.data.profile);
           if (response.data) {
@@ -300,7 +301,7 @@ export default {
     },
 
     UpdateInfo() {
-      const data = new FormData();
+      let data = new FormData();
       data.append("username", this.username);
       data.append("name", this.name);
       data.append("first_name", this.first_name);
@@ -308,28 +309,28 @@ export default {
       data.append("email", this.email);
       data.append("phone", this.phone);
       data.append("age", this.age);
+      data.append("user_id", this.$attrs.auth_id);
       data.append("_method", "PUT");
       // data.append("avatar", document.getElementById('avatar').files[0]);
-      axios({
-        method: "post",
-        url: "user/" + this.$attrs.auth_id,
-        data: data,
-      })
+      axios.post("/user/user/" + this.$attrs.auth_id, data)
         .then((response) => {
           if (response.data) {
             if (response.data == "updated") {
               this.$refs.status.Display(
                 "success",
-                " تم تحديث المعلومات الخاص بك بنجاح",
+                " تم تحديث المعلومات الخاص بك بنجاح سيتم تحديث الصفحة في 2 ث ",
                 "تحديث"
               );
+             setTimeout(() => {
+              window.location.reload();
+             }, 2000);
               this.getUser(this.$attrs.auth_id);
             }
           }
-          console.log(response.data);
         })
         .catch((error) => {
-          console.log(error.response.errors);
+          this.$refs.status.Display('danger', error.response.data.message, 'status', 'stop');
+          
         });
     },
     getAvatar() {
@@ -373,41 +374,50 @@ export default {
 
     changePassword() {
       const data = new FormData();
-      data.append('currentPassword', this.currentPassword);
-      data.append('newPassword', this.newPassword);
-      data.append('confirmPassword', this.confirmPassword);
-      axios({ method: 'post', url: 'user/password', data: data }).then((response) => {
-        if (response.data == "updated") {
+      data.append("currentPassword", this.currentPassword);
+      data.append("newPassword", this.newPassword);
+      data.append("confirmPassword", this.confirmPassword);
+      axios({ method: "post", url: "user/password", data: data })
+        .then((response) => {
+          if (response.data == "updated") {
+            this.$refs.status.Display(
+              "success",
+              " تم تغيير كلمة المرور بنجاح",
+              "تحديث"
+            );
+          }
+          this.newPassword = "";
+          this.currentPassword = "";
+          this.confirmPassword = "";
+        })
+        .catch((error) => {
           this.$refs.status.Display(
-            "success",
-            " تم تغيير كلمة المرور بنجاح",
-            "تحديث"
+            "danger",
+            Object.values(error.response.data.errors).toString(),
+            "خطا"
           );
-        }
-        this.newPassword = '';
-        this.currentPassword = '';
-        this.confirmPassword = '';
-      }).catch((error) => {
-        this.$refs.status.Display(
-          "danger",
-          Object.values(error.response.data.errors).toString(),
-          "خطا"
-        );
-      });
+        });
     },
     deleteAccount() {
       let data = new FormData();
-      data.append('user_id', this.$attrs.auth_id);
-      data.append('_method', 'DELETE');
-      axios.post('user/user/' + this.$attrs.auth_id, data).then((response) => {
-        if (response.data.status == 'Deleted') {
-          this.$refs.status.Display(response.data.style, response.data.message, response.data.status, response.data.icon);
-          setTimeout(() => {
-            window.location.href = '/home';
-          }, 3000);
-
-        }
-      }).catch((error) => { });
+      data.append("user_id", this.$attrs.auth_id);
+      data.append("_method", "DELETE");
+      axios
+        .post("user/user/" + this.$attrs.auth_id, data)
+        .then((response) => {
+          if (response.data.status == "Deleted") {
+            this.$refs.status.Display(
+              response.data.style,
+              response.data.message,
+              response.data.status,
+              response.data.icon
+            );
+            setTimeout(() => {
+              window.location.href = "/home";
+            }, 3000);
+          }
+        })
+        .catch((error) => { });
     },
   },
 };

@@ -53,12 +53,12 @@
             </div>
         </div>
         <!-- Form reply user -->
-        <div class="bg-gray-700 form-reply left-25 p-3 position-fixed rounded-1 top-25 w-50" v-if="Show_form_reply">
-            <div class="w-100">
+        <div class="bg-gray form-reply left-25 p-3 position-fixed rounded-1 top-25 w-50" v-if="Show_form_reply">
+            <div class="w-100 mb-2">
                 <span class="bg-white fa fa-remove p-1 pointer px-2 rounded-circle text-right"
                     @click="Show_form_reply = false"></span>
             </div>
-            <form action="" class="bg-light d-grid gap-2 mx-auto p-4 rounded-1 w-50">
+            <form action="" class="bg-white d-grid gap-2 mx-auto p-4 rounded-1 shadow w-100">
                 <label for="reply">Reply To : <span class="fw-bolder">test</span>
                 </label>
                 <input type="text" class="form-control" name="subject" v-model="Reply.subject">

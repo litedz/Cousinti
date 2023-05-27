@@ -97,7 +97,7 @@ class UserController extends Controller
      *
      * @param  int  $user_id Required
      */
-    public function update(User $user, Request $request, $user_id)
+    public function update(Request $request, $user_id)
     {
 
         $valid = $request->validate([
@@ -139,19 +139,26 @@ class UserController extends Controller
     public function updateAvatar(request $request)
     {
 
+        $validate = $request->validate([
+            'prev_avatar' => 'required'
+        ]);
+
+        $checkExistFile = Storage::disk('public')->exists($request->prev_avatar);
+
+        if (!$checkExistFile) {
+            throw new Exception("File Doesn Exists", 1);
+        }
+
         $delete_prev_avatar = Storage::disk('public')->delete($request->prev_avatar);
         $store_new_avatar = $request->file('new_avatar')->store('avatars', 'public');
 
-        return $store_new_avatar ? response()->json('updated') : false;
-        // if ($store_new_avatar) {
 
-        //     $user_user=User::where('id', auth()->user()->id)->update([
-        //         'avatar' => $store_new_avatar,
-        //     ]);
-
-        //     return response()->json('updated');
-        // }
-
+        if ($store_new_avatar) {
+            $user_user = User::where('id', auth()->user()->id)->update([
+                'avatar' => $store_new_avatar,
+            ]);
+            return response()->json('updated');
+        }
     }
 
     public function changePassword(request $request, User $user_id)
@@ -241,11 +248,15 @@ class UserController extends Controller
 
     public function LastActivity()
     {
-        $last_recipes = recipe::where('user_id', 20)->get();
+        $last_recipes = recipe::where('user_id', auth()->user()->id)->get();
         $last_comments = comments::with('recipe')->where('user_id', 20)->get();
 
         $last_activitys = collect($last_comments)->merge($last_recipes)->sortByDesc('created_at')->values();
 
         return response()->json($last_activitys);
+    }
+    public function logout()
+    {
+        # code...
     }
 }

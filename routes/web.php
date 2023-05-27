@@ -158,6 +158,7 @@ route::prefix('panel')->group(function () {
         route::get('roles', [AdminController::class, 'AvailableRoles'])->name('admin.roles.actions.get');
 
         Route::resource('admin_messages', AdminMessagesController::class);
+        Route::post('admin_message/message/sending',[AdminMessagesController::class,'MessageUser']);
 
         Route::post('messages/Reply', [AdminMessagesController::class, 'ReplyMessage']);
     });

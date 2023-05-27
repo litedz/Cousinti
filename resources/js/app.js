@@ -100,6 +100,7 @@ import recipe_table from "./components/admin/recipes.vue";
 import latest_activity_table from "./components/admin/latest-activity.vue";
 import admins_table from "./components/admin/admins-table.vue";
 import admin_messages from "./components/admin/messages.vue";
+import add_message from "./components/admin/add-message.vue";
 
 
 import { plugin, defaultConfig } from '@formkit/vue'
@@ -183,14 +184,9 @@ app.component('wishlist-setting', wishlist_setting);
 app.component('btn-wishlist', btn_wishlist);
 app.component('img-hoverable', img_hoverable);
 
-
-
 app.component('wishlist', wishlist);
 
-
 //admin
-
-
 app.component('dashboard-admin', dashboard_admin);
 app.component('login-admin', login_admin);
 app.component('users-table', users_table);
@@ -198,6 +194,7 @@ app.component('recipes-table', recipe_table);
 app.component('latest-activity-table', latest_activity_table);
 app.component('admins-table', admins_table);
 app.component('admin-messages', admin_messages);
+app.component('add-message', add_message);
 
 
 import { Refomate } from './components/formateDate';

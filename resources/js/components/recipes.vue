@@ -153,7 +153,6 @@ export default {
 };
 
 $(document).ready(function () {
-
   // Single Recette
   $(".single_recipe .image").mouseenter(function () {
     $(this).find(".effect-image").fadeIn();

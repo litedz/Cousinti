@@ -1,6 +1,10 @@
 <template>
     <status ref="status"></status>
-    <div class="update-recipe bg-light mx-auto mb-5 p-3 rounded w-75" dir="rtl">
+
+    <div class="text-center" v-if="this.$attrs.update_recipe_id.length == 0">
+        <h1 class="bg-white p-3 rounded text-muted">Please Select Recipe for Update</h1>
+    </div>
+    <div class="update-recipe bg-light mx-auto mb-5 p-3 rounded w-75" dir="rtl" v-else>
         <h3 class="text-center text-info">
             <span class="fa fa-refresh m-1 font-1"></span>تحديث الوصفة
         </h3>
@@ -99,12 +103,11 @@
                         <li v-if="image.length !== 0"
                             class="m-1 bg-light fa fa-remove font-3 position-absolute px-1 rounded-circle text-danger top-0 pointer"
                             @click="removeOtherImage(image.id)"></li>
-                        <img class="rounded" style="width: 250px; height: 150px" :src="
-                            this.w_path +
+                        <img class="rounded" style="width: 250px; height: 150px" :src="this.w_path +
                             '/' +
                             'storage/recipes/' +
                             image.name
-                        " />
+                            " />
                     </div>
                 </div>
             </div>

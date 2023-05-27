@@ -13,7 +13,6 @@ class LoginController extends Controller
     public function index()
     {
         return view('user.login');
-
     }
 
     public function login(Request $e)
@@ -39,14 +38,17 @@ class LoginController extends Controller
         return response()->json([
             'status' => 'failed',
             'class' => 'alert-danger',
-            'message' => 'Failed Login the  <strong>'.$e->email.'</strong> or  <strong>Password</strong> is incorrect',
+            'message' => 'Failed Login the  <strong>' . $e->email . '</strong> or  <strong>Password</strong> is incorrect',
         ]);
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
-        Auth::logout();
 
+        Auth::logout();
+        if ($request->wantsJson()) {
+            return response()->json('logout');
+        }
         return redirect()->route('home');
     }
 

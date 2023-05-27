@@ -12,10 +12,10 @@
 export default {
     data() {
         return {
-            class: '',
-            message: '',
-            status_response: '',
-            icon: '',
+            class: 'warning',
+            message: 'Message',
+            status_response: 'Status',
+            icon: 'info',
         }
     },
     methods: {

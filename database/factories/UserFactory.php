@@ -19,7 +19,7 @@ class UserFactory extends Factory
             'username' => $this->faker->name(),
             'last_name' => $this->faker->name(),
             'first_name' => $this->faker->name(),
-            'avatar' => 'avatars/default.png',
+            'avatar' => 'avatars/default-avatar.png',
             'age' => $this->faker->numberBetween(15, 80),
             'phone' => $this->faker->phoneNumber(),
             'email' => $this->faker->unique()->safeEmail(),

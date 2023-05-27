@@ -99,6 +99,7 @@ class GuestRecipeController extends Controller
         $recipes = RecipeResource::collection(recipe::with(['author', 'type_recipe', 'images_recipe'])
             ->where('type_id', $type->id)
             ->whereHas('images_recipe')
+            ->where('is_approved', true)
             ->get());
 
         return response()->json($recipes);
@@ -110,7 +111,8 @@ class GuestRecipeController extends Controller
             $query->whereNotNull('cover')->get();
         }])
             ->whereHas('images_recipe')
-            ->where('name', 'like', '%'.$type.'%')->get());
+            ->where('is_approved', true)
+            ->where('name', 'like', '%' . $type . '%')->get());
 
         return response()->json($recipes_found);
     }
@@ -129,6 +131,7 @@ class GuestRecipeController extends Controller
             $query->whereNotNull('cover')->get();
         }])
             ->whereHas('images_recipe')
+            ->where('is_approved', true)
             ->get())->random(1);
 
         return response()->json([
