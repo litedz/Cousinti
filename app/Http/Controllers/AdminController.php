@@ -106,7 +106,7 @@ class AdminController extends Controller
     public function LogOutAdmin(AdminService $adminService, Request $request)
     {
         $adminService->logOut($request);
-        if (! request()->ajax()) {
+        if (!request()->ajax()) {
             return redirect()->route('home');
         }
 
@@ -118,6 +118,17 @@ class AdminController extends Controller
         $users = collect(User::all())->sortBy('created_at')->values();
 
         return response()->json(['users' => $users]);
+    }
+
+    public function statisticUsers()
+    {
+        $static_users = User::all();
+        return collect($static_users)->groupBy('created_at')->values();
+    }
+    public function statisticRecipes()
+    {
+        $static_users = recipe::all();
+        return collect($static_users)->groupBy('created_at')->values();
     }
 
     public function recipes()
@@ -158,7 +169,7 @@ class AdminController extends Controller
     public function ChangeStatusRecipe(AdminService $adminService, Request $request): JsonResponse
     {
 
-        if (! Gate::allows('IsAdmin', 'App\\Models\admin')) {
+        if (!Gate::allows('IsAdmin', 'App\\Models\admin')) {
             throw new Exception('You Dont have Permission to execute this action ', 1);
         }
         $valdiate = $request->validate([
@@ -196,7 +207,7 @@ class AdminController extends Controller
 
     public function deleteRecipe(Request $request, AdminService $adminService)
     {
-        if (! Gate::allows('IsAdmin', 'App\\Models\admin')) {
+        if (!Gate::allows('IsAdmin', 'App\\Models\admin')) {
             throw new Exception('You Dont have Permission to execute this action ', 1);
         }
         $valdiate = $request->validate([
@@ -215,7 +226,7 @@ class AdminController extends Controller
 
     public function deleteUser(AdminService $adminService, Request $request, $user_id)
     {
-        if (! Gate::allows('IsAdmin', 'App\\Models\admin')) {
+        if (!Gate::allows('IsAdmin', 'App\\Models\admin')) {
             throw new Exception('You Dont have Permission to execute this action ', 1);
         }
         $valdiate = $request->validate([

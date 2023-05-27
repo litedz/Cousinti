@@ -15,7 +15,9 @@ use App\Models\recipe;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -133,16 +135,11 @@ Route::POST('/register/facebook/', [UserController::class, 'RegisterWithFace']);
 //Api Facebook
 Route::post('/facebook/login', [LoginController::class, 'loginWithMedia']);
 
-Route::get('test', function () {
-    event(new Registered(Auth()->user()));
-});
-Route::post('test', [MessageController::class, 'store']);
 
 // Admin Resources
 
 route::prefix('panel')->group(function () {
     route::middleware('auth:admin')->group(function () {
-
         Route::view('/dashboard', 'admin.dashboard-admin')->name('admin.dashboard');
         route::get('logout', [AdminController::class, 'LogOutAdmin'])->name('admin.logout');
         route::get('users', [AdminController::class, 'users'])->name('admin.actions.users');
@@ -158,9 +155,13 @@ route::prefix('panel')->group(function () {
         route::get('roles', [AdminController::class, 'AvailableRoles'])->name('admin.roles.actions.get');
 
         Route::resource('admin_messages', AdminMessagesController::class);
-        Route::post('admin_message/message/sending',[AdminMessagesController::class,'MessageUser']);
+        Route::post('admin_message/message/sending', [AdminMessagesController::class, 'MessageUser']);
 
         Route::post('messages/Reply', [AdminMessagesController::class, 'ReplyMessage']);
+
+        //static routes 
+        Route::get('static/users',[AdminController::class,'statisticUsers']);
+        Route::get('static/recipes',[AdminController::class,'statisticRecipes']);
     });
     route::resource('admin', AdminController::class)->middleware('auth')->except('index');
     route::post('admin/login', [AdminController::class, 'index'])->name('admin.index');
@@ -178,3 +179,12 @@ Route::post('contact-support', [MessageController::class, 'ContactSuport']);
 
 //     return ['token' => $token->plainTextToken];
 // });
+
+
+// testing 
+
+Route::get('test', function () {
+
+
+});
+Route::post('test', [MessageController::class, 'store']);

@@ -156,7 +156,7 @@ export default {
     props: { info: Object },
     data() {
         return {
-            activeComponent: "add-message",
+            activeComponent: "static-admin",
 
         };
     },

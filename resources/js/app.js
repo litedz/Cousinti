@@ -101,6 +101,7 @@ import latest_activity_table from "./components/admin/latest-activity.vue";
 import admins_table from "./components/admin/admins-table.vue";
 import admin_messages from "./components/admin/messages.vue";
 import add_message from "./components/admin/add-message.vue";
+import static_admin from "./components/admin/statistic.vue";
 
 
 import { plugin, defaultConfig } from '@formkit/vue'
@@ -195,6 +196,7 @@ app.component('latest-activity-table', latest_activity_table);
 app.component('admins-table', admins_table);
 app.component('admin-messages', admin_messages);
 app.component('add-message', add_message);
+app.component('static-admin', static_admin);
 
 
 import { Refomate } from './components/formateDate';
@@ -204,13 +206,5 @@ import { Refomate } from './components/formateDate';
 app.mixin(Refomate);
 app.use(plugin, defaultConfig);
 app.use(i18n).mount('#app');
-
-
-
-// app.component('example-component', require('./components/ExampleComponent.vue').default);
-// app.component('random_recipe', require('./components/random_recipe.vue').default);
-// app.component('recettes', require('./components/recettes.vue').default);
-// app.component('single-recette', require('./components/single_recette.vue').default);
-// app.component('footer-page', require('./components/footer.vue').default);
 
 
