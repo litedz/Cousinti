@@ -3,7 +3,10 @@
 
         <h1>welcome static</h1>
 
-        <Line :data="info" :options="options" />
+      
+        <Line :data="infoUsers" ref="usersStat"/>
+        <h1>Static recipes</h1>
+        <Line :data="infoRecipes"  ref="RecipesStat"/>
 
     </div>
 </template>
@@ -16,14 +19,27 @@ export default {
     components: { Line },
     mounted() {
         this.getUsers();
+        this.getRecipes();
     },
     data() {
         return {
             users: '',
-            info: {
+            recipes:'',
+            infoUsers: {
                 labels: [],
                 datasets: [{
                     label: 'Users Stat',
+                    data: [],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }],
+
+            },
+            infoRecipes: {
+                labels: [],
+                datasets: [{
+                    label: 'Recipes Stat',
                     data: [],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
@@ -43,8 +59,8 @@ export default {
                             this.users = response.data;
                             // this.info.datasets[0].data = response.data;
                             for (let index = 0; index < this.users.length; index++) {
-                                this.info.labels[index] = moment(this.users[index][0].created_at).format('MMMM');
-                                this.info.datasets[0].data[index] = this.users[index].length;
+                                this.infoUsers.labels[index] = moment(this.users[index][0].created_at).format('MMMM');
+                                this.infoUsers.datasets[0].data[index] = this.users[index].length;
                             }
 
                             // console.log(moment().month(4));
@@ -53,7 +69,23 @@ export default {
                 })
                 .catch((error) => { });
 
-        }
+        },
+        getRecipes() {
+            axios({ method: "get", url: "/panel/static/recipes" })
+                .then((response) => {
+                    if (response.data) {
+                        if (response.data) {
+                            this.recipes = response.data;
+                            for (let index = 0; index < this.users.length; index++) {
+                                this.infoRecipes.labels[index] = moment(this.recipes[index][0].created_at).format('MMMM');
+                                this.infoRecipes.datasets[0].data[index] = this.recipes[index].length;
+                            }
+                        }
+                    }
+                })
+                .catch((error) => { });
+
+        },
     }
 }
 </script>
