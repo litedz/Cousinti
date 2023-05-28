@@ -103,6 +103,7 @@ import admin_messages from "./components/admin/messages.vue";
 import add_message from "./components/admin/add-message.vue";
 import static_admin from "./components/admin/statistic.vue";
 import types from "./components/admin/types.vue";
+import social_media from "./components/admin/social-media.vue";
 
 
 import { plugin, defaultConfig } from '@formkit/vue'
@@ -199,6 +200,8 @@ app.component('admin-messages', admin_messages);
 app.component('add-message', add_message);
 app.component('static-admin', static_admin);
 app.component('types', types);
+app.component('social-media', social_media);
+
 
 
 import { Refomate } from './components/formateDate';

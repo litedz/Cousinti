@@ -24,7 +24,7 @@ class TypesRequest extends FormRequest
     public function rules()
     {
         return [
-            'type' => 'required|alpha|max:15'
+            'type' => 'required|alpha|max:15',
         ];
     }
 }

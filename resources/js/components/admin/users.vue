@@ -104,13 +104,13 @@
                     <tbody>
                         <tr v-for="(user,index) in usersFilter" :key="user.info">
                             <th scope="row">{{ index + 1 }}</th>
-                            <td class="fs-5">{{ user.username }}</td>
-                            <td class="fs-5">{{ user.first_name }}</td>
-                            <td class="fs-5">{{ user.last_name }}</td>
-                            <td class="fs-5">{{ user.email }}</td>
-                            <td class="fs-5">{{ user.age }}</td>
-                            <td class="fs-5">{{ user.phone }}</td>
-                            <td class="fs-5">
+                            <td class="fs-6">{{ user.username }}</td>
+                            <td class="fs-6">{{ user.first_name }}</td>
+                            <td class="fs-6">{{ user.last_name }}</td>
+                            <td class="fs-6">{{ user.email }}</td>
+                            <td class="fs-6">{{ user.age }}</td>
+                            <td class="fs-6">{{ user.phone }}</td>
+                            <td class="fs-6">
                                 <span class="badge bg-success" v-if="user.email_verified_at !== null">verified</span>
                                 <span class="badge bg-danger" v-else>Unverified</span>
                             </td>

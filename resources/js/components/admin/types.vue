@@ -5,23 +5,27 @@
             <div class="d-grid gap-2">
                 <div class="add-type">
 
-                    <button type="button" class="btn btn-primary d-flex flex-center gap-2 px-5" @click="show_form_add_type =true">
+                    <button type="button" class="btn btn-primary d-flex flex-center gap-2 px-5"
+                        @click="show_form_add_type = true">
                         <span class="fa fa-add"></span></button>
                 </div>
                 <table class="bg-white border mx-auto shadow-sm table table-bordered table-hover">
                     <thead class="bg-green text-center text-white">
                         <tr>
+                            <th scope="col text-capitalize" class="text-left w-10">#</th>
                             <th scope="col text-capitalize" class="text-left">name</th>
                             <th scope="col text-capitalize" class="w-1">actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="item in types_recipe">
+                        <tr v-for="(item,index) in types_recipe">
+                            <td class="text-center">{{ index + 1 }}</td>
                             <td>{{ item.type }}</td>
                             <td class="">
-                                <div class="d-flex">
-                                    <li class="m-1 pointer" @click="DeleteType(item.id)"><span
-                                            class="fa fa-trash font-3 text-danger"></span></li>
+                                <div class="text-center">
+                                    <li class="m-1 pointer" @click="DeleteType(item.id)">
+                                        <span class="fa fa-trash  text-danger"></span>
+                                    </li>
                                 </div>
                             </td>
                         </tr>
@@ -30,6 +34,7 @@
             </div>
             <!-- Form add type -->
             <div class="bg-white d-grid left-25 p-3 position-fixed rounded-5 shadow top-45 w-50" v-if="show_form_add_type">
+                <span class="fa fa-remove m-2 pointer" @click="show_form_add_type =false"></span>
                 <h1 class="border-bottom text-center">Add type</h1>
                 <form class="d-grid form-group gap-3">
                     <input type="text" class="form-control" v-model="type" placeholder="type . . . .">

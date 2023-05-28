@@ -17,6 +17,7 @@ class TypesRecipeController extends Controller
     public function index()
     {
         $types = types_recipes::get();
+
         return response()->json(['types' => $types]);
     }
 
@@ -57,7 +58,6 @@ class TypesRecipeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\types_recipes  $types_recipes
      * @return \Illuminate\Http\Response
      */
     public function show(types_recipes $types_recipes)
@@ -68,7 +68,6 @@ class TypesRecipeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\types_recipes  $types_recipes
      * @return \Illuminate\Http\Response
      */
     public function edit(types_recipes $types_recipes)
@@ -78,35 +77,39 @@ class TypesRecipeController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\types_recipes  $types_recipes
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function update(Request $request, types_recipes $types_recipes)
     {
         $credentials = $request->validate([
             'type_id' => 'required|integer',
-            'type' => 'required|alpha|max:15'
+            'type' => 'required|alpha|max:15',
         ]);
 
         try {
             $type = types_recipes::findOrfail($request->type_id)->update($credentials);
             $type->save();
         } catch (\Throwable $th) {
-            //throw $th;
+            throw new Exception('Error Processing Request', 1);
         }
+
+        return response()->json([
+            'style' => 'info',
+            'message' => 'Type Updated',
+            'status' => 'Updated',
+            'icon' => 'check',
+        ]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\types_recipes  $types_recipes
      * @return \Illuminate\Http\JsonResponse
      */
     public function destroy(types_recipes $types_recipes, Request $request)
     {
         $credentials = $request->validate([
-            'type_id' => 'required|integer'
+            'type_id' => 'required|integer',
         ]);
         try {
             $update = types_recipes::find($request->type_id)->delete();

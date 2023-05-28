@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Jobs\Subscribe;
 use App\Models\comments;
 use App\Models\Profile;
@@ -11,9 +10,7 @@ use App\Models\recipe;
 use App\Models\Subscribe as ModelsSubscribe;
 use App\Models\User;
 use Exception;
-use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule as ValidationRule;
@@ -122,7 +119,6 @@ class UserController extends Controller
     public function destroy(User $user, Request $request)
     {
 
-
         $val = $request->validate([
             'user_id' => ['required', ValidationRule::requiredIf(auth()->user()->id)],
         ]);
@@ -133,30 +129,30 @@ class UserController extends Controller
             'style' => 'danger',
             'icon' => 'stop',
             'status' => 'Deleted',
-        ]) : throw new Exception("Error Processing Request", 1);
+        ]) : throw new Exception('Error Processing Request', 1);
     }
 
     public function updateAvatar(request $request)
     {
 
         $validate = $request->validate([
-            'prev_avatar' => 'required'
+            'prev_avatar' => 'required',
         ]);
 
         $checkExistFile = Storage::disk('public')->exists($request->prev_avatar);
 
-        if (!$checkExistFile) {
-            throw new Exception("File Doesn Exists", 1);
+        if (! $checkExistFile) {
+            throw new Exception('File Doesn Exists', 1);
         }
 
         $delete_prev_avatar = Storage::disk('public')->delete($request->prev_avatar);
         $store_new_avatar = $request->file('new_avatar')->store('avatars', 'public');
 
-
         if ($store_new_avatar) {
             $user_user = User::where('id', auth()->user()->id)->update([
                 'avatar' => $store_new_avatar,
             ]);
+
             return response()->json('updated');
         }
     }
@@ -255,8 +251,9 @@ class UserController extends Controller
 
         return response()->json($last_activitys);
     }
+
     public function logout()
     {
-        # code...
+        // code...
     }
 }

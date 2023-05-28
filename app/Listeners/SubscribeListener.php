@@ -5,7 +5,6 @@ namespace App\Listeners;
 use App\Events\SubscribeEvent;
 use App\Mail\WelcomeMail;
 use App\Models\Subscribe;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Throwable;
 

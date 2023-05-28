@@ -3,8 +3,6 @@
 namespace App\Listeners;
 
 use App\Events\NewRecipeEvent;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
 
 class NewRecipeListener
 {
@@ -21,7 +19,6 @@ class NewRecipeListener
     /**
      * Handle the event.
      *
-     * @param  \App\Events\NewRecipeEvent  $event
      * @return void
      */
     public function handle(NewRecipeEvent $event)

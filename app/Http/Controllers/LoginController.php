@@ -38,7 +38,7 @@ class LoginController extends Controller
         return response()->json([
             'status' => 'failed',
             'class' => 'alert-danger',
-            'message' => 'Failed Login the  <strong>' . $e->email . '</strong> or  <strong>Password</strong> is incorrect',
+            'message' => 'Failed Login the  <strong>'.$e->email.'</strong> or  <strong>Password</strong> is incorrect',
         ]);
     }
 
@@ -49,6 +49,7 @@ class LoginController extends Controller
         if ($request->wantsJson()) {
             return response()->json('logout');
         }
+
         return redirect()->route('home');
     }
 

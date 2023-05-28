@@ -8,17 +8,15 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\TypesRecipeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WishRecipeController;
 use App\Jobs\Subscribe;
 use App\Models\recipe;
 use App\Models\User;
-use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -120,7 +118,6 @@ Route::resource('comments', CommentsController::class);
 Route::resource('messages', MessageController::class);
 Route::post('messages/conversation', [MessageController::class, 'conversation']);
 
-
 //Authantication
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('check.login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.user');
@@ -135,7 +132,6 @@ Route::POST('/register/facebook/', [UserController::class, 'RegisterWithFace']);
 
 //Api Facebook
 Route::post('/facebook/login', [LoginController::class, 'loginWithMedia']);
-
 
 // Admin Resources
 
@@ -160,16 +156,17 @@ route::prefix('panel')->group(function () {
 
         Route::post('messages/Reply', [AdminMessagesController::class, 'ReplyMessage']);
 
-        //static routes 
-        Route::get('static/users',[AdminController::class,'statisticUsers']);
-        Route::get('static/recipes',[AdminController::class,'statisticRecipes']);
+        //static routes
+        Route::get('static/users', [AdminController::class, 'statisticUsers']);
+        Route::get('static/recipes', [AdminController::class, 'statisticRecipes']);
         //Types recipe
-        Route::resource('types',TypesRecipeController::class);
-
+        Route::resource('types', TypesRecipeController::class);
+        // Social media
+        Route::resource('media', SocialMediaController::class);
     });
     route::resource('admin', AdminController::class)->middleware('auth')->except('index');
     route::post('admin/login', [AdminController::class, 'index'])->name('admin.index');
-
+    // login form
     route::view('login', 'admin.login-admin')->middleware('is.admin');
 });
 
@@ -184,11 +181,9 @@ Route::post('contact-support', [MessageController::class, 'ContactSuport']);
 //     return ['token' => $token->plainTextToken];
 // });
 
-
-// testing 
+// testing
 
 Route::get('test', function () {
-
 
 });
 Route::post('test', [MessageController::class, 'store']);

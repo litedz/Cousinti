@@ -112,7 +112,7 @@ class GuestRecipeController extends Controller
         }])
             ->whereHas('images_recipe')
             ->where('is_approved', true)
-            ->where('name', 'like', '%' . $type . '%')->get());
+            ->where('name', 'like', '%'.$type.'%')->get());
 
         return response()->json($recipes_found);
     }

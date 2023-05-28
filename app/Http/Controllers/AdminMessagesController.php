@@ -83,11 +83,12 @@ class AdminMessagesController extends Controller
     public function destroy(message $message, Request $request)
     {
         $val = $request->validate([
-            'message_id' => 'required|integer'
+            'message_id' => 'required|integer',
         ]);
 
         try {
             $deleteMessage = admin_messages::find($request->message_id)->delete();
+
             return response()->json(['message' => 'Message Deleted']);
         } catch (\Throwable $th) {
             throw $th;
@@ -112,16 +113,17 @@ class AdminMessagesController extends Controller
 
         return response()->json(['message' => 'Mail Send'], 200);
     }
+
     public function MessageUser(Request $request)
     {
         $credentials = $request->validate([
             'user_id' => 'required_if:sendToAll,false',
             'subject' => 'required',
             'body' => 'required',
-            'sendToAll' => 'required'
+            'sendToAll' => 'required',
         ]);
         try {
-            if ($request->sendToAll === "true") {
+            if ($request->sendToAll === 'true') {
                 foreach (User::all() as $key => $user) {
                     $user_id = $user->id;
                     $autoReply = MessageReceivedEvent::dispatch($user_id, 'admin@support.com', $request->body);

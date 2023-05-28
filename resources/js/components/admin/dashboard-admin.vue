@@ -185,7 +185,7 @@ export default {
     props: { info: Object },
     data() {
         return {
-            activeComponent: "types",
+            activeComponent: "social-media",
 
         };
     },

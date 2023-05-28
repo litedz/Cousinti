@@ -116,17 +116,17 @@
                     <tbody>
                         <tr v-for="(recipe,index) in recipesFilter" :key="recipe.info">
                             <th scope="row">{{ index + 1 }}</th>
-                            <td class="fs-5">{{ recipe.name }}</td>
-                            <td class="fs-5">{{ recipe.type_recipe.type }}</td>
-                            <td class="fs-5">{{ recipe.url_video }}</td>
-                            <td class="fs-5">{{ recipe.rating }}</td>
-                            <td class="fs-5">{{ recipe.author.username }}</td>
-                            <td class="fs-5">{{ recipe.like }}</td>
-                            <td class="fs-5">{{ recipe.dislike }}</td>
+                            <td class="fs-6">{{ recipe.name }}</td>
+                            <td class="fs-6">{{ recipe.type_recipe.type }}</td>
+                            <td class="fs-6">{{ recipe.url_video }}</td>
+                            <td class="fs-6">{{ recipe.rating }}</td>
+                            <td class="fs-6">{{ recipe.author.username }}</td>
+                            <td class="fs-6">{{ recipe.like }}</td>
+                            <td class="fs-6">{{ recipe.dislike }}</td>
                             <td>{{ formateDate(recipe.created_at) }}</td>
-                            <td class="fs-5">{{ recipe.time }}</td>
-                            <td class="fs-5">{{ recipe.level }}</td>
-                            <td class="fs-5">
+                            <td class="fs-6">{{ recipe.time }}</td>
+                            <td class="fs-6">{{ recipe.level }}</td>
+                            <td class="fs-6">
                                 <span class="badge bg-success" v-if="recipe.is_approved">Approved</span>
                                 <span class="badge bg-danger" v-else>Waiting</span>
                             </td>
