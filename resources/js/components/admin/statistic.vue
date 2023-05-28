@@ -4,7 +4,7 @@
         <h1>welcome static</h1>
 
       
-        <Line :data="infoUsers" ref="usersStat"/>
+        <Line :data="infoUsers" ref="usersStat" class=""/>
         <h1>Static recipes</h1>
         <Line :data="infoRecipes"  ref="RecipesStat"/>
 
@@ -77,7 +77,7 @@ export default {
                         if (response.data) {
                             this.recipes = response.data;
                             for (let index = 0; index < this.users.length; index++) {
-                                this.infoRecipes.labels[index] = moment(this.recipes[index][0].created_at).format('MMMM');
+                                this.infoRecipes.labels[index] = moment(this.recipes[index][0].created_at).format('Do');
                                 this.infoRecipes.datasets[0].data[index] = this.recipes[index].length;
                             }
                         }

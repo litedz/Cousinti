@@ -102,6 +102,7 @@ import admins_table from "./components/admin/admins-table.vue";
 import admin_messages from "./components/admin/messages.vue";
 import add_message from "./components/admin/add-message.vue";
 import static_admin from "./components/admin/statistic.vue";
+import types from "./components/admin/types.vue";
 
 
 import { plugin, defaultConfig } from '@formkit/vue'
@@ -197,6 +198,7 @@ app.component('admins-table', admins_table);
 app.component('admin-messages', admin_messages);
 app.component('add-message', add_message);
 app.component('static-admin', static_admin);
+app.component('types', types);
 
 
 import { Refomate } from './components/formateDate';

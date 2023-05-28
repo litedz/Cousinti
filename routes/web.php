@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\TypesRecipeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WishRecipeController;
 use App\Jobs\Subscribe;
@@ -162,6 +163,9 @@ route::prefix('panel')->group(function () {
         //static routes 
         Route::get('static/users',[AdminController::class,'statisticUsers']);
         Route::get('static/recipes',[AdminController::class,'statisticRecipes']);
+        //Types recipe
+        Route::resource('types',TypesRecipeController::class);
+
     });
     route::resource('admin', AdminController::class)->middleware('auth')->except('index');
     route::post('admin/login', [AdminController::class, 'index'])->name('admin.index');

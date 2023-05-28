@@ -16,7 +16,7 @@ class CreateRecipesTable extends Migration
         Schema::create('recipes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->foreignId('type_id')->constrained('types_recipes');
+            $table->foreignId('type_id')->constrained('types_recipes')->cascadeOnDelete();
             $table->longText('how_todo');
             $table->string('url_video')->nullable();
             $table->integer('rating')->default(0);

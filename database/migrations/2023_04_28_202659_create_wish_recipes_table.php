@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('wish_recipes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('recipe_id')->constrained();
+            $table->foreignId('recipe_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

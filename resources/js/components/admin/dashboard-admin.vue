@@ -52,6 +52,35 @@
                         </ul>
 
                     </li>
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i class="text-danger" data-feather="eye" width="20"></i>
+                            <span>Template website</span>
+                        </a>
+                        <ul class="submenu p-0">
+                            <li class="sub-item bg-gray border-bottom border-white">
+                                <a href="#">
+                                    <div class="d-flex ">
+                                        <span class="text-success"></span>
+                                        <span  @click="activeComponent = 'types'">Types Recipes</span>
+
+                                    </div>
+
+                                </a>
+                            </li>
+                            <li class="sub-item bg-gray border-bottom border-white">
+                                <a href="#">
+                                    <div class="d-flex ">
+                                        <span class="text-success"></span>
+                                        <span @click="activeComponent = 'add-message'">Social media</span>
+                                    </div>
+
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
                 </ul>
             </div>
 
@@ -156,7 +185,7 @@ export default {
     props: { info: Object },
     data() {
         return {
-            activeComponent: "static-admin",
+            activeComponent: "types",
 
         };
     },
