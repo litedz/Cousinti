@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('recipient_id')->constrained('users')->cascadeOnDelete();
             $table->string('from')->default('admin@cousinti.net');
+            $table->string('username')->nullable();
             $table->text('message')->nullable();
             $table->timestamps();
         });

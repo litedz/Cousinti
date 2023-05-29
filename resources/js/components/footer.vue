@@ -56,7 +56,7 @@
                                             {{ recipe.name }}</a>
                                     </div>
                                     <img :src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name" alt=""
-                                        class="rounded w-100">
+                                        class="rounded w-100" style="height: 155px;">
                                 </div>
                             </div>
 

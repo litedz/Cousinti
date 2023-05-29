@@ -1,11 +1,13 @@
 <?php
 
+use App\Events\NewRecipeEvent;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminMessagesController;
 use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\GuestRecipeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\notificationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\SocialMediaController;
@@ -106,6 +108,8 @@ Route::prefix('user')->group(function () {
             Route::POST('password', [UserController::class, 'changePassword']);
             Route::get('{recipe_id}/liked', [UserController::class, 'RecipeUserLiked'])->name('recipe.liked');
             Route::get('lastActivity', [UserController::class, 'LastActivity'])->name('last.activity');
+            //Notification
+            route::resource('/notifi', notificationController::class);
         }
     );
 });
@@ -185,5 +189,6 @@ Route::post('contact-support', [MessageController::class, 'ContactSuport']);
 
 Route::get('test', function () {
 
+    NewRecipeEvent::dispatch(User::find(1), 'New recipe', 'Add recipe', 'recipe');
 });
 Route::post('test', [MessageController::class, 'store']);

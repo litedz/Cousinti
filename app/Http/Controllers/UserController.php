@@ -53,6 +53,7 @@ class UserController extends Controller
         }
         $valid['phone'] = $request->phone;
         $valid['avatar'] = $storage_image;
+        $valid['username'] = strtolower($request->username);
         $valid['password'] = Hash::make($request->password);
         $checkUser = User::where('email', $request->email)->first();
         if ($checkUser !== null) {

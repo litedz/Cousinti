@@ -21,8 +21,7 @@
                                     <label class="col-md-3 control-label" for="message">Your
                                         message</label>
                                     <div class="">
-                                        <textarea class="form-control" id="message" name="message"
-                                        v-model="message"
+                                        <textarea class="form-control" id="message" name="message" v-model="message"
                                             placeholder="Please enter your message here..." rows="5"></textarea>
                                     </div>
                                 </div><!-- Form actions -->
@@ -66,12 +65,19 @@ export default {
                     if (response.data) {
                         this.$refs.status.Display('success', response.data, 'status', 'info');
                         this.$emit('sendMessage');
+                        this.Resetfields();
                     }
                 })
                 .catch((error) => {
                     this.$refs.status.Display('danger', error.response.data.message, 'warning', 'warning');
                 });
         },
+        Resetfields() {
+            this.subject = '';
+            this.message = '';
+            this.email = '';
+        }
+
     }
 }
 </script>

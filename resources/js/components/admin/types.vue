@@ -2,6 +2,7 @@
     <div>
         <status ref="status"></status>
         <div class="container">
+            <h1 class="title text-center text-capitalize border-bottom mb-2">Types Recipes</h1>
             <div class="d-grid gap-2">
                 <div class="add-type">
 

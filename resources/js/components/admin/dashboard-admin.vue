@@ -4,19 +4,23 @@
             <div class="sidebar-header flex-center">
                 <img class="w-50" :src="w_path + '/images/logo.png'" alt="" srcset="">
             </div>
-            <div class="sidebar-menu">
+            <div class="sidebar-menu active">
                 <ul class="menu">
                     <li class='sidebar-title'>Main Menu</li>
-
-                    <li class="sidebar-item" @click="activeComponent = 'users-table'">
-                        <a href="#" class='bg-light sidebar-link '>
+                    <li class="sidebar-item active" @click="activeComponent = 'static-admin'">
+                        <a href="#" class='sidebar-link '>
                             <i class="text-danger" data-feather="activity" width="20"></i>
+                            <span class="text-capitalize">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item" @click="activeComponent = 'users-table'">
+                        <a href="#" class='sidebar-link '>
+                            <i class="text-danger" data-feather="table" width="20"></i>
                             <span class="text-capitalize">Table Users</span>
                         </a>
                     </li>
-
                     <li class="sidebar-item" @click="activeComponent = 'recipes-table'">
-                        <a href="#" class='bg-light sidebar-link '>
+                        <a href="#" class='sidebar-link '>
                             <i class="text-danger" data-feather="activity" width="20"></i>
                             <span class="text-capitalize">Table Recipes</span>
                         </a>
@@ -33,7 +37,7 @@
                                 <a href="#">
                                     <div class="d-flex ">
                                         <span data-feather="plus-circle" class="text-success"></span>
-                                        <span  @click="activeComponent = 'admin-messages'">Show Message</span>
+                                        <span @click="activeComponent = 'admin-messages'">Show Message</span>
 
                                     </div>
 
@@ -62,19 +66,16 @@
                                 <a href="#">
                                     <div class="d-flex ">
                                         <span class="text-success"></span>
-                                        <span  @click="activeComponent = 'types'">Types Recipes</span>
-
+                                        <span @click="activeComponent = 'types'">Types Recipes</span>
                                     </div>
-
                                 </a>
                             </li>
                             <li class="sub-item bg-gray border-bottom border-white">
                                 <a href="#">
                                     <div class="d-flex ">
                                         <span class="text-success"></span>
-                                        <span @click="activeComponent = 'add-message'">Social media</span>
+                                        <span @click="activeComponent = 'social-media'">Social media</span>
                                     </div>
-
                                 </a>
                             </li>
 
@@ -106,8 +107,9 @@
                             <ul class="list-group rounded-none">
                                 <li class="list-group-item border-0 align-items-start">
                                     <div class="avatar bg-success mr-3">
-                                        <span class="avatar-content"><i class="text-danger"
-                                                data-feather="shopping-cart"></i></span>
+                                        <span class="avatar-content">
+                                            <i class="text-danger fa fa-bill" ></i>
+                                        </span>
                                     </div>
                                     <div>
                                         <h6 class='text-bold'>New Order</h6>
@@ -167,7 +169,7 @@
         </nav>
 
         <!-- Main content -->
-        <div class="main-content container-fluid">
+        <div class="main-content container-fluid bg-white">
 
             <KeepAlive include="users-table,recipe-table">
                 <component :is="this.activeComponent" :update_recipe_id="this.recipe_update_id" :action="this.action_recipe"

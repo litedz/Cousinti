@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->tinyText('media')->nullable();
             $table->string('url')->nullable();
+            $table->string('icon')->nullable();
             $table->timestamps();
         });
     }

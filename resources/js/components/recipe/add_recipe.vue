@@ -231,7 +231,7 @@ export default {
             }
           })
           .catch((error) => {
-            if (error.response.data.message.length !== 0) {
+            if (error.response.data.message) {
               this.$refs.status.Display('danger', error.response.data.message, "تحذير");
             }
 

@@ -94,28 +94,39 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav d-flex align-items-center navbar-light ml-auto">
-          <li class="dropdown nav-icon">
-            <a href="#" data-toggle="dropdown" class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
-              <div class="d-lg-inline-block">
-                <i class="" data-feather="bell"></i>
+          <li class="nav-icon d-flex justify-content-end p-3 position-relative" style="width:400px">
+            <a href="#" class="">
+              <div class="position-relative" @click="show_notification = !show_notification">
+                <i class="fa fa-bell fs-3 text-muted"></i>
+                <i class="end-100 fa fs-6 position-absolute text-green top-0" v-if="notifications.length !== 0">
+                  {{
+                    CountNotificationNotReading()
+                  }}</i>
               </div>
             </a>
-            <div class="dropdown-menu dropdown-menu-right dropdown-menu-large">
-              <h6 class='py-2 px-4'>Notifications</h6>
-              <ul class="list-group rounded-none">
-                <li class="list-group-item border-0 align-items-start">
-                  <div class="avatar bg-success mr-3">
-                    <span class="avatar-content"><i class="text-danger" data-feather="shopping-cart"></i></span>
-                  </div>
-                  <div>
-                    <h6 class='text-bold'>New Order</h6>
-                    <p class='text-xs'>
-                      An order made by Ahmad Saugi for product Samsung Galaxy S69
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
+            <transition>
+              <div class="position-absolute top-100 w-100" v-if="show_notification">
+                <ul class="list-group rounded-none">
+                  <h1 class="bg-body fs-3 p-3 text-capitalize text-center text-muted" v-if="notifications.length == 0">you dont have any notification</h1>
+                  <li class="list-group-item border-0 align-items-start border-bottom" v-for="message in notifications">
+                    <span class="bottom-0 end-0 fa fa-trash mb-2 mx-3 position-absolute text-danger"
+                      @click="DeleteNotification(message.id)"></span>
+                    <div class="avatar bg-success mr-3">
+                      <span class="avatar-content bg-first-color round">
+                        <i class="fa-R fs-6 fw-bold" data-feather="shopping-cart"></i></span>
+                    </div>
+                    <div class="d-grid">
+                      <h6 class='fs-4 text-bold'>{{ message.subject }}</h6>
+                      <a :href="'#'" class='fs-5 text-first ' @click="UpdateNotification(message.id)"
+                        @contextmenu="UpdateNotification(message.id)">
+                        {{ message.message }}
+                      </a>
+                      <span class="badge bg-green w-25" style="" v-if="message.status">vue</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </transition>
           </li>
           <li class="nav-icon mr-2" @click="show_messages = !show_messages">
             <a href="#" class="nav-link nav-link-lg nav-link-user p-2 px-2">
@@ -169,10 +180,7 @@
     <!-- Main content -->
     <div class="main-content container-fluid">
       <KeepAlive>
-        <component 
-        :is="this.activeComponent" 
-        v-on:update-recipe="get_id_recipe($event)" 
-        v-on:send-message="getMessages()"
+        <component :is="this.activeComponent" v-on:update-recipe="get_id_recipe($event)" v-on:send-message="getMessages()"
           :update_recipe_id="this.recipe_update_id" :action="this.action_recipe" :auth_id="info.id"
           :auth_email="info.email" />
       </KeepAlive>
@@ -189,6 +197,7 @@ export default {
 
   mounted() {
     this.getMessages();
+    this.getNotifications();
   },
   data() {
     return {
@@ -197,6 +206,9 @@ export default {
       recipe_update_id: "", // id of recipe for update
       show_messages: false,
       messages: '',
+      notifications: '',
+      show_notification: false,
+      notifiNotRead: '',
     };
   },
   methods: {
@@ -246,6 +258,37 @@ export default {
         .catch((error) => { });
 
     },
+    getNotifications() {
+      axios.get("/user/notifi/" + this.info.id)
+        .then((response) => {
+          if (response.data) {
+            console.log(response.data);
+            this.notifications = response.data;
+          }
+        })
+        .catch((error) => { });
+
+    },
+    UpdateNotification(notification_id) {
+      let data = new FormData();
+      data.append('_method', 'PATCH')
+      data.append('notification_id', notification_id)
+      axios.post("/user/notifi/" + notification_id, data).then((response) => {
+        if (response.data == "updated") {
+          this.getNotifications();
+        }
+      });
+    },
+    DeleteNotification(notification_id) {
+      let data = new FormData();
+      data.append('_method', 'DELETE')
+      data.append('notification_id', notification_id)
+      axios.post("/user/notifi/" + notification_id, data).then((response) => {
+        if (response.data == "Deleted") {
+          this.getNotifications();
+        }
+      });
+    },
     DeleteMessage(message_id) {
       let data = new FormData();
 
@@ -271,10 +314,23 @@ export default {
         })
         .catch((error) => { });
     },
+    CountNotificationNotReading() {
+
+      let counter = this.notifications.filter((note => note.status == 0)).length;
+      if (counter !== 0) {
+        return counter;
+      }
+
+      // return this.notifiNotRead.length;
+    },
   },
 };
 </script>
 <style>
+.list-group-item:hover {
+  background: rgb(218, 216, 216);
+}
+
 .color-primary {
   color: #310a4b;
 }

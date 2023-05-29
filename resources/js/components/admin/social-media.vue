@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white p-3 social-media" auth_id="1">
+    <div class="bg-white p-3 social-media shadow-sm" auth_id="1">
         <status ref="status"></status>
         <div class="container">
             <h1 class="text-center text-capitalize border-bottom"> Social Media </h1>

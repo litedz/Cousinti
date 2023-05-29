@@ -27,27 +27,28 @@
                 <button type="button" @click="SendMessage()" class="btn-primary btn">Send</button>
             </form>
         </div>
-        <div class="bg-gray d-grid gap-2 left-25 p-5 position-fixed table-users top-0 w-50 h-75"
+        <div class="bg-gray d-grid gap-2 left-25 p-5 position-fixed table-users top-0 w-50 h-auto"
             style="overflow-y: auto;overflow-x: hidden;" v-if="show_table_user">
             <div class="m-2 position-absolute w-100">
                 <span class="bg-white fa fa-remove p-1 px-2 rounded-4 pointer" @click="show_table_user = false"></span>
             </div>
+            <!-- Search Specific User  -->
             <div class="search">
-                <input type="text" name="search" placeholder="search . . ." class="form-control">
+                <input type="text" name="search" placeholder="search . . ." class="form-control" v-model="searchValue">
             </div>
             <table class="bg-white table table-hover">
                 <thead class="bg-gray-700 text-white">
                     <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Email</th>
+                        <th scope="col" class="text-capitalize">username</th>
+                        <th scope="col" class="text-capitalize">Email</th>
                         <th scope="col" class="w-1">Select</th>
                     </tr>
                 </thead>
 
                 <tbody>
 
-                    <tr v-for="user in users">
-                        <td>{{ user.username }}</td>
+                    <tr v-for="user in filtredUsers">
+                        <td class="text-capitalize">{{ user.username }}</td>
                         <td>{{ user.email }}</td>
                         <td class="">
                             <button type="button" class="btn btn-primary" @click="SelectUser(user)">Select
@@ -70,7 +71,7 @@ export default {
     data() {
         return {
             emailSelected: '',
-            username:'',
+            username: '',
             subject: '',
             body: '',
             selectSend: '',
@@ -79,6 +80,7 @@ export default {
             filtredUsers: '',
             user_id: '',
             sendToAll: false,
+            searchValue: '',
 
         }
     },
@@ -97,9 +99,9 @@ export default {
 
             },
         },
-        sendToAll:{
-            handler(){
-          //
+        searchValue: {
+            handler() {
+                this.SearchByvalue();
             }
         }
 
@@ -135,6 +137,7 @@ export default {
                     if (response.data) {
                         if (response.data) {
                             this.users = response.data.users;
+                            this.filtredUsers =this.users;
                         }
                     }
                 })
@@ -145,17 +148,21 @@ export default {
         },
         SelectUser(user) {
             this.user_id = user.id;
-            this.username =user.username;
+            this.username = user.username;
             this.show_table_user = false;
         },
         // reset field
-        ResetField(){
+        ResetField() {
             this.subject = '',
-            this.body = '',
-            this.show_table_user = false,
-            this.username ='';
-            this.selectSend ='';
-        }
+                this.body = '',
+                this.show_table_user = false,
+                this.username = '';
+            this.selectSend = '';
+        },
+        //filter 
+        SearchByvalue() {
+            this.filtredUsers = Object.values(this.users).filter((user) => user.username.match(this.searchValue));
+        },
     },
 }
 </script>

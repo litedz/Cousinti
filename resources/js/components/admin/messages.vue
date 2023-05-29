@@ -3,7 +3,11 @@
         <status ref="status"></status>
         <h1 class="border-bottom">Messages </h1>
         <div class="container-fluid">
-            <div class="row">
+            <div>
+                <h6 class="text-capitalize text-center text-muted" v-if="messages.length == 0">You dont have any message
+                </h6>
+            </div>
+            <div class="row" v-if="messages.length !== 0">
                 <div class="col-md-8">
                     <div class="chat_container">
                         <div class="job-box">
@@ -18,6 +22,7 @@
                                 </div>
                             </div>
                             <div class="inbox-message">
+
                                 <ul>
                                     <li v-for="msg in MessagesFilted">
                                         <div>

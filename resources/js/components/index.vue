@@ -553,18 +553,18 @@ export default {
 }
 
 section.subscribee div:first-of-type {
-	/* background: url('~/images/cover-subscribee.jpg');
+	background: url('~/images/cover-subscribe.jpg');
 	background-size: cover;
 	background-attachment: fixed;
-	background-position: center; */
+	background-position: center;
 }
 
 .random-recipe .row .cover {
 
-	background: url('~/images/bg-random-recipe.png');
+	/* background: url('~/images/bg-random-recipe.png');
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: -113% 100%;
+	background-position: -113% 100%; */
 
 }
 

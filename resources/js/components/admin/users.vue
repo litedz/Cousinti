@@ -104,9 +104,9 @@
                     <tbody>
                         <tr v-for="(user,index) in usersFilter" :key="user.info">
                             <th scope="row">{{ index + 1 }}</th>
-                            <td class="fs-6">{{ user.username }}</td>
-                            <td class="fs-6">{{ user.first_name }}</td>
-                            <td class="fs-6">{{ user.last_name }}</td>
+                            <td class="fs-6 text-capitalize">{{ user.username }}</td>
+                            <td class="fs-6 text-capitalize">{{ user.first_name }}</td>
+                            <td class="fs-6 text-capitalize">{{ user.last_name }}</td>
                             <td class="fs-6">{{ user.email }}</td>
                             <td class="fs-6">{{ user.age }}</td>
                             <td class="fs-6">{{ user.phone }}</td>
@@ -283,10 +283,10 @@ export default {
             else {
 
                 if (direction == 'old') {
-                    this.usersFilter = Object.values(this.users).sort((a, b) => a[this.searchKey] < b[this.searchKey] ? -1 : 1).reverse();
+                    this.usersFilter = Object.values(this.users).sort((a, b) => a[this.searchKey] < b[this.searchKey] ? -1 : 1)
                 }
                 else {
-                    this.usersFilter = Object.values(this.users).sort((a, b) => a[this.searchKey] < b[this.searchKey] ? -1 : 1);
+                    this.usersFilter = Object.values(this.users).sort((a, b) => a[this.searchKey] < b[this.searchKey] ? -1 : 1).reverse();;
                 }
 
             }
