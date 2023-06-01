@@ -50,4 +50,9 @@ class recipe extends Model
     {
         $query->latest('created_at')->limit(4);
     }
+
+    public function scopeApprouved(Builder $s)
+    {
+        return $s->where('is_approved', true);
+    }
 }

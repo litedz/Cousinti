@@ -1,7 +1,6 @@
 <template>
     <div class="flex-center img-container position-relative w-100">
-        
-        <img :src="w_path+'/storage/recipes/'+image" class="w-100" style="height: 450px;">
+        <img :src="w_path + '/storage/recipes/' + image" class="w-100" style="height: 450px;">
         <div class="info position-absolute text-white z-8888">
             <div class="fs-2 title">
                 <a :href="w_path + '/' + urlFile" class="text-white">{{ this.title }}</a>

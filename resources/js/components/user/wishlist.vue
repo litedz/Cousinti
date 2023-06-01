@@ -13,12 +13,14 @@
                     <div class="row">
                         <div class="col-3" v-for="item in wishList">
                             <div class="recipe">
+                                <h1>{{item}}</h1>
                                 <img-hoverable 
                                 :title="item.recipe[0].name" 
-                                :urlFile="'recipes/'+item.recipe_id"
+                                :urlFile="'/recipes/'+item.recipe_id"
                                 :level="item.recipe[0].level" 
                                 :time="item.recipe[0].how_long"
-                                :image="item.recipe[0].images_recipe[0].name">
+                                :image="item.recipe[0].images_recipe[0].name"
+                                >
                             </img-hoverable>
                             </div>
                         </div>
@@ -50,7 +52,6 @@ export default {
             axios({ method: "get", url: "/wishlist/" + this.$attrs.user_id })
                 .then((response) => {
                     if (response.data) {
-
                         this.wishList = response.data.WishList;
                     }
                 })

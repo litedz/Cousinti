@@ -64,6 +64,8 @@ class Kernel extends HttpKernel
         'check.user' => \App\Http\Middleware\CheckUserLogin::class,
         // Check is Is Registed
         'is.registed' => \App\Http\Middleware\IsRegisted::class,
+        // Check is Is Approved recipe
+        'is.approved' => \App\Http\Middleware\IsApproved::class,
 
         'auth.session' => \Illuminate\Session\Middleware\AuthenticateSession::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,

@@ -23,9 +23,10 @@
                 src="https://i.pravatar.cc/60" class="rounded-5"></a>
           </div>
           <div class="likes d-flex align-items-center gap-2">
-            <span class="border fa fa-thumbs-up p-1 rounded-4 text-bg-primary pointer " @click="like_recipe()"></span>
-            <!-- <li class="fs-6 text-primary">You and </li> -->
-            <li>{{ this.single_recipe.like }}</li>
+            <span class="border fa fa-thumbs-up p-1 rounded-4 text-bg-primary pointer " @click="addLike()"></span>
+            <li class="fs-6 text-primary" v-if="liked">You</li>
+            <li v-if="liked"> and {{ this.likes - 1 }}</li>
+            <li v-else>{{ this.likes }}</li>
             <li>Likes</li>
           </div>
           <div class="wishliste">
@@ -79,8 +80,9 @@
 export default {
   mounted() {
     window.addEventListener("scroll", this.whenScroll);
+    this.getLikes();
+    this.LikedBefore();
     this.getRecipe();
-
   },
   unmounted() {
     window.removeEventListener("scroll", this.whenScroll);
@@ -93,28 +95,28 @@ export default {
       type_recipe: '',
       rating: '',
       ingredients: '',
+      likes: 0,
+      liked: '',
     };
   },
   methods: {
-    checkLikeRecipe() {
-      let data = new FormData();
-      data.append('user_id', this.$attrs.user_id)
-      axios.get("/recipe/likes", data)
+    LikedBefore() {
+      axios.get("/recipe/" + this.$attrs.recipe_id + "/liked")
         .then((response) => {
-          if (response.data) {
-            this.likes = response.data.liked;
-
-          }
+          this.liked = response.data;
         })
-        .catch((error) => { });
+        .catch((error) => {
+
+        });
     },
-    like_recipe() {
+    addLike() {
       let data = new FormData();
-      data.append('recipe_id',this.$attrs.recipe_id);
-      axios.post("/recipe/like/" + this.$attrs.recipe_id,data)
+      data.append('recipe_id', this.$attrs.recipe_id);
+      axios.post("/recipe/like/" + this.$attrs.recipe_id, data)
         .then((response) => {
           this.$refs.status.Display(response.data.style, response.data.message, response.data.status, response.data.icon);
-          this.checkLikeRecipe();
+          this.getLikes();
+          this.LikedBefore();
         })
         .catch((error) => {
           this.$refs.status.Display('danger', error.response.data.message, 'خطا', 'exclamation-circle', 2000);
@@ -137,6 +139,11 @@ export default {
           }
         })
         .catch((error) => { });
+    },
+    getLikes() {
+      axios.get('/recipe/' + this.$attrs.recipe_id + '/likes').then((response) => {
+        this.likes = response.data.likes;
+      })
     },
   },
 };

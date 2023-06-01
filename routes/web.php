@@ -62,7 +62,7 @@ Route::get('/recipes/{recipe_id}', function ($recipe_id) {
     $recipe_exist = recipe::findOrFail($recipe_id);
 
     return view('recipes.single-recipe', compact(['recipe_id' => 'recipe_id']));
-})->name('single.recipe');
+})->middleware('is.approved')->name('single.recipe');
 
 Route::get('/similar/{type}', function () {
     return view('recipes.same_type_recipe');
@@ -83,7 +83,8 @@ Route::middleware(['auth'])->group(function () {
 }); // ***********************************************************************************************
 
 Route::post('recipe/like/{recipe_id}', [RecipeController::class, 'AddOrRemoveLike'])->name('recipe.like')->middleware('is.registed');
-Route::post('recipe/likes', [RecipeController::class, 'LikesRecipe'])->name('show.likes');
+Route::get('recipe/{recipe_id}/liked', [RecipeController::class, 'IsLiked'])->name('recipe.isLiked');
+Route::get('recipe/{recipe_id}/likes', [RecipeController::class, 'CountLikes'])->name('recipe.likes');
 
 //wish list resource for user
 Route::resource('wishlist', WishRecipeController::class)->middleware(['is.registed', 'auth']);
@@ -120,7 +121,7 @@ Route::prefix('user')->group(function () {
 });
 
 // Comments Routes
-Route::resource('comments', CommentsController::class);
+Route::resource('comments', CommentsController::class)->middleware('is.registed');
 
 // Message or chat routes
 
@@ -188,4 +189,4 @@ Route::post('contact-support', [MessageController::class, 'ContactSuport']);
 
 Route::get('test', function () {
 });
-Route::post('test', [MessageController::class, 'store']);
+

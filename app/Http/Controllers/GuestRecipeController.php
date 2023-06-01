@@ -62,7 +62,9 @@ class GuestRecipeController extends Controller
     {
         $recipe = recipe::with(['ingredient', 'type_recipe', 'images_recipe' => function ($query) {
             $query->orderByDesc('cover');
-        }])->findOrFail($id);
+        }])
+            ->approuved()
+            ->findOrFail($id);
 
         return response()->json([
             'recipe' => $recipe,
@@ -112,7 +114,7 @@ class GuestRecipeController extends Controller
         }])
             ->whereHas('images_recipe')
             ->where('is_approved', true)
-            ->where('name', 'like', '%'.$type.'%')->get());
+            ->where('name', 'like', '%' . $type . '%')->get());
 
         return response()->json($recipes_found);
     }

@@ -75,11 +75,11 @@ class RecipeController extends Controller
         if ($recipe) {
             $this->storeIngredients($recipe->id);
             $this->storeHeadImage($recipe->id);
-            if (! is_null($this->other_images)) {
+            if (!is_null($this->other_images)) {
                 $this->storeOtherImage($recipe->id);
             }
 
-            NewRecipeEvent::dispatch(auth()->user()->id, 'Check it  : '.$recipe->name, 'New Recipe', 'recipe', '/recipes/'.$recipe->id);
+            NewRecipeEvent::dispatch(auth()->user()->id, 'Check it  : ' . $recipe->name, 'New Recipe', 'recipe', '/recipes/' . $recipe->id);
         }
 
         return response()->json([
@@ -96,9 +96,11 @@ class RecipeController extends Controller
      */
     public function show($recipe_id)
     {
-        $recipe = recipe::with(['ingredient', 'type_recipe', 'images_recipe' => function ($query) {
+        $recipe = recipe::with(['ingredient', 'approuved','type_recipe', 'images_recipe' => function ($query) {
             $query->orderByDesc('cover');
-        }])->findOrFail($recipe_id);
+        }])
+        ->approuved()
+        ->findOrFail($recipe_id);
 
         return response()->json([
             'recipe' => $recipe,
@@ -201,8 +203,8 @@ class RecipeController extends Controller
 
         //store image in varriable other images
         for ($i = 0; $i < count($request->file()); $i++) {
-            if ($request->hasFile('image_'.$i)) {
-                $this->other_images['image_'.$i] = $request->file('image_'.$i);
+            if ($request->hasFile('image_' . $i)) {
+                $this->other_images['image_' . $i] = $request->file('image_' . $i);
             }
         }
 
@@ -214,7 +216,7 @@ class RecipeController extends Controller
         image::where('recipe_id', $recipe_id)->delete();
         ingredients::where('recipe_id', $recipe_id)->delete();
         $recipe = recipe::find($recipe_id);
-        Storage::disk('public')->deleteDirectory(auth()->user()->id.'/'.$recipe->name);
+        Storage::disk('public')->deleteDirectory(auth()->user()->id . '/' . $recipe->name);
         $recipe->delete();
 
         return response()->json([
@@ -290,7 +292,7 @@ class RecipeController extends Controller
     public function RemovePrevImage($image_id)
     {
         $image_name = image::find($image_id);
-        $delete_in_storage = Storage::disk('public')->delete('recipes/'.$image_name->name);
+        $delete_in_storage = Storage::disk('public')->delete('recipes/' . $image_name->name);
         $delete_in_Db = $image_name->delete();
 
         if ($delete_in_storage && $delete_in_Db) {
@@ -303,7 +305,7 @@ class RecipeController extends Controller
     }
 
     /**
-     * Add Like to the Recipe
+     * Add Like to the Recipe Or DisLike if isLiked
      */
     public function AddOrRemoveLike(request $request)
     {
@@ -354,7 +356,25 @@ class RecipeController extends Controller
             'icon' => 'thumbs-downo',
         ]) : throw new Exception('Something wrong with request', 1);
     }
+    /**
+     * Check if User is liked this recipe before
+     */
 
+    public function IsLiked(Request $request,int $recipe_id)
+    {
+    
+        $Isliked = likes::where('user_id', 20)->where('recipe_id', $recipe_id)->first();
+        return $Isliked ? response()->json(true) : response()->json(false);
+    }
+    /**
+     * Show Likes Recipe
+     */
+
+    public function CountLikes(Request $request,int $recipe_id)
+    {
+        $likes = likes::where('recipe_id', $recipe_id)->get();
+        return $likes ? response()->json(['likes' => $likes->count()]) : response()->json(false);
+    }
     /**
      * Show All Recipes user
      */
@@ -380,7 +400,7 @@ class RecipeController extends Controller
         } else {
             return response()->json(RecipeResource::collection(recipe::with(['author', 'images_recipe' => function ($query) {
                 $query->whereNotNull('cover')->get();
-            }])->where('name', 'like', '%'.$type.'%')->get()));
+            }])->where('name', 'like', '%' . $type . '%')->get()));
         }
     }
 
