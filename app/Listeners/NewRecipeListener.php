@@ -9,6 +9,7 @@ use App\Models\User;
 class NewRecipeListener
 {
     protected array $data;
+
     /**
      * Create the event listener.
      *
@@ -28,7 +29,6 @@ class NewRecipeListener
     {
 
         foreach (User::get() as $key => $user) {
-
 
             //execpt Current User
             if ($user->id !== auth()->user()->id) {

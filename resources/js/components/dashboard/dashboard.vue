@@ -109,7 +109,7 @@
                 <ul class="list-group rounded-none">
                   <h1 class="bg-body fs-3 p-3 text-capitalize text-center text-muted" v-if="notifications.length == 0">you dont have any notification</h1>
                   <li class="list-group-item border-0 align-items-start border-bottom" v-for="message in notifications">
-                    <span class="bottom-0 end-0 fa fa-trash mb-2 mx-3 position-absolute text-danger"
+                    <span class="bottom-0 end-0 fa fa-trash mb-2 mx-3 position-absolute text-danger pointer"
                       @click="DeleteNotification(message.id)"></span>
                     <div class="avatar bg-success mr-3">
                       <span class="avatar-content bg-first-color round">
@@ -121,7 +121,7 @@
                         @contextmenu="UpdateNotification(message.id)">
                         {{ message.message }}
                       </a>
-                      <span class="badge bg-green w-25" style="" v-if="message.status">vue</span>
+                      <span class="font-italic text-muted w-25" style="" v-if="message.status">vue</span>
                     </div>
                   </li>
                 </ul>
@@ -198,6 +198,10 @@ export default {
   mounted() {
     this.getMessages();
     this.getNotifications();
+    setInterval(() => {
+      this.getNotifications();
+      this.getMessages();
+    },10000)
   },
   data() {
     return {
@@ -262,7 +266,6 @@ export default {
       axios.get("/user/notifi/" + this.info.id)
         .then((response) => {
           if (response.data) {
-            console.log(response.data);
             this.notifications = response.data;
           }
         })
@@ -315,13 +318,10 @@ export default {
         .catch((error) => { });
     },
     CountNotificationNotReading() {
-
       let counter = this.notifications.filter((note => note.status == 0)).length;
       if (counter !== 0) {
         return counter;
       }
-
-      // return this.notifiNotRead.length;
     },
   },
 };

@@ -1,6 +1,6 @@
 <template>
     <div id="comments">
-        <status ref="status"></status>
+       <status ref="status_comment"></status>
         <div class="topbar_comments">
             <div class="align-items-center d-flex heading justify-content-center fs-1"><span>تعليقات</span>
                 <span class="fa fa-commenting first-color fs-3 mb-4 ms-1 h1"></span>
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-7">
-                        <div class="h-100 position-relative text-center"  v-if="comments.data && comments.data.length == 0 ">
+                        <div class="h-100 position-relative text-center" v-if="comments.data && comments.data.length == 0">
                             <div class="border fs-4 position-absolute rounded text-black-50 text-capitalize top-50 w-100">
                                 لايوجد تعليقات كن اول من يضع تعليق </div>
                         </div>
@@ -60,14 +60,15 @@
     </div>
 </template>
 
-<script>
+<script scoped>
 import footer from "./footer.vue";
 import moment from "moment";
-export default {
 
+export default {
     inject: ["w_path"],
     mounted() {
         this.getComments();
+        console.log(this.$refs);
     },
     data() {
         return {
@@ -110,9 +111,9 @@ export default {
                 })
                 .catch((error) => {
 
-                    if (error.response.data) {
-                        this.$refs.status.display('danger', error.response.message, 'خطا', 'info');
-                    }
+                        this.$refs.status_comment.Display('danger', error.response.data.message, 'Error', 'exclamation-circle');
+               
+                    
                 });
         },
         PaginateComment(page = 1) {
@@ -180,4 +181,5 @@ export default {
         display: flex;
         flex-direction: column-reverse;
     }
-}</style>
+}
+</style>

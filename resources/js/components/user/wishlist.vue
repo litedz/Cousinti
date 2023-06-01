@@ -1,6 +1,5 @@
 <template>
     <div class="wishlist position-fixed w-100 h-100 top-0 start-0 z-9999">
-        
         <div class="overlay w-100 h-100 position-absolute opacity-50 bg-dark z-7777"></div>
         <div class="bg-light h-100 mt-2 mx-auto position-relative w-75 z-8888">
             <span class="bg-gray fa fa-remove m-2 p-1 position-absolute px-2 remove rounded-circle text-danger pointer"

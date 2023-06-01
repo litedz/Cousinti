@@ -60,7 +60,7 @@ class GuestRecipeController extends Controller
      */
     public function show($id)
     {
-        $recipe = recipe::with(['ingredient', 'recipes_liked', 'type_recipe', 'images_recipe' => function ($query) {
+        $recipe = recipe::with(['ingredient', 'type_recipe', 'images_recipe' => function ($query) {
             $query->orderByDesc('cover');
         }])->findOrFail($id);
 

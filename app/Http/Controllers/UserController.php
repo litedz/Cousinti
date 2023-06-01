@@ -182,10 +182,12 @@ class UserController extends Controller
 
     public function RecipeUserLiked(Request $request)
     {
+        dd($request->all());
 
         $liked = Rating::where('user_id', auth()->user()->id)->where('recipe_id', $request->recipe_id)->get();
 
         return count($liked) ? response()->json(['liked' => false]) : response()->json(['liked' => true]);
+
         // if (count($liked) == 0) {
         //     return response()->json(['liked' => false]);
         // } else {

@@ -1,6 +1,5 @@
 <?php
 
-use App\Events\NewRecipeEvent;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminMessagesController;
 use App\Http\Controllers\CommentsController;
@@ -17,7 +16,6 @@ use App\Http\Controllers\WishRecipeController;
 use App\Jobs\Subscribe;
 use App\Models\recipe;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -79,11 +77,16 @@ Route::middleware(['auth'])->group(function () {
     Route::post('recipe/{recipe_id}', [RecipeController::class, 'update']);
     Route::post('/recipes/search/{key}', [RecipeController::class, 'search_recipe'])->name('recipe.search');
     Route::get('/recipes/filter/{by}', [RecipeController::class, 'filter_recipes'])->name('recipe.filter');
-    Route::post('recipe/like/{recipe_id}', [RecipeController::class, 'like_recipe']);
+
     Route::delete('recipe/image/{image_id}', [RecipeController::class, 'RemovePrevImage'])->name('recipe.image.remove');
-    //wish list resource for user
-    Route::resource('wishlist', WishRecipeController::class);
+
 }); // ***********************************************************************************************
+
+Route::post('recipe/like/{recipe_id}', [RecipeController::class, 'AddOrRemoveLike'])->name('recipe.like')->middleware('is.registed');
+Route::post('recipe/likes', [RecipeController::class, 'LikesRecipe'])->name('show.likes');
+
+//wish list resource for user
+Route::resource('wishlist', WishRecipeController::class)->middleware(['is.registed', 'auth']);
 
 // *****************************  Auth reg/log    ***********************************************
 
@@ -106,12 +109,14 @@ Route::prefix('user')->group(function () {
             Route::resource('user', UserController::class)->except(['store']);
             Route::POST('avatar', [UserController::class, 'updateAvatar']);
             Route::POST('password', [UserController::class, 'changePassword']);
-            Route::get('{recipe_id}/liked', [UserController::class, 'RecipeUserLiked'])->name('recipe.liked');
+
             Route::get('lastActivity', [UserController::class, 'LastActivity'])->name('last.activity');
             //Notification
             route::resource('/notifi', notificationController::class);
         }
     );
+
+    Route::get('{recipe_id}/liked', [UserController::class, 'RecipeUserLiked'])->name('recipe.liked');
 });
 
 // Comments Routes
@@ -160,7 +165,7 @@ route::prefix('panel')->group(function () {
 
         Route::post('messages/Reply', [AdminMessagesController::class, 'ReplyMessage']);
 
-        //static routes
+        //statistic (chart js) routes
         Route::get('static/users', [AdminController::class, 'statisticUsers']);
         Route::get('static/recipes', [AdminController::class, 'statisticRecipes']);
         //Types recipe
@@ -179,16 +184,8 @@ route::prefix('panel')->group(function () {
 Route::resource('messages', MessageController::class);
 Route::post('contact-support', [MessageController::class, 'ContactSuport']);
 
-// Route::get('/tokens/create', function (Request $request) {
-//     $token = $request->user('admin')->createToken($request->token_name);
-
-//     return ['token' => $token->plainTextToken];
-// });
-
 // testing
 
 Route::get('test', function () {
-
-    NewRecipeEvent::dispatch(User::find(1), 'New recipe', 'Add recipe', 'recipe');
 });
 Route::post('test', [MessageController::class, 'store']);

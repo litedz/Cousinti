@@ -1,16 +1,12 @@
 <template>
     <div>
-        <Line :data="info" :options="options" />
+       <comments recipe_id="10"></comments>
+       <footer-page></footer-page>
 
     </div>
 </template>
 <script>
-import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale, PointElement } from 'chart.js/auto'
-import { Line } from 'vue-chartjs'
-import { Bar } from 'vue-chartjs'
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, PointElement)
 export default {
-    components: { Line },
     data() {
         return {
             info: {

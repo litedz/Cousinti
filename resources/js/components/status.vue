@@ -1,42 +1,72 @@
 <template>
-    <div class="status m-5 position-fixed w-50 font-amiri z-9999" style="left: 25%;top: 5%;direction: rtl;">
-        <div :class="'border alert alert-' + this.class">
-            <div :class="'fa fa-' + icon"></div>
-            <div class="h5">{{ this.status_response }}</div>
-            {{ this.message }}
+    <Transition name="fade">
+        <div class="status m-5 position-fixed w-50 font-amiri z-9999" style="left: 25%;top: 5%;direction: rtl;"
+            v-show="show_status">
+            <div :class="'d-grid gap-2 border alert alert-' + this.class">
+                <button type="button" class="btn btn-close btn-outline-white btn-sm p-2 rounded-circle"
+                    @click="CloseStatus()" title="close-status"></button>
+                <div :class="'fa fa-' + icon"></div>
+                <div class="h5">{{ this.status_response }}</div>
+                {{ this.message }}
+            </div>
         </div>
-    </div>
+    </Transition>
 </template>
 
 <script>
 export default {
+
+    mounted() {
+
+    },
     data() {
         return {
-            class: 'warning',
-            message: 'Message',
-            status_response: 'Status',
-            icon: 'info',
+            class: '',
+            message: '',
+            status_response: '',
+            icon: '',
+            duration: '',
+            show_status: false,
         }
     },
     methods: {
-        Display(style, message, status_response, icon) {
+        Display(style = 'info', message = 'Message', status_response = 'status', icon = 'exclamation-circle', duration = '5000') {
+
             this.class = style;
             this.message = message;
             this.status_response = status_response;
             this.icon = icon;
-            $('.status').fadeIn();
+            this.duration = duration;
+            this.show_status = true;
+            let me = this;
             setTimeout(() => {
-                $('.status').fadeOut();
-            }, 5000);
-        }
+                me.show_status = false;
+            }, this.duration);
+
+        },
+        RestoreField() {
+            this.class = '';
+            this.message = '';
+            this.status_response = '';
+            this.icon = '';
+        },
+        CloseStatus() {
+            this.RestoreField();
+            this.show_status = false;
+        },
     }
 }
 </script>
 
 <style>
-.status {
-    display: none;
-    z-index: 9999;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
 

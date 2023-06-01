@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Events\NewRecipeEvent;
+use App\Events\UpdateRatingRecipeEvent;
 use App\Http\Resources\RecipeResource;
 use App\Models\image;
 use App\Models\ingredients;
+use App\Models\likes;
 use App\Models\Rating;
 use App\Models\recipe;
 use App\Models\types_recipes;
@@ -73,11 +75,11 @@ class RecipeController extends Controller
         if ($recipe) {
             $this->storeIngredients($recipe->id);
             $this->storeHeadImage($recipe->id);
-            if (!is_null($this->other_images)) {
+            if (! is_null($this->other_images)) {
                 $this->storeOtherImage($recipe->id);
             }
 
-            NewRecipeEvent::dispatch(auth()->user()->id, 'Check it  : ' . $recipe->name, 'Add recipe', 'recipe', '/recipes/' . $recipe->id);
+            NewRecipeEvent::dispatch(auth()->user()->id, 'Check it  : '.$recipe->name, 'New Recipe', 'recipe', '/recipes/'.$recipe->id);
         }
 
         return response()->json([
@@ -199,8 +201,8 @@ class RecipeController extends Controller
 
         //store image in varriable other images
         for ($i = 0; $i < count($request->file()); $i++) {
-            if ($request->hasFile('image_' . $i)) {
-                $this->other_images['image_' . $i] = $request->file('image_' . $i);
+            if ($request->hasFile('image_'.$i)) {
+                $this->other_images['image_'.$i] = $request->file('image_'.$i);
             }
         }
 
@@ -212,7 +214,7 @@ class RecipeController extends Controller
         image::where('recipe_id', $recipe_id)->delete();
         ingredients::where('recipe_id', $recipe_id)->delete();
         $recipe = recipe::find($recipe_id);
-        Storage::disk('public')->deleteDirectory(auth()->user()->id . '/' . $recipe->name);
+        Storage::disk('public')->deleteDirectory(auth()->user()->id.'/'.$recipe->name);
         $recipe->delete();
 
         return response()->json([
@@ -288,7 +290,7 @@ class RecipeController extends Controller
     public function RemovePrevImage($image_id)
     {
         $image_name = image::find($image_id);
-        $delete_in_storage = Storage::disk('public')->delete('recipes/' . $image_name->name);
+        $delete_in_storage = Storage::disk('public')->delete('recipes/'.$image_name->name);
         $delete_in_Db = $image_name->delete();
 
         if ($delete_in_storage && $delete_in_Db) {
@@ -303,39 +305,54 @@ class RecipeController extends Controller
     /**
      * Add Like to the Recipe
      */
-    public function like_recipe(request $e)
+    public function AddOrRemoveLike(request $request)
     {
-        if (!Auth()->check()) {
-            return response()->json([
-                'status' => 'انت غير مسجل ',
-                'message' => '',
-                'style' => 'danger',
-                'icon' => 'warning',
-            ]);
-        }
-        $users = User::all()->count();
-        $checkLiked = Rating::where('recipe_id', $e->recipe_id)->where('user_id', auth()->user()->id)->first();
-        if ($checkLiked) {
-            $remove_like = $checkLiked->delete();
-            if ($remove_like) {
-                return response()->json('disliked');
-            }
-        } else {
-            $like = Rating::create([
-                'like' => 1,
-                'user_id' => auth()->user()->id,
-                'recipe_id' => $e->recipe_id,
-            ]);
 
-            $count_like_recipe = Rating::where('recipe_id', $e->recipe_id)->get()->count();
-            $update_rating = Rating::where('recipe_id', $e->recipe_id)->update([
-                'rating' => $count_like_recipe * 100 / $users,
-            ]);
+        $val = $request->validate([
+            'recipe_id' => 'required',
+        ]);
 
-            if ($like && $update_rating) {
-                return response()->json('liked');
-            }
+        $CheckLikedRecipe = likes::firstWhere('user_id', auth()->user()->id);
+
+        // remove like if its recipe liked before
+        if ($CheckLikedRecipe) {
+
+            return $this->removeLike(auth()->user()->id, $request->recipe_id);
         }
+
+        $addLike = likes::create([
+            'user_id' => auth()->user()->id,
+            'recipe_id' => $request->recipe_id,
+            'like' => 1,
+        ]);
+
+        //Update Rating
+        UpdateRatingRecipeEvent::dispatch($request->recipe_id);
+
+        return response()->json([
+            'status' => 'تم',
+            'message' => 'اعجاب',
+            'style' => 'info',
+            'icon' => 'fa-thumbs-up',
+        ]);
+    }
+
+    public function removeLike($user_id, $recipe_id)
+    {
+
+        $RemoveLike = likes::where('user_id', $user_id)->delete();
+
+        if ($RemoveLike) {
+            //Update Rating
+            UpdateRatingRecipeEvent::dispatch($recipe_id);
+        }
+
+        return $RemoveLike ? response()->json([
+            'status' => 'حذف',
+            'message' => 'تم حذف الاعجاب',
+            'style' => 'warning',
+            'icon' => 'thumbs-downo',
+        ]) : throw new Exception('Something wrong with request', 1);
     }
 
     /**
@@ -363,7 +380,7 @@ class RecipeController extends Controller
         } else {
             return response()->json(RecipeResource::collection(recipe::with(['author', 'images_recipe' => function ($query) {
                 $query->whereNotNull('cover')->get();
-            }])->where('name', 'like', '%' . $type . '%')->get()));
+            }])->where('name', 'like', '%'.$type.'%')->get()));
         }
     }
 

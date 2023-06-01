@@ -1,6 +1,6 @@
 <template>
+  <status ref="status"></status>
   <div class="single-recipe d-grid gap-4" style="">
-    <status ref="status"></status>
     <div class="header d-grid">
       <div class="content d-grid gap-4">
         <div v-for="img in this.single_recipe.images_recipe" :key="img">
@@ -16,15 +16,16 @@
           </div>
           <div class="number-ingrediants d-flex align-items-center gap-2"><span
               class="border fa fa-finger-up fa-list-dots first-color fs-6 p-1 rounded-4"></span>
-            <li>{{this.ingredients.length}}</li>
+            <li>{{ this.ingredients.length }}</li>
             <li>ingredients</li>
           </div>
           <div class="author border rounded-circle"><a :href="'/profile/' + this.single_recipe.user_id"><img
                 src="https://i.pravatar.cc/60" class="rounded-5"></a>
           </div>
-          <div class="likes d-flex align-items-center gap-2"><span
-              class="border fa fa-thumbs-up p-1 rounded-4 text-bg-primary"></span>
-            <li>{{this.single_recipe.like}}</li>
+          <div class="likes d-flex align-items-center gap-2">
+            <span class="border fa fa-thumbs-up p-1 rounded-4 text-bg-primary pointer " @click="like_recipe()"></span>
+            <!-- <li class="fs-6 text-primary">You and </li> -->
+            <li>{{ this.single_recipe.like }}</li>
             <li>Likes</li>
           </div>
           <div class="wishliste">
@@ -62,10 +63,10 @@
         </div>
       </div>
     </div>
-    <div class="comments mt-5">
-      <comments :recipe_id="$attrs.recipe_id"></comments>
-    </div>
 
+    <div class="comments mt-5">
+      <comments :recipe_id="this.$attrs.recipe_id"></comments>
+    </div>
     <div class="footer">
       <footer-page></footer-page>
     </div>
@@ -74,13 +75,12 @@
 </template>
 
 <script>
-import comments from "./comments.vue";
 
 export default {
   mounted() {
     window.addEventListener("scroll", this.whenScroll);
     this.getRecipe();
-    this.checkLikeRecipe();
+
   },
   unmounted() {
     window.removeEventListener("scroll", this.whenScroll);
@@ -92,33 +92,32 @@ export default {
       single_recipe: "",
       type_recipe: '',
       rating: '',
-      ingredients:'',
+      ingredients: '',
     };
   },
   methods: {
     checkLikeRecipe() {
-      axios({
-        method: "get", url: "/user/" + this.$attrs.recipe_id + "/liked/"
-      })
+      let data = new FormData();
+      data.append('user_id', this.$attrs.user_id)
+      axios.get("/recipe/likes", data)
         .then((response) => {
           if (response.data) {
-            this.liked = response.data.liked;
+            this.likes = response.data.liked;
 
           }
         })
         .catch((error) => { });
     },
-    like() {
-      axios({
-        method: "post",
-        url: "/recipe/like/" + this.$attrs.recipe_id,
-      })
+    like_recipe() {
+      let data = new FormData();
+      data.append('recipe_id',this.$attrs.recipe_id);
+      axios.post("/recipe/like/" + this.$attrs.recipe_id,data)
         .then((response) => {
-          this.$refs.status.Display('success', response.data, '', 'check');
+          this.$refs.status.Display(response.data.style, response.data.message, response.data.status, response.data.icon);
           this.checkLikeRecipe();
         })
         .catch((error) => {
-          this.$refs.status.Display('info', error.response.data.message);
+          this.$refs.status.Display('danger', error.response.data.message, 'خطا', 'exclamation-circle', 2000);
         });
     },
     whenScroll() {

@@ -62,6 +62,8 @@ class Kernel extends HttpKernel
         'check.facebookUser' => \App\Http\Middleware\UserFacebook::class,
         //Check if user if comming form media or just the website
         'check.user' => \App\Http\Middleware\CheckUserLogin::class,
+        // Check is Is Registed
+        'is.registed' => \App\Http\Middleware\IsRegisted::class,
 
         'auth.session' => \Illuminate\Session\Middleware\AuthenticateSession::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
@@ -71,5 +73,16 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+    ];
+
+    /**
+     * The priority-sorted list of middleware.
+     *
+     * This forces non-global middleware to always be in the given order.
+     *
+     * @var string[]
+     */
+    protected $middlewarePriority = [
+        \App\Http\Middleware\IsRegisted::class,
     ];
 }

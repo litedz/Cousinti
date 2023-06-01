@@ -31,7 +31,6 @@ class notificationController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -42,7 +41,6 @@ class notificationController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\notification  $notification
      * @return \Illuminate\Http\JsonResponse
      */
     public function show(notification $notification)
@@ -56,7 +54,6 @@ class notificationController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\notification  $notification
      * @return \Illuminate\Http\Response
      */
     public function edit(notification $notification)
@@ -67,21 +64,19 @@ class notificationController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\notification  $notification
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, notification $notification)
     {
         $request->validate([
-            'notification_id' => 'required'
+            'notification_id' => 'required',
         ]);
         try {
             $update_status = notification::find($request->notification_id);
             $update_status->status = true;
             $update_status->save();
         } catch (\Throwable $th) {
-            throw new Exception("Error Processing Request", 1);
+            throw new Exception('Error Processing Request', 1);
         }
 
         return response()->json('updated');
@@ -90,18 +85,17 @@ class notificationController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\notification  $notification
      * @return \Illuminate\Http\Response
      */
-    public function destroy(notification $notification,Request $request)
+    public function destroy(notification $notification, Request $request)
     {
         $request->validate([
-            'notification_id' => 'required'
+            'notification_id' => 'required',
         ]);
         try {
             $update_status = notification::find($request->notification_id)->delete();
         } catch (\Throwable $th) {
-            throw new Exception("Error Processing Request", 1);
+            throw new Exception('Error Processing Request', 1);
         }
 
         return response()->json('Deleted');

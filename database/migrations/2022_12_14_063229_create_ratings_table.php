@@ -15,10 +15,7 @@ class CreateRatingsTable extends Migration
     {
         Schema::create('ratings', function (Blueprint $table) {
             $table->id();
-            $table->integer('like')->default(0);
-            $table->integer('dislike')->default(0);
             $table->float('rating')->default(0.0);
-            $table->foreignId('user_id')->constrained('users');
             $table->foreignId('recipe_id')->constrained('recipes');
             $table->timestamps();
         });

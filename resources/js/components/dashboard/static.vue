@@ -69,12 +69,37 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-12 col-md-6">
+                <Line :data="infoUsers" ref="usersStat" class="" />
+            </div>
         </div>
 
     </section>
 </template>
 <script>
-export default{
-    
+
+import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale, PointElement } from 'chart.js/auto'
+import { Line } from 'vue-chartjs'
+export default {
+    components: { Line },
+    data() {
+        return {
+            infoUsers: {
+                labels: ['juy','test'],
+                datasets: [{
+                    label: 'Liked stati',
+                    data: [50 , 100],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }],
+
+            },
+        }
+    },
+    methods: {
+        
+    },
 }
 </script>

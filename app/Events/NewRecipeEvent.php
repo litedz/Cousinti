@@ -15,7 +15,7 @@ class NewRecipeEvent
      *
      * @return void
      */
-    public function __construct(public $user_id,public $message,public $subject,public $type,public $path)
+    public function __construct(public $user_id, public $message, public $subject, public $type, public $path)
     {
         //
     }

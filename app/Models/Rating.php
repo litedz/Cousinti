@@ -9,5 +9,5 @@ class Rating extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['like', 'dislike', 'user_id', 'recipe_id'];
+    protected $fillable = ['rating', 'recipe_id'];
 }

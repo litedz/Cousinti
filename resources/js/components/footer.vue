@@ -91,6 +91,7 @@ export default {
 
     mounted() {
         this.latestRecipes();
+        console.log(this.$refs);
     },
     data() {
 
@@ -111,7 +112,7 @@ export default {
             axios({ method: "post", url: "/subscribe", data: data })
                 .then((response) => {
                     if (response.data) {
-                        this.$refs.status.Display('success', response.data, 'Success', 'fa-check-circle');
+                        this.$refs.status_footer.Display('success', response.data, 'Success', 'fa-check-circle');
                         //initialization email input
                         this.subscribeEmail = '';
                         //unable subscribe btn 
@@ -119,12 +120,11 @@ export default {
                     }
                 })
                 .catch((error) => {
-
-                    console.log(error);
                     if (error.response) {
                         //unable subscribe btn 
                         this.buttonSubscrube = false;
                         this.$refs.status.Display('danger', error.response.data.message, 'Error', 'exclamation-circle');
+                        
 
                     }
 
