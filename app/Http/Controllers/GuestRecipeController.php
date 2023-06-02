@@ -26,9 +26,9 @@ class GuestRecipeController extends Controller
             ->orderByDesc('id')
             ->get());
 
-        $RecipeMostComment = collect(recipe::with(['comments'])->whereHas('comments')->whereHas('images_recipe')->limit(2)->get())->sortByDesc('comments');
+        $RecipeMostComment = collect(recipe::with(['comments'])->approved()->whereHas('comments')->whereHas('images_recipe')->limit(2)->get())->sortByDesc('comments');
         $UserMostPosted = collect(User::with(['recipes', 'rank'])->whereHas('recipes')->get())->sortByDesc('recipes')->take(7);
-        $BestRecipe = recipe::with(['type_recipe', 'images_recipe'])->orderByDesc('like')->limit(3)->get();
+        $BestRecipe = recipe::with(['type_recipe', 'images_recipe'])->approved()->orderByDesc('like')->limit(3)->get();
         $recipesOfMonth = recipe::with(['type_recipe', 'images_recipe'])->whereMonth('created_at', Carbon::now()->format('m'))->limit(6)->get();
         $RatingRecipe = recipe::with(['type_recipe', 'images_recipe'])->orderByDesc('rating')->limit(5)->get();
 
@@ -63,7 +63,7 @@ class GuestRecipeController extends Controller
         $recipe = recipe::with(['ingredient', 'type_recipe', 'images_recipe' => function ($query) {
             $query->orderByDesc('cover');
         }])
-            ->approuved()
+            ->approved()
             ->findOrFail($id);
 
         return response()->json([
@@ -113,7 +113,7 @@ class GuestRecipeController extends Controller
             $query->whereNotNull('cover')->get();
         }])
             ->whereHas('images_recipe')
-            ->where('is_approved', true)
+            ->approved()
             ->where('name', 'like', '%' . $type . '%')->get());
 
         return response()->json($recipes_found);

@@ -21,8 +21,9 @@ class RecipeFactory extends Factory
             'url_video' => 'https://www.youtube.com/cousinti',
             'user_id' => User::factory(),
             'how_todo' => $this->faker->realText(),
-            'description' => $this->faker->text(),
+            'description' => $this->faker->sentence(400),
             'level' => $this->faker->text(5),
+            'is_approved' => true,
             'how_long' => $this->faker->numberBetween(0, 100),
         ];
     }

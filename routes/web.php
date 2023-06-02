@@ -79,7 +79,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/recipes/filter/{by}', [RecipeController::class, 'filter_recipes'])->name('recipe.filter');
 
     Route::delete('recipe/image/{image_id}', [RecipeController::class, 'RemovePrevImage'])->name('recipe.image.remove');
-
 }); // ***********************************************************************************************
 
 Route::post('recipe/like/{recipe_id}', [RecipeController::class, 'AddOrRemoveLike'])->name('recipe.like')->middleware('is.registed');
@@ -110,10 +109,13 @@ Route::prefix('user')->group(function () {
             Route::resource('user', UserController::class)->except(['store']);
             Route::POST('avatar', [UserController::class, 'updateAvatar']);
             Route::POST('password', [UserController::class, 'changePassword']);
-
             Route::get('lastActivity', [UserController::class, 'LastActivity'])->name('last.activity');
             //Notification
             route::resource('/notifi', notificationController::class);
+            //statistic
+
+            Route::get('statistic/{user_id}',[UserController::class,'staticUser']);
+            
         }
     );
 
@@ -126,16 +128,13 @@ Route::resource('comments', CommentsController::class)->middleware('is.registed'
 // Message or chat routes
 
 Route::resource('messages', MessageController::class);
-Route::post('messages/conversation', [MessageController::class, 'conversation']);
 
 //Authantication
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('check.login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.user');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('register', function () {
-    return view('user.register');
-})->name('user.register')->middleware('check.login');
+Route::view('register','user.register')->name('user.register')->middleware('check.login');
 Route::POST('/register', [UserController::class, 'store']);
 Route::POST('/register/facebook/', [UserController::class, 'RegisterWithFace']);
 // ***********************************************************************************************
@@ -166,7 +165,7 @@ route::prefix('panel')->group(function () {
 
         Route::post('messages/Reply', [AdminMessagesController::class, 'ReplyMessage']);
 
-        //statistic (chart js) routes
+        //statistic Website for admin (chart js) routes 
         Route::get('static/users', [AdminController::class, 'statisticUsers']);
         Route::get('static/recipes', [AdminController::class, 'statisticRecipes']);
         //Types recipe
@@ -180,8 +179,6 @@ route::prefix('panel')->group(function () {
     route::view('login', 'admin.login-admin')->middleware('is.admin');
 });
 
-// Route::post('test/admin/messages', [MessageController::class, 'ContactSuport']);
-
 Route::resource('messages', MessageController::class);
 Route::post('contact-support', [MessageController::class, 'ContactSuport']);
 
@@ -189,4 +186,3 @@ Route::post('contact-support', [MessageController::class, 'ContactSuport']);
 
 Route::get('test', function () {
 });
-

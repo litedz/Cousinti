@@ -20,7 +20,7 @@ class IsApproved
         $recipe = recipe::where('id', $request->recipe_id)->firstOrFail();
 
         if ($recipe->is_approved == false) {
-            return redirect()->route('home');
+           abort(404);
         }
         return $next($request);
     }

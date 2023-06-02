@@ -3,9 +3,9 @@
   <div class="single-recipe d-grid gap-4" style="">
     <div class="header d-grid">
       <div class="content d-grid gap-4">
-        <div v-for="img in this.single_recipe.images_recipe" :key="img">
-          <img v-if="img.cover == 'active'" :src="this.w_path + '/storage/recipes/' + img.name" class="mw-100"
-            style="width: 100%;height: 300px;">
+        <div v-for="img in this.single_recipe.images_recipe" :key="img" class="w-100 h-100">
+          <img v-if="img.cover == 'active'" :src="this.w_path + '/storage/recipes/' + img.name"
+            class="h-100 mw-100 position-absolute w-100">
         </div>
         <div
           class="align-items-center bg-white-p d-flex gap-5 info-recipe justify-content-center mx-auto p-2 position-absolute rounded shadow w-50">
@@ -24,10 +24,8 @@
           </div>
           <div class="likes d-flex align-items-center gap-2">
             <span class="border fa fa-thumbs-up p-1 rounded-4 text-bg-primary pointer " @click="addLike()"></span>
-            <li class="fs-6 text-primary" v-if="liked">You</li>
-            <li v-if="liked"> and {{ this.likes - 1 }}</li>
-            <li v-else>{{ this.likes }}</li>
-            <li>Likes</li>
+            <li v-if="liked"> Liked and {{ this.likes - 1 }} </li>
+            <li v-else>{{ this.likes }} Likes</li>
           </div>
           <div class="wishliste">
             <btn-wishlist :recipe_id="this.$attrs.recipe_id" :user_id="this.$attrs.user_id"></btn-wishlist>
@@ -42,12 +40,21 @@
             {{ this.single_recipe.name }}
           </div>
           <div class="mx-auto w-50">
-            <ul class="list-ingredients d-grid gap-3 ">
+            <ul class="d-grid gap-3 list-ingredients p-3">
               <li class="fs-6 fw-bolder text-black-title" v-for="(ing,index) in this.single_recipe.ingredient" :key="ing">
                 {{ ing.name_ingredient }}</li>
 
             </ul>
           </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="how_todo">
+      <div class="container">
+        <div class="bg-gray content p-2 rounded-2 w-100">
+          <h1 class="px-2 text-black-title text-right">طريقة التحضير </h1>
+          <p class="font-amiri fs-5 lead lh-lg text-black-title">{{ this.single_recipe.description }}</p>
         </div>
       </div>
     </div>
@@ -152,7 +159,7 @@ export default {
 <style scoped>
 .single-recipe .header .content {
   width: 100%;
-  height: 300px;
+  height: 800px;
   background: indianred;
   position: relative;
 
@@ -164,7 +171,7 @@ export default {
 }
 
 .single-recipe .ingredients .content .list-ingredients li {
-  list-style: '- ' !important;
+  list-style: circle !important;
 }
 
 /* .single-recipe .more-images .heading::before {

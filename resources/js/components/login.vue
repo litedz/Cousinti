@@ -85,8 +85,8 @@
                                         </span>
                                     </div>
                                     <!-- // facebook login button  -->
-                                    <div class="d-flex justify-content-end">
-                                        <div class="align-items-center bg-primary button-facebook d-flex font-amiri fs-6 fw-bold justify-content-center  p-1 rounded-pill text-white w-50 pointer"
+                                    <div class="d-flex justify-content-center">
+                                        <div class="align-items-center bg-primary button-facebook d-flex font-amiri fs-6 fw-bold justify-content-center  p-1 rounded-pill text-white w-50 w-100-sc pointer"
                                             @click="ConnectToTheFacebook()">
                                             <img :src="w_path + '/images/faceicon.png'" alt="" data-v-aacc3324=""
                                                 class="img-fluid mx-2" style="width: 25px;">

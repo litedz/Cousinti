@@ -35,9 +35,9 @@
             </div>
 
             <transition name="fade" v-if="recipes == 0">
-              <div class="alert alert-warning not_found text-center">
+              <div class="alert alert-light-secondary not_found text-center">
                 <div class="h5 text-black-50">
-                  لا يوجد بعد وصفات بهذا النوع
+                  لا يوجد وصفات
                 </div>
               </div>
             </transition>

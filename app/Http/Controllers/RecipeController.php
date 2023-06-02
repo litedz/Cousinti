@@ -96,11 +96,11 @@ class RecipeController extends Controller
      */
     public function show($recipe_id)
     {
-        $recipe = recipe::with(['ingredient', 'approuved','type_recipe', 'images_recipe' => function ($query) {
+        $recipe = recipe::with(['ingredient', 'approuved', 'type_recipe', 'images_recipe' => function ($query) {
             $query->orderByDesc('cover');
         }])
-        ->approuved()
-        ->findOrFail($recipe_id);
+            ->approuved()
+            ->findOrFail($recipe_id);
 
         return response()->json([
             'recipe' => $recipe,
@@ -317,8 +317,7 @@ class RecipeController extends Controller
         $CheckLikedRecipe = likes::firstWhere('user_id', auth()->user()->id);
 
         // remove like if its recipe liked before
-        if ($CheckLikedRecipe) {
-
+        if (isset($CheckLikedRecipe)) {
             return $this->removeLike(auth()->user()->id, $request->recipe_id);
         }
 
@@ -342,7 +341,7 @@ class RecipeController extends Controller
     public function removeLike($user_id, $recipe_id)
     {
 
-        $RemoveLike = likes::where('user_id', $user_id)->delete();
+        $RemoveLike = likes::where('user_id', $user_id)->where('recipe_id',$recipe_id)->delete();
 
         if ($RemoveLike) {
             //Update Rating
@@ -360,9 +359,9 @@ class RecipeController extends Controller
      * Check if User is liked this recipe before
      */
 
-    public function IsLiked(Request $request,int $recipe_id)
+    public function IsLiked(Request $request, int $recipe_id)
     {
-    
+
         $Isliked = likes::where('user_id', 20)->where('recipe_id', $recipe_id)->first();
         return $Isliked ? response()->json(true) : response()->json(false);
     }
@@ -370,7 +369,7 @@ class RecipeController extends Controller
      * Show Likes Recipe
      */
 
-    public function CountLikes(Request $request,int $recipe_id)
+    public function CountLikes(Request $request, int $recipe_id)
     {
         $likes = likes::where('recipe_id', $recipe_id)->get();
         return $likes ? response()->json(['likes' => $likes->count()]) : response()->json(false);

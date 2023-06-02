@@ -17,6 +17,12 @@ require('./bootstrap');
 window.Vue = require('vue').default;
 
 
+const months = require('months');
+
+
+
+
+
 
 
 /**
@@ -104,6 +110,8 @@ import add_message from "./components/admin/add-message.vue";
 import static_admin from "./components/admin/statistic.vue";
 import types from "./components/admin/types.vue";
 import social_media from "./components/admin/social-media.vue";
+import page404 from "./components/custome/404.vue";
+
 
 
 import { plugin, defaultConfig } from '@formkit/vue'
@@ -201,12 +209,11 @@ app.component('add-message', add_message);
 app.component('static-admin', static_admin);
 app.component('types', types);
 app.component('social-media', social_media);
+app.component('page-404', page404);
 
 
 
 import { Refomate } from './components/formateDate';
-
-
 
 app.mixin(Refomate);
 app.use(plugin, defaultConfig);

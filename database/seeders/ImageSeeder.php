@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\image;
+use App\Models\recipe;
 use Illuminate\Database\Seeder;
 
 class ImageSeeder extends Seeder
@@ -14,6 +15,12 @@ class ImageSeeder extends Seeder
      */
     public function run()
     {
-        image::factory(10)->create();
+        foreach (recipe::get() as $key => $value) {
+            image::create([
+                'name' => 'default-cover.png',
+                'cover' => 'active',
+                'recipe_id' =>$value->id,
+            ]);
+        }
     }
 }

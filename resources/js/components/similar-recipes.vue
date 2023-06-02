@@ -1,10 +1,12 @@
 <template>
     <div class="similar-recipes w-100 h-auto mt-5 overflow-auto" dir="rtl">
         <div class="outer w-100">
-            <div class="cover-type h-25 position-relative rounded" >
-                <div class="bg-second-color h-100 opacity-50 overlay position-absolute w-100" ></div>
+            <div class="h-25 img-container position-relative cover-type">
                 <div
-                    class="shadow-lg bg-white font-amiri h1 p-3 position-absolute rounded text-black-title text-center" style="left: 42%;top: 37.5%;width: 16%;">{{this.$attrs.type}}</div>
+                    class="bg-black h-100 opacity-25 overlay-img-container position-absolute top-0 w-100"></div>
+                <div class="align-items-center d-flex h-100 justify-content-center text-center">
+                    <span class="bg-white fs-1 position-absolute px-5 round type">حلويات</span>
+                </div>
             </div>
             <hr />
             <div class="container">
@@ -22,7 +24,8 @@
                                     <div class="text-capitalize text-weight-500 text-black-50">
                                         الكاتب
                                     </div>
-                                    <a class="mx-1 opacity-75 second-color text-decoration-none" :href="'/profile/'+recipe.author.id">{{ recipe.author.username }}</a>
+                                    <a class="mx-1 opacity-75 second-color text-decoration-none"
+                                        :href="'/profile/' + recipe.author.id">{{ recipe.author.username }}</a>
                                 </div>
                             </div>
                         </div>
@@ -84,12 +87,13 @@ export default {
 .similar-recipes .outer .section .row div.middle-col {
     margin-top: 3rem;
 }
+
 .similar-recipes .outer .section .title a:hover {
-    color: #EF6F82 ;
+    color: #EF6F82;
     transition: all 0.5s;
 }
 
-.similar-recipes .outer .cover-type {
+.cover-type {
     background: url('/storage/types/default.png');
     background-size: cover;
     background-attachment: fixed;

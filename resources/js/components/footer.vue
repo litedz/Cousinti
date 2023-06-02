@@ -1,7 +1,7 @@
 <template>
     <section class="footer font-amiri" dir="rtl">
         <status ref="status"></status>
-        <div class="content h-100" style="background:#3A3959;border-top:5px solid #ef6f82;">
+        <div class="content mb-2" style="border-top:5px solid #ef6f82;">
             <div class="container position-relative text-white" style="z-index:10;">
                 <div class="row gy-4 pt-5">
                     <div class="col-6 col-md-3">
@@ -80,7 +80,7 @@
                 </div>
             </div>
         </div>
-        <div class="copyright text-center text-white w-100" style="background:hsl(242 22% 20% / 1);">
+        <div class="copyright position-sticky text-center text-white top-100 w-100" style="background:hsl(242 22% 20% / 1);">
             Copyright </div>
     </section>
 </template>
@@ -146,9 +146,8 @@ export default {
 .footer {
 
     width: 100%;
-    height: 500px;
-
-
+    height: auto;
+    background:#3A3959;
 }
 
 .footer .top-border {

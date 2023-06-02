@@ -205,7 +205,7 @@ export default {
   },
   data() {
     return {
-      activeComponent: "test",
+      activeComponent: "static_user",
       action_recipe: "",
       recipe_update_id: "", // id of recipe for update
       show_messages: false,

@@ -22,7 +22,7 @@
                 alt="" srcset="" class="h-100 w-100"></div>
           </div>
         </div>
-        <div class="col-md-4 offset-1">
+        <div class="col-10 col-md offset-1 offset-md-0">
           <div class="back">
             <div class="align-items-center d-flex gap-1 justify-content-end">
               <a href="/" class="first-color fw-bolder text-decoration-none">الرئيسية</a><span

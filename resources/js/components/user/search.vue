@@ -11,13 +11,13 @@
                 </div>
                 <div class="bg-light border-bottom d-flex mt-1 pb-2" v-for="recipe in recipes_found" :key="recipe.found">
                     <div class="image w-25">
-                        <a href="#">
+                        <a :href="'/recipes/'+recipe.id">
                             <img class="rounded w-100" :src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name"
                                 alt="" /></a>
                     </div>
                     <div class="info-recipe d-flex flex-column mx-3 w-100">
                         <div class="title fw-bolder">
-                            <a href="#" class="text-decoration-none text-black-title">{{ recipe.name }}</a>
+                            <a :href="'/recipes/'+recipe.id" class="text-decoration-none text-black-title">{{ recipe.name }}</a>
                         </div>
                         <div class="how_todo text-black-50">
 

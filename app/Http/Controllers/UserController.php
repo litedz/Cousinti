@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Jobs\Subscribe;
 use App\Models\comments;
+use App\Models\likes;
 use App\Models\Profile;
 use App\Models\Rating;
 use App\Models\recipe;
@@ -142,7 +143,7 @@ class UserController extends Controller
 
         $checkExistFile = Storage::disk('public')->exists($request->prev_avatar);
 
-        if (! $checkExistFile) {
+        if (!$checkExistFile) {
             throw new Exception('File Doesn Exists', 1);
         }
 
@@ -179,21 +180,6 @@ class UserController extends Controller
             }
         }
     }
-
-    public function RecipeUserLiked(Request $request)
-    {
-
-        $liked = Rating::where('user_id', auth()->user()->id)->where('recipe_id', $request->recipe_id)->get();
-
-        return count($liked) ? response()->json(['liked' => false]) : response()->json(['liked' => true]);
-
-        // if (count($liked) == 0) {
-        //     return response()->json(['liked' => false]);
-        // } else {
-        //     return response()->json(['liked' => true]);
-        // }
-    }
-
     public function RegisterWithFace(Request $e)
     {
 
@@ -254,6 +240,18 @@ class UserController extends Controller
         return response()->json($last_activitys);
     }
 
+    public function staticUser()
+    {
+        $recipes = collect(recipe::where('user_id', auth()->user()->id)->get())->groupBy('created_at');
+        $likes = collect(likes::where('user_id', auth()->user()->id)->get())->groupBy('created_at');
+        $comments = collect(comments::where('user_id', auth()->user()->id)->get())->groupBy('created_at');
+
+        return response()->json([
+            'recipes' => $recipes,
+            'likes' => $likes,
+            'comments' => $comments,
+        ]);
+    }
     public function logout()
     {
         // code...

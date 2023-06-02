@@ -12,8 +12,10 @@
     "dependencies": {
         "@formkit/themes": "^1.0.0-beta.11",
         "chart.js": "^4.3.0",
+        "data-fns": "^1.1.0",
         "feather-icons": "^4.29.0",
         "laravel-vue-pagination": "^4.0.0",
+        "months": "^2.1.0",
         "path-browserify": "^1.0.1",
         "postcss": "^8",
         "typewriter-effect": "^2.19.0",
