@@ -105,7 +105,7 @@
               </div>
             </a>
             <transition>
-              <div class="position-absolute top-100 w-100" v-if="show_notification">
+              <div class="position-absolute top-100 w-100 z-9999" v-if="show_notification">
                 <ul class="list-group rounded-none">
                   <h1 class="bg-body fs-3 p-3 text-capitalize text-center text-muted" v-if="notifications.length == 0">you dont have any notification</h1>
                   <li class="list-group-item border-0 align-items-start border-bottom" v-for="message in notifications">

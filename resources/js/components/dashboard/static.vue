@@ -55,8 +55,15 @@
 
 
             <div class="col-12 col-md-6">
-                <Line :data="infoUsers" ref="usersStat" />
+                <Line :data="staticRecipes" :options="options.recipes" />
             </div>
+            <div class="col-12 col-md-6">
+                <Bar :data="staticComments" :options="options.comments" />
+            </div>
+            <div class="col-12 col-md-6">
+                <Line :data="staticLikes" :options="options.likes" />
+            </div>
+
         </div>
 
     </section>
@@ -65,6 +72,7 @@
 
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale, PointElement } from 'chart.js/auto'
 import { Line } from 'vue-chartjs'
+import { Bar } from 'vue-chartjs'
 import months from 'months';
 import moment from 'moment';
 
@@ -77,40 +85,87 @@ export default {
     activated() {
         this.staticUser();
     },
-    components: { Line },
+    components: { Line, Bar },
     data() {
         return {
             likes: '',
             comments: '',
             recipes: '',
-
-            infoUsers: {
+            staticRecipes: {
                 labels: months,
                 datasets: [
                     {
-                        label: 'Recipes Static',
+                        label: 'Recipes',
                         data: [],
                         fill: false,
                         borderColor: 'rgb(239 111 130)',
                         tension: 0.1,
+                        beginAtZero: true,
+                        fill: 1,
                     },
+                ],
+            },
+            staticComments: {
+                labels: months,
+                datasets: [
                     {
-                        label: 'Liked Static',
+                        label: 'Comments',
+                        data: [],
+                        fill: false,
+                        backgroundColor: ['rgba(255, 205, 86, 0.2)'],
+                        tension: 0.1,
+                        borderWidth: 2,
+                    }],
+
+            },
+            staticLikes: {
+                labels: months,
+                datasets: [
+                    {
+                        label: 'Likes',
                         data: [],
                         fill: false,
                         borderColor: 'rgb(75, 192, 192)',
-                        tension: 0.1
-                    },
-                    {
-                        label: 'Comments Static',
-                        data: [],
-                        fill: false,
-                        borderColor: 'rgb(53 50 102)',
-                        tension: 0.1
-                    }
-                ],
-
+                        tension: 0.1,
+                        beginAtZero: true,
+                        fill: -1,
+                    }],
             },
+            options: {
+                comments: {
+                    plugins: {
+                        legend: {
+                            display: true,
+                        }
+
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                },
+                recipes: {
+                    plugins: {
+
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                },
+                likes: {
+                    plugins: {
+
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                },
+            }
         }
     },
     methods: {
@@ -122,13 +177,13 @@ export default {
                 this.recipes = response.data.recipes;
 
                 for (let index = 0; index < Object.values(this.recipes).length; index++) {
-                    this.infoUsers.datasets[0].data[moment(Object.keys(this.recipes)[index]).month()] = Object.values(this.recipes)[index].length;
+                    this.staticRecipes.datasets[0].data[moment(Object.keys(this.recipes)[index]).month()] = Object.values(this.recipes)[index].length;
                 }
                 for (let index = 0; index < Object.values(this.likes).length; index++) {
-                    this.infoUsers.datasets[1].data[moment(Object.keys(this.likes)[index]).month()] = Object.values(this.likes)[index].length;
+                    this.staticLikes.datasets[0].data[moment(Object.keys(this.likes)[index]).month()] = Object.values(this.likes)[index].length;
                 }
                 for (let index = 0; index < Object.values(this.comments).length; index++) {
-                    this.infoUsers.datasets[2].data[moment(Object.keys(this.comments)[index]).month()] = Object.values(this.comments)[index].length;
+                    this.staticComments.datasets[0].data[moment(Object.keys(this.comments)[index]).month()] = Object.values(this.comments)[index].length;
                 }
 
             });
