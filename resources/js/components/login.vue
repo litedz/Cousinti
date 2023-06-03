@@ -214,8 +214,12 @@ export default {
                     if (response.data == 'Connected') {
                         window.location.href = '/dashboard';
                     }
+                    else {
+                        this.$refs.status.Display(response.data.style, response.data.message, "تحذير", "fa-exclamation-triangle");
+                    }
                 }).catch((error) => {
                     if (error.response) {
+                        console.log(error.response);
                         this.$refs.status.Display('danger', error.response.data.message, "تحذير");
                     }
                 });

@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('ranks', function (Blueprint $table) {
-            $table->string('icon');
+            $table->string('icon')->default('rank-default.png');
         });
     }
 

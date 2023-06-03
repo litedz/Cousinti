@@ -14,6 +14,11 @@ class RankSeeder extends Seeder
      */
     public function run()
     {
-        rank::factory(3)->create();
+       foreach (rank::$ranks as $key => $value) {
+        rank::create([
+            'rank' => $value,
+            'icon' => 'rank-default.png',
+        ]);
+       }
     }
 }

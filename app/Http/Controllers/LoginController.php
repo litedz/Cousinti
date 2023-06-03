@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Exceptions\IncorrecEmailOrPasswordException;
+use App\Exceptions\UserNoRegistedException;
 use App\Models\User;
 use App\Services\LoginMediaService;
 use Exception;
@@ -62,11 +64,16 @@ class LoginController extends Controller
         ]);
 
         try {
-            if ($media->attempMedia($request->email, $request->Id_user_media)) {
-                return response()->json('Connected');
-            }
-        } catch (Exception $e) {
-            throw new Exception($e->getMessage());
+            $media->attempMedia($request->email, $request->Id_user_media);
+        } catch (UserNoRegistedException $th) {
+
+            throw new Exception($th->getMessage(), 1);
+
+        } catch (IncorrecEmailOrPasswordException $e) {
+            
+            throw new Exception($e->getMessage(), 1);
         }
+
+        return response()->json('Connected');
     }
 }

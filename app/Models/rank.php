@@ -9,5 +9,7 @@ class rank extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['icon'];
+    protected $fillable = ['rank','icon'];
+
+    public static $ranks = ['master chef', 'chef', 'amateur'];
 }

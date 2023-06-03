@@ -6,6 +6,7 @@ use App\Jobs\Subscribe;
 use App\Models\comments;
 use App\Models\likes;
 use App\Models\Profile;
+use App\Models\rank;
 use App\Models\Rating;
 use App\Models\recipe;
 use App\Models\Subscribe as ModelsSubscribe;
@@ -56,24 +57,34 @@ class UserController extends Controller
         $valid['avatar'] = $storage_image;
         $valid['username'] = strtolower($request->username);
         $valid['password'] = Hash::make($request->password);
+
         $checkUser = User::where('email', $request->email)->first();
-        if ($checkUser !== null) {
+
+        if (!is_null($checkUser)) {
             throw new Exception('يوجد حساب بهذا الايمايل ', 1);
         }
-        $store = User::create($valid);
-        if ($store) {
-            //create profile
-            $profile = Profile::factory()->create();
+        //create User
+        $createUser = User::create($valid);
 
-            $profile_id = $profile ? $profile->id : throw new Exception('Error Processing Request', 1);
-            User::where('id', $store->id)->update([
-                'profile_id' => $profile_id,
-            ]);
-
-            return response()->json('created');
-        } else {
+        if (!$createUser) {
             throw new Exception('يوجد خطا في التسجيل يرجى المحاولة من جديد ', 1);
         }
+
+        //create profile
+        $profile = Profile::create([
+            'show_about_perm' => 1,
+            'show_recipes_perm' => 1,
+        ]);
+        // Associate Profile to the current User
+        $associateProfile = $createUser->profile_setting()->associate($profile);
+        $associateProfile->save();
+
+        //create default rank
+        $rank = rank::create(['rank' => rank::$ranks[2]]);
+        // Associate Rank  to the current User
+        $associateRank = $createUser->rank()->associate($rank);
+        $associateRank->save();
+        return response()->json('created');
     }
 
     /**
@@ -199,7 +210,7 @@ class UserController extends Controller
             ]);
             $store_User->save();
         } catch (\Throwable $th) {
-            return $th->getMessage();
+            throw new Exception("Problem with Authanticated with facebook", 1);
         }
 
         if ($store_User) {

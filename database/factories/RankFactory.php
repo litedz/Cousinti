@@ -17,7 +17,7 @@ class RankFactory extends Factory
     public function definition()
     {
         return [
-            'rank' => $this->faker->word(),
+            'rank' => $this->faker->randomElement(),
             'icon' => $this->faker->word(),
         ];
     }

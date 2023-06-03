@@ -14,6 +14,7 @@ use App\Http\Controllers\TypesRecipeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WishRecipeController;
 use App\Jobs\Subscribe;
+use App\Models\rank;
 use App\Models\recipe;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -185,4 +186,6 @@ Route::post('contact-support', [MessageController::class, 'ContactSuport']);
 // testing
 
 Route::get('test', function () {
+
+    return rank::$ranks[2];
 });
