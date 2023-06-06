@@ -77,7 +77,7 @@
             </FormKit>
             <!-- Login Button facebook -->
             <div
-              class="align-items-center bg-primary button-facebook d-flex font-amiri fs-6 fw-bold justify-content-center mx-auto p-2 rounded text-white w-50 pointer"
+              class="align-items-center bg-primary button-facebook d-flex font-amiri fs-6 fw-bold justify-content-center mx-auto p-2 pointer rounded text-white w-100-sc w-50-perso"
               @click="ConnectToTheFacebook()">
               <img :src="w_path + '/images/faceicon.png'" class="img-fluid mx-2" style="width: 25px;">
               <div class="text">تسجيل عن طريق الفيس بوك</div>

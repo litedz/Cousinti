@@ -2,6 +2,7 @@
   <div id="sidebar" class='active'>
     <status ref="status"></status>
     <div class="sidebar-wrapper active">
+      <button class="border btn m-2" @click="toggleMenu()"><span class="fa fa-bars text-black-50"></span></button>
       <div class="sidebar-header">
         <img class="w-100" :src="w_path + '/images/logo.png'" alt="" srcset="">
       </div>
@@ -37,9 +38,7 @@
                   <div class="d-flex ">
                     <span data-feather="plus-circle" class="text-success"></span>
                     <span @click="activeComponent = 'update-recipe'">Edit Recipe</span>
-
                   </div>
-
                 </a>
               </li>
               <li class="sub-item">
@@ -226,9 +225,7 @@ export default {
       this.action_recipe = action;
     },
     toggleMenu() {
-      $("#" + event.target.getAttribute("data-link"))
-        .find(".sub-menu")
-        .slideToggle();
+      $('#sidebar').removeClass('active')
     },
 
     DropDowmenu() {

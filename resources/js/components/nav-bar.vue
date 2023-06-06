@@ -28,115 +28,40 @@
       </div>
       <!-- Links nav bar -->
 
-      <div id="link-nav" class="hoverable p-2 " @mouseenter="hoverLink()" @mouseleave="hoverLink()">
-        <li class="fs-5 pointer">
-          <div class="align-items-center d-flex gap-2 justify-content-center"><a href="/"
-              class="text-decoration-none text-black position-relative active-link">الرئيسة</a></div>
-        </li>
-      </div>
-    <!--   <div id="link-nav" class="hoverable p-2 Dropable" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
-        <li class="fs-5 pointer">
-          <div class="align-items-center d-flex gap-2 justify-content-center">
-            <a href="/similar/مملحات" class="text-decoration-none text-black position-relative">مملحات</a>
-
-          </div>
-          <div class="drowDownMenu p-3 position-absolute w-100 rounded z-8888 bg-white-p" style="left:0%;">
-            <div class="container">
-              <div class="row g-2">
-                <div class="col mx-1 rounded">
-                  <div class="img-container p-1 position-relative rounded mw-100"><img class="img-recipe w-100"
-                      src="https://picsum.photos/id/222/200/200" alt="">
-                    <div class="bg-white bottom-0 end-0 h-100 overlay position-absolute start-0 top-0 w-100">
-                      <div
-                        class="align-items-center d-flex first-color flex-column h-100 justify-content-around recipe-info">
-                        <a href="#" class="first-color name_recipe text-decoration-none">Lorem psiurc</a>
-                        <div class="author d-flex flex-column-reverse"><a href="#"
-                            class="fs-6 name-author text-decoration-none" style="color:#90625c;">Mohamed elhabib</a><img
-                            class="avatar mx-auto rounded-circle w-50" src="https://i.pravatar.cc/60"></div>
-                        <div class="rating d-flex flex"><span
-                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span><span
-                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span><span
-                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="border-top text-black-title text-center">صابلي العيد خفيف </div>
-                </div>
-                <div class="col mx-1 rounded">
-                  <div class="img-container p-1 position-relative rounded mw-100"><img class="img-recipe w-100"
-                      src="https://picsum.photos/id/100/200/200" alt="">
-                    <div class="bg-white bottom-0 end-0 h-100 overlay position-absolute start-0 top-0 w-100">
-                      <div
-                        class="align-items-center d-flex first-color flex-column h-100 justify-content-around recipe-info">
-                        <a href="#" class="first-color name_recipe text-decoration-none">Lorem psiurc</a>
-                        <div class="author d-flex flex-column-reverse"><a href="#"
-                            class="fs-6 name-author text-decoration-none" style="color:#90625c;">Mohamed elhabib</a><img
-                            class="avatar mx-auto rounded-circle w-50" src="https://i.pravatar.cc/60"></div>
-                        <div class="rating d-flex flex"><span
-                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span><span
-                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span><span
-                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="border-top text-black-title text-center">صابلي العيد خفيف </div>
-                </div>
-                <div class="col mx-1 rounded">
-                  <div class="img-container p-1 position-relative rounded mw-100"><img class="img-recipe w-100"
-                      src="https://picsum.photos/id/200/200/200" alt="">
-                    <div class="bg-white bottom-0 end-0 h-100 overlay position-absolute start-0 top-0 w-100">
-                      <div
-                        class="align-items-center d-flex first-color flex-column h-100 justify-content-around recipe-info">
-                        <a href="#" class="first-color name_recipe text-decoration-none">Lorem psiurc</a>
-                        <div class="author d-flex flex-column-reverse"><a href="#"
-                            class="fs-6 name-author text-decoration-none" style="color:#90625c;">Mohamed elhabib</a><img
-                            class="avatar mx-auto rounded-circle w-50" src="https://i.pravatar.cc/60"></div>
-                        <div class="rating d-flex flex"><span
-                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span><span
-                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span><span
-                            class="border border-end-0 fa fa-heart-circle-bolt fs-6 p-2 rounded-5"></span></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="border-top text-black-title text-center">صابلي العيد خفيف </div>
-                </div>
-                <div class="more col-12">
-                  <a href="/similar/مملحات" class="border btn btn-block fs-5" style="color: #EF6F82 !important;">راية
-                    المزيد</a>
-                </div>
-              </div>
+      <div class="nav-links">
+        <div id="link-nav" class="hoverable p-2 " @mouseenter="hoverLink()" @mouseleave="hoverLink()">
+          <li class="fs-5 pointer">
+            <div class="align-items-center d-flex gap-2 justify-content-center"><a href="/"
+                class="text-decoration-none text-black position-relative active-link">الرئيسة</a></div>
+          </li>
+        </div>
+        <div v-for="recipeType in types" :key="recipeType.name" id="link-nav" class="hoverable p-2"
+          @mouseenter="hoverLink()" @mouseleave="hoverLink()">
+          <li class="fs-5 pointer">
+            <div class="align-items-center d-flex gap-2 justify-content-center">
+              <a :href="'/similar/' + recipeType.type" class="text-decoration-none text-black position-relative">{{
+                recipeType.type }}</a>
             </div>
-          </div> 
-        </li>
-      </div>-->
-      <div v-for="recipeType in types" :key="recipeType.name" id="link-nav" class="hoverable p-2"
-        @mouseenter="hoverLink()" @mouseleave="hoverLink()">
-        <li class="fs-5 pointer">
-          <div class="align-items-center d-flex gap-2 justify-content-center">
-            <a :href="'/similar/' + recipeType.type" class="text-decoration-none text-black position-relative">{{
-              recipeType.type }}</a>
-          </div>
-        </li>
+          </li>
+        </div>
+        <div id="link-nav" class="hoverable p-2 Dropable" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
+          <li class="fs-5 pointer">
+            <div class="align-items-center d-flex gap-2 justify-content-center">
+              <a href="/recipes" class="text-decoration-none text-black position-relative">الوصفات</a>
+            </div>
+
+
+          </li>
+        </div>
       </div>
-      <div id="link-nav" class="hoverable p-2 Dropable" @mouseenter="hoverLink()" @mouseleave="hoverLink()">
-        <li class="fs-5 pointer">
-          <div class="align-items-center d-flex gap-2 justify-content-center">
-            <a href="/recipes" class="text-decoration-none text-black position-relative">الوصفات</a>
-          </div>
-
-
-        </li>
-      </div>
-
       <!-- Auth area  -->
       <div class="auth-area px-2" v-if="this.$attrs.auth_status && this.$attrs.auth_status == true">
-        <!-- Wish List Component -->
-        <!-- <wishlist v-if="showWishList" @close-wishlist="showWishList = false" :user_id="this.$attrs.user_id"></wishlist> -->
         <KeepAlive>
-          <component :is="activeComponent"  @close-wishlist="activeComponent = ''" :user_id="this.$attrs.user_id"></component>
+          <component :is="activeComponent" @close-wishlist="activeComponent = ''" :user_id="this.$attrs.user_id">
+          </component>
         </KeepAlive>
 
-        
+
         <div class="info align-items-center d-flex flex-row-reverse ">
           <div class="" v-if="this.$attrs.auth_status == true && this.$attrs.checkmediauser == true">
             <img :src="this.$attrs.avatar" style="width: 50px;height: 50px;" alt="avatar" class="rounded-circle m-2" />
@@ -170,7 +95,8 @@
                   class="fs-6 m-2 fa fa-list first-color"></span>
               </li>
               <li class="align-items-center border-bottom d-flex justify-content-end m-2 p-1 pointer rounded">
-                <a href="#" class="text-decoration-none first-color" @click="activeComponent = 'wishlist'">المفضلة</a><span
+                <a href="#" class="text-decoration-none first-color"
+                  @click="activeComponent = 'wishlist'">المفضلة</a><span
                   class="fs-6 m-2 fa fa-heartbeat first-color"></span>
               </li>
               <li class="align-items-center border-bottom d-flex justify-content-end m-2 p-1 pointer rounded">
@@ -188,10 +114,18 @@
       <div
         class="social-media border-left border-right border-top bottom-0 contact d-flex gap-2 justify-content-center p-2 position-absolute rounded w-100"
         style="background:#fbfbfb;">
-        <li class="fa fa-hand-holding-heart"></li>
-        <li class="fa fa-hand-holding-heart"></li>
-        <li class="fa fa-hand-holding-heart"></li>
-        <li class="fa fa-hand-holding-heart"></li>
+        <a href="/" class="">
+          <li data-feather="facebook"></li>
+        </a>
+        <a href="/" class="text-danger">
+          <li data-feather="youtube"></li>
+        </a>
+        <a href="/" class="text-muted">
+          <li data-feather="instagram"></li>
+        </a>
+        <a href="/" class="text-info">
+          <li data-feather="twitter"></li>
+        </a>
       </div>
     </nav>
     <div class="align-items-center d-flex fw-bolder gap-2 login mx-2 position-absolute rounded start-0  form"
@@ -303,8 +237,11 @@ export default {
     toggleMenu() {
       $("#" + event.target.getAttribute("data-link")).fadeToggle("slow");
     },
-
-
+    getMedia() {
+      axios.get().then((response) => {
+        this.media = response.data;
+      })
+    }
   },
 };
 </script>
@@ -401,6 +338,10 @@ nav.navbar {
   color: #EF6F82;
 }
 
+#nav .nav-links {
+  display: flex ;
+}
+
 #nav .auth-area {
   right: 5%;
   position: absolute;
@@ -427,20 +368,20 @@ nav.navbar {
 /* small Screen */
 @media only screen and (max-width: 768px) {
 
-
   .logo-menu img {
     display: none;
     width: 100%;
   }
 
   .show_navbar {
-    gap: 21px !important;
-    width: 50% !important;
+    gap: 0px !important;
+    width: 60% !important;
     height: 100% !important;
     border-left: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
     background: hsl(60deg 20% 99%) !important;
     flex-direction: column !important;
     align-items: center !important;
+    justify-content: space-between !important;
     position: fixed !important;
     top: 0 !important;
     right: 0 !important;
@@ -455,8 +396,8 @@ nav.navbar {
 
   #nav .auth-area {
     position: relative !important;
-    background: #e9e9e9;
     display: flex;
+    justify-content: center;
     right: 0;
     width: 100%;
   }
@@ -503,8 +444,23 @@ nav.navbar {
     bottom: 100% !important;
   }
 
+
+  
+#nav #link-nav a.active-link::after {
+  position: relative !important;
+  right: 50%;
 }
 
+#nav .nav-links {
+  display: block;
+}
+
+
+#nav .social-media {
+  position: relative !important;
+}
+
+}
 
 /*       Mediam screen  */
 
@@ -582,5 +538,4 @@ nav.navbar {
   }
 
 
-}
-</style>
+}</style>

@@ -167,25 +167,22 @@ class RecipeController extends Controller
         ]);
         //  Check if ingredients empty
         if (count(json_decode($request->ingredients)) === 0) {
-            return response([
-                'status' => 'خطاء',
-                'message' => 'لا يمكن اضافة وصفة بدون مكونات',
-                'class' => 'danger',
-            ], 200);
-        } else {
-            // Store ingredients in var ingredients
-            foreach (json_decode($request->ingredients) as $item => $value) {
-                array_push(
-                    $this->ingredients,
-                    ['name_ingredient' => $value->name_ingredient, 'quantity' => $value->quantity]
-                );
-            }
+
+            throw new Exception('لا يمكن اضافة وصفة بدون مكونات ', 1);
         }
+
+        // Else Store ingredients in var ingredients
+        foreach (json_decode($request->ingredients) as $item => $value) {
+
+            array_push($this->ingredients,['name_ingredient' => $value->name_ingredient, 'quantity' => $value->quantity]);
+
+        }
+
         // if request for update recipe
         if ($request->update_recipe_id) {
-            $validate_head_image = $request->validate(['head_image' => 'image']); // in update must be image
+            $request->validate(['head_image' => 'image']); // in update must be image
         } else {
-            $validate_image = $request->validate([
+            $request->validate([
                 'head_image' => 'required|image',
             ]);
         }
@@ -341,7 +338,7 @@ class RecipeController extends Controller
     public function removeLike($user_id, $recipe_id)
     {
 
-        $RemoveLike = likes::where('user_id', $user_id)->where('recipe_id',$recipe_id)->delete();
+        $RemoveLike = likes::where('user_id', $user_id)->where('recipe_id', $recipe_id)->delete();
 
         if ($RemoveLike) {
             //Update Rating

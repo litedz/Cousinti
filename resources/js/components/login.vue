@@ -41,7 +41,7 @@
                 <div class="content text-center mt-5 col-12 col-md-6">
                     <div class="overflow-hidden position-relative h-auto p-mt-lg-5 p-mt-md-4 content-login">
                         <div class="position-absolute w-100 h-100 start-50 opacity-75"></div>
-                        <div class="m-auto">
+                        <div class="m-md-auto">
                             <FormKit type="form" #default="{ state: { valid } }" @submit="login()" :actions="false"
                                 form-class="bg-light shadow m-lg-4 p-5 position-relative z-7777 d-grid gap-3">
                                 <div class="logo text-center">
@@ -86,7 +86,7 @@
                                     </div>
                                     <!-- // facebook login button  -->
                                     <div class="d-flex justify-content-center">
-                                        <div class="align-items-center bg-primary button-facebook d-flex font-amiri fs-6 fw-bold justify-content-center  p-1 rounded-pill text-white w-50 w-100-sc pointer"
+                                        <div class="align-items-center bg-primary button-facebook d-flex font-amiri fs-6 fw-bold justify-content-center p-1 pointer rounded-pill text-white w-100-sc w-50-perso"
                                             @click="ConnectToTheFacebook()">
                                             <img :src="w_path + '/images/faceicon.png'" alt="" data-v-aacc3324=""
                                                 class="img-fluid mx-2" style="width: 25px;">

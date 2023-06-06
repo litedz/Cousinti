@@ -1,18 +1,10 @@
 
 <template>
-    <div class="loading-page h-100  position-fixed w-100 z-9999 top-0">
-        <div class="main bg-dark">
-            <div class="balls balls-1">
-                <div class="ball ball--1"></div>
-                <div class="ball ball--2"></div>
-                <div class="ball ball--3"></div>
-                <div class="ball ball--4"></div>
-            </div>
-            <div class="balls balls-2">
-                <div class="ball ball--1"></div>
-                <div class="ball ball--2"></div>
-                <div class="ball ball--3"></div>
-                <div class="ball ball--4"></div>
+    <div class="loading-page">
+        <div class="pageloader gray-bg flex-center gray-bg pageloader">
+            <div class="loader">
+                <span>Cousinti</span>
+                <div class="sp-hydrogen"></div>
             </div>
         </div>
     </div>
@@ -20,140 +12,170 @@
   
 <script>
 export default {
-
+    mounted() {
+        this.Loading();
+    },
+    methods: {
+        Loading() {
+            $(window).on("load", function () {
+                $('.loading-page').fadeOut('slow');
+            });
+        }
+    }
 }
 
-$(document).ready(function () {
-
-    $(window).on("load", function () {
-        $('.loading-page').fadeOut('slow');
-    });
-
-});
 
 </script>
   
 <style>
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    position: relative;
+body {
+    margin-top: 20px;
 }
 
-.balls {
-    display: flex;
+.gray-bg {
+    background: #eee;
+}
+
+.pageloader {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
     height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 40%;
+    z-index: 9999;
+    opacity: 1;
+    overflow: hidden;
 }
 
-.ball {
-    position: absolute;
-    top: -50px;
-    width: 50px;
-    height: 50px;
-    background: peru;
+.loader {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.loader span {
+    color: #1ABC9C;
+    font-weight: 300;
+    font-size: 60px;
+    display: block;
+    margin-top: 40px;
+}
+
+.sp-hydrogen {
+    width: 96px;
+    height: 96px;
+    clear: both;
+    margin: 60px auto;
+    position: relative;
+    border: 3px #1ABC9C solid;
     border-radius: 50%;
-    margin: 0 20px;
-    animation: ball 4s infinite;
+    -webkit-animation: spHydro 0.7s infinite linear;
+    animation: spHydro 0.7s infinite linear;
 }
 
-.ball--1 {
-    background-image: linear-gradient(to bottom, #FFE93E, #FF952A);
+.sp-hydrogen:before,
+.sp-hydrogen:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #252830;
+    border-radius: 50%;
 }
 
-.ball--2 {
-    background-image: linear-gradient(to bottom, #FF009E, #FF0038);
+.sp-hydrogen:before {
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
 }
 
-.ball--3 {
-    background-image: linear-gradient(to bottom, #00F4FE, #00BDFB);
+.sp-hydrogen:after {
+    top: -3px;
+    left: -3px;
 }
 
-.ball--4 {
-    background-image: linear-gradient(to bottom, #FC00F9, #B500F9);
-}
-
-.balls-1 .ball--1 {
-    left: 20px;
-    animation-delay: 0;
-}
-
-.balls-1 .ball--2 {
-    left: 100px;
-    animation-delay: .05s;
-}
-
-.balls-1 .ball--3 {
-    left: 180px;
-    animation-delay: .1s;
-}
-
-.balls-1 .ball--4 {
-    left: 260px;
-    animation-delay: .15s;
-}
-
-.balls-2 .ball--1 {
-    left: 20px;
-    animation-delay: 2s;
-}
-
-.balls-2 .ball--2 {
-    left: 100px;
-    animation-delay: 2.05s;
-}
-
-.balls-2 .ball--3 {
-    left: 180px;
-    animation-delay: 2.1s;
-}
-
-.balls-2 .ball--4 {
-    left: 260px;
-    animation-delay: 2.15s;
-}
-
-@keyframes ball {
-
-    0%,
-    25% {
-        top: -50px;
+@-webkit-keyframes spHydro {
+    from {
+        -webkit-transform: rotate(0deg);
     }
 
-    35% {
-        top: calc(60% - 50px);
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+@keyframes spHydro {
+    from {
+        transform: rotate(0deg);
     }
 
-    40% {
-        top: calc(45% - 50px);
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
     }
 
-    45% {
-        top: calc(55% - 50px);
-    }
-
-    50%,
-    70% {
-        top: calc(50% - 25px);
-    }
-
-    80%,
     100% {
-        top: 100%;
+        opacity: 1;
     }
-
 }
 
-@media only screen and (max-width: 767px) {
-    .balls {
-        left: 18%;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
     }
 
+    100% {
+        opacity: 1;
+    }
 }
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@media only screen and (max-width: 767px) {}
 </style>

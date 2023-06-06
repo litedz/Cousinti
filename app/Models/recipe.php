@@ -21,9 +21,9 @@ class recipe extends Model
         return $this->hasMany(ingredients::class);
     }
 
-    public function images_recipe()
+    public function scopeimages_recipe()
     {
-        return $this->hasMany(image::class);
+        return $this->hasMany(image::class)->whereNotNull('cover');
     }
 
     public function scopeAuthor()

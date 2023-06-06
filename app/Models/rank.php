@@ -11,5 +11,5 @@ class rank extends Model
 
     protected $fillable = ['rank','icon'];
 
-    public static $ranks = ['master chef', 'chef', 'amateur'];
+    public static $ranks = ['master chef' => 1, 'chef' => 2, 'amateur' => 3];
 }

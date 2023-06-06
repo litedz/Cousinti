@@ -141,6 +141,7 @@ export default {
       how_todo: "",
       show_inputs: "",
       erros_recipe: [],
+      Addable:false,
     };
   },
   methods: {
@@ -192,12 +193,7 @@ export default {
         ready = true;
       }
       if (all_images.length > 4 || all_images == null) {
-        this.$refs.status.Display(
-          "warning",
-          "لا يكمن اختيار اكثر من 3 صور ",
-          "خطا في الصور "
-        );
-
+        this.$refs.status.Display("warning","لا يكمن اختيار اكثر من 3 صور ","خطا في الصور ");
         ready = false;
       } else {
         for (let index = 0; index < all_images.length; index++) {
@@ -214,11 +210,7 @@ export default {
       recipe_info.append("level", this.level);
 
       if (ready === true) {
-        axios({
-          method: "post",
-          url: "recipe",
-          data: recipe_info,
-        })
+        axios.post("recipe",recipe_info)
           .then((response) => {
             if (response.data) {
               this.erros_recipe = [];

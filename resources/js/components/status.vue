@@ -1,7 +1,6 @@
 <template>
     <Transition name="fade">
-        <div class="status m-5 position-fixed w-50 font-amiri z-9999" style="left: 25%;top: 5%;direction: rtl;"
-            v-show="show_status">
+        <div class="status position-fixed font-amiri z-9999" style="left: 25%;top: 5%;direction: rtl;" v-show="show_status">
             <div :class="'d-grid gap-2 border alert alert-' + this.class">
                 <button type="button" class="btn btn-close btn-outline-white btn-sm p-2 rounded-circle"
                     @click="CloseStatus()" title="close-status"></button>
@@ -61,12 +60,26 @@ export default {
 <style>
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
 }
 
 .fade-enter-from,
 .fade-leave-to {
-  opacity: 0;
+    opacity: 0;
+}
+
+.status {
+    width: 50%;
+    margin: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .status {
+        width: 90%;
+        margin: 3% !important;
+        left: 0 !important;
+    }
 }
 </style>
 

@@ -62,7 +62,7 @@
             </div>
             <div class="tab-pane fade" id="Recipes" role="tabpanel" aria-labelledby="Recipes-tab">
               <div class="g-3 row">
-                <div class="col-4" v-if="this.ProfileInfo.setting.recipes">
+                <div class="col-6" v-if="this.ProfileInfo.setting.recipes">
                   <div class="img-container flex-center position-relative w-100 h-100">
                     <div class="overlay w-100 position-absolute h-100 bg-black"></div>
                     <div class="link-recipe position-absolute text-center text-truncate w-75 z-8888">
@@ -92,10 +92,6 @@
       </div>
 
     </form>
-    <!-- <div class="position-fixed btn-primary btn top-50 w-100" @click="ss()">Click</div> -->
-    <form-message v-show="showChat" :user_id_recipient="this.profile.id" :user_id_send="this.auth_id"
-      @Close-Chat="showChat = false"></form-message>
-
     <!-- Edit profile Form  -->
     <Transition name="fade">
       <div class="bg-light border p-3 position-fixed pt-5 rounded tab-pane w-50 z-9999" style="left: 25%;top: 20%;"
@@ -166,15 +162,7 @@ export default {
         this.ProfileInfo.setting.recipes = (this.ProfileInfo.setting.recipes == true ? 1 : 0);
         this.ProfileInfo.setting.about = (this.ProfileInfo.setting.about == true ? 1 : 0);
       },
-      deep: true
     },
-    // showChat: {
-    //   handler() {
-    //     if (this.showChat) {
-    //       this.ss();
-    //     }
-    //   }
-    // },
   },
   data() {
     return {

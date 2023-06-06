@@ -43,7 +43,7 @@
             </transition>
 
             <TransitionGroup name="fade" v-if="recipes !== 0">
-              <div class="col-6 col-md-6 col-lg-3 mt-3 position-relative" id="test" v-for="recipe in recipes"
+              <div class="col-12 col-md-6 col-lg-3 mt-3 position-relative" id="test" v-for="recipe in recipes"
                 :key="recipe.singleMe">
                 <div class="single_recipe" v-show="recipe">
                   <div class="image position-relative">

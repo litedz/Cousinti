@@ -46,16 +46,12 @@ class ProfileController extends Controller
      */
     public function show(user $user, $user_id, Request $request)
     {
-
-        if ($user_id == 1) {
-            abort(404);
-        }
-
         $editPerm = Gate::inspect('edit', 'App\\Models\User')->allowed() ? true : false;
 
-        $profile_user = collect($user::with(['recipes.images_recipe', 'profile_setting', 'comments', 'rank'])->where('id', $user_id)->firstOrFail())
-            ->only(['username', 'id', 'avatar', 'Id_user_media', 'profile_setting', 'comments', 'rank']);
-
+        $profile_user = collect($user::with(['recipes.images_recipe', 'rank'])->where('id', $user_id)->firstOr(function () {
+                abort(404);
+            })
+        );
         return view('user.profile-user', compact('profile_user', 'editPerm'));
     }
 

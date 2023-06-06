@@ -21,7 +21,8 @@
 									</div>
 									<div
 										class="d-flex flex-row-reverse justify-content-between justify-content-center px-4 w-100">
-										<span class="date fs-6 text-white-50">{{ formateData(recipe.created_at,'LLLL') }}</span>
+										<span class="date fs-6 text-white-50">{{ formateData(recipe.created_at,'LLLL')
+										}}</span>
 										<!-- <span class="fs-6 text-white-50">25 views</span> -->
 									</div>
 								</div>
@@ -90,8 +91,11 @@
 											<div
 												class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100">
 											</div>
-											<img :src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name"
-												alt="image" class="w-100" style="height:500px;">
+											<img class="w-100" v-if="recipe.images_recipe.length !== 0"
+												:src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name"
+												alt="image">
+											<img class="w-100" v-else-if="recipe.images_recipe.length == undefined" :src="w_path + '/storage/recipes/default-cover.png'"
+												alt="image">
 										</div>
 										<div class="fs-3 title">{{ recipe.name }}</div>
 										<div class="d-grid gap-1">
@@ -105,33 +109,33 @@
 									</div>
 								</div>
 							</div>
-							
-								<div class="col-6 col-md-6 col-lg-3" v-if="index !== 0" v-for="(recipe,index) in MostComment" :key="recipe.MostComment">
-									<div class="d-grid position-relative recipe">
-										<div class="img-container position-relative">
-											<div
-												class="d-flex fw-bolder gap-2 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
-												<span class="level"><span class="mx-2">Beginner</span><span
-														class="fa fa-signal-perfect"></span></span><span class="time"><span
-														class="mx-2">30 Min</span><span
-														class="fa fa-clock-four"></span></span>
-											</div>
-											<div
-												class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100">
-											</div>
-											<img :src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name"
-												alt="image" class="w-100">
+
+							<div class="col-6 col-md-6 col-lg-3" v-if="index !== 0" v-for="(recipe,index) in MostComment"
+								:key="recipe.MostComment">
+								<div class="d-grid position-relative recipe">
+									<div class="img-container position-relative">
+										<div
+											class="d-flex fw-bolder gap-2 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
+											<span class="level"><span class="mx-2">Beginner</span><span
+													class="fa fa-signal-perfect"></span></span><span class="time"><span
+													class="mx-2">30 Min</span><span class="fa fa-clock-four"></span></span>
 										</div>
-										<div class="fs-3 title text-truncate">{{ recipe.name }}</div>
-										<div class="d-grid gap-1"><a :href="'/profile/' + recipe.author.id"
-												class="author fst-italic fw-bolder color-link text-decoration-none">{{
-													recipe.author.username }}</a><span class="data second-color fs-6"><span
-													class="">{{ formateData(recipe.created_at,'LL') }}</span><span
-													class="fa fa-calendar-alt"></span></span></div>
+										<div
+											class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100">
+										</div>
+										<img :src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name" alt="image"
+											class="w-100">
 									</div>
+									<div class="fs-3 title text-truncate">{{ recipe.name }}</div>
+									<div class="d-grid gap-1"><a :href="'/profile/' + recipe.author.id"
+											class="author fst-italic fw-bolder color-link text-decoration-none">{{
+												recipe.author.username }}</a><span class="data second-color fs-6"><span
+												class="">{{ formateData(recipe.created_at,'LL') }}</span><span
+												class="fa fa-calendar-alt"></span></span></div>
+								</div>
 
 
-								
+
 
 							</div>
 
@@ -169,7 +173,7 @@
 						<div class="d-flex gap-1 justify-content-center">
 							<input type="text" name="" id="" placeholder="Please Subscribesubscribee Here . . ."
 								class="form-control w-100-sc w-25-perso">
-							<button type="button" class="bg-second-color border-0 btn btn-danger" 
+							<button type="button" class="bg-second-color border-0 btn btn-danger"
 								name="subscribee">Subscribesubscribee</button>
 						</div>
 					</div>
@@ -298,7 +302,8 @@
 												:href="w_path + '/recipes/' + recipe.id">{{ recipe.name }}</a></div>
 										<div class="discption text-truncate fs-6 text-black-title">{{ recipe.description }}
 										</div>
-										<div class="date font-italic fs-6 second-color">{{ formateData(recipe.created_at,'LL') }}
+										<div class="date font-italic fs-6 second-color">{{
+											formateData(recipe.created_at,'LL') }}
 										</div>
 									</div>
 								</div>
@@ -347,7 +352,7 @@ export default {
 			activeComponent: "",
 			showSubmenu: "",
 			subscribe: '',
-			buttonSubscrube:true,
+			buttonSubscrube: true,
 		};
 	},
 	methods: {
@@ -368,7 +373,7 @@ export default {
 				});
 		},
 
-		formateData(created_at,form) {
+		formateData(created_at, form) {
 			return moment(created_at, true).format(form);
 		},
 
@@ -635,7 +640,7 @@ section.subscribee div:first-of-type {
 	}
 }
 
-@media only screen and ((min-width: 767px) and (max-width: 920px) ) {
+@media only screen and ((min-width: 767px) and (max-width: 920px)) {
 
 	.Trending .recipe .name-recipe {
 		width: 50%;
@@ -643,5 +648,4 @@ section.subscribee div:first-of-type {
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
-}
-</style>
+}</style>

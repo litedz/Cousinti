@@ -40,7 +40,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $valid = $request->validate([
+
+
+        $credentials = $request->validate([
             'username' => 'required',
             'last_name' => 'required',
             'first_name' => 'required',
@@ -49,14 +51,16 @@ class UserController extends Controller
             'age' => 'required|integer|min:15',
             'avatar' => 'required|image',
         ]);
-
         if ($request->file('avatar')->isValid()) {
             $storage_image = $request->file('avatar')->store('avatars', 'public');
         }
-        $valid['phone'] = $request->phone;
-        $valid['avatar'] = $storage_image;
-        $valid['username'] = strtolower($request->username);
-        $valid['password'] = Hash::make($request->password);
+        $credentials['phone'] = $request->phone;
+        $credentials['avatar'] = $storage_image;
+        $credentials['username'] = strtolower($request->username);
+        $credentials['password'] = Hash::make($request->password);
+
+        //assing Default rank 
+        $credentials['rank_id'] = rank::$ranks['amateur'];
 
         $checkUser = User::where('email', $request->email)->first();
 
@@ -64,7 +68,7 @@ class UserController extends Controller
             throw new Exception('يوجد حساب بهذا الايمايل ', 1);
         }
         //create User
-        $createUser = User::create($valid);
+        $createUser = User::create($credentials);
 
         if (!$createUser) {
             throw new Exception('يوجد خطا في التسجيل يرجى المحاولة من جديد ', 1);
@@ -79,11 +83,11 @@ class UserController extends Controller
         $associateProfile = $createUser->profile_setting()->associate($profile);
         $associateProfile->save();
 
-        //create default rank
-        $rank = rank::create(['rank' => rank::$ranks[2]]);
-        // Associate Rank  to the current User
-        $associateRank = $createUser->rank()->associate($rank);
-        $associateRank->save();
+        // //create default rank
+        // $rank = rank::create(['rank' => rank::$ranks[2]]);
+        // // Associate Rank  to the current User
+        // $associateRank = $createUser->rank()->associate($rank);
+        // $associateRank->save();
         return response()->json('created');
     }
 

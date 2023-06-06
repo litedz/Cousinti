@@ -187,5 +187,5 @@ Route::post('contact-support', [MessageController::class, 'ContactSuport']);
 
 Route::get('test', function () {
 
-    return rank::$ranks[2];
+    return rank::$ranks['chef'];
 });
