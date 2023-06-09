@@ -195,7 +195,7 @@
 			</a>
 		</li>
 
-		<li class="nav-item" @click="activeComponent = 'contact-us'">
+		<li class="nav-item" @click="activeComponent = 'user-messages'">
 			<a href="#">
 				<i class="fa fa-envelope text-info"></i>
 				<p class="text-capitalize w-100">Messages</p>
@@ -257,7 +257,7 @@ export default {
 	},
 	data() {
 		return {
-			activeComponent: "user-messages",
+			activeComponent: "user-notifications",
 			action_recipe: "",
 			recipe_update_id: "", // id of recipe for update
 			show_messages: false,
@@ -397,6 +397,7 @@ export default {
 @media only screen and (max-width:991px) {
 	.main-header {
 		background-color: transparent !important;
+		border-bottom:0 !important
 	}
 
 	.logo-header {
