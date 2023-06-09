@@ -180,7 +180,7 @@
 					</li>
 			</div>
 		</div>
-	
+	</li>
 		<li class="nav-item" @click="activeComponent = 'last-activity'">
 			<a href="#" class="gap-2">
 				<i data-feather="activity" width="20" class="text-success"></i>
