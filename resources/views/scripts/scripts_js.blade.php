@@ -11,9 +11,7 @@
 
 <script src="{{asset('js/app.js')}}"></script>
 
-
 {{-- <script src="{{asset('/js/perfect-scrollbar.min.js')}}"></script> --}}
-
 {{-- <script src="{{asset('/js/effects.js')}}"></script> --}}
 <script src="{{asset('/js/main.js')}}"></script>
 <script src="{{asset('/js/simple-datatables.js')}}"></script>

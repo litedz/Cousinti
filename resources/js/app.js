@@ -87,6 +87,7 @@ import last_activity from './components/user/last-activity.vue';
 //dashboard 
 import static_user from './components/dashboard/static.vue';
 import wishlist_setting from './components/dashboard/wishlist-setting.vue';
+import user_messages from './components/user/messages.vue';
 
 
 
@@ -190,6 +191,7 @@ app.component('form-message', form_message);
 app.component('static_user', static_user);
 app.component('last-activity', last_activity);
 app.component('wishlist-setting', wishlist_setting);
+app.component('user-messages', user_messages);
 //actions components
 
 app.component('btn-wishlist', btn_wishlist);

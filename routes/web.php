@@ -128,7 +128,7 @@ Route::resource('comments', CommentsController::class)->middleware('is.registed'
 
 // Message or chat routes
 
-Route::resource('messages', MessageController::class);
+Route::resource('messages', MessageController::class)->middleware('auth');
 
 //Authantication
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('check.login');

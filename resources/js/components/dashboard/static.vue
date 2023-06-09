@@ -54,13 +54,13 @@
             </div>
 
 
-            <div class="col-12 col-md-6">
+            <div class="col-10 col-md-5 p-1 bg-white m-1">
                 <Line :data="staticRecipes" :options="options.recipes" />
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-10 col-md-5 p-1 bg-white m-1">
                 <Bar :data="staticComments" :options="options.comments" />
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-10 col-md-5 p-1 bg-white m-1">
                 <Line :data="staticLikes" :options="options.likes" />
             </div>
 

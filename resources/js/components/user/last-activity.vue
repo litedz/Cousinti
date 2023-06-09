@@ -1,11 +1,11 @@
 <template>
     <section class="last-activity">
-        <h1> Last activity</h1>
+        <span class="fs-2"> Last activity</span>
         <div class="bg-white shadow">
             <div v-for="activity in lastActivitys">
                 <div class="activity border-bottom d-flex flex-column p-1 p-3 rounded" v-if="activity.comment">
                     <div class="fst-italic text-muted title">Comment</div>
-                    <div class="content d-flex">"{{ activity.comment }}" <div class=""> <span class="fw-bolder mx-1">In :</span><a
+                    <div class=" d-flex">"{{ activity.comment }}" <div class=""> <span class="fw-bolder mx-1">In :</span><a
                                 :href="'/recipes/' + activity.recipe.id">{{ activity.recipe.name }}</a></div>
                     </div>
                     <div>
@@ -16,7 +16,7 @@
                 </div>
                 <div class="activity border-bottom d-flex flex-column p-1 p-3 rounded" v-else>
                     <div class="fst-italic text-muted title">Recipe</div>
-                    <div class="content">
+                    <div class="">
                         <a :href="'/recipes/' + activity.id" class="fs-3 text-success">{{ activity.name }} </a>
 
                         <div>
@@ -59,4 +59,4 @@ export default {
     }
 }
 </script>
-<style></style>
+<style scoped></style>

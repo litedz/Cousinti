@@ -206,7 +206,7 @@ export default {
     },
 };
 </script>
-<style>
+<style scoped>
 .color-primary {
     color: #310a4b;
 }
