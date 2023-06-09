@@ -361,10 +361,6 @@ export default {
                   "تحديث"
                 );
                 this.getUser(this.$attrs.auth_id);
-
-                setTimeout(() => {
-                  window.location.href = "/dashboard";
-                }, 2000);
               }
             }
           })

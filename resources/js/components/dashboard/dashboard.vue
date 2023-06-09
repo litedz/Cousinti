@@ -71,7 +71,7 @@
 								</li>
 								<li>
 									<a class="see-all" href="javascript:void(0);">
-										<strong>See all notifications</strong>
+										<strong @click="activeComponent='user-notifications'">See all notifications</strong>
 										<i class="la la-angle-right"></i>
 									</a>
 								</li>
