@@ -40,7 +40,8 @@
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
 								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<i class="la la-bell"></i>
-								<span class="notification" v-if="notifications.length > 0 && CountNotificationNotReading() > 0">
+								<span class="notification"
+									v-if="notifications.length > 0 && CountNotificationNotReading() > 0">
 									{{ CountNotificationNotReading() }}
 								</span>
 							</a>
@@ -71,7 +72,7 @@
 								</li>
 								<li>
 									<a class="see-all" href="javascript:void(0);">
-										<strong @click="activeComponent='user-notifications'">See all notifications</strong>
+										<strong @click="activeComponent = 'user-notifications'">See all notifications</strong>
 										<i class="la la-angle-right"></i>
 									</a>
 								</li>
@@ -150,7 +151,7 @@
 					</div>
 				</div>
 				<ul class="nav">
-					<li class="nav-item active" @click="activeComponent = 'statuc_user'">
+					<li class="nav-item" @click="activeComponent = 'static_user'">
 						<a href="#">
 							<i class="la la-dashboard"></i>
 							<p>Dashboard</p>
@@ -179,7 +180,7 @@
 					</li>
 			</div>
 		</div>
-		</li>
+	
 		<li class="nav-item" @click="activeComponent = 'last-activity'">
 			<a href="#" class="gap-2">
 				<i data-feather="activity" width="20" class="text-success"></i>
@@ -200,7 +201,7 @@
 			</a>
 		</li>
 
-		<li class="nav-item" @click="activeComponent = 'contact-us'">
+		<li class="nav-item" @click="activeComponent = 'user-notifications'">
 			<a href="#">
 				<i class="fa fa-bell text-warning"></i>
 				<p class="text-capitalize w-100">Notifications</p>
@@ -325,7 +326,7 @@ export default {
 				.post("/user/notifi/" + notification_id, data)
 				.then((response) => {
 					if (response.data == "updated") {
-						this.getNotifications();e
+						this.getNotifications(); e
 					}
 				});
 		},

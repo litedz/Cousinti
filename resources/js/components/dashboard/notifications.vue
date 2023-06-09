@@ -31,7 +31,7 @@
                                 </button>
                             </div>
                             <br />
-                            <div class="text-right text-muted pt-1">{{ formateDate(not.created_at) }}</div>
+                            <div class="fs-6 fst-italic fw-lighter fw-normal text-info time">{{ formateDate(not.created_at) }}</div>
                         </span>
                     </div>
 
