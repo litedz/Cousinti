@@ -21,7 +21,7 @@ return new class extends Migration
             $table->tinyText('message');
             $table->tinyText('type')->default('recipe');
             $table->string('path')->nullable();
-            $table->boolean('status')->default(false);
+            $table->boolean('isRead')->default(false);
             $table->timestamps();
         });
     }

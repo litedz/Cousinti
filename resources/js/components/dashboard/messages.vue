@@ -62,6 +62,9 @@ export default {
     inject: ['w_path'],
     mounted() {
         this.getMessages();
+        setInterval(() => {
+            this.getMessages();
+        }, 10000);
     },
     data() {
         return {

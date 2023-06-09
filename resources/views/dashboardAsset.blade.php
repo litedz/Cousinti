@@ -28,6 +28,7 @@
     </div>
 
     @include('scripts.scripts_js')
+    
     <script src="{{asset('/js/ready.min.js')}}"></script>
 
 

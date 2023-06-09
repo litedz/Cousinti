@@ -73,7 +73,7 @@ class notificationController extends Controller
         ]);
         try {
             $update_status = notification::find($request->notification_id);
-            $update_status->status = true;
+            $update_status->isRead = true;
             $update_status->save();
         } catch (\Throwable $th) {
             throw new Exception('Error Processing Request', 1);
@@ -85,7 +85,7 @@ class notificationController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function destroy(notification $notification, Request $request)
     {
@@ -98,6 +98,11 @@ class notificationController extends Controller
             throw new Exception('Error Processing Request', 1);
         }
 
-        return response()->json('Deleted');
+        return response()->json([
+            'message' => 'Notification Deleted',
+            'status' => 'Delete',
+            'style' => 'info',
+            'icon' => 'check'
+        ]);
     }
 }

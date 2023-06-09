@@ -40,7 +40,7 @@
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
 								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<i class="la la-bell"></i>
-								<span class="notification" v-if="notifications.length !== 0">
+								<span class="notification" v-if="notifications.length > 0 && CountNotificationNotReading() > 0">
 									{{ CountNotificationNotReading() }}
 								</span>
 							</a>
@@ -54,20 +54,17 @@
 								</li>
 								<li>
 									<div class="notif-center">
-										<a href="#" v-for="message in notifications">
+										<a href="#" v-for="notify in notifications" @click="UpdateNotification(notify.id)"
+											@contextmenu="UpdateNotification(notify.id)">
 											<div class="notif-icon notif-primary">
 												<i class="la la-user-plus"></i>
 											</div>
 											<div class="notif-content">
 												<span class="block">
-													{{ message.subject }}
+													{{ notify.subject }}
 												</span>
 												<span class="time">
-													{{
-														formateDate(
-															message.created_at
-														)
-													}}</span>
+													{{ formateDate(notify.created_at) }}</span>
 											</div>
 										</a>
 									</div>
@@ -83,7 +80,7 @@
 						<li class="nav-item dropdown">
 							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
 								<img :src="w_path + '/storage/' + info.avatar" alt="user-img" width="36"
-									class="img-circle" /><span>Hizrian</span></a>
+									class="img-circle" /><span>{{ this.info.username }}</span></a>
 							<ul class="dropdown-menu dropdown-user">
 								<li>
 									<div class="user-box">
@@ -91,7 +88,7 @@
 											<img :src="w_path + '/storage/' + info.avatar" alt="user" />
 										</div>
 										<div class="u-text">
-											<h4>Hizrian</h4>
+											<h4>{{ this.info.username }}</h4>
 											<p class="text-muted">
 												hello@themekita.com
 											</p>
@@ -118,12 +115,13 @@
 			<div class="scrollbar-inner sidebar-wrapper">
 				<div class="user">
 					<div class="photo">
-						<img src="https://i.pravatar.cc/300" />
+						<img :src="w_path + '/storage/' + info.avatar" />
 					</div>
 					<div class="info">
 						<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 							<span>
-								Hizrian
+
+								<span class="text-truncate w-50">{{ this.info.username }}</span>
 								<span class="user-level">Administrator</span>
 								<span class="caret"></span>
 							</span>
@@ -133,17 +131,17 @@
 						<div class="collapse in" id="collapseExample" aria-expanded="true" style="">
 							<ul class="nav">
 								<li>
-									<a :href="'/profile/' + info.id"  >
+									<a :href="'/profile/' + info.id">
 										<span class="link-collapse">My Profile</span>
 									</a>
 								</li>
 								<li>
-									<a href="#" @click="activeComponent ='edit-profile'">
+									<a href="#" @click="activeComponent = 'edit-profile'">
 										<span class="link-collapse">Edit Profile</span>
 									</a>
 								</li>
 								<li>
-									<a href="#" @click="activeComponent ='edit-profile'">
+									<a href="#" @click="activeComponent = 'edit-profile'">
 										<span class="link-collapse">Settings</span>
 									</a>
 								</li>
@@ -231,9 +229,7 @@
 				<KeepAlive>
 					<component :is="this.activeComponent" v-on:update-recipe="get_id_recipe($event)"
 						v-on:send-message="getMessages()" :update_recipe_id="this.recipe_update_id"
-						:action="this.action_recipe" :auth_id="info.id" :auth_email="info.email"
-						:user="info"
-						 />
+						:action="this.action_recipe" :auth_id="info.id" :auth_email="info.email" :user="info" />
 				</KeepAlive>
 			</div>
 		</div>
@@ -329,7 +325,7 @@ export default {
 				.post("/user/notifi/" + notification_id, data)
 				.then((response) => {
 					if (response.data == "updated") {
-						this.getNotifications();
+						this.getNotifications();e
 					}
 				});
 		},
@@ -379,7 +375,7 @@ export default {
 		},
 		CountNotificationNotReading() {
 			let counter = this.notifications.filter(
-				(note) => note.status == 0
+				(note) => note.isRead == 0
 			).length;
 			if (counter !== 0) {
 				return counter;
@@ -397,7 +393,7 @@ export default {
 @media only screen and (max-width:991px) {
 	.main-header {
 		background-color: transparent !important;
-		border-bottom:0 !important
+		border-bottom: 0 !important
 	}
 
 	.logo-header {
