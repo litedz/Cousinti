@@ -2,8 +2,8 @@
     <div class="contact-support">
         <status ref="status"></status>
         <div class="container">
-            <div class="row just">
-                <div class="bg-body col-md-6 col-12">
+            <div class="row justify-content-center">
+                <div class="bg-body col-md-6 col-12 ">
                     <div class="well well-sm">
                         <form class="form-horizontal">
                             <fieldset>
