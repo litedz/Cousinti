@@ -21,7 +21,7 @@
                     <div class="card-body p-0">
                         <div class="d-flex flex-column">
                             <div class="px-3 py-3 d-flex justify-content-between">
-                                <span class="card-title fa fa-heart fs-2 text-info"></span>
+                                <span class="card-title fa fa-comments-dollar fs-2 text-info"></span>
                                 <div class="align-items-center card-right d-flex gap-2">
                                     <p class="fw-semibold">Comments </p>
                                     <p>{{Object.keys(this.comments).length }} </p>
@@ -36,7 +36,7 @@
                     <div class="card-body p-0">
                         <div class="d-flex flex-column">
                             <div class="px-3 py-3 d-flex justify-content-between">
-                                <span class="card-title fa fa-heart fs-2 text-info"></span>
+                                <span class="card-title fa fa-kitchen fs-2 text-info"></span>
                                 <div class="align-items-center card-right d-flex gap-2">
                                     <p class="fw-semibold">Recipes </p>
                                     <p>{{Object.keys(this.recipes).length }} </p>
