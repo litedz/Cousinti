@@ -2,12 +2,12 @@
     <div class="contact-support">
         <status ref="status"></status>
         <div class="container">
-            <div class="row">
-                <div class="bg-body col-md-6 col-md-offset-3 offset-3">
+            <div class="row just">
+                <div class="bg-body col-md-6 col-12">
                     <div class="well well-sm">
                         <form class="form-horizontal">
                             <fieldset>
-                                <legend class="text-center">Contact us</legend>
+                                <legend class="border-bottom border-info text-center">Contact us</legend>
                                 <!-- subject input-->
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="subject">Your

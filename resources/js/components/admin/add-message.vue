@@ -27,7 +27,7 @@
                 <button type="button" @click="SendMessage()" class="btn-primary btn">Send</button>
             </form>
         </div>
-        <div class="bg-gray d-grid gap-2 left-25 p-5 position-fixed table-users top-0 w-50 h-auto"
+        <div class="bg-gray d-grid gap-2 left-25 p-5 position-fixed table-users top-0 w-50 h-100"
             style="overflow-y: auto;overflow-x: hidden;" v-if="show_table_user">
             <div class="m-2 position-absolute w-100">
                 <span class="bg-white fa fa-remove p-1 px-2 rounded-4 pointer" @click="show_table_user = false"></span>

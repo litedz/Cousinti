@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('from')->default('admin@cousinti.net');
             $table->string('username')->nullable();
             $table->text('message')->nullable();
+            $table->boolean('isRead')->default(false);
             $table->timestamps();
         });
     }

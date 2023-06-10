@@ -8,8 +8,7 @@
                     <div class="row">
                         <div class="col border-end">
                             <div class="p-2">
-                                <Button type="button" class="btn btn-info mb-1"
-                                    @click="ClearFilter()">Clear
+                                <Button type="button" class="btn btn-info mb-1" @click="ClearFilter()">Clear
                                     Filter</Button>
                                 <div class="fs-4 text-black-50 title">Filter By Status</div>
                                 <div class="d-flex flex-column">
@@ -123,6 +122,8 @@
                             <td class="">
                                 <span class="fa fa-user-plus mx-2 text-orange pointer" @click="FormEditRole(user)"></span>
                                 <span class="fa fa-trash mx-2  text-danger pointer" @click="deleteUser(user.id)"></span>
+                                <span class="fa fa-user-check mx-2 pointer text-first"
+                                    @click="NotifyUserForVerification(user.id)"></span>
                             </td>
                         </tr>
                     </tbody>
@@ -263,6 +264,14 @@ export default {
                 .catch((error) => { });
         },
 
+        NotifyUserForVerification(user_id) {
+            let data = new FormData();
+            data.append('body', 'Please verified you email');
+            data.append('from', 'admin@contact.com');
+            data.append('recipient_id', user_id);
+            axios.post('/messages', data).then((response) => {
+            });
+        },
         SortedByKey(key, direction) {
             this.searchKey = key;
             this.searchValue = '';
@@ -305,7 +314,7 @@ export default {
             this.searchValue = '';
         },
 
-        
+
 
     },
 

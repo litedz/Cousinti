@@ -17,6 +17,9 @@
 <body>
 
     <div id="app" class="font-farhati" style="background: hsl(33deg 35% 99%)">
+       @auth
+       <email-verified :status='{{ (bool) auth()->user()->email_verified_at}}'></email-verified>
+       @endauth
         <loading-page></loading-page>
         @yield('app')
     </div>

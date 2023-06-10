@@ -1,18 +1,31 @@
 <template>
     <section class="static container-fluid">
-        <div class="row mb-2">
+        <div class="justify-content-center mb-2 row">
             <div class="col-12 col-md-3">
                 <div class="card card-statistic">
                     <div class="card-body p-0">
                         <div class="d-flex flex-column">
                             <div class="px-3 py-3 d-flex justify-content-between">
-                                <h3 class="card-title">Likes</h3>
-                                <div class="card-right d-flex align-items-center">
+                                <span class="card-title fa fa-heart fs-2 text-danger"></span>
+                                <div class="align-items-center card-right d-flex gap-2">
+                                    <p class="fw-semibold">Likes </p>
                                     <p>{{ Object.keys(this.likes).length }} </p>
                                 </div>
                             </div>
-                            <div class="chart-wrapper">
-                                <canvas id="canvas1" style="height:100px !important"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="card card-statistic">
+                    <div class="card-body p-0">
+                        <div class="d-flex flex-column">
+                            <div class="px-3 py-3 d-flex justify-content-between">
+                                <span class="card-title fa fa-heart fs-2 text-info"></span>
+                                <div class="align-items-center card-right d-flex gap-2">
+                                    <p class="fw-semibold">Comments </p>
+                                    <p>{{Object.keys(this.comments).length }} </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -23,44 +36,26 @@
                     <div class="card-body p-0">
                         <div class="d-flex flex-column">
                             <div class="px-3 py-3 d-flex justify-content-between">
-                                <h3 class="card-title">Comments</h3>
-                                <div class="card-right d-flex align-items-center">
-                                    <p>{{ Object.keys(this.comments).length }}</p>
+                                <span class="card-title fa fa-heart fs-2 text-info"></span>
+                                <div class="align-items-center card-right d-flex gap-2">
+                                    <p class="fw-semibold">Recipes </p>
+                                    <p>{{Object.keys(this.recipes).length }} </p>
                                 </div>
                             </div>
-                            <div class="chart-wrapper">
-                                <canvas id="canvas2" style="height:100px !important"></canvas>
-                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-3">
-                <div class="card card-statistic">
-                    <div class="card-body p-0">
-                        <div class="d-flex flex-column">
-                            <div class="px-3 py-3 d-flex justify-content-between">
-                                <h3 class="card-title">Your Recipe</h3>
-                                <div class="card-right d-flex align-items-center">
-                                    <p>{{ Object.keys(this.recipes).length }} </p>
-                                </div>
-                            </div>
-                            <div class="chart-wrapper">
-                                <canvas id="canvas3" style="height:100px !important"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-10 col-md-5 p-1 bg-white m-1">
+        </div>
+        <div class="row">
+            <div class="col-112 col-md-4 p-1 bg-white m-0">
                 <Line :data="staticRecipes" :options="options.recipes" />
             </div>
-            <div class="col-10 col-md-5 p-1 bg-white m-1">
+            <div class="col-12 col-md-4 p-1 bg-white m-0">
                 <Bar :data="staticComments" :options="options.comments" />
             </div>
-            <div class="col-10 col-md-5 p-1 bg-white m-1">
+            <div class="col-12 col-md-4 p-1 bg-white m-0">
                 <Line :data="staticLikes" :options="options.likes" />
             </div>
 

@@ -3,9 +3,9 @@
         <status ref="status"></status>
         <main role="main" class="container bootdey.com">
             <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-default rounded box-shadow">
-                <img class="mr-3" :src="w_path+'/storage/'+this.$attrs.user.avatar" width="150" height="150">
+                <img class="mr-3" :src="w_path + '/storage/' + this.$attrs.user.avatar" width="150" height="150">
                 <div class="lh-100">
-                    <h6 class="mb-0 text-white lh-100">{{this.$attrs.user.username}}</h6>
+                    <h6 class="mb-0 text-white lh-100">{{ this.$attrs.user.username }}</h6>
                     <small>Messages</small>
                 </div>
             </div>
@@ -17,9 +17,12 @@
                     <div class="fs-3"> You dont have any message</div>
                 </div>
                 <div v-for="msg in messages">
-                    <div class="d-grid gap-2 media pt-3 text-muted position-relative border-bottom" v-if="msg.from_id !== null">
-                        <div class="d-flex gap-2">
+                    
 
+                    <div class="d-grid gap-2 media pt-3 text-muted position-relative border-bottom"
+                        v-if="msg.from_id !== null" @click="$emit('readMessage',msg.id)">
+                        <div class="d-flex gap-2">
+                            <span class="fw-bold" style="font-size: 0.7rem;color: red;" v-if="!msg.isRead">Unread</span>
                             <img :src="w_path + '/storage/' + msg.from_user.avatar" alt="" class="mr-2 rounded-circle"
                                 width="32" height="32">
                             <strong class="d-block text-gray-dark"> <a :href="'/profile/' + msg.from_user.id">
@@ -33,23 +36,27 @@
                         </p>
                         <button class="btn btn-danger d-flex end-0 flex-center gap-2 m-2 position-absolute"
                             @click="DeleteMessage(msg.id)"><span class="fa fa-trash"></span>Remove</button>
-                            <span class="fs-6 fst-italic fw-lighter time">{{formateDate(msg.created_at)}}</span>
-                        </div>
+                        <span class="fs-6 fst-italic fw-lighter time">{{ formateDate(msg.created_at) }}</span>
+                    </div>
                     <!-- Message from unknown -->
-                    <div class="d-grid gap-2 media pt-3 text-muted position-relative border-bottom" v-else>
+                    <div class="d-grid gap-2 media pt-3 text-muted position-relative border-bottom" v-else
+                        @click="$emit('readMessage',msg.id)">
+                        
+                        <span class="fw-bold" style="font-size: 0.7rem;color: red;" v-if="!msg.isRead">Unread</span>
+
                         <div class="d-flex gap-2">
-                            <img :src="'https://ui-avatars.com/api/?name='+msg.from" alt="" class="mr-2 rounded-circle" width="32"
-                                height="32"> <strong class="d-block text-gray-dark">{{ msg.from }}</strong>
+                            <img :src="'https://ui-avatars.com/api/?name=' + msg.from" alt="" class="mr-2 rounded-circle"
+                                width="32" height="32"> <strong class="d-block text-gray-dark">{{ msg.from }}</strong>
                         </div>
 
                         <p class="media-body pb-3 mb-0 small lh-125 border-gray">
                             {{ msg.message }}
                         </p>
-                        <span class="fs-6 fst-italic fw-lighter time">{{formateDate(msg.created_at)}}</span>
+                        <span class="fs-6 fst-italic fw-lighter time">{{ formateDate(msg.created_at) }}</span>
                         <button class="btn btn-danger d-flex end-0 flex-center gap-2 m-2 position-absolute"
                             @click="DeleteMessage(msg.id)"><span class="fa fa-trash"></span>Remove</button>
                     </div>
-                    
+
                 </div>
 
 
@@ -64,7 +71,7 @@ export default {
         this.getMessages();
         setInterval(() => {
             this.getMessages();
-        }, 10000);
+        }, 5000);
     },
     data() {
         return {

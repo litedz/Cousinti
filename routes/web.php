@@ -17,6 +17,10 @@ use App\Jobs\Subscribe;
 use App\Models\rank;
 use App\Models\recipe;
 use App\Models\User;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Auth\Events\Verified;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -114,9 +118,9 @@ Route::prefix('user')->group(function () {
             //Notification
             route::resource('/notifi', notificationController::class);
             //statistic
-
-            Route::get('statistic/{user_id}',[UserController::class,'staticUser']);
-            
+            Route::get('statistic/{user_id}', [UserController::class, 'staticUser']);
+            //email verified
+            Route::post('email/verification', [UserController::class, 'verificationEmail']);
         }
     );
 
@@ -135,7 +139,7 @@ Route::get('/login', [LoginController::class, 'index'])->name('login')->middlewa
 Route::post('/login', [LoginController::class, 'login'])->name('login.user');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::view('register','user.register')->name('user.register')->middleware('check.login');
+Route::view('register', 'user.register')->name('user.register')->middleware('check.login');
 Route::POST('/register', [UserController::class, 'store']);
 Route::POST('/register/facebook/', [UserController::class, 'RegisterWithFace']);
 // ***********************************************************************************************
@@ -173,6 +177,8 @@ route::prefix('panel')->group(function () {
         Route::resource('types', TypesRecipeController::class);
         // Social media
         Route::resource('media', SocialMediaController::class);
+        // Send Verification to user 
+        Route::post('user/email/verified', [AdminController::class, 'reVerifyEmail']);
     });
     route::resource('admin', AdminController::class)->middleware('auth')->except('index');
     route::post('admin/login', [AdminController::class, 'index'])->name('admin.index');
@@ -187,5 +193,12 @@ Route::post('contact-support', [MessageController::class, 'ContactSuport']);
 
 Route::get('test', function () {
 
-    return rank::$ranks['chef'];
+    return view('test')->with(['status' => 'Email verified Success']);
 });
+
+//verified Account
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+
+    return redirect('/dashboard')->with(['status' => 'Email verified Success']);
+})->middleware(['auth', 'signed'])->name('verification.verify');

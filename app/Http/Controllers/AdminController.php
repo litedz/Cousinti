@@ -249,4 +249,9 @@ class AdminController extends Controller
     {
         return response()->json(['roles' => $role::$roles]);
     }
+
+    public function reVerifyEmail()
+    {
+        # code...
+    }
 }

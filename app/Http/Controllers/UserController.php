@@ -12,7 +12,9 @@ use App\Models\recipe;
 use App\Models\Subscribe as ModelsSubscribe;
 use App\Models\User;
 use Exception;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule as ValidationRule;
@@ -83,11 +85,12 @@ class UserController extends Controller
         $associateProfile = $createUser->profile_setting()->associate($profile);
         $associateProfile->save();
 
-        // //create default rank
-        // $rank = rank::create(['rank' => rank::$ranks[2]]);
-        // // Associate Rank  to the current User
-        // $associateRank = $createUser->rank()->associate($rank);
-        // $associateRank->save();
+        // login
+        Auth::loginUsingId($createUser->id);
+
+        //Verified Email Event 
+        event(new Registered($createUser));
+
         return response()->json('created');
     }
 
@@ -267,6 +270,16 @@ class UserController extends Controller
             'comments' => $comments,
         ]);
     }
+
+    public function verificationEmail()
+    {
+        event(new Registered(auth()->user()));
+
+        return response()->json([
+            'message' => 'Message Send Please check Your Email',
+        ]);
+    }
+
     public function logout()
     {
         // code...

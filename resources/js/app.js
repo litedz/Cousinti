@@ -84,6 +84,10 @@ import  status  from './components/status.vue';
 
 import form_message from './components/user/form-message.vue';
 import last_activity from './components/user/last-activity.vue';
+import email_verified from './components/user/email-verified.vue';
+
+
+
 //dashboard 
 import static_user from './components/dashboard/static.vue';
 import wishlist_setting from './components/dashboard/wishlist-setting.vue';
@@ -188,6 +192,7 @@ app.component('update-recipe', update_recipe);
 app.component('table-datatable', table_datatable);
 //User 
 app.component('form-message', form_message);
+app.component('email-verified', email_verified);
 //dashboard
 app.component('static_user', static_user);
 app.component('last-activity', last_activity);

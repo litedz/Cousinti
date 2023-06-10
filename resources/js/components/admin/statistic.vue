@@ -1,11 +1,9 @@
 <template>
     <div>
 
-        <h1>welcome static</h1>
-
-      
+        <h1>Users Stat</h1>
         <Line :data="infoUsers" ref="usersStat" class=""/>
-        <h1>Static recipes</h1>
+        <h1>Recipes Stat</h1>
         <Line :data="infoRecipes"  ref="RecipesStat"/>
 
     </div>

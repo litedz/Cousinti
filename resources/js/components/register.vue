@@ -73,7 +73,7 @@
 
 
               <FormKit input-class="bg-first-color btn font-amiri font-weight-bold fs-4 text-white w-100"
-                @click="register()" type="button" label="تسجيل" />
+                @click="register()" type="button" :disabled="enableBtnRegiste" label="تسجيل" />
             </FormKit>
             <!-- Login Button facebook -->
             <div
@@ -118,6 +118,7 @@ export default {
       phone: "",
       avatar: "",
       test: '',
+      enableBtnRegiste: false
     };
   },
   methods: {
@@ -133,6 +134,7 @@ export default {
 
       data.append("avatar", document.getElementById("avatar").files[0]);
 
+      this.enableBtnRegiste = true;
       axios({
         method: "post",
         url: "/register",
@@ -146,12 +148,14 @@ export default {
               "حساب جديد"
             );
 
+
             setTimeout(() => {
-              window.location.href = "/login";
+              window.location.href = "/dashboard";
             }, 3000);
           }
         })
         .catch((error) => {
+          this.enableBtnRegiste =false;
           if (error) {
             const message = error.response.data.message;
             this.$refs.status.Display(
@@ -165,12 +169,7 @@ export default {
               errors.forEach((element) => {
                 console.log(element);
               });
-              this.$refs.status.Display(
-                "danger",
-                Object.values(er).toString(),
-                Object.keys(
-                  error.response.data.errors
-                ).toString()
+              this.$refs.status.Display("danger",Object.values(er).toString(),Object.keys(error.response.data.errors).toString()
               );
             }
           }

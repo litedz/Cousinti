@@ -44,18 +44,17 @@ class MessageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store(MessageRequest $MessageRequest)
+    public function store(Request $MessageRequest)
     {
 
-        $Message = $MessageRequest->validated();
+        $Message = $MessageRequest->validate([
+            'body' => 'required',
+            'recipient_id' => 'required',
+            'from' => 'email|required',
+        ]);
 
         try {
-            admin_messages::create($Message);
-            MessageReceivedEvent::dispatch(
-                20,
-                'admin@support.com',
-                'Thank you for your message. We appreciate you taking the time to reach out to us will respond to it as soon as'
-            );
+            message::create($Message);
         } catch (\Throwable $th) {
             throw new Exception('Error Send Message', 1);
         }
@@ -85,11 +84,22 @@ class MessageController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function update(Request $request, message $message)
     {
-        //
+        $request->validate([
+            'message_id' => 'required',
+        ]);
+        try {
+            $update_status = message::find($request->message_id);
+            $update_status->isRead = true;
+            $update_status->save();
+        } catch (\Throwable $th) {
+            throw new Exception('Error Update Message', 1);
+        }
+
+        return response()->json('updated');
     }
 
     /**
