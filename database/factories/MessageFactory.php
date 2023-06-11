@@ -18,6 +18,7 @@ class MessageFactory extends Factory
         return [
             'message' => $this->faker->sentence(),
             'from' => $this->faker->safeEmail(),
+            'from_id' => $this->faker->randomElement([User::all()->random()->id, null]),
             'recipient_id' => User::all()->random()->id,
         ];
     }

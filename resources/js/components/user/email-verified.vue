@@ -1,5 +1,5 @@
 <template>
-    <div class="email-status end-0 mx-3 position-fixed top-25 w-25 z-9999" v-if="status !== 1">
+    <div class="email-status end-0 mx-3 position-fixed top-45 w-25 z-9999" v-if="status !== 1">
         <div class="alert alert-warning">
             <div class="fw-bold text-center title">Email Not verified </div>
             <div class="fs-6 message">{{ message }}</div>
