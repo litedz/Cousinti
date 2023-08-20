@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(UrlGenerator $url)
     {
         Paginator::useBootstrapFive();
         // JsonResource::withoutWrapping();
