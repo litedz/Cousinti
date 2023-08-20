@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('from_id')->constrained('users')->cascadeOnDelete();
             $table->tinyText('subject');
             $table->tinyText('message');
-            $table->tinyText('type')->default('recipe');
+            $table->tinyText('type');
             $table->string('path')->nullable();
             $table->boolean('isRead')->default(false);
             $table->timestamps();
