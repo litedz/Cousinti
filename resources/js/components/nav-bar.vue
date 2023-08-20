@@ -1,14 +1,16 @@
 <template>
-  <div class="border-bottom border-top d-flex justify-content-center align-items-center navbar z-8888"
+  <div class="align-items-center d-flex h-auto justify-content-center navbar mw-100 z-8888 border-bottom border-top"
     style="transition: all 0.5s;" dir="rtl">
 
     <div class="d-flex justify-content-start w-100">
-      <Button type="button" class="btn end-0 mt-1 mx-2 position-absolute top-0" id="toggleButton">
+      <Button type="button" class="btn end-0 mt-1 mx-2 position-absolute top-0" id="toggleButton" name="toggleButton"
+        aria-label="ToggleMenu" role="presentation">
+
         <span class="fa fa-bars first-color fs-4" @click="toggleNav()" data-target="nav"></span>
       </Button>
     </div>
 
-    <nav id="nav" class="align-items-center">
+    <nav id="nav" class="d-flex justify-content-start mw-100" style="height: 50px;">
       <!-- Top Menu  -->
       <div class="p-d-none-lg p-d-none-md  slide-icon w-100">
         <div class="d-flex justify-content-center position-relative">
@@ -28,11 +30,16 @@
       </div>
       <!-- Links nav bar -->
 
+
       <div class="nav-links">
+
         <div id="link-nav" class="hoverable p-2 " @mouseenter="hoverLink()" @mouseleave="hoverLink()">
+
           <li class="fs-5 pointer">
-            <div class="align-items-center d-flex gap-2 justify-content-center"><a href="/"
-                class="text-decoration-none text-black position-relative active-link">الرئيسة</a></div>
+            <div class="align-items-center d-flex gap-2 justify-content-center">
+              <a href="/" class="text-decoration-none text-black position-relative active-link"
+                aria-label="go home">الرئيسة</a>
+            </div>
           </li>
         </div>
         <div v-for="recipeType in types" :key="recipeType.name" id="link-nav" class="hoverable p-2"
@@ -53,7 +60,9 @@
 
           </li>
         </div>
+
       </div>
+
       <!-- Auth area  -->
       <div class="auth-area px-2" v-if="this.$attrs.auth_status && this.$attrs.auth_status == true">
         <KeepAlive>
@@ -309,7 +318,7 @@ nav.navbar {
   background: hsl(170, 81%, 29%);
 }
 
-#nav .hoverable {}
+/* #nav .hoverable {} */
 
 #nav .drowDownMenu {
   display: none;
@@ -339,7 +348,7 @@ nav.navbar {
 }
 
 #nav .nav-links {
-  display: flex ;
+  display: flex;
 }
 
 #nav .auth-area {
@@ -445,20 +454,20 @@ nav.navbar {
   }
 
 
-  
-#nav #link-nav a.active-link::after {
-  position: relative !important;
-  right: 50%;
-}
 
-#nav .nav-links {
-  display: block;
-}
+  #nav #link-nav a.active-link::after {
+    position: relative !important;
+    right: 50%;
+  }
+
+  #nav .nav-links {
+    display: block;
+  }
 
 
-#nav .social-media {
-  position: relative !important;
-}
+  #nav .social-media {
+    position: relative !important;
+  }
 
 }
 
@@ -538,4 +547,5 @@ nav.navbar {
   }
 
 
-}</style>
+}
+</style>

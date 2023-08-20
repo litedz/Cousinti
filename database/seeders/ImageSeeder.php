@@ -17,7 +17,7 @@ class ImageSeeder extends Seeder
     {
         foreach (recipe::get() as $key => $value) {
             image::create([
-                'name' => 'default-cover.png',
+                'name' => 'default-cover.webp',
                 'cover' => 'active',
                 'recipe_id' =>$value->id,
             ]);

@@ -1,9 +1,9 @@
 <template>
-    <div class="email-status end-0 mx-3 position-fixed top-45 w-25 z-9999" v-if="status !== 1">
+    <div class="email-status end-0 mx-3 position-fixed top-45 w-25-perso w-50-sc z-9999" v-if="status !== 1">
         <div class="alert alert-warning">
-            <div class="fw-bold text-center title">Email Not verified </div>
+            <div class="fw-bold text-center" style="color: #541833;">Email Not verified </div>
             <div class="fs-6 message">{{ message }}</div>
-            <a class="fw-bolder text-first" href="#" @click="SendMail()" v-if="show_link">verified email</a>
+            <a class="fw-bolder" href="#" @click="SendMail()" v-if="show_link" style="color: #541833;">verified email</a>
         </div>
     </div>
 </template>

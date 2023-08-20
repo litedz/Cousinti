@@ -24,17 +24,18 @@
                         <div class="d-flex flex-column justify-content-between social_media gap-4">
                             <div class="font-4 font-sc-2 fw-bold">منصات التواصل الاجتماعي</div>
                             <div class="d-grid gap-3">
-                                <div class="align-items-center d-flex"><img class="ms-3 rounded-circle"
-                                        src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-3-1.png"
+                                <div class="align-items-center d-flex">
+                                    <img class="ms-3 rounded-circle"
+                                        :src="w_path+'/images/logo-facebook.webp'"
                                         alt="">
-                                    <div class="font-22"><a id="mediaLink" href="#"
+                                    <div class="font-22"><a id="mediaLink2" href="#"
                                             class="font-weight-bolder text-decoration-none"
                                             style="color:hsl(0 0% 90% / 1);">متابعتنا علي صفحة الفيس بوك</a></div>
                                 </div>
                                 <div class="align-items-center d-flex"><img class="ms-3 rounded-circle"
-                                        src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-3-1.png"
+                                        :src="w_path+'/images/logo-facebook.webp'"
                                         alt="">
-                                    <div class="font-22"><a id="mediaLink" href="#"
+                                    <div class="font-22"><a id="mediaLink1" href="#"
                                             class="font-weight-bolder text-decoration-none"
                                             style="color:hsl(0 0% 90% / 1);">متابعتنا علي صفحة الفيس بوك</a></div>
                                 </div>

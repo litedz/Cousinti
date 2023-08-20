@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
-            $table->text('show_about_perm')->default('true');
+            $table->text('show_about_perm')->default(true);
             $table->tinyText('show_recipes_perm')->default('true');
             $table->timestamps();
         });

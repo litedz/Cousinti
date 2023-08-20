@@ -15,7 +15,7 @@ class ImageFactory extends Factory
     public function definition()
     {
         return [
-            'name' => 'default-cover.png',
+            'name' => 'defaueeelt-cover.webp',
             'cover' => 'active',
             'recipe_id' => $this->faker->numberBetween(1, Recipe::all()->count()),
         ];

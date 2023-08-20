@@ -1,18 +1,19 @@
 <template>
 	<div class="wrapper d-grid gap-5 " dir="rtl">
 		<status ref="status"></status>
-		<section class="header d-grid gap-5">
+		<section class="header d-grid gap-5 h-100  mw-100 ">
 			<div class="nav-bar-home">
 			</div>
-			<div class="Top-recipes" dir="rtl">
+			<div class="Top-recipes w-100" dir="rtl" style="height: 500px;" id="Top-recipes">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-12 col-md-4 p-0" v-for="recipe in  BestRecipes" :key="recipe.best">
 							<div class="position-relative recipe h-100 w-100">
 								<div class="align-items-center d-flex flex-column fs-2 h-100 justify-content-end overlay pb-4 position-absolute text-white w-100"
 									style="background:linear-gradient(1deg, black,transparent, transparent);">
-									<div class="name-recipe"><a :href="'/recipes/' + recipe.id"
-											class="text-decoration-none text-white">{{ recipe.name }}</a>
+									<div class="name-recipe">
+										<a :href="'/recipes/' + recipe.id"  aria-label="read More" class="text-decoration-none text-white">{{
+											recipe.name }}</a>
 									</div>
 									<div class="px-4 text-start w-100" style="letter-spacing:1px;" bis_skin_checked="1">
 										<div bis_skin_checked="1"
@@ -26,9 +27,24 @@
 										<!-- <span class="fs-6 text-white-50">25 views</span> -->
 									</div>
 								</div>
-								<img class="w-100" v-if="recipe.images_recipe.length !== 0"
-									:src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name" alt="image">
-								<img class="w-100" v-else :src="w_path + '/storage/recipes/default-cover.png'" alt="image">
+
+
+								<picture v-if="recipe.images_recipe.length !== 0">
+									<source :srcset="w_path + '/storage/recipes/' + recipe.images_recipe[0].name">
+									<source :srcset="w_path + '/storage/recipes/' + recipe.images_recipe[0].name">
+									<img fetchpriority="high" class="img-fluid"
+										:src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name" alt="image"
+										height="1000" width="1000">
+								</picture>
+
+
+								<picture v-else>
+									<source :srcset="w_path + '/storage/recipes/default-cover.png'">
+									<source :srcset="w_path + '/storage/recipes/default-cover.png'">
+									<img class="img-fluid" :src="w_path + '/storage/recipes/default-cover.png'" alt="image"
+										height="1000" width="1000">
+								</picture>
+								<img>
 							</div>
 						</div>
 
@@ -49,18 +65,31 @@
 							<div class="border d-grid p-3 px-3" style="direction:rtl;" v-for="recipe in recipesMonthly"
 								:key="recipesMonthly.recipe">
 								<div class="border d-flex mt-2 p-1 recipe text-truncate">
-									<img v-if="recipe.images_recipe.length !== 0"
-										:src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name"
-										alt="image recipe" title="image recipe" style="height:80px;">
-									<img v-else :src="w_path + '/storage/recipes/default-cover.png'" alt="image recipe"
-										title="image recipe" style="height:80px;">
+									<picture v-if="recipe.images_recipe.length !== 0">
+										<source :srcset="w_path + '/storage/recipes/' + recipe.images_recipe[0].name">
+										<source :srcset="w_path + '/storage/recipes/' + recipe.images_recipe[0].name">
+										<img class="img-fluid"
+											:src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name"
+											alt="image recipe" title="image recipe" style="height:80px;">
+									</picture>
+
+
+									<picture v-else>
+										<source :srcset="w_path + '/storage/recipes/default-cover.webp'">
+										<source :srcset="w_path + '/storage/recipes/default-cover.webp'">
+										<img class="img-fluid" :src="w_path + '/storage/recipes/default-cover.webp'"
+											alt="image recipe" title="image recipe" style="height:80px;">
+									</picture>
+
 									<div class="d-flex flex-column gap-1 mx-2">
 										<div class="name-recipe">
 											<a :href="w_path + '/recipes/' + recipe.id"
+											aria-label="Read more"
 												class="text-black-title fs-3 text-decoration-none" data-toggle="tooltip"
 												data-placement="top" :title="recipe.name">{{ recipe.name }}</a>
 										</div>
 										<a :href="'/similar/' + recipe.type_recipe.type"
+										aria-label="go to similar type recipe"
 											class="type text-decoration-none color-link">{{
 												recipe.type_recipe.type }}</a>
 									</div>
@@ -73,42 +102,60 @@
 					<div class="col-12 col-md-7 d-grid gap-4 left-bar">
 						<div class="fs-2 header position-relative text-black-title">رمضانيات</div>
 
-						<div class="row gy-3">
+						<div class="row gy-3" style="height: 500px;" id="MostCommentRecipe">
 							<div v-for="(recipe,index) in MostComment" :key="recipe.MostComment">
+								<!-- Print first Image  -->
 								<div class="col-12" v-if="index == 0">
-									<div class="d-grid position-relative recipe">
-										<div class="img-container position-relative">
-											<div
-												class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
-												<span class="level">
-													<span class="mx-2">{{ recipe.level }}</span>
-													<span class="fa fa-signal-perfect"></span></span>
-												<span class="time">
-													<span class="mx-2">{{ recipe.how_long }} Min</span>
-													<span class="fa fa-clock-four"></span>
-												</span>
+									<div class="recipe overflow-hidden">
+										<div class="w-100">
+											<div class="img-container  position-relative w-100">
+												<div
+													class="d-flex fw-bolder gap-4 info justify-content-center position-absolute text-center text-white third-color top-50 w-100 z-9999">
+													<span class="level">
+														<span class="mx-2">{{ recipe.level }}</span>
+														<span class="fa fa-signal-perfect"></span></span>
+													<span class="time">
+														<span class="mx-2">{{ recipe.how_long }} Min</span>
+														<span class="fa fa-clock-four"></span>
+													</span>
+												</div>
+												<div
+													class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100">
+												</div>
+
+
+												<picture v-if="recipe.images_recipe.length !== 0">
+													<source
+														:srcset="w_path + '/storage/recipes/' + recipe.images_recipe[0].name">
+													<source
+														:srcset="w_path + '/storage/recipes/' + recipe.images_recipe[0].name">
+													<img :src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name"
+														class="img-fluid " alt="image_recipe">
+												</picture>
+
+												<picture v-else-if="recipe.images_recipe.length == undefined">
+													<source :srcset="w_path + '/storage/recipes/default-cover.png'">
+													<source :srcset="w_path + '/storage/recipes/default-cover.png'">
+													<img :src="w_path + '/storage/recipes/default-cover.png'"
+														alt="image_recipe" class="img-fluid">
+												</picture>
+
 											</div>
-											<div
-												class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100">
+											<div class="fs-3 title">{{ recipe.name }}</div>
+											<div class="d-grid gap-1">
+												<a :href="'/profile/' + recipe.author.id"
+												aria-label="got to profile "
+													class="author fst-italic fw-bolder color-link text-decoration-none">{{
+														recipe.author.username }}</a>
+												<span class="data second-color fs-6"><span class="">{{
+													formateData(recipe.created_at,'LL') }}</span><span
+														class="fa fa-calendar-alt"></span></span>
 											</div>
-											<img class="w-100" v-if="recipe.images_recipe.length !== 0"
-												:src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name"
-												alt="image">
-											<img class="w-100" v-else-if="recipe.images_recipe.length == undefined" :src="w_path + '/storage/recipes/default-cover.png'"
-												alt="image">
-										</div>
-										<div class="fs-3 title">{{ recipe.name }}</div>
-										<div class="d-grid gap-1">
-											<a :href="'/profile/' + recipe.author.id"
-												class="author fst-italic fw-bolder color-link text-decoration-none">{{
-													recipe.author.username }}</a>
-											<span class="data second-color fs-6"><span class="">{{
-												formateData(recipe.created_at,'LL') }}</span><span
-													class="fa fa-calendar-alt"></span></span>
 										</div>
 									</div>
 								</div>
 							</div>
+
 
 							<div class="col-6 col-md-6 col-lg-3" v-if="index !== 0" v-for="(recipe,index) in MostComment"
 								:key="recipe.MostComment">
@@ -123,11 +170,18 @@
 										<div
 											class="align-items-center bg-first-color d-flex h-100 justify-content-center overlay p-2 position-absolute w-100">
 										</div>
-										<img :src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name" alt="image"
-											class="w-100">
+
+										<picture>
+											<source :srcset="w_path + '/storage/recipes/' + recipe.images_recipe[0].name">
+											<source :srcset="w_path + '/storage/recipes/' + recipe.images_recipe[0].name">
+											<img :src="w_path + '/storage/recipes/' + recipe.images_recipe[0].name"
+												alt="image" class="img-fluid" height="1000" width="1000">
+										</picture>
+
 									</div>
 									<div class="fs-3 title text-truncate">{{ recipe.name }}</div>
 									<div class="d-grid gap-1"><a :href="'/profile/' + recipe.author.id"
+										aria-label="got to profile"
 											class="author fst-italic fw-bolder color-link text-decoration-none">{{
 												recipe.author.username }}</a><span class="data second-color fs-6"><span
 												class="">{{ formateData(recipe.created_at,'LL') }}</span><span
@@ -146,14 +200,27 @@
 		</section>
 		<section class="categories d-grid gap-5">
 			<div class="align-items-center d-flex flex-column heading justify-content-center position-relative text-center">
-				<img :src="w_path + '/images/shape-v2.png'" class="" style="width:120px;">
+
+				<picture>
+					<source :srcset="w_path + '/images/shape-v2.png'">
+					<source :srcset="w_path + '/images/shape-v2.png'">
+					<img :src="w_path + '/images/shape-v2.png'" class="img-fluid" style="width:120px;" alt="image" width="120" height="120">
+				</picture>
+				
 				<span class="fs-1 mt-2 position-absolute top-50 w-100">Heading</span>
 			</div>
 			<div class="container-fluid">
 				<div class="row justify-content-center">
 					<div class="categorie col-3 col-md-2 overflow-hidden p-0" v-for="cat in types_recipe" :key="cat.recipe">
 						<div class="img-container position-relative">
-							<img :src="w_path + '/storage/types/' + cat.image" alt="image" class="w-100 h-auto">
+
+							<picture>
+								<source :srcset="w_path + '/storage/types/' + cat.image">
+								<source :srcset="w_path + '/storage/types/' + cat.image">
+								<img :src="w_path + '/storage/types/' + cat.image" alt="image type" class="img-fluid"
+									height="500" width="500">
+							</picture>
+
 							<div class="h1 position-absolute text-center text-white title top-50 w-100 opacity-0"
 								style="background: #a52a2a82;">{{ cat.type }}</div>
 						</div>
@@ -197,17 +264,22 @@
 									التصميم.</div>
 								<div class="d-flex gap-2 gap-3 justify-content-center">
 									<button @click="activeComponent = 'random-recipe'" type="button" name="recipeOfthe Day"
-										class="bg-first-color btn btn-lg fw-bolder text-white">وصفة اليوم</button>
-									<button type="button" class="bg-white border btn btn-lg first-color fw-bolder">اختيار
+										class="bg-second-color btn btn-lg fw-bolder" style="color: #2c1c1c;">وصفة
+										اليوم</button>
+									<button type="button" class="bg-white border btn btn-lg  fw-bolder"
+										style="color: #1c292c;">اختيار
 										حسب
 										المقادير</button>
 								</div>
 							</div>
 						</div>
 						<div class="col-12 col-md-6 d-flex justify-content-center cover">
-							<img class="img-thumbnail"
-								src="https://images.unsplash.com/photo-1462799366257-558e43860291?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80"
-								alt="image" style="height: 500px;">
+							<picture>
+								<source :srcset="w_path + '/images/cover3.webp'">
+								<source :srcset="w_path + '/images/cover3.webp'">
+								<img class="img-fluid" :src="w_path + '/images/cover3.webp'" alt="image random" height="1000"
+									width="1000">
+							</picture>
 						</div>
 					</div>
 				</div>
@@ -218,54 +290,17 @@
 				<component :is="activeComponent" @CloseRecipe="activeComponent = 'empty'" />
 			</KeepAlive>
 		</section>
-
-		<section class="traditional-recipes">
-			<div class="heading">
-				<div class="astrodivider">
-					<div class="astrodividermask"></div><span><i class="fa fa-solid fa-utensils"></i></span>
-				</div>
-			</div>
-
-			<div class="container">
-				<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<a href="#">
-								<img :src="w_path + '/images/1.jpg'" class="d-block w-100" alt="..."></a>
-						</div>
-						<div class="carousel-item">
-							<a href="#">
-								<img :src="w_path + '/images/2.jpg'" class="d-block w-100" alt="..."></a>
-						</div>
-						<div class="carousel-item">
-							<a href="#">
-								<img :src="w_path + '/images/3.png'" class="d-block w-100" alt="..."></a>
-						</div>
-					</div>
-					<div class="carousel-indicators">
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-							class="active thumbnail" aria-current="true" aria-label="Slide 1">
-							<img :src="w_path + '/images/1.jpg'" class="d-block w-100" alt="...">
-						</button>
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-							class="thumbnail" aria-label="Slide 2">
-							<img :src="w_path + '/images/2.jpg'" class="d-block w-100" alt="...">
-						</button>
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-							class="thumbnail" aria-label="Slide 3">
-							<img :src="w_path + '/images/3.png'" class="d-block w-100" alt="...">
-						</button>
-					</div>
-				</div>
-			</div>
-		</section>
 		<section class="d-grid interesting">
 			<div class="border-top container d-grid gap-5 mt-1">
 				<div class="d-flex flex-column fs-1 heading-separator mb-3 mt-3 position-relative text-center"><span
 						class="">interesting</span>
-					<img :src="w_path + '/images/seperator-interesting.png'" alt="image"
-						class="position-absolute w-25 h-auto" style="left:38%;top:85%;">
+					<picture>
+						<source :srcset="w_path + '/images/seperator-interesting.png'">
+						<source :srcset="w_path + '/images/seperator-interesting.png'">
+						<img :src="w_path + '/images/seperator-interesting.png'" alt="image seperatore"
+							class="position-absolute w-25 img-fluid" style="left:38%;top:85%;" height="1000" width="1000">
+					</picture>
+
 				</div>
 				<div class="border-top pt-3 row">
 					<div class="col-3 col-md-4 right-bar p-d-none-sc">
@@ -282,9 +317,9 @@
 							<div class="bg-light d-flex gap-2 m-1 px-2 rounded user" v-for="user in UserMostPosted"
 								:key="user.posted">
 								<img :src="w_path + '/storage/' + user.avatar" alt="avatar" title="avatar"
-									style="width: 70px;height: 70px;" class="rounded-circle">
+									style="width: 70px;height: 70px;" class="rounded-circle img-fluid">
 								<div class="d-flex flex-column gap-1 justify-content-start">
-									<a :href="w_path + '/profile/' + user.id" class="fs-4 name text-black-title">{{
+									<a :href="w_path + '/profile/' + user.id"  aria-label="profile show" class="fs-4 name text-black-title">{{
 										user.username }}
 									</a><span class="first-color fs-6">{{ user.rank.rank }}</span>
 								</div>
@@ -295,11 +330,21 @@
 					<div class="content col-12 col-md-8">
 						<div class="row">
 							<div class="col-12" v-for="recipe in RatingRecipe" :key="recipe.rating">
-								<div class="d-flex"><img src="https://picsum.photos/120" alt="image"
-										class="img-thumbnail rounded">
+								<div class="d-flex">
+
+									<picture>
+										<source srcset="https://picsum.photos/200">
+										<source srcset="https://picsum.photos/200">
+										<img src="https://picsum.photos/200" alt="image" width="120" height="120"
+											class="img-thumbnail img-fluid rounded">
+									</picture>
+
 									<div class="d-grid px-3">
-										<div class=""><a class="fs-4 title text-decoration-none text-black-title"
-												:href="w_path + '/recipes/' + recipe.id">{{ recipe.name }}</a></div>
+										<div class="">
+											<a class="fs-4 title text-decoration-none text-black-title"
+											aria-label="Show Recipe"
+												:href="w_path + '/recipes/' + recipe.id">{{ recipe.name }}</a>
+											</div>
 										<div class="discption text-truncate fs-6 text-black-title">{{ recipe.description }}
 										</div>
 										<div class="date font-italic fs-6 second-color">{{
@@ -362,12 +407,20 @@ export default {
 				.then((response) => {
 					if (response.data) {
 						this.UserMostPosted = response.data.UserMostPosted;
+						console.log('finish 1');
 						this.BestRecipes = response.data.BestRecipe;
+						console.log('finish 2');
 						this.MostComment = response.data.MostComment;
+						console.log('finish 3');
 						this.recipesMonthly = response.data.recipesOfMonth;
 						this.RatingRecipe = response.data.RatingRecipe;
 						this.LatestRecipes = response.data.LatestRecipes;
+						document.getElementById('Top-recipes').style.height = "auto";
+						document.getElementById('MostCommentRecipe').style.height = "auto";;
+
 					}
+
+
 				})
 				.catch((error) => {
 				});
@@ -464,7 +517,7 @@ export default {
 <style scoped>
 .wrapper {
 	max-width: 100%;
-	height: 5000px;
+	height: auto;
 }
 
 .random-recipes .recipe:hover .overlay {
@@ -558,20 +611,13 @@ export default {
 }
 
 section.subscribee div:first-of-type {
-	background: url('~/images/cover-subscribe.jpg');
+	background: url('~/images/cover-subscribe.webp');
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
 }
 
-.random-recipe .row .cover {
 
-	/* background: url('~/images/bg-random-recipe.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: -113% 100%; */
-
-}
 
 /* .random-recipe .carousel-indicators {
 	width: 20px !important;
@@ -648,4 +694,5 @@ section.subscribee div:first-of-type {
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
-}</style>
+}
+</style>

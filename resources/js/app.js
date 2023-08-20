@@ -22,7 +22,7 @@ const months = require('months');
 
 
 
-
+import { defineAsyncComponent } from 'vue';
 
 
 /**
@@ -47,76 +47,84 @@ const months = require('months');
 import test from './components/test.vue';
 
 
-import index from './components/index.vue';
-import loading_page from './components/loading-page.vue'
-import login from './components/login.vue';
-import contact_us from './components/contact-us.vue';
-import guest_topbar from './components/guest-topbar';
-import register from './components/register.vue';
-import dashboard from './components/dashboard/dashboard.vue';
-import types_recipes from './components/dashboard/types_recipes.vue';
-import profile_user from './components/profile_user.vue';
-import edit_profile from './components/user/edit-profile.vue';
-import navbar from './components/nav-bar.vue';
+const index = defineAsyncComponent(() => import('./components/index.vue'))
+const loading_page = defineAsyncComponent(() => import('./components/loading-page.vue'))
+
+const login = defineAsyncComponent(() => import('./components/login.vue'))
+const contact_us = defineAsyncComponent(() => import('./components/contact-us.vue'));
+const guest_topbar = defineAsyncComponent(() => import('./components/guest-topbar'));
+const register = defineAsyncComponent(() => import('./components/register.vue'));
+const dashboard = defineAsyncComponent(() => import('./components/dashboard/dashboard.vue'));
+const types_recipes = defineAsyncComponent(() => import('./components/dashboard/types_recipes.vue'));
+const profile_user = defineAsyncComponent(() => import('./components/profile_user.vue'));
+const edit_profile = defineAsyncComponent(() => import('./components/user/edit-profile.vue'));
+const navbar = defineAsyncComponent(() => import('./components/nav-bar.vue'))
 
 
-import search from './components/user/search.vue';
-import top_bar from './components/user/top-bar.vue';
-
-import comments from './components/comments.vue';
-import recipes from './components/recipes.vue';
-import random_recipe from './components/random_recipe.vue';
-import single_recipe from './components/single_recipe.vue';
-import similar_recipes from './components/similar-recipes.vue';
-
-import authnavbar from './components/auth-nav-bar.vue';
-import footerpage from './components/footer.vue';
-
-import add_recipe from './components/recipe/add_recipe.vue';
-import update_recipe from './components/recipe/update-recipe.vue';
-import table_recipes from './components/recipe/table_recipes.vue';
-import table_datatable from './components/dashboard/table-datatable.vue';
+const search = defineAsyncComponent(() => import('./components/user/search.vue'))
+const top_bar = defineAsyncComponent(() => import('./components/user/top-bar.vue'))
 
 
-import  status  from './components/status.vue';
+const comments = defineAsyncComponent(() => import('./components/comments.vue'));
+const recipes = defineAsyncComponent(() => import('./components/recipes.vue'));
+const random_recipe = defineAsyncComponent(() => import('./components/random_recipe.vue'));
+const single_recipe = defineAsyncComponent(() => import('./components/single_recipe.vue'));
+const similar_recipes = defineAsyncComponent(() => import('./components/similar-recipes.vue'));
 
+const authnavbar = defineAsyncComponent(() => import('./components/auth-nav-bar.vue'));
+
+// import footerpage from './components/footer.vue';
+const footerpage = defineAsyncComponent(() => import('./components/footer.vue'))
+
+// import add_recipe from './components/recipe/add_recipe.vue';
+// import update_recipe from './components/recipe/update-recipe.vue';
+// import table_recipes from './components/recipe/table_recipes.vue';
+// import table_datatable from './components/dashboard/table-datatable.vue';
+
+const add_recipe = defineAsyncComponent(() => import('./components/recipe/add_recipe.vue'))
+const update_recipe = defineAsyncComponent(() => import('./components/recipe/update-recipe.vue'))
+const table_recipes = defineAsyncComponent(() => import('./components/recipe/table_recipes.vue'))
+const table_datatable = defineAsyncComponent(() => import('./components/dashboard/table-datatable.vue'))
+
+
+const status = defineAsyncComponent(() => import('./components/status.vue'))
 //User 
-
-import form_message from './components/user/form-message.vue';
-import last_activity from './components/user/last-activity.vue';
-import email_verified from './components/user/email-verified.vue';
-
-
+const form_message = defineAsyncComponent(() => import('./components/user/form-message.vue'))
+const last_activity = defineAsyncComponent(() => import('./components/user/last-activity.vue'))
+const email_verified = defineAsyncComponent(() => import('./components/user/email-verified.vue'))
 
 //dashboard 
-import static_user from './components/dashboard/static.vue';
-import wishlist_setting from './components/dashboard/wishlist-setting.vue';
-import user_messages from './components/dashboard/messages.vue';
-import user_notifications from './components/dashboard/notifications.vue';
 
+
+const static_user = defineAsyncComponent(() => import('./components/dashboard/static.vue'))
+const wishlist_setting = defineAsyncComponent(() => import('./components/dashboard/wishlist-setting.vue'))
+const user_messages = defineAsyncComponent(() => import('./components/dashboard/messages.vue'))
+const user_notifications = defineAsyncComponent(() => import('./components/dashboard/notifications.vue'))
 
 
 // custome component 
 
-import img_hoverable from './components/custome/img_hoverable.vue';
-import btn_wishlist from './components/user/btn_wishlist.vue';
-import wishlist from './components/user/wishlist.vue';
+
+const img_hoverable = defineAsyncComponent(() => import('./components/custome/img_hoverable.vue'))
+const btn_wishlist = defineAsyncComponent(() => import('./components/user/btn_wishlist.vue'))
+const wishlist = defineAsyncComponent(() => import('./components/user/wishlist.vue'))
 
 
 // admin component
 
-import dashboard_admin from "./components/admin/dashboard-admin.vue";
-import login_admin from "./components/admin/login-admin.vue";
-import users_table from "./components/admin/users.vue";
-import recipe_table from "./components/admin/recipes.vue";
-import latest_activity_table from "./components/admin/latest-activity.vue";
-import admins_table from "./components/admin/admins-table.vue";
-import admin_messages from "./components/admin/messages.vue";
-import add_message from "./components/admin/add-message.vue";
-import static_admin from "./components/admin/statistic.vue";
-import types from "./components/admin/types.vue";
-import social_media from "./components/admin/social-media.vue";
-import page404 from "./components/custome/404.vue";
+
+const dashboard_admin = defineAsyncComponent(() => import('./components/admin/dashboard-admin.vue'));
+const login_admin = defineAsyncComponent(() => import('./components/admin/login-admin.vue'));
+const users_table = defineAsyncComponent(() => import('./components/admin/users.vue'));
+const recipe_table = defineAsyncComponent(() => import('./components/admin/recipes.vue'));
+const latest_activity_table = defineAsyncComponent(() => import('./components/admin/latest-activity.vue'));
+const admins_table = defineAsyncComponent(() => import('./components/admin/admins-table.vue'));
+const admin_messages = defineAsyncComponent(() => import('./components/admin/messages.vue'));
+const add_message = defineAsyncComponent(() => import('./components/admin/add-message.vue'));
+const static_admin = defineAsyncComponent(() => import('./components/admin/statistic.vue'));
+const types = defineAsyncComponent(() => import('./components/admin/types.vue'));
+const social_media = defineAsyncComponent(() => import('./components/admin/social-media.vue'));
+const page404 = defineAsyncComponent(() => import('./components/custome/404.vue'));
 
 
 

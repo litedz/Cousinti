@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-first-color pb-1 pt-1 top-bar z-8888">
+	<div class="bg-first-color pb-1 pt-1 top-bar z-8888 w-100 h-auto">
 		<div class="container">
 			<div class="align-items-center d-flex justify-content-between gap-1">
 				<div class="contact fs-4 gap-1 h-100">
