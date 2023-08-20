@@ -154,13 +154,19 @@ export default {
     this.ProfileInfo.setting.about = this.profile.profile_setting.show_about_perm;
     this.ProfileInfo.comments = this.profile.comments;
     window.addEventListener('mousemove', this.ss);
+    console.log(this.ProfileInfo.setting.recipes);
 
   },
   watch: {
     ProfileInfo: {
-      handler(val) {
-        this.ProfileInfo.setting.recipes = (this.ProfileInfo.setting.recipes == true ? 1 : 0);
-        this.ProfileInfo.setting.about = (this.ProfileInfo.setting.about == true ? 1 : 0);
+      handler() {
+        alert('xx');
+        this.ProfileInfo.setting.recipes = this.ProfileInfo.setting.recipes == true ? 1 : 0;
+        this.ProfileInfo.setting.about = this.ProfileInfo.setting.about == true ? 1 : 0;
+
+        this.ProfileInfo.setting.recipes = this.ProfileInfo.setting.recipes == false ? 0 : 1;
+        this.ProfileInfo.setting.about = this.ProfileInfo.setting.about == false ? 0 : 1;
+
       },
     },
   },
@@ -234,8 +240,8 @@ export default {
     },
     UpdatePermissions() {
       let setting = new FormData();
-      setting.append('show_about_perm', this.ProfileInfo.setting.about);
-      setting.append('show_recipes_perm', this.ProfileInfo.setting.recipes);
+      setting.append('show_about_perm', Number(this.ProfileInfo.setting.about));
+      setting.append('show_recipes_perm', Number(this.ProfileInfo.setting.recipes));
       setting.append('_method', 'PUT');
       axios({
         method: 'POST',
